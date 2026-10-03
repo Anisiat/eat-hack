@@ -1,0 +1,21 @@
+brand_id,brand_name,category,sub_category,description,need_hydrate,need_recover,need_energy,need_focus,need_discovery,need_sharing,need_treat,need_value,target_students,target_young_professionals,target_fitness,target_families,target_foodies,needs_chilling,frozen,vegan,gluten_free,favourite_five,units_available_per_month
+B01,Sparkfold Soda,drink,prebiotic soda,Lightly sparkling prebiotic soda,0.6,0.1,0.2,0.2,0.6,0.4,0.6,0.3,1,1,0,0,1,1,0,1,1,1,1600
+B02,Tidewell Hydrate,drink,electrolyte drink,Low-sugar electrolyte drink for after exercise,1.0,0.9,0.4,0.2,0.2,0.0,0.0,0.3,0,1,1,0,0,0,0,1,1,0,700
+B03,Northbrew,drink,cold brew coffee,Canned cold brew coffee,0.1,0.0,1.0,0.9,0.3,0.1,0.3,0.3,1,1,0,0,0,1,0,1,1,0,1800
+B04,Kombuchee,drink,kombucha,Small-batch kombucha in seasonal flavours,0.5,0.2,0.2,0.1,0.8,0.3,0.4,0.2,0,1,0,0,1,1,0,1,1,0,900
+B05,Lentil Lark,savoury,lentil crisps,Baked lentil crisps in sharing bags,0.0,0.1,0.3,0.2,0.3,0.9,0.6,0.5,1,1,0,1,0,0,0,1,1,1,1500
+B06,Popwright,savoury,popcorn,Sweet and salty popcorn,0.0,0.0,0.2,0.2,0.3,1.0,0.7,0.6,1,1,0,1,0,0,0,1,1,0,1200
+B07,Seedwork,savoury,seed crackers,Seeded crackers for grazing boards,0.0,0.2,0.3,0.3,0.5,0.6,0.3,0.3,0,1,0,0,1,0,0,1,1,0,700
+B08,Umami Drift,savoury,seaweed snacks,Crispy seaweed puffs,0.0,0.0,0.2,0.2,0.8,0.5,0.5,0.4,1,0,0,0,1,0,0,1,1,0,2000
+B09,Cacao Field,sweet,dark chocolate,Single-origin dark chocolate bars,0.0,0.1,0.5,0.5,0.5,0.4,0.9,0.2,0,1,0,0,1,0,0,1,1,0,1400
+B10,Lolly Loft,sweet,ice lollies,Real-fruit ice lollies,0.6,0.1,0.1,0.0,0.3,0.3,1.0,0.4,1,0,0,1,0,1,1,1,1,0,800
+B11,Crumbhouse,sweet,cookies,Gooey bakery-style cookies,0.0,0.0,0.4,0.1,0.2,0.6,1.0,0.5,1,0,0,1,0,0,0,0,0,1,2000
+B12,Fruitling,sweet,fruit snacks,Fruit and veg snacks for children,0.1,0.0,0.3,0.0,0.2,0.3,0.8,0.6,0,0,0,1,0,0,0,1,1,0,1800
+B13,Ember & Ash,condiment,hot sauce,Small-batch hot sauces,0.0,0.0,0.1,0.0,1.0,0.7,0.5,0.2,0,1,0,0,1,0,0,1,1,1,600
+B14,Redline,condiment,chilli oil,Crunchy chilli oil,0.0,0.0,0.1,0.0,0.9,0.5,0.5,0.2,0,0,0,0,1,0,0,1,1,0,800
+B15,Tangle,condiment,chutney,Fruit chutneys and relishes,0.0,0.0,0.1,0.0,0.7,0.6,0.5,0.3,0,0,0,1,1,0,0,1,1,0,700
+B16,Dip Shift,condiment,dip pots,Single-serve hummus and dip pots,0.0,0.1,0.3,0.3,0.4,0.9,0.4,0.5,1,1,0,0,0,1,0,1,1,0,1100
+B17,Protein Rebel,functional,protein bar,High-protein snack bars,0.0,0.9,0.7,0.4,0.2,0.1,0.3,0.5,1,1,1,0,0,0,0,0,1,1,1200
+B18,Fuel Bites,functional,energy balls,Oat and date energy balls,0.0,0.6,0.9,0.5,0.2,0.2,0.4,0.5,1,0,1,0,0,0,0,1,0,0,1600
+B19,Rootshot,functional,ginger shots,Cold-pressed ginger shots,0.2,0.5,0.7,0.4,0.5,0.0,0.1,0.2,0,1,1,0,0,1,0,1,1,0,1700
+B20,Mellow Gut,functional,fibre gummies,Prebiotic fibre gummies,0.0,0.2,0.1,0.3,0.4,0.1,0.4,0.4,0,1,0,1,0,0,0,0,1,0,1500
