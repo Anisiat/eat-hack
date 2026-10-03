@@ -1,21 +1,491 @@
-brand_id,brand_name,category,sub_category,description,need_hydrate,need_recover,need_energy,need_focus,need_discovery,need_sharing,need_treat,need_value,target_students,target_young_professionals,target_fitness,target_families,target_foodies,needs_chilling,frozen,vegan,gluten_free,favourite_five,units_available_per_month
-B01,Sparkfold Soda,drink,prebiotic soda,Lightly sparkling prebiotic soda,0.6,0.1,0.2,0.2,0.6,0.4,0.6,0.3,1,1,0,0,1,1,0,1,1,1,1600
-B02,Tidewell Hydrate,drink,electrolyte drink,Low-sugar electrolyte drink for after exercise,1.0,0.9,0.4,0.2,0.2,0.0,0.0,0.3,0,1,1,0,0,0,0,1,1,0,700
-B03,Northbrew,drink,cold brew coffee,Canned cold brew coffee,0.1,0.0,1.0,0.9,0.3,0.1,0.3,0.3,1,1,0,0,0,1,0,1,1,0,1800
-B04,Kombuchee,drink,kombucha,Small-batch kombucha in seasonal flavours,0.5,0.2,0.2,0.1,0.8,0.3,0.4,0.2,0,1,0,0,1,1,0,1,1,0,900
-B05,Lentil Lark,savoury,lentil crisps,Baked lentil crisps in sharing bags,0.0,0.1,0.3,0.2,0.3,0.9,0.6,0.5,1,1,0,1,0,0,0,1,1,1,1500
-B06,Popwright,savoury,popcorn,Sweet and salty popcorn,0.0,0.0,0.2,0.2,0.3,1.0,0.7,0.6,1,1,0,1,0,0,0,1,1,0,1200
-B07,Seedwork,savoury,seed crackers,Seeded crackers for grazing boards,0.0,0.2,0.3,0.3,0.5,0.6,0.3,0.3,0,1,0,0,1,0,0,1,1,0,700
-B08,Umami Drift,savoury,seaweed snacks,Crispy seaweed puffs,0.0,0.0,0.2,0.2,0.8,0.5,0.5,0.4,1,0,0,0,1,0,0,1,1,0,2000
-B09,Cacao Field,sweet,dark chocolate,Single-origin dark chocolate bars,0.0,0.1,0.5,0.5,0.5,0.4,0.9,0.2,0,1,0,0,1,0,0,1,1,0,1400
-B10,Lolly Loft,sweet,ice lollies,Real-fruit ice lollies,0.6,0.1,0.1,0.0,0.3,0.3,1.0,0.4,1,0,0,1,0,1,1,1,1,0,800
-B11,Crumbhouse,sweet,cookies,Gooey bakery-style cookies,0.0,0.0,0.4,0.1,0.2,0.6,1.0,0.5,1,0,0,1,0,0,0,0,0,1,2000
-B12,Fruitling,sweet,fruit snacks,Fruit and veg snacks for children,0.1,0.0,0.3,0.0,0.2,0.3,0.8,0.6,0,0,0,1,0,0,0,1,1,0,1800
-B13,Ember & Ash,condiment,hot sauce,Small-batch hot sauces,0.0,0.0,0.1,0.0,1.0,0.7,0.5,0.2,0,1,0,0,1,0,0,1,1,1,600
-B14,Redline,condiment,chilli oil,Crunchy chilli oil,0.0,0.0,0.1,0.0,0.9,0.5,0.5,0.2,0,0,0,0,1,0,0,1,1,0,800
-B15,Tangle,condiment,chutney,Fruit chutneys and relishes,0.0,0.0,0.1,0.0,0.7,0.6,0.5,0.3,0,0,0,1,1,0,0,1,1,0,700
-B16,Dip Shift,condiment,dip pots,Single-serve hummus and dip pots,0.0,0.1,0.3,0.3,0.4,0.9,0.4,0.5,1,1,0,0,0,1,0,1,1,0,1100
-B17,Protein Rebel,functional,protein bar,High-protein snack bars,0.0,0.9,0.7,0.4,0.2,0.1,0.3,0.5,1,1,1,0,0,0,0,0,1,1,1200
-B18,Fuel Bites,functional,energy balls,Oat and date energy balls,0.0,0.6,0.9,0.5,0.2,0.2,0.4,0.5,1,0,1,0,0,0,0,1,0,0,1600
-B19,Rootshot,functional,ginger shots,Cold-pressed ginger shots,0.2,0.5,0.7,0.4,0.5,0.0,0.1,0.2,0,1,1,0,0,1,0,1,1,0,1700
-B20,Mellow Gut,functional,fibre gummies,Prebiotic fibre gummies,0.0,0.2,0.1,0.3,0.4,0.1,0.4,0.4,0,1,0,1,0,0,0,0,1,0,1500
+﻿Brand,Product / variant,Category,Sub-category,Flavour profile,Format,Dietary flags,Need states served (inferred),Target segments (inferred),Marketing claims / label keywords,Label → target link (inferred)
+All That Matters,Superfood Puffs — Peri-Peri,Snacks,Grain puffs,Spicy peri-peri; savoury,Snack bag,"Gluten-free, non-GMO, and free from artificial preservatives.","Savoury snack
+Snack break","Savoury snackers
+Mindful snackers","Superfood Puffs
+Full-power crunch
+107 KCAL per serving",Superfood Puffs and portion calorie wording → shoppers interested in snack nutrition.
+Simply Roasted,Black Truffle Potato Crisps,Snacks,Potato crisps,Black Truffle; savoury,Snack bag,"vegan, gluten-free, dairy-free, and free from major allergens","Savoury snack
+Snack break","Savoury snackers
+Mindful snackers","triple cooked potato crisps
+50% less fat*
+90 kcals
+Great Taste",50% less fat* and 90 kcals → shoppers comparing snack fat or portion calories.
+Simply Roasted,Sour Cream & Chive Potato Crisps,Snacks,Potato crisps,Sour Cream & Chive; savoury,Snack bag,"vegan, gluten-free, dairy-free, and free from major allergens","Savoury snack
+Snack break","Savoury snackers
+Mindful snackers","triple cooked potato crisps
+50% less fat*
+90 kcals
+Great Taste",50% less fat* and 90 kcals → shoppers comparing snack fat or portion calories.
+Simply Roasted,Barbecue Potato Crisps,Snacks,Potato crisps,Barbecue; savoury,Snack bag,"vegan, gluten-free, dairy-free, and free from major allergens","Savoury snack
+Snack break","Savoury snackers
+Mindful snackers","triple cooked potato crisps
+50% less fat*
+90 kcals
+Great Taste",50% less fat* and 90 kcals → shoppers comparing snack fat or portion calories.
+The Protein Ball Co.,Salted Caramel Protein Balls,Snacks,Protein balls,Sweet salted caramel,Pouch,"Plant-based
+No added sugar","Protein top-up
+Sweet snack","Protein seekers
+Plant-based shoppers
+Sugar-conscious shoppers","PLANT-BASED
+10G HIGH PROTEIN
+NO ADDED SUGAR*
+NO ADDED JUNK*",10G HIGH PROTEIN → protein seekers; PLANT-BASED → plant-based shoppers; NO ADDED SUGAR → sugar-conscious shoppers.
+The Protein Ball Co.,Original Peanut Butter Protein Balls,Snacks,Protein balls,Peanut butter; nutty,Pouch,"Contains peanuts
+No added sugar","Protein top-up
+Sweet snack","Protein seekers
+Sugar-conscious shoppers","10G HIGH PROTEIN
+NO ADDED SUGAR
+NO ADDED JUNK",10G HIGH PROTEIN → protein seekers; NO ADDED SUGAR → sugar-conscious shoppers.
+Well & Truly,Thins — Rich Cheddar & Gouda with a Hint of Jalapeño,Snacks,Cheese crackers,Cheddar; gouda; mild chilli,Snack bag,"Gluten-free
+Contains milk",Savoury snack,"Savoury snackers
+Protein seekers
+Gluten-free shoppers","30% LESS FAT
+DELICIOUS SOURCE OF PROTEIN
+GLUTEN FREE
+MADE WITH REAL CHEESE
+Thoughtfully Thin. Seriously Tasty.",GLUTEN FREE → gluten-free shoppers; SOURCE OF PROTEIN → protein seekers.
+INDI,Brain Bar,Snacks,Functional snack bar,Cocoa; blueberry; cranberry; nuts,Wrapped bar,"Vegan
+Gluten-free
+Contains walnuts and cashews","Snack break
+Focus-oriented routine","Focus-oriented shoppers
+Fibre seekers
+Plant-based shoppers
+Gluten-free shoppers","Brain Bar
+6G HIGH FIBRE
+16 BRAIN FOODS
++VIT B12, C & D3
++IRON & ZINC
+GLUTEN FREE
+VEGAN",Brain Bar → focus-oriented positioning; HIGH FIBRE → fibre seekers; VEGAN → plant-based shoppers.
+Kooky,Gently Dried Chewy Mango,Snacks,Dried fruit,Sweet tropical mango,Snack pouch,No sulphites,"Fruit snack
+Sweet snack","Fruit snackers
+Mindful snackers
+Eco-conscious shoppers","Pretty Unique Fruit
+100% Natural
+Only 51 calories
+No Sulfites
+Nothing Artificial
+Certified B Corporation
+1% for the Planet
+Great Taste 2024",Only 51 calories → portion-conscious shoppers; Nothing Artificial → ingredient-conscious shoppers; B Corp/1% for the Planet → values-led shoppers.
+Well & Truly,Crunchies — Smokey Paprika,Snacks,Baked corn snacks,Smokey Paprika; savoury,Snack bag,Gluten-free,Savoury snack,"Savoury snackers
+Gluten-free shoppers
+Mindful snackers","40% LESS FAT*
+GLUTEN FREE
+ALL NATURAL INGREDIENTS
+Great Taste",GLUTEN FREE → gluten-free shoppers; less-fat wording → mindful snackers.
+Well & Truly,Crunchies — Really Cheesy,Snacks,Baked corn snacks,Really Cheesy; savoury,Snack bag,Gluten-free,Savoury snack,"Savoury snackers
+Gluten-free shoppers
+Mindful snackers","40% LESS FAT*
+GLUTEN FREE
+ALL NATURAL INGREDIENTS
+Great Taste",GLUTEN FREE → gluten-free shoppers; less-fat wording → mindful snackers.
+Well & Truly,Crunchies — Smokey Bacon,Snacks,Baked corn snacks,Smokey Bacon; savoury,Snack bag,"Gluten-free
+Vegan",Savoury snack,"Savoury snackers
+Gluten-free shoppers
+Mindful snackers
+Plant-based shoppers","40% LESS FAT*
+GLUTEN FREE
+50% LESS SALT*
+OINK-FREE! AKA VEGAN FRIENDLY",GLUTEN FREE → gluten-free shoppers; less-fat wording → mindful snackers. VEGAN FRIENDLY → plant-based shoppers despite bacon flavour.
+Well & Truly,Crunchies — Sea Salt & Cider Vinegar,Snacks,Baked corn snacks,Sea Salt & Cider Vinegar; savoury,Snack bag,Gluten-free,Savoury snack,"Savoury snackers
+Gluten-free shoppers
+Mindful snackers","40% LESS FAT*
+GLUTEN FREE
+ALL NATURAL INGREDIENTS
+50% LESS SALT*",GLUTEN FREE → gluten-free shoppers; less-fat wording → mindful snackers.
+Well & Truly,Fudge & Brownie Oat M&lk Chocolate,Confectionery,Chocolate,Chocolate; fudge; brownie,Boxed bar,"Plant-based
+Gluten-free",Sweet treat,"Sweet treat seekers
+Plant-based shoppers
+Gluten-free shoppers
+Ethical shoppers","100% PLANT BASED
+GLUTEN FREE
+ETHICAL & DIRECT TRADE",PLANT BASED and GLUTEN FREE → corresponding dietary preferences; ETHICAL & DIRECT TRADE → ethical shoppers.
+Helen Browning’s Organic,Organic Corned Beef,Pantry,Preserved meat,Rich savoury beef,Glass jar,"Contains beef
+Organic
+Gluten-free (brand website)
+GM-free (brand website)","Convenient meal component
+Savoury meal","Home cooks
+Organic shoppers
+Meat snackers","British organic beef
+grass-fed
+lower carbon footprint
+Ready to eat",Ready to eat → convenience seekers; organic/grass-fed → provenance-conscious shoppers.
+Dr. Will’s,Avocado Oil Mayo,Pantry,Mayonnaise,Creamy; savoury,Glass jar,"keto-friendly, sugar-free, seed-oil-free, gluten-free, and dairy-free","Meal accompaniment
+Cooking","Home cooks
+Ingredient-conscious shoppers","ALL NATURAL
+GET REAL
+Great Taste",ALL NATURAL → ingredient-conscious shoppers; avocado oil mayo → home cooks.
+Dr. Will’s,Buffalo Hot Sauce,Pantry,Hot sauce,Hot buffalo-style; tangy,Glass bottle,gluten-free and suitable for vegans,"Add heat to meals
+Cooking","Spice lovers
+Home cooks","ALL NATURAL
+HOT
+GET REAL",HOT → spice lovers; ALL NATURAL → ingredient-conscious shoppers.
+EP!C Snax Co.,Plant Power Toastin’ Marshmallows,Confectionery,Marshmallows,Sweet; exact flavour not stated,Sharing bag,Vegan,"Sweet treat
+Toasting activity","Plant-based shoppers
+Sweet treat seekers
+Outdoor socialisers","PLANT POWER
+TOASTIN’
+AMERICAN STYLE
+Vegan
+NATURAL INGREDIENTS",PLANT POWER and Vegan → plant-based shoppers; TOASTIN’ → outdoor/social occasions.
+EP!C Snax Co.,Giant Toastin’ Marshmallows,Confectionery,Marshmallows,Sweet; exact flavour not stated,Sharing bag,gluten free dairy free,"Sweet treat
+Toasting activity","Sweet treat seekers
+Outdoor socialisers","GIANT
+TOASTIN’
+AMERICAN STYLE
+PERFECT FOR THE BBQ",TOASTIN’ and PERFECT FOR THE BBQ → outdoor/social occasions.
+ötzibrew,Organic Dandelion & Burdock Root Coffee Alternative,Pantry,Coffee alternative,Dandelion and burdock root; earthy (inferred),Dry drink blend in tub,Organic,"Hot-drink ritual
+Coffee alternative","Coffee-alternative shoppers
+Organic shoppers","Organic
+Coffee Alternative
+like coffee, but better.",Coffee Alternative → shoppers seeking an alternative coffee ritual.
+OOM,Balance,Drinks,Functional sparkling drink,Peach; blood orange; hops,Can,"vegan, gluten-free, and low-sugar functional sparkling drink","Refreshment
+Wellness routine",Functional wellness shoppers,"Balance
+Lightly sparkling
+Chaga
+Vitamin B Complex
+L-Tyrosine
+Ashwagandha",Balance and named botanical ingredients → wellness positioning. No effect on mood is established by the photo.
+ChariTea,Mate Sparkling,Drinks,Sparkling yerba mate tea,Yerba mate; lemon; orange,Can,Organic,"Refreshment
+Tea break","Tea drinkers
+Ethical shoppers
+Organic shoppers","Organic iced yerba mate tea
+real-brewed and gently sparkling
+Beyond fair trade
+ChariTea. Drinking helps.",Beyond fair trade and foundation support → ethical shoppers; organic mate → tea drinkers.
+mindfuel flow,Mushroom Iced Latte — Salted Caramel,Drinks,Functional iced latte,Salted caramel; creamy,Can,"Vegan
+Caffeine-free
+No added sugar","Refreshment
+Focus-oriented routine
+Coffee alternative","Focus-oriented shoppers
+Caffeine reducers
+Plant-based shoppers
+Sugar-conscious shoppers","FOCUS & CLARITY
+lion’s mane-infused
+caffeine-free
+naturally sweetened and flavoured
+VEGAN
+NO ADDED SUGAR",FOCUS & CLARITY → focus positioning; caffeine-free → caffeine reducers; VEGAN → plant-based shoppers.
+Lowrise,Lager,Alcoholic drinks,Beer,Lager; hoppy/malty (inferred),Can,"Gluten-free
+Contains alcohol (4% ABV)",Social drinking,"Adult beer drinkers
+Gluten-free shoppers
+Calorie-conscious shoppers","LOW CALS
+FULL VIBE
+87 CALORIES
+4% ABV
+GLUTEN FREE",87 CALORIES → calorie-conscious adult beer drinkers; GLUTEN FREE → gluten-free preference.
+DASH,Pink Lady Apple Sparkling Water,Drinks,Flavoured sparkling water,Apple; lightly fruity,Can,"No sugar
+No sweeteners
+Zero calories","Refreshment
+Hydration","Sugar-conscious shoppers
+Calorie-conscious shoppers
+Refreshment seekers","0 Calories
+NO SUGAR
+NO SWEETENERS",0 Calories and NO SUGAR → calorie/sugar-conscious shoppers; NO SWEETENERS → sweetener-avoiding preference.
+Lowrise,Hazy Pale,Alcoholic drinks,Beer,Hazy Pale; hoppy/malty (inferred),Can,"Gluten-free
+Contains alcohol (4% ABV)",Social drinking,"Adult beer drinkers
+Gluten-free shoppers
+Calorie-conscious shoppers","LOW CALS
+FULL VIBE
+84 CALORIES
+4% ABV
+GLUTEN FREE",84 CALORIES → calorie-conscious adult beer drinkers; GLUTEN FREE → gluten-free preference.
+Pentire,Coastal Spritz,Drinks,Non-alcoholic aperitif,Blood orange; sea rosemary; oakwood,Ready-to-drink can,Non-alcoholic,"Social drinking
+Refreshment","Alcohol-free socialisers
+Botanical drink explorers","NON-ALCOHOLIC APERITIF
+Distilled Coastal Botanicals",NON-ALCOHOLIC APERITIF → alcohol-free social occasions.
+Gut Food / Ferment Fizz,Orange & Mango Lemonade,Drinks,Fermented lemonade,Orange & Mango; fruity/tart,Glass bottle,"vegan-friendly, plant-based, and free from artificial sweeteners, flavorings, extracts, concentrates, and citric acid","Refreshment
+Wellness routine","Functional wellness shoppers
+Fruit-drink explorers","Digestive Wellness
+prebiotic",Digestive Wellness and prebiotic → gut-wellness positioning; this is not confirmation of a health effect.
+Gut Food / Ferment Fizz,Lemon & Raspberry Lemonade,Drinks,Fermented lemonade,Lemon & Raspberry; fruity/tart,Glass bottle,"suitable for vegans, free from artificial sweeteners, flavorings, extracts, concentrates, and citric acid, and packed with 4.5g of prebiotic fibre","Refreshment
+Wellness routine","Functional wellness shoppers
+Fruit-drink explorers","Digestive Wellness
+prebiotic",Digestive Wellness and prebiotic → gut-wellness positioning; this is not confirmation of a health effect.
+Navas,Original Tonic Water,Drinks,Tonic mixer,Botanical; bittersweet (inferred),Glass bottle,"suitable for vegans, vegetarians, and gluten-free diets","Drink mixing
+Refreshment","Cocktail enthusiasts
+Botanical drink explorers","PREMIUM BOTANICAL MIXERS
+BEAUTIFULLY BALANCED",PREMIUM BOTANICAL MIXERS → cocktail and botanical-drink interests.
+Navas,Fiery Ginger Beer,Drinks,Ginger beer mixer,Spicy ginger,Glass bottle,"suitable for vegans, vegetarians, and gluten-free diets","Drink mixing
+Refreshment","Cocktail enthusiasts
+Spice lovers","PREMIUM BOTANICAL MIXERS
+BOLD & FULL BODIED",Fiery Ginger and BOLD & FULL BODIED → bold/spicy flavour preference.
+Gut Food / Ferment Fizz,Lemon Lemonade,Drinks,Fermented lemonade,Lemon; fruity/tart,Glass bottle,Low sugar,"Refreshment
+Wellness routine","Functional wellness shoppers
+Fruit-drink explorers
+Sugar-conscious shoppers","Digestive Wellness
+prebiotic
+low sugar",Digestive Wellness and prebiotic → gut-wellness positioning; this is not confirmation of a health effect.
+JimJams,Hazelnut Chocolate Spread,Pantry,Sweet spread,Chocolate; hazelnut,Glass jar,"No added sugar
+Contains hazelnuts","Breakfast topping
+Sweet treat","Sugar-conscious shoppers
+Home cooks
+Sweet treat seekers","NO ADDED SUGAR
+NATURAL INGREDIENTS
+Great Taste",NO ADDED SUGAR → sugar-conscious shoppers; spread format → breakfast/home use.
+Pentire,Adrift,Drinks,Non-alcoholic spirit alternative,Herbaceous; rock samphire; headland sage; lemon citrus,Glass bottle,Non-alcoholic,"Drink mixing
+Social drinking","Alcohol-free socialisers
+Cocktail enthusiasts","Herbaceous & Fresh
+DISTILLED COASTAL BOTANICALS
+NON-ALCOHOLIC",NON-ALCOHOLIC → alcohol-free socialising; botanical spirit alternative → home mixing.
+The London Essence Co.,Original Indian Tonic Water,Drinks,Tonic mixer,Bright; citrus; crisp,Can,Suitable for vegans and vegetarians.,"Drink mixing
+Refreshment","Cocktail enthusiasts
+Citrus flavour seekers","BRIGHT
+CITRUS
+CRISP","BRIGHT, CITRUS, CRISP → citrus-flavour preference; tonic format → mixing."
+Double Dutch,Indian Tonic Water,Drinks,Tonic mixer,Botanical; bittersweet (inferred),Glass bottle,Allergen-free and suitable for typical vegetarian/vegan dietary preferences,"Drink mixing
+Refreshment",Cocktail enthusiasts,"NATURALLY DELICIOUS
+PREMIUM MIXERS",PREMIUM MIXERS → cocktail/mixing interest.
+The London Essence Co.,Original Indian Tonic Water,Drinks,Tonic mixer,Bright; citrus; crisp,Glass bottle,Suitable for vegans and vegetarians.,"Drink mixing
+Refreshment","Cocktail enthusiasts
+Citrus flavour seekers","BRIGHT
+CITRUS
+CRISP","BRIGHT, CITRUS, CRISP → citrus-flavour preference; tonic format → mixing."
+Double ‘D’,Savvy Sweets Sour Bears,Confectionery,Gummy sweets,Sour raspberry and blueberry,Pouch,"Plant-based
+No added sugar",Sweet treat,"Sweet treat seekers
+Plant-based shoppers
+Sugar-conscious shoppers
+Fibre seekers","NO SUGAR ADDED
+PLANT BASED
+PREBIOTIC FIBRE
+NATURAL COLOURS & FLAVOURS
+75 CALORIES / BAG
+AUSTRALIAN MADE",NO SUGAR ADDED → sugar-conscious shoppers; PLANT BASED → plant-based shoppers; PREBIOTIC FIBRE → fibre interest.
+Coco Cubes,Chocolate Coconut Bites,Snacks,Coconut bites,Coconut; chocolate,Pouch,"Vegan
+Gluten-free",Sweet snack,"Sweet treat seekers
+Plant-based shoppers
+Gluten-free shoppers","VEGAN
+GLUTEN FREE
+REAL COCONUT
+JUST 130 KCAL
+RECYCLABLE
+FOR COCONUT LOVERS
+LIL BITES OF SUNSHINE",VEGAN and GLUTEN FREE → dietary preferences; REAL COCONUT → coconut flavour fans.
+teapigs,Super Fruit,Pantry,Loose-leaf fruit and herbal infusion,Berries; hibiscus; tart fruit,Resealable tea pouch,Naturally caffeine-free,"Hot-drink break
+Tea ritual","Tea drinkers
+Caffeine reducers
+Ethical shoppers","naturally caffeine-free
+bursting with berries
+Natural, with no artificial flavourings
+ethical tea partnership
+All our packs give back",naturally caffeine-free → caffeine reducers; give-back wording → ethical shoppers.
+The Protein Ball Co.,Stuffed — Matcha & Vanilla,Snacks,Filled protein balls,Matcha; vanilla,Pouch,"100% plant-based, vegan, and naturally gluten-free, with no added sugar, artificial sweeteners, or emulsifiers","Protein snack
+Sweet snack","Protein seekers
+Matcha flavour fans","STUFFED
+MATCHA & VANILLA",Protein Ball branding → protein snack interest; MATCHA & VANILLA → matcha flavour preference.
+The Original Chicken Crackling,Chicken Salt,Snacks,Chicken crackling,Chicken salt; savoury; spicy twist,Snack bag,"Gluten-free
+Low sugar
+Contains chicken",Savoury snack,"Meat snackers
+Gluten-free shoppers
+Sugar-conscious shoppers","With a spicy twist
+Low in Sugar!
+NO SEED OILS
+GLUTEN FREE
+Made in the UK using EU chicken",Low in Sugar and GLUTEN FREE → stated dietary preferences; chicken crackling → meat snackers.
+Blanco Niño,Creamy Jalapeño Tortilla Chips,Snacks,Tortilla chips,Creamy Jalapeño; savoury/spicy,Snack bag,"Vegan
+Gluten-free","Savoury snack
+Sharing","Savoury snackers
+Plant-based shoppers
+Gluten-free shoppers
+Eco-conscious shoppers","FULLY RECYCLABLE BAG
+VEGAN
+GLUTEN-FREE",VEGAN and GLUTEN-FREE → corresponding dietary preferences; FULLY RECYCLABLE BAG → packaging-conscious shoppers.
+Blanco Niño,Chilli & Lime Tortilla Chips,Snacks,Tortilla chips,Chilli & Lime; savoury/spicy,Snack bag,"Vegan
+Gluten-free","Savoury snack
+Sharing","Savoury snackers
+Plant-based shoppers
+Gluten-free shoppers
+Eco-conscious shoppers","FULLY RECYCLABLE BAG
+VEGAN
+GLUTEN-FREE",VEGAN and GLUTEN-FREE → corresponding dietary preferences; FULLY RECYCLABLE BAG → packaging-conscious shoppers.
+Saucerer,Pasta Sauce — Wild Mushroom & Truffle,Pantry,Pasta sauce,Earthy mushroom; truffle,Glass jar,"vegan, vegetarian, dairy-free, and gluten-free","Cooking convenience
+Meal preparation","Home cooks
+Food explorers","NO NASTIES
+SIMPLY STIR IN TO PASTA
+SERVES THREE",SIMPLY STIR IN TO PASTA → convenience seekers; mushroom/truffle → flavour explorers.
+The Curators,Pork Puffs — Smoky Bacon,Snacks,Pork puffs,Smoky bacon; savoury,Snack bag,Contains pork,"Protein snack
+Savoury snack","Protein seekers
+Carb-conscious shoppers
+Meat snackers","HIGH PROTEIN CRISPS
+18G PROTEIN
+1G CARBS
+133 CALORIES",18G PROTEIN → protein seekers; 1G CARBS → carb-conscious shoppers.
+Love Hemp,Sours Calm — Sour Orange CBD Gummies,Wellness,CBD gummies,Sour orange,Resealable pouch,Contains CBD,Wind-down routine,"Adult CBD shoppers
+Functional wellness shoppers","SOURS
+CALM
+SOUR ORANGE CBD GUMMIES
+60 x 10MG CBD GUMMIES",CALM → wind-down positioning; CBD → adult CBD interest.
+Ottolenghi,Miso Pesto,Pantry,Pesto,Umami miso; caramelised onion; spinach; pine kernels,Glass jar,Contains pine kernels,"Cooking convenience
+Meal flavouring","Home cooks
+Food explorers","fold through pasta & noodles
+spoon over fish & veg
+top flatbreads",Recipe-use wording → convenient meal preparation; miso pesto → flavour explorers.
+Sunfly,Sunflower Seed Butter — Crunchy,Pantry,Seed butter,Sunflower seed; nutty-style; crunchy,Glass jar,"No nuts (label)
+No soy (label)
+No sesame (label)","Breakfast topping
+Spread alternative","Free-from shoppers
+Home cooks
+Protein seekers","NO NUTS
+NO SOY
+NO SESAME
+Rich in Vitamin E, Magnesium, & Iron
+21g Of Protein*
+Great Taste",NO NUTS/NO SOY/NO SESAME → shoppers seeking those exclusions; 21g Of Protein → protein interest.
+ape2o,GO Steel Bottle — Turtle,Accessories,Reusable drinkware,Not applicable,Boxed steel bottle,Not applicable,"Portable hydration
+Drink temperature retention","Eco-conscious shoppers
+On-the-go shoppers","Stays cold. Stays hot.
+WATER WITHOUT PLASTIC",WATER WITHOUT PLASTIC → reuse preference; Stays cold/Stays hot → portable drink needs.
+Goodrays,Raspberry & Guava CBD Drink,Drinks,CBD sparkling drink,Raspberry; guava,Can,"Contains CBD
+No added sugar
+Low calorie","Refreshment
+Wellness routine","Adult CBD shoppers
+Sugar-conscious shoppers
+Calorie-conscious shoppers","NO ARTIFICIAL SWEETENERS
+NO ADDED SUGAR & LOW CALORIE
+HIGH IN VITAMIN D
+CBD",CBD → adult CBD interest; NO ADDED SUGAR & LOW CALORIE → sugar/calorie-conscious shoppers.
+Little’s,Toffee Nut Flavour Infused Instant Coffee,Pantry,Instant coffee,Toffee; nut-style flavour; rich and smooth,Glass jar,No added sugar,"Coffee break
+Hot-drink ritual","Coffee drinkers
+Sugar-conscious shoppers","NO ADDED SUGAR
+FLAVOUR INFUSED INSTANT COFFEE
+RICH AND SMOOTH",NO ADDED SUGAR → sugar-conscious coffee drinkers; Toffee Nut → flavoured-coffee preference.
+WelleCo,The Hydro Protein Elixir — Passionfruit,Wellness,Protein drink powder,Passionfruit,Single powder sachet,"a vegan, water-soluble protein powder designed to provide a light, refreshing alternative to heavy protein shakes with added electrolytes and a beauty blend","Protein top-up
+Prepared drink","Protein seekers
+Fitness-oriented shoppers","CLEAR PROTEIN
+DIETARY SUPPLEMENT
+FOOD SUPPLEMENT",CLEAR PROTEIN → protein/fitness interest.
+HOOP,Plantain Chips — Lemon Pepper,Snacks,Plantain chips,Lemon; pepper; savoury,Snack bag,Gluten-free,Savoury snack,"Savoury snackers
+Gluten-free shoppers
+Fibre seekers
+Community-minded shoppers","SNACK HEALTHY
+BUILD YOUTH BASKETBALL
+23P DONATED PER PACK
+GLUTEN FREE
+NATURAL FLAVOURING
+SOURCE OF FIBRE",SOURCE OF FIBRE → fibre seekers; youth basketball donation → community/sport interest; GLUTEN FREE → gluten-free preference.
+neat sweets,Fruity Berries,Confectionery,Gummy sweets,Mixed berries,Pouch,"vegan, gluten-free, low-sugar (1.6g of sugar per 50g bag), and high in dietary fibre ",Sweet treat,"Sweet treat seekers
+Sugar-conscious shoppers
+Fibre seekers","HIGH FIBRE
+95% LESS SUGAR*
+LESS THAN 2g SUGAR PER BAG
+GUILT FREE CANDY",LESS THAN 2g SUGAR PER BAG → sugar-conscious shoppers; HIGH FIBRE → fibre interest.
+FREEE,Organic Banana & Chocolate Oat Bar,Snacks,Oat bar,Banana; chocolate,Wrapped bar,"Organic
+Vegan
+Gluten-free
+Kosher pareve","Snack break
+Sweet snack","Fibre seekers
+Plant-based shoppers
+Gluten-free shoppers
+Organic shoppers","Organic
+Vegan
+HIGH FIBRE
+KLBD PARVE
+Crossed-grain gluten-free symbol",HIGH FIBRE → fibre seekers; Vegan/Organic/gluten-free symbol → dietary preferences.
+SUCSEED,Energy,Pantry,Seed and botanical blend,Seeds; herbal/earthy (inferred),Resealable pouch,Vegan (brand website),"Meal topping
+Wellness routine","Functional wellness shoppers
+Home cooks
+Plant-based shoppers","Energy
+FOR GREATER VITALITY
+KOREAN GINSENG
+MACA
+NETTLE LEAF
+HAWTHORN BERRY",Energy and FOR GREATER VITALITY → vitality positioning; seed blend → meal-topping use. Brand website confirms vegan → plant-based shoppers.
+OOM,Calm,Drinks,Functional sparkling drink,Lime; mint; rosemary,Can,"vegan, gluten-free, and low-sugar functional sparkling drink","Refreshment
+Wind-down routine","Functional wellness shoppers
+Wind-down ritual shoppers","Calm
+Lightly sparkling
+Reishi
+Vitamin B Complex
+L-Theanine
+Lemon Balm",Calm and named botanicals → wind-down positioning.
+sleep toniq,Sleep Toniq,Drinks,Botanical wellness drink,Chamomile; apple cider vinegar; blossom honey; orange,Can,Contains honey (not vegan),Wind-down routine,"Wind-down ritual shoppers
+Functional wellness shoppers","sleep toniq
+Chamomile Flower
+Apple Cider Vinegar
+Blossom Honey
+Orange",sleep toniq → bedtime/wind-down positioning.
+iLOVE SNACKS,Sicilian Lemon Pistachios,Snacks,Flavoured nuts,Pistachio; Sicilian lemon,Snack pouch,"Plant-based
+Gluten-free
+GMO-free
+Contains pistachios",Savoury snack,"Nut snackers
+Plant-based shoppers
+Gluten-free shoppers","PLANT-BASED
+GLUTEN FREE
+GMO FREE
+146 CALORIES
+Great Taste 2025",PLANT-BASED and GLUTEN FREE → dietary preferences; Sicilian Lemon → citrus/nut snack preference.
+Simply Roasted,Hot Honey Potato Crisps,Snacks,Potato crisps,Hot Honey; savoury,Sharing bag,"Gluten-free, vegan, preservative-free, and made without the 14 major allergens","Savoury snack
+Sharing","Savoury snackers
+Mindful snackers","triple cooked potato crisps
+50% less fat*",50% less fat* → shoppers comparing snack fat; larger bag → sharing occasions.
+Simply Roasted,Sea Salt Potato Crisps,Snacks,Potato crisps,Sea Salt; savoury,Sharing bag,"Gluten-free, vegan, preservative-free, and made without the 14 major allergens","Savoury snack
+Sharing","Savoury snackers
+Mindful snackers","triple cooked potato crisps
+50% less fat*
+Great Taste 2024",50% less fat* → shoppers comparing snack fat; larger bag → sharing occasions.
+Root Tea,Lemon Tea Blend,Pantry,Loose-leaf herbal tea,Lemon; liquorice; chrysanthemum; goji berry,Resealable pouch,naturally caffeine-free,"Tea ritual
+Wellness routine","Tea drinkers
+Functional wellness shoppers","AIDS DIGESTION
+DETOXES THE LIVER
+IMPROVES HEART HEALTH
+SUPPORTS EYE HEALTH",Health-oriented package wording → wellness interest only; do not infer a medical condition or treatment benefit.
+Fever-Tree,Refreshingly Light Elderflower Tonic Water,Drinks,Tonic mixer,Floral; subtly sweet; gentle bitterness,Multipack of cans,"Low calorie
+No artificial sweeteners","Drink mixing
+Refreshment","Cocktail enthusiasts
+Calorie-conscious shoppers
+Floral flavour seekers","Refreshingly Light
+LOW IN CALORIES
+NO ARTIFICIAL SWEETENERS
+FLORAL & SUBTLY SWEET
+18kcal per 100ml",LOW IN CALORIES → calorie-conscious shoppers; floral flavour → floral-drink preference.
+Folc,English Sparkling Rosé NV,Alcoholic drinks,Sparkling rosé wine,Rosé; sparkling; exact tasting notes not visible,Glass wine bottle,Contains alcohol,"Social drinking
+Celebration","Adult wine drinkers
+Gift shoppers",English Sparkling Rosé NV,English Sparkling Rosé → wine/celebration and provenance interests.
+Folc,Dry English Rosé,Alcoholic drinks,Still rosé wine,Dry; crisp; fresh,Glass wine bottle,Contains alcohol,"Social drinking
+Meal pairing",Adult wine drinkers,"Dry English Rosé
+CRISPER
+FRESHER
+BRIGHTER",Dry English Rosé and CRISPER/FRESHER/BRIGHTER → dry/fresh wine preference.
+Penrhos,Handcrafted Dry Gin,Alcoholic drinks,Gin,Dry gin; blueberry botanical cue,Aluminium bottle,Contains alcohol,"Drink mixing
+Social drinking","Adult spirits drinkers
+Cocktail enthusiasts
+Eco-conscious shoppers","HANDCRAFTED
+100% RECYCLED ALUMINIUM
+imperfectly perfect blueberries
+REUSE REFILL RECYCLE",REUSE REFILL RECYCLE and recycled aluminium → packaging/reuse preference; HANDCRAFTED → craft-spirit interest.
+Mission,Lemon & Ginseng Natural Energy Drink,Drinks,Tea-based energy drink,Lemon; ginseng; green tea,Multipack of cans,"No sugar
+No sweeteners
+Contains caffeine","Energy-drink occasion
+Refreshment","Energy-drink shoppers
+Sugar-conscious shoppers
+Focus-oriented shoppers","The world’s cleanest energy drink
+NATURAL ENERGY & NOTHING ELSE
+No sugar. No sweetener.
+Low, slow-release caffeine
+Added vitamins + nootropics
+WITH GREEN TEA
+AVOID THE CRASH",NATURAL ENERGY and nootropics → energy/focus positioning; No sugar → sugar-conscious shoppers.
+Ombar,Pistachio Cream — 60% Dark Chocolate,Confectionery,Filled dark chocolate,Dark chocolate; pistachio cream,Wrapped bar,"Organic
+Contains pistachios",Sweet treat,"Sweet treat seekers
+Organic shoppers
+Chocolate enthusiasts","ORGANIC
+ALL NATURAL
+60% DARK CHOCOLATE",ORGANIC → organic shoppers; 60% dark chocolate and pistachio cream → chocolate flavour preference.
+Mr Filbert’s,Teriyaki Mochi Rice Bites,Snacks,Rice crackers,Teriyaki; sweet-savoury,Resealable pouch,"suitable for vegetarians, and gluten-free, though they contain soybean as an allergen","Savoury snack
+Sharing","Savoury snackers
+Food explorers","Japanese Inspired
+NATURALLY DELICIOUS
+Deliciously Crunchy",Japanese Inspired and teriyaki → flavour explorers; Deliciously Crunchy → texture preference.
+NOMO,Caramel Choc Bar,Confectionery,Filled chocolate alternative,Chocolate; caramel,Wrapped bar,"Plant-based
+Dairy-free
+Gluten-free
+Nut-free
+Egg-free",Sweet treat,"Sweet treat seekers
+Plant-based shoppers
+Free-from shoppers","PLANT-POWERED
+DAIRY FREE
+GLUTEN FREE
+NUT FREE
+EGG FREE
+NO MISSING OUT",PLANT-POWERED and named free-from claims → plant-based/free-from shoppers.
