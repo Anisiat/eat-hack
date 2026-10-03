@@ -199,7 +199,7 @@ ARCHETYPE_TRAITS = {
 }
 
 # -----------------------------
-# PRODUCT CATEGORY AFFINITIES
+# PRODUCT CATEGORY AFFINITIES - what user archetypes would be looking for
 # -----------------------------
 
 CATEGORY_PROFILES = {
