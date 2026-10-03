@@ -187,87 +187,165 @@ This replaces the Event planner and Brand profiles screens with one map-first sc
 
 > **Update:** QRP has been replaced by net value per pop-up (£) and expected reviews (see Impact metric), and events are capped below 200 people. Read "QRP" in this section as net value.
 
+## Location finder UI (replaces the "Location finder UI" section; paste after "Inputs and outputs", before "Team split")
+
+The marketing team's job today: find events, work out who will be there, then guess which products to request from the warehouse. The location finder puts all three on one screen. **Find the best location for the audience, see which WatchHumans archetypes are attending, get the products and quantities to bring.** Everything on the screen is interactive: the map, the list, the filters, the timeline, the lineup, the plan and the impact view all respond to each other.
+
+It is the front end to the same engine. It reads the output files and calculates nothing itself.
+
+This replaces the Event planner and Brand profiles screens with one map-first screen. The Month plan and impact screen is folded in as the timeline strip under the map (month plan) and the Impact drawer, in the same look.
+
+### Opening sequence: the PopUpPick bubble
+
+The product is called **PopUpPick** (one word) in the UI. When the page opens, nobody sees the tool straight away. They see the name first, then the site appears.
+
+1. **Dark screen.** The whole screen is the Really Good Culture dark background, the charcoal canvas `#1D1D1D` from `tokens.css`. Nothing else is visible.
+2. **The bubble.** The name **PopUpPick** appears centred inside a soap-bubble: a translucent circle (about 60% of the screen width on mobile, up to about 420px on desktop) with a thin rim in the RGC gradient (`#C2FF00` to `#4DC9E2`), a soft highlight in the top left and a faint inner glow. The name is white, Helvetica weight 400, tight tracking (about -.045em), sized to sit inside the circle.
+3. **It floats.** The bubble grows in with a slight overshoot (about 0.6s), then drifts and wobbles gently (about 1.4s). A small monospace hint, "Click to pop", fades in underneath.
+4. **It pops.** After about 2 seconds, or the moment someone clicks, taps or presses Enter or Space, the bubble swells slightly and bursts: 10 to 14 small droplets in lime, cyan and white fly outward and fade in about 0.5s.
+5. **The site is revealed.** As the bubble bursts, the dark overlay fades away and the real site is underneath, already loaded: the interactive map and the timeline strip. The top bar slides down with the PopUpPick wordmark, the map fades in, the timeline strip rises, and the pins drop in one after another. The whole sequence takes about 3 seconds.
+
+Rules for the sequence:
+- The site loads underneath the bubble, so the map, tiles and data are ready when it pops. If the data has not loaded after 5 seconds, the bubble stays and shows a short message ("Still loading the events") rather than popping onto an empty map.
+- Anyone can skip: a click, a key press, or a visible "Skip" button pops it immediately. Adding `?nosplash` to the address skips it for development.
+- Clicking the PopUpPick wordmark in the top bar replays it, which is useful for the demo video.
+- Pure CSS and a small amount of JavaScript, animating only transform and opacity. No animation library.
+- With reduced motion switched on: no floating, no droplets; the name shows on the dark screen for about 0.8s, then cross-fades into the site.
+- Accessibility: the overlay has the accessible name "PopUpPick", keyboard focus moves into the site once the overlay is gone, and the overlay is removed from the page afterwards.
+- No sound.
+
+This sequence is also the opening shot for the pitch video.
+
 ### Front end: one interactive web page
 
-Because everything must be interactive and branded, build the front end as a single-page web app: **Mapbox GL JS** for the map, plain JavaScript or React for the panels, served by a small Python server (FastAPI or Flask) that reads the same CSV and JSON files. The model and the file contract do not change.
+Build the front end as a single-page web app: **Leaflet** for the map (free and open source, no account or token), plain JavaScript or React for the panels, served by a small Python server (FastAPI or Flask) that reads the CSV and JSON files in `outputs/`. The model and the file contract do not change, apart from the additions listed under "How the UI connects to the engine".
 
-Streamlit with pydeck is the fallback if the app lead prefers it, but be aware of what it cannot do well: hover cross-highlighting between map and list, fly-to animation, timeline brushing and fully custom styling all need a custom component. Decide at T+0:00.
+Leaflet is chosen because it is reliable and well known, needs nothing to be set up, and has what the UI needs built in or as a standard plugin: custom pins, clustering, animated fly-to, drawn circles, GeoJSON shapes and keyboard support.
+
+Streamlit with a map component is the fallback if the app lead prefers it, but it cannot do the opening sequence, hover cross-highlighting between map and list, or fully custom styling without a custom component. Decide at T+0:00.
+
+### Every engine feature and where it shows in the UI
+
+| Engine feature | Where it shows in the UI | Source |
+| --- | --- | --- |
+| Archetype match (step 1) | Fit score on every pin and list row; archetype chips naming who is attending; archetype bars in the panel | `scores.csv` fit; `event_audience.json` crowd |
+| Expected outcomes (step 2) | Expected sign-ups, reviews and QRP on the panel; expected reviews on each product tile | `scores.csv` exp_signups, exp_reviews, exp_qrp |
+| Lineup optimiser, 2 to 5 products by attendance (step 3) | Product tiles, with a line such as "4 products for about 300 people" | `lineups.json` lineup_size, brands |
+| Each archetype credited with its favourite product | Winner badge on tiles; clicking an archetype bar highlights the product that wins it | `lineups.json` archetype_winner |
+| Hard constraints: vegan, gluten-free, chilling, units in stock, no alcohol or CBD at community, expo and conference events | "Lineup checks" row of ticks under the tiles; a red flag if a check fails | `lineups.json` checks |
+| Month plan: QRP per pound, capacity (usually 2 a month), no date clashes, borough bonus (step 4) | Timeline strip: month and capacity selectors, "Use recommended plan" button, clash warnings, a "New sign-ups borough" tag on bonus boroughs | `month_plan.json`; `boroughs.csv` |
+| Brands featured; no guaranteed slots | Plan tray stat "Brands featured: N of 49", with a note that clients do not pay for placement | `month_plan.json` brands_featured |
+| Brand event profiles (step 5) | Product to events mode: a chart of fit across the seven event types, best type, best moment, best audience, what to sample, where to avoid, top five events, and the profile paragraph labelled "written by a language model from these numbers" | `profiles.json` |
+| Quantities and timing (step 6) | Units on each tile, best time slot, units capped by stock | `lineups.json` units, slot |
+| Stock | Stock check per product, and across the whole plan in the tray; stock is labelled an assumption | `brand_products.csv` |
+| Habit plan against tool plan | "Versus the usual five" comparison on the panel and the tray | `lineups.json` habit_qrp |
+| Uplift and its confidence interval | Impact drawer: uplift with its interval as a range bar, QRP tool against habit, 12 held-out pop-ups as paired bars | `impact.json` |
+| Cost per qualified review | On the panel, in the tray and in the Impact drawer | `lineups.json` cost, cost_per_qr; `impact.json` |
+| Synthetic data | A permanent "synthetic data, not a measured result" label by the uplift number; brand profile ratings are marked synthetic | all |
+| Real measurement: a QR code per pop-up | Every event in the plan gets a pop-up code shown in the tray and written to the request list, ready to put in the WatchHumans sign-up flow | UI (code from event id and date) |
+| Event facts and type tagging | Type badge, venue, times, attendance and a link to the source listing on the panel | `events.csv` |
 
 ### Screen layout
 
 | Area | What it shows |
 | --- | --- |
-| Top bar (charcoal) | RGC logo, mode toggle (Event to products, Product to events), filter pills, search, impact strip |
+| Top bar (charcoal) | RGC logo and the PopUpPick wordmark, mode toggle (Event to products, Product to events), Impact button, search, uplift strip |
+| Filter row | Pills for event type, audience tag, archetype, date range, indoor or outdoor, borough, stall cost |
 | Left | Ranked event list, the same events as the map, sorted by expected QRP |
-| Centre | Mapbox map, with Map and Timeline tabs over the same data |
-| Right | Detail panel for the selected event |
-| Bottom | Plan tray: events added to the plan, capacity, total QRP, request list export |
+| Centre | Interactive map, with the timeline strip docked directly underneath so both are always visible; the strip can be expanded to full height |
+| Right | Detail panel for the selected event, or the brand profile in Product to events mode |
+| Bottom | Plan tray: events added, capacity, total QRP against habit, brands featured, pop-up codes, request list export |
+
+### Archetype labels on every event
+
+Each event shows who is attending, using the 10 WatchHumans archetypes (wellness seeker, trend enthusiast, thoughtful buyer, smart saver, quality seeker, on-the-go shopper, impulse buyer, experience explorer, everyday planner, conscious consumer). The mix is the engine's crowd estimate for the event (`event_audience.json`).
+
+- **List row:** the top archetype as a chip with its share, for example "Wellness seeker 34%", plus a smaller chip for the second.
+- **Pin tooltip:** the top three archetypes with their shares.
+- **Pin label:** when zoomed in past a set level, a short label under the pin ("Wellness 34%").
+- **Detail panel:** all 10 archetypes as bars, sorted by share, with the top one called out in one sentence ("Mostly wellness seekers and experience explorers").
+- **Filter:** an Archetype filter ("show events where smart savers are the biggest group"). Filtering by archetype updates pins, list and timeline.
+- **Product to events mode:** the selected brand's three target archetypes are highlighted on every event, and events where a target archetype is in the top three show a match tick.
+- Clicking an archetype bar highlights the product in the lineup that wins that archetype (from `archetype_winner`).
+- Chips are neutral: white fill, 1px border, monospace 12px, with the top chip tinted indigo. Archetypes never get their own colours, so they do not compete with the fit or event type colours.
+- The panel always says "estimated crowd mix, updated with who signed up at past pop-ups".
 
 ### Everything is interactive
 
 **Map**
-- Hover a pin: tooltip with event name, date, score and top audience segment. The matching row in the list highlights.
-- Click a pin: map flies to it, the pin grows with an indigo ring, the detail panel opens.
+- Hover a pin: tooltip with name, date, score and top archetypes. The matching list row highlights.
+- Click a pin: map flies to it, the pin grows with an indigo ring, the panel opens.
 - Zoomed out, nearby pins cluster into a count; click a cluster to zoom in.
-- Hover a row in the list: the matching pin pulses.
-- Draw or drag a radius ("search this area"): the list and plan figures filter to events inside it.
-- Click a borough (when the borough layer is on): the map zooms to it and the filter sets to that borough, with its stats shown.
-- Basemap controls: zoom, reset view, toggle the borough layer.
+- Hover a list row: the matching pin pulses.
+- Draw or drag a radius: the list and plan figures filter to events inside it.
+- Click a borough (borough layer on): zoom to it and filter to it, with its stats.
+- Drag to pan, scroll or pinch to zoom. Controls: zoom buttons, reset view, toggle the borough layer.
 
 **Filters and list**
-- Filter pills update the pins, list and timeline instantly, with pins animating in and out.
-- The list sorts by expected QRP, date, distance from the centre, or stall cost, and shows a live count ("14 events").
-- Select two events with the compare tick and open a side-by-side compare (audience, lineup, QRP, cost).
+- Pills update pins, list and timeline instantly, with pins animating in and out and a live count.
+- Sort by expected QRP, date, distance from centre or stall cost.
+- Tick two events and open a side-by-side compare (archetypes, lineup, QRP, cost).
 
 **Detail panel**
-- Click a segment bar in "who is there" to highlight which brands target that segment.
-- Click a brand tile to open its reasons and its profile, and "Show where this brand wins" to jump to Product to events mode with that brand selected.
-- Stall-size toggle (Small, Medium, Large) switches the units shown. The engine precomputes all three, so the UI never calculates quantities.
-- "Add to plan" animates the event into the plan tray. The stock check updates with the whole plan, not just this event.
+- Stall-size toggle (Small, Medium, Large) switches the units shown. The engine precomputes the three sets, so the UI never calculates quantities.
+- Click a product tile for its reasons (`scores.csv` reason_1 to 3), expected reviews, and "Show where this brand wins", which jumps to Product to events mode.
+- "Add to plan" animates the event into the tray. The stock check updates for the whole plan.
 
-**Timeline tab**
+**Timeline strip (month plan)**
+- Docked under the map, always visible; expands to full height for a closer look.
+- Month and capacity selectors; "Use recommended plan" loads `month_plan.json`. Manual picks and the recommended plan can be compared side by side.
 - Drag across the timeline to brush a date range; the map and list filter to match.
-- Click a bar to select the event everywhere. Clashing dates show a warning, and the plan tray turns amber when over capacity.
+- Clashing dates show a warning. The tray turns amber when over capacity.
 
 **Plan tray**
-- Reorder, remove or swap events. Total QRP, uplift against habit and the summed request list update live. Export the request list as CSV.
+- Reorder, remove or swap events. Total QRP, uplift against habit, brands featured and the summed request list update live. Export the request list as CSV, including each pop-up's code.
+
+**Impact drawer**
+- Opens from the top bar. Uplift with its confidence interval, QRP and cost per qualified review for tool against habit, and the 12 held-out pop-ups as paired bars. Clicking a bar selects that pop-up. The synthetic-data label is always visible.
 
 **Keyboard and motion**
 - Arrow keys move through the list, Enter opens the panel, Escape closes it. Visible keyboard focus on every control.
 - Transitions follow the site's motion (small upward reveal, about .25 to .8s easing) and switch off under reduced motion.
 
-### Map (Mapbox)
+### Map (Leaflet)
 
-- Mapbox GL basemap centred on the bounding box of `events.csv` (London for now, wherever the events are later). Token in an environment variable, never in the repo.
-- Style: Mapbox Light, desaturated and recoloured to `#F4F3EF` land, with labels and roads turned down so the pins are the loudest thing.
-- Pin fill shows fit; pin size shows expected attendance; the fit score (0 to 100) sits inside the pin in monospace. Selected pin gets an indigo `#6A6AE2` ring.
-- Fit colours: strong `#22A651`, medium `#EAC24A`, weak `#C9C7C0`. In Product to events mode the fill shows the selected brand's fit instead of the best lineup's.
-- Optional borough layer: shading by WatchHumans users per 1,000 people from `boroughs.csv` (pale means new sign-ups are worth the most).
+An interactive, realistic street map of London (or wherever the events are), with no account or key needed.
+
+- **Library:** Leaflet, plus the Leaflet.markercluster plugin for clustering.
+- **Tiles:** OpenStreetMap standard tiles (`https://tile.openstreetmap.org/{z}/{x}/{y}.png`). The attribution "© OpenStreetMap contributors" must stay visible on the map. OpenStreetMap's tile servers have a usage policy that is fine for a demo but not for heavy production use, so check the policy before launch and swap in a tile provider then; only the tile URL changes.
+- **Realistic and interactive:** drag to pan, scroll or pinch to zoom, double-click to zoom in, and zoom down to street level so the team can see the real venue. Initial view fits the bounding box of `events.csv`.
+- **Looks like RGC, not a default map:** apply a CSS filter to the tile layer only (for example reduced saturation and a slight warm tint, tuned until the land reads close to `#F4F3EF`) so the pins are the loudest thing. The pins themselves stay crisp.
+- **Pins:** custom Leaflet `divIcon` pins, built in HTML and CSS. Pin fill shows fit; pin size shows expected attendance; the fit score (0 to 100) sits inside the pin in monospace; the selected pin gets an indigo `#6A6AE2` ring.
+- **Fit colours:** strong `#22A651`, medium `#EAC24A`, weak `#C9C7C0`. In Product to events mode the fill shows the selected brand's fit instead of the best lineup's.
+- **Fly-to and clustering:** `flyTo` animates to a selected event; nearby pins cluster into a count that zooms in when clicked.
+- **Radius search:** a draggable Leaflet circle that filters the list and plan figures.
+- **Borough layer (optional):** a GeoJSON layer shaded by WatchHumans users per 1,000 people from `boroughs.csv` (pale means new sign-ups are worth the most, which is the month plan's borough bonus).
+- **If the internet drops:** tiles are the only part that need the network. The app keeps working on a plain `#F4F3EF` background with all pins, lists and panels. Test on the venue's wifi before the demo, and record the video early.
 - No heatmap. Events are separate points, and a heatmap would blur them into a density that does not exist.
 
 ### Filters
 
 - Event type: the seven types (community, concerts, conferences, expos, festivals, performing arts, sports).
 - Audience tag: food, tech, fitness, students, families, from `audience_tags` in `events.csv`. "Food events" and "tech events" are tags, not types: a food market is community with a food tag, a hackathon is conferences with a tech tag.
-- Date range, indoor or outdoor, borough, maximum stall cost, and a "clear all".
+- Archetype (the biggest group at the event), date range, indoor or outdoor, borough, maximum stall cost, and "clear all".
 
 ### Detail panel (same on map and timeline)
 
-1. **Event:** name, date, start and end time, venue, borough, expected attendance, link.
-2. **Who is there:** audience segment mix (students, young professionals, fitness, families, foodies) as bars, age mix, and the borough's share aged 18 to 34. Labelled "estimated from event tags and Census 2021".
-3. **Bring:** the 5 brands as product tiles with units and the best time slot.
-4. **Why:** three reasons per brand, from `scores.csv`, one plain sentence each.
-5. **Compare:** tool lineup QRP against habit lineup QRP, and cost per qualified review.
-6. **Stock check:** units needed against units available per brand, with a clear flag on any shortfall.
+1. **Event:** name, type, date, start and end time, venue, borough, expected attendance, source link.
+2. **Who is attending:** the 10 archetype bars and the one-sentence summary (see "Archetype labels"), plus the borough's share aged 18 to 34.
+3. **Bring:** 2 to 5 product tiles (brand, product, units, expected reviews, winner badge), the best time slot, and the line explaining the lineup size.
+4. **Lineup checks:** vegan option, gluten-free option, chilled capacity, stock, alcohol and CBD rule, each ticked or flagged.
+5. **Why:** the engine's three reasons for the lineup, one plain sentence each.
+6. **Compare:** tool lineup QRP against habit lineup QRP, expected sign-ups, cost and cost per qualified review.
 7. **Add to plan.**
 
 ### Product to events mode
 
-Pick a client brand. The map recolours by that brand's fit, the list re-sorts by its expected reviews, and the panel shows its profile from `profiles.json`: best moment, best audience, what to sample, where to avoid, and its top five upcoming events.
+Pick a client brand. The map recolours by that brand's fit, the list re-sorts by its expected reviews, and the panel shows its profile from `profiles.json`: fit across the seven event types as a small bar chart, best event type, best moment, best audience, what to sample, where to avoid, its top five upcoming events, and the profile paragraph. Ratings behind the profile are synthetic and marked as such.
 
 ### Request list
 
-Every event added to the plan contributes its units. The plan tray sums them per brand and exports one CSV for the warehouse: brand, product, units, event, date. Quantities follow the engine's rule: expected stops times one sample times a 1.2 buffer.
+Every event added to the plan contributes its units per product, already capped by stock. The tray sums them per product and exports one CSV for the warehouse: brand, product, units, event, date, pop-up code. Quantities follow the engine's rule: expected stops times one sample times a 1.2 buffer.
 
 ### Look and feel: Really Good Culture
 
@@ -283,10 +361,10 @@ The visual reference is the `rgc-brand-reference` folder: `index.html` (palette,
 | Dark text | `#141414` | Text on light surfaces |
 | Workspace | `#F4F3EF` (warm) or pale grey | Page background |
 | Cards | `#FFFFFF` | List, panels, plan tray |
-| Dark detail panel | `#161618` | Optional dark detail panel, as in the explorer |
+| Dark detail panel | `#161618` | Detail panel, as in the explorer |
 | CTA lime | `#B8F000` | Primary action only |
 | CTA green | `#22A651` | Primary action gradient end, strong fit |
-| Indigo | `#6A6AE2` | Selection, selected pin ring, focus states |
+| Indigo | `#6A6AE2` | Selection, selected pin ring, focus states, top archetype chip |
 | CTA gradient | `linear-gradient(90deg,#B8F000,#22A651)` | The one primary action per screen ("Add to plan") |
 | Hero text gradient | `linear-gradient(120deg,#C2FF00,#4DC9E2)` | Large headings, welcome state only |
 
@@ -304,24 +382,17 @@ The visual reference is the `rgc-brand-reference` folder: `index.html` (palette,
 
 When an event is selected, the detail panel's soft radial glow takes that event's type colour, as the explorer does when a category is selected.
 
-**Typography**
+**Typography:** Helvetica, Helvetica Neue, Arial for headings and body (headings weight 400, tight tracking about -.045em); Menlo, SF Mono, ui-monospace for labels, nav, buttons, pin scores and archetype chips (actions 14px uppercase, eyebrows 12px uppercase with wide tracking); Geist for a few supporting headings. Everyday text 14 to 16px, labels 12 to 13px.
 
-| Use | Style |
-| --- | --- |
-| Headings and body | Helvetica, Helvetica Neue, Arial, sans-serif; headings weight 400 with tight tracking (about -.045em) |
-| Labels, nav, buttons, pin scores, metadata | Menlo, SF Mono, ui-monospace, monospace; actions 14px uppercase, eyebrows 12px uppercase with wide tracking |
-| Accent | Geist, for a few supporting headings |
-| Sizes | 14 to 16px everyday text, 12 to 13px labels; keep tiny marketing tags out of dense flows |
-
-**Shape, spacing and components**
+**Shape and components**
 - Controls (inputs, filter pills, selects): 12px radius, white fill, 1px charcoal border at 16%, green focus border with a faint halo. Primary action: 999px pill, 13px 26px padding, dark label on the lime to green gradient, lifts 1px on hover.
-- Panels and cards: 22 to 24px radius, 16 to 24px inner padding, 12 to 16px gaps, subtle separators.
-- Top bar: 72px high, charcoal, compact logo, ghost pill filters, gradient CTA.
-- Event cards in the list look like product cards: title, score in monospace, audience chips, one line on why.
-- The five-brand lineup is a row of white tiles with the unit count on each, like a shelf.
+- Panels and cards: 22 to 24px radius, 16 to 24px inner padding, 12 to 16px gaps.
+- Top bar: 72px high, charcoal, compact logo, ghost pill buttons, gradient CTA.
+- Event cards in the list look like product cards: title, score in monospace, archetype chips, one line on why.
+- The lineup is a row of white tiles with the unit count on each, like a shelf.
 - Colour never carries meaning alone: the score number is on every pin and every status has a label.
 
-**Artwork.** Use the 3D pieces sparingly, in welcome and empty states and panel headers, never behind tables or charts. Candidates from `assets/`: `rgc-logo.png` (top bar), `star-3d.webp` and `chain.webp` (empty states), `cereal-*.webp` (small ornaments on audience chips), `bg-*.webp` (soft panel backgrounds behind the detail header only).
+**Artwork.** Use the 3D pieces sparingly, in welcome and empty states and panel headers, never behind tables or charts. Candidates from `assets/`: `rgc-logo.png` (top bar), `star-3d.webp` and `chain.webp` (empty states), `cereal-*.webp` (small ornaments), `bg-*.webp` (soft backgrounds behind the detail header only).
 
 **Voice.** Warm and a little playful in empty and welcome states ("Hi Human, where are we popping up?"), plain and exact everywhere else (units, QRP, dates, shortfalls). Labels like "Not enough in the warehouse" beat generic "Error".
 
@@ -331,33 +402,36 @@ The UI reads files only. It never recomputes fit, QRP or quantities, and the lan
 
 | File | Made by | Used for |
 | --- | --- | --- |
-| `events.csv` | Data lead | Pins, filters, event details |
-| `boroughs.csv` and a London borough boundary file (GeoJSON) | Data lead | Borough layer, borough stats |
-| `brands.csv` | Data lead | Brand names, products, units available for the stock check |
-| `scores.csv` | Model lead | Pin colour, score, list order, reasons |
-| `lineups.json` | Model lead | Products, units per stall size, time slot, QRP against habit |
+| `events.csv` | Data lead | Pins, filters, event details, source links |
+| `boroughs.csv` and a London borough boundary file (GeoJSON) | Data lead | Borough layer, borough stats, borough bonus tag |
+| `brands.csv`, `brand_products.csv` | Data lead | Brand and product names, stock for the stock check |
+| `scores.csv` | Model lead | Pin colour, score, list order, expected outcomes, reasons |
+| `lineups.json` | Model lead | Products, units, slot, QRP against habit, checks, archetype winners |
 | `profiles.json` | Model lead | Product to events mode |
-| `impact.json` | Model lead | Impact strip |
-| `event_audience.json` (new) | Model lead | "Who is there" panel |
-| `requests.csv` (new, written by the UI) | App lead | Warehouse request list |
+| `impact.json` | Model lead | Impact drawer and uplift strip |
+| `month_plan.json` | Model lead | Recommended plan, capacity, brands featured |
+| `event_audience.json` (new) | Model lead | Archetype labels and the "Who is attending" panel |
+| `requests.csv` (new, written by the UI) | App lead | Warehouse request list with pop-up codes |
 | `rgc-brand-reference/` (tokens.css, assets/) | Brand scrape | Colours, type, artwork |
 
-Two changes to the file contract:
+Additions to the file contract (the engine already computes all of these; the files just need to write them out):
 
 ```
-event_audience.json  event_id -> borough, segment_mix{5 segments, sums to 1}, age_mix{18-24, 25-34, 35-44, 45+}, top_segment, borough_share_18_34, source_note
-lineups.json         event_id -> brands[5], units{brand: {small, medium, large}}, slot, qrp, habit_qrp, cost
+event_audience.json  event_id -> crowd{10 archetypes, sums to 1}, top_archetypes[3], borough, borough_share_18_34, source_note
+lineups.json         add: lineup_size, archetype_winner{archetype: product_id}, checks{vegan, gluten_free, chilled_ok, alcohol_ok, in_stock}, units_by_size{small, medium, large} per product
+scores.csv           add: best_product_id
+profiles.json        add: target_archetypes[3] per brand
 ```
 
-The segment mix comes from the event's audience tags and the borough's age profile, using the same audience-overlap term `a` as the fit score. It is an estimate, and the panel says so. The stall-size toggle only switches between the three precomputed unit sets.
+`units` stays the medium set; `units_by_size` is what the stall-size toggle switches between. If the engine does not produce it, drop the toggle rather than computing quantities in the UI.
 
 ### Build notes
 
-- Start from stub files (five fake rows each, T+0:15). The UI must run on stubs before the real files exist.
-- Build order: theme and map with pins; list, filters and detail panel with cross-highlighting; plan tray and request export; Product to events mode; timeline with brushing; borough layer; compare view.
-- Cut order for the UI: compare view, borough layer, timeline brushing, then Product to events mode. Keep the pins, the detail panel, the plan tray and the stock check.
-- Honesty: the impact strip says uplift on synthetic data is not a measured result.
-
+- The map needs no account or key. Tiles need an internet connection (see "If the internet drops").
+- Start from stub files (five fake rows each, T+0:15). The UI must run on stubs before the real files exist, including a stub `event_audience.json` with plausible archetype mixes.
+- Build order: theme and the PopUpPick opening sequence; map with pins; list, filters and detail panel with archetype labels and cross-highlighting; plan tray and request export; Product to events mode; Impact drawer; timeline strip with the recommended plan; borough layer; compare view.
+- Cut order for the UI: compare view, borough layer, timeline brushing, then the stall-size toggle. Keep the opening sequence, the pins, archetype labels, the detail panel, the plan tray, the stock check and the Impact drawer.
+- Honesty: the uplift strip and Impact drawer always say uplift on synthetic data is not a measured result.
 ## Team split
 
 Build for 2.5 hours, then spend 1.5 hours on the demo, all inside your 4 hours. If you start at 13:30, T+4:00 is the 17:30 deadline.
