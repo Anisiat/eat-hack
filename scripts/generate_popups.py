@@ -3,7 +3,7 @@ generate_popups.py - synthetic RGC-first pop-up history for Pop-up Pick (EAT_HAC
 
 Writes three files to an output folder (default: ./out):
   brands.csv        20 fictional client brands: what RGC knows about each brand
-  popups.csv        60 past pop-ups, one row each, Oct 2025 to Sep 2026
+  popups.csv        60 past pop-ups (2 a month), one row each, Apr 2024 to Sep 2026
   popup_brands.csv  one row per pop-up and brand: units, reviews, qualified reviews, rating
 
 Everything is synthetic. Brand names are invented; event names are generic.
@@ -219,7 +219,7 @@ def simulate(event, lineup, seed=None):
 
 
 # ---------------------------------------------------------------- history generator
-def make_history(n_months=12, per_month=5, first_month=(2025, 10)):
+def make_history(n_months=30, per_month=2, first_month=(2024, 4)):   # RGC runs 2 pop-ups a month
     rng = np.random.default_rng(SEED)
     rows, brand_rows, used_dates = [], [], set()
     year, month = first_month

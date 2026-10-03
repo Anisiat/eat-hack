@@ -32,7 +32,7 @@ F is footfall past the stall at event e. s is the share who stop and sign up, wh
 | Sign-ups per pop-up | RGC: traction | A QR code per pop-up in the WatchHumans sign-up flow |
 | QRP | RGC and clients | Reviews tagged with the pop-up's code, joined to the reviewer's segment |
 | Cost per qualified review | RGC: efficiency | Staff hours, stall fee, travel and units given, divided by QRP |
-| Brand coverage | Clients | Share of brands that hit their monthly review target |
+| Brands featured | Clients | How many client brands appear in a month's pop-ups; informational, since clients do not pay for placement |
 
 **The tool's impact** is its uplift over how RGC plans today:
 
@@ -53,7 +53,7 @@ Three sources: synthetic WatchHumans tables, real upcoming London events, and pu
 | `brands.csv` | 20 client brands | Synthetic, fictional names | category, sub-category, flavour profile, format, needs chilling, dietary flags, need states served, target segments, units available |
 | `users.csv` | 5,000 | Synthetic WatchHumans | age band, borough, segment (students, young professionals, fitness, families, foodies), traits, category affinities, dietary needs, sign-up source (pop-up code or organic) |
 | `reviews.csv` | 20,000 | Synthetic WatchHumans | user, brand, pop-up code or none, rating 1 to 5, would buy, liked or disliked attribute, in target segment; pop-up reviews reconcile with `popup_brands.csv` |
-| `popups.csv` | 60 past pop-ups | Synthetic | date, event type (one of seven), borough, footfall, 5-brand lineup, sign-ups, reviews, cost |
+| `popups.csv` | 60 past pop-ups, 2 a month from Apr 2024 to Sep 2026 | Synthetic | date, event type (one of seven), borough, footfall, 5-brand lineup, sign-ups, reviews, cost |
 | `popup_brands.csv` | 300 | Synthetic | pop-up, brand, units given, reviews, qualified reviews, average rating |
 | `events.csv` | 30 to 40 upcoming | Real London listings, collected by hand | type, start and end, venue, latitude and longitude, expected attendance, indoor or outdoor, audience tags, stall cost, link |
 | `boroughs.csv` | 33 | Census 2021 (ONS TS007, via Nomis); WatchHumans users synthetic | population, share aged 18 to 34, inner or outer, WatchHumans users per 1,000 people |
@@ -131,7 +131,7 @@ Six steps run in order: score every brand at every event, predict outcomes, pick
    n is the need-state vector of the brand and of the event type, from the crowd table. a is audience overlap: the event's expected age and interest mix against the brand's target segments. c is context: time of day, indoor or outdoor, and whether the product needs chilling. h is the brand's learned lift at event type k from WatchHumans ratings, shrunk towards zero when it has few reviews there.
 2. **Expected outcomes.** A Poisson regression trained on the 48 training pop-ups predicts sign-ups from footfall, event type, dwell time and lineup appeal. Combined with fit, it gives expected reviews and QRP per brand.
 3. **Lineup optimiser.** For each event, score every 5-brand combination of eligible brands: 20 brands give 15,504 combinations, scored in under a second. The score is total brand QRP, plus a bonus for covering a drink, a savoury, a sweet and a condiment, minus a penalty for two brands in the same sub-category. Hard constraints: at least one vegan and one gluten-free option, chilled capacity, units in stock.
-4. **Month plan.** Rank events by best-lineup QRP per pound and fill RGC's capacity, for example 4 pop-ups, with no date clashes. Every client brand gets at least one slot a month. Boroughs where WatchHumans has few users get a bonus, because new sign-ups are worth more there.
+4. **Month plan.** Rank events by best-lineup QRP per pound and fill RGC's capacity, usually 2 pop-ups a month, with no date clashes. No brand is guaranteed a slot: clients do not pay RGC for pop-up placement, and pop-ups are one RGC service among several. Boroughs where WatchHumans has few users get a bonus, because new sign-ups are worth more there.
 5. **Brand event profiles.** For each brand: fit across the seven event types, its best moment and audience, what to sample, where to avoid, and its top five upcoming events with expected reviews. A language model writes the profile paragraph from these numbers; it never sets them.
 6. **Quantities and timing.** Units to bring equal expected stops times one sample times a 1.2 buffer. The time slot is the event's peak-need moment from the crowd table.
 
@@ -145,15 +145,16 @@ The app has three screens, one per question RGC asks. Each reads the same scored
 | --- | --- | --- |
 | Event planner (events to brands) | An event, or a date range; units available; stall size | Ranked events with expected sign-ups, QRP and cost per qualified review; best lineup with products, units, time slot and three reasons; the habit lineup's QRP for comparison |
 | Brand profiles (brands to events) | A client brand | Its event profile: fit across the seven event types, best moment, best audience, what to sample, where to avoid; its top five upcoming events with expected reviews |
-| Month plan and impact | Month, pop-up capacity, client commitments | A calendar of pop-ups and lineups; total QRP versus the habit plan, with the uplift and its confidence interval |
+| Month plan and impact | Month, pop-up capacity | A calendar of pop-ups and lineups; total QRP versus the habit plan, with the uplift and its confidence interval |
 
-**File contract.** Agree these at T+0:00. Write stub files with five fake rows at T+0:15 so the app starts immediately.
+**File contract.** All in `outputs/`, built by `python -m model.run [--month 2026-11 --capacity 2]` from the input CSVs plus `event_types.csv` (the crowd table) and `events.csv`. Agree these at T+0:00. Write stub files with five fake rows at T+0:15 so the app starts immediately.
 
 ```
-scores.csv     event_id, brand_id, fit, exp_signups, exp_reviews, exp_qrp, reason_1, reason_2, reason_3
-lineups.json   event_id -> brands[5], units{brand: n}, slot, qrp, habit_qrp, cost
-profiles.json  brand_id -> fit_by_type{7}, best_moment, best_audience, sample, avoid, top_events[5], text
-impact.json    uplift, ci_low, ci_high, qrp_tool, qrp_habit, cost_per_qr_tool, cost_per_qr_habit
+scores.csv       event_id, brand_id, fit, exp_signups, exp_reviews, exp_qrp, in_best_lineup, reason_1, reason_2, reason_3
+lineups.json     event_id -> name, date, event_type, brands[5], units{brand: n}, slot, qrp, habit_qrp, cost, cost_per_qr, reasons[3]
+profiles.json    brand_id -> fit_by_type{7}, best_type, best_moment, best_audience, sample, avoid, top_events[5], text
+impact.json      uplift, ci_low, ci_high, qrp_tool, qrp_habit, cost_per_qr_tool, cost_per_qr_habit, n_test, per_popup[12]
+month_plan.json  month, capacity, popups[{event_id, date, brands, qrp, cost}], total_qrp, habit_total_qrp, brands_featured
 ```
 
 ## Team split
@@ -189,7 +190,7 @@ The demo runs the three screens in order and lands on one number: the uplift in 
 | 0:15 | Brand profiles: a fictional hot-sauce brand | "This client wins at street food markets and match screenings, in the evening, with 25 to 34s. It loses at runs and family mornings." |
 | 0:35 | Event planner: a real upcoming London hackathon | "Pick a real event. The planner brings \[five brands\], \[N\] units each, timed for the mid-afternoon slump. Here are the three reasons." |
 | 1:00 | Same event: habit lineup against tool lineup | "RGC's usual five would earn \[X\] qualified reviews here. The planner's five earn \[Y\]." |
-| 1:15 | Month plan and impact | "Across next month's four pop-ups: \[Z\]% more qualified reviews and \[W\]% lower cost per review, tested on 12 held-out pop-ups." |
+| 1:15 | Month plan and impact | "Across next month's two pop-ups: \[Z\]% more qualified reviews and \[W\]% lower cost per review, tested on 12 held-out pop-ups." |
 | 1:35 | How it works | "Synthetic WatchHumans data, real London events. Plug in real data and a QR code per pop-up measures the result." |
 | 1:50 | Close | "Every pop-up becomes an experiment that makes the next one better." |
 
@@ -207,7 +208,7 @@ The demo runs the three screens in order and lands on one number: the uplift in 
 | --- | --- |
 | It's synthetic data, so what does it prove? | The pipeline and the metric are real. The generator hides its truth from the model, and real data swaps in without code changes. |
 | Why not just pick the biggest events? | Footfall isn't fit. The habit plan against the tool plan shows the gap in qualified reviews. |
-| How do you keep every client happy? | Each brand gets at least one slot a month, and its profile shows where it wins. |
+| What about brands that don't get picked? | Clients don't pay for pop-up placement, and pop-ups are one RGC service among several. Every brand still gets its event profile, showing where it wins, so RGC can bring it when the right event comes up. |
 
 ## Sources
 

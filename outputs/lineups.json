@@ -1,0 +1,1442 @@
+{
+  "E001": {
+    "name": "Food and drink expo, Olympia London",
+    "date": "2026-10-06",
+    "event_type": "expos",
+    "borough": "Hammersmith and Fulham",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B11",
+      "B16"
+    ],
+    "units": {
+      "B01": 203,
+      "B05": 203,
+      "B06": 203,
+      "B11": 203,
+      "B16": 203
+    },
+    "slot": "12:00-14:00",
+    "exp_signups": 66.6,
+    "exp_reviews": 149.0,
+    "qrp": 121.8,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 105.0,
+    "cost": 428.0,
+    "cost_per_qr": 3.51,
+    "habit_cost_per_qr": 4.08,
+    "reasons": [
+      "Expected 122 qualified reviews against 105 for the usual five (+16%)",
+      "Sparkfold Soda: Discovery need matches the expos crowd (brand 0.6, event 0.8)",
+      "Covers condiment, drink, savoury, sweet; 4 vegan and 4 gluten-free options"
+    ]
+  },
+  "E002": {
+    "name": "Food and drink expo, University campus, Mile End",
+    "date": "2026-10-13",
+    "event_type": "expos",
+    "borough": "Tower Hamlets",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B11",
+      "B16"
+    ],
+    "units": {
+      "B01": 128,
+      "B05": 128,
+      "B06": 128,
+      "B11": 128,
+      "B16": 128
+    },
+    "slot": "12:00-14:00",
+    "exp_signups": 42.4,
+    "exp_reviews": 95.0,
+    "qrp": 77.6,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 66.9,
+    "cost": 558.0,
+    "cost_per_qr": 7.19,
+    "habit_cost_per_qr": 8.34,
+    "reasons": [
+      "Expected 78 qualified reviews against 67 for the usual five (+16%)",
+      "Sparkfold Soda: Discovery need matches the expos crowd (brand 0.6, event 0.8)",
+      "Covers condiment, drink, savoury, sweet; 4 vegan and 4 gluten-free options"
+    ]
+  },
+  "E003": {
+    "name": "Tech meetup and demo night, Barbican Centre",
+    "date": "2026-10-14",
+    "event_type": "conferences",
+    "borough": "City of London",
+    "brands": [
+      "B03",
+      "B05",
+      "B09",
+      "B16",
+      "B17"
+    ],
+    "units": {
+      "B03": 238,
+      "B05": 238,
+      "B09": 238,
+      "B16": 238,
+      "B17": 238
+    },
+    "slot": "15:00-16:30",
+    "exp_signups": 78.5,
+    "exp_reviews": 191.8,
+    "qrp": 164.7,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 135.6,
+    "cost": 418.0,
+    "cost_per_qr": 2.54,
+    "habit_cost_per_qr": 3.08,
+    "reasons": [
+      "Expected 165 qualified reviews against 136 for the usual five (+21%)",
+      "Northbrew: Energy need matches the conferences crowd (brand 1.0, event 0.9)",
+      "Covers condiment, drink, functional, savoury, sweet; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E004": {
+    "name": "Big-match screening, Big-screen pub, Brixton",
+    "date": "2026-10-14",
+    "event_type": "sports",
+    "borough": "Lambeth",
+    "brands": [
+      "B02",
+      "B05",
+      "B06",
+      "B17",
+      "B19"
+    ],
+    "units": {
+      "B02": 219,
+      "B05": 219,
+      "B06": 219,
+      "B17": 219,
+      "B19": 219
+    },
+    "slot": "21:15-22:15 (finish)",
+    "exp_signups": 57.0,
+    "exp_reviews": 80.5,
+    "qrp": 58.6,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 39.0,
+    "cost": 268.0,
+    "cost_per_qr": 4.58,
+    "habit_cost_per_qr": 6.86,
+    "reasons": [
+      "Expected 59 qualified reviews against 39 for the usual five (+50%)",
+      "Tidewell Hydrate: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
+      "Covers drink, functional, savoury; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E005": {
+    "name": "Contemporary dance show, Richmond Theatre",
+    "date": "2026-10-16",
+    "event_type": "performing_arts",
+    "borough": "Richmond upon Thames",
+    "brands": [
+      "B01",
+      "B04",
+      "B07",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 60,
+      "B04": 60,
+      "B07": 60,
+      "B09": 60,
+      "B13": 60
+    },
+    "slot": "19:35-20:00 (interval)",
+    "exp_signups": 10.6,
+    "exp_reviews": 21.7,
+    "qrp": 16.9,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 13.1,
+    "cost": 384.0,
+    "cost_per_qr": 22.7,
+    "habit_cost_per_qr": 29.26,
+    "reasons": [
+      "Expected 17 qualified reviews against 13 for the usual five (+29%)",
+      "Sparkfold Soda: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E006": {
+    "name": "Park half marathon, Wembley Park",
+    "date": "2026-10-17",
+    "event_type": "sports",
+    "borough": "Brent",
+    "brands": [
+      "B02",
+      "B05",
+      "B06",
+      "B17",
+      "B19"
+    ],
+    "units": {
+      "B02": 224,
+      "B05": 224,
+      "B06": 224,
+      "B17": 224,
+      "B19": 224
+    },
+    "slot": "10:30-11:30 (finish)",
+    "exp_signups": 58.3,
+    "exp_reviews": 81.5,
+    "qrp": 59.3,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 39.7,
+    "cost": 188.0,
+    "cost_per_qr": 3.17,
+    "habit_cost_per_qr": 4.74,
+    "reasons": [
+      "Expected 59 qualified reviews against 40 for the usual five (+49%)",
+      "Tidewell Hydrate: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
+      "Covers drink, functional, savoury; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E007": {
+    "name": "Refreshers' fair, ExCeL London",
+    "date": "2026-10-19",
+    "event_type": "expos",
+    "borough": "Newham",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B11",
+      "B16"
+    ],
+    "units": {
+      "B01": 298,
+      "B05": 298,
+      "B06": 298,
+      "B11": 298,
+      "B16": 298
+    },
+    "slot": "12:00-14:00",
+    "exp_signups": 96.9,
+    "exp_reviews": 216.7,
+    "qrp": 177.2,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 152.7,
+    "cost": 488.0,
+    "cost_per_qr": 2.75,
+    "habit_cost_per_qr": 3.2,
+    "reasons": [
+      "Expected 177 qualified reviews against 153 for the usual five (+16%)",
+      "Sparkfold Soda: Discovery need matches the expos crowd (brand 0.6, event 0.8)",
+      "Covers condiment, drink, savoury, sweet; 4 vegan and 4 gluten-free options"
+    ]
+  },
+  "E008": {
+    "name": "Family fun day, Islington community hall",
+    "date": "2026-10-24",
+    "event_type": "community",
+    "borough": "Islington",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 404,
+      "B05": 404,
+      "B06": 404,
+      "B09": 404,
+      "B13": 404
+    },
+    "slot": "09:30-11:30",
+    "exp_signups": 83.0,
+    "exp_reviews": 161.4,
+    "qrp": 96.8,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 82.1,
+    "cost": 340.0,
+    "cost_per_qr": 3.51,
+    "habit_cost_per_qr": 4.14,
+    "reasons": [
+      "Expected 97 qualified reviews against 82 for the usual five (+18%)",
+      "Sparkfold Soda: Discovery need matches the community crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E009": {
+    "name": "Comedy night, West End theatre",
+    "date": "2026-10-30",
+    "event_type": "performing_arts",
+    "borough": "Westminster",
+    "brands": [
+      "B01",
+      "B04",
+      "B07",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 89,
+      "B04": 89,
+      "B07": 89,
+      "B09": 89,
+      "B13": 89
+    },
+    "slot": "19:35-20:00 (interval)",
+    "exp_signups": 15.7,
+    "exp_reviews": 32.2,
+    "qrp": 25.1,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 19.5,
+    "cost": 324.0,
+    "cost_per_qr": 12.89,
+    "habit_cost_per_qr": 16.62,
+    "reasons": [
+      "Expected 25 qualified reviews against 19 for the usual five (+29%)",
+      "Sparkfold Soda: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E010": {
+    "name": "Winter street food festival, Finsbury Park",
+    "date": "2026-10-31",
+    "event_type": "festivals",
+    "borough": "Haringey",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B16"
+    ],
+    "units": {
+      "B01": 249,
+      "B05": 249,
+      "B06": 249,
+      "B09": 249,
+      "B16": 249
+    },
+    "slot": "14:00-17:00",
+    "exp_signups": 41.9,
+    "exp_reviews": 84.6,
+    "qrp": 61.0,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 54.8,
+    "cost": 1136.0,
+    "cost_per_qr": 18.62,
+    "habit_cost_per_qr": 20.72,
+    "reasons": [
+      "Expected 61 qualified reviews against 55 for the usual five (+11%)",
+      "Sparkfold Soda: Hydrate need matches the festivals crowd (brand 0.6, event 1.0)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E011": {
+    "name": "Weekend AI hackathon, Here East",
+    "date": "2026-11-07",
+    "event_type": "conferences",
+    "borough": "Newham",
+    "brands": [
+      "B03",
+      "B05",
+      "B09",
+      "B16",
+      "B17"
+    ],
+    "units": {
+      "B03": 299,
+      "B05": 299,
+      "B09": 299,
+      "B16": 299,
+      "B17": 299
+    },
+    "slot": "15:00-16:30",
+    "exp_signups": 98.0,
+    "exp_reviews": 239.6,
+    "qrp": 205.7,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 169.4,
+    "cost": 408.0,
+    "cost_per_qr": 1.98,
+    "habit_cost_per_qr": 2.41,
+    "reasons": [
+      "Expected 206 qualified reviews against 169 for the usual five (+21%)",
+      "Northbrew: Energy need matches the conferences crowd (brand 1.0, event 0.9)",
+      "Covers condiment, drink, functional, savoury, sweet; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E012": {
+    "name": "Family fun day, Surrey Street Market",
+    "date": "2026-11-07",
+    "event_type": "community",
+    "borough": "Croydon",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B15"
+    ],
+    "units": {
+      "B01": 275,
+      "B05": 275,
+      "B06": 275,
+      "B09": 275,
+      "B15": 275
+    },
+    "slot": "11:00-13:00",
+    "exp_signups": 56.9,
+    "exp_reviews": 110.1,
+    "qrp": 65.5,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 55.3,
+    "cost": 280.0,
+    "cost_per_qr": 4.27,
+    "habit_cost_per_qr": 5.06,
+    "reasons": [
+      "Expected 66 qualified reviews against 55 for the usual five (+18%)",
+      "Popwright: Sharing need matches the community crowd (brand 1.0, event 0.7)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E013": {
+    "name": "Park half marathon, Victoria Park",
+    "date": "2026-11-14",
+    "event_type": "sports",
+    "borough": "Tower Hamlets",
+    "brands": [
+      "B02",
+      "B05",
+      "B06",
+      "B17",
+      "B19"
+    ],
+    "units": {
+      "B02": 216,
+      "B05": 216,
+      "B06": 216,
+      "B17": 216,
+      "B19": 216
+    },
+    "slot": "10:30-11:30 (finish)",
+    "exp_signups": 56.5,
+    "exp_reviews": 78.9,
+    "qrp": 57.4,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 38.4,
+    "cost": 258.0,
+    "cost_per_qr": 4.5,
+    "habit_cost_per_qr": 6.72,
+    "reasons": [
+      "Expected 57 qualified reviews against 38 for the usual five (+49%)",
+      "Tidewell Hydrate: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
+      "Covers drink, functional, savoury; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E014": {
+    "name": "DJ all-nighter, Eventim Apollo",
+    "date": "2026-11-14",
+    "event_type": "concerts",
+    "borough": "Hammersmith and Fulham",
+    "brands": [
+      "B01",
+      "B05",
+      "B09",
+      "B16",
+      "B17"
+    ],
+    "units": {
+      "B01": 190,
+      "B05": 190,
+      "B09": 190,
+      "B16": 190,
+      "B17": 190
+    },
+    "slot": "21:00-23:00",
+    "exp_signups": 23.4,
+    "exp_reviews": 46.5,
+    "qrp": 38.3,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 33.5,
+    "cost": 618.0,
+    "cost_per_qr": 16.15,
+    "habit_cost_per_qr": 18.43,
+    "reasons": [
+      "Expected 38 qualified reviews against 34 for the usual five (+14%)",
+      "Sparkfold Soda: Hydrate need matches the concerts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, functional, savoury, sweet; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E015": {
+    "name": "Autumn 10K, Wembley Park",
+    "date": "2026-11-21",
+    "event_type": "sports",
+    "borough": "Brent",
+    "brands": [
+      "B02",
+      "B05",
+      "B06",
+      "B17",
+      "B19"
+    ],
+    "units": {
+      "B02": 323,
+      "B05": 323,
+      "B06": 323,
+      "B17": 323,
+      "B19": 323
+    },
+    "slot": "10:30-11:30 (finish)",
+    "exp_signups": 83.6,
+    "exp_reviews": 116.8,
+    "qrp": 85.0,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 56.9,
+    "cost": 288.0,
+    "cost_per_qr": 3.39,
+    "habit_cost_per_qr": 5.07,
+    "reasons": [
+      "Expected 85 qualified reviews against 57 for the usual five (+49%)",
+      "Tidewell Hydrate: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
+      "Covers drink, functional, savoury; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E016": {
+    "name": "Family fun day, Ealing Common",
+    "date": "2026-11-21",
+    "event_type": "community",
+    "borough": "Ealing",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B15"
+    ],
+    "units": {
+      "B01": 413,
+      "B05": 413,
+      "B06": 413,
+      "B09": 413,
+      "B15": 413
+    },
+    "slot": "09:30-11:30",
+    "exp_signups": 84.8,
+    "exp_reviews": 163.7,
+    "qrp": 95.5,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 78.2,
+    "cost": 280.0,
+    "cost_per_qr": 2.93,
+    "habit_cost_per_qr": 3.58,
+    "reasons": [
+      "Expected 95 qualified reviews against 78 for the usual five (+22%)",
+      "Tangle: Discovery need matches the community crowd (brand 0.7, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E017": {
+    "name": "Big-match screening, Big-screen bar, Shoreditch",
+    "date": "2026-11-21",
+    "event_type": "sports",
+    "borough": "Hackney",
+    "brands": [
+      "B02",
+      "B05",
+      "B06",
+      "B17",
+      "B19"
+    ],
+    "units": {
+      "B02": 219,
+      "B05": 219,
+      "B06": 219,
+      "B17": 219,
+      "B19": 219
+    },
+    "slot": "21:15-22:15 (finish)",
+    "exp_signups": 57.0,
+    "exp_reviews": 80.5,
+    "qrp": 58.6,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 39.0,
+    "cost": 278.0,
+    "cost_per_qr": 4.75,
+    "habit_cost_per_qr": 7.12,
+    "reasons": [
+      "Expected 59 qualified reviews against 39 for the usual five (+50%)",
+      "Tidewell Hydrate: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
+      "Covers drink, functional, savoury; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E018": {
+    "name": "Saturday 5K series, Battersea Park",
+    "date": "2026-11-22",
+    "event_type": "sports",
+    "borough": "Wandsworth",
+    "brands": [
+      "B02",
+      "B05",
+      "B06",
+      "B17",
+      "B19"
+    ],
+    "units": {
+      "B02": 260,
+      "B05": 260,
+      "B06": 260,
+      "B17": 260,
+      "B19": 260
+    },
+    "slot": "10:30-11:30 (finish)",
+    "exp_signups": 67.6,
+    "exp_reviews": 94.5,
+    "qrp": 68.7,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 46.0,
+    "cost": 268.0,
+    "cost_per_qr": 3.9,
+    "habit_cost_per_qr": 5.83,
+    "reasons": [
+      "Expected 69 qualified reviews against 46 for the usual five (+49%)",
+      "Tidewell Hydrate: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
+      "Covers drink, functional, savoury; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E019": {
+    "name": "Tech meetup and demo night, Here East",
+    "date": "2026-11-22",
+    "event_type": "conferences",
+    "borough": "Newham",
+    "brands": [
+      "B03",
+      "B05",
+      "B09",
+      "B16",
+      "B17"
+    ],
+    "units": {
+      "B03": 337,
+      "B05": 337,
+      "B09": 337,
+      "B16": 337,
+      "B17": 337
+    },
+    "slot": "15:00-16:30",
+    "exp_signups": 110.4,
+    "exp_reviews": 269.9,
+    "qrp": 231.7,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 190.9,
+    "cost": 428.0,
+    "cost_per_qr": 1.85,
+    "habit_cost_per_qr": 2.24,
+    "reasons": [
+      "Expected 232 qualified reviews against 191 for the usual five (+21%)",
+      "Northbrew: Energy need matches the conferences crowd (brand 1.0, event 0.9)",
+      "Covers condiment, drink, functional, savoury, sweet; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E020": {
+    "name": "Food and drink expo, ExCeL London",
+    "date": "2026-11-25",
+    "event_type": "expos",
+    "borough": "Newham",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B11",
+      "B16"
+    ],
+    "units": {
+      "B01": 448,
+      "B05": 448,
+      "B06": 448,
+      "B11": 448,
+      "B16": 448
+    },
+    "slot": "12:00-14:00",
+    "exp_signups": 144.3,
+    "exp_reviews": 322.8,
+    "qrp": 263.9,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 227.4,
+    "cost": 378.0,
+    "cost_per_qr": 1.43,
+    "habit_cost_per_qr": 1.66,
+    "reasons": [
+      "Expected 264 qualified reviews against 227 for the usual five (+16%)",
+      "Sparkfold Soda: Discovery need matches the expos crowd (brand 0.6, event 0.8)",
+      "Covers condiment, drink, savoury, sweet; 4 vegan and 4 gluten-free options"
+    ]
+  },
+  "E021": {
+    "name": "DJ all-nighter, Eventim Apollo",
+    "date": "2026-11-26",
+    "event_type": "concerts",
+    "borough": "Hammersmith and Fulham",
+    "brands": [
+      "B01",
+      "B05",
+      "B09",
+      "B16",
+      "B17"
+    ],
+    "units": {
+      "B01": 143,
+      "B05": 143,
+      "B09": 143,
+      "B16": 143,
+      "B17": 143
+    },
+    "slot": "21:00-23:00",
+    "exp_signups": 17.6,
+    "exp_reviews": 35.1,
+    "qrp": 28.9,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 25.3,
+    "cost": 508.0,
+    "cost_per_qr": 17.58,
+    "habit_cost_per_qr": 20.07,
+    "reasons": [
+      "Expected 29 qualified reviews against 25 for the usual five (+14%)",
+      "Sparkfold Soda: Hydrate need matches the concerts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, functional, savoury, sweet; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E022": {
+    "name": "Family fun day, Walthamstow Village",
+    "date": "2026-11-28",
+    "event_type": "community",
+    "borough": "Waltham Forest",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B15"
+    ],
+    "units": {
+      "B01": 413,
+      "B05": 413,
+      "B06": 413,
+      "B09": 413,
+      "B15": 413
+    },
+    "slot": "11:00-13:00",
+    "exp_signups": 84.7,
+    "exp_reviews": 164.0,
+    "qrp": 97.6,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 82.4,
+    "cost": 360.0,
+    "cost_per_qr": 3.69,
+    "habit_cost_per_qr": 4.37,
+    "reasons": [
+      "Expected 98 qualified reviews against 82 for the usual five (+18%)",
+      "Popwright: Sharing need matches the community crowd (brand 1.0, event 0.7)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E023": {
+    "name": "Family fun day, Islington community hall",
+    "date": "2026-11-28",
+    "event_type": "community",
+    "borough": "Islington",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 221,
+      "B05": 221,
+      "B06": 221,
+      "B09": 221,
+      "B13": 221
+    },
+    "slot": "11:00-13:00",
+    "exp_signups": 46.1,
+    "exp_reviews": 89.6,
+    "qrp": 53.7,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 45.5,
+    "cost": 310.0,
+    "cost_per_qr": 5.77,
+    "habit_cost_per_qr": 6.81,
+    "reasons": [
+      "Expected 54 qualified reviews against 46 for the usual five (+18%)",
+      "Sparkfold Soda: Discovery need matches the community crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E024": {
+    "name": "Christmas community market, Maltby Street Market",
+    "date": "2026-11-28",
+    "event_type": "community",
+    "borough": "Southwark",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 179,
+      "B05": 179,
+      "B06": 179,
+      "B09": 179,
+      "B13": 179
+    },
+    "slot": "11:00-13:00",
+    "exp_signups": 37.4,
+    "exp_reviews": 72.1,
+    "qrp": 43.2,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 36.5,
+    "cost": 290.0,
+    "cost_per_qr": 6.72,
+    "habit_cost_per_qr": 7.94,
+    "reasons": [
+      "Expected 43 qualified reviews against 37 for the usual five (+18%)",
+      "Sparkfold Soda: Discovery need matches the community crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E025": {
+    "name": "Winter street food festival, Queen Elizabeth Olympic Park",
+    "date": "2026-11-28",
+    "event_type": "festivals",
+    "borough": "Newham",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B16"
+    ],
+    "units": {
+      "B01": 303,
+      "B05": 303,
+      "B06": 303,
+      "B09": 303,
+      "B16": 303
+    },
+    "slot": "14:00-17:00",
+    "exp_signups": 50.8,
+    "exp_reviews": 102.5,
+    "qrp": 74.0,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 66.5,
+    "cost": 1076.0,
+    "cost_per_qr": 14.55,
+    "habit_cost_per_qr": 16.19,
+    "reasons": [
+      "Expected 74 qualified reviews against 66 for the usual five (+11%)",
+      "Sparkfold Soda: Hydrate need matches the festivals crowd (brand 0.6, event 1.0)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E026": {
+    "name": "DJ all-nighter, Electric Brixton",
+    "date": "2026-11-28",
+    "event_type": "concerts",
+    "borough": "Lambeth",
+    "brands": [
+      "B01",
+      "B05",
+      "B09",
+      "B16",
+      "B17"
+    ],
+    "units": {
+      "B01": 215,
+      "B05": 215,
+      "B09": 215,
+      "B16": 215,
+      "B17": 215
+    },
+    "slot": "21:00-23:00",
+    "exp_signups": 26.4,
+    "exp_reviews": 52.6,
+    "qrp": 43.3,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 37.9,
+    "cost": 558.0,
+    "cost_per_qr": 12.89,
+    "habit_cost_per_qr": 14.71,
+    "reasons": [
+      "Expected 43 qualified reviews against 38 for the usual five (+14%)",
+      "Sparkfold Soda: Hydrate need matches the concerts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, functional, savoury, sweet; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E027": {
+    "name": "Contemporary dance show, Southbank Centre",
+    "date": "2026-12-03",
+    "event_type": "performing_arts",
+    "borough": "Lambeth",
+    "brands": [
+      "B01",
+      "B04",
+      "B07",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 63,
+      "B04": 63,
+      "B07": 63,
+      "B09": 63,
+      "B13": 63
+    },
+    "slot": "20:05-20:30 (interval)",
+    "exp_signups": 11.2,
+    "exp_reviews": 22.8,
+    "qrp": 17.8,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 13.8,
+    "cost": 234.0,
+    "cost_per_qr": 13.12,
+    "habit_cost_per_qr": 16.92,
+    "reasons": [
+      "Expected 18 qualified reviews against 14 for the usual five (+29%)",
+      "Sparkfold Soda: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E028": {
+    "name": "Comedy night, Hackney Empire",
+    "date": "2026-12-04",
+    "event_type": "performing_arts",
+    "borough": "Hackney",
+    "brands": [
+      "B01",
+      "B04",
+      "B07",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 138,
+      "B04": 138,
+      "B07": 138,
+      "B09": 138,
+      "B13": 138
+    },
+    "slot": "20:05-20:30 (interval)",
+    "exp_signups": 24.2,
+    "exp_reviews": 49.5,
+    "qrp": 38.7,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 30.0,
+    "cost": 364.0,
+    "cost_per_qr": 9.41,
+    "habit_cost_per_qr": 12.13,
+    "reasons": [
+      "Expected 39 qualified reviews against 30 for the usual five (+29%)",
+      "Sparkfold Soda: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E029": {
+    "name": "Weekend food market, Maltby Street Market",
+    "date": "2026-12-05",
+    "event_type": "community",
+    "borough": "Southwark",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 66,
+      "B05": 66,
+      "B06": 66,
+      "B09": 66,
+      "B13": 66
+    },
+    "slot": "09:30-11:30",
+    "exp_signups": 14.1,
+    "exp_reviews": 27.2,
+    "qrp": 16.3,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 13.8,
+    "cost": 220.0,
+    "cost_per_qr": 13.49,
+    "habit_cost_per_qr": 15.94,
+    "reasons": [
+      "Expected 16 qualified reviews against 14 for the usual five (+18%)",
+      "Sparkfold Soda: Discovery need matches the community crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E030": {
+    "name": "Theatre premiere, Richmond Theatre",
+    "date": "2026-12-11",
+    "event_type": "performing_arts",
+    "borough": "Richmond upon Thames",
+    "brands": [
+      "B01",
+      "B04",
+      "B07",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 87,
+      "B04": 87,
+      "B07": 87,
+      "B09": 87,
+      "B13": 87
+    },
+    "slot": "19:35-20:00 (interval)",
+    "exp_signups": 15.4,
+    "exp_reviews": 31.6,
+    "qrp": 24.7,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 19.1,
+    "cost": 384.0,
+    "cost_per_qr": 15.56,
+    "habit_cost_per_qr": 20.06,
+    "reasons": [
+      "Expected 25 qualified reviews against 19 for the usual five (+29%)",
+      "Sparkfold Soda: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E031": {
+    "name": "Winter street food festival, Clapham Common",
+    "date": "2026-12-12",
+    "event_type": "festivals",
+    "borough": "Lambeth",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B16"
+    ],
+    "units": {
+      "B01": 178,
+      "B05": 178,
+      "B06": 178,
+      "B09": 178,
+      "B16": 178
+    },
+    "slot": "14:00-17:00",
+    "exp_signups": 30.2,
+    "exp_reviews": 61.0,
+    "qrp": 44.0,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 39.6,
+    "cost": 1296.0,
+    "cost_per_qr": 29.45,
+    "habit_cost_per_qr": 32.76,
+    "reasons": [
+      "Expected 44 qualified reviews against 40 for the usual five (+11%)",
+      "Sparkfold Soda: Hydrate need matches the festivals crowd (brand 0.6, event 1.0)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E032": {
+    "name": "Christmas panto, West End theatre",
+    "date": "2026-12-12",
+    "event_type": "performing_arts",
+    "borough": "Westminster",
+    "brands": [
+      "B01",
+      "B04",
+      "B07",
+      "B09",
+      "B13"
+    ],
+    "units": {
+      "B01": 119,
+      "B04": 119,
+      "B07": 119,
+      "B09": 119,
+      "B13": 119
+    },
+    "slot": "19:35-20:00 (interval)",
+    "exp_signups": 20.8,
+    "exp_reviews": 42.6,
+    "qrp": 33.3,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 25.8,
+    "cost": 334.0,
+    "cost_per_qr": 10.03,
+    "habit_cost_per_qr": 12.93,
+    "reasons": [
+      "Expected 33 qualified reviews against 26 for the usual five (+29%)",
+      "Sparkfold Soda: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E033": {
+    "name": "Weekend AI hackathon, Canary Wharf conference centre",
+    "date": "2026-12-13",
+    "event_type": "conferences",
+    "borough": "Tower Hamlets",
+    "brands": [
+      "B03",
+      "B05",
+      "B09",
+      "B16",
+      "B17"
+    ],
+    "units": {
+      "B03": 83,
+      "B05": 83,
+      "B09": 83,
+      "B16": 83,
+      "B17": 83
+    },
+    "slot": "15:00-16:30",
+    "exp_signups": 28.1,
+    "exp_reviews": 68.6,
+    "qrp": 58.9,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 48.5,
+    "cost": 438.0,
+    "cost_per_qr": 7.44,
+    "habit_cost_per_qr": 9.03,
+    "reasons": [
+      "Expected 59 qualified reviews against 48 for the usual five (+21%)",
+      "Northbrew: Energy need matches the conferences crowd (brand 1.0, event 0.9)",
+      "Covers condiment, drink, functional, savoury, sweet; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E034": {
+    "name": "Run club social and brunch, Surrey Street Market",
+    "date": "2026-12-13",
+    "event_type": "community",
+    "borough": "Croydon",
+    "brands": [
+      "B01",
+      "B05",
+      "B06",
+      "B09",
+      "B15"
+    ],
+    "units": {
+      "B01": 381,
+      "B05": 381,
+      "B06": 381,
+      "B09": 381,
+      "B15": 381
+    },
+    "slot": "11:00-13:00",
+    "exp_signups": 78.3,
+    "exp_reviews": 151.6,
+    "qrp": 90.3,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 76.2,
+    "cost": 330.0,
+    "cost_per_qr": 3.66,
+    "habit_cost_per_qr": 4.33,
+    "reasons": [
+      "Expected 90 qualified reviews against 76 for the usual five (+18%)",
+      "Popwright: Sharing need matches the community crowd (brand 1.0, event 0.7)",
+      "Covers condiment, drink, savoury, sweet; 5 vegan and 5 gluten-free options"
+    ]
+  },
+  "E035": {
+    "name": "Tech meetup and demo night, Canary Wharf conference centre",
+    "date": "2026-12-19",
+    "event_type": "conferences",
+    "borough": "Tower Hamlets",
+    "brands": [
+      "B03",
+      "B05",
+      "B09",
+      "B16",
+      "B17"
+    ],
+    "units": {
+      "B03": 382,
+      "B05": 382,
+      "B09": 382,
+      "B16": 382,
+      "B17": 382
+    },
+    "slot": "15:00-16:30",
+    "exp_signups": 124.5,
+    "exp_reviews": 304.5,
+    "qrp": 261.3,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 215.3,
+    "cost": 378.0,
+    "cost_per_qr": 1.45,
+    "habit_cost_per_qr": 1.76,
+    "reasons": [
+      "Expected 261 qualified reviews against 215 for the usual five (+21%)",
+      "Northbrew: Energy need matches the conferences crowd (brand 1.0, event 0.9)",
+      "Covers condiment, drink, functional, savoury, sweet; 4 vegan and 5 gluten-free options"
+    ]
+  },
+  "E036": {
+    "name": "DJ all-nighter, Village Underground",
+    "date": "2026-12-19",
+    "event_type": "concerts",
+    "borough": "Hackney",
+    "brands": [
+      "B01",
+      "B05",
+      "B09",
+      "B16",
+      "B17"
+    ],
+    "units": {
+      "B01": 145,
+      "B05": 145,
+      "B09": 145,
+      "B16": 145,
+      "B17": 145
+    },
+    "slot": "21:00-23:00",
+    "exp_signups": 17.9,
+    "exp_reviews": 35.7,
+    "qrp": 29.4,
+    "habit_brands": [
+      "B01",
+      "B05",
+      "B11",
+      "B13",
+      "B17"
+    ],
+    "habit_qrp": 25.7,
+    "cost": 568.0,
+    "cost_per_qr": 19.33,
+    "habit_cost_per_qr": 22.07,
+    "reasons": [
+      "Expected 29 qualified reviews against 26 for the usual five (+14%)",
+      "Sparkfold Soda: Hydrate need matches the concerts crowd (brand 0.6, event 0.9)",
+      "Covers condiment, drink, functional, savoury, sweet; 4 vegan and 5 gluten-free options"
+    ]
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "B01": {
+    "brand_name": "Sparkfold Soda",
+    "fit_by_type": {
+      "community": 0.571,
+      "concerts": 0.829,
+      "conferences": 0.679,
+      "expos": 0.795,
+      "festivals": 0.771,
+      "performing_arts": 0.844,
+      "sports": 0.371
+    },
+    "best_type": "performing_arts",
+    "best_moment": "Interval drinks and a sweet treat (interval)",
+    "best_audience": "young professionals",
+    "sample": "Lightly sparkling prebiotic soda; lead with its sweetness",
+    "avoid": "sports (fit 0.37); reviewers mark down its sweetness",
+    "top_events": [
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 67.5,
+        "exp_qrp": 61.7
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 45.3,
+        "exp_qrp": 41.4
+      },
+      {
+        "event_id": "E001",
+        "name": "Food and drink expo, Olympia London",
+        "date": "2026-10-06",
+        "event_type": "expos",
+        "exp_reviews": 31.1,
+        "exp_qrp": 28.5
+      },
+      {
+        "event_id": "E008",
+        "name": "Family fun day, Islington community hall",
+        "date": "2026-10-24",
+        "event_type": "community",
+        "exp_reviews": 32.5,
+        "exp_qrp": 21.3
+      },
+      {
+        "event_id": "E025",
+        "name": "Winter street food festival, Queen Elizabeth Olympic Park",
+        "date": "2026-11-28",
+        "event_type": "festivals",
+        "exp_reviews": 22.6,
+        "exp_qrp": 19.0
+      }
+    ],
+    "text": "Sparkfold Soda wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Young professionals rate it highest (4.3 stars from 508 reviews). Sample Lightly sparkling prebiotic soda; lead with its sweetness. It is weakest at sports events, so bring other brands there. Best upcoming: Food and drink expo, ExCeL London on 2026-11-25, about 62 qualified reviews."
+  },
+  "B02": {
+    "brand_name": "Tidewell Hydrate",
+    "fit_by_type": {
+      "community": 0.223,
+      "concerts": 0.578,
+      "conferences": 0.405,
+      "expos": 0.213,
+      "festivals": 0.498,
+      "performing_arts": 0.188,
+      "sports": 0.916
+    },
+    "best_type": "sports",
+    "best_moment": "Just finished or full time, rehydrating and refuelling (finish)",
+    "best_audience": "fitness",
+    "sample": "Low-sugar electrolyte drink for after exercise; lead with its sweetness",
+    "avoid": "performing arts (fit 0.19); reviewers mark down its fizz",
+    "top_events": [
+      {
+        "event_id": "E015",
+        "name": "Autumn 10K, Wembley Park",
+        "date": "2026-11-21",
+        "event_type": "sports",
+        "exp_reviews": 28.2,
+        "exp_qrp": 22.0
+      },
+      {
+        "event_id": "E018",
+        "name": "Saturday 5K series, Battersea Park",
+        "date": "2026-11-22",
+        "event_type": "sports",
+        "exp_reviews": 22.8,
+        "exp_qrp": 17.8
+      },
+      {
+        "event_id": "E006",
+        "name": "Park half marathon, Wembley Park",
+        "date": "2026-10-17",
+        "event_type": "sports",
+        "exp_reviews": 19.7,
+        "exp_qrp": 15.4
+      },
+      {
+        "event_id": "E004",
+        "name": "Big-match screening, Big-screen pub, Brixton",
+        "date": "2026-10-14",
+        "event_type": "sports",
+        "exp_reviews": 19.2,
+        "exp_qrp": 15.0
+      },
+      {
+        "event_id": "E017",
+        "name": "Big-match screening, Big-screen bar, Shoreditch",
+        "date": "2026-11-21",
+        "event_type": "sports",
+        "exp_reviews": 19.2,
+        "exp_qrp": 15.0
+      }
+    ],
+    "text": "Tidewell Hydrate wins at sports events. Best moment: just finished or full time, rehydrating and refuelling, at the finish. Fitness rate it highest (4.5 stars from 181 reviews). Sample Low-sugar electrolyte drink for after exercise; lead with its sweetness. It is weakest at performing-arts nights, so bring other brands there. Best upcoming: Autumn 10K, Wembley Park on 2026-11-21, about 22 qualified reviews."
+  },
+  "B03": {
+    "brand_name": "Northbrew",
+    "fit_by_type": {
+      "community": 0.196,
+      "concerts": 0.519,
+      "conferences": 1.09,
+      "expos": 0.724,
+      "festivals": 0.338,
+      "performing_arts": 0.329,
+      "sports": 0.201
+    },
+    "best_type": "conferences",
+    "best_moment": "Mid-afternoon slump at the desks (15:00-16:30)",
+    "best_audience": "students",
+    "sample": "Canned cold brew coffee; lead with its refreshing",
+    "avoid": "community (fit 0.20); reviewers mark down its price",
+    "top_events": [
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 71.5,
+        "exp_qrp": 64.7
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 63.4,
+        "exp_qrp": 57.3
+      },
+      {
+        "event_id": "E011",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-07",
+        "event_type": "conferences",
+        "exp_reviews": 56.3,
+        "exp_qrp": 50.9
+      },
+      {
+        "event_id": "E003",
+        "name": "Tech meetup and demo night, Barbican Centre",
+        "date": "2026-10-14",
+        "event_type": "conferences",
+        "exp_reviews": 45.0,
+        "exp_qrp": 40.8
+      },
+      {
+        "event_id": "E033",
+        "name": "Weekend AI hackathon, Canary Wharf conference centre",
+        "date": "2026-12-13",
+        "event_type": "conferences",
+        "exp_reviews": 16.1,
+        "exp_qrp": 14.6
+      }
+    ],
+    "text": "Northbrew wins at conferences and hackathons. Best moment: mid-afternoon slump at the desks, 15:00-16:30. Students rate it highest (4.2 stars from 337 reviews). Sample Canned cold brew coffee; lead with its refreshing. It is weakest at community events, so bring other brands there. Best upcoming: Tech meetup and demo night, Canary Wharf conference centre on 2026-12-19, about 65 qualified reviews."
+  },
+  "B04": {
+    "brand_name": "Kombuchee",
+    "fit_by_type": {
+      "community": 0.552,
+      "concerts": 0.591,
+      "conferences": 0.478,
+      "expos": 0.481,
+      "festivals": 0.583,
+      "performing_arts": 0.61,
+      "sports": 0.385
+    },
+    "best_type": "performing_arts",
+    "best_moment": "Interval drinks and a sweet treat (interval)",
+    "best_audience": "young professionals",
+    "sample": "Small-batch kombucha in seasonal flavours; lead with its price",
+    "avoid": "sports (fit 0.39); reviewers mark down its taste",
+    "top_events": [
+      {
+        "event_id": "E028",
+        "name": "Comedy night, Hackney Empire",
+        "date": "2026-12-04",
+        "event_type": "performing_arts",
+        "exp_reviews": 9.4,
+        "exp_qrp": 7.2
+      },
+      {
+        "event_id": "E032",
+        "name": "Christmas panto, West End theatre",
+        "date": "2026-12-12",
+        "event_type": "performing_arts",
+        "exp_reviews": 8.1,
+        "exp_qrp": 6.2
+      },
+      {
+        "event_id": "E009",
+        "name": "Comedy night, West End theatre",
+        "date": "2026-10-30",
+        "event_type": "performing_arts",
+        "exp_reviews": 6.1,
+        "exp_qrp": 4.7
+      },
+      {
+        "event_id": "E030",
+        "name": "Theatre premiere, Richmond Theatre",
+        "date": "2026-12-11",
+        "event_type": "performing_arts",
+        "exp_reviews": 6.0,
+        "exp_qrp": 4.6
+      },
+      {
+        "event_id": "E027",
+        "name": "Contemporary dance show, Southbank Centre",
+        "date": "2026-12-03",
+        "event_type": "performing_arts",
+        "exp_reviews": 4.3,
+        "exp_qrp": 3.3
+      }
+    ],
+    "text": "Kombuchee wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Young professionals rate it highest (4.3 stars from 384 reviews). Sample Small-batch kombucha in seasonal flavours; lead with its price. It is weakest at sports events, so bring other brands there. Best upcoming: Comedy night, Hackney Empire on 2026-12-04, about 7 qualified reviews."
+  },
+  "B05": {
+    "brand_name": "Lentil Lark",
+    "fit_by_type": {
+      "community": 0.691,
+      "concerts": 0.495,
+      "conferences": 0.628,
+      "expos": 0.684,
+      "festivals": 0.57,
+      "performing_arts": 0.766,
+      "sports": 0.342
+    },
+    "best_type": "performing_arts",
+    "best_moment": "Interval drinks and a sweet treat (interval)",
+    "best_audience": "young professionals",
+    "sample": "Baked lentil crisps in sharing bags; lead with its price",
+    "avoid": "sports (fit 0.34); reviewers mark down its crunch",
+    "top_events": [
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 64.0,
+        "exp_qrp": 55.0
+      },
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 56.7,
+        "exp_qrp": 52.6
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 50.3,
+        "exp_qrp": 46.7
+      },
+      {
+        "event_id": "E011",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-07",
+        "event_type": "conferences",
+        "exp_reviews": 44.6,
+        "exp_qrp": 41.4
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 43.0,
+        "exp_qrp": 37.0
+      }
+    ],
+    "text": "Lentil Lark wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Young professionals rate it highest (3.8 stars from 454 reviews). Sample Baked lentil crisps in sharing bags; lead with its price. It is weakest at sports events, so bring other brands there. Best upcoming: Food and drink expo, ExCeL London on 2026-11-25, about 55 qualified reviews."
+  }
+}

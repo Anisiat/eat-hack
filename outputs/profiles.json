@@ -1,0 +1,1202 @@
+{
+  "B01": {
+    "brand_name": "Sparkfold Soda",
+    "fit_by_type": {
+      "community": 0.571,
+      "concerts": 0.829,
+      "conferences": 0.679,
+      "expos": 0.795,
+      "festivals": 0.771,
+      "performing_arts": 0.844,
+      "sports": 0.371
+    },
+    "best_type": "performing_arts",
+    "best_moment": "Interval drinks and a sweet treat (interval)",
+    "best_audience": "young professionals",
+    "sample": "Lightly sparkling prebiotic soda; lead with its sweetness",
+    "avoid": "sports (fit 0.37); reviewers mark down its sweetness",
+    "top_events": [
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 67.5,
+        "exp_qrp": 61.7
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 45.3,
+        "exp_qrp": 41.4
+      },
+      {
+        "event_id": "E001",
+        "name": "Food and drink expo, Olympia London",
+        "date": "2026-10-06",
+        "event_type": "expos",
+        "exp_reviews": 31.1,
+        "exp_qrp": 28.5
+      },
+      {
+        "event_id": "E008",
+        "name": "Family fun day, Islington community hall",
+        "date": "2026-10-24",
+        "event_type": "community",
+        "exp_reviews": 32.5,
+        "exp_qrp": 21.3
+      },
+      {
+        "event_id": "E025",
+        "name": "Winter street food festival, Queen Elizabeth Olympic Park",
+        "date": "2026-11-28",
+        "event_type": "festivals",
+        "exp_reviews": 22.6,
+        "exp_qrp": 19.0
+      }
+    ],
+    "text": "Sparkfold Soda wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Young professionals rate it highest (4.3 stars from 508 reviews). Sample Lightly sparkling prebiotic soda; lead with its sweetness. It is weakest at sports events, so bring other brands there. Best upcoming: Food and drink expo, ExCeL London on 2026-11-25, about 62 qualified reviews."
+  },
+  "B02": {
+    "brand_name": "Tidewell Hydrate",
+    "fit_by_type": {
+      "community": 0.223,
+      "concerts": 0.578,
+      "conferences": 0.405,
+      "expos": 0.213,
+      "festivals": 0.498,
+      "performing_arts": 0.188,
+      "sports": 0.916
+    },
+    "best_type": "sports",
+    "best_moment": "Just finished or full time, rehydrating and refuelling (finish)",
+    "best_audience": "fitness",
+    "sample": "Low-sugar electrolyte drink for after exercise; lead with its sweetness",
+    "avoid": "performing arts (fit 0.19); reviewers mark down its fizz",
+    "top_events": [
+      {
+        "event_id": "E015",
+        "name": "Autumn 10K, Wembley Park",
+        "date": "2026-11-21",
+        "event_type": "sports",
+        "exp_reviews": 28.2,
+        "exp_qrp": 22.0
+      },
+      {
+        "event_id": "E018",
+        "name": "Saturday 5K series, Battersea Park",
+        "date": "2026-11-22",
+        "event_type": "sports",
+        "exp_reviews": 22.8,
+        "exp_qrp": 17.8
+      },
+      {
+        "event_id": "E006",
+        "name": "Park half marathon, Wembley Park",
+        "date": "2026-10-17",
+        "event_type": "sports",
+        "exp_reviews": 19.7,
+        "exp_qrp": 15.4
+      },
+      {
+        "event_id": "E004",
+        "name": "Big-match screening, Big-screen pub, Brixton",
+        "date": "2026-10-14",
+        "event_type": "sports",
+        "exp_reviews": 19.2,
+        "exp_qrp": 15.0
+      },
+      {
+        "event_id": "E017",
+        "name": "Big-match screening, Big-screen bar, Shoreditch",
+        "date": "2026-11-21",
+        "event_type": "sports",
+        "exp_reviews": 19.2,
+        "exp_qrp": 15.0
+      }
+    ],
+    "text": "Tidewell Hydrate wins at sports events. Best moment: just finished or full time, rehydrating and refuelling, at the finish. Fitness rate it highest (4.5 stars from 181 reviews). Sample Low-sugar electrolyte drink for after exercise; lead with its sweetness. It is weakest at performing-arts nights, so bring other brands there. Best upcoming: Autumn 10K, Wembley Park on 2026-11-21, about 22 qualified reviews."
+  },
+  "B03": {
+    "brand_name": "Northbrew",
+    "fit_by_type": {
+      "community": 0.196,
+      "concerts": 0.519,
+      "conferences": 1.09,
+      "expos": 0.724,
+      "festivals": 0.338,
+      "performing_arts": 0.329,
+      "sports": 0.201
+    },
+    "best_type": "conferences",
+    "best_moment": "Mid-afternoon slump at the desks (15:00-16:30)",
+    "best_audience": "students",
+    "sample": "Canned cold brew coffee; lead with its refreshing",
+    "avoid": "community (fit 0.20); reviewers mark down its price",
+    "top_events": [
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 71.5,
+        "exp_qrp": 64.7
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 63.4,
+        "exp_qrp": 57.3
+      },
+      {
+        "event_id": "E011",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-07",
+        "event_type": "conferences",
+        "exp_reviews": 56.3,
+        "exp_qrp": 50.9
+      },
+      {
+        "event_id": "E003",
+        "name": "Tech meetup and demo night, Barbican Centre",
+        "date": "2026-10-14",
+        "event_type": "conferences",
+        "exp_reviews": 45.0,
+        "exp_qrp": 40.8
+      },
+      {
+        "event_id": "E033",
+        "name": "Weekend AI hackathon, Canary Wharf conference centre",
+        "date": "2026-12-13",
+        "event_type": "conferences",
+        "exp_reviews": 16.1,
+        "exp_qrp": 14.6
+      }
+    ],
+    "text": "Northbrew wins at conferences and hackathons. Best moment: mid-afternoon slump at the desks, 15:00-16:30. Students rate it highest (4.2 stars from 337 reviews). Sample Canned cold brew coffee; lead with its refreshing. It is weakest at community events, so bring other brands there. Best upcoming: Tech meetup and demo night, Canary Wharf conference centre on 2026-12-19, about 65 qualified reviews."
+  },
+  "B04": {
+    "brand_name": "Kombuchee",
+    "fit_by_type": {
+      "community": 0.552,
+      "concerts": 0.591,
+      "conferences": 0.478,
+      "expos": 0.481,
+      "festivals": 0.583,
+      "performing_arts": 0.61,
+      "sports": 0.385
+    },
+    "best_type": "performing_arts",
+    "best_moment": "Interval drinks and a sweet treat (interval)",
+    "best_audience": "young professionals",
+    "sample": "Small-batch kombucha in seasonal flavours; lead with its price",
+    "avoid": "sports (fit 0.39); reviewers mark down its taste",
+    "top_events": [
+      {
+        "event_id": "E028",
+        "name": "Comedy night, Hackney Empire",
+        "date": "2026-12-04",
+        "event_type": "performing_arts",
+        "exp_reviews": 9.4,
+        "exp_qrp": 7.2
+      },
+      {
+        "event_id": "E032",
+        "name": "Christmas panto, West End theatre",
+        "date": "2026-12-12",
+        "event_type": "performing_arts",
+        "exp_reviews": 8.1,
+        "exp_qrp": 6.2
+      },
+      {
+        "event_id": "E009",
+        "name": "Comedy night, West End theatre",
+        "date": "2026-10-30",
+        "event_type": "performing_arts",
+        "exp_reviews": 6.1,
+        "exp_qrp": 4.7
+      },
+      {
+        "event_id": "E030",
+        "name": "Theatre premiere, Richmond Theatre",
+        "date": "2026-12-11",
+        "event_type": "performing_arts",
+        "exp_reviews": 6.0,
+        "exp_qrp": 4.6
+      },
+      {
+        "event_id": "E027",
+        "name": "Contemporary dance show, Southbank Centre",
+        "date": "2026-12-03",
+        "event_type": "performing_arts",
+        "exp_reviews": 4.3,
+        "exp_qrp": 3.3
+      }
+    ],
+    "text": "Kombuchee wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Young professionals rate it highest (4.3 stars from 384 reviews). Sample Small-batch kombucha in seasonal flavours; lead with its price. It is weakest at sports events, so bring other brands there. Best upcoming: Comedy night, Hackney Empire on 2026-12-04, about 7 qualified reviews."
+  },
+  "B05": {
+    "brand_name": "Lentil Lark",
+    "fit_by_type": {
+      "community": 0.691,
+      "concerts": 0.495,
+      "conferences": 0.628,
+      "expos": 0.684,
+      "festivals": 0.57,
+      "performing_arts": 0.766,
+      "sports": 0.342
+    },
+    "best_type": "performing_arts",
+    "best_moment": "Interval drinks and a sweet treat (interval)",
+    "best_audience": "young professionals",
+    "sample": "Baked lentil crisps in sharing bags; lead with its price",
+    "avoid": "sports (fit 0.34); reviewers mark down its crunch",
+    "top_events": [
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 64.0,
+        "exp_qrp": 55.0
+      },
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 56.7,
+        "exp_qrp": 52.6
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 50.3,
+        "exp_qrp": 46.7
+      },
+      {
+        "event_id": "E011",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-07",
+        "event_type": "conferences",
+        "exp_reviews": 44.6,
+        "exp_qrp": 41.4
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 43.0,
+        "exp_qrp": 37.0
+      }
+    ],
+    "text": "Lentil Lark wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Young professionals rate it highest (3.8 stars from 454 reviews). Sample Baked lentil crisps in sharing bags; lead with its price. It is weakest at sports events, so bring other brands there. Best upcoming: Food and drink expo, ExCeL London on 2026-11-25, about 55 qualified reviews."
+  },
+  "B06": {
+    "brand_name": "Popwright",
+    "fit_by_type": {
+      "community": 0.698,
+      "concerts": 0.459,
+      "conferences": 0.578,
+      "expos": 0.717,
+      "festivals": 0.554,
+      "performing_arts": 0.748,
+      "sports": 0.303
+    },
+    "best_type": "performing_arts",
+    "best_moment": "Interval drinks and a sweet treat (interval)",
+    "best_audience": "students",
+    "sample": "Sweet and salty popcorn; lead with its saltiness",
+    "avoid": "sports (fit 0.30); reviewers mark down its portion size",
+    "top_events": [
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 65.1,
+        "exp_qrp": 56.0
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 43.7,
+        "exp_qrp": 37.6
+      },
+      {
+        "event_id": "E001",
+        "name": "Food and drink expo, Olympia London",
+        "date": "2026-10-06",
+        "event_type": "expos",
+        "exp_reviews": 30.1,
+        "exp_qrp": 25.9
+      },
+      {
+        "event_id": "E022",
+        "name": "Family fun day, Walthamstow Village",
+        "date": "2026-11-28",
+        "event_type": "community",
+        "exp_reviews": 33.6,
+        "exp_qrp": 22.5
+      },
+      {
+        "event_id": "E034",
+        "name": "Run club social and brunch, Surrey Street Market",
+        "date": "2026-12-13",
+        "event_type": "community",
+        "exp_reviews": 31.1,
+        "exp_qrp": 20.8
+      }
+    ],
+    "text": "Popwright wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Students rate it highest (4.4 stars from 296 reviews). Sample Sweet and salty popcorn; lead with its saltiness. It is weakest at sports events, so bring other brands there. Best upcoming: Food and drink expo, ExCeL London on 2026-11-25, about 56 qualified reviews."
+  },
+  "B07": {
+    "brand_name": "Seedwork",
+    "fit_by_type": {
+      "community": 0.65,
+      "concerts": 0.474,
+      "conferences": 0.572,
+      "expos": 0.512,
+      "festivals": 0.551,
+      "performing_arts": 0.686,
+      "sports": 0.351
+    },
+    "best_type": "performing_arts",
+    "best_moment": "Interval drinks and a sweet treat (interval)",
+    "best_audience": "young professionals",
+    "sample": "Seeded crackers for grazing boards; lead with its price",
+    "avoid": "sports (fit 0.35); reviewers mark down its packaging",
+    "top_events": [
+      {
+        "event_id": "E028",
+        "name": "Comedy night, Hackney Empire",
+        "date": "2026-12-04",
+        "event_type": "performing_arts",
+        "exp_reviews": 9.8,
+        "exp_qrp": 7.5
+      },
+      {
+        "event_id": "E032",
+        "name": "Christmas panto, West End theatre",
+        "date": "2026-12-12",
+        "event_type": "performing_arts",
+        "exp_reviews": 8.4,
+        "exp_qrp": 6.4
+      },
+      {
+        "event_id": "E009",
+        "name": "Comedy night, West End theatre",
+        "date": "2026-10-30",
+        "event_type": "performing_arts",
+        "exp_reviews": 6.3,
+        "exp_qrp": 4.8
+      },
+      {
+        "event_id": "E030",
+        "name": "Theatre premiere, Richmond Theatre",
+        "date": "2026-12-11",
+        "event_type": "performing_arts",
+        "exp_reviews": 6.2,
+        "exp_qrp": 4.8
+      },
+      {
+        "event_id": "E027",
+        "name": "Contemporary dance show, Southbank Centre",
+        "date": "2026-12-03",
+        "event_type": "performing_arts",
+        "exp_reviews": 4.5,
+        "exp_qrp": 3.4
+      }
+    ],
+    "text": "Seedwork wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Young professionals rate it highest (4.2 stars from 333 reviews). Sample Seeded crackers for grazing boards; lead with its price. It is weakest at sports events, so bring other brands there. Best upcoming: Comedy night, Hackney Empire on 2026-12-04, about 8 qualified reviews."
+  },
+  "B08": {
+    "brand_name": "Umami Drift",
+    "fit_by_type": {
+      "community": 0.604,
+      "concerts": 0.37,
+      "conferences": 0.418,
+      "expos": 0.719,
+      "festivals": 0.487,
+      "performing_arts": 0.524,
+      "sports": 0.182
+    },
+    "best_type": "expos",
+    "best_moment": "Lunchtime browsing between stalls (12:00-14:00)",
+    "best_audience": "students",
+    "sample": "Crispy seaweed puffs; lead with its packaging",
+    "avoid": "sports (fit 0.18); reviewers mark down its seasoning",
+    "top_events": [
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 64.8,
+        "exp_qrp": 44.6
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 43.5,
+        "exp_qrp": 30.0
+      },
+      {
+        "event_id": "E001",
+        "name": "Food and drink expo, Olympia London",
+        "date": "2026-10-06",
+        "event_type": "expos",
+        "exp_reviews": 29.9,
+        "exp_qrp": 20.6
+      },
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 50.9,
+        "exp_qrp": 19.7
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 45.2,
+        "exp_qrp": 17.4
+      }
+    ],
+    "text": "Umami Drift wins at expos and fairs. Best moment: lunchtime browsing between stalls, 12:00-14:00. Students rate it highest (4.4 stars from 312 reviews). Sample Crispy seaweed puffs; lead with its packaging. It is weakest at sports events, so bring other brands there. Best upcoming: Food and drink expo, ExCeL London on 2026-11-25, about 45 qualified reviews."
+  },
+  "B09": {
+    "brand_name": "Cacao Field",
+    "fit_by_type": {
+      "community": 0.575,
+      "concerts": 0.446,
+      "conferences": 0.613,
+      "expos": 0.493,
+      "festivals": 0.525,
+      "performing_arts": 0.706,
+      "sports": 0.271
+    },
+    "best_type": "performing_arts",
+    "best_moment": "Interval drinks and a sweet treat (interval)",
+    "best_audience": "foodies",
+    "sample": "Single-origin dark chocolate bars; lead with its packaging",
+    "avoid": "sports (fit 0.27); reviewers mark down its texture",
+    "top_events": [
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 56.1,
+        "exp_qrp": 33.1
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 49.8,
+        "exp_qrp": 29.4
+      },
+      {
+        "event_id": "E011",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-07",
+        "event_type": "conferences",
+        "exp_reviews": 44.2,
+        "exp_qrp": 26.1
+      },
+      {
+        "event_id": "E003",
+        "name": "Tech meetup and demo night, Barbican Centre",
+        "date": "2026-10-14",
+        "event_type": "conferences",
+        "exp_reviews": 35.4,
+        "exp_qrp": 20.9
+      },
+      {
+        "event_id": "E008",
+        "name": "Family fun day, Islington community hall",
+        "date": "2026-10-24",
+        "event_type": "community",
+        "exp_reviews": 31.0,
+        "exp_qrp": 17.7
+      }
+    ],
+    "text": "Cacao Field wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Foodies rate it highest (4.0 stars from 180 reviews). Sample Single-origin dark chocolate bars; lead with its packaging. It is weakest at sports events, so bring other brands there. Best upcoming: Tech meetup and demo night, Canary Wharf conference centre on 2026-12-19, about 33 qualified reviews."
+  },
+  "B10": {
+    "brand_name": "Lolly Loft",
+    "fit_by_type": {
+      "community": 0.44,
+      "concerts": 0.414,
+      "conferences": 0.341,
+      "expos": 0.524,
+      "festivals": 0.438,
+      "performing_arts": 0.456,
+      "sports": 0.277
+    },
+    "best_type": "expos",
+    "best_moment": "Lunchtime browsing between stalls (12:00-14:00)",
+    "best_audience": "students",
+    "sample": "Real-fruit ice lollies; lead with its ingredients",
+    "avoid": "sports (fit 0.28); reviewers mark down its ingredients",
+    "top_events": [
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 59.0,
+        "exp_qrp": 37.4
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 39.6,
+        "exp_qrp": 25.1
+      },
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 49.0,
+        "exp_qrp": 18.4
+      },
+      {
+        "event_id": "E001",
+        "name": "Food and drink expo, Olympia London",
+        "date": "2026-10-06",
+        "event_type": "expos",
+        "exp_reviews": 27.2,
+        "exp_qrp": 17.3
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 43.5,
+        "exp_qrp": 16.3
+      }
+    ],
+    "text": "Lolly Loft wins at expos and fairs. Best moment: lunchtime browsing between stalls, 12:00-14:00. Students rate it highest (4.6 stars from 282 reviews). Sample Real-fruit ice lollies; lead with its ingredients. It is weakest at sports events, so bring other brands there. Best upcoming: Food and drink expo, ExCeL London on 2026-11-25, about 37 qualified reviews."
+  },
+  "B11": {
+    "brand_name": "Crumbhouse",
+    "fit_by_type": {
+      "community": 0.515,
+      "concerts": 0.36,
+      "conferences": 0.38,
+      "expos": 0.619,
+      "festivals": 0.401,
+      "performing_arts": 0.451,
+      "sports": 0.201
+    },
+    "best_type": "expos",
+    "best_moment": "Lunchtime browsing between stalls (12:00-14:00)",
+    "best_audience": "students",
+    "sample": "Gooey bakery-style cookies; lead with its taste",
+    "avoid": "sports (fit 0.20); reviewers mark down its packaging",
+    "top_events": [
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 61.9,
+        "exp_qrp": 39.2
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 41.5,
+        "exp_qrp": 26.3
+      },
+      {
+        "event_id": "E001",
+        "name": "Food and drink expo, Olympia London",
+        "date": "2026-10-06",
+        "event_type": "expos",
+        "exp_reviews": 28.6,
+        "exp_qrp": 18.1
+      },
+      {
+        "event_id": "E002",
+        "name": "Food and drink expo, University campus, Mile End",
+        "date": "2026-10-13",
+        "event_type": "expos",
+        "exp_reviews": 18.2,
+        "exp_qrp": 11.5
+      },
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 50.0,
+        "exp_qrp": 18.7
+      }
+    ],
+    "text": "Crumbhouse wins at expos and fairs. Best moment: lunchtime browsing between stalls, 12:00-14:00. Students rate it highest (4.3 stars from 384 reviews). Sample Gooey bakery-style cookies; lead with its taste. It is weakest at sports events, so bring other brands there. Best upcoming: Food and drink expo, ExCeL London on 2026-11-25, about 39 qualified reviews."
+  },
+  "B12": {
+    "brand_name": "Fruitling",
+    "fit_by_type": {
+      "community": 0.471,
+      "concerts": 0.242,
+      "conferences": 0.264,
+      "expos": 0.347,
+      "festivals": 0.322,
+      "performing_arts": 0.432,
+      "sports": 0.205
+    },
+    "best_type": "community",
+    "best_moment": "Browsing the market, or lingering after the run club (11:00-13:00)",
+    "best_audience": "families",
+    "sample": "Fruit and veg snacks for children; lead with its taste",
+    "avoid": "sports (fit 0.20); reviewers mark down its ingredients",
+    "top_events": [
+      {
+        "event_id": "E022",
+        "name": "Family fun day, Walthamstow Village",
+        "date": "2026-11-28",
+        "event_type": "community",
+        "exp_reviews": 29.9,
+        "exp_qrp": 9.4
+      },
+      {
+        "event_id": "E016",
+        "name": "Family fun day, Ealing Common",
+        "date": "2026-11-21",
+        "event_type": "community",
+        "exp_reviews": 29.9,
+        "exp_qrp": 9.4
+      },
+      {
+        "event_id": "E034",
+        "name": "Run club social and brunch, Surrey Street Market",
+        "date": "2026-12-13",
+        "event_type": "community",
+        "exp_reviews": 27.6,
+        "exp_qrp": 8.7
+      },
+      {
+        "event_id": "E008",
+        "name": "Family fun day, Islington community hall",
+        "date": "2026-10-24",
+        "event_type": "community",
+        "exp_reviews": 28.8,
+        "exp_qrp": 7.0
+      },
+      {
+        "event_id": "E012",
+        "name": "Family fun day, Surrey Street Market",
+        "date": "2026-11-07",
+        "event_type": "community",
+        "exp_reviews": 20.1,
+        "exp_qrp": 6.3
+      }
+    ],
+    "text": "Fruitling wins at community events. Best moment: browsing the market, or lingering after the run club, 11:00-13:00. Families rate it highest (4.2 stars from 214 reviews). Sample Fruit and veg snacks for children; lead with its taste. It is weakest at sports events, so bring other brands there. Best upcoming: Family fun day, Walthamstow Village on 2026-11-28, about 9 qualified reviews."
+  },
+  "B13": {
+    "brand_name": "Ember & Ash",
+    "fit_by_type": {
+      "community": 0.723,
+      "concerts": 0.33,
+      "conferences": 0.3,
+      "expos": 0.429,
+      "festivals": 0.479,
+      "performing_arts": 0.722,
+      "sports": 0.234
+    },
+    "best_type": "community",
+    "best_moment": "Browsing the market, or lingering after the run club (11:00-13:00)",
+    "best_audience": "foodies",
+    "sample": "Small-batch hot sauces; lead with its texture",
+    "avoid": "sports (fit 0.23); reviewers mark down its heat",
+    "top_events": [
+      {
+        "event_id": "E008",
+        "name": "Family fun day, Islington community hall",
+        "date": "2026-10-24",
+        "event_type": "community",
+        "exp_reviews": 33.5,
+        "exp_qrp": 19.1
+      },
+      {
+        "event_id": "E023",
+        "name": "Family fun day, Islington community hall",
+        "date": "2026-11-28",
+        "event_type": "community",
+        "exp_reviews": 18.6,
+        "exp_qrp": 10.6
+      },
+      {
+        "event_id": "E024",
+        "name": "Christmas community market, Maltby Street Market",
+        "date": "2026-11-28",
+        "event_type": "community",
+        "exp_reviews": 15.1,
+        "exp_qrp": 8.6
+      },
+      {
+        "event_id": "E028",
+        "name": "Comedy night, Hackney Empire",
+        "date": "2026-12-04",
+        "event_type": "performing_arts",
+        "exp_reviews": 10.0,
+        "exp_qrp": 7.6
+      },
+      {
+        "event_id": "E032",
+        "name": "Christmas panto, West End theatre",
+        "date": "2026-12-12",
+        "event_type": "performing_arts",
+        "exp_reviews": 8.6,
+        "exp_qrp": 6.5
+      }
+    ],
+    "text": "Ember & Ash wins at community events. Best moment: browsing the market, or lingering after the run club, 11:00-13:00. Foodies rate it highest (4.2 stars from 303 reviews). Sample Small-batch hot sauces; lead with its texture. It is weakest at sports events, so bring other brands there. Best upcoming: Family fun day, Islington community hall on 2026-10-24, about 19 qualified reviews."
+  },
+  "B14": {
+    "brand_name": "Redline",
+    "fit_by_type": {
+      "community": 0.537,
+      "concerts": 0.219,
+      "conferences": 0.203,
+      "expos": 0.377,
+      "festivals": 0.366,
+      "performing_arts": 0.453,
+      "sports": 0.141
+    },
+    "best_type": "community",
+    "best_moment": "Browsing the market, or lingering after the run club (11:00-13:00)",
+    "best_audience": "foodies",
+    "sample": "Crunchy chilli oil; lead with its price",
+    "avoid": "sports (fit 0.14); reviewers mark down its jar size",
+    "top_events": [
+      {
+        "event_id": "E016",
+        "name": "Family fun day, Ealing Common",
+        "date": "2026-11-21",
+        "event_type": "community",
+        "exp_reviews": 30.9,
+        "exp_qrp": 9.2
+      },
+      {
+        "event_id": "E008",
+        "name": "Family fun day, Islington community hall",
+        "date": "2026-10-24",
+        "event_type": "community",
+        "exp_reviews": 30.3,
+        "exp_qrp": 9.1
+      },
+      {
+        "event_id": "E022",
+        "name": "Family fun day, Walthamstow Village",
+        "date": "2026-11-28",
+        "event_type": "community",
+        "exp_reviews": 30.3,
+        "exp_qrp": 7.0
+      },
+      {
+        "event_id": "E034",
+        "name": "Run club social and brunch, Surrey Street Market",
+        "date": "2026-12-13",
+        "event_type": "community",
+        "exp_reviews": 28.0,
+        "exp_qrp": 6.5
+      },
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 54.3,
+        "exp_qrp": 5.8
+      }
+    ],
+    "text": "Redline wins at community events. Best moment: browsing the market, or lingering after the run club, 11:00-13:00. Foodies rate it highest (4.3 stars from 366 reviews). Sample Crunchy chilli oil; lead with its price. It is weakest at sports events, so bring other brands there. Best upcoming: Family fun day, Ealing Common on 2026-11-21, about 9 qualified reviews."
+  },
+  "B15": {
+    "brand_name": "Tangle",
+    "fit_by_type": {
+      "community": 0.799,
+      "concerts": 0.253,
+      "conferences": 0.214,
+      "expos": 0.411,
+      "festivals": 0.44,
+      "performing_arts": 0.548,
+      "sports": 0.168
+    },
+    "best_type": "community",
+    "best_moment": "Browsing the market, or lingering after the run club (11:00-13:00)",
+    "best_audience": "foodies",
+    "sample": "Fruit chutneys and relishes; lead with its flavour depth",
+    "avoid": "sports (fit 0.17); reviewers mark down its texture",
+    "top_events": [
+      {
+        "event_id": "E016",
+        "name": "Family fun day, Ealing Common",
+        "date": "2026-11-21",
+        "event_type": "community",
+        "exp_reviews": 35.6,
+        "exp_qrp": 21.8
+      },
+      {
+        "event_id": "E022",
+        "name": "Family fun day, Walthamstow Village",
+        "date": "2026-11-28",
+        "event_type": "community",
+        "exp_reviews": 34.8,
+        "exp_qrp": 19.0
+      },
+      {
+        "event_id": "E034",
+        "name": "Run club social and brunch, Surrey Street Market",
+        "date": "2026-12-13",
+        "event_type": "community",
+        "exp_reviews": 32.2,
+        "exp_qrp": 17.6
+      },
+      {
+        "event_id": "E012",
+        "name": "Family fun day, Surrey Street Market",
+        "date": "2026-11-07",
+        "event_type": "community",
+        "exp_reviews": 23.4,
+        "exp_qrp": 12.8
+      },
+      {
+        "event_id": "E008",
+        "name": "Family fun day, Islington community hall",
+        "date": "2026-10-24",
+        "event_type": "community",
+        "exp_reviews": 34.1,
+        "exp_qrp": 18.6
+      }
+    ],
+    "text": "Tangle wins at community events. Best moment: browsing the market, or lingering after the run club, 11:00-13:00. Foodies rate it highest (4.1 stars from 258 reviews). Sample Fruit chutneys and relishes; lead with its flavour depth. It is weakest at sports events, so bring other brands there. Best upcoming: Family fun day, Ealing Common on 2026-11-21, about 22 qualified reviews."
+  },
+  "B16": {
+    "brand_name": "Dip Shift",
+    "fit_by_type": {
+      "community": 0.447,
+      "concerts": 0.487,
+      "conferences": 0.687,
+      "expos": 0.688,
+      "festivals": 0.45,
+      "performing_arts": 0.64,
+      "sports": 0.28
+    },
+    "best_type": "expos",
+    "best_moment": "Lunchtime browsing between stalls (12:00-14:00)",
+    "best_audience": "young professionals",
+    "sample": "Single-serve hummus and dip pots; lead with its texture",
+    "avoid": "sports (fit 0.28); reviewers mark down its heat",
+    "top_events": [
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 58.5,
+        "exp_qrp": 52.9
+      },
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 64.3,
+        "exp_qrp": 52.0
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 51.8,
+        "exp_qrp": 46.9
+      },
+      {
+        "event_id": "E011",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-07",
+        "event_type": "conferences",
+        "exp_reviews": 46.0,
+        "exp_qrp": 41.6
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 43.2,
+        "exp_qrp": 34.9
+      }
+    ],
+    "text": "Dip Shift wins at expos and fairs. Best moment: lunchtime browsing between stalls, 12:00-14:00. Young professionals rate it highest (4.3 stars from 327 reviews). Sample Single-serve hummus and dip pots; lead with its texture. It is weakest at sports events, so bring other brands there. Best upcoming: Tech meetup and demo night, Canary Wharf conference centre on 2026-12-19, about 53 qualified reviews."
+  },
+  "B17": {
+    "brand_name": "Protein Rebel",
+    "fit_by_type": {
+      "community": 0.307,
+      "concerts": 0.528,
+      "conferences": 0.8,
+      "expos": 0.599,
+      "festivals": 0.404,
+      "performing_arts": 0.288,
+      "sports": 0.618
+    },
+    "best_type": "conferences",
+    "best_moment": "Mid-afternoon slump at the desks (15:00-16:30)",
+    "best_audience": "students",
+    "sample": "High-protein snack bars; lead with its portability",
+    "avoid": "performing arts (fit 0.29); reviewers mark down its texture",
+    "top_events": [
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 61.7,
+        "exp_qrp": 58.0
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 54.7,
+        "exp_qrp": 51.4
+      },
+      {
+        "event_id": "E011",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-07",
+        "event_type": "conferences",
+        "exp_reviews": 48.5,
+        "exp_qrp": 45.7
+      },
+      {
+        "event_id": "E003",
+        "name": "Tech meetup and demo night, Barbican Centre",
+        "date": "2026-10-14",
+        "event_type": "conferences",
+        "exp_reviews": 38.9,
+        "exp_qrp": 36.5
+      },
+      {
+        "event_id": "E015",
+        "name": "Autumn 10K, Wembley Park",
+        "date": "2026-11-21",
+        "event_type": "sports",
+        "exp_reviews": 24.1,
+        "exp_qrp": 21.0
+      }
+    ],
+    "text": "Protein Rebel wins at conferences and hackathons. Best moment: mid-afternoon slump at the desks, 15:00-16:30. Students rate it highest (4.1 stars from 377 reviews). Sample High-protein snack bars; lead with its portability. It is weakest at performing-arts nights, so bring other brands there. Best upcoming: Tech meetup and demo night, Canary Wharf conference centre on 2026-12-19, about 58 qualified reviews."
+  },
+  "B18": {
+    "brand_name": "Fuel Bites",
+    "fit_by_type": {
+      "community": 0.272,
+      "concerts": 0.407,
+      "conferences": 0.595,
+      "expos": 0.573,
+      "festivals": 0.367,
+      "performing_arts": 0.263,
+      "sports": 0.422
+    },
+    "best_type": "conferences",
+    "best_moment": "Mid-afternoon slump at the desks (15:00-16:30)",
+    "best_audience": "fitness",
+    "sample": "Oat and date energy balls; lead with its energy boost",
+    "avoid": "performing arts (fit 0.26); reviewers mark down its ingredients",
+    "top_events": [
+      {
+        "event_id": "E020",
+        "name": "Food and drink expo, ExCeL London",
+        "date": "2026-11-25",
+        "event_type": "expos",
+        "exp_reviews": 60.5,
+        "exp_qrp": 37.2
+      },
+      {
+        "event_id": "E007",
+        "name": "Refreshers' fair, ExCeL London",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 40.6,
+        "exp_qrp": 25.0
+      },
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 55.6,
+        "exp_qrp": 21.4
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 49.3,
+        "exp_qrp": 19.0
+      },
+      {
+        "event_id": "E001",
+        "name": "Food and drink expo, Olympia London",
+        "date": "2026-10-06",
+        "event_type": "expos",
+        "exp_reviews": 27.9,
+        "exp_qrp": 17.2
+      }
+    ],
+    "text": "Fuel Bites wins at conferences and hackathons. Best moment: mid-afternoon slump at the desks, 15:00-16:30. Fitness rate it highest (4.4 stars from 193 reviews). Sample Oat and date energy balls; lead with its energy boost. It is weakest at performing-arts nights, so bring other brands there. Best upcoming: Food and drink expo, ExCeL London on 2026-11-25, about 37 qualified reviews."
+  },
+  "B19": {
+    "brand_name": "Rootshot",
+    "fit_by_type": {
+      "community": 0.294,
+      "concerts": 0.489,
+      "conferences": 0.618,
+      "expos": 0.404,
+      "festivals": 0.37,
+      "performing_arts": 0.266,
+      "sports": 0.533
+    },
+    "best_type": "conferences",
+    "best_moment": "Mid-afternoon slump at the desks (15:00-16:30)",
+    "best_audience": "fitness",
+    "sample": "Cold-pressed ginger shots; lead with its texture",
+    "avoid": "performing arts (fit 0.27); reviewers mark down its texture",
+    "top_events": [
+      {
+        "event_id": "E015",
+        "name": "Autumn 10K, Wembley Park",
+        "date": "2026-11-21",
+        "event_type": "sports",
+        "exp_reviews": 23.2,
+        "exp_qrp": 18.1
+      },
+      {
+        "event_id": "E018",
+        "name": "Saturday 5K series, Battersea Park",
+        "date": "2026-11-22",
+        "event_type": "sports",
+        "exp_reviews": 18.8,
+        "exp_qrp": 14.7
+      },
+      {
+        "event_id": "E004",
+        "name": "Big-match screening, Big-screen pub, Brixton",
+        "date": "2026-10-14",
+        "event_type": "sports",
+        "exp_reviews": 16.6,
+        "exp_qrp": 13.0
+      },
+      {
+        "event_id": "E017",
+        "name": "Big-match screening, Big-screen bar, Shoreditch",
+        "date": "2026-11-21",
+        "event_type": "sports",
+        "exp_reviews": 16.6,
+        "exp_qrp": 13.0
+      },
+      {
+        "event_id": "E006",
+        "name": "Park half marathon, Wembley Park",
+        "date": "2026-10-17",
+        "event_type": "sports",
+        "exp_reviews": 16.2,
+        "exp_qrp": 12.7
+      }
+    ],
+    "text": "Rootshot wins at conferences and hackathons. Best moment: mid-afternoon slump at the desks, 15:00-16:30. Fitness rate it highest (4.3 stars from 185 reviews). Sample Cold-pressed ginger shots; lead with its texture. It is weakest at performing-arts nights, so bring other brands there. Best upcoming: Autumn 10K, Wembley Park on 2026-11-21, about 18 qualified reviews."
+  },
+  "B20": {
+    "brand_name": "Mellow Gut",
+    "fit_by_type": {
+      "community": 0.609,
+      "concerts": 0.32,
+      "conferences": 0.563,
+      "expos": 0.508,
+      "festivals": 0.429,
+      "performing_arts": 0.509,
+      "sports": 0.325
+    },
+    "best_type": "community",
+    "best_moment": "Browsing the market, or lingering after the run club (11:00-13:00)",
+    "best_audience": "young professionals",
+    "sample": "Prebiotic fibre gummies; lead with its energy boost",
+    "avoid": "concerts (fit 0.32); reviewers mark down its taste",
+    "top_events": [
+      {
+        "event_id": "E035",
+        "name": "Tech meetup and demo night, Canary Wharf conference centre",
+        "date": "2026-12-19",
+        "event_type": "conferences",
+        "exp_reviews": 54.8,
+        "exp_qrp": 31.7
+      },
+      {
+        "event_id": "E019",
+        "name": "Tech meetup and demo night, Here East",
+        "date": "2026-11-22",
+        "event_type": "conferences",
+        "exp_reviews": 48.6,
+        "exp_qrp": 28.1
+      },
+      {
+        "event_id": "E011",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-07",
+        "event_type": "conferences",
+        "exp_reviews": 43.1,
+        "exp_qrp": 24.9
+      },
+      {
+        "event_id": "E003",
+        "name": "Tech meetup and demo night, Barbican Centre",
+        "date": "2026-10-14",
+        "event_type": "conferences",
+        "exp_reviews": 34.5,
+        "exp_qrp": 20.0
+      },
+      {
+        "event_id": "E022",
+        "name": "Family fun day, Walthamstow Village",
+        "date": "2026-11-28",
+        "event_type": "community",
+        "exp_reviews": 32.2,
+        "exp_qrp": 18.9
+      }
+    ],
+    "text": "Mellow Gut wins at community events. Best moment: browsing the market, or lingering after the run club, 11:00-13:00. Young professionals rate it highest (4.2 stars from 325 reviews). Sample Prebiotic fibre gummies; lead with its energy boost. It is weakest at concerts and club nights, so bring other brands there. Best upcoming: Tech meetup and demo night, Canary Wharf conference centre on 2026-12-19, about 32 qualified reviews."
+  }
+}

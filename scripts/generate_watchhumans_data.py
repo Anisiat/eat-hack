@@ -28,7 +28,7 @@ N_USERS = 5000
 N_REVIEWS = 20000
 ROOT = Path(__file__).resolve().parents[1]
 CENSUS = ROOT / "data" / "raw" / "borough_census_2021.csv"
-PERIOD = (pd.Timestamp("2025-10-01"), pd.Timestamp("2026-09-30"))
+PERIOD = (pd.Timestamp("2024-04-01"), pd.Timestamp("2026-09-30"))
 CATEGORIES = ["drink", "savoury", "sweet", "condiment", "functional"]
 DIETS = ["vegetarian", "vegan", "gluten_free", "dairy_free", "nut_allergy"]
 

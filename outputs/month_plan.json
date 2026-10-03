@@ -1,0 +1,66 @@
+{
+  "month": "2026-11",
+  "capacity": 2,
+  "popups": [
+    {
+      "event_id": "E019",
+      "name": "Tech meetup and demo night, Here East",
+      "date": "2026-11-22",
+      "event_type": "conferences",
+      "borough": "Newham",
+      "brands": [
+        "B03",
+        "B05",
+        "B09",
+        "B16",
+        "B17"
+      ],
+      "qrp": 231.7,
+      "cost": 428.0,
+      "borough_bonus": 1.0
+    },
+    {
+      "event_id": "E020",
+      "name": "Food and drink expo, ExCeL London",
+      "date": "2026-11-25",
+      "event_type": "expos",
+      "borough": "Newham",
+      "brands": [
+        "B01",
+        "B05",
+        "B06",
+        "B11",
+        "B16"
+      ],
+      "qrp": 263.9,
+      "cost": 378.0,
+      "borough_bonus": 1.0
+    }
+  ],
+  "total_qrp": 495.6,
+  "total_cost": 806.0,
+  "cost_per_qr": 1.63,
+  "habit_events": [
+    "E025",
+    "E020"
+  ],
+  "habit_total_qrp": 293.9,
+  "habit_total_cost": 1454.0,
+  "habit_cost_per_qr": 4.95,
+  "uplift_vs_habit": 0.687,
+  "brands_featured": 8,
+  "brands_not_featured": [
+    "B02",
+    "B04",
+    "B07",
+    "B08",
+    "B10",
+    "B12",
+    "B13",
+    "B14",
+    "B15",
+    "B18",
+    "B19",
+    "B20"
+  ]
+}

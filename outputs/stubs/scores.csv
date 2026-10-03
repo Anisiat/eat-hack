@@ -1,0 +1,6 @@
+event_id,brand_id,fit,exp_signups,exp_reviews,exp_qrp,in_best_lineup,reason_1,reason_2,reason_3
+E001,B01,0.8052,66.6,31.15,28.48,1,"Discovery need matches the expos crowd (brand 0.6, event 0.8)","91% of the crowd is in its target segments (students, young professionals, foodies)",Rated +0.1 stars against its pop-up average at expos (155 reviews)
+E001,B02,0.214,66.6,23.29,6.02,0,"Value need matches the expos crowd (brand 0.3, event 0.9)","26% of the crowd is in its target segments (young professionals, fitness)",Rated -0.3 stars against its pop-up average at expos (21 reviews)
+E001,B03,0.7466,66.6,30.26,24.43,0,"Energy need matches the expos crowd (brand 1.0, event 0.6)","81% of the crowd is in its target segments (students, young professionals)",Rated +0.4 stars against its pop-up average at expos (60 reviews)
+E001,B04,0.4756,66.6,26.48,8.82,0,"Discovery need matches the expos crowd (brand 0.8, event 0.8)","33% of the crowd is in its target segments (young professionals, foodies)",No WatchHumans reviews at expos yet; fit comes from need states and audience
+E001,B05,0.6984,66.6,29.55,25.41,1,"Value need matches the expos crowd (brand 0.5, event 0.9)","86% of the crowd is in its target segments (students, young professionals, families)",Rated -0.0 stars against its pop-up average at expos (220 reviews)

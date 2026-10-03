@@ -1,0 +1,171 @@
+{
+  "uplift": 0.2729,
+  "ci_low": 0.204,
+  "ci_high": 0.374,
+  "qrp_tool": 81.55,
+  "qrp_habit": 64.07,
+  "cost_per_qr_tool": 4.94,
+  "cost_per_qr_habit": 6.29,
+  "n_test": 12,
+  "method": "tool vs habit lineup at the same 12 held-out pop-ups; outcomes from the synthetic world, 95% bootstrap CI",
+  "per_popup": [
+    {
+      "popup_id": "P049",
+      "event_type": "community",
+      "tool_lineup": [
+        "B01",
+        "B05",
+        "B06",
+        "B09",
+        "B15"
+      ],
+      "qrp_tool": 26.4,
+      "qrp_habit": 22.2
+    },
+    {
+      "popup_id": "P050",
+      "event_type": "expos",
+      "tool_lineup": [
+        "B01",
+        "B05",
+        "B06",
+        "B11",
+        "B16"
+      ],
+      "qrp_tool": 242.1,
+      "qrp_habit": 204.7
+    },
+    {
+      "popup_id": "P051",
+      "event_type": "sports",
+      "tool_lineup": [
+        "B02",
+        "B05",
+        "B06",
+        "B17",
+        "B19"
+      ],
+      "qrp_tool": 21.0,
+      "qrp_habit": 13.2
+    },
+    {
+      "popup_id": "P052",
+      "event_type": "conferences",
+      "tool_lineup": [
+        "B03",
+        "B05",
+        "B09",
+        "B16",
+        "B17"
+      ],
+      "qrp_tool": 190.0,
+      "qrp_habit": 145.6
+    },
+    {
+      "popup_id": "P053",
+      "event_type": "community",
+      "tool_lineup": [
+        "B01",
+        "B05",
+        "B06",
+        "B09",
+        "B15"
+      ],
+      "qrp_tool": 55.5,
+      "qrp_habit": 46.6
+    },
+    {
+      "popup_id": "P054",
+      "event_type": "community",
+      "tool_lineup": [
+        "B01",
+        "B05",
+        "B06",
+        "B09",
+        "B15"
+      ],
+      "qrp_tool": 72.4,
+      "qrp_habit": 60.8
+    },
+    {
+      "popup_id": "P055",
+      "event_type": "festivals",
+      "tool_lineup": [
+        "B01",
+        "B05",
+        "B06",
+        "B09",
+        "B16"
+      ],
+      "qrp_tool": 70.5,
+      "qrp_habit": 62.8
+    },
+    {
+      "popup_id": "P056",
+      "event_type": "community",
+      "tool_lineup": [
+        "B01",
+        "B05",
+        "B06",
+        "B09",
+        "B15"
+      ],
+      "qrp_tool": 24.1,
+      "qrp_habit": 20.2
+    },
+    {
+      "popup_id": "P057",
+      "event_type": "conferences",
+      "tool_lineup": [
+        "B03",
+        "B05",
+        "B09",
+        "B16",
+        "B17"
+      ],
+      "qrp_tool": 119.7,
+      "qrp_habit": 91.7
+    },
+    {
+      "popup_id": "P058",
+      "event_type": "sports",
+      "tool_lineup": [
+        "B02",
+        "B05",
+        "B06",
+        "B17",
+        "B19"
+      ],
+      "qrp_tool": 100.3,
+      "qrp_habit": 62.3
+    },
+    {
+      "popup_id": "P059",
+      "event_type": "sports",
+      "tool_lineup": [
+        "B02",
+        "B05",
+        "B06",
+        "B17",
+        "B19"
+      ],
+      "qrp_tool": 41.3,
+      "qrp_habit": 25.9
+    },
+    {
+      "popup_id": "P060",
+      "event_type": "community",
+      "tool_lineup": [
+        "B01",
+        "B05",
+        "B06",
+        "B09",
+        "B15"
+      ],
+      "qrp_tool": 15.2,
+      "qrp_habit": 12.8
+    }
+  ],
+  "poisson_test_deviance": 0.99,
+  "footfall_baseline_test_deviance": 24.443
+}
