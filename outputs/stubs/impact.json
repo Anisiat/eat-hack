@@ -1,13 +1,13 @@
 {
-  "uplift": 0.3695,
-  "ci_low": 0.2808,
-  "ci_high": 0.4484,
-  "qrp_tool": 186.35,
-  "qrp_habit": 136.08,
-  "cost_per_qr_tool": 2.22,
-  "cost_per_qr_habit": 3.04,
+  "uplift": 0.0993,
+  "ci_low": 0.048,
+  "ci_high": 0.1727,
+  "qrp_tool": 62.81,
+  "qrp_habit": 57.14,
+  "cost_per_qr_tool": 6.6,
+  "cost_per_qr_habit": 7.25,
   "n_test": 12,
   "method": "tool vs habit lineup at the same 12 held-out pop-ups; outcomes from the synthetic world, 95% bootstrap CI",
-  "poisson_test_deviance": 2.47,
-  "footfall_baseline_test_deviance": 65.285
+  "poisson_test_deviance": 1.976,
+  "footfall_baseline_test_deviance": 67.135
 }

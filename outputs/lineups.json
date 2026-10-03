@@ -1,1946 +1,2406 @@
 {
   "E001": {
-    "name": "Food and drink expo, Olympia London",
-    "date": "2026-10-06",
-    "event_type": "expos",
-    "borough": "Hammersmith and Fulham",
+    "name": "Makers' and food market, Brockley Market",
+    "date": "2026-10-10",
+    "event_type": "community",
+    "borough": "Lewisham",
     "brands": [
-      "B05",
+      "B26",
       "B04",
-      "B13",
-      "B09",
-      "B07"
+      "B39",
+      "B08",
+      "B27"
     ],
     "brand_names": [
-      "INDI",
+      "Blanco Niño",
       "Well & Truly",
-      "mindfuel flow",
-      "EP!C Snax Co.",
-      "Helen Browning’s Organic"
+      "SUCSEED",
+      "Dr. Will’s",
+      "Saucerer"
     ],
     "products": {
-      "B05": "Brain Bar",
-      "B04": "Crunchies — Really Cheesy",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B07": "Organic Corned Beef"
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B04": "Crunchies — Smokey Bacon",
+      "B39": "Energy",
+      "B08": "Avocado Oil Mayo",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.108,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.102,
+      "smart_saver": 0.13,
+      "quality_seeker": 0.089,
+      "on_the_go_shopper": 0.061,
+      "impulse_buyer": 0.084,
+      "experience_explorer": 0.107,
+      "everyday_planner": 0.153,
+      "conscious_consumer": 0.11
+    },
+    "match": 0.659,
+    "habit_match": 0.529,
     "units": {
-      "B05": 187,
-      "B04": 187,
-      "B13": 187,
-      "B09": 187,
-      "B07": 187
+      "B26": 138,
+      "B04": 138,
+      "B39": 138,
+      "B08": 138,
+      "B27": 138
     },
-    "slot": "12:00-14:00",
-    "exp_signups": 59.9,
-    "exp_reviews": 119.3,
-    "qrp": 109.9,
+    "slot": "11:00-13:00",
+    "exp_signups": 30.6,
+    "exp_reviews": 58.4,
+    "qrp": 19.8,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 91.8,
-    "cost": 428.0,
-    "cost_per_qr": 3.89,
-    "habit_cost_per_qr": 4.66,
+    "habit_qrp": 15.7,
+    "cost": 240.0,
+    "cost_per_qr": 12.1,
+    "habit_cost_per_qr": 15.31,
     "reasons": [
-      "Expected 110 qualified reviews against 92 for the usual five (+20%)",
-      "INDI: Energy need matches the expos crowd (brand 1.0, event 0.6)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 4 gluten-free options"
+      "Archetype match 0.66 against 0.53 for the usual five: Dr. Will’s for everyday planners; Saucerer for smart savers; Blanco Niño for conscious consumers",
+      "Expected 20 qualified reviews against 16 for the usual five (+27%)",
+      "5 vegan and 4 gluten-free options; covers condiment, savoury"
     ]
   },
   "E002": {
-    "name": "Food and drink expo, University campus, Mile End",
-    "date": "2026-10-13",
-    "event_type": "expos",
-    "borough": "Tower Hamlets",
-    "brands": [
-      "B05",
-      "B04",
-      "B13",
-      "B09",
-      "B07"
-    ],
-    "brand_names": [
-      "INDI",
-      "Well & Truly",
-      "mindfuel flow",
-      "EP!C Snax Co.",
-      "Helen Browning’s Organic"
-    ],
-    "products": {
-      "B05": "Brain Bar",
-      "B04": "Crunchies — Really Cheesy",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B07": "Organic Corned Beef"
-    },
-    "units": {
-      "B05": 118,
-      "B04": 118,
-      "B13": 118,
-      "B09": 118,
-      "B07": 118
-    },
-    "slot": "12:00-14:00",
-    "exp_signups": 37.8,
-    "exp_reviews": 75.3,
-    "qrp": 69.4,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 57.9,
-    "cost": 558.0,
-    "cost_per_qr": 8.05,
-    "habit_cost_per_qr": 9.64,
-    "reasons": [
-      "Expected 69 qualified reviews against 58 for the usual five (+20%)",
-      "INDI: Energy need matches the expos crowd (brand 1.0, event 0.6)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 4 gluten-free options"
-    ]
-  },
-  "E003": {
-    "name": "Tech meetup and demo night, Barbican Centre",
-    "date": "2026-10-14",
-    "event_type": "conferences",
-    "borough": "City of London",
-    "brands": [
-      "B05",
-      "B13",
-      "B34",
-      "B46",
-      "B01"
-    ],
-    "brand_names": [
-      "INDI",
-      "mindfuel flow",
-      "Little’s",
-      "Mission",
-      "All That Matters"
-    ],
-    "products": {
-      "B05": "Brain Bar",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B34": "Toffee Nut Flavour Infused Instant Coffee",
-      "B46": "Lemon & Ginseng Natural Energy Drink",
-      "B01": "Superfood Puffs — Peri-Peri"
-    },
-    "units": {
-      "B05": 221,
-      "B13": 221,
-      "B34": 221,
-      "B46": 221,
-      "B01": 221
-    },
-    "slot": "15:00-16:30",
-    "exp_signups": 73.6,
-    "exp_reviews": 174.6,
-    "qrp": 167.8,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 123.7,
-    "cost": 418.0,
-    "cost_per_qr": 2.49,
-    "habit_cost_per_qr": 3.38,
-    "reasons": [
-      "Expected 168 qualified reviews against 124 for the usual five (+36%)",
-      "INDI: Focus need matches the conferences crowd (brand 1.0, event 1.0)",
-      "Covers drink, savoury; 2 vegan and 2 gluten-free options"
-    ]
-  },
-  "E004": {
-    "name": "Big-match screening, Big-screen pub, Brixton",
-    "date": "2026-10-14",
-    "event_type": "sports",
-    "borough": "Lambeth",
-    "brands": [
-      "B17",
-      "B15",
-      "B36",
-      "B39",
-      "B06"
-    ],
-    "brand_names": [
-      "Gut Food / Ferment Fizz",
-      "DASH",
-      "HOOP",
-      "SUCSEED",
-      "Kooky"
-    ],
-    "products": {
-      "B17": "Orange & Mango Lemonade",
-      "B15": "Pink Lady Apple Sparkling Water",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B39": "Energy",
-      "B06": "Gently Dried Chewy Mango"
-    },
-    "units": {
-      "B17": 223,
-      "B15": 223,
-      "B36": 223,
-      "B39": 223,
-      "B06": 223
-    },
-    "slot": "21:15-22:15 (finish)",
-    "exp_signups": 57.7,
-    "exp_reviews": 90.4,
-    "qrp": 83.2,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 70.4,
-    "cost": 268.0,
-    "cost_per_qr": 3.22,
-    "habit_cost_per_qr": 3.81,
-    "reasons": [
-      "Expected 83 qualified reviews against 70 for the usual five (+18%)",
-      "Gut Food / Ferment Fizz: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
-      "Covers condiment, drink, savoury, sweet; 2 vegan and 1 gluten-free options"
-    ]
-  },
-  "E005": {
-    "name": "Contemporary dance show, Richmond Theatre",
-    "date": "2026-10-16",
-    "event_type": "performing_arts",
-    "borough": "Richmond upon Thames",
-    "brands": [
-      "B04",
-      "B09",
-      "B26",
-      "B44",
-      "B39"
-    ],
-    "brand_names": [
-      "Well & Truly",
-      "EP!C Snax Co.",
-      "Blanco Niño",
-      "Folc",
-      "SUCSEED"
-    ],
-    "products": {
-      "B04": "Crunchies — Really Cheesy",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B26": "Chilli & Lime Tortilla Chips",
-      "B44": "English Sparkling Rosé NV",
-      "B39": "Energy"
-    },
-    "units": {
-      "B04": 53,
-      "B09": 53,
-      "B26": 53,
-      "B44": 53,
-      "B39": 53
-    },
-    "slot": "19:35-20:00 (interval)",
-    "exp_signups": 9.7,
-    "exp_reviews": 20.5,
-    "qrp": 18.9,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 16.1,
-    "cost": 384.0,
-    "cost_per_qr": 20.3,
-    "habit_cost_per_qr": 23.91,
-    "reasons": [
-      "Expected 19 qualified reviews against 16 for the usual five (+18%)",
-      "Well & Truly: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
-    ]
-  },
-  "E006": {
-    "name": "Park half marathon, Wembley Park",
-    "date": "2026-10-17",
-    "event_type": "sports",
-    "borough": "Brent",
-    "brands": [
-      "B17",
-      "B15",
-      "B36",
-      "B39",
-      "B06"
-    ],
-    "brand_names": [
-      "Gut Food / Ferment Fizz",
-      "DASH",
-      "HOOP",
-      "SUCSEED",
-      "Kooky"
-    ],
-    "products": {
-      "B17": "Orange & Mango Lemonade",
-      "B15": "Pink Lady Apple Sparkling Water",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B39": "Energy",
-      "B06": "Gently Dried Chewy Mango"
-    },
-    "units": {
-      "B17": 228,
-      "B15": 228,
-      "B36": 228,
-      "B39": 228,
-      "B06": 228
-    },
-    "slot": "10:30-11:30 (finish)",
-    "exp_signups": 58.5,
-    "exp_reviews": 88.4,
-    "qrp": 81.5,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 70.0,
-    "cost": 188.0,
-    "cost_per_qr": 2.31,
-    "habit_cost_per_qr": 2.68,
-    "reasons": [
-      "Expected 81 qualified reviews against 70 for the usual five (+16%)",
-      "Gut Food / Ferment Fizz: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
-      "Covers condiment, drink, savoury, sweet; 2 vegan and 1 gluten-free options"
-    ]
-  },
-  "E007": {
-    "name": "Refreshers' fair, ExCeL London",
-    "date": "2026-10-19",
-    "event_type": "expos",
-    "borough": "Newham",
-    "brands": [
-      "B05",
-      "B04",
-      "B13",
-      "B09",
-      "B07"
-    ],
-    "brand_names": [
-      "INDI",
-      "Well & Truly",
-      "mindfuel flow",
-      "EP!C Snax Co.",
-      "Helen Browning’s Organic"
-    ],
-    "products": {
-      "B05": "Brain Bar",
-      "B04": "Crunchies — Really Cheesy",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B07": "Organic Corned Beef"
-    },
-    "units": {
-      "B05": 275,
-      "B04": 275,
-      "B13": 275,
-      "B09": 275,
-      "B07": 275
-    },
-    "slot": "12:00-14:00",
-    "exp_signups": 87.9,
-    "exp_reviews": 174.9,
-    "qrp": 161.2,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 134.5,
-    "cost": 488.0,
-    "cost_per_qr": 3.03,
-    "habit_cost_per_qr": 3.63,
-    "reasons": [
-      "Expected 161 qualified reviews against 135 for the usual five (+20%)",
-      "INDI: Energy need matches the expos crowd (brand 1.0, event 0.6)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 4 gluten-free options"
-    ]
-  },
-  "E008": {
-    "name": "Family fun day, Islington community hall",
-    "date": "2026-10-24",
-    "event_type": "community",
-    "borough": "Islington",
-    "brands": [
-      "B04",
-      "B39",
-      "B09",
-      "B10",
-      "B38"
-    ],
-    "brand_names": [
-      "Well & Truly",
-      "SUCSEED",
-      "EP!C Snax Co.",
-      "ötzibrew",
-      "FREEE"
-    ],
-    "products": {
-      "B04": "Crunchies — Smokey Paprika",
-      "B39": "Energy",
-      "B09": "Giant Toastin’ Marshmallows",
-      "B10": "Organic Dandelion & Burdock Root Coffee Alternative",
-      "B38": "Organic Banana & Chocolate Oat Bar"
-    },
-    "units": {
-      "B04": 392,
-      "B39": 392,
-      "B09": 392,
-      "B10": 392,
-      "B38": 392
-    },
-    "slot": "09:30-11:30",
-    "exp_signups": 83.5,
-    "exp_reviews": 161.3,
-    "qrp": 150.3,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 113.0,
-    "cost": 340.0,
-    "cost_per_qr": 2.26,
-    "habit_cost_per_qr": 3.01,
-    "reasons": [
-      "Expected 150 qualified reviews against 113 for the usual five (+33%)",
-      "Well & Truly: Treat need matches the community crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
-    ]
-  },
-  "E009": {
-    "name": "Comedy night, West End theatre",
-    "date": "2026-10-30",
-    "event_type": "performing_arts",
-    "borough": "Westminster",
-    "brands": [
-      "B04",
-      "B09",
-      "B26",
-      "B44",
-      "B39"
-    ],
-    "brand_names": [
-      "Well & Truly",
-      "EP!C Snax Co.",
-      "Blanco Niño",
-      "Folc",
-      "SUCSEED"
-    ],
-    "products": {
-      "B04": "Crunchies — Really Cheesy",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B26": "Chilli & Lime Tortilla Chips",
-      "B44": "English Sparkling Rosé NV",
-      "B39": "Energy"
-    },
-    "units": {
-      "B04": 80,
-      "B09": 80,
-      "B26": 80,
-      "B44": 80,
-      "B39": 80
-    },
-    "slot": "19:35-20:00 (interval)",
-    "exp_signups": 14.5,
-    "exp_reviews": 30.7,
-    "qrp": 28.4,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 24.1,
-    "cost": 324.0,
-    "cost_per_qr": 11.43,
-    "habit_cost_per_qr": 13.46,
-    "reasons": [
-      "Expected 28 qualified reviews against 24 for the usual five (+18%)",
-      "Well & Truly: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
-    ]
-  },
-  "E010": {
-    "name": "Winter street food festival, Finsbury Park",
-    "date": "2026-10-31",
-    "event_type": "festivals",
-    "borough": "Haringey",
-    "brands": [
-      "B04",
-      "B17",
-      "B13",
-      "B09",
-      "B39"
-    ],
-    "brand_names": [
-      "Well & Truly",
-      "Gut Food / Ferment Fizz",
-      "mindfuel flow",
-      "EP!C Snax Co.",
-      "SUCSEED"
-    ],
-    "products": {
-      "B04": "Crunchies — Really Cheesy",
-      "B17": "Lemon & Raspberry Lemonade",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B39": "Energy"
-    },
-    "units": {
-      "B04": 249,
-      "B17": 249,
-      "B13": 249,
-      "B09": 249,
-      "B39": 249
-    },
-    "slot": "14:00-17:00",
-    "exp_signups": 41.2,
-    "exp_reviews": 82.1,
-    "qrp": 74.7,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 70.9,
-    "cost": 1136.0,
-    "cost_per_qr": 15.2,
-    "habit_cost_per_qr": 16.01,
-    "reasons": [
-      "Expected 75 qualified reviews against 71 for the usual five (+5%)",
-      "Well & Truly: Treat need matches the festivals crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 5 vegan and 2 gluten-free options"
-    ]
-  },
-  "E011": {
-    "name": "Weekend AI hackathon, Here East",
-    "date": "2026-11-07",
-    "event_type": "conferences",
-    "borough": "Newham",
-    "brands": [
-      "B05",
-      "B13",
-      "B34",
-      "B46",
-      "B01"
-    ],
-    "brand_names": [
-      "INDI",
-      "mindfuel flow",
-      "Little’s",
-      "Mission",
-      "All That Matters"
-    ],
-    "products": {
-      "B05": "Brain Bar",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B34": "Toffee Nut Flavour Infused Instant Coffee",
-      "B46": "Lemon & Ginseng Natural Energy Drink",
-      "B01": "Superfood Puffs — Peri-Peri"
-    },
-    "units": {
-      "B05": 277,
-      "B13": 277,
-      "B34": 277,
-      "B46": 277,
-      "B01": 277
-    },
-    "slot": "15:00-16:30",
-    "exp_signups": 92.4,
-    "exp_reviews": 219.2,
-    "qrp": 210.6,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 155.3,
-    "cost": 408.0,
-    "cost_per_qr": 1.94,
-    "habit_cost_per_qr": 2.63,
-    "reasons": [
-      "Expected 211 qualified reviews against 155 for the usual five (+36%)",
-      "INDI: Focus need matches the conferences crowd (brand 1.0, event 1.0)",
-      "Covers drink, savoury; 2 vegan and 2 gluten-free options"
-    ]
-  },
-  "E012": {
-    "name": "Family fun day, Surrey Street Market",
-    "date": "2026-11-07",
-    "event_type": "community",
-    "borough": "Croydon",
-    "brands": [
-      "B04",
-      "B39",
-      "B36",
-      "B09",
-      "B10"
-    ],
-    "brand_names": [
-      "Well & Truly",
-      "SUCSEED",
-      "HOOP",
-      "EP!C Snax Co.",
-      "ötzibrew"
-    ],
-    "products": {
-      "B04": "Crunchies — Smokey Paprika",
-      "B39": "Energy",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B09": "Giant Toastin’ Marshmallows",
-      "B10": "Organic Dandelion & Burdock Root Coffee Alternative"
-    },
-    "units": {
-      "B04": 266,
-      "B39": 266,
-      "B36": 266,
-      "B09": 266,
-      "B10": 266
-    },
-    "slot": "11:00-13:00",
-    "exp_signups": 57.3,
-    "exp_reviews": 114.5,
-    "qrp": 103.8,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 71.6,
-    "cost": 280.0,
-    "cost_per_qr": 2.7,
-    "habit_cost_per_qr": 3.91,
-    "reasons": [
-      "Expected 104 qualified reviews against 72 for the usual five (+45%)",
-      "Well & Truly: Treat need matches the community crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 3 vegan and 3 gluten-free options"
-    ]
-  },
-  "E013": {
-    "name": "Park half marathon, Victoria Park",
-    "date": "2026-11-14",
-    "event_type": "sports",
-    "borough": "Tower Hamlets",
-    "brands": [
-      "B17",
-      "B15",
-      "B36",
-      "B39",
-      "B06"
-    ],
-    "brand_names": [
-      "Gut Food / Ferment Fizz",
-      "DASH",
-      "HOOP",
-      "SUCSEED",
-      "Kooky"
-    ],
-    "products": {
-      "B17": "Orange & Mango Lemonade",
-      "B15": "Pink Lady Apple Sparkling Water",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B39": "Energy",
-      "B06": "Gently Dried Chewy Mango"
-    },
-    "units": {
-      "B17": 221,
-      "B15": 221,
-      "B36": 221,
-      "B39": 221,
-      "B06": 221
-    },
-    "slot": "10:30-11:30 (finish)",
-    "exp_signups": 56.6,
-    "exp_reviews": 85.6,
-    "qrp": 78.8,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 67.8,
-    "cost": 258.0,
-    "cost_per_qr": 3.27,
-    "habit_cost_per_qr": 3.81,
-    "reasons": [
-      "Expected 79 qualified reviews against 68 for the usual five (+16%)",
-      "Gut Food / Ferment Fizz: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
-      "Covers condiment, drink, savoury, sweet; 2 vegan and 1 gluten-free options"
-    ]
-  },
-  "E014": {
     "name": "DJ all-nighter, Eventim Apollo",
-    "date": "2026-11-14",
+    "date": "2026-10-15",
     "event_type": "concerts",
     "borough": "Hammersmith and Fulham",
     "brands": [
-      "B13",
-      "B17",
+      "B43",
+      "B36",
+      "B07",
+      "B31",
+      "B13"
+    ],
+    "brand_names": [
+      "Fever-Tree",
+      "HOOP",
+      "Helen Browning’s Organic",
+      "Sunfly",
+      "mindfuel flow"
+    ],
+    "products": {
+      "B43": "Refreshingly Light Elderflower Tonic Water",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B07": "Organic Corned Beef",
+      "B31": "Sunflower Seed Butter — Crunchy",
+      "B13": "Mushroom Iced Latte — Salted Caramel"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.044,
+      "trend_enthusiast": 0.224,
+      "thoughtful_buyer": 0.022,
+      "smart_saver": 0.056,
+      "quality_seeker": 0.053,
+      "on_the_go_shopper": 0.089,
+      "impulse_buyer": 0.178,
+      "experience_explorer": 0.253,
+      "everyday_planner": 0.047,
+      "conscious_consumer": 0.033
+    },
+    "match": 0.626,
+    "habit_match": 0.561,
+    "units": {
+      "B43": 287,
+      "B36": 287,
+      "B07": 287,
+      "B31": 287,
+      "B13": 287
+    },
+    "slot": "21:00-23:00",
+    "exp_signups": 32.1,
+    "exp_reviews": 70.3,
+    "qrp": 14.5,
+    "lineup_size": 5,
+    "habit_brands": [
       "B04",
-      "B05",
-      "B32"
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 19.2,
+    "cost": 708.0,
+    "cost_per_qr": 48.91,
+    "habit_cost_per_qr": 36.89,
+    "reasons": [
+      "Archetype match 0.63 against 0.56 for the usual five: Fever-Tree for experience explorers; mindfuel flow for trend enthusiasts; HOOP for impulse buyers",
+      "Expected 14 qualified reviews against 19 for the usual five (-25%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E003": {
+    "name": "Bonfire night festival, Queen Elizabeth Olympic Park",
+    "date": "2026-10-17",
+    "event_type": "festivals",
+    "borough": "Newham",
+    "brands": [
+      "B36",
+      "B48",
+      "B26",
+      "B31",
+      "B21"
+    ],
+    "brand_names": [
+      "HOOP",
+      "Mr Filbert’s",
+      "Blanco Niño",
+      "Sunfly",
+      "Double Dutch"
+    ],
+    "products": {
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B48": "Teriyaki Mochi Rice Bites",
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B31": "Sunflower Seed Butter — Crunchy",
+      "B21": "Indian Tonic Water"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.042,
+      "trend_enthusiast": 0.181,
+      "thoughtful_buyer": 0.07,
+      "smart_saver": 0.07,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.064,
+      "impulse_buyer": 0.162,
+      "experience_explorer": 0.245,
+      "everyday_planner": 0.03,
+      "conscious_consumer": 0.06
+    },
+    "match": 0.626,
+    "habit_match": 0.553,
+    "units": {
+      "B36": 565,
+      "B48": 565,
+      "B26": 565,
+      "B31": 565,
+      "B21": 565
+    },
+    "slot": "14:00-17:00",
+    "exp_signups": 92.4,
+    "exp_reviews": 191.1,
+    "qrp": 63.3,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 52.9,
+    "cost": 1406.0,
+    "cost_per_qr": 22.23,
+    "habit_cost_per_qr": 26.6,
+    "reasons": [
+      "Archetype match 0.63 against 0.55 for the usual five: Mr Filbert’s for experience explorers; Double Dutch for trend enthusiasts; HOOP for impulse buyers",
+      "Expected 63 qualified reviews against 53 for the usual five (+20%)",
+      "2 vegan and 3 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E004": {
+    "name": "Winter street food festival, Clapham Common",
+    "date": "2026-10-18",
+    "event_type": "festivals",
+    "borough": "Lambeth",
+    "brands": [
+      "B36",
+      "B48",
+      "B26",
+      "B31",
+      "B21"
+    ],
+    "brand_names": [
+      "HOOP",
+      "Mr Filbert’s",
+      "Blanco Niño",
+      "Sunfly",
+      "Double Dutch"
+    ],
+    "products": {
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B48": "Teriyaki Mochi Rice Bites",
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B31": "Sunflower Seed Butter — Crunchy",
+      "B21": "Indian Tonic Water"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.042,
+      "trend_enthusiast": 0.181,
+      "thoughtful_buyer": 0.07,
+      "smart_saver": 0.07,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.064,
+      "impulse_buyer": 0.162,
+      "experience_explorer": 0.245,
+      "everyday_planner": 0.03,
+      "conscious_consumer": 0.06
+    },
+    "match": 0.626,
+    "habit_match": 0.553,
+    "units": {
+      "B36": 227,
+      "B48": 227,
+      "B26": 227,
+      "B31": 227,
+      "B21": 227
+    },
+    "slot": "14:00-17:00",
+    "exp_signups": 38.8,
+    "exp_reviews": 80.3,
+    "qrp": 26.6,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 22.2,
+    "cost": 1046.0,
+    "cost_per_qr": 39.33,
+    "habit_cost_per_qr": 47.07,
+    "reasons": [
+      "Archetype match 0.63 against 0.55 for the usual five: Mr Filbert’s for experience explorers; Double Dutch for trend enthusiasts; HOOP for impulse buyers",
+      "Expected 27 qualified reviews against 22 for the usual five (+20%)",
+      "2 vegan and 3 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E005": {
+    "name": "Graduate careers fair, University campus, Mile End",
+    "date": "2026-10-19",
+    "event_type": "expos",
+    "borough": "Tower Hamlets",
+    "brands": [
+      "B31",
+      "B36",
+      "B13",
+      "B32",
+      "B30"
+    ],
+    "brand_names": [
+      "Sunfly",
+      "HOOP",
+      "mindfuel flow",
+      "ape2o",
+      "Ottolenghi"
+    ],
+    "products": {
+      "B31": "Sunflower Seed Butter — Crunchy",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B13": "Mushroom Iced Latte — Salted Caramel",
+      "B32": "GO Steel Bottle — Turtle",
+      "B30": "Miso Pesto"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.065,
+      "trend_enthusiast": 0.193,
+      "thoughtful_buyer": 0.09,
+      "smart_saver": 0.209,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.109,
+      "impulse_buyer": 0.095,
+      "experience_explorer": 0.083,
+      "everyday_planner": 0.051,
+      "conscious_consumer": 0.029
+    },
+    "match": 0.614,
+    "habit_match": 0.498,
+    "units": {
+      "B31": 719,
+      "B36": 719,
+      "B13": 600,
+      "B32": 600,
+      "B30": 719
+    },
+    "slot": "12:00-14:00",
+    "exp_signups": 227.2,
+    "exp_reviews": 454.8,
+    "qrp": 94.0,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 112.1,
+    "cost": 568.0,
+    "cost_per_qr": 6.04,
+    "habit_cost_per_qr": 5.07,
+    "reasons": [
+      "Archetype match 0.61 against 0.50 for the usual five: Sunfly for smart savers; mindfuel flow for trend enthusiasts; ape2o for on the go shoppers",
+      "Expected 94 qualified reviews against 112 for the usual five (-16%)",
+      "1 vegan and 1 gluten-free options; covers condiment, drink, other, savoury"
+    ]
+  },
+  "E006": {
+    "name": "Live gig, Village Underground",
+    "date": "2026-10-24",
+    "event_type": "concerts",
+    "borough": "Hackney",
+    "brands": [
+      "B48",
+      "B36",
+      "B07",
+      "B46",
+      "B21"
+    ],
+    "brand_names": [
+      "Mr Filbert’s",
+      "HOOP",
+      "Helen Browning’s Organic",
+      "Mission",
+      "Double Dutch"
+    ],
+    "products": {
+      "B48": "Teriyaki Mochi Rice Bites",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B07": "Organic Corned Beef",
+      "B46": "Lemon & Ginseng Natural Energy Drink",
+      "B21": "Indian Tonic Water"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.044,
+      "trend_enthusiast": 0.172,
+      "thoughtful_buyer": 0.022,
+      "smart_saver": 0.056,
+      "quality_seeker": 0.053,
+      "on_the_go_shopper": 0.089,
+      "impulse_buyer": 0.231,
+      "experience_explorer": 0.253,
+      "everyday_planner": 0.047,
+      "conscious_consumer": 0.033
+    },
+    "match": 0.63,
+    "habit_match": 0.562,
+    "units": {
+      "B48": 92,
+      "B36": 92,
+      "B07": 92,
+      "B46": 92,
+      "B21": 92
+    },
+    "slot": "21:00-23:00",
+    "exp_signups": 10.9,
+    "exp_reviews": 24.1,
+    "qrp": 8.7,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 7.0,
+    "cost": 538.0,
+    "cost_per_qr": 61.54,
+    "habit_cost_per_qr": 77.06,
+    "reasons": [
+      "Archetype match 0.63 against 0.56 for the usual five: Mr Filbert’s for experience explorers; HOOP for impulse buyers; Double Dutch for trend enthusiasts",
+      "Expected 9 qualified reviews against 7 for the usual five (+25%)",
+      "1 vegan and 3 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E007": {
+    "name": "Tech meetup and demo night, Canary Wharf conference centre",
+    "date": "2026-10-28",
+    "event_type": "conferences",
+    "borough": "Tower Hamlets",
+    "brands": [
+      "B13",
+      "B07",
+      "B48"
     ],
     "brand_names": [
       "mindfuel flow",
-      "Gut Food / Ferment Fizz",
-      "Well & Truly",
-      "INDI",
-      "ape2o"
+      "Helen Browning’s Organic",
+      "Mr Filbert’s"
     ],
     "products": {
       "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B17": "Lemon & Raspberry Lemonade",
-      "B04": "Crunchies — Sea Salt & Cider Vinegar",
-      "B05": "Brain Bar",
-      "B32": "GO Steel Bottle — Turtle"
+      "B07": "Organic Corned Beef",
+      "B48": "Teriyaki Mochi Rice Bites"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.06,
+      "trend_enthusiast": 0.235,
+      "thoughtful_buyer": 0.095,
+      "smart_saver": 0.067,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.223,
+      "impulse_buyer": 0.063,
+      "experience_explorer": 0.105,
+      "everyday_planner": 0.059,
+      "conscious_consumer": 0.017
+    },
+    "match": 0.586,
+    "habit_match": 0.468,
     "units": {
-      "B13": 187,
-      "B17": 187,
-      "B04": 187,
-      "B05": 187,
-      "B32": 187
+      "B13": 70,
+      "B07": 70,
+      "B48": 70
     },
-    "slot": "21:00-23:00",
-    "exp_signups": 24.8,
-    "exp_reviews": 50.1,
-    "qrp": 49.4,
+    "slot": "15:00-16:30",
+    "exp_signups": 23.4,
+    "exp_reviews": 28.9,
+    "qrp": 6.7,
+    "lineup_size": 3,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
+      "B17"
+    ],
+    "habit_qrp": 7.6,
+    "cost": 458.0,
+    "cost_per_qr": 67.91,
+    "habit_cost_per_qr": 60.32,
+    "reasons": [
+      "Archetype match 0.59 against 0.47 for the usual five: mindfuel flow for trend enthusiasts; mindfuel flow for on the go shoppers; Mr Filbert’s for experience explorers",
+      "Expected 7 qualified reviews against 8 for the usual five (-11%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E008": {
+    "name": "Rugby international screening, Big-screen pub, Brixton",
+    "date": "2026-10-31",
+    "event_type": "sports",
+    "borough": "Lambeth",
+    "brands": [
+      "B15",
+      "B24",
       "B17",
+      "B36",
+      "B07"
+    ],
+    "brand_names": [
+      "DASH",
+      "teapigs",
+      "Gut Food / Ferment Fizz",
+      "HOOP",
+      "Helen Browning’s Organic"
+    ],
+    "products": {
+      "B15": "Pink Lady Apple Sparkling Water",
+      "B24": "Super Fruit",
+      "B17": "Lemon Lemonade",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B07": "Organic Corned Beef"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.343,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.072,
+      "smart_saver": 0.061,
+      "quality_seeker": 0.072,
+      "on_the_go_shopper": 0.133,
+      "impulse_buyer": 0.055,
+      "experience_explorer": 0.06,
+      "everyday_planner": 0.104,
+      "conscious_consumer": 0.044
+    },
+    "match": 0.65,
+    "habit_match": 0.562,
+    "units": {
+      "B15": 298,
+      "B24": 298,
+      "B17": 298,
+      "B36": 298,
+      "B07": 298
+    },
+    "slot": "21:15-22:15 (finish)",
+    "exp_signups": 75.3,
+    "exp_reviews": 129.4,
+    "qrp": 55.3,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 42.9,
-    "cost": 618.0,
-    "cost_per_qr": 12.51,
-    "habit_cost_per_qr": 14.41,
+    "habit_qrp": 59.2,
+    "cost": 238.0,
+    "cost_per_qr": 4.3,
+    "habit_cost_per_qr": 4.02,
     "reasons": [
-      "Expected 49 qualified reviews against 43 for the usual five (+15%)",
-      "mindfuel flow: Hydrate need matches the concerts crowd (brand 1.0, event 0.9)",
-      "Covers drink, other, savoury; 4 vegan and 2 gluten-free options"
+      "Archetype match 0.65 against 0.56 for the usual five: DASH for wellness seekers; DASH for on the go shoppers; Helen Browning’s Organic for everyday planners",
+      "Expected 55 qualified reviews against 59 for the usual five (-7%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E009": {
+    "name": "Weekend food market, Islington community hall",
+    "date": "2026-11-01",
+    "event_type": "community",
+    "borough": "Islington",
+    "brands": [
+      "B26",
+      "B04",
+      "B39",
+      "B08",
+      "B30"
+    ],
+    "brand_names": [
+      "Blanco Niño",
+      "Well & Truly",
+      "SUCSEED",
+      "Dr. Will’s",
+      "Ottolenghi"
+    ],
+    "products": {
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B04": "Crunchies — Smokey Bacon",
+      "B39": "Energy",
+      "B08": "Avocado Oil Mayo",
+      "B30": "Miso Pesto"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.107,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.102,
+      "smart_saver": 0.1,
+      "quality_seeker": 0.088,
+      "on_the_go_shopper": 0.06,
+      "impulse_buyer": 0.084,
+      "experience_explorer": 0.138,
+      "everyday_planner": 0.152,
+      "conscious_consumer": 0.11
+    },
+    "match": 0.672,
+    "habit_match": 0.544,
+    "units": {
+      "B26": 445,
+      "B04": 445,
+      "B39": 445,
+      "B08": 445,
+      "B30": 445
+    },
+    "slot": "09:30-11:30",
+    "exp_signups": 93.4,
+    "exp_reviews": 178.1,
+    "qrp": 61.2,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 48.9,
+    "cost": 380.0,
+    "cost_per_qr": 6.21,
+    "habit_cost_per_qr": 7.78,
+    "reasons": [
+      "Archetype match 0.67 against 0.54 for the usual five: Dr. Will’s for everyday planners; Ottolenghi for experience explorers; Blanco Niño for conscious consumers",
+      "Expected 61 qualified reviews against 49 for the usual five (+25%)",
+      "4 vegan and 3 gluten-free options; covers condiment, savoury"
+    ]
+  },
+  "E010": {
+    "name": "Weekend AI hackathon, Here East",
+    "date": "2026-11-03",
+    "event_type": "conferences",
+    "borough": "Newham",
+    "brands": [
+      "B31",
+      "B34",
+      "B03",
+      "B10",
+      "B48"
+    ],
+    "brand_names": [
+      "Sunfly",
+      "Little’s",
+      "The Protein Ball Co.",
+      "ötzibrew",
+      "Mr Filbert’s"
+    ],
+    "products": {
+      "B31": "Sunflower Seed Butter — Crunchy",
+      "B34": "Toffee Nut Flavour Infused Instant Coffee",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B10": "Organic Dandelion & Burdock Root Coffee Alternative",
+      "B48": "Teriyaki Mochi Rice Bites"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.06,
+      "trend_enthusiast": 0.235,
+      "thoughtful_buyer": 0.095,
+      "smart_saver": 0.067,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.223,
+      "impulse_buyer": 0.063,
+      "experience_explorer": 0.105,
+      "everyday_planner": 0.059,
+      "conscious_consumer": 0.017
+    },
+    "match": 0.622,
+    "habit_match": 0.506,
+    "units": {
+      "B31": 346,
+      "B34": 346,
+      "B03": 346,
+      "B10": 346,
+      "B48": 346
+    },
+    "slot": "15:00-16:30",
+    "exp_signups": 108.5,
+    "exp_reviews": 218.7,
+    "qrp": 60.0,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 57.3,
+    "cost": 398.0,
+    "cost_per_qr": 6.63,
+    "habit_cost_per_qr": 6.94,
+    "reasons": [
+      "Archetype match 0.62 against 0.51 for the usual five: The Protein Ball Co. for trend enthusiasts; Little’s for on the go shoppers; Mr Filbert’s for experience explorers",
+      "Expected 60 qualified reviews against 57 for the usual five (+5%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, functional, savoury"
+    ]
+  },
+  "E011": {
+    "name": "Food and drink expo, Olympia London",
+    "date": "2026-11-05",
+    "event_type": "expos",
+    "borough": "Hammersmith and Fulham",
+    "brands": [
+      "B31",
+      "B36",
+      "B13",
+      "B32",
+      "B30"
+    ],
+    "brand_names": [
+      "Sunfly",
+      "HOOP",
+      "mindfuel flow",
+      "ape2o",
+      "Ottolenghi"
+    ],
+    "products": {
+      "B31": "Sunflower Seed Butter — Crunchy",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B13": "Mushroom Iced Latte — Salted Caramel",
+      "B32": "GO Steel Bottle — Turtle",
+      "B30": "Miso Pesto"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.065,
+      "trend_enthusiast": 0.193,
+      "thoughtful_buyer": 0.09,
+      "smart_saver": 0.209,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.109,
+      "impulse_buyer": 0.095,
+      "experience_explorer": 0.083,
+      "everyday_planner": 0.051,
+      "conscious_consumer": 0.029
+    },
+    "match": 0.614,
+    "habit_match": 0.498,
+    "units": {
+      "B31": 578,
+      "B36": 578,
+      "B13": 578,
+      "B32": 578,
+      "B30": 578
+    },
+    "slot": "12:00-14:00",
+    "exp_signups": 184.5,
+    "exp_reviews": 369.2,
+    "qrp": 76.3,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 91.0,
+    "cost": 388.0,
+    "cost_per_qr": 5.08,
+    "habit_cost_per_qr": 4.26,
+    "reasons": [
+      "Archetype match 0.61 against 0.50 for the usual five: Sunfly for smart savers; mindfuel flow for trend enthusiasts; ape2o for on the go shoppers",
+      "Expected 76 qualified reviews against 91 for the usual five (-16%)",
+      "1 vegan and 1 gluten-free options; covers condiment, drink, other, savoury"
+    ]
+  },
+  "E012": {
+    "name": "Comedy night, Camden comedy club",
+    "date": "2026-11-07",
+    "event_type": "performing_arts",
+    "borough": "Camden",
+    "brands": [
+      "B45",
+      "B19",
+      "B49"
+    ],
+    "brand_names": [
+      "Penrhos",
+      "JimJams",
+      "NOMO"
+    ],
+    "products": {
+      "B45": "Handcrafted Dry Gin",
+      "B19": "Hazelnut Chocolate Spread",
+      "B49": "Caramel Choc Bar"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.048,
+      "trend_enthusiast": 0.07,
+      "thoughtful_buyer": 0.114,
+      "smart_saver": 0.041,
+      "quality_seeker": 0.206,
+      "on_the_go_shopper": 0.025,
+      "impulse_buyer": 0.095,
+      "experience_explorer": 0.198,
+      "everyday_planner": 0.089,
+      "conscious_consumer": 0.114
+    },
+    "match": 0.684,
+    "habit_match": 0.485,
+    "units": {
+      "B45": 13,
+      "B19": 13,
+      "B49": 13
+    },
+    "slot": "20:05-20:30 (interval)",
+    "exp_signups": 2.4,
+    "exp_reviews": 2.9,
+    "qrp": 1.0,
+    "lineup_size": 3,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17"
+    ],
+    "habit_qrp": 0.7,
+    "cost": 304.0,
+    "cost_per_qr": 293.23,
+    "habit_cost_per_qr": 440.73,
+    "reasons": [
+      "Archetype match 0.68 against 0.48 for the usual five: Penrhos for quality seekers; Penrhos for experience explorers; NOMO for thoughtful buyers",
+      "Expected 1 qualified reviews against 1 for the usual five (+50%)",
+      "1 vegan and 1 gluten-free options; covers condiment, drink, sweet"
+    ]
+  },
+  "E013": {
+    "name": "DJ all-nighter, Eventim Apollo",
+    "date": "2026-11-07",
+    "event_type": "concerts",
+    "borough": "Hammersmith and Fulham",
+    "brands": [
+      "B36",
+      "B43",
+      "B07",
+      "B13",
+      "B31"
+    ],
+    "brand_names": [
+      "HOOP",
+      "Fever-Tree",
+      "Helen Browning’s Organic",
+      "mindfuel flow",
+      "Sunfly"
+    ],
+    "products": {
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B43": "Refreshingly Light Elderflower Tonic Water",
+      "B07": "Organic Corned Beef",
+      "B13": "Mushroom Iced Latte — Salted Caramel",
+      "B31": "Sunflower Seed Butter — Crunchy"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.045,
+      "trend_enthusiast": 0.225,
+      "thoughtful_buyer": 0.022,
+      "smart_saver": 0.056,
+      "quality_seeker": 0.053,
+      "on_the_go_shopper": 0.089,
+      "impulse_buyer": 0.233,
+      "experience_explorer": 0.196,
+      "everyday_planner": 0.048,
+      "conscious_consumer": 0.034
+    },
+    "match": 0.625,
+    "habit_match": 0.566,
+    "units": {
+      "B36": 250,
+      "B43": 250,
+      "B07": 250,
+      "B13": 250,
+      "B31": 250
+    },
+    "slot": "21:00-23:00",
+    "exp_signups": 28.2,
+    "exp_reviews": 61.5,
+    "qrp": 12.6,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 18.2,
+    "cost": 708.0,
+    "cost_per_qr": 56.01,
+    "habit_cost_per_qr": 38.84,
+    "reasons": [
+      "Archetype match 0.62 against 0.57 for the usual five: HOOP for impulse buyers; mindfuel flow for trend enthusiasts; Fever-Tree for experience explorers",
+      "Expected 13 qualified reviews against 18 for the usual five (-31%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E014": {
+    "name": "Run club social and brunch, Islington community hall",
+    "date": "2026-11-08",
+    "event_type": "community",
+    "borough": "Islington",
+    "brands": [
+      "B26",
+      "B08",
+      "B43"
+    ],
+    "brand_names": [
+      "Blanco Niño",
+      "Dr. Will’s",
+      "Fever-Tree"
+    ],
+    "products": {
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B08": "Avocado Oil Mayo",
+      "B43": "Refreshingly Light Elderflower Tonic Water"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.108,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.133,
+      "smart_saver": 0.131,
+      "quality_seeker": 0.089,
+      "on_the_go_shopper": 0.061,
+      "impulse_buyer": 0.084,
+      "experience_explorer": 0.107,
+      "everyday_planner": 0.118,
+      "conscious_consumer": 0.111
+    },
+    "match": 0.626,
+    "habit_match": 0.523,
+    "units": {
+      "B26": 20,
+      "B08": 20,
+      "B43": 20
+    },
+    "slot": "09:30-11:30",
+    "exp_signups": 4.8,
+    "exp_reviews": 5.5,
+    "qrp": 1.7,
+    "lineup_size": 3,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17"
+    ],
+    "habit_qrp": 1.6,
+    "cost": 280.0,
+    "cost_per_qr": 165.72,
+    "habit_cost_per_qr": 173.77,
+    "reasons": [
+      "Archetype match 0.63 against 0.52 for the usual five: Dr. Will’s for thoughtful buyers; Dr. Will’s for smart savers; Dr. Will’s for everyday planners",
+      "Expected 2 qualified reviews against 2 for the usual five (+5%)",
+      "2 vegan and 2 gluten-free options; covers condiment, drink, savoury"
     ]
   },
   "E015": {
-    "name": "Autumn 10K, Wembley Park",
-    "date": "2026-11-21",
-    "event_type": "sports",
-    "borough": "Brent",
+    "name": "Startup summit, Canary Wharf conference centre",
+    "date": "2026-11-10",
+    "event_type": "conferences",
+    "borough": "Tower Hamlets",
     "brands": [
-      "B17",
-      "B15",
-      "B36",
-      "B39",
-      "B06"
+      "B07",
+      "B34",
+      "B03",
+      "B48"
     ],
     "brand_names": [
-      "Gut Food / Ferment Fizz",
-      "DASH",
-      "HOOP",
-      "SUCSEED",
-      "Kooky"
+      "Helen Browning’s Organic",
+      "Little’s",
+      "The Protein Ball Co.",
+      "Mr Filbert’s"
     ],
     "products": {
-      "B17": "Orange & Mango Lemonade",
-      "B15": "Pink Lady Apple Sparkling Water",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B39": "Energy",
-      "B06": "Gently Dried Chewy Mango"
+      "B07": "Organic Corned Beef",
+      "B34": "Toffee Nut Flavour Infused Instant Coffee",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B48": "Teriyaki Mochi Rice Bites"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.06,
+      "trend_enthusiast": 0.235,
+      "thoughtful_buyer": 0.095,
+      "smart_saver": 0.067,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.223,
+      "impulse_buyer": 0.063,
+      "experience_explorer": 0.105,
+      "everyday_planner": 0.059,
+      "conscious_consumer": 0.017
+    },
+    "match": 0.609,
+    "habit_match": 0.501,
     "units": {
-      "B17": 330,
-      "B15": 330,
-      "B36": 330,
-      "B39": 330,
-      "B06": 330
+      "B07": 208,
+      "B34": 208,
+      "B03": 208,
+      "B48": 208
     },
-    "slot": "10:30-11:30 (finish)",
-    "exp_signups": 84.4,
-    "exp_reviews": 127.8,
-    "qrp": 117.7,
+    "slot": "15:00-16:30",
+    "exp_signups": 66.7,
+    "exp_reviews": 107.8,
+    "qrp": 31.0,
+    "lineup_size": 4,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
-      "B26"
+      "B03"
     ],
-    "habit_qrp": 101.2,
-    "cost": 288.0,
-    "cost_per_qr": 2.45,
-    "habit_cost_per_qr": 2.85,
+    "habit_qrp": 31.6,
+    "cost": 358.0,
+    "cost_per_qr": 11.53,
+    "habit_cost_per_qr": 11.32,
     "reasons": [
-      "Expected 118 qualified reviews against 101 for the usual five (+16%)",
-      "Gut Food / Ferment Fizz: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
-      "Covers condiment, drink, savoury, sweet; 2 vegan and 1 gluten-free options"
+      "Archetype match 0.61 against 0.50 for the usual five: The Protein Ball Co. for trend enthusiasts; Little’s for on the go shoppers; Mr Filbert’s for experience explorers",
+      "Expected 31 qualified reviews against 32 for the usual five (-2%)",
+      "1 vegan and 3 gluten-free options; covers condiment, drink, functional, savoury"
     ]
   },
   "E016": {
-    "name": "Family fun day, Ealing Common",
-    "date": "2026-11-21",
-    "event_type": "community",
-    "borough": "Ealing",
+    "name": "Weekend AI hackathon, Canary Wharf conference centre",
+    "date": "2026-11-10",
+    "event_type": "conferences",
+    "borough": "Tower Hamlets",
     "brands": [
-      "B04",
-      "B39",
-      "B09",
-      "B10",
-      "B38"
+      "B07",
+      "B34",
+      "B03",
+      "B48"
     ],
     "brand_names": [
-      "Well & Truly",
-      "SUCSEED",
-      "EP!C Snax Co.",
-      "ötzibrew",
-      "FREEE"
+      "Helen Browning’s Organic",
+      "Little’s",
+      "The Protein Ball Co.",
+      "Mr Filbert’s"
     ],
     "products": {
-      "B04": "Crunchies — Smokey Paprika",
-      "B39": "Energy",
-      "B09": "Giant Toastin’ Marshmallows",
-      "B10": "Organic Dandelion & Burdock Root Coffee Alternative",
-      "B38": "Organic Banana & Chocolate Oat Bar"
+      "B07": "Organic Corned Beef",
+      "B34": "Toffee Nut Flavour Infused Instant Coffee",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B48": "Teriyaki Mochi Rice Bites"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.06,
+      "trend_enthusiast": 0.235,
+      "thoughtful_buyer": 0.095,
+      "smart_saver": 0.067,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.223,
+      "impulse_buyer": 0.063,
+      "experience_explorer": 0.105,
+      "everyday_planner": 0.059,
+      "conscious_consumer": 0.017
+    },
+    "match": 0.609,
+    "habit_match": 0.501,
     "units": {
-      "B04": 400,
-      "B39": 400,
-      "B09": 400,
-      "B10": 400,
-      "B38": 400
+      "B07": 183,
+      "B34": 183,
+      "B03": 183,
+      "B48": 183
     },
-    "slot": "09:30-11:30",
-    "exp_signups": 85.3,
-    "exp_reviews": 164.7,
-    "qrp": 153.4,
+    "slot": "15:00-16:30",
+    "exp_signups": 59.0,
+    "exp_reviews": 95.4,
+    "qrp": 27.5,
+    "lineup_size": 4,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
-      "B26"
+      "B03"
     ],
-    "habit_qrp": 104.8,
-    "cost": 280.0,
-    "cost_per_qr": 1.83,
-    "habit_cost_per_qr": 2.67,
+    "habit_qrp": 28.0,
+    "cost": 438.0,
+    "cost_per_qr": 15.95,
+    "habit_cost_per_qr": 15.65,
     "reasons": [
-      "Expected 153 qualified reviews against 105 for the usual five (+46%)",
-      "Well & Truly: Treat need matches the community crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
+      "Archetype match 0.61 against 0.50 for the usual five: The Protein Ball Co. for trend enthusiasts; Little’s for on the go shoppers; Mr Filbert’s for experience explorers",
+      "Expected 27 qualified reviews against 28 for the usual five (-2%)",
+      "1 vegan and 3 gluten-free options; covers condiment, drink, functional, savoury"
     ]
   },
   "E017": {
-    "name": "Big-match screening, Big-screen bar, Shoreditch",
+    "name": "Christmas panto, Richmond Theatre",
+    "date": "2026-11-12",
+    "event_type": "performing_arts",
+    "borough": "Richmond upon Thames",
+    "brands": [
+      "B45",
+      "B19",
+      "B36",
+      "B21"
+    ],
+    "brand_names": [
+      "Penrhos",
+      "JimJams",
+      "HOOP",
+      "Double Dutch"
+    ],
+    "products": {
+      "B45": "Handcrafted Dry Gin",
+      "B19": "Hazelnut Chocolate Spread",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B21": "Indian Tonic Water"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.048,
+      "trend_enthusiast": 0.07,
+      "thoughtful_buyer": 0.114,
+      "smart_saver": 0.041,
+      "quality_seeker": 0.206,
+      "on_the_go_shopper": 0.025,
+      "impulse_buyer": 0.095,
+      "experience_explorer": 0.198,
+      "everyday_planner": 0.089,
+      "conscious_consumer": 0.114
+    },
+    "match": 0.704,
+    "habit_match": 0.485,
+    "units": {
+      "B45": 59,
+      "B19": 59,
+      "B36": 59,
+      "B21": 59
+    },
+    "slot": "20:05-20:30 (interval)",
+    "exp_signups": 10.6,
+    "exp_reviews": 16.7,
+    "qrp": 6.2,
+    "lineup_size": 4,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_qrp": 3.6,
+    "cost": 354.0,
+    "cost_per_qr": 57.48,
+    "habit_cost_per_qr": 97.28,
+    "reasons": [
+      "Archetype match 0.70 against 0.48 for the usual five: Penrhos for quality seekers; Penrhos for experience explorers; HOOP for thoughtful buyers",
+      "Expected 6 qualified reviews against 4 for the usual five (+69%)",
+      "1 vegan and 1 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E018": {
+    "name": "Christmas panto, Southbank Centre",
+    "date": "2026-11-13",
+    "event_type": "performing_arts",
+    "borough": "Lambeth",
+    "brands": [
+      "B45",
+      "B19",
+      "B36",
+      "B21"
+    ],
+    "brand_names": [
+      "Penrhos",
+      "JimJams",
+      "HOOP",
+      "Double Dutch"
+    ],
+    "products": {
+      "B45": "Handcrafted Dry Gin",
+      "B19": "Hazelnut Chocolate Spread",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B21": "Indian Tonic Water"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.048,
+      "trend_enthusiast": 0.07,
+      "thoughtful_buyer": 0.114,
+      "smart_saver": 0.041,
+      "quality_seeker": 0.206,
+      "on_the_go_shopper": 0.025,
+      "impulse_buyer": 0.095,
+      "experience_explorer": 0.198,
+      "everyday_planner": 0.089,
+      "conscious_consumer": 0.114
+    },
+    "match": 0.704,
+    "habit_match": 0.485,
+    "units": {
+      "B45": 50,
+      "B19": 50,
+      "B36": 50,
+      "B21": 50
+    },
+    "slot": "19:35-20:00 (interval)",
+    "exp_signups": 9.1,
+    "exp_reviews": 14.2,
+    "qrp": 5.3,
+    "lineup_size": 4,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_qrp": 3.1,
+    "cost": 304.0,
+    "cost_per_qr": 57.68,
+    "habit_cost_per_qr": 97.62,
+    "reasons": [
+      "Archetype match 0.70 against 0.48 for the usual five: Penrhos for quality seekers; Penrhos for experience explorers; HOOP for thoughtful buyers",
+      "Expected 5 qualified reviews against 3 for the usual five (+69%)",
+      "1 vegan and 1 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E019": {
+    "name": "Cross-country relay, Battersea Park",
+    "date": "2026-11-15",
+    "event_type": "sports",
+    "borough": "Wandsworth",
+    "brands": [
+      "B24",
+      "B36",
+      "B35",
+      "B07",
+      "B17"
+    ],
+    "brand_names": [
+      "teapigs",
+      "HOOP",
+      "WelleCo",
+      "Helen Browning’s Organic",
+      "Gut Food / Ferment Fizz"
+    ],
+    "products": {
+      "B24": "Super Fruit",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B35": "The Hydro Protein Elixir — Passionfruit",
+      "B07": "Organic Corned Beef",
+      "B17": "Lemon Lemonade"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.347,
+      "trend_enthusiast": 0.058,
+      "thoughtful_buyer": 0.073,
+      "smart_saver": 0.062,
+      "quality_seeker": 0.073,
+      "on_the_go_shopper": 0.103,
+      "impulse_buyer": 0.055,
+      "experience_explorer": 0.079,
+      "everyday_planner": 0.106,
+      "conscious_consumer": 0.044
+    },
+    "match": 0.626,
+    "habit_match": 0.513,
+    "units": {
+      "B24": 277,
+      "B36": 277,
+      "B35": 277,
+      "B07": 277,
+      "B17": 277
+    },
+    "slot": "10:30-11:30 (finish)",
+    "exp_signups": 69.8,
+    "exp_reviews": 117.4,
+    "qrp": 49.9,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 54.5,
+    "cost": 228.0,
+    "cost_per_qr": 4.57,
+    "habit_cost_per_qr": 4.19,
+    "reasons": [
+      "Archetype match 0.63 against 0.51 for the usual five: WelleCo for wellness seekers; Helen Browning’s Organic for everyday planners; WelleCo for on the go shoppers",
+      "Expected 50 qualified reviews against 54 for the usual five (-8%)",
+      "2 vegan and 2 gluten-free options; covers condiment, drink, functional, savoury"
+    ]
+  },
+  "E020": {
+    "name": "Club night, Eventim Apollo",
+    "date": "2026-11-19",
+    "event_type": "concerts",
+    "borough": "Hammersmith and Fulham",
+    "brands": [
+      "B43",
+      "B36",
+      "B07",
+      "B31",
+      "B13"
+    ],
+    "brand_names": [
+      "Fever-Tree",
+      "HOOP",
+      "Helen Browning’s Organic",
+      "Sunfly",
+      "mindfuel flow"
+    ],
+    "products": {
+      "B43": "Refreshingly Light Elderflower Tonic Water",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B07": "Organic Corned Beef",
+      "B31": "Sunflower Seed Butter — Crunchy",
+      "B13": "Mushroom Iced Latte — Salted Caramel"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.044,
+      "trend_enthusiast": 0.224,
+      "thoughtful_buyer": 0.022,
+      "smart_saver": 0.056,
+      "quality_seeker": 0.053,
+      "on_the_go_shopper": 0.089,
+      "impulse_buyer": 0.178,
+      "experience_explorer": 0.253,
+      "everyday_planner": 0.047,
+      "conscious_consumer": 0.033
+    },
+    "match": 0.626,
+    "habit_match": 0.561,
+    "units": {
+      "B43": 211,
+      "B36": 211,
+      "B07": 211,
+      "B31": 211,
+      "B13": 211
+    },
+    "slot": "21:00-23:00",
+    "exp_signups": 23.9,
+    "exp_reviews": 52.4,
+    "qrp": 10.8,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 14.3,
+    "cost": 488.0,
+    "cost_per_qr": 45.23,
+    "habit_cost_per_qr": 34.12,
+    "reasons": [
+      "Archetype match 0.63 against 0.56 for the usual five: Fever-Tree for experience explorers; mindfuel flow for trend enthusiasts; HOOP for impulse buyers",
+      "Expected 11 qualified reviews against 14 for the usual five (-25%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
+    ]
+  },
+  "E021": {
+    "name": "Rugby international screening, Big-screen bar, Shoreditch",
     "date": "2026-11-21",
     "event_type": "sports",
     "borough": "Hackney",
     "brands": [
-      "B17",
       "B15",
+      "B24",
+      "B17",
       "B36",
-      "B39",
-      "B06"
+      "B07"
     ],
     "brand_names": [
-      "Gut Food / Ferment Fizz",
       "DASH",
+      "teapigs",
+      "Gut Food / Ferment Fizz",
       "HOOP",
-      "SUCSEED",
-      "Kooky"
+      "Helen Browning’s Organic"
     ],
     "products": {
-      "B17": "Orange & Mango Lemonade",
       "B15": "Pink Lady Apple Sparkling Water",
+      "B24": "Super Fruit",
+      "B17": "Lemon Lemonade",
       "B36": "Plantain Chips — Lemon Pepper",
-      "B39": "Energy",
-      "B06": "Gently Dried Chewy Mango"
+      "B07": "Organic Corned Beef"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.343,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.072,
+      "smart_saver": 0.061,
+      "quality_seeker": 0.072,
+      "on_the_go_shopper": 0.133,
+      "impulse_buyer": 0.055,
+      "experience_explorer": 0.06,
+      "everyday_planner": 0.104,
+      "conscious_consumer": 0.044
+    },
+    "match": 0.65,
+    "habit_match": 0.562,
     "units": {
-      "B17": 223,
-      "B15": 223,
-      "B36": 223,
-      "B39": 223,
-      "B06": 223
+      "B15": 360,
+      "B24": 360,
+      "B17": 360,
+      "B36": 360,
+      "B07": 360
     },
     "slot": "21:15-22:15 (finish)",
-    "exp_signups": 57.7,
-    "exp_reviews": 90.4,
-    "qrp": 83.2,
+    "exp_signups": 90.1,
+    "exp_reviews": 154.8,
+    "qrp": 66.2,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 70.4,
+    "habit_qrp": 70.8,
     "cost": 278.0,
-    "cost_per_qr": 3.34,
-    "habit_cost_per_qr": 3.95,
+    "cost_per_qr": 4.2,
+    "habit_cost_per_qr": 3.93,
     "reasons": [
-      "Expected 83 qualified reviews against 70 for the usual five (+18%)",
-      "Gut Food / Ferment Fizz: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
-      "Covers condiment, drink, savoury, sweet; 2 vegan and 1 gluten-free options"
+      "Archetype match 0.65 against 0.56 for the usual five: DASH for wellness seekers; DASH for on the go shoppers; Helen Browning’s Organic for everyday planners",
+      "Expected 66 qualified reviews against 71 for the usual five (-7%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
     ]
   },
-  "E018": {
-    "name": "Saturday 5K series, Battersea Park",
+  "E022": {
+    "name": "Cross-country relay, Battersea Park",
     "date": "2026-11-22",
     "event_type": "sports",
     "borough": "Wandsworth",
     "brands": [
-      "B17",
-      "B15",
-      "B36",
+      "B24",
+      "B35",
       "B39",
-      "B06"
-    ],
-    "brand_names": [
-      "Gut Food / Ferment Fizz",
-      "DASH",
-      "HOOP",
-      "SUCSEED",
-      "Kooky"
-    ],
-    "products": {
-      "B17": "Orange & Mango Lemonade",
-      "B15": "Pink Lady Apple Sparkling Water",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B39": "Energy",
-      "B06": "Gently Dried Chewy Mango"
-    },
-    "units": {
-      "B17": 265,
-      "B15": 265,
-      "B36": 265,
-      "B39": 265,
-      "B06": 265
-    },
-    "slot": "10:30-11:30 (finish)",
-    "exp_signups": 68.0,
-    "exp_reviews": 102.8,
-    "qrp": 94.7,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 81.4,
-    "cost": 268.0,
-    "cost_per_qr": 2.83,
-    "habit_cost_per_qr": 3.29,
-    "reasons": [
-      "Expected 95 qualified reviews against 81 for the usual five (+16%)",
-      "Gut Food / Ferment Fizz: Hydrate need matches the sports crowd (brand 1.0, event 1.0)",
-      "Covers condiment, drink, savoury, sweet; 2 vegan and 1 gluten-free options"
-    ]
-  },
-  "E019": {
-    "name": "Tech meetup and demo night, Here East",
-    "date": "2026-11-22",
-    "event_type": "conferences",
-    "borough": "Newham",
-    "brands": [
-      "B05",
-      "B13",
-      "B34",
-      "B46",
-      "B01"
-    ],
-    "brand_names": [
-      "INDI",
-      "mindfuel flow",
-      "Little’s",
-      "Mission",
-      "All That Matters"
-    ],
-    "products": {
-      "B05": "Brain Bar",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B34": "Toffee Nut Flavour Infused Instant Coffee",
-      "B46": "Lemon & Ginseng Natural Energy Drink",
-      "B01": "Superfood Puffs — Peri-Peri"
-    },
-    "units": {
-      "B05": 313,
-      "B13": 313,
-      "B34": 313,
-      "B46": 313,
-      "B01": 313
-    },
-    "slot": "15:00-16:30",
-    "exp_signups": 104.4,
-    "exp_reviews": 247.5,
-    "qrp": 237.8,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 175.4,
-    "cost": 428.0,
-    "cost_per_qr": 1.8,
-    "habit_cost_per_qr": 2.44,
-    "reasons": [
-      "Expected 238 qualified reviews against 175 for the usual five (+36%)",
-      "INDI: Focus need matches the conferences crowd (brand 1.0, event 1.0)",
-      "Covers drink, savoury; 2 vegan and 2 gluten-free options"
-    ]
-  },
-  "E020": {
-    "name": "Food and drink expo, ExCeL London",
-    "date": "2026-11-25",
-    "event_type": "expos",
-    "borough": "Newham",
-    "brands": [
-      "B05",
-      "B04",
-      "B13",
-      "B09",
+      "B36",
       "B07"
     ],
     "brand_names": [
-      "INDI",
-      "Well & Truly",
-      "mindfuel flow",
-      "EP!C Snax Co.",
+      "teapigs",
+      "WelleCo",
+      "SUCSEED",
+      "HOOP",
       "Helen Browning’s Organic"
     ],
     "products": {
-      "B05": "Brain Bar",
-      "B04": "Crunchies — Really Cheesy",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B07": "Organic Corned Beef"
-    },
-    "units": {
-      "B05": 413,
-      "B04": 413,
-      "B13": 413,
-      "B09": 413,
-      "B07": 413
-    },
-    "slot": "12:00-14:00",
-    "exp_signups": 132.1,
-    "exp_reviews": 262.8,
-    "qrp": 242.2,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 202.2,
-    "cost": 378.0,
-    "cost_per_qr": 1.56,
-    "habit_cost_per_qr": 1.87,
-    "reasons": [
-      "Expected 242 qualified reviews against 202 for the usual five (+20%)",
-      "INDI: Energy need matches the expos crowd (brand 1.0, event 0.6)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 4 gluten-free options"
-    ]
-  },
-  "E021": {
-    "name": "DJ all-nighter, Eventim Apollo",
-    "date": "2026-11-26",
-    "event_type": "concerts",
-    "borough": "Hammersmith and Fulham",
-    "brands": [
-      "B13",
-      "B17",
-      "B04",
-      "B05",
-      "B32"
-    ],
-    "brand_names": [
-      "mindfuel flow",
-      "Gut Food / Ferment Fizz",
-      "Well & Truly",
-      "INDI",
-      "ape2o"
-    ],
-    "products": {
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B17": "Lemon & Raspberry Lemonade",
-      "B04": "Crunchies — Sea Salt & Cider Vinegar",
-      "B05": "Brain Bar",
-      "B32": "GO Steel Bottle — Turtle"
-    },
-    "units": {
-      "B13": 140,
-      "B17": 140,
-      "B04": 140,
-      "B05": 140,
-      "B32": 140
-    },
-    "slot": "21:00-23:00",
-    "exp_signups": 18.6,
-    "exp_reviews": 37.6,
-    "qrp": 37.1,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 32.2,
-    "cost": 508.0,
-    "cost_per_qr": 13.7,
-    "habit_cost_per_qr": 15.79,
-    "reasons": [
-      "Expected 37 qualified reviews against 32 for the usual five (+15%)",
-      "mindfuel flow: Hydrate need matches the concerts crowd (brand 1.0, event 0.9)",
-      "Covers drink, other, savoury; 4 vegan and 2 gluten-free options"
-    ]
-  },
-  "E022": {
-    "name": "Family fun day, Walthamstow Village",
-    "date": "2026-11-28",
-    "event_type": "community",
-    "borough": "Waltham Forest",
-    "brands": [
-      "B04",
-      "B39",
-      "B36",
-      "B09",
-      "B10"
-    ],
-    "brand_names": [
-      "Well & Truly",
-      "SUCSEED",
-      "HOOP",
-      "EP!C Snax Co.",
-      "ötzibrew"
-    ],
-    "products": {
-      "B04": "Crunchies — Smokey Paprika",
+      "B24": "Super Fruit",
+      "B35": "The Hydro Protein Elixir — Passionfruit",
       "B39": "Energy",
       "B36": "Plantain Chips — Lemon Pepper",
-      "B09": "Giant Toastin’ Marshmallows",
-      "B10": "Organic Dandelion & Burdock Root Coffee Alternative"
+      "B07": "Organic Corned Beef"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.343,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.072,
+      "smart_saver": 0.061,
+      "quality_seeker": 0.072,
+      "on_the_go_shopper": 0.133,
+      "impulse_buyer": 0.055,
+      "experience_explorer": 0.06,
+      "everyday_planner": 0.104,
+      "conscious_consumer": 0.044
+    },
+    "match": 0.616,
+    "habit_match": 0.512,
     "units": {
-      "B04": 400,
-      "B39": 400,
-      "B36": 400,
-      "B09": 400,
-      "B10": 400
+      "B24": 419,
+      "B35": 419,
+      "B39": 419,
+      "B36": 419,
+      "B07": 419
     },
-    "slot": "11:00-13:00",
-    "exp_signups": 86.1,
-    "exp_reviews": 172.1,
-    "qrp": 156.0,
+    "slot": "10:30-11:30 (finish)",
+    "exp_signups": 103.4,
+    "exp_reviews": 175.0,
+    "qrp": 75.1,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 107.6,
-    "cost": 360.0,
-    "cost_per_qr": 2.31,
-    "habit_cost_per_qr": 3.35,
+    "habit_qrp": 80.4,
+    "cost": 238.0,
+    "cost_per_qr": 3.17,
+    "habit_cost_per_qr": 2.96,
     "reasons": [
-      "Expected 156 qualified reviews against 108 for the usual five (+45%)",
-      "Well & Truly: Treat need matches the community crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 3 vegan and 3 gluten-free options"
+      "Archetype match 0.62 against 0.51 for the usual five: WelleCo for wellness seekers; WelleCo for on the go shoppers; Helen Browning’s Organic for everyday planners",
+      "Expected 75 qualified reviews against 80 for the usual five (-7%)",
+      "2 vegan and 2 gluten-free options; covers condiment, drink, functional, savoury"
     ]
   },
   "E023": {
-    "name": "Family fun day, Islington community hall",
-    "date": "2026-11-28",
+    "name": "Makers' and food market, Broadway Market",
+    "date": "2026-11-22",
     "event_type": "community",
-    "borough": "Islington",
+    "borough": "Hackney",
     "brands": [
+      "B26",
       "B04",
+      "B07",
       "B39",
-      "B09",
-      "B10",
-      "B38"
+      "B08"
     ],
     "brand_names": [
+      "Blanco Niño",
       "Well & Truly",
+      "Helen Browning’s Organic",
       "SUCSEED",
-      "EP!C Snax Co.",
-      "ötzibrew",
-      "FREEE"
+      "Dr. Will’s"
     ],
     "products": {
-      "B04": "Crunchies — Smokey Paprika",
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B04": "Crunchies — Smokey Bacon",
+      "B07": "Organic Corned Beef",
       "B39": "Energy",
-      "B09": "Giant Toastin’ Marshmallows",
-      "B10": "Organic Dandelion & Burdock Root Coffee Alternative",
-      "B38": "Organic Banana & Chocolate Oat Bar"
+      "B08": "Avocado Oil Mayo"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.107,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.102,
+      "smart_saver": 0.1,
+      "quality_seeker": 0.088,
+      "on_the_go_shopper": 0.06,
+      "impulse_buyer": 0.084,
+      "experience_explorer": 0.106,
+      "everyday_planner": 0.152,
+      "conscious_consumer": 0.143
+    },
+    "match": 0.646,
+    "habit_match": 0.544,
     "units": {
-      "B04": 215,
-      "B39": 215,
-      "B09": 215,
-      "B10": 215,
-      "B38": 215
+      "B26": 372,
+      "B04": 372,
+      "B07": 372,
+      "B39": 372,
+      "B08": 372
     },
-    "slot": "11:00-13:00",
-    "exp_signups": 45.8,
-    "exp_reviews": 88.4,
-    "qrp": 82.3,
+    "slot": "09:30-11:30",
+    "exp_signups": 78.3,
+    "exp_reviews": 151.9,
+    "qrp": 53.4,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 61.9,
-    "cost": 310.0,
-    "cost_per_qr": 3.76,
-    "habit_cost_per_qr": 5.0,
+    "habit_qrp": 41.4,
+    "cost": 380.0,
+    "cost_per_qr": 7.12,
+    "habit_cost_per_qr": 9.18,
     "reasons": [
-      "Expected 82 qualified reviews against 62 for the usual five (+33%)",
-      "Well & Truly: Treat need matches the community crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
+      "Archetype match 0.65 against 0.54 for the usual five: Dr. Will’s for everyday planners; Blanco Niño for conscious consumers; SUCSEED for wellness seekers",
+      "Expected 53 qualified reviews against 41 for the usual five (+29%)",
+      "4 vegan and 4 gluten-free options; covers condiment, savoury"
     ]
   },
   "E024": {
-    "name": "Christmas community market, Maltby Street Market",
+    "name": "Graduate careers fair, ExCeL London",
+    "date": "2026-11-28",
+    "event_type": "expos",
+    "borough": "Newham",
+    "brands": [
+      "B31",
+      "B36",
+      "B13",
+      "B32",
+      "B30"
+    ],
+    "brand_names": [
+      "Sunfly",
+      "HOOP",
+      "mindfuel flow",
+      "ape2o",
+      "Ottolenghi"
+    ],
+    "products": {
+      "B31": "Sunflower Seed Butter — Crunchy",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B13": "Mushroom Iced Latte — Salted Caramel",
+      "B32": "GO Steel Bottle — Turtle",
+      "B30": "Miso Pesto"
+    },
+    "archetype_mix": {
+      "wellness_seeker": 0.065,
+      "trend_enthusiast": 0.193,
+      "thoughtful_buyer": 0.09,
+      "smart_saver": 0.209,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.109,
+      "impulse_buyer": 0.095,
+      "experience_explorer": 0.083,
+      "everyday_planner": 0.051,
+      "conscious_consumer": 0.029
+    },
+    "match": 0.614,
+    "habit_match": 0.498,
+    "units": {
+      "B31": 347,
+      "B36": 347,
+      "B13": 347,
+      "B32": 347,
+      "B30": 347
+    },
+    "slot": "12:00-14:00",
+    "exp_signups": 113.7,
+    "exp_reviews": 227.5,
+    "qrp": 47.0,
+    "lineup_size": 5,
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_qrp": 56.1,
+    "cost": 408.0,
+    "cost_per_qr": 8.67,
+    "habit_cost_per_qr": 7.28,
+    "reasons": [
+      "Archetype match 0.61 against 0.50 for the usual five: Sunfly for smart savers; mindfuel flow for trend enthusiasts; ape2o for on the go shoppers",
+      "Expected 47 qualified reviews against 56 for the usual five (-16%)",
+      "1 vegan and 1 gluten-free options; covers condiment, drink, other, savoury"
+    ]
+  },
+  "E025": {
+    "name": "Family fun day, Maltby Street Market",
     "date": "2026-11-28",
     "event_type": "community",
     "borough": "Southwark",
     "brands": [
+      "B26",
       "B04",
       "B39",
-      "B09",
-      "B10",
-      "B38"
+      "B08",
+      "B27"
     ],
     "brand_names": [
+      "Blanco Niño",
       "Well & Truly",
       "SUCSEED",
-      "EP!C Snax Co.",
-      "ötzibrew",
-      "FREEE"
+      "Dr. Will’s",
+      "Saucerer"
     ],
     "products": {
-      "B04": "Crunchies — Smokey Paprika",
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B04": "Crunchies — Smokey Bacon",
       "B39": "Energy",
-      "B09": "Giant Toastin’ Marshmallows",
-      "B10": "Organic Dandelion & Burdock Root Coffee Alternative",
-      "B38": "Organic Banana & Chocolate Oat Bar"
+      "B08": "Avocado Oil Mayo",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.108,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.102,
+      "smart_saver": 0.13,
+      "quality_seeker": 0.089,
+      "on_the_go_shopper": 0.061,
+      "impulse_buyer": 0.084,
+      "experience_explorer": 0.107,
+      "everyday_planner": 0.153,
+      "conscious_consumer": 0.11
+    },
+    "match": 0.659,
+    "habit_match": 0.529,
     "units": {
-      "B04": 173,
-      "B39": 173,
-      "B09": 173,
-      "B10": 173,
-      "B38": 173
+      "B26": 463,
+      "B04": 463,
+      "B39": 463,
+      "B08": 463,
+      "B27": 463
     },
     "slot": "11:00-13:00",
-    "exp_signups": 37.0,
-    "exp_reviews": 71.4,
-    "qrp": 66.5,
+    "exp_signups": 96.6,
+    "exp_reviews": 184.0,
+    "qrp": 62.5,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 49.6,
-    "cost": 290.0,
-    "cost_per_qr": 4.36,
-    "habit_cost_per_qr": 5.85,
+    "habit_qrp": 49.4,
+    "cost": 280.0,
+    "cost_per_qr": 4.48,
+    "habit_cost_per_qr": 5.67,
     "reasons": [
-      "Expected 67 qualified reviews against 50 for the usual five (+34%)",
-      "Well & Truly: Treat need matches the community crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
-    ]
-  },
-  "E025": {
-    "name": "Winter street food festival, Queen Elizabeth Olympic Park",
-    "date": "2026-11-28",
-    "event_type": "festivals",
-    "borough": "Newham",
-    "brands": [
-      "B04",
-      "B17",
-      "B13",
-      "B09",
-      "B39"
-    ],
-    "brand_names": [
-      "Well & Truly",
-      "Gut Food / Ferment Fizz",
-      "mindfuel flow",
-      "EP!C Snax Co.",
-      "SUCSEED"
-    ],
-    "products": {
-      "B04": "Crunchies — Really Cheesy",
-      "B17": "Lemon & Raspberry Lemonade",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B39": "Energy"
-    },
-    "units": {
-      "B04": 303,
-      "B17": 303,
-      "B13": 303,
-      "B09": 303,
-      "B39": 303
-    },
-    "slot": "14:00-17:00",
-    "exp_signups": 50.2,
-    "exp_reviews": 100.0,
-    "qrp": 91.0,
-    "habit_brands": [
-      "B02",
-      "B03",
-      "B04",
-      "B17",
-      "B26"
-    ],
-    "habit_qrp": 86.4,
-    "cost": 1076.0,
-    "cost_per_qr": 11.83,
-    "habit_cost_per_qr": 12.46,
-    "reasons": [
-      "Expected 91 qualified reviews against 86 for the usual five (+5%)",
-      "Well & Truly: Treat need matches the festivals crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 5 vegan and 2 gluten-free options"
+      "Archetype match 0.66 against 0.53 for the usual five: Dr. Will’s for everyday planners; Saucerer for smart savers; Blanco Niño for conscious consumers",
+      "Expected 63 qualified reviews against 49 for the usual five (+27%)",
+      "5 vegan and 4 gluten-free options; covers condiment, savoury"
     ]
   },
   "E026": {
-    "name": "DJ all-nighter, Electric Brixton",
-    "date": "2026-11-28",
-    "event_type": "concerts",
-    "borough": "Lambeth",
+    "name": "Makers' and food market, Brockley Market",
+    "date": "2026-11-29",
+    "event_type": "community",
+    "borough": "Lewisham",
     "brands": [
-      "B13",
-      "B17",
+      "B26",
       "B04",
-      "B05",
-      "B32"
+      "B39",
+      "B07",
+      "B08"
     ],
     "brand_names": [
-      "mindfuel flow",
-      "Gut Food / Ferment Fizz",
+      "Blanco Niño",
       "Well & Truly",
-      "INDI",
-      "ape2o"
+      "SUCSEED",
+      "Helen Browning’s Organic",
+      "Dr. Will’s"
     ],
     "products": {
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B17": "Lemon & Raspberry Lemonade",
-      "B04": "Crunchies — Sea Salt & Cider Vinegar",
-      "B05": "Brain Bar",
-      "B32": "GO Steel Bottle — Turtle"
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B04": "Crunchies — Smokey Bacon",
+      "B39": "Energy",
+      "B07": "Organic Corned Beef",
+      "B08": "Avocado Oil Mayo"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.14,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.102,
+      "smart_saver": 0.1,
+      "quality_seeker": 0.089,
+      "on_the_go_shopper": 0.061,
+      "impulse_buyer": 0.084,
+      "experience_explorer": 0.107,
+      "everyday_planner": 0.118,
+      "conscious_consumer": 0.143
+    },
+    "match": 0.647,
+    "habit_match": 0.55,
     "units": {
-      "B13": 212,
-      "B17": 212,
-      "B04": 212,
-      "B05": 212,
-      "B32": 212
+      "B26": 261,
+      "B04": 261,
+      "B39": 261,
+      "B07": 261,
+      "B08": 261
     },
-    "slot": "21:00-23:00",
-    "exp_signups": 28.2,
-    "exp_reviews": 56.8,
-    "qrp": 56.0,
+    "slot": "09:30-11:30",
+    "exp_signups": 56.0,
+    "exp_reviews": 108.7,
+    "qrp": 38.2,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 48.6,
-    "cost": 558.0,
-    "cost_per_qr": 9.96,
-    "habit_cost_per_qr": 11.47,
+    "habit_qrp": 33.2,
+    "cost": 380.0,
+    "cost_per_qr": 9.95,
+    "habit_cost_per_qr": 11.44,
     "reasons": [
-      "Expected 56 qualified reviews against 49 for the usual five (+15%)",
-      "mindfuel flow: Hydrate need matches the concerts crowd (brand 1.0, event 0.9)",
-      "Covers drink, other, savoury; 4 vegan and 2 gluten-free options"
+      "Archetype match 0.65 against 0.55 for the usual five: Blanco Niño for conscious consumers; SUCSEED for wellness seekers; Dr. Will’s for everyday planners",
+      "Expected 38 qualified reviews against 33 for the usual five (+15%)",
+      "4 vegan and 4 gluten-free options; covers condiment, savoury"
     ]
   },
   "E027": {
-    "name": "Contemporary dance show, Southbank Centre",
+    "name": "Christmas panto, Southbank Centre",
     "date": "2026-12-03",
     "event_type": "performing_arts",
     "borough": "Lambeth",
     "brands": [
-      "B04",
-      "B09",
+      "B45",
+      "B19",
       "B26",
-      "B44",
-      "B39"
+      "B49",
+      "B21"
     ],
     "brand_names": [
-      "Well & Truly",
-      "EP!C Snax Co.",
+      "Penrhos",
+      "JimJams",
       "Blanco Niño",
-      "Folc",
-      "SUCSEED"
+      "NOMO",
+      "Double Dutch"
     ],
     "products": {
-      "B04": "Crunchies — Really Cheesy",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B26": "Chilli & Lime Tortilla Chips",
-      "B44": "English Sparkling Rosé NV",
-      "B39": "Energy"
+      "B45": "Handcrafted Dry Gin",
+      "B19": "Hazelnut Chocolate Spread",
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B49": "Caramel Choc Bar",
+      "B21": "Indian Tonic Water"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.048,
+      "trend_enthusiast": 0.07,
+      "thoughtful_buyer": 0.114,
+      "smart_saver": 0.041,
+      "quality_seeker": 0.206,
+      "on_the_go_shopper": 0.025,
+      "impulse_buyer": 0.095,
+      "experience_explorer": 0.198,
+      "everyday_planner": 0.089,
+      "conscious_consumer": 0.114
+    },
+    "match": 0.713,
+    "habit_match": 0.52,
     "units": {
-      "B04": 56,
-      "B09": 56,
-      "B26": 56,
-      "B44": 56,
-      "B39": 56
+      "B45": 148,
+      "B19": 148,
+      "B26": 148,
+      "B49": 148,
+      "B21": 148
     },
     "slot": "20:05-20:30 (interval)",
-    "exp_signups": 10.2,
-    "exp_reviews": 21.6,
-    "qrp": 20.0,
+    "exp_signups": 25.5,
+    "exp_reviews": 49.4,
+    "qrp": 17.8,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 16.9,
+    "habit_qrp": 11.2,
     "cost": 234.0,
-    "cost_per_qr": 11.72,
-    "habit_cost_per_qr": 13.81,
+    "cost_per_qr": 13.12,
+    "habit_cost_per_qr": 20.83,
     "reasons": [
-      "Expected 20 qualified reviews against 17 for the usual five (+18%)",
-      "Well & Truly: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
+      "Archetype match 0.71 against 0.52 for the usual five: Penrhos for quality seekers; Penrhos for experience explorers; NOMO for thoughtful buyers",
+      "Expected 18 qualified reviews against 11 for the usual five (+59%)",
+      "3 vegan and 2 gluten-free options; covers condiment, drink, savoury, sweet"
     ]
   },
   "E028": {
-    "name": "Comedy night, Hackney Empire",
+    "name": "Contemporary dance show, Hackney Empire",
     "date": "2026-12-04",
     "event_type": "performing_arts",
     "borough": "Hackney",
     "brands": [
-      "B04",
-      "B09",
+      "B45",
+      "B19",
       "B26",
-      "B44",
-      "B39"
+      "B49",
+      "B21"
     ],
     "brand_names": [
-      "Well & Truly",
-      "EP!C Snax Co.",
+      "Penrhos",
+      "JimJams",
       "Blanco Niño",
-      "Folc",
-      "SUCSEED"
+      "NOMO",
+      "Double Dutch"
     ],
     "products": {
-      "B04": "Crunchies — Really Cheesy",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B26": "Chilli & Lime Tortilla Chips",
-      "B44": "English Sparkling Rosé NV",
-      "B39": "Energy"
+      "B45": "Handcrafted Dry Gin",
+      "B19": "Hazelnut Chocolate Spread",
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B49": "Caramel Choc Bar",
+      "B21": "Indian Tonic Water"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.048,
+      "trend_enthusiast": 0.07,
+      "thoughtful_buyer": 0.114,
+      "smart_saver": 0.041,
+      "quality_seeker": 0.206,
+      "on_the_go_shopper": 0.025,
+      "impulse_buyer": 0.095,
+      "experience_explorer": 0.198,
+      "everyday_planner": 0.089,
+      "conscious_consumer": 0.114
+    },
+    "match": 0.713,
+    "habit_match": 0.52,
     "units": {
-      "B04": 124,
-      "B09": 124,
-      "B26": 124,
-      "B44": 124,
-      "B39": 124
+      "B45": 139,
+      "B19": 139,
+      "B26": 139,
+      "B49": 139,
+      "B21": 139
     },
-    "slot": "20:05-20:30 (interval)",
-    "exp_signups": 22.5,
-    "exp_reviews": 47.7,
-    "qrp": 44.1,
+    "slot": "19:35-20:00 (interval)",
+    "exp_signups": 24.0,
+    "exp_reviews": 46.6,
+    "qrp": 16.8,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 37.4,
-    "cost": 364.0,
-    "cost_per_qr": 8.26,
-    "habit_cost_per_qr": 9.73,
+    "habit_qrp": 10.6,
+    "cost": 374.0,
+    "cost_per_qr": 22.24,
+    "habit_cost_per_qr": 35.31,
     "reasons": [
-      "Expected 44 qualified reviews against 37 for the usual five (+18%)",
-      "Well & Truly: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
+      "Archetype match 0.71 against 0.52 for the usual five: Penrhos for quality seekers; Penrhos for experience explorers; NOMO for thoughtful buyers",
+      "Expected 17 qualified reviews against 11 for the usual five (+59%)",
+      "3 vegan and 2 gluten-free options; covers condiment, drink, savoury, sweet"
     ]
   },
   "E029": {
-    "name": "Weekend food market, Maltby Street Market",
+    "name": "Family fun day, Ealing Common",
     "date": "2026-12-05",
     "event_type": "community",
-    "borough": "Southwark",
+    "borough": "Ealing",
     "brands": [
+      "B26",
       "B04",
+      "B07",
       "B39",
-      "B09",
-      "B10",
-      "B38"
+      "B08"
     ],
     "brand_names": [
+      "Blanco Niño",
       "Well & Truly",
+      "Helen Browning’s Organic",
       "SUCSEED",
-      "EP!C Snax Co.",
-      "ötzibrew",
-      "FREEE"
+      "Dr. Will’s"
     ],
     "products": {
-      "B04": "Crunchies — Smokey Paprika",
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B04": "Crunchies — Smokey Bacon",
+      "B07": "Organic Corned Beef",
       "B39": "Energy",
-      "B09": "Giant Toastin’ Marshmallows",
-      "B10": "Organic Dandelion & Burdock Root Coffee Alternative",
-      "B38": "Organic Banana & Chocolate Oat Bar"
+      "B08": "Avocado Oil Mayo"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.108,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.102,
+      "smart_saver": 0.131,
+      "quality_seeker": 0.089,
+      "on_the_go_shopper": 0.061,
+      "impulse_buyer": 0.084,
+      "experience_explorer": 0.107,
+      "everyday_planner": 0.118,
+      "conscious_consumer": 0.144
+    },
+    "match": 0.639,
+    "habit_match": 0.544,
     "units": {
-      "B04": 64,
-      "B39": 64,
-      "B09": 64,
-      "B10": 64,
-      "B38": 64
+      "B26": 350,
+      "B04": 350,
+      "B07": 350,
+      "B39": 350,
+      "B08": 350
     },
-    "slot": "09:30-11:30",
-    "exp_signups": 13.7,
-    "exp_reviews": 26.4,
-    "qrp": 24.6,
+    "slot": "11:00-13:00",
+    "exp_signups": 73.8,
+    "exp_reviews": 142.5,
+    "qrp": 47.4,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 18.3,
-    "cost": 220.0,
-    "cost_per_qr": 8.94,
-    "habit_cost_per_qr": 11.99,
+    "habit_qrp": 39.3,
+    "cost": 360.0,
+    "cost_per_qr": 7.6,
+    "habit_cost_per_qr": 9.17,
     "reasons": [
-      "Expected 25 qualified reviews against 18 for the usual five (+34%)",
-      "Well & Truly: Treat need matches the community crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
+      "Archetype match 0.64 against 0.54 for the usual five: Blanco Niño for conscious consumers; Helen Browning’s Organic for smart savers; Dr. Will’s for everyday planners",
+      "Expected 47 qualified reviews against 39 for the usual five (+21%)",
+      "4 vegan and 4 gluten-free options; covers condiment, savoury"
     ]
   },
   "E030": {
-    "name": "Theatre premiere, Richmond Theatre",
-    "date": "2026-12-11",
-    "event_type": "performing_arts",
-    "borough": "Richmond upon Thames",
+    "name": "Student hackathon, King's Cross tech campus",
+    "date": "2026-12-06",
+    "event_type": "conferences",
+    "borough": "Camden",
     "brands": [
-      "B04",
-      "B09",
-      "B26",
-      "B44",
-      "B39"
+      "B13",
+      "B07",
+      "B48"
     ],
     "brand_names": [
-      "Well & Truly",
-      "EP!C Snax Co.",
-      "Blanco Niño",
-      "Folc",
-      "SUCSEED"
+      "mindfuel flow",
+      "Helen Browning’s Organic",
+      "Mr Filbert’s"
     ],
     "products": {
-      "B04": "Crunchies — Really Cheesy",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B26": "Chilli & Lime Tortilla Chips",
-      "B44": "English Sparkling Rosé NV",
-      "B39": "Energy"
+      "B13": "Mushroom Iced Latte — Salted Caramel",
+      "B07": "Organic Corned Beef",
+      "B48": "Teriyaki Mochi Rice Bites"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.06,
+      "trend_enthusiast": 0.235,
+      "thoughtful_buyer": 0.095,
+      "smart_saver": 0.067,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.223,
+      "impulse_buyer": 0.063,
+      "experience_explorer": 0.105,
+      "everyday_planner": 0.059,
+      "conscious_consumer": 0.017
+    },
+    "match": 0.586,
+    "habit_match": 0.468,
     "units": {
-      "B04": 78,
-      "B09": 78,
-      "B26": 78,
-      "B44": 78,
-      "B39": 78
+      "B13": 89,
+      "B07": 89,
+      "B48": 89
     },
-    "slot": "19:35-20:00 (interval)",
-    "exp_signups": 14.2,
-    "exp_reviews": 30.1,
-    "qrp": 27.8,
+    "slot": "15:00-16:30",
+    "exp_signups": 29.5,
+    "exp_reviews": 36.4,
+    "qrp": 8.5,
+    "lineup_size": 3,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
-      "B17",
-      "B26"
+      "B02",
+      "B17"
     ],
-    "habit_qrp": 23.6,
-    "cost": 384.0,
-    "cost_per_qr": 13.8,
-    "habit_cost_per_qr": 16.26,
+    "habit_qrp": 9.5,
+    "cost": 348.0,
+    "cost_per_qr": 41.06,
+    "habit_cost_per_qr": 36.47,
     "reasons": [
-      "Expected 28 qualified reviews against 24 for the usual five (+18%)",
-      "Well & Truly: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
+      "Archetype match 0.59 against 0.47 for the usual five: mindfuel flow for trend enthusiasts; mindfuel flow for on the go shoppers; Mr Filbert’s for experience explorers",
+      "Expected 8 qualified reviews against 10 for the usual five (-11%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
     ]
   },
   "E031": {
-    "name": "Winter street food festival, Clapham Common",
+    "name": "Christmas community market, Ealing Common",
     "date": "2026-12-12",
-    "event_type": "festivals",
-    "borough": "Lambeth",
+    "event_type": "community",
+    "borough": "Ealing",
     "brands": [
+      "B26",
       "B04",
-      "B17",
-      "B13",
-      "B09",
-      "B39"
+      "B39",
+      "B08",
+      "B27"
     ],
     "brand_names": [
+      "Blanco Niño",
       "Well & Truly",
-      "Gut Food / Ferment Fizz",
-      "mindfuel flow",
-      "EP!C Snax Co.",
-      "SUCSEED"
+      "SUCSEED",
+      "Dr. Will’s",
+      "Saucerer"
     ],
     "products": {
-      "B04": "Crunchies — Really Cheesy",
-      "B17": "Lemon & Raspberry Lemonade",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B39": "Energy"
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B04": "Crunchies — Smokey Bacon",
+      "B39": "Energy",
+      "B08": "Avocado Oil Mayo",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.108,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.103,
+      "smart_saver": 0.101,
+      "quality_seeker": 0.116,
+      "on_the_go_shopper": 0.061,
+      "impulse_buyer": 0.084,
+      "experience_explorer": 0.107,
+      "everyday_planner": 0.153,
+      "conscious_consumer": 0.111
+    },
+    "match": 0.661,
+    "habit_match": 0.523,
     "units": {
-      "B04": 178,
-      "B17": 178,
-      "B13": 178,
-      "B09": 178,
-      "B39": 178
+      "B26": 217,
+      "B04": 217,
+      "B39": 217,
+      "B08": 217,
+      "B27": 217
     },
-    "slot": "14:00-17:00",
-    "exp_signups": 29.5,
-    "exp_reviews": 58.8,
-    "qrp": 53.5,
+    "slot": "09:30-11:30",
+    "exp_signups": 47.0,
+    "exp_reviews": 89.7,
+    "qrp": 30.6,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 50.8,
-    "cost": 1296.0,
-    "cost_per_qr": 24.21,
-    "habit_cost_per_qr": 25.5,
+    "habit_qrp": 24.1,
+    "cost": 230.0,
+    "cost_per_qr": 7.53,
+    "habit_cost_per_qr": 9.56,
     "reasons": [
-      "Expected 54 qualified reviews against 51 for the usual five (+5%)",
-      "Well & Truly: Treat need matches the festivals crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 5 vegan and 2 gluten-free options"
+      "Archetype match 0.66 against 0.52 for the usual five: Dr. Will’s for everyday planners; SUCSEED for quality seekers; Blanco Niño for conscious consumers",
+      "Expected 31 qualified reviews against 24 for the usual five (+27%)",
+      "5 vegan and 4 gluten-free options; covers condiment, savoury"
     ]
   },
   "E032": {
-    "name": "Christmas panto, West End theatre",
-    "date": "2026-12-12",
-    "event_type": "performing_arts",
-    "borough": "Westminster",
+    "name": "Autumn food festival, Queen Elizabeth Olympic Park",
+    "date": "2026-12-13",
+    "event_type": "festivals",
+    "borough": "Newham",
     "brands": [
-      "B04",
-      "B09",
+      "B36",
+      "B48",
       "B26",
-      "B44",
-      "B39"
+      "B21",
+      "B31"
     ],
     "brand_names": [
-      "Well & Truly",
-      "EP!C Snax Co.",
+      "HOOP",
+      "Mr Filbert’s",
       "Blanco Niño",
-      "Folc",
-      "SUCSEED"
+      "Double Dutch",
+      "Sunfly"
     ],
     "products": {
-      "B04": "Crunchies — Really Cheesy",
-      "B09": "Plant Power Toastin’ Marshmallows",
-      "B26": "Chilli & Lime Tortilla Chips",
-      "B44": "English Sparkling Rosé NV",
-      "B39": "Energy"
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B48": "Teriyaki Mochi Rice Bites",
+      "B26": "Creamy Jalapeño Tortilla Chips",
+      "B21": "Indian Tonic Water",
+      "B31": "Sunflower Seed Butter — Crunchy"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.041,
+      "trend_enthusiast": 0.232,
+      "thoughtful_buyer": 0.069,
+      "smart_saver": 0.069,
+      "quality_seeker": 0.074,
+      "on_the_go_shopper": 0.063,
+      "impulse_buyer": 0.122,
+      "experience_explorer": 0.241,
+      "everyday_planner": 0.03,
+      "conscious_consumer": 0.059
+    },
+    "match": 0.614,
+    "habit_match": 0.551,
     "units": {
-      "B04": 106,
-      "B09": 106,
-      "B26": 106,
-      "B44": 106,
-      "B39": 106
+      "B36": 549,
+      "B48": 549,
+      "B26": 549,
+      "B21": 549,
+      "B31": 549
     },
-    "slot": "19:35-20:00 (interval)",
-    "exp_signups": 19.3,
-    "exp_reviews": 40.9,
-    "qrp": 37.8,
+    "slot": "14:00-17:00",
+    "exp_signups": 89.7,
+    "exp_reviews": 184.2,
+    "qrp": 57.9,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 32.1,
-    "cost": 334.0,
-    "cost_per_qr": 8.84,
-    "habit_cost_per_qr": 10.41,
+    "habit_qrp": 48.4,
+    "cost": 1376.0,
+    "cost_per_qr": 23.77,
+    "habit_cost_per_qr": 28.45,
     "reasons": [
-      "Expected 38 qualified reviews against 32 for the usual five (+18%)",
-      "Well & Truly: Treat need matches the performing arts crowd (brand 0.6, event 0.9)",
-      "Covers condiment, drink, savoury, sweet; 4 vegan and 3 gluten-free options"
+      "Archetype match 0.61 against 0.55 for the usual five: Mr Filbert’s for experience explorers; Double Dutch for trend enthusiasts; HOOP for impulse buyers",
+      "Expected 58 qualified reviews against 48 for the usual five (+20%)",
+      "2 vegan and 3 gluten-free options; covers condiment, drink, savoury"
     ]
   },
   "E033": {
-    "name": "Weekend AI hackathon, Canary Wharf conference centre",
-    "date": "2026-12-13",
-    "event_type": "conferences",
-    "borough": "Tower Hamlets",
+    "name": "Big-match screening, Big-screen pub, Brixton",
+    "date": "2026-12-16",
+    "event_type": "sports",
+    "borough": "Lambeth",
     "brands": [
-      "B05",
-      "B13",
-      "B34",
-      "B46",
-      "B01"
+      "B15",
+      "B17",
+      "B36",
+      "B07"
     ],
     "brand_names": [
-      "INDI",
-      "mindfuel flow",
-      "Little’s",
-      "Mission",
-      "All That Matters"
+      "DASH",
+      "Gut Food / Ferment Fizz",
+      "HOOP",
+      "Helen Browning’s Organic"
     ],
     "products": {
-      "B05": "Brain Bar",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B34": "Toffee Nut Flavour Infused Instant Coffee",
-      "B46": "Lemon & Ginseng Natural Energy Drink",
-      "B01": "Superfood Puffs — Peri-Peri"
+      "B15": "Pink Lady Apple Sparkling Water",
+      "B17": "Lemon Lemonade",
+      "B36": "Plantain Chips — Lemon Pepper",
+      "B07": "Organic Corned Beef"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.342,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.072,
+      "smart_saver": 0.061,
+      "quality_seeker": 0.072,
+      "on_the_go_shopper": 0.102,
+      "impulse_buyer": 0.055,
+      "experience_explorer": 0.06,
+      "everyday_planner": 0.136,
+      "conscious_consumer": 0.043
+    },
+    "match": 0.634,
+    "habit_match": 0.555,
     "units": {
-      "B05": 77,
-      "B13": 77,
-      "B34": 77,
-      "B46": 77,
-      "B01": 77
+      "B15": 143,
+      "B17": 143,
+      "B36": 143,
+      "B07": 143
     },
-    "slot": "15:00-16:30",
-    "exp_signups": 25.7,
-    "exp_reviews": 61.0,
-    "qrp": 58.6,
+    "slot": "21:15-22:15 (finish)",
+    "exp_signups": 37.4,
+    "exp_reviews": 51.5,
+    "qrp": 21.5,
+    "lineup_size": 4,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
-      "B26"
+      "B03"
     ],
-    "habit_qrp": 43.3,
-    "cost": 438.0,
-    "cost_per_qr": 7.47,
-    "habit_cost_per_qr": 10.13,
+    "habit_qrp": 23.5,
+    "cost": 228.0,
+    "cost_per_qr": 10.58,
+    "habit_cost_per_qr": 9.7,
     "reasons": [
-      "Expected 59 qualified reviews against 43 for the usual five (+36%)",
-      "INDI: Focus need matches the conferences crowd (brand 1.0, event 1.0)",
-      "Covers drink, savoury; 2 vegan and 2 gluten-free options"
+      "Archetype match 0.63 against 0.55 for the usual five: DASH for wellness seekers; Helen Browning’s Organic for everyday planners; DASH for on the go shoppers",
+      "Expected 22 qualified reviews against 24 for the usual five (-8%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
     ]
   },
   "E034": {
-    "name": "Run club social and brunch, Surrey Street Market",
-    "date": "2026-12-13",
-    "event_type": "community",
-    "borough": "Croydon",
+    "name": "Comedy night, Southbank Centre",
+    "date": "2026-12-17",
+    "event_type": "performing_arts",
+    "borough": "Lambeth",
     "brands": [
-      "B04",
-      "B39",
+      "B45",
       "B36",
-      "B09",
-      "B10"
+      "B08"
     ],
     "brand_names": [
-      "Well & Truly",
-      "SUCSEED",
+      "Penrhos",
       "HOOP",
-      "EP!C Snax Co.",
-      "ötzibrew"
+      "Dr. Will’s"
     ],
     "products": {
-      "B04": "Crunchies — Smokey Paprika",
-      "B39": "Energy",
+      "B45": "Handcrafted Dry Gin",
       "B36": "Plantain Chips — Lemon Pepper",
-      "B09": "Giant Toastin’ Marshmallows",
-      "B10": "Organic Dandelion & Burdock Root Coffee Alternative"
+      "B08": "Avocado Oil Mayo"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.048,
+      "trend_enthusiast": 0.071,
+      "thoughtful_buyer": 0.15,
+      "smart_saver": 0.042,
+      "quality_seeker": 0.161,
+      "on_the_go_shopper": 0.026,
+      "impulse_buyer": 0.096,
+      "experience_explorer": 0.201,
+      "everyday_planner": 0.09,
+      "conscious_consumer": 0.116
+    },
+    "match": 0.692,
+    "habit_match": 0.508,
     "units": {
-      "B04": 369,
-      "B39": 369,
-      "B36": 369,
-      "B09": 369,
-      "B10": 369
+      "B45": 15,
+      "B36": 15,
+      "B08": 15
     },
-    "slot": "11:00-13:00",
-    "exp_signups": 79.5,
-    "exp_reviews": 158.8,
-    "qrp": 143.9,
+    "slot": "19:35-20:00 (interval)",
+    "exp_signups": 2.8,
+    "exp_reviews": 3.2,
+    "qrp": 1.3,
+    "lineup_size": 3,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
-      "B17",
-      "B26"
+      "B02",
+      "B17"
     ],
-    "habit_qrp": 99.3,
-    "cost": 330.0,
-    "cost_per_qr": 2.29,
-    "habit_cost_per_qr": 3.32,
+    "habit_qrp": 0.9,
+    "cost": 324.0,
+    "cost_per_qr": 252.97,
+    "habit_cost_per_qr": 370.36,
     "reasons": [
-      "Expected 144 qualified reviews against 99 for the usual five (+45%)",
-      "Well & Truly: Treat need matches the community crowd (brand 0.6, event 0.7)",
-      "Covers condiment, drink, savoury, sweet; 3 vegan and 3 gluten-free options"
+      "Archetype match 0.69 against 0.51 for the usual five: Penrhos for experience explorers; Penrhos for quality seekers; Dr. Will’s for thoughtful buyers",
+      "Expected 1 qualified reviews against 1 for the usual five (+46%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
     ]
   },
   "E035": {
-    "name": "Tech meetup and demo night, Canary Wharf conference centre",
+    "name": "Food and drink expo, University campus, Mile End",
     "date": "2026-12-19",
-    "event_type": "conferences",
+    "event_type": "expos",
     "borough": "Tower Hamlets",
     "brands": [
-      "B05",
+      "B31",
+      "B36",
       "B13",
-      "B34",
-      "B46",
-      "B01"
+      "B32",
+      "B30"
     ],
     "brand_names": [
-      "INDI",
+      "Sunfly",
+      "HOOP",
       "mindfuel flow",
-      "Little’s",
-      "Mission",
-      "All That Matters"
+      "ape2o",
+      "Ottolenghi"
     ],
     "products": {
-      "B05": "Brain Bar",
+      "B31": "Sunflower Seed Butter — Crunchy",
+      "B36": "Plantain Chips — Lemon Pepper",
       "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B34": "Toffee Nut Flavour Infused Instant Coffee",
-      "B46": "Lemon & Ginseng Natural Energy Drink",
-      "B01": "Superfood Puffs — Peri-Peri"
+      "B32": "GO Steel Bottle — Turtle",
+      "B30": "Miso Pesto"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.065,
+      "trend_enthusiast": 0.193,
+      "thoughtful_buyer": 0.09,
+      "smart_saver": 0.209,
+      "quality_seeker": 0.076,
+      "on_the_go_shopper": 0.109,
+      "impulse_buyer": 0.095,
+      "experience_explorer": 0.083,
+      "everyday_planner": 0.051,
+      "conscious_consumer": 0.029
+    },
+    "match": 0.614,
+    "habit_match": 0.498,
     "units": {
-      "B05": 354,
-      "B13": 354,
-      "B34": 354,
-      "B46": 354,
-      "B01": 354
+      "B31": 573,
+      "B36": 573,
+      "B13": 573,
+      "B32": 573,
+      "B30": 573
     },
-    "slot": "15:00-16:30",
-    "exp_signups": 118.1,
-    "exp_reviews": 279.9,
-    "qrp": 269.0,
+    "slot": "12:00-14:00",
+    "exp_signups": 183.0,
+    "exp_reviews": 366.3,
+    "qrp": 75.7,
+    "lineup_size": 5,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
+      "B03",
       "B26"
     ],
-    "habit_qrp": 198.4,
-    "cost": 378.0,
-    "cost_per_qr": 1.41,
-    "habit_cost_per_qr": 1.91,
+    "habit_qrp": 90.3,
+    "cost": 568.0,
+    "cost_per_qr": 7.5,
+    "habit_cost_per_qr": 6.29,
     "reasons": [
-      "Expected 269 qualified reviews against 198 for the usual five (+36%)",
-      "INDI: Focus need matches the conferences crowd (brand 1.0, event 1.0)",
-      "Covers drink, savoury; 2 vegan and 2 gluten-free options"
+      "Archetype match 0.61 against 0.50 for the usual five: Sunfly for smart savers; mindfuel flow for trend enthusiasts; ape2o for on the go shoppers",
+      "Expected 76 qualified reviews against 90 for the usual five (-16%)",
+      "1 vegan and 1 gluten-free options; covers condiment, drink, other, savoury"
     ]
   },
   "E036": {
-    "name": "DJ all-nighter, Village Underground",
-    "date": "2026-12-19",
-    "event_type": "concerts",
-    "borough": "Hackney",
+    "name": "Park half marathon, Victoria Park",
+    "date": "2026-12-20",
+    "event_type": "sports",
+    "borough": "Tower Hamlets",
     "brands": [
-      "B13",
-      "B17",
+      "B35",
+      "B39",
       "B04",
-      "B05",
-      "B32"
+      "B07"
     ],
     "brand_names": [
-      "mindfuel flow",
-      "Gut Food / Ferment Fizz",
+      "WelleCo",
+      "SUCSEED",
       "Well & Truly",
-      "INDI",
-      "ape2o"
+      "Helen Browning’s Organic"
     ],
     "products": {
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B17": "Lemon & Raspberry Lemonade",
-      "B04": "Crunchies — Sea Salt & Cider Vinegar",
-      "B05": "Brain Bar",
-      "B32": "GO Steel Bottle — Turtle"
+      "B35": "The Hydro Protein Elixir — Passionfruit",
+      "B39": "Energy",
+      "B04": "Crunchies — Smokey Bacon",
+      "B07": "Organic Corned Beef"
     },
+    "archetype_mix": {
+      "wellness_seeker": 0.343,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.072,
+      "smart_saver": 0.061,
+      "quality_seeker": 0.072,
+      "on_the_go_shopper": 0.133,
+      "impulse_buyer": 0.055,
+      "experience_explorer": 0.06,
+      "everyday_planner": 0.104,
+      "conscious_consumer": 0.044
+    },
+    "match": 0.605,
+    "habit_match": 0.508,
     "units": {
-      "B13": 143,
-      "B17": 143,
-      "B04": 143,
-      "B05": 143,
-      "B32": 143
+      "B35": 106,
+      "B39": 106,
+      "B04": 106,
+      "B07": 106
     },
-    "slot": "21:00-23:00",
-    "exp_signups": 19.0,
-    "exp_reviews": 38.2,
-    "qrp": 37.7,
+    "slot": "10:30-11:30 (finish)",
+    "exp_signups": 27.9,
+    "exp_reviews": 37.7,
+    "qrp": 16.2,
+    "lineup_size": 4,
     "habit_brands": [
-      "B02",
-      "B03",
       "B04",
+      "B02",
       "B17",
-      "B26"
+      "B03"
     ],
-    "habit_qrp": 32.7,
-    "cost": 568.0,
-    "cost_per_qr": 15.06,
-    "habit_cost_per_qr": 17.35,
+    "habit_qrp": 17.7,
+    "cost": 218.0,
+    "cost_per_qr": 13.48,
+    "habit_cost_per_qr": 12.31,
     "reasons": [
-      "Expected 38 qualified reviews against 33 for the usual five (+15%)",
-      "mindfuel flow: Hydrate need matches the concerts crowd (brand 1.0, event 0.9)",
-      "Covers drink, other, savoury; 4 vegan and 2 gluten-free options"
+      "Archetype match 0.61 against 0.51 for the usual five: WelleCo for wellness seekers; WelleCo for on the go shoppers; Helen Browning’s Organic for everyday planners",
+      "Expected 16 qualified reviews against 18 for the usual five (-9%)",
+      "3 vegan and 2 gluten-free options; covers condiment, functional, savoury"
     ]
   }
 }

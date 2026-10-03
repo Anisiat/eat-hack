@@ -50,7 +50,7 @@ def month_plan(d, opt, events, lineups, month, capacity):
         if events["date"].iloc[i] not in hdays:
             habit.append(i)
             hdays.add(events["date"].iloc[i])
-    habit_qrp = sum(opt.evaluate(i, opt.habit)["qrp"] for i in habit)
+    habit_qrp = sum(opt.evaluate(i, opt.habit_for(i))["qrp"] for i in habit)
     habit_cost = float(sum(events["cost"].iloc[i] for i in habit))
 
     total_qrp = sum(p["qrp"] for p in popups)

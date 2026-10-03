@@ -4,7 +4,7 @@ Oct 3, 2026 · @Maks
 
 ## The tool
 
-Pop-up Pick is a new planning module for RGC's RGC-first pop-ups. It tells RGC which events to pop up at, which 4 to 5 client brands to bring, and what to sample, and it gives every client brand an event profile showing where its products win.
+Pop-up Pick is a new planning module for RGC's RGC-first pop-ups. It tells RGC which events to pop up at, which client products to bring (2 to 5, scaled by the event's expected attendance), and what to sample, and it gives every client brand an event profile showing where its products win.
 
 **Why RGC needs it.** Every pop-up costs staff time and free product from clients, and pays back in [WatchHumans](https://watchhumans.com/) sign-ups, reviews and publicity. WatchHumans already partners with run clubs and other communities to put products in front of people in person. Today the choice of event and lineup is judgement; this tool makes it a forecast RGC can check afterwards.
 
@@ -19,18 +19,18 @@ Pop-up Pick is a new planning module for RGC's RGC-first pop-ups. It tells RGC w
 
 ## Impact metric
 
-The north-star metric is qualified reviews per pop-up (QRP): WatchHumans reviews completed at a pop-up, or within 7 days of it, by people in the reviewed brand's target segment.
+The north-star metric is qualified reviews per pop-up (QRP): WatchHumans reviews completed at a pop-up, or within 7 days of it, by people in one of the reviewed brand's target archetypes.
 
 ```latex
 \text{QRP}(e, L) = \sum_{b \in L} F_e \times s(e, L) \times r_{b,e} \times q_{b,e}
 ```
 
-F is footfall past the stall at event e. s is the share who stop and sign up, which depends on the lineup L. r is the chance a sign-up reviews brand b. q is the share of those reviewers inside b's target segment.
+F is footfall past the stall at event e. s is the share who stop and sign up, which depends on the lineup L. r is the chance a sign-up reviews brand b. q is the share of those reviewers inside b's target archetypes.
 
 | Metric | Who it serves | How RGC measures it for real |
 | --- | --- | --- |
 | Sign-ups per pop-up | RGC: traction | A QR code per pop-up in the WatchHumans sign-up flow |
-| QRP | RGC and clients | Reviews tagged with the pop-up's code, joined to the reviewer's segment |
+| QRP | RGC and clients | Reviews tagged with the pop-up's code, joined to the reviewer's archetype |
 | Cost per qualified review | RGC: efficiency | Staff hours, stall fee, travel and units given, divided by QRP |
 | Brands featured | Clients | How many client brands appear in a month's pop-ups; informational, since clients do not pay for placement |
 
@@ -51,9 +51,9 @@ Three sources: synthetic WatchHumans tables, real upcoming London events, and pu
 | File | Rows | Source | Key fields |
 | --- | --- | --- | --- |
 | `brands.csv` | 71 products from 49 real RGC client brands | RGC's brand sheet | brand, product, category, sub-category, flavour, format, dietary flags, need states and target segments (inferred), label claims, label → target link |
-| `brand_features.csv`, `brand_products.csv` | 49 brands, 70 products | Built from `brands.csv` by `scripts/build_brand_features.py`, using the phrase mappings in `data/mappings/` | 8 need states, 5 target segments, lineup role, vegan, gluten-free, adults-only, chilling; favourite five and stock are assumptions |
-| `users.csv` | 5,000 | Synthetic WatchHumans | age band, borough, segment (students, young professionals, fitness, families, foodies), traits, category affinities, dietary needs, sign-up source (pop-up code or organic) |
-| `reviews.csv` | 20,000 | Synthetic WatchHumans | user, brand, pop-up code or none, rating 1 to 5, would buy, liked or disliked attribute, in target segment; pop-up reviews reconcile with `popup_brands.csv` |
+| `brand_features.csv`, `brand_products.csv` | 49 brands, 70 products | Built from `brands.csv` by `scripts/build_brand_features.py`, using the phrase mappings in `data/mappings/` (archetypes.csv, need_states.csv) | 10 archetype affinities, 3 target archetypes, 8 need states, lineup role, vegan, gluten-free, adults-only, chilling; favourite five and stock are assumptions |
+| `users.csv` | 5,000 | Synthetic WatchHumans | age band, borough, primary and secondary archetype and a score on all 10 WatchHumans archetypes, traits, category affinities, dietary needs, sign-up source (pop-up code or organic) |
+| `reviews.csv` | 20,000 | Synthetic WatchHumans | user, brand, pop-up code or none, rating 1 to 5, would buy, liked or disliked attribute, in target archetype; pop-up reviews reconcile with `popup_brands.csv` |
 | `popups.csv` | 60 past pop-ups, 2 a month from Apr 2024 to Sep 2026 | Synthetic | date, event type (one of seven), borough, footfall, 5-brand lineup, sign-ups, reviews, cost |
 | `popup_brands.csv` | 300 | Synthetic | pop-up, brand, units given, reviews, qualified reviews, average rating |
 | `events.csv` | 30 to 40 upcoming | Real London listings, collected by hand | type, start and end, venue, latitude and longitude, expected attendance, indoor or outdoor, audience tags, stall cost, link |
@@ -126,18 +126,18 @@ Sources are listed at the end of the doc.
 
 Six steps run in order: score every brand at every event, predict outcomes, pick the best lineup, choose the month's events, then write the profiles, quantities and timing. Every number traces back to its inputs.
 
-1. **Fit score for every brand at every event.**
+1. **Archetype match for every product at every event.**
 
    ```latex
-   \text{fit}_{b,e} = \cos(n_b, n_e) \times a_{b,e} \times c_{b,e} \times (1 + h_{b,k})
+   \text{match}_{p,e} = \sum_{a=1}^{10} \text{crowd}_e[a] \times \text{affinity}_p[a] \qquad \text{fit}_{b,e} = \max_{p \in b} \text{match}_{p,e} \times \text{moment}_{p,e} \times c_{b,e}
    ```
 
-   n is the need-state vector of the brand and of the event type, from the crowd table. a is audience overlap: the event's expected age and interest mix against the brand's target segments. c is context: time of day, indoor or outdoor, and whether the product needs chilling. h is the brand's learned lift at event type k from WatchHumans ratings, shrunk towards zero when it has few reviews there.
+   **Archetype matching.** Events, products and users share the 10 WatchHumans archetypes (wellness seeker, trend enthusiast, thoughtful buyer, smart saver, quality seeker, on-the-go shopper, impulse buyer, experience explorer, everyday planner, conscious consumer), which WatchHumans builds from each user's purchasing data. The event's crowd mix starts from the crowd table and is updated with who signed up at past pop-ups. Each product's archetype affinity starts from the brand sheet's target phrases and is updated with ratings by reviewer archetype. match = Σ_a crowd[a] × affinity[a]. Fit = the best product's match × moment (need-state cosine with the event type) × context (chilling outdoors, hydration in summer).
 2. **Expected outcomes.** A Poisson regression trained on the 48 training pop-ups predicts sign-ups from footfall, event type, dwell time and lineup appeal. Combined with fit, it gives expected reviews and QRP per brand.
-3. **Lineup optimiser.** For each event, shortlist the 20 eligible brands with the highest expected QRP, then score every 5-brand combination of the shortlist (15,504), in under a second. The score is total brand QRP, plus a bonus for covering a drink, a savoury, a sweet and a condiment, minus a penalty for two brands in the same sub-category. Hard constraints: at least one vegan and one gluten-free option, chilled capacity, units in stock, and no alcohol or CBD at community, expo or conference events.
+3. **Lineup optimiser.** For each event, shortlist the 20 eligible brands with the best fit, then score every combination of the shortlist at the event's lineup size, in under a second. Lineup size scales with expected attendance: 2 products under 50 people, 3 under 150, 4 under 500, and 5 at 500 or more (up to 15,504 combinations). The score is the lineup's archetype match: each archetype expected at the event is credited with its favourite product in the lineup, weighted by its share of the crowd, so products that each win a different part of the crowd beat near-duplicates. Hard constraints: at least one vegan and one gluten-free option, chilled capacity, units in stock, and no alcohol or CBD at community, expo or conference events.
 4. **Month plan.** Rank events by best-lineup QRP per pound and fill RGC's capacity, usually 2 pop-ups a month, with no date clashes. No brand is guaranteed a slot: clients do not pay RGC for pop-up placement, and pop-ups are one RGC service among several. Boroughs where WatchHumans has few users get a bonus, because new sign-ups are worth more there.
 5. **Brand event profiles.** For each brand: fit across the seven event types, its best moment and audience, what to sample, where to avoid, and its top five upcoming events with expected reviews. A language model writes the profile paragraph from these numbers; it never sets them.
-6. **Quantities and timing.** Units to bring equal expected stops times one sample times a 1.2 buffer. The time slot is the event's peak-need moment from the crowd table.
+6. **Quantities and timing.** Units to bring per product equal expected stops (attendance × the type's stop rate) times one sample times a 1.2 buffer, capped by stock. The time slot is the event's peak-need moment from the crowd table.
 
 **Stack.** Python, pandas, scikit-learn (PoissonRegressor) and Streamlit. A language model also tags each event description into one of the seven event types.
 

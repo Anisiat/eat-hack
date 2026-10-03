@@ -1,8 +1,8 @@
-event_type,need_hydrate,need_recover,need_energy,need_focus,need_discovery,need_sharing,need_treat,need_value,mix_students,mix_young_professionals,mix_fitness,mix_families,mix_foodies,indoor_share,dwell_hours,staff,peak_slot,moment
-community,0.3,0.2,0.2,0.1,0.9,0.7,0.7,0.5,0.1,0.25,0.15,0.25,0.25,0.3,3.0,2,11:00-13:00,"Browsing the market, or lingering after the run club"
-concerts,0.9,0.2,0.8,0.0,0.3,0.4,0.3,0.3,0.35,0.45,0.05,0.0,0.15,1.0,4.0,3,21:00-23:00,"Late in a hot room, between sets"
-conferences,0.4,0.1,0.9,1.0,0.4,0.3,0.4,0.6,0.35,0.55,0.04,0.02,0.04,1.0,7.0,2,15:00-16:30,Mid-afternoon slump at the desks
-expos,0.2,0.0,0.6,0.4,0.8,0.3,0.5,0.9,0.55,0.2,0.05,0.05,0.15,0.9,4.0,3,12:00-14:00,Lunchtime browsing between stalls
-festivals,1.0,0.3,0.6,0.0,0.7,0.6,0.7,0.3,0.25,0.4,0.1,0.1,0.15,0.0,7.0,4,14:00-17:00,"Afternoon heat, walking and queues"
-performing_arts,0.3,0.0,0.2,0.1,0.4,0.8,0.9,0.3,0.1,0.45,0.05,0.1,0.3,0.85,2.5,2,interval,Interval drinks and a sweet treat
-sports,1.0,0.9,0.5,0.1,0.2,0.5,0.2,0.3,0.1,0.35,0.4,0.1,0.05,0.3,2.0,2,finish,"Just finished or full time, rehydrating and refuelling"
+event_type,need_hydrate,need_recover,need_energy,need_focus,need_discovery,need_sharing,need_treat,need_value,mix_wellness_seeker,mix_trend_enthusiast,mix_thoughtful_buyer,mix_smart_saver,mix_quality_seeker,mix_on_the_go_shopper,mix_impulse_buyer,mix_experience_explorer,mix_everyday_planner,mix_conscious_consumer,indoor_share,dwell_hours,staff,peak_slot,moment
+community,0.3,0.2,0.2,0.1,0.9,0.7,0.7,0.5,0.1,0.06,0.12,0.12,0.1,0.06,0.08,0.1,0.14,0.12,0.3,3.0,2,11:00-13:00,"Browsing the market, or lingering after the run club"
+concerts,0.9,0.2,0.8,0.0,0.3,0.4,0.3,0.3,0.04,0.2,0.04,0.08,0.05,0.1,0.22,0.2,0.03,0.04,1.0,4.0,3,21:00-23:00,"Late in a hot room, between sets"
+conferences,0.4,0.1,0.9,1.0,0.4,0.3,0.4,0.6,0.08,0.18,0.1,0.08,0.08,0.22,0.08,0.1,0.05,0.03,1.0,7.0,2,15:00-16:30,Mid-afternoon slump at the desks
+expos,0.2,0.0,0.6,0.4,0.8,0.3,0.5,0.9,0.07,0.15,0.1,0.18,0.08,0.1,0.12,0.1,0.06,0.04,0.9,4.0,3,12:00-14:00,Lunchtime browsing between stalls
+festivals,1.0,0.3,0.6,0.0,0.7,0.6,0.7,0.3,0.06,0.16,0.05,0.07,0.08,0.08,0.18,0.22,0.04,0.06,0.0,7.0,4,14:00-17:00,"Afternoon heat, walking and queues"
+performing_arts,0.3,0.0,0.2,0.1,0.4,0.8,0.9,0.3,0.05,0.08,0.14,0.05,0.18,0.04,0.1,0.18,0.08,0.1,0.85,2.5,2,interval,Interval drinks and a sweet treat
+sports,1.0,0.9,0.5,0.1,0.2,0.5,0.2,0.3,0.3,0.08,0.08,0.07,0.06,0.12,0.06,0.08,0.1,0.05,0.3,2.0,2,finish,"Just finished or full time, rehydrating and refuelling"

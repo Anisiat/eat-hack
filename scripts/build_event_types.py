@@ -2,7 +2,7 @@
 build_event_types.py - the crowd table as data: one row per event type.
 
 Writes event_types.csv (repo root by default):
-  event_type, need_* (8), mix_* (5 assumed audience shares), indoor_share, dwell_hours, staff, peak_slot, moment
+  event_type, need_* (8), mix_* (10 assumed archetype shares), indoor_share, dwell_hours, staff, peak_slot, moment
 
 Need states and audience mix are the public starting assumptions from the crowd table in eat_hack.md,
 shared with generate_popups.EVENT. Only those assumptions are copied; no hidden truth.
@@ -15,7 +15,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from generate_popups import EVENT, EVENT_TYPES, NEEDS, SEGMENTS  # noqa: E402
+from generate_popups import EVENT, EVENT_TYPES, NEEDS, ARCHETYPES  # noqa: E402
 
 # peak-need moment per type: when to be at the stall, and what is happening then
 MOMENT = {
@@ -36,7 +36,7 @@ def main():
         p = EVENT[t]
         row = dict(event_type=t)
         row.update({f"need_{n}": float(v) for n, v in zip(NEEDS, p["needs"])})
-        row.update({f"mix_{s}": float(v) for s, v in zip(SEGMENTS, p["mix"])})
+        row.update({f"mix_{a}": float(v) for a, v in zip(ARCHETYPES, p["mix"])})
         row.update(indoor_share=p["indoor"], dwell_hours=p["dwell"], staff=p["staff"],
                    peak_slot=MOMENT[t][0], moment=MOMENT[t][1])
         rows.append(row)

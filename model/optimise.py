@@ -1,9 +1,11 @@
 """Steps 3 and 6: best 5-brand lineup per event, units to bring and the time slot.
 
-Each event shortlists its 20 best eligible brands on their own expected QRP, then every 5-brand
-combination of the shortlist (15,504) is scored at once with numpy.
-Score = expected QRP x 1.10 if drink, savoury, sweet and condiment are all covered
-        x 0.85 per pair of brands sharing a sub-category.
+Lineup size scales with expected attendance: 2 products under 50 people, 3 under 150, 4 under 500, else 5.
+Each event shortlists its 20 best eligible brands on their own match, then every combination of that size
+(up to 15,504 for 5) is scored at once with numpy.
+Score = archetype match of the lineup to the event's expected crowd (fit.coverage): every expected archetype
+is credited with its favourite product in the lineup, so five products that each win a different part of the
+crowd beat five near-duplicates. Expected sign-ups and QRP are forecast for the chosen lineup.
 Hard constraints: >= 1 vegan, >= 1 gluten-free, <= 2 chilled brands, frozen only indoors, units in stock,
 no adults-only brands (alcohol, CBD) at community, expo or conference events.
 """
@@ -12,11 +14,12 @@ from itertools import combinations
 import numpy as np
 import pandas as pd
 
-from .data import CORE_CATEGORIES, nice
+from .data import ARCHETYPES as ARCH, nice
+from .fit import coverage
 
-LINEUP_SIZE = 5
-COVER_BONUS = 1.10
-SAME_SUB_PENALTY = 0.85
+# products to bring scale with expected attendance: (attendance below, lineup size)
+SIZE_TIERS = [(50, 2), (150, 3), (500, 4), (float("inf"), 5)]
+MAX_SIZE = 5
 MAX_CHILLED = 2
 UNIT_BUFFER = 1.2
 SHORTLIST = 20
@@ -36,13 +39,23 @@ class Optimiser:
         self.frozen = b["frozen"].to_numpy() == 1
         self.adults = b["adults_only"].to_numpy() == 1
         self.stock = b["units_available_per_month"].to_numpy()
-        self.habit = [self.bids.index(x) for x in b.index[b["favourite_five"] == 1]]
-        self.positions = np.array(list(combinations(range(SHORTLIST), LINEUP_SIZE)))
+        fav = b[b["favourite_five"] == 1].sort_values(["n_products", "brand_name"], ascending=[False, True])
+        self.habit = [self.bids.index(x) for x in fav.index]          # usual five, biggest shelf presence first
+        self.positions = {k: np.array(list(combinations(range(SHORTLIST), k))) for _, k in SIZE_TIERS}
 
         self.r = om.review_rate(events, parts["fit"])
         self.rq = self.r * parts["q"]
         self.stops = np.array([e.footfall * om.stop_rate[e.event_type] for e in events.itertuples()])
         self.units = np.minimum(np.ceil(self.stops[:, None] * UNIT_BUFFER), self.stock[None, :]).astype(int)
+
+    def size(self, i):
+        """How many products to bring: 2 under 50 attendees, 3 under 150, 4 under 500, else 5."""
+        att = self.events["footfall"].iloc[i]
+        return next(k for limit, k in SIZE_TIERS if att < limit)
+
+    def habit_for(self, i):
+        """RGC's usual lineup at the same size: the first k of the usual five."""
+        return self.habit[:self.size(i)]
 
     def eligible(self, i):
         """Brands allowed at event i on their own (setting, audience and stock rules)."""
@@ -55,13 +68,13 @@ class Optimiser:
         return ok & (self.stock >= min(need, self.stock.min()))
 
     def evaluate(self, i, lineup):
-        """Expected outcomes of one lineup (brand indices) at event i."""
+        """Archetype match and expected outcomes of one lineup (brand indices) at event i."""
         lineup = list(lineup)
-        appeal = self.parts["fit"][i, lineup].mean()
-        s = float(self.om.signups(self.events.iloc[[i]], [appeal])[0])
+        match = coverage(self.parts, i, lineup)
+        s = float(self.om.signups(self.events.iloc[[i]], [match])[0])
         per_brand = s * self.rq[i, lineup]
         reviews = s * self.r[i, lineup]
-        return dict(signups=s, qrp=float(per_brand.sum()), reviews=float(reviews.sum()),
+        return dict(match=match, signups=s, qrp=float(per_brand.sum()), reviews=float(reviews.sum()),
                     per_brand=dict(zip([self.bids[j] for j in lineup], per_brand)))
 
     def feasible(self, i, lineup):
@@ -73,18 +86,14 @@ class Optimiser:
         """Best lineup at event i: (brand indices, objective)."""
         ok = self.eligible(i)
         cand = np.flatnonzero(ok)
-        cand = cand[np.argsort(-self.rq[i, cand])][:SHORTLIST]
-        assert len(cand) >= LINEUP_SIZE, f"fewer than {LINEUP_SIZE} eligible brands at event {i}"
-        C = cand[self.positions[np.all(self.positions < len(cand), axis=1)]]
-        covered = np.ones(len(C), bool)
-        for k in CORE_CATEGORIES:
-            covered &= (self.cat[C] == k).any(1)
-        same_sub = sum((self.sub[C[:, x]] == self.sub[C[:, y]]) for x, y in combinations(range(LINEUP_SIZE), 2))
-        shape = np.where(covered, COVER_BONUS, 1.0) * SAME_SUB_PENALTY ** same_sub
+        cand = cand[np.argsort(-self.parts["fit"][i, cand])][:SHORTLIST]
+        k = self.size(i)
+        assert len(cand) >= k, f"fewer than {k} eligible brands at event {i}"
+        P = self.positions[k]
+        C = cand[P[np.all(P < len(cand), axis=1)]]
         valid = self.vegan[C].any(1) & self.gf[C].any(1) & (self.chill[C].sum(1) <= MAX_CHILLED)
-        appeal = self.parts["fit"][i][C].mean(1)
-        s = self.om.signups(self.events.iloc[[i]], appeal[None, :])[0]
-        obj = np.where(valid, s * self.rq[i][C].sum(1) * shape, -np.inf)
+        match = self.parts["per_arch"][i][C].max(1) @ self.parts["mix"][i]      # lineups x archetypes -> lineups
+        obj = np.where(valid, match, -np.inf)
         k = int(np.argmax(obj))
         assert np.isfinite(obj[k]), f"no feasible lineup at event {i}"
         return list(C[k]), float(obj[k])
@@ -111,10 +120,12 @@ class Optimiser:
 def lineup_reasons(d, opt, i, lineup, res, habit_res, brand_reason):
     b = d["brands"].iloc[lineup]
     vs = res["qrp"] / habit_res["qrp"] - 1 if habit_res["qrp"] else 0
-    top = max(lineup, key=lambda j: res["per_brand"][opt.bids[j]])
-    cats = sorted(set(b["category"]))
-    return [f"Expected {res['qrp']:.0f} qualified reviews against {habit_res['qrp']:.0f} for the usual five "
+    mix = opt.parts["mix"][i]
+    fav = opt.parts["per_arch"][i, lineup].argmax(0)                 # each archetype's favourite in the lineup
+    big = np.argsort(-mix)[:3]
+    who = "; ".join(f"{nice(d['brands'].iloc[lineup[fav[a]]]['brand_name'])} for {nice(ARCH[a])}s" for a in big)
+    return [f"Archetype match {res['match']:.2f} against {habit_res['match']:.2f} for the usual five: {who}",
+            f"Expected {res['qrp']:.0f} qualified reviews against {habit_res['qrp']:.0f} for the usual five "
             f"({vs:+.0%})",
-            f"{d['brands'].iloc[top]['brand_name']}: {brand_reason(i, top)[0]}",
-            f"Covers {', '.join(nice(c) for c in cats)}; {int(b['vegan'].sum())} vegan and "
-            f"{int(b['gluten_free'].sum())} gluten-free options"]
+            f"{int(b['vegan'].sum())} vegan and {int(b['gluten_free'].sum())} gluten-free options; "
+            f"covers {', '.join(nice(c) for c in sorted(set(b['category'])))}"]

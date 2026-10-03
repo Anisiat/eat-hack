@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from generate_popups import EVENT, EVENT_TYPES, SEGMENTS  # noqa: E402
+from generate_popups import EVENT, EVENT_TYPES, ARCHETYPES  # noqa: E402
 
 SEED = 7
 N_EVENTS = 36
@@ -58,6 +58,9 @@ NAMES = {
 }
 RACES = ["Autumn 10K", "Park half marathon", "Saturday 5K series", "Cross-country relay"]
 SCREENINGS = ["Big-match screening", "Rugby international screening"]
+# small formats draw small crowds (expected attendance range)
+SMALL = {"Run club social and brunch": (20, 80), "Tech meetup and demo night": (40, 150),
+         "Comedy night": (60, 250), "Student hackathon": (80, 300)}
 # events per type in the placeholder month window (outdoor festivals are rare in winter)
 COUNTS = {"sports": 6, "community": 8, "concerts": 4, "conferences": 5, "expos": 4, "festivals": 3,
           "performing_arts": 6}
@@ -79,14 +82,15 @@ def main():
             d = rng.choice([x for x in days if x.weekday() in weekdays])
             start = pd.Timestamp(f"{pd.Timestamp(d).date()} {times[rng.integers(len(times))]}")
             end = start + pd.Timedelta(hours=p["dwell"])
-            lo, hi = p["footfall"]
-            mix = p["mix"] * rng.uniform(.7, 1.3, len(SEGMENTS))
-            tags = [s for s, _ in sorted(zip(SEGMENTS, mix), key=lambda x: -x[1])[:2]]
+            name = names[rng.integers(len(names))]
+            lo, hi = SMALL.get(name, p["footfall"])
+            mix = p["mix"] * rng.uniform(.7, 1.3, len(ARCHETYPES))
+            tags = [s for s, _ in sorted(zip(ARCHETYPES, mix), key=lambda x: -x[1])[:2]]
             stall = 0 if p["stall"][1] == 0 else int(round(rng.integers(p["stall"][0], p["stall"][1] + 1), -1))
-            rows.append(dict(name=f"{names[rng.integers(len(names))]}, {venue}", event_type=t,
+            rows.append(dict(name=f"{name}, {venue}", event_type=t,
                              start=start.isoformat(timespec="minutes"), end=end.isoformat(timespec="minutes"),
                              venue=venue, borough=borough, lat=lat, lon=lon,
-                             expected_attendance=int(round(rng.integers(lo, hi + 1), -1)), indoor=indoor,
+                             expected_attendance=int(max(10, round(rng.integers(lo, hi + 1), -1))), indoor=indoor,
                              audience_tags="|".join(tags), stall_cost_gbp=stall, link="", source="placeholder"))
     df = pd.DataFrame(rows).sort_values("start", kind="stable").reset_index(drop=True)
     df.insert(0, "event_id", [f"E{i + 1:03d}" for i in range(len(df))])

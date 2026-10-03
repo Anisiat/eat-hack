@@ -1,37 +1,37 @@
 event_id,name,event_type,start,end,venue,borough,lat,lon,expected_attendance,indoor,audience_tags,stall_cost_gbp,link,source
-E001,"Food and drink expo, Olympia London",expos,2026-10-06T10:00,2026-10-06T14:00,Olympia London,Hammersmith and Fulham,51.4963,-0.2105,920,1,students|young_professionals,100,,placeholder
-E002,"Food and drink expo, University campus, Mile End",expos,2026-10-13T11:00,2026-10-13T15:00,"University campus, Mile End",Tower Hamlets,51.5246,-0.04,580,1,students|young_professionals,230,,placeholder
-E003,"Tech meetup and demo night, Barbican Centre",conferences,2026-10-14T10:00,2026-10-14T17:00,Barbican Centre,City of London,51.5202,-0.0938,430,1,young_professionals|students,90,,placeholder
-E004,"Big-match screening, Big-screen pub, Brixton",sports,2026-10-14T19:45,2026-10-14T21:45,"Big-screen pub, Brixton",Lambeth,51.4613,-0.1156,900,1,fitness|young_professionals,100,,placeholder
-E005,"Contemporary dance show, Richmond Theatre",performing_arts,2026-10-16T18:30,2026-10-16T21:00,Richmond Theatre,Richmond upon Thames,51.4612,-0.3036,360,1,young_professionals|foodies,180,,placeholder
-E006,"Park half marathon, Wembley Park",sports,2026-10-17T09:00,2026-10-17T11:00,Wembley Park,Brent,51.556,-0.2796,920,0,fitness|young_professionals,0,,placeholder
-E007,"Refreshers' fair, ExCeL London",expos,2026-10-19T11:00,2026-10-19T15:00,ExCeL London,Newham,51.5081,0.0294,1350,1,students|young_professionals,160,,placeholder
-E008,"Family fun day, Islington community hall",community,2026-10-24T09:00,2026-10-24T12:00,Islington community hall,Islington,51.5416,-0.1022,1900,1,young_professionals|foodies,140,,placeholder
-E009,"Comedy night, West End theatre",performing_arts,2026-10-30T18:30,2026-10-30T21:00,West End theatre,Westminster,51.5115,-0.13,540,1,young_professionals|foodies,140,,placeholder
-E010,"Winter street food festival, Finsbury Park",festivals,2026-10-31T12:00,2026-10-31T19:00,Finsbury Park,Haringey,51.5713,-0.1035,2570,0,young_professionals|students,520,,placeholder
-E011,"Weekend AI hackathon, Here East",conferences,2026-11-07T09:30,2026-11-07T16:30,Here East,Newham,51.5466,-0.0226,540,1,young_professionals|students,80,,placeholder
-E012,"Family fun day, Surrey Street Market",community,2026-11-07T11:00,2026-11-07T14:00,Surrey Street Market,Croydon,51.3714,-0.1013,1290,0,families|young_professionals,60,,placeholder
-E013,"Park half marathon, Victoria Park",sports,2026-11-14T09:00,2026-11-14T11:00,Victoria Park,Tower Hamlets,51.5362,-0.0396,890,0,fitness|young_professionals,90,,placeholder
-E014,"DJ all-nighter, Eventim Apollo",concerts,2026-11-14T19:30,2026-11-14T23:30,Eventim Apollo,Hammersmith and Fulham,51.4908,-0.2246,1560,1,young_professionals|students,290,,placeholder
-E015,"Autumn 10K, Wembley Park",sports,2026-11-21T09:00,2026-11-21T11:00,Wembley Park,Brent,51.556,-0.2796,1330,0,fitness|young_professionals,100,,placeholder
-E016,"Family fun day, Ealing Common",community,2026-11-21T09:00,2026-11-21T12:00,Ealing Common,Ealing,51.5091,-0.2888,1940,0,foodies|families,60,,placeholder
-E017,"Big-match screening, Big-screen bar, Shoreditch",sports,2026-11-21T19:45,2026-11-21T21:45,"Big-screen bar, Shoreditch",Hackney,51.5246,-0.0784,900,1,young_professionals|fitness,110,,placeholder
-E018,"Saturday 5K series, Battersea Park",sports,2026-11-22T09:00,2026-11-22T11:00,Battersea Park,Wandsworth,51.4791,-0.1569,1070,0,fitness|young_professionals,100,,placeholder
-E019,"Tech meetup and demo night, Here East",conferences,2026-11-22T09:30,2026-11-22T16:30,Here East,Newham,51.5466,-0.0226,610,1,young_professionals|students,100,,placeholder
-E020,"Food and drink expo, ExCeL London",expos,2026-11-25T10:00,2026-11-25T14:00,ExCeL London,Newham,51.5081,0.0294,2030,1,students|young_professionals,50,,placeholder
-E021,"DJ all-nighter, Eventim Apollo",concerts,2026-11-26T19:30,2026-11-26T23:30,Eventim Apollo,Hammersmith and Fulham,51.4908,-0.2246,1170,1,young_professionals|students,180,,placeholder
-E022,"Family fun day, Walthamstow Village",community,2026-11-28T11:00,2026-11-28T14:00,Walthamstow Village,Waltham Forest,51.5826,-0.0137,1940,0,young_professionals|families,140,,placeholder
-E023,"Family fun day, Islington community hall",community,2026-11-28T11:00,2026-11-28T14:00,Islington community hall,Islington,51.5416,-0.1022,1040,1,foodies|young_professionals,110,,placeholder
-E024,"Christmas community market, Maltby Street Market",community,2026-11-28T11:00,2026-11-28T14:00,Maltby Street Market,Southwark,51.4996,-0.0757,840,0,young_professionals|foodies,90,,placeholder
-E025,"Winter street food festival, Queen Elizabeth Olympic Park",festivals,2026-11-28T12:00,2026-11-28T19:00,Queen Elizabeth Olympic Park,Newham,51.543,-0.0164,3130,0,young_professionals|students,460,,placeholder
-E026,"DJ all-nighter, Electric Brixton",concerts,2026-11-28T19:30,2026-11-28T23:30,Electric Brixton,Lambeth,51.4614,-0.1146,1770,1,young_professionals|students,230,,placeholder
-E027,"Contemporary dance show, Southbank Centre",performing_arts,2026-12-03T19:00,2026-12-03T21:30,Southbank Centre,Lambeth,51.5058,-0.1167,380,1,young_professionals|foodies,50,,placeholder
-E028,"Comedy night, Hackney Empire",performing_arts,2026-12-04T19:00,2026-12-04T21:30,Hackney Empire,Hackney,51.5459,-0.0554,840,1,young_professionals|foodies,180,,placeholder
-E029,"Weekend food market, Maltby Street Market",community,2026-12-05T09:00,2026-12-05T12:00,Maltby Street Market,Southwark,51.4996,-0.0757,310,0,foodies|young_professionals,20,,placeholder
-E030,"Theatre premiere, Richmond Theatre",performing_arts,2026-12-11T18:30,2026-12-11T21:00,Richmond Theatre,Richmond upon Thames,51.4612,-0.3036,530,1,foodies|young_professionals,180,,placeholder
-E031,"Winter street food festival, Clapham Common",festivals,2026-12-12T12:00,2026-12-12T19:00,Clapham Common,Lambeth,51.4603,-0.1496,1840,0,young_professionals|students,680,,placeholder
-E032,"Christmas panto, West End theatre",performing_arts,2026-12-12T18:30,2026-12-12T21:00,West End theatre,Westminster,51.5115,-0.13,720,1,young_professionals|foodies,150,,placeholder
-E033,"Weekend AI hackathon, Canary Wharf conference centre",conferences,2026-12-13T10:00,2026-12-13T17:00,Canary Wharf conference centre,Tower Hamlets,51.5054,-0.0235,150,1,young_professionals|students,110,,placeholder
-E034,"Run club social and brunch, Surrey Street Market",community,2026-12-13T11:00,2026-12-13T14:00,Surrey Street Market,Croydon,51.3714,-0.1013,1790,0,families|young_professionals,110,,placeholder
-E035,"Tech meetup and demo night, Canary Wharf conference centre",conferences,2026-12-19T09:30,2026-12-19T16:30,Canary Wharf conference centre,Tower Hamlets,51.5054,-0.0235,690,1,young_professionals|students,50,,placeholder
-E036,"DJ all-nighter, Village Underground",concerts,2026-12-19T19:30,2026-12-19T23:30,Village Underground,Hackney,51.5243,-0.0778,1190,1,young_professionals|students,240,,placeholder
+E001,"Makers' and food market, Brockley Market",community,2026-10-10T11:00,2026-10-10T14:00,Brockley Market,Lewisham,51.4628,-0.0369,560,0,everyday_planner|smart_saver,40,,placeholder
+E002,"DJ all-nighter, Eventim Apollo",concerts,2026-10-15T19:30,2026-10-15T23:30,Eventim Apollo,Hammersmith and Fulham,51.4908,-0.2246,1950,1,trend_enthusiast|experience_explorer,380,,placeholder
+E003,"Bonfire night festival, Queen Elizabeth Olympic Park",festivals,2026-10-17T12:00,2026-10-17T19:00,Queen Elizabeth Olympic Park,Newham,51.543,-0.0164,4940,0,impulse_buyer|experience_explorer,790,,placeholder
+E004,"Winter street food festival, Clapham Common",festivals,2026-10-18T12:00,2026-10-18T19:00,Clapham Common,Lambeth,51.4603,-0.1496,1980,0,experience_explorer|impulse_buyer,430,,placeholder
+E005,"Graduate careers fair, University campus, Mile End",expos,2026-10-19T10:00,2026-10-19T14:00,"University campus, Mile End",Tower Hamlets,51.5246,-0.04,2990,1,smart_saver|trend_enthusiast,240,,placeholder
+E006,"Live gig, Village Underground",concerts,2026-10-24T19:30,2026-10-24T23:30,Village Underground,Hackney,51.5243,-0.0778,620,1,experience_explorer|impulse_buyer,210,,placeholder
+E007,"Tech meetup and demo night, Canary Wharf conference centre",conferences,2026-10-28T10:00,2026-10-28T17:00,Canary Wharf conference centre,Tower Hamlets,51.5054,-0.0235,110,1,on_the_go_shopper|trend_enthusiast,130,,placeholder
+E008,"Rugby international screening, Big-screen pub, Brixton",sports,2026-10-31T19:45,2026-10-31T21:45,"Big-screen pub, Brixton",Lambeth,51.4613,-0.1156,960,1,wellness_seeker|on_the_go_shopper,70,,placeholder
+E009,"Weekend food market, Islington community hall",community,2026-11-01T09:00,2026-11-01T12:00,Islington community hall,Islington,51.5416,-0.1022,1810,1,everyday_planner|experience_explorer,180,,placeholder
+E010,"Weekend AI hackathon, Here East",conferences,2026-11-03T10:00,2026-11-03T17:00,Here East,Newham,51.5466,-0.0226,550,1,on_the_go_shopper|trend_enthusiast,70,,placeholder
+E011,"Food and drink expo, Olympia London",expos,2026-11-05T10:00,2026-11-05T14:00,Olympia London,Hammersmith and Fulham,51.4963,-0.2105,2400,1,smart_saver|trend_enthusiast,60,,placeholder
+E012,"Comedy night, Camden comedy club",performing_arts,2026-11-07T19:00,2026-11-07T21:30,Camden comedy club,Camden,51.539,-0.1426,70,1,experience_explorer|quality_seeker,120,,placeholder
+E013,"DJ all-nighter, Eventim Apollo",concerts,2026-11-07T19:30,2026-11-07T23:30,Eventim Apollo,Hammersmith and Fulham,51.4908,-0.2246,1700,1,impulse_buyer|trend_enthusiast,380,,placeholder
+E014,"Run club social and brunch, Islington community hall",community,2026-11-08T09:00,2026-11-08T12:00,Islington community hall,Islington,51.5416,-0.1022,80,1,smart_saver|thoughtful_buyer,80,,placeholder
+E015,"Startup summit, Canary Wharf conference centre",conferences,2026-11-10T10:00,2026-11-10T17:00,Canary Wharf conference centre,Tower Hamlets,51.5054,-0.0235,330,1,on_the_go_shopper|trend_enthusiast,30,,placeholder
+E016,"Weekend AI hackathon, Canary Wharf conference centre",conferences,2026-11-10T10:00,2026-11-10T17:00,Canary Wharf conference centre,Tower Hamlets,51.5054,-0.0235,290,1,trend_enthusiast|on_the_go_shopper,110,,placeholder
+E017,"Christmas panto, Richmond Theatre",performing_arts,2026-11-12T19:00,2026-11-12T21:30,Richmond Theatre,Richmond upon Thames,51.4612,-0.3036,330,1,quality_seeker|experience_explorer,150,,placeholder
+E018,"Christmas panto, Southbank Centre",performing_arts,2026-11-13T18:30,2026-11-13T21:00,Southbank Centre,Lambeth,51.5058,-0.1167,280,1,experience_explorer|quality_seeker,120,,placeholder
+E019,"Cross-country relay, Battersea Park",sports,2026-11-15T09:00,2026-11-15T11:00,Battersea Park,Wandsworth,51.4791,-0.1569,890,0,wellness_seeker|experience_explorer,60,,placeholder
+E020,"Club night, Eventim Apollo",concerts,2026-11-19T19:30,2026-11-19T23:30,Eventim Apollo,Hammersmith and Fulham,51.4908,-0.2246,1430,1,trend_enthusiast|experience_explorer,160,,placeholder
+E021,"Rugby international screening, Big-screen bar, Shoreditch",sports,2026-11-21T19:45,2026-11-21T21:45,"Big-screen bar, Shoreditch",Hackney,51.5246,-0.0784,1160,1,wellness_seeker|on_the_go_shopper,110,,placeholder
+E022,"Cross-country relay, Battersea Park",sports,2026-11-22T09:00,2026-11-22T11:00,Battersea Park,Wandsworth,51.4791,-0.1569,1350,0,wellness_seeker|on_the_go_shopper,70,,placeholder
+E023,"Makers' and food market, Broadway Market",community,2026-11-22T09:00,2026-11-22T12:00,Broadway Market,Hackney,51.5367,-0.0618,1510,0,everyday_planner|conscious_consumer,180,,placeholder
+E024,"Graduate careers fair, ExCeL London",expos,2026-11-28T10:00,2026-11-28T14:00,ExCeL London,Newham,51.5081,0.0294,1440,1,trend_enthusiast|smart_saver,80,,placeholder
+E025,"Family fun day, Maltby Street Market",community,2026-11-28T11:00,2026-11-28T14:00,Maltby Street Market,Southwark,51.4996,-0.0757,1880,0,everyday_planner|smart_saver,80,,placeholder
+E026,"Makers' and food market, Brockley Market",community,2026-11-29T09:00,2026-11-29T12:00,Brockley Market,Lewisham,51.4628,-0.0369,1060,0,wellness_seeker|conscious_consumer,180,,placeholder
+E027,"Christmas panto, Southbank Centre",performing_arts,2026-12-03T19:00,2026-12-03T21:30,Southbank Centre,Lambeth,51.5058,-0.1167,830,1,experience_explorer|quality_seeker,50,,placeholder
+E028,"Contemporary dance show, Hackney Empire",performing_arts,2026-12-04T18:30,2026-12-04T21:00,Hackney Empire,Hackney,51.5459,-0.0554,780,1,experience_explorer|quality_seeker,190,,placeholder
+E029,"Family fun day, Ealing Common",community,2026-12-05T11:00,2026-12-05T14:00,Ealing Common,Ealing,51.5091,-0.2888,1420,0,smart_saver|conscious_consumer,140,,placeholder
+E030,"Student hackathon, King's Cross tech campus",conferences,2026-12-06T09:30,2026-12-06T16:30,King's Cross tech campus,Camden,51.5347,-0.1246,140,1,on_the_go_shopper|trend_enthusiast,20,,placeholder
+E031,"Christmas community market, Ealing Common",community,2026-12-12T09:00,2026-12-12T12:00,Ealing Common,Ealing,51.5091,-0.2888,880,0,everyday_planner|quality_seeker,10,,placeholder
+E032,"Autumn food festival, Queen Elizabeth Olympic Park",festivals,2026-12-13T12:00,2026-12-13T19:00,Queen Elizabeth Olympic Park,Newham,51.543,-0.0164,4800,0,experience_explorer|trend_enthusiast,760,,placeholder
+E033,"Big-match screening, Big-screen pub, Brixton",sports,2026-12-16T19:45,2026-12-16T21:45,"Big-screen pub, Brixton",Lambeth,51.4613,-0.1156,460,1,wellness_seeker|everyday_planner,60,,placeholder
+E034,"Comedy night, Southbank Centre",performing_arts,2026-12-17T18:30,2026-12-17T21:00,Southbank Centre,Lambeth,51.5058,-0.1167,80,1,experience_explorer|thoughtful_buyer,140,,placeholder
+E035,"Food and drink expo, University campus, Mile End",expos,2026-12-19T10:00,2026-12-19T14:00,"University campus, Mile End",Tower Hamlets,51.5246,-0.04,2380,1,trend_enthusiast|smart_saver,240,,placeholder
+E036,"Park half marathon, Victoria Park",sports,2026-12-20T09:00,2026-12-20T11:00,Victoria Park,Tower Hamlets,51.5362,-0.0396,340,0,wellness_seeker|on_the_go_shopper,50,,placeholder

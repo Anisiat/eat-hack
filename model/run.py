@@ -13,7 +13,7 @@ import pandas as pd
 
 from . import fit as fitmod
 from . import outcomes, plan, profiles
-from .data import OUT, best_products, load, past_events, upcoming_events
+from .data import ARCHETYPES, OUT, load, past_events, upcoming_events
 from .impact import uplift_test
 from .optimise import Optimiser, lineup_reasons
 
@@ -46,20 +46,21 @@ def main():
     parts = fitmod.score(d, fm, events)
     opt = Optimiser(d, om, events, parts)
     brand_reason = lambda i, j: fitmod.reasons(d, fm, events, parts, i, j)  # noqa: E731
-    picks = best_products(d, d["event_types"].index)
     lineups, score_rows = {}, []
     for i, e in enumerate(events.itertuples()):
         best, _ = opt.best(i)
         res = opt.evaluate(i, best)
-        habit = opt.evaluate(i, opt.habit)
+        habit = opt.evaluate(i, opt.habit_for(i))
         lineups[e.event_id] = dict(
             name=e.name, date=e.date, event_type=e.event_type, borough=e.borough,
             brands=[opt.bids[j] for j in best],
             brand_names=[d["brands"].at[opt.bids[j], "brand_name"] for j in best],
-            products={opt.bids[j]: picks[e.event_type][opt.bids[j]]["product"] for j in best},
+            products={opt.bids[j]: d["products"].iloc[parts["best_product"][i, j]]["product"] for j in best},
+            archetype_mix={a: round(float(v), 3) for a, v in zip(ARCHETYPES, parts["mix"][i])},
+            match=round(res["match"], 3), habit_match=round(habit["match"], 3),
             units={opt.bids[j]: int(opt.units[i, j]) for j in best},
             slot=opt.slot(i), exp_signups=round(res["signups"], 1), exp_reviews=round(res["reviews"], 1),
-            qrp=round(res["qrp"], 1), habit_brands=[opt.bids[j] for j in opt.habit],
+            qrp=round(res["qrp"], 1), lineup_size=len(best), habit_brands=[opt.bids[j] for j in opt.habit_for(i)],
             habit_qrp=round(habit["qrp"], 1), cost=round(float(e.cost), 2),
             cost_per_qr=round(e.cost / res["qrp"], 2) if res["qrp"] else None,
             habit_cost_per_qr=round(e.cost / habit["qrp"], 2) if habit["qrp"] else None,
@@ -68,7 +69,9 @@ def main():
         s = res["signups"]
         for j, bid in enumerate(opt.bids):
             rs = brand_reason(i, j)
-            score_rows.append(dict(event_id=e.event_id, brand_id=bid, fit=round(float(parts["fit"][i, j]), 4),
+            score_rows.append(dict(event_id=e.event_id, brand_id=bid,
+                                   product=d["products"].iloc[parts["best_product"][i, j]]["product"],
+                                   match=round(float(parts["match"][i, j]), 4), fit=round(float(parts["fit"][i, j]), 4),
                                    exp_signups=round(s, 1), exp_reviews=round(s * opt.r[i, j], 2),
                                    exp_qrp=round(s * opt.rq[i, j], 2), in_best_lineup=int(j in best),
                                    reason_1=rs[0], reason_2=rs[1], reason_3=rs[2]))
@@ -117,7 +120,7 @@ def check(d, events, scores, lineups, profs, impact):
     assert len(scores) == len(events) * len(b)
     for eid, l in lineups.items():
         lb = b.loc[l["brands"]]
-        assert len(set(l["brands"])) == 5, eid
+        assert len(set(l["brands"])) == l["lineup_size"] and 2 <= l["lineup_size"] <= 5, eid
         assert (lb["vegan"] == 1).any() and (lb["gluten_free"] == 1).any() and (lb["needs_chilling"] == 1).sum() <= 2, eid
     assert len(profs) == len(b) and all(len(p["fit_by_type"]) == len(d["event_types"]) for p in profs.values())
     assert impact["ci_low"] <= impact["uplift"] <= impact["ci_high"]

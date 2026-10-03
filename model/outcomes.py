@@ -1,9 +1,9 @@
 """Step 2: expected sign-ups, reviews and qualified reviews (QRP).
 
 Two Poisson regressions trained on the 48 training pop-ups:
-  sign-ups per pop-up      ~ log footfall + dwell + lineup appeal + event type
+  sign-ups per pop-up      ~ log footfall + dwell + lineup archetype match + event type
   reviews per brand / sign-up ~ fit + dwell + event type   (fitted as a rate, weighted by sign-ups)
-QRP for brand b = sign-ups x r_b x q_b, where q_b is the crowd share in b's target segments.
+QRP for brand b = sign-ups x r_b x q_b, where q_b is the crowd share in b's target archetypes.
 """
 from dataclasses import dataclass
 
@@ -11,6 +11,8 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import PoissonRegressor
 from sklearn.metrics import mean_poisson_deviance
+
+from .fit import coverage
 
 ALPHA = 1e-3
 
@@ -57,7 +59,7 @@ def train(d, past, past_parts):
     types = d["event_types"].index.tolist()
     bids = list(d["brands"].index)
     lineups = past["lineup"].str.split("|")
-    appeal = np.array([past_parts["fit"][i, [bids.index(b) for b in lu]].mean() for i, lu in enumerate(lineups)])
+    appeal = np.array([coverage(past_parts, i, [bids.index(b) for b in lu]) for i, lu in enumerate(lineups)])
     is_train = (past["split"] == "train").to_numpy()
 
     signup = PoissonRegressor(alpha=ALPHA, max_iter=3000)

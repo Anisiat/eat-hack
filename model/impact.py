@@ -24,7 +24,7 @@ def uplift_test(d, opt_test, test):
         e = test.iloc[i]
         lineup, _ = opt_test.best(i)
         tool = [opt_test.bids[j] for j in lineup]
-        habit = [opt_test.bids[j] for j in opt_test.habit]
+        habit = [opt_test.bids[j] for j in opt_test.habit_for(i)]
         world = dict(event_type=e["event_type"], footfall=int(e["footfall"]), indoor=int(e["indoor"]),
                      temp_c=float(e["temp_c"]))
         t = simulate(world, tool)["qualified_reviews"]

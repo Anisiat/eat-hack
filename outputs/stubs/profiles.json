@@ -2,301 +2,386 @@
   "B01": {
     "brand_name": "All That Matters",
     "fit_by_type": {
-      "community": 0.545,
-      "concerts": 0.612,
-      "conferences": 0.639,
-      "expos": 0.671,
-      "festivals": 0.596,
-      "performing_arts": 0.671,
-      "sports": 0.429
+      "community": 0.33,
+      "concerts": 0.319,
+      "conferences": 0.322,
+      "expos": 0.353,
+      "festivals": 0.307,
+      "performing_arts": 0.296,
+      "sports": 0.335
     },
     "best_type": "expos",
     "best_moment": "Lunchtime browsing between stalls (12:00-14:00)",
-    "best_audience": "students",
-    "sample": "Superfood Puffs — Peri-Peri (Spicy peri-peri; savoury); lead with its price",
-    "avoid": "sports (fit 0.43); reviewers mark down its portion size",
+    "best_audience": "impulse buyer",
+    "archetype_affinity": {
+      "wellness_seeker": 0.73,
+      "trend_enthusiast": 0.129,
+      "thoughtful_buyer": 0.641,
+      "smart_saver": 0.452,
+      "quality_seeker": 0.089,
+      "on_the_go_shopper": 0.603,
+      "impulse_buyer": 0.768,
+      "experience_explorer": 0.214,
+      "everyday_planner": 0.072,
+      "conscious_consumer": 0.094
+    },
+    "target_archetypes": [
+      "wellness_seeker",
+      "thoughtful_buyer",
+      "impulse_buyer"
+    ],
+    "sample": "Superfood Puffs — Peri-Peri (Spicy peri-peri; savoury); lead with its saltiness",
+    "avoid": "performing arts (fit 0.30); reviewers mark down its crunch",
     "top_events": [
       {
-        "event_id": "E003",
-        "name": "Tech meetup and demo night, Barbican Centre",
-        "date": "2026-10-14",
-        "event_type": "conferences",
-        "exp_reviews": 31.9,
-        "exp_qrp": 30.1
+        "event_id": "E008",
+        "name": "Rugby international screening, Big-screen pub, Brixton",
+        "date": "2026-10-31",
+        "event_type": "sports",
+        "exp_reviews": 24.8,
+        "exp_qrp": 11.7
       },
       {
-        "event_id": "E011",
-        "name": "Weekend AI hackathon, Here East",
-        "date": "2026-11-07",
-        "event_type": "conferences",
-        "exp_reviews": 40.0,
-        "exp_qrp": 37.8
+        "event_id": "E021",
+        "name": "Rugby international screening, Big-screen bar, Shoreditch",
+        "date": "2026-11-21",
+        "event_type": "sports",
+        "exp_reviews": 29.7,
+        "exp_qrp": 13.9
+      },
+      {
+        "event_id": "E022",
+        "name": "Cross-country relay, Battersea Park",
+        "date": "2026-11-22",
+        "event_type": "sports",
+        "exp_reviews": 34.1,
+        "exp_qrp": 16.0
+      },
+      {
+        "event_id": "E036",
+        "name": "Park half marathon, Victoria Park",
+        "date": "2026-12-20",
+        "event_type": "sports",
+        "exp_reviews": 9.2,
+        "exp_qrp": 4.3
       },
       {
         "event_id": "E019",
-        "name": "Tech meetup and demo night, Here East",
-        "date": "2026-11-22",
-        "event_type": "conferences",
-        "exp_reviews": 45.2,
-        "exp_qrp": 42.7
-      },
-      {
-        "event_id": "E033",
-        "name": "Weekend AI hackathon, Canary Wharf conference centre",
-        "date": "2026-12-13",
-        "event_type": "conferences",
-        "exp_reviews": 11.2,
-        "exp_qrp": 10.5
-      },
-      {
-        "event_id": "E035",
-        "name": "Tech meetup and demo night, Canary Wharf conference centre",
-        "date": "2026-12-19",
-        "event_type": "conferences",
-        "exp_reviews": 51.1,
-        "exp_qrp": 48.3
+        "name": "Cross-country relay, Battersea Park",
+        "date": "2026-11-15",
+        "event_type": "sports",
+        "exp_reviews": 22.9,
+        "exp_qrp": 10.9
       }
     ],
-    "text": "All That Matters wins at expos and fairs. Best moment: lunchtime browsing between stalls, 12:00-14:00. Students rate it highest (4.4 stars from 101 reviews). Sample Superfood Puffs — Peri-Peri (Spicy peri-peri; savoury); lead with its price. Its label claims (Superfood Puffs, Full-power crunch, 107 KCAL per serving) speak to this crowd: Superfood Puffs and portion calorie wording → shoppers interested in snack nutrition. It is weakest at sports events, so bring other brands there. Best upcoming: Tech meetup and demo night, Barbican Centre on 2026-10-14, about 30 qualified reviews."
+    "text": "All That Matters wins at expos and fairs. Best moment: lunchtime browsing between stalls, 12:00-14:00. Impulse buyers like it most (affinity 0.77, then wellness seekers at 0.73; 4.4 stars from 31 of their reviews). Sample Superfood Puffs — Peri-Peri (Spicy peri-peri; savoury); lead with its saltiness. Its label claims (Superfood Puffs, Full-power crunch, 107 KCAL per serving) speak to this crowd: Superfood Puffs and portion calorie wording → shoppers interested in snack nutrition. It is weakest at performing-arts nights, so bring other brands there. Best upcoming: Rugby international screening, Big-screen pub, Brixton on 2026-10-31, about 12 qualified reviews."
   },
   "B02": {
     "brand_name": "Simply Roasted",
     "fit_by_type": {
-      "community": 0.548,
-      "concerts": 0.597,
-      "conferences": 0.593,
-      "expos": 0.663,
-      "festivals": 0.614,
-      "performing_arts": 0.732,
-      "sports": 0.409
+      "community": 0.331,
+      "concerts": 0.307,
+      "conferences": 0.305,
+      "expos": 0.343,
+      "festivals": 0.302,
+      "performing_arts": 0.309,
+      "sports": 0.317
     },
-    "best_type": "performing_arts",
-    "best_moment": "Interval drinks and a sweet treat (interval)",
-    "best_audience": "students",
-    "sample": "Sea Salt Potato Crisps (Sea Salt; savoury); lead with its packaging",
-    "avoid": "sports (fit 0.41); reviewers mark down its price",
+    "best_type": "expos",
+    "best_moment": "Lunchtime browsing between stalls (12:00-14:00)",
+    "best_audience": "impulse buyer",
+    "archetype_affinity": {
+      "wellness_seeker": 0.647,
+      "trend_enthusiast": 0.114,
+      "thoughtful_buyer": 0.671,
+      "smart_saver": 0.464,
+      "quality_seeker": 0.111,
+      "on_the_go_shopper": 0.494,
+      "impulse_buyer": 0.734,
+      "experience_explorer": 0.226,
+      "everyday_planner": 0.127,
+      "conscious_consumer": 0.158
+    },
+    "target_archetypes": [
+      "wellness_seeker",
+      "thoughtful_buyer",
+      "impulse_buyer"
+    ],
+    "sample": "Black Truffle Potato Crisps (Black Truffle; savoury); lead with its portion size",
+    "avoid": "festivals (fit 0.30); reviewers mark down its portion size",
     "top_events": [
       {
+        "event_id": "E014",
+        "name": "Run club social and brunch, Islington community hall",
+        "date": "2026-11-08",
+        "event_type": "community",
+        "exp_reviews": 1.8,
+        "exp_qrp": 0.6
+      },
+      {
         "event_id": "E005",
-        "name": "Contemporary dance show, Richmond Theatre",
-        "date": "2026-10-16",
-        "event_type": "performing_arts",
-        "exp_reviews": 3.9,
-        "exp_qrp": 2.4
+        "name": "Graduate careers fair, University campus, Mile End",
+        "date": "2026-10-19",
+        "event_type": "expos",
+        "exp_reviews": 91.5,
+        "exp_qrp": 22.9
       },
       {
-        "event_id": "E009",
-        "name": "Comedy night, West End theatre",
-        "date": "2026-10-30",
-        "event_type": "performing_arts",
-        "exp_reviews": 5.9,
-        "exp_qrp": 3.6
+        "event_id": "E011",
+        "name": "Food and drink expo, Olympia London",
+        "date": "2026-11-05",
+        "event_type": "expos",
+        "exp_reviews": 74.3,
+        "exp_qrp": 18.6
       },
       {
-        "event_id": "E027",
-        "name": "Contemporary dance show, Southbank Centre",
-        "date": "2026-12-03",
-        "event_type": "performing_arts",
-        "exp_reviews": 4.1,
-        "exp_qrp": 2.6
+        "event_id": "E024",
+        "name": "Graduate careers fair, ExCeL London",
+        "date": "2026-11-28",
+        "event_type": "expos",
+        "exp_reviews": 45.8,
+        "exp_qrp": 11.4
       },
       {
-        "event_id": "E028",
-        "name": "Comedy night, Hackney Empire",
-        "date": "2026-12-04",
-        "event_type": "performing_arts",
-        "exp_reviews": 9.1,
-        "exp_qrp": 5.7
-      },
-      {
-        "event_id": "E030",
-        "name": "Theatre premiere, Richmond Theatre",
-        "date": "2026-12-11",
-        "event_type": "performing_arts",
-        "exp_reviews": 5.8,
-        "exp_qrp": 3.6
+        "event_id": "E035",
+        "name": "Food and drink expo, University campus, Mile End",
+        "date": "2026-12-19",
+        "event_type": "expos",
+        "exp_reviews": 73.7,
+        "exp_qrp": 18.4
       }
     ],
-    "text": "Simply Roasted wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Students rate it highest (4.4 stars from 333 reviews). Sample Sea Salt Potato Crisps (Sea Salt; savoury); lead with its packaging. Its label claims (triple cooked potato crisps, 50% less fat*, Great Taste 2024) speak to this crowd: 50% less fat* → shoppers comparing snack fat; larger bag → sharing occasions. It is weakest at sports events, so bring other brands there. Best upcoming: Contemporary dance show, Richmond Theatre on 2026-10-16, about 2 qualified reviews."
+    "text": "Simply Roasted wins at expos and fairs. Best moment: lunchtime browsing between stalls, 12:00-14:00. Impulse buyers like it most (affinity 0.73, then thoughtful buyers at 0.67; 4.1 stars from 131 of their reviews). Sample Black Truffle Potato Crisps (Black Truffle; savoury); lead with its portion size. Its label claims (triple cooked potato crisps, 50% less fat*, 90 kcals, Great Taste) speak to this crowd: 50% less fat* and 90 kcals → shoppers comparing snack fat or portion calories. It is weakest at festivals, so bring other brands there. Best upcoming: Run club social and brunch, Islington community hall on 2026-11-08, about 1 qualified reviews."
   },
   "B03": {
     "brand_name": "The Protein Ball Co.",
     "fit_by_type": {
-      "community": 0.321,
-      "concerts": 0.476,
-      "conferences": 0.387,
-      "expos": 0.226,
-      "festivals": 0.47,
-      "performing_arts": 0.392,
-      "sports": 0.546
+      "community": 0.256,
+      "concerts": 0.272,
+      "conferences": 0.298,
+      "expos": 0.24,
+      "festivals": 0.259,
+      "performing_arts": 0.231,
+      "sports": 0.358
     },
     "best_type": "sports",
     "best_moment": "Just finished or full time, rehydrating and refuelling (finish)",
-    "best_audience": "fitness",
-    "sample": "Original Peanut Butter Protein Balls (Peanut butter; nutty); lead with its portability",
-    "avoid": "expos (fit 0.23); reviewers mark down its ingredients",
+    "best_audience": "wellness seeker",
+    "archetype_affinity": {
+      "wellness_seeker": 0.772,
+      "trend_enthusiast": 0.356,
+      "thoughtful_buyer": 0.386,
+      "smart_saver": 0.119,
+      "quality_seeker": 0.131,
+      "on_the_go_shopper": 0.566,
+      "impulse_buyer": 0.129,
+      "experience_explorer": 0.193,
+      "everyday_planner": 0.091,
+      "conscious_consumer": 0.4
+    },
+    "target_archetypes": [
+      "wellness_seeker",
+      "thoughtful_buyer",
+      "on_the_go_shopper"
+    ],
+    "sample": "Salted Caramel Protein Balls (Sweet salted caramel); lead with its taste",
+    "avoid": "performing arts (fit 0.23); reviewers mark down its energy boost",
     "top_events": [
       {
-        "event_id": "E004",
-        "name": "Big-match screening, Big-screen pub, Brixton",
-        "date": "2026-10-14",
-        "event_type": "sports",
-        "exp_reviews": 17.8,
-        "exp_qrp": 14.7
-      },
-      {
-        "event_id": "E006",
-        "name": "Park half marathon, Wembley Park",
-        "date": "2026-10-17",
-        "event_type": "sports",
-        "exp_reviews": 18.0,
-        "exp_qrp": 14.9
-      },
-      {
-        "event_id": "E013",
-        "name": "Park half marathon, Victoria Park",
-        "date": "2026-11-14",
-        "event_type": "sports",
-        "exp_reviews": 17.4,
-        "exp_qrp": 14.4
+        "event_id": "E010",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-03",
+        "event_type": "conferences",
+        "exp_reviews": 43.8,
+        "exp_qrp": 16.6
       },
       {
         "event_id": "E015",
-        "name": "Autumn 10K, Wembley Park",
-        "date": "2026-11-21",
-        "event_type": "sports",
-        "exp_reviews": 26.1,
-        "exp_qrp": 21.5
+        "name": "Startup summit, Canary Wharf conference centre",
+        "date": "2026-11-10",
+        "event_type": "conferences",
+        "exp_reviews": 26.9,
+        "exp_qrp": 10.2
       },
       {
-        "event_id": "E017",
-        "name": "Big-match screening, Big-screen bar, Shoreditch",
+        "event_id": "E016",
+        "name": "Weekend AI hackathon, Canary Wharf conference centre",
+        "date": "2026-11-10",
+        "event_type": "conferences",
+        "exp_reviews": 23.8,
+        "exp_qrp": 9.0
+      },
+      {
+        "event_id": "E008",
+        "name": "Rugby international screening, Big-screen pub, Brixton",
+        "date": "2026-10-31",
+        "event_type": "sports",
+        "exp_reviews": 25.4,
+        "exp_qrp": 13.9
+      },
+      {
+        "event_id": "E021",
+        "name": "Rugby international screening, Big-screen bar, Shoreditch",
         "date": "2026-11-21",
         "event_type": "sports",
-        "exp_reviews": 17.8,
-        "exp_qrp": 14.7
+        "exp_reviews": 30.3,
+        "exp_qrp": 16.6
       }
     ],
-    "text": "The Protein Ball Co. wins at sports events. Best moment: just finished or full time, rehydrating and refuelling, at the finish. Fitness rate it highest (3.9 stars from 125 reviews). Sample Original Peanut Butter Protein Balls (Peanut butter; nutty); lead with its portability. Its label claims (10G HIGH PROTEIN, NO ADDED SUGAR, NO ADDED JUNK) speak to this crowd: 10G HIGH PROTEIN → protein seekers; NO ADDED SUGAR → sugar-conscious shoppers. It is weakest at expos and fairs, so bring other brands there. Best upcoming: Big-match screening, Big-screen pub, Brixton on 2026-10-14, about 15 qualified reviews."
+    "text": "The Protein Ball Co. wins at sports events. Best moment: just finished or full time, rehydrating and refuelling, at the finish. Wellness seekers like it most (affinity 0.77, then on the go shoppers at 0.57; 3.7 stars from 112 of their reviews). Sample Salted Caramel Protein Balls (Sweet salted caramel); lead with its taste. Its label claims (PLANT-BASED, 10G HIGH PROTEIN, NO ADDED SUGAR*, NO ADDED JUNK*) speak to this crowd: 10G HIGH PROTEIN → protein seekers; PLANT-BASED → plant-based shoppers; NO ADDED SUGAR → sugar-conscious shoppers. It is weakest at performing-arts nights, so bring other brands there. Best upcoming: Weekend AI hackathon, Here East on 2026-11-03, about 17 qualified reviews."
   },
   "B04": {
     "brand_name": "Well & Truly",
     "fit_by_type": {
-      "community": 0.902,
-      "concerts": 0.566,
-      "conferences": 0.464,
-      "expos": 0.554,
-      "festivals": 0.718,
-      "performing_arts": 0.988,
-      "sports": 0.325
+      "community": 0.449,
+      "concerts": 0.333,
+      "conferences": 0.322,
+      "expos": 0.353,
+      "festivals": 0.348,
+      "performing_arts": 0.42,
+      "sports": 0.375
     },
-    "best_type": "performing_arts",
-    "best_moment": "Interval drinks and a sweet treat (interval)",
-    "best_audience": "foodies",
-    "sample": "Crunchies — Really Cheesy (Really Cheesy; savoury); lead with its crunch",
-    "avoid": "sports (fit 0.33); reviewers mark down its price",
+    "best_type": "community",
+    "best_moment": "Browsing the market, or lingering after the run club (11:00-13:00)",
+    "best_audience": "impulse buyer",
+    "archetype_affinity": {
+      "wellness_seeker": 0.662,
+      "trend_enthusiast": 0.161,
+      "thoughtful_buyer": 0.622,
+      "smart_saver": 0.298,
+      "quality_seeker": 0.1,
+      "on_the_go_shopper": 0.559,
+      "impulse_buyer": 0.84,
+      "experience_explorer": 0.169,
+      "everyday_planner": 0.493,
+      "conscious_consumer": 0.363
+    },
+    "target_archetypes": [
+      "wellness_seeker",
+      "thoughtful_buyer",
+      "impulse_buyer"
+    ],
+    "sample": "Crunchies — Smokey Bacon (Smokey Bacon; savoury); lead with its saltiness",
+    "avoid": "conferences (fit 0.32); reviewers mark down its saltiness",
     "top_events": [
       {
-        "event_id": "E005",
-        "name": "Contemporary dance show, Richmond Theatre",
-        "date": "2026-10-16",
-        "event_type": "performing_arts",
-        "exp_reviews": 4.6,
-        "exp_qrp": 4.6
+        "event_id": "E026",
+        "name": "Makers' and food market, Brockley Market",
+        "date": "2026-11-29",
+        "event_type": "community",
+        "exp_reviews": 22.3,
+        "exp_qrp": 7.3
       },
       {
-        "event_id": "E009",
-        "name": "Comedy night, West End theatre",
-        "date": "2026-10-30",
-        "event_type": "performing_arts",
-        "exp_reviews": 6.9,
-        "exp_qrp": 6.9
+        "event_id": "E023",
+        "name": "Makers' and food market, Broadway Market",
+        "date": "2026-11-22",
+        "event_type": "community",
+        "exp_reviews": 31.1,
+        "exp_qrp": 9.1
       },
       {
-        "event_id": "E027",
-        "name": "Contemporary dance show, Southbank Centre",
-        "date": "2026-12-03",
-        "event_type": "performing_arts",
-        "exp_reviews": 4.9,
-        "exp_qrp": 4.9
+        "event_id": "E029",
+        "name": "Family fun day, Ealing Common",
+        "date": "2026-12-05",
+        "event_type": "community",
+        "exp_reviews": 29.2,
+        "exp_qrp": 8.6
       },
       {
-        "event_id": "E028",
-        "name": "Comedy night, Hackney Empire",
-        "date": "2026-12-04",
-        "event_type": "performing_arts",
-        "exp_reviews": 10.7,
-        "exp_qrp": 10.7
+        "event_id": "E001",
+        "name": "Makers' and food market, Brockley Market",
+        "date": "2026-10-10",
+        "event_type": "community",
+        "exp_reviews": 12.1,
+        "exp_qrp": 3.5
       },
       {
-        "event_id": "E030",
-        "name": "Theatre premiere, Richmond Theatre",
-        "date": "2026-12-11",
-        "event_type": "performing_arts",
-        "exp_reviews": 6.8,
-        "exp_qrp": 6.8
+        "event_id": "E025",
+        "name": "Family fun day, Maltby Street Market",
+        "date": "2026-11-28",
+        "event_type": "community",
+        "exp_reviews": 38.0,
+        "exp_qrp": 11.2
       }
     ],
-    "text": "Well & Truly wins at performing-arts nights. Best moment: interval drinks and a sweet treat, in the interval. Foodies rate it highest (4.1 stars from 198 reviews). Sample Crunchies — Really Cheesy (Really Cheesy; savoury); lead with its crunch. Its label claims (40% LESS FAT*, GLUTEN FREE, ALL NATURAL INGREDIENTS, Great Taste) speak to this crowd: GLUTEN FREE → gluten-free shoppers; less-fat wording → mindful snackers. It is weakest at sports events, so bring other brands there. Best upcoming: Contemporary dance show, Richmond Theatre on 2026-10-16, about 5 qualified reviews."
+    "text": "Well & Truly wins at community events. Best moment: browsing the market, or lingering after the run club, 11:00-13:00. Impulse buyers like it most (affinity 0.84, then wellness seekers at 0.66; 3.9 stars from 137 of their reviews). Sample Crunchies — Smokey Bacon (Smokey Bacon; savoury); lead with its saltiness. Its label claims (40% LESS FAT*, GLUTEN FREE, 50% LESS SALT*, OINK-FREE! AKA VEGAN FRIENDLY) speak to this crowd: GLUTEN FREE → gluten-free shoppers; less-fat wording → mindful snackers. VEGAN FRIENDLY → plant-based shoppers despite bacon flavour. It is weakest at conferences and hackathons, so bring other brands there. Best upcoming: Makers' and food market, Brockley Market on 2026-11-29, about 7 qualified reviews."
   },
   "B05": {
     "brand_name": "INDI",
     "fit_by_type": {
-      "community": 0.245,
-      "concerts": 0.52,
-      "conferences": 0.889,
-      "expos": 0.668,
-      "festivals": 0.357,
-      "performing_arts": 0.348,
-      "sports": 0.306
+      "community": 0.302,
+      "concerts": 0.262,
+      "conferences": 0.419,
+      "expos": 0.34,
+      "festivals": 0.261,
+      "performing_arts": 0.272,
+      "sports": 0.332
     },
     "best_type": "conferences",
     "best_moment": "Mid-afternoon slump at the desks (15:00-16:30)",
-    "best_audience": "foodies",
+    "best_audience": "conscious consumer",
+    "archetype_affinity": {
+      "wellness_seeker": 0.662,
+      "trend_enthusiast": 0.51,
+      "thoughtful_buyer": 0.608,
+      "smart_saver": 0.312,
+      "quality_seeker": 0.092,
+      "on_the_go_shopper": 0.642,
+      "impulse_buyer": 0.158,
+      "experience_explorer": 0.105,
+      "everyday_planner": 0.512,
+      "conscious_consumer": 0.908
+    },
+    "target_archetypes": [
+      "wellness_seeker",
+      "on_the_go_shopper",
+      "conscious_consumer"
+    ],
     "sample": "Brain Bar (Cocoa; blueberry; cranberry; nuts); lead with its price",
-    "avoid": "community (fit 0.24); reviewers mark down its packaging",
+    "avoid": "festivals (fit 0.26); reviewers mark down its price",
     "top_events": [
       {
-        "event_id": "E003",
-        "name": "Tech meetup and demo night, Barbican Centre",
-        "date": "2026-10-14",
-        "event_type": "conferences",
-        "exp_reviews": 37.3,
-        "exp_qrp": 36.7
-      },
-      {
-        "event_id": "E011",
-        "name": "Weekend AI hackathon, Here East",
-        "date": "2026-11-07",
-        "event_type": "conferences",
-        "exp_reviews": 46.9,
-        "exp_qrp": 46.1
-      },
-      {
-        "event_id": "E019",
-        "name": "Tech meetup and demo night, Here East",
-        "date": "2026-11-22",
-        "event_type": "conferences",
-        "exp_reviews": 52.9,
-        "exp_qrp": 52.0
-      },
-      {
-        "event_id": "E033",
-        "name": "Weekend AI hackathon, Canary Wharf conference centre",
-        "date": "2026-12-13",
-        "event_type": "conferences",
-        "exp_reviews": 13.1,
-        "exp_qrp": 12.8
-      },
-      {
-        "event_id": "E035",
+        "event_id": "E007",
         "name": "Tech meetup and demo night, Canary Wharf conference centre",
-        "date": "2026-12-19",
+        "date": "2026-10-28",
         "event_type": "conferences",
-        "exp_reviews": 59.8,
-        "exp_qrp": 58.9
+        "exp_reviews": 10.2,
+        "exp_qrp": 3.1
+      },
+      {
+        "event_id": "E010",
+        "name": "Weekend AI hackathon, Here East",
+        "date": "2026-11-03",
+        "event_type": "conferences",
+        "exp_reviews": 47.3,
+        "exp_qrp": 14.2
+      },
+      {
+        "event_id": "E015",
+        "name": "Startup summit, Canary Wharf conference centre",
+        "date": "2026-11-10",
+        "event_type": "conferences",
+        "exp_reviews": 29.1,
+        "exp_qrp": 8.7
+      },
+      {
+        "event_id": "E016",
+        "name": "Weekend AI hackathon, Canary Wharf conference centre",
+        "date": "2026-11-10",
+        "event_type": "conferences",
+        "exp_reviews": 25.7,
+        "exp_qrp": 7.7
+      },
+      {
+        "event_id": "E030",
+        "name": "Student hackathon, King's Cross tech campus",
+        "date": "2026-12-06",
+        "event_type": "conferences",
+        "exp_reviews": 12.8,
+        "exp_qrp": 3.9
       }
     ],
-    "text": "INDI wins at conferences and hackathons. Best moment: mid-afternoon slump at the desks, 15:00-16:30. Foodies rate it highest (3.9 stars from 68 reviews). Sample Brain Bar (Cocoa; blueberry; cranberry; nuts); lead with its price. Its label claims (Brain Bar, 6G HIGH FIBRE, 16 BRAIN FOODS, +VIT B12, C & D3, +IRON & ZINC, GLUTEN FREE, VEGAN) speak to this crowd: Brain Bar → focus-oriented positioning; HIGH FIBRE → fibre seekers; VEGAN → plant-based shoppers. It is weakest at community events, so bring other brands there. Best upcoming: Tech meetup and demo night, Barbican Centre on 2026-10-14, about 37 qualified reviews."
+    "text": "INDI wins at conferences and hackathons. Best moment: mid-afternoon slump at the desks, 15:00-16:30. Conscious consumers like it most (affinity 0.91, then wellness seekers at 0.66; 3.8 stars from 31 of their reviews). Sample Brain Bar (Cocoa; blueberry; cranberry; nuts); lead with its price. Its label claims (Brain Bar, 6G HIGH FIBRE, 16 BRAIN FOODS, +VIT B12, C & D3, +IRON & ZINC, GLUTEN FREE, VEGAN) speak to this crowd: Brain Bar → focus-oriented positioning; HIGH FIBRE → fibre seekers; VEGAN → plant-based shoppers. It is weakest at festivals, so bring other brands there. Best upcoming: Tech meetup and demo night, Canary Wharf conference centre on 2026-10-28, about 3 qualified reviews."
   }
 }

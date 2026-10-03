@@ -1,11 +1,11 @@
 {
-  "uplift": 0.3695,
-  "ci_low": 0.2808,
-  "ci_high": 0.4484,
-  "qrp_tool": 186.35,
-  "qrp_habit": 136.08,
-  "cost_per_qr_tool": 2.22,
-  "cost_per_qr_habit": 3.04,
+  "uplift": 0.0993,
+  "ci_low": 0.048,
+  "ci_high": 0.1727,
+  "qrp_tool": 62.81,
+  "qrp_habit": 57.14,
+  "cost_per_qr_tool": 6.6,
+  "cost_per_qr_habit": 7.25,
   "n_test": 12,
   "method": "tool vs habit lineup at the same 12 held-out pop-ups; outcomes from the synthetic world, 95% bootstrap CI",
   "per_popup": [
@@ -13,159 +13,158 @@
       "popup_id": "P049",
       "event_type": "conferences",
       "tool_lineup": [
-        "B05",
-        "B13",
+        "B31",
+        "B07",
         "B34",
-        "B46",
-        "B01"
+        "B03",
+        "B48"
       ],
-      "qrp_tool": 343.5,
-      "qrp_habit": 230.7
+      "qrp_tool": 97.1,
+      "qrp_habit": 88.9
     },
     {
       "popup_id": "P050",
       "event_type": "performing_arts",
       "tool_lineup": [
-        "B04",
-        "B09",
+        "B19",
         "B26",
-        "B44",
-        "B39"
+        "B49",
+        "B48"
       ],
-      "qrp_tool": 16.6,
-      "qrp_habit": 13.0
+      "qrp_tool": 4.9,
+      "qrp_habit": 3.5
     },
     {
       "popup_id": "P051",
       "event_type": "festivals",
       "tool_lineup": [
-        "B04",
-        "B17",
-        "B13",
-        "B09",
-        "B39"
+        "B36",
+        "B48",
+        "B26",
+        "B31",
+        "B21"
       ],
-      "qrp_tool": 88.8,
-      "qrp_habit": 83.4
+      "qrp_tool": 42.5,
+      "qrp_habit": 34.3
     },
     {
       "popup_id": "P052",
       "event_type": "community",
       "tool_lineup": [
+        "B26",
         "B04",
+        "B07",
         "B39",
-        "B09",
-        "B10",
-        "B36"
+        "B08"
       ],
-      "qrp_tool": 61.1,
-      "qrp_habit": 41.9
+      "qrp_tool": 26.0,
+      "qrp_habit": 20.3
     },
     {
       "popup_id": "P053",
       "event_type": "expos",
       "tool_lineup": [
-        "B05",
-        "B04",
+        "B31",
+        "B07",
+        "B36",
         "B13",
-        "B09",
-        "B07"
+        "B27"
       ],
-      "qrp_tool": 411.6,
-      "qrp_habit": 325.3
+      "qrp_tool": 131.1,
+      "qrp_habit": 131.1
     },
     {
       "popup_id": "P054",
       "event_type": "expos",
       "tool_lineup": [
-        "B05",
-        "B04",
+        "B31",
+        "B07",
+        "B36",
         "B13",
-        "B09",
-        "B07"
+        "B27"
       ],
-      "qrp_tool": 278.9,
-      "qrp_habit": 220.4
+      "qrp_tool": 88.8,
+      "qrp_habit": 88.8
     },
     {
       "popup_id": "P055",
       "event_type": "performing_arts",
       "tool_lineup": [
+        "B45",
+        "B19",
         "B04",
-        "B09",
-        "B26",
-        "B44",
-        "B39"
+        "B16",
+        "B06"
       ],
-      "qrp_tool": 33.3,
-      "qrp_habit": 26.1
+      "qrp_tool": 12.3,
+      "qrp_habit": 9.1
     },
     {
       "popup_id": "P056",
       "event_type": "community",
       "tool_lineup": [
-        "B04",
-        "B39",
-        "B09",
-        "B10",
-        "B36"
+        "B36",
+        "B26",
+        "B07",
+        "B08",
+        "B43"
       ],
-      "qrp_tool": 144.5,
-      "qrp_habit": 100.4
+      "qrp_tool": 61.7,
+      "qrp_habit": 48.8
     },
     {
       "popup_id": "P057",
       "event_type": "sports",
       "tool_lineup": [
-        "B17",
         "B15",
+        "B24",
         "B36",
-        "B39",
-        "B06"
+        "B07",
+        "B17"
       ],
-      "qrp_tool": 75.9,
-      "qrp_habit": 63.1
+      "qrp_tool": 46.3,
+      "qrp_habit": 46.2
     },
     {
       "popup_id": "P058",
       "event_type": "conferences",
       "tool_lineup": [
-        "B05",
-        "B13",
+        "B31",
+        "B07",
         "B34",
-        "B46",
-        "B01"
+        "B03",
+        "B48"
       ],
-      "qrp_tool": 370.0,
-      "qrp_habit": 248.5
+      "qrp_tool": 104.6,
+      "qrp_habit": 95.8
     },
     {
       "popup_id": "P059",
       "event_type": "community",
       "tool_lineup": [
+        "B26",
         "B04",
+        "B07",
         "B39",
-        "B09",
-        "B10",
-        "B36"
+        "B08"
       ],
-      "qrp_tool": 153.8,
-      "qrp_habit": 106.8
+      "qrp_tool": 65.4,
+      "qrp_habit": 51.9
     },
     {
       "popup_id": "P060",
       "event_type": "conferences",
       "tool_lineup": [
-        "B05",
-        "B13",
+        "B31",
+        "B07",
         "B34",
-        "B46",
-        "B01"
+        "B03",
+        "B48"
       ],
-      "qrp_tool": 258.1,
-      "qrp_habit": 173.3
+      "qrp_tool": 73.0,
+      "qrp_habit": 66.8
     }
   ],
-  "poisson_test_deviance": 2.47,
-  "footfall_baseline_test_deviance": 65.285
+  "poisson_test_deviance": 1.976,
+  "footfall_baseline_test_deviance": 67.135
 }

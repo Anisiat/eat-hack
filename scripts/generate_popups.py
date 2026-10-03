@@ -24,7 +24,9 @@ SEED = 42
 
 # ---------------------------------------------------------------- shared taxonomy
 NEEDS = ["hydrate", "recover", "energy", "focus", "discovery", "sharing", "treat", "value"]
-SEGMENTS = ["students", "young_professionals", "fitness", "families", "foodies"]
+# WatchHumans archetypes, built from each user's purchasing data in the app
+ARCHETYPES = ["wellness_seeker", "trend_enthusiast", "thoughtful_buyer", "smart_saver", "quality_seeker",
+              "on_the_go_shopper", "impulse_buyer", "experience_explorer", "everyday_planner", "conscious_consumer"]
 EVENT_TYPES = ["community", "concerts", "conferences", "expos", "festivals", "performing_arts", "sports"]
 CORE_CATEGORIES = {"drink", "savoury", "sweet", "condiment"}
 
@@ -33,11 +35,12 @@ CORE_CATEGORIES = {"drink", "savoury", "sweet", "condiment"}
 _bf = pd.read_csv(Path(__file__).resolve().parents[1] / "brand_features.csv")
 BRAND = {}
 for r in _bf.itertuples():
-    targets = [s for s in SEGMENTS if getattr(r, f"target_{s}") == 1]
+    targets = [a for a in ARCHETYPES if getattr(r, f"target_{a}") == 1]
     BRAND[r.brand_id] = dict(brand_id=r.brand_id, brand_name=r.brand_name, category=r.category,
                              sub_category=r.sub_category, description=r.description,
                              needs=np.array([getattr(r, f"need_{n}") for n in NEEDS], float),
-                             target=np.array([1.0 if s in targets else 0.0 for s in SEGMENTS]),
+                             target=np.array([1.0 if a in targets else 0.0 for a in ARCHETYPES]),
+                             aff=np.array([getattr(r, f"arch_{a}") for a in ARCHETYPES], float),
                              targets=targets, needs_chilling=r.needs_chilling, frozen=r.frozen, vegan=r.vegan,
                              gluten_free=r.gluten_free, adults_only=r.adults_only,
                              hot_drink=int(r.category == "drink" and r.sheet_category == "Pantry"))
@@ -45,9 +48,9 @@ FAVOURITE_FIVE = _bf.loc[_bf["favourite_five"] == 1, "brand_id"].tolist()   # RG
 
 # ---------------------------------------------------------------- event types
 # Seven event categories (PredictHQ-style). Each blends the sub-types listed in its names.
-# needs: same order as NEEDS; mix: audience share by SEGMENTS (sums to 1)
+# needs: same order as NEEDS; mix: expected crowd share by ARCHETYPES (sums to 1)
 EVENT = {
-    "sports": dict(needs=[1., .9, .5, .1, .2, .5, .2, .3], mix=[.10, .35, .40, .10, .05],
+    "sports": dict(needs=[1., .9, .5, .1, .2, .5, .2, .3], mix=[.30, .08, .08, .07, .06, .12, .06, .08, .10, .05],
                    footfall=(300, 1500), dwell=2, stop=.22, signup=.28, stall=(0, 120), staff=2, indoor=0.3,
                    start=["09:00", "17:00", "19:45"], days=[1, 2, 5, 6],
                    names=["Community 5K finish", "10K race finish", "Half marathon finish",
@@ -55,7 +58,7 @@ EVENT = {
                    boroughs=["Richmond upon Thames", "Wandsworth", "Greenwich", "Hackney", "Tower Hamlets",
                              "Southwark", "Lambeth", "Hammersmith and Fulham", "Brent", "Kingston upon Thames",
                              "Barnet", "Waltham Forest"]),
-    "community": dict(needs=[.3, .2, .2, .1, .9, .7, .7, .5], mix=[.10, .25, .15, .25, .25],
+    "community": dict(needs=[.3, .2, .2, .1, .9, .7, .7, .5], mix=[.10, .06, .12, .12, .10, .06, .08, .10, .14, .12],
                       footfall=(200, 2000), dwell=3, stop=.18, signup=.25, stall=(0, 200), staff=2, indoor=0.3,
                       start=["09:00", "11:00"], days=[5, 6],
                       names=["Weekend food market", "Farmers' market", "Run club social", "Family fun day",
@@ -63,33 +66,33 @@ EVENT = {
                       boroughs=["Southwark", "Hackney", "Lewisham", "Greenwich", "Camden", "Islington", "Lambeth",
                                 "Waltham Forest", "Haringey", "Croydon", "Ealing", "Merton", "Newham",
                                 "Richmond upon Thames"]),
-    "concerts": dict(needs=[.9, .2, .8, 0., .3, .4, .3, .3], mix=[.35, .45, .05, .00, .15],
+    "concerts": dict(needs=[.9, .2, .8, 0., .3, .4, .3, .3], mix=[.04, .20, .04, .08, .05, .10, .22, .20, .03, .04],
                      footfall=(300, 2000), dwell=4, stop=.10, signup=.15, stall=(150, 400), staff=3, indoor=1.0,
                      start=["19:30"], days=[3, 4, 5],
                      names=["Live gig", "Club night", "DJ night", "Arena concert"],
                      boroughs=["Hackney", "Camden", "Lambeth", "Islington", "Southwark", "Tower Hamlets", "Brent",
                                "Greenwich", "Hammersmith and Fulham"]),
-    "conferences": dict(needs=[.4, .1, .9, 1., .4, .3, .4, .6], mix=[.35, .55, .04, .02, .04],
+    "conferences": dict(needs=[.4, .1, .9, 1., .4, .3, .4, .6], mix=[.08, .18, .10, .08, .08, .22, .08, .10, .05, .03],
                         footfall=(100, 800), dwell=7, stop=.45, signup=.40, stall=(0, 150), staff=2, indoor=1.0,
                         start=["09:30", "10:00"], days=[1, 2, 3, 5, 6],
                         names=["Weekend AI hackathon", "Student hackathon", "Fintech hack day", "Tech conference",
                                "Startup summit"],
                         boroughs=["Islington", "Hackney", "Camden", "Tower Hamlets", "City of London",
                                   "Westminster", "Southwark", "Newham"]),
-    "expos": dict(needs=[.2, 0., .6, .4, .8, .3, .5, .9], mix=[.55, .20, .05, .05, .15],
+    "expos": dict(needs=[.2, 0., .6, .4, .8, .3, .5, .9], mix=[.07, .15, .10, .18, .08, .10, .12, .10, .06, .04],
                   footfall=(500, 3000), dwell=4, stop=.18, signup=.40, stall=(50, 250), staff=3, indoor=0.9,
                   start=["10:00", "11:00"], days=[0, 1, 2, 3, 5],
                   names=["Freshers' fair", "Societies fair", "Food and drink expo", "Lifestyle show"],
                   boroughs=["Camden", "Westminster", "Tower Hamlets", "Kensington and Chelsea", "Southwark",
                             "Islington", "Newham", "Hammersmith and Fulham", "Hillingdon"]),
-    "festivals": dict(needs=[1., .3, .6, 0., .7, .6, .7, .3], mix=[.25, .40, .10, .10, .15],
+    "festivals": dict(needs=[1., .3, .6, 0., .7, .6, .7, .3], mix=[.06, .16, .05, .07, .08, .08, .18, .22, .04, .06],
                       footfall=(1500, 5000), dwell=7, stop=.08, signup=.20, stall=(300, 800), staff=4, indoor=0.0,
                       start=["12:00"], days=[5, 6],
                       names=["Summer music festival", "Food and music festival", "Street food festival",
                              "Street festival"],
                       boroughs=["Newham", "Lambeth", "Hackney", "Greenwich", "Haringey", "Tower Hamlets",
                                 "Waltham Forest", "Brent", "Barking and Dagenham", "Croydon"]),
-    "performing_arts": dict(needs=[.3, 0., .2, .1, .4, .8, .9, .3], mix=[.10, .45, .05, .10, .30],
+    "performing_arts": dict(needs=[.3, 0., .2, .1, .4, .8, .9, .3], mix=[.05, .08, .14, .05, .18, .04, .10, .18, .08, .10],
                             footfall=(200, 1200), dwell=2.5, stop=.12, signup=.20, stall=(50, 200), staff=2,
                             indoor=0.85, start=["18:30", "19:00"], days=[3, 4, 5],
                             names=["Theatre interval", "Comedy night", "Dance show", "Open-air theatre"],
@@ -113,18 +116,22 @@ FESTIVAL_MONTHS = {5, 6, 7, 8, 9}
 
 # ---------------------------------------------------------------- hidden truth (never written to CSV)
 QUALITY = dict(zip(sorted(BRAND), np.random.default_rng(SEED + 1).normal(0, 0.25, len(BRAND))))
+# true archetype affinities: the brand sheet's reading plus what only real reviews would reveal
+_rng_aff = np.random.default_rng(SEED + 3)
+TRUE_AFF = {b: np.clip(BRAND[b]["aff"] + _rng_aff.normal(0, 0.12, len(ARCHETYPES)), 0.05, 1)
+            for b in sorted(BRAND)}
 
 
-def segment_match(bid, event_type):
-    """Share of the event's crowd inside the brand's target segments."""
+def target_share(bid, event_type):
+    """Share of the event's crowd inside the brand's target archetypes."""
     return float(EVENT[event_type]["mix"] @ BRAND[bid]["target"])
 
 
-def true_fit(bid, event):
-    """Hidden fit between a brand and an event, 0 to 1."""
+def _moment_context(bid, event):
+    """Hidden moment fit (need states) times practical context, for brand bid at event."""
     b, p = BRAND[bid], EVENT[event["event_type"]]
-    cos = float(b["needs"] @ p["needs"] / (np.linalg.norm(b["needs"]) * np.linalg.norm(p["needs"])))
-    f = cos * (0.4 + 0.6 * segment_match(bid, event["event_type"]))
+    cos = float(b["needs"] @ p["needs"] / (np.linalg.norm(b["needs"]) * np.linalg.norm(p["needs"]) + 1e-9))
+    f = 0.5 + 0.5 * cos
     outdoor = not event["indoor"]
     if b["needs_chilling"] and outdoor and event["event_type"] in ("sports", "festivals", "community"):
         f *= 0.85
@@ -134,14 +141,21 @@ def true_fit(bid, event):
         f *= 0.6
     if b["adults_only"] and event["event_type"] in ("community", "expos", "conferences"):
         f *= 0.3        # alcohol or CBD at family, student and work events lands badly
-    return float(np.clip(f, 0, 1))
+    return f
+
+
+def true_fit(bid, event):
+    """Hidden fit between a brand and an event, 0 to 1: how much the expected crowd likes it, in the moment."""
+    match = float(EVENT[event["event_type"]]["mix"] @ TRUE_AFF[bid])
+    return float(np.clip(_moment_context(bid, event) * (0.2 + 1.2 * match), 0, 1))
 
 
 def lineup_appeal(lineup, event):
-    fits = [true_fit(b, event) for b in lineup]
-    cover = len({BRAND[b]["category"] for b in lineup} & CORE_CATEGORIES) / 4
-    same_sub = sum(BRAND[a]["sub_category"] == BRAND[c]["sub_category"] for a, c in combinations(lineup, 2))
-    return float(np.clip(np.mean(fits) * (0.85 + 0.15 * cover) - 0.05 * same_sub, 0, 1))
+    """People stop when the stall has something their archetype likes: each archetype in the crowd is drawn
+    by its favourite product in the lineup."""
+    mix = EVENT[event["event_type"]]["mix"]
+    per_arch = np.array([_moment_context(b, event) * (0.2 + 1.2 * TRUE_AFF[b]) for b in lineup])
+    return float(np.clip(mix @ per_arch.max(0), 0, 1))
 
 
 def simulate(event, lineup, seed=None):
@@ -162,7 +176,7 @@ def simulate(event, lineup, seed=None):
     for bid in lineup:
         fit = true_fit(bid, event)
         r = (0.25 + 0.3 * fit) * dwell_factor
-        q = segment_match(bid, event["event_type"])
+        q = target_share(bid, event["event_type"])
         mean_rating = float(np.clip(3.0 + 1.8 * fit + QUALITY[bid], 1, 5))
         if rng is None:
             reviews, qualified, rating = signups * r, signups * r * q, mean_rating

@@ -4,13 +4,13 @@ generate_watchhumans_data.py - synthetic WatchHumans users and reviews for Pop-u
 Reads (from the output folder): popups.csv, popup_brands.csv
 Reads: data/raw/borough_census_2021.csv  (run get_borough_census.py first)
 Writes three files to the output folder (default: repo root):
-  users.csv     5,000 WatchHumans users: borough, segment, traits, category affinities, diet, sign-up source
+  users.csv     5,000 WatchHumans users: borough, archetype scores, traits, category affinities, diet, sign-up source
   reviews.csv   about 20,000 reviews; pop-up reviews reconcile exactly with popup_brands.csv
   boroughs.csv  33 London boroughs: real Census 2021 population and 18-34 share, plus WatchHumans users
 
-Segments match the brand targets in brand_features.csv. A review is qualified when the reviewer's primary
-segment is one of the brand's target segments. Hidden truth (brand quality) comes from
-generate_popups.py and is never written out.
+Each user has a primary archetype (one of the 10 WatchHumans archetypes) and a score on all 10. A review is
+qualified when the reviewer's primary archetype is one of the brand's target archetypes. Hidden truth (brand
+quality, true archetype affinities) comes from generate_popups.py and is never written out.
 
 Run:  python scripts/generate_watchhumans_data.py [output_folder]
 """
@@ -21,7 +21,9 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from generate_popups import BRAND, EVENT, QUALITY, SEGMENTS  # noqa: E402
+from generate_popups import ARCHETYPES, BRAND, EVENT, QUALITY, TRUE_AFF  # noqa: E402
+
+SEGMENTS = ARCHETYPES      # users' primary archetype plays the role a segment used to
 
 SEED = 42
 N_USERS = 5000
@@ -34,41 +36,30 @@ DIETS = ["vegetarian", "vegan", "gluten_free", "dairy_free", "nut_allergy"]
 
 rng = np.random.default_rng(SEED)
 
-# ---------------------------------------------------------------- segment profiles
-# age: (mean, sd, low, high); traits and category affinities: expected values 0 to 1
-SEGMENT_PROFILE = {
-    "students": dict(
-        age=(21, 2.5, 18, 26),
-        traits=dict(health_consciousness=.45, novelty_seeking=.75, social_influence=.80, price_sensitivity=.90,
-                    convenience_orientation=.70, sustainability_orientation=.55),
-        affinity=dict(drink=.70, savoury=.75, sweet=.75, condiment=.45, functional=.55, other=.40),
-        diet_mult=1.2),
-    "young_professionals": dict(
-        age=(29, 4, 22, 40),
-        traits=dict(health_consciousness=.60, novelty_seeking=.70, social_influence=.65, price_sensitivity=.45,
-                    convenience_orientation=.85, sustainability_orientation=.60),
-        affinity=dict(drink=.75, savoury=.65, sweet=.55, condiment=.60, functional=.65, other=.40),
-        diet_mult=1.2),
-    "fitness": dict(
-        age=(31, 6, 19, 50),
-        traits=dict(health_consciousness=.90, novelty_seeking=.50, social_influence=.55, price_sensitivity=.50,
-                    convenience_orientation=.65, sustainability_orientation=.60),
-        affinity=dict(drink=.70, savoury=.40, sweet=.30, condiment=.35, functional=.90, other=.40),
-        diet_mult=1.6),
-    "families": dict(
-        age=(38, 5, 27, 55),
-        traits=dict(health_consciousness=.65, novelty_seeking=.35, social_influence=.40, price_sensitivity=.70,
-                    convenience_orientation=.75, sustainability_orientation=.55),
-        affinity=dict(drink=.50, savoury=.60, sweet=.75, condiment=.50, functional=.35, other=.40),
-        diet_mult=0.9),
-    "foodies": dict(
-        age=(33, 7, 21, 55),
-        traits=dict(health_consciousness=.60, novelty_seeking=.90, social_influence=.60, price_sensitivity=.30,
-                    convenience_orientation=.35, sustainability_orientation=.75),
-        affinity=dict(drink=.65, savoury=.70, sweet=.60, condiment=.95, functional=.40, other=.40),
-        diet_mult=1.5),
+# ---------------------------------------------------------------- archetype profiles
+# The 10 WatchHumans archetypes. Prevalence among users who sign up organically (synthetic assumption).
+ARCHETYPE_PREVALENCE = dict(wellness_seeker=.12, trend_enthusiast=.13, thoughtful_buyer=.11, smart_saver=.09,
+                            quality_seeker=.10, on_the_go_shopper=.10, impulse_buyer=.08, experience_explorer=.11,
+                            everyday_planner=.08, conscious_consumer=.08)
+# age: (mean, sd, low, high); traits and food-category affinities: expected values 0 to 1
+_T = ["health_consciousness", "novelty_seeking", "social_influence", "price_sensitivity", "convenience_orientation",
+      "sustainability_orientation"]
+_C = ["drink", "savoury", "sweet", "condiment", "functional", "other"]
+_P = {  # age, traits (_T order), category affinities (_C order), diet multiplier
+    "wellness_seeker":     ((31, 6), [.90, .60, .55, .45, .55, .75], [.75, .45, .35, .45, .90, .50], 1.8),
+    "trend_enthusiast":    ((25, 4), [.50, .95, .95, .35, .55, .55], [.80, .60, .65, .55, .65, .45], 1.1),
+    "thoughtful_buyer":    ((36, 8), [.65, .40, .35, .55, .35, .70], [.60, .50, .45, .65, .55, .40], 1.3),
+    "smart_saver":         ((27, 7), [.45, .35, .35, .95, .60, .45], [.60, .70, .65, .50, .40, .35], 0.8),
+    "quality_seeker":      ((38, 8), [.65, .55, .45, .15, .35, .65], [.70, .55, .60, .85, .50, .50], 1.0),
+    "on_the_go_shopper":   ((30, 6), [.50, .45, .45, .50, .95, .40], [.80, .70, .55, .30, .70, .55], 0.8),
+    "impulse_buyer":       ((24, 4), [.40, .75, .75, .55, .70, .35], [.75, .80, .85, .45, .40, .40], 0.8),
+    "experience_explorer": ((29, 6), [.55, .90, .65, .35, .35, .60], [.80, .65, .60, .85, .45, .40], 1.0),
+    "everyday_planner":    ((40, 8), [.55, .20, .25, .65, .70, .50], [.55, .60, .55, .70, .50, .45], 0.8),
+    "conscious_consumer":  ((33, 7), [.75, .55, .40, .35, .35, .95], [.65, .50, .45, .60, .55, .60], 1.8),
 }
-TRAITS = list(SEGMENT_PROFILE["students"]["traits"])
+SEGMENT_PROFILE = {a: dict(age=(m, sd, 18, 65), traits=dict(zip(_T, t)), affinity=dict(zip(_C, c)), diet_mult=dm)
+                   for a, ((m, sd), t, c, dm) in _P.items()}
+TRAITS = _T
 DIET_BASE = dict(vegetarian=.08, vegan=.04, gluten_free=.05, dairy_free=.06, nut_allergy=.02)
 
 # what reviewers like or dislike, by brand category
@@ -104,7 +95,8 @@ def make_person(segment, borough, source, signup_date):
     diet = [d for d in DIETS if rng.random() < DIET_BASE[d] * prof["diet_mult"]]
     if "vegan" in diet and "vegetarian" in diet:
         diet.remove("vegetarian")
-    row = dict(age=age, age_band=age_band(age), borough=borough, segment=segment, secondary_segment=others[0])
+    row = dict(age=age, age_band=age_band(age), borough=borough, primary_archetype=segment,
+               secondary_archetype=others[0])
     row.update({f"{s}_score": round(scores[s], 3) for s in SEGMENTS})
     row.update({t: round(float(clip01(rng.normal(v, .10))), 3) for t, v in prof["traits"].items()})
     row.update({f"{c}_affinity": round(float(clip01(rng.normal(v, .12))), 3) for c, v in prof["affinity"].items()})
@@ -164,7 +156,7 @@ def make_users(popups, popup_brands, census):
 
     n_organic = N_USERS - len(users)
     assert n_organic > 0, "more pop-up sign-ups than users"
-    org_mix = np.array([.20, .35, .15, .12, .18])
+    org_mix = np.array([ARCHETYPE_PREVALENCE[a] for a in ARCHETYPES])
     days = (PERIOD[1] - PERIOD[0]).days
     for _ in range(n_organic):
         s = SEGMENTS[rng.choice(len(SEGMENTS), p=org_mix)]
@@ -231,8 +223,8 @@ def make_reviews(users, popups, popup_brands, popup_members):
             continue
         b = BRAND[r.brand_id]
         members = popup_members[r.popup_id]
-        inside = [m for m in members if u.at[m, "segment"] in b["targets"]]
-        outside = [m for m in members if u.at[m, "segment"] not in b["targets"]]
+        inside = [m for m in members if u.at[m, "primary_archetype"] in b["targets"]]
+        outside = [m for m in members if u.at[m, "primary_archetype"] not in b["targets"]]
         chosen = (list(rng.choice(inside, n_q, replace=False)) +
                   list(rng.choice(outside, n_rev - n_q, replace=False)))
         for uid, rating in zip(chosen, ratings_with_mean(n_rev, r.avg_rating)):
@@ -242,29 +234,28 @@ def make_reviews(users, popups, popup_brands, popup_members):
     # organic reviews: anyone, any brand, after sign-up
     seen = {(x["user_id"], x["brand_id"]) for x in rows}
     bids = sorted(BRAND)
-    target = np.array([BRAND[b]["target"] for b in bids])                     # brands x segments
+    true_aff = np.array([TRUE_AFF[b] for b in bids])                          # brands x archetypes (hidden)
     cat_idx = [CATEGORIES.index(BRAND[b]["category"]) for b in bids]
     seg_scores = users[[f"{s}_score" for s in SEGMENTS]].to_numpy()
     affinity = users[[f"{c}_affinity" for c in CATEGORIES]].to_numpy()
     activity = .5 + users["social_influence"].to_numpy() + users["novelty_seeking"].to_numpy()
     activity *= (PERIOD[1] - pd.to_datetime(users["signup_date"])).dt.days.to_numpy() + 14
     activity /= activity.sum()
-    seg_of = users["segment"].to_numpy()
-    sec_of = users["secondary_segment"].to_numpy()
+    prim = users["primary_archetype"].map(ARCHETYPES.index).to_numpy()
     uids = users["user_id"].to_numpy()
     signup = pd.to_datetime(users["signup_date"]).to_numpy()
 
     while len(rows) < N_REVIEWS:
         i = rng.choice(len(users), p=activity)
-        pref = np.exp(2.0 * (seg_scores[i] @ target.T) / np.maximum(target.sum(1), 1) + 1.5 * affinity[i][cat_idx])
+        w = seg_scores[i] / seg_scores[i].sum()
+        pref = np.exp(3.0 * (true_aff @ w) + 1.5 * affinity[i][cat_idx])
         j = rng.choice(len(bids), p=pref / pref.sum())
         bid = bids[j]
         if (uids[i], bid) in seen:
             continue
         seen.add((uids[i], bid))
-        tg = BRAND[bid]["targets"]
-        seg_fit = 1.0 if seg_of[i] in tg else .5 if sec_of[i] in tg else 0.0
-        mean = 2.8 + 1.4 * seg_fit + .8 * (affinity[i][cat_idx[j]] - .5) + QUALITY[bid]
+        # rating driven by how much the reviewer's archetype truly likes the brand
+        mean = 2.4 + 2.2 * true_aff[j, prim[i]] + .6 * (affinity[i][cat_idx[j]] - .5) + QUALITY[bid]
         rating = int(np.clip(round(rng.normal(mean, .8)), 1, 5))
         start = pd.Timestamp(signup[i])
         d = start + pd.Timedelta(days=int(rng.integers(0, (PERIOD[1] - start).days + 1)))
@@ -272,8 +263,8 @@ def make_reviews(users, popups, popup_brands, popup_members):
 
     df = pd.DataFrame(rows).sort_values(["review_date", "user_id"], kind="stable").reset_index(drop=True)
     df.insert(0, "review_id", [f"R{i + 1:05d}" for i in range(len(df))])
-    seg = users.set_index("user_id")["segment"]
-    df["in_target_segment"] = [int(seg[x] in BRAND[b]["targets"]) for x, b in zip(df["user_id"], df["brand_id"])]
+    arch = users.set_index("user_id")["primary_archetype"]
+    df["in_target_archetype"] = [int(arch[x] in BRAND[b]["targets"]) for x, b in zip(df["user_id"], df["brand_id"])]
     return df
 
 
@@ -303,7 +294,7 @@ def check(users, reviews, boroughs, popups, popup_brands):
     per_popup = users[users["signup_source"] != "organic"]["signup_source"].value_counts()
     assert (per_popup.reindex(popups["popup_id"]).fillna(0).astype(int).values == popups["signups"].values).all()
     pr = reviews[reviews["popup_id"] != ""].groupby(["popup_id", "brand_id"]).agg(
-        reviews=("rating", "size"), qualified_reviews=("in_target_segment", "sum"), mean=("rating", "mean"))
+        reviews=("rating", "size"), qualified_reviews=("in_target_archetype", "sum"), mean=("rating", "mean"))
     pb = popup_brands[popup_brands["reviews"] > 0].set_index(["popup_id", "brand_id"])
     pr = pr.reindex(pb.index)
     assert (pr["reviews"] == pb["reviews"]).all() and (pr["qualified_reviews"] == pb["qualified_reviews"]).all()

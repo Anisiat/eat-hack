@@ -3,11 +3,13 @@ build_brand_features.py - turn RGC's brand sheet (brands.csv, one row per produc
 
 Reads:
   brands.csv                     RGC's real client products (Brand, Product / variant, Category, ...)
-  data/mappings/need_states.csv  inferred need-state phrase -> weights on the 8 model need states
-  data/mappings/segments.csv     inferred target-segment phrase -> weights on the 5 WatchHumans segments
+  data/mappings/need_states.csv  inferred need-state phrase -> weights on the 8 model need states (the moment)
+  data/mappings/archetypes.csv   inferred target-segment phrase -> weights on the 10 WatchHumans archetypes
 Writes:
-  brand_products.csv   one row per product: brand_id, product, flavour, format, claims, need_* (8), core category
-  brand_features.csv   one row per brand: need_* (8), target_* (5), category, dietary and practical flags,
+  brand_products.csv   one row per product: brand_id, product, flavour, format, claims, need_* (8), arch_* (10),
+                       core category
+  brand_features.csv   one row per brand: need_* (8), arch_* (10 archetype affinities, 0-1), target_* (its top 3
+                       archetypes), category, dietary and practical flags,
                        favourite_five (RGC's assumed habit lineup), units_available_per_month (synthetic)
 
 Edit the mapping CSVs to change how phrases are read; unmapped phrases are listed when the script runs.
@@ -21,9 +23,11 @@ import numpy as np
 import pandas as pd
 
 NEEDS = ["hydrate", "recover", "energy", "focus", "discovery", "sharing", "treat", "value"]
-SEGMENTS = ["students", "young_professionals", "fitness", "families", "foodies"]
+ARCHETYPES = ["wellness_seeker", "trend_enthusiast", "thoughtful_buyer", "smart_saver", "quality_seeker",
+              "on_the_go_shopper", "impulse_buyer", "experience_explorer", "everyday_planner", "conscious_consumer"]
 SEED = 44
-TARGET_SHARE = 0.6          # a segment is a target when its weight is >= 60% of the brand's strongest segment
+N_TARGETS = 3              # a brand's target archetypes: its three highest affinities
+BASE_AFFINITY = 0.15        # everyone likes free food a little
 CONDIMENT_TERMS = ("cooking", "meal", "add heat", "spread", "topping")
 
 
@@ -61,7 +65,7 @@ def main():
         sheet[c] = sheet[c].fillna("").astype(str).str.replace("\n", "; ").str.strip()
 
     need_map = pd.read_csv(root / "data" / "mappings" / "need_states.csv").set_index("term")[NEEDS]
-    seg_map = pd.read_csv(root / "data" / "mappings" / "segments.csv").set_index("term")[SEGMENTS]
+    arch_map = pd.read_csv(root / "data" / "mappings" / "archetypes.csv").set_index("term")[ARCHETYPES]
     missing_n, missing_s = set(), set()
 
     brand_ids = {b: f"B{i + 1:02d}" for i, b in enumerate(dict.fromkeys(sheet["brand"]))}
@@ -69,9 +73,11 @@ def main():
     for i, r in sheet.iterrows():
         nterms, sterms = split_terms(r["need_terms"]), split_terms(r["segment_terms"])
         missing_n |= {t for t in nterms if t not in need_map.index}
-        missing_s |= {t for t in sterms if t not in seg_map.index}
+        missing_s |= {t for t in sterms if t not in arch_map.index}
         needs = need_map.reindex([t for t in nterms if t in need_map.index]).sum().clip(0, 1)
-        segs = seg_map.reindex([t for t in sterms if t in seg_map.index]).max()
+        arch = arch_map.reindex([t for t in sterms if t in arch_map.index]).max().reindex(ARCHETYPES).fillna(0)
+        arch["smart_saver"] = max(arch["smart_saver"], 0.5 * float(needs.get("value", 0)))  # value need -> savers
+        arch = BASE_AFFINITY + (1 - BASE_AFFINITY) * arch
         flags = (r["dietary_flags"] + " " + r["claims"]).lower()
         adults = r["category"] == "Alcoholic drinks" or "cbd" in (r["product"] + r["sub_category"]).lower() \
             or any(t.lower().startswith("adult") for t in sterms)
@@ -85,11 +91,11 @@ def main():
                    needs_chilling=int(r["category"] in ("Drinks", "Alcoholic drinks")
                                       and any(k in r["format"].lower() for k in ("can", "bottle"))))
         row.update({f"need_{n}": round(float(needs.get(n, 0)), 3) for n in NEEDS})
-        row.update({f"seg_{s}": float(segs.get(s, 0)) if len(segs) else 0.0 for s in SEGMENTS})
+        row.update({f"arch_{a}": round(float(arch[a]), 3) for a in ARCHETYPES})
         prows.append(row)
     products = pd.DataFrame(prows)
 
-    # brand level: average need states, strongest segments, most common role, any-product dietary flags
+    # brand level: average need states and archetype affinities, top 3 archetypes, most common role, dietary flags
     rng = np.random.default_rng(SEED)
     counts = products["brand_id"].value_counts()
     # RGC's assumed habit lineup: the five brands with the most products on the shelf (ties alphabetical)
@@ -98,16 +104,15 @@ def main():
     brows = []
     for bid, g in products.groupby("brand_id", sort=True):
         needs = g[[f"need_{n}" for n in NEEDS]].mean()
-        seg = g[[f"seg_{s}" for s in SEGMENTS]].max().to_numpy()
-        if seg.max() == 0:
-            seg = np.ones(len(SEGMENTS))
-        target = (seg >= TARGET_SHARE * seg.max()).astype(int)
+        arch = g[[f"arch_{a}" for a in ARCHETYPES]].mean().to_numpy()
+        top = set(np.argsort(-arch, kind="stable")[:N_TARGETS])
         row = dict(brand_id=bid, brand_name=g["brand_name"].iloc[0],
                    category=g["core_category"].mode().iloc[0], sheet_category=g["category"].iloc[0],
                    sub_category=g["sub_category"].iloc[0], description=g["product"].iloc[0],
                    n_products=int(counts[bid]), products="|".join(g["product"]))
         row.update({f"need_{n}": round(float(needs[f"need_{n}"]), 3) for n in NEEDS})
-        row.update({f"target_{s}": int(t) for s, t in zip(SEGMENTS, target)})
+        row.update({f"arch_{a}": round(float(v), 3) for a, v in zip(ARCHETYPES, arch)})
+        row.update({f"target_{a}": int(k in top) for k, a in enumerate(ARCHETYPES)})
         row.update(needs_chilling=int(g["needs_chilling"].max()), frozen=0, vegan=int(g["vegan"].max()),
                    gluten_free=int(g["gluten_free"].max()), adults_only=int(g["adults_only"].min()),
                    favourite_five=int(bid in favourites),
@@ -115,7 +120,7 @@ def main():
         brows.append(row)
     brands = pd.DataFrame(brows)
 
-    products.drop(columns=[f"seg_{s}" for s in SEGMENTS]).to_csv(root / "brand_products.csv", index=False)
+    products.to_csv(root / "brand_products.csv", index=False)
     brands.to_csv(root / "brand_features.csv", index=False)
     if missing_n or missing_s:
         print("Unmapped phrases (add them to data/mappings/):", sorted(missing_n | missing_s))
