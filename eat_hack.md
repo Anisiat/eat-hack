@@ -58,7 +58,7 @@ Three sources: synthetic WatchHumans tables, real upcoming London events, and pu
 | `events.csv` | 30 to 40 upcoming | Real London listings, collected by hand | type, start and end, venue, latitude and longitude, expected attendance, indoor or outdoor, audience tags, stall cost, link |
 | `boroughs.csv` | 33 | Census 2021 (ONS TS007, via Nomis); WatchHumans users synthetic | population, share aged 18 to 34, inner or outer, WatchHumans users per 1,000 people |
 
-**brands.csv titles** Brand	Product / variant	Category	Sub-category	Flavour profile	Format	Dietary flags	Need states served (inferred)	Target segments (inferred)	Marketing claims / label keywords	Label → target link (inferred)
+**brands.csv titles** Brand,	Product / variant,	Category,	Sub-category,	Flavour profile,	Format,	Dietary flags,	Need states served (inferred),	Target segments (inferred),	Marketing claims / label keywords,	Label → target link (inferred)
 
 
 **Event types.** Seven categories, used in `popups.csv` and `events.csv`: community, concerts, conferences, expos, festivals, performing arts, sports. The gatherings in the crowd table map onto them: run clubs, food markets, family days and workshops are community; gigs and club nights are concerts; hackathons are conferences; campus fairs are expos; races and match screenings are sports.
