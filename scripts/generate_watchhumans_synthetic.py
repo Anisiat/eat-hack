@@ -1,3 +1,8 @@
+import argparse
+import os
+from pathlib import Path
+import tempfile
+
 import numpy as np
 import pandas as pd
 
@@ -8,7 +13,8 @@ import pandas as pd
 RANDOM_SEED = 42
 N_CONSUMERS = 5000
 
-rng = np.random.default_rng(RANDOM_SEED)
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+OUTPUT_CSV = PROJECT_ROOT / "data" / "watch_humans_synthetic.csv"
 
 AREAS = [
     "Hackney",
@@ -275,17 +281,18 @@ CATEGORY_PROFILES = {
 # -----------------------------
 
 def clip01(x):
+    """Clip values to the 0-1 range."""
     return np.clip(x, 0, 1)
 
 
-def noisy_score(mean, sd=0.12):
+def noisy_score(mean, rng, sd=0.12):
     """
     Generate a noisy score centred around a mean.
     """
     return float(clip01(rng.normal(mean, sd)))
 
 
-def weighted_choice_from_dict(weight_dict):
+def weighted_choice_from_dict(weight_dict, rng):
     """
     Select one key according to dictionary probabilities.
     """
@@ -296,7 +303,7 @@ def weighted_choice_from_dict(weight_dict):
     return rng.choice(labels, p=probs)
 
 
-def generate_archetype_scores(primary_archetype):
+def generate_archetype_scores(primary_archetype, rng):
     """
     Generate scores for all 10 archetypes.
 
@@ -315,12 +322,12 @@ def generate_archetype_scores(primary_archetype):
         else:
             mean = 0.35
 
-        scores[archetype] = noisy_score(mean, sd=0.14)
+        scores[archetype] = noisy_score(mean, rng, sd=0.14)
 
     return scores
 
 
-def generate_trait_scores(archetype_scores):
+def generate_trait_scores(archetype_scores, rng):
     """
     Behavioural traits are generated as a weighted combination
     of all archetypes.
@@ -353,13 +360,14 @@ def generate_trait_scores(archetype_scores):
 
         traits[trait] = noisy_score(
             weighted_mean,
+            rng,
             sd=0.08
         )
 
     return traits
 
 
-def generate_category_affinities(archetype_scores):
+def generate_category_affinities(archetype_scores, rng):
     """
     Generate product-category affinity from archetype scores.
     """
@@ -383,6 +391,7 @@ def generate_category_affinities(archetype_scores):
 
         affinities[category] = noisy_score(
             mean_affinity,
+            rng,
             sd=0.10
         )
 
@@ -393,18 +402,21 @@ def generate_category_affinities(archetype_scores):
 # SYNTHETIC DATA GENERATOR
 # -----------------------------
 
-def generate_watch_humans_dataset(n=N_CONSUMERS):
-
+def generate_watch_humans_dataset(n=N_CONSUMERS, seed=RANDOM_SEED):
+    """Return synthetic demo consumers without reading files or writing output."""
+    if isinstance(n, bool) or not isinstance(n, int) or n < 1:
+        raise ValueError("n must be a positive integer")
+    rng = np.random.default_rng(seed)
     rows = []
 
     for i in range(n):
 
         primary = weighted_choice_from_dict(
-            ARCHETYPE_PREVALENCE
+            ARCHETYPE_PREVALENCE, rng
         )
 
         archetype_scores = generate_archetype_scores(
-            primary
+            primary, rng
         )
 
         # Derive actual primary + secondary from generated scores
@@ -418,11 +430,11 @@ def generate_watch_humans_dataset(n=N_CONSUMERS):
         secondary = sorted_archetypes[1]
 
         traits = generate_trait_scores(
-            archetype_scores
+            archetype_scores, rng
         )
 
         category_affinities = generate_category_affinities(
-            archetype_scores
+            archetype_scores, rng
         )
 
         age = int(
@@ -468,11 +480,39 @@ def generate_watch_humans_dataset(n=N_CONSUMERS):
     return pd.DataFrame(rows)
 
 
-# -----------------------------
-# GENERATE DATA
-# -----------------------------
+def save_watch_humans_dataset(df, output_path=OUTPUT_CSV):
+    """Atomically save a portable CSV; preserve existing output if writing fails."""
+    output_path = Path(output_path).expanduser().resolve()
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    temporary_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", newline="", suffix=".tmp",
+            dir=output_path.parent, delete=False,
+        ) as handle:
+            temporary_path = Path(handle.name)
+            df.to_csv(handle, index=False, lineterminator="\n")
+            handle.flush()
+            os.fsync(handle.fileno())
+        os.replace(temporary_path, output_path)
+    finally:
+        if temporary_path is not None:
+            temporary_path.unlink(missing_ok=True)
+    return output_path
 
-watch_humans_df = generate_watch_humans_dataset()
 
-print(watch_humans_df.shape)
-print(watch_humans_df.head())
+def main():
+    parser = argparse.ArgumentParser(description="Generate synthetic Watch Humans demo data (no API or secrets required).")
+    parser.add_argument("--rows", type=int, default=N_CONSUMERS)
+    parser.add_argument("--seed", type=int, default=RANDOM_SEED)
+    parser.add_argument("--output", type=Path, default=OUTPUT_CSV)
+    args = parser.parse_args()
+    if args.rows < 1 or args.seed < 0:
+        parser.error("--rows must be positive and --seed must be non-negative")
+    watch_humans_df = generate_watch_humans_dataset(args.rows, args.seed)
+    output_path = save_watch_humans_dataset(watch_humans_df, args.output)
+    print(f"Saved {len(watch_humans_df)} synthetic consumers ({len(watch_humans_df.columns)} columns) to {output_path}")
+
+
+if __name__ == "__main__":
+    main()
