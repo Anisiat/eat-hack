@@ -1,0 +1,50 @@
+brand_id,brand_name,category,sheet_category,sub_category,description,n_products,products,need_hydrate,need_recover,need_energy,need_focus,need_discovery,need_sharing,need_treat,need_value,target_students,target_young_professionals,target_fitness,target_families,target_foodies,needs_chilling,frozen,vegan,gluten_free,adults_only,favourite_five,units_available_per_month
+B01,All That Matters,savoury,Snacks,Grain puffs,Superfood Puffs — Peri-Peri,1,Superfood Puffs — Peri-Peri,0.0,0.0,0.8,0.0,0.3,0.6,0.9,0.3,1,1,1,0,0,0,0,0,1,0,0,1600
+B02,Simply Roasted,savoury,Snacks,Potato crisps,Black Truffle Potato Crisps,5,Black Truffle Potato Crisps|Sour Cream & Chive Potato Crisps|Barbecue Potato Crisps|Hot Honey Potato Crisps|Sea Salt Potato Crisps,0.0,0.0,0.6,0.0,0.3,0.76,0.74,0.18,1,1,1,0,0,0,0,1,1,0,1,700
+B03,The Protein Ball Co.,functional,Snacks,Protein balls,Salted Caramel Protein Balls,3,Salted Caramel Protein Balls|Original Peanut Butter Protein Balls|Stuffed — Matcha & Vanilla,0.0,0.933,0.933,0.0,0.0,0.0,0.8,0.0,0,1,1,0,1,0,0,1,1,0,1,1800
+B04,Well & Truly,savoury,Snacks,Cheese crackers,Thins — Rich Cheddar & Gouda with a Hint of Jalapeño,6,Thins — Rich Cheddar & Gouda with a Hint of Jalapeño|Crunchies — Smokey Paprika|Crunchies — Really Cheesy|Crunchies — Smokey Bacon|Crunchies — Sea Salt & Cider Vinegar|Fudge & Brownie Oat M&lk Chocolate,0.0,0.0,0.25,0.0,0.25,0.55,0.583,0.0,1,1,1,1,1,0,0,1,1,0,1,900
+B05,INDI,savoury,Snacks,Functional snack bar,Brain Bar,1,Brain Bar,0.0,0.0,1.0,1.0,0.0,0.0,0.4,0.3,1,1,1,0,1,0,0,1,1,0,0,1500
+B06,Kooky,sweet,Snacks,Dried fruit,Gently Dried Chewy Mango,1,Gently Dried Chewy Mango,0.2,0.0,0.8,0.0,0.0,0.0,1.0,0.0,0,1,1,1,1,0,0,0,0,0,0,1200
+B07,Helen Browning’s Organic,condiment,Pantry,Preserved meat,Organic Corned Beef,1,Organic Corned Beef,0.0,0.0,0.8,0.0,0.0,0.3,0.0,1.0,1,0,0,1,1,0,0,0,1,0,0,700
+B08,Dr. Will’s,condiment,Pantry,Mayonnaise,Avocado Oil Mayo,2,Avocado Oil Mayo|Buffalo Hot Sauce,0.0,0.0,0.0,0.0,1.0,0.4,0.0,0.4,0,0,0,1,1,0,0,1,1,0,0,2000
+B09,EP!C Snax Co.,sweet,Confectionery,Marshmallows,Plant Power Toastin’ Marshmallows,2,Plant Power Toastin’ Marshmallows|Giant Toastin’ Marshmallows,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,1,1,0,1,1,0,0,1,1,0,0,1400
+B10,ötzibrew,drink,Pantry,Coffee alternative,Organic Dandelion & Burdock Root Coffee Alternative,1,Organic Dandelion & Burdock Root Coffee Alternative,0.0,0.3,0.4,0.8,0.4,0.0,0.4,0.0,0,1,1,1,1,0,0,0,0,0,0,800
+B11,OOM,drink,Drinks,Functional sparkling drink,Balance,2,Balance|Calm,1.0,0.55,0.0,0.2,0.15,0.0,0.45,0.0,0,1,1,0,0,1,0,1,1,0,0,2000
+B12,ChariTea,drink,Drinks,Sparkling yerba mate tea,Mate Sparkling,1,Mate Sparkling,1.0,0.3,0.0,0.3,0.0,0.0,0.6,0.0,0,1,0,1,1,1,0,0,0,0,0,1800
+B13,mindfuel flow,drink,Drinks,Functional iced latte,Mushroom Iced Latte — Salted Caramel,1,Mushroom Iced Latte — Salted Caramel,1.0,0.0,0.9,1.0,0.4,0.0,0.3,0.0,1,1,1,0,1,1,0,1,0,0,0,600
+B14,Lowrise,drink,Alcoholic drinks,Beer,Lager,2,Lager|Hazy Pale,0.0,0.0,0.0,0.0,0.0,1.0,0.5,0.0,1,1,1,0,0,1,0,0,1,1,0,800
+B15,DASH,drink,Drinks,Flavoured sparkling water,Pink Lady Apple Sparkling Water,1,Pink Lady Apple Sparkling Water,1.0,0.4,0.0,0.0,0.0,0.0,0.3,0.0,1,1,1,0,0,1,0,0,0,0,0,700
+B16,Pentire,drink,Drinks,Non-alcoholic aperitif,Coastal Spritz,2,Coastal Spritz|Adrift,0.5,0.0,0.0,0.0,0.25,1.0,0.8,0.0,0,1,0,0,1,1,0,0,0,0,0,1100
+B17,Gut Food / Ferment Fizz,drink,Drinks,Fermented lemonade,Orange & Mango Lemonade,3,Orange & Mango Lemonade|Lemon & Raspberry Lemonade|Lemon Lemonade,1.0,0.6,0.0,0.4,0.3,0.0,0.3,0.0,1,1,1,0,1,1,0,1,0,0,1,1200
+B18,Navas,drink,Drinks,Tonic mixer,Original Tonic Water,2,Original Tonic Water|Fiery Ginger Beer,1.0,0.0,0.0,0.0,0.5,0.7,0.6,0.0,0,1,0,0,1,1,0,1,1,0,0,1600
+B19,JimJams,condiment,Pantry,Sweet spread,Hazelnut Chocolate Spread,1,Hazelnut Chocolate Spread,0.0,0.0,0.5,0.0,0.0,0.3,1.0,0.4,1,0,1,1,1,0,0,0,0,0,0,1700
+B20,The London Essence Co.,drink,Drinks,Tonic mixer,Original Indian Tonic Water,1,Original Indian Tonic Water,1.0,0.0,0.0,0.0,0.5,0.7,0.6,0.0,0,1,0,0,0,1,0,1,0,0,0,1500
+B21,Double Dutch,drink,Drinks,Tonic mixer,Indian Tonic Water,1,Indian Tonic Water,1.0,0.0,0.0,0.0,0.5,0.7,0.6,0.0,0,1,0,0,0,1,0,1,0,0,0,1200
+B22,Double ‘D’,sweet,Confectionery,Gummy sweets,Savvy Sweets Sour Bears,1,Savvy Sweets Sour Bears,0.0,0.0,0.0,0.0,0.0,0.3,1.0,0.0,1,0,1,1,1,0,0,1,0,0,0,2000
+B23,Coco Cubes,sweet,Snacks,Coconut bites,Chocolate Coconut Bites,1,Chocolate Coconut Bites,0.0,0.0,0.4,0.0,0.0,0.0,0.8,0.0,1,0,0,1,1,0,0,1,1,0,0,1100
+B24,teapigs,drink,Pantry,Loose-leaf fruit and herbal infusion,Super Fruit,1,Super Fruit,0.3,0.4,0.3,0.3,0.0,0.0,0.6,0.0,0,1,0,0,1,0,0,0,0,0,0,1200
+B25,The Original Chicken Crackling,savoury,Snacks,Chicken crackling,Chicken Salt,1,Chicken Salt,0.0,0.0,0.3,0.0,0.3,0.6,0.5,0.0,1,0,1,0,0,0,0,0,1,0,0,1200
+B26,Blanco Niño,savoury,Snacks,Tortilla chips,Creamy Jalapeño Tortilla Chips,2,Creamy Jalapeño Tortilla Chips|Chilli & Lime Tortilla Chips,0.0,0.0,0.3,0.0,0.3,1.0,0.5,0.0,1,1,0,0,1,0,0,1,1,0,1,2000
+B27,Saucerer,condiment,Pantry,Pasta sauce,Pasta Sauce — Wild Mushroom & Truffle,1,Pasta Sauce — Wild Mushroom & Truffle,0.0,0.0,0.0,0.0,0.7,0.0,0.0,1.0,0,0,0,1,1,0,0,1,1,0,0,2000
+B28,The Curators,functional,Snacks,Pork puffs,Pork Puffs — Smoky Bacon,1,Pork Puffs — Smoky Bacon,0.0,0.8,0.9,0.0,0.3,0.6,0.5,0.0,0,0,1,0,0,0,0,0,0,0,0,1900
+B29,Love Hemp,functional,Wellness,CBD gummies,Sours Calm — Sour Orange CBD Gummies,1,Sours Calm — Sour Orange CBD Gummies,0.0,0.5,0.0,0.0,0.0,0.0,0.3,0.0,0,1,1,0,0,0,0,0,0,1,0,1400
+B30,Ottolenghi,condiment,Pantry,Pesto,Miso Pesto,1,Miso Pesto,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.7,0,0,0,1,1,0,0,0,0,0,0,1600
+B31,Sunfly,condiment,Pantry,Seed butter,Sunflower Seed Butter — Crunchy,1,Sunflower Seed Butter — Crunchy,0.0,0.0,0.5,0.0,0.3,0.0,0.4,0.7,0,0,1,1,1,0,0,0,0,0,0,1200
+B32,ape2o,other,Accessories,Reusable drinkware,GO Steel Bottle — Turtle,1,GO Steel Bottle — Turtle,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.8,1,1,0,0,1,0,0,0,0,0,0,600
+B33,Goodrays,drink,Drinks,CBD sparkling drink,Raspberry & Guava CBD Drink,1,Raspberry & Guava CBD Drink,1.0,0.6,0.0,0.4,0.3,0.0,0.3,0.0,0,1,1,0,0,1,0,0,0,1,0,1400
+B34,Little’s,drink,Pantry,Instant coffee,Toffee Nut Flavour Infused Instant Coffee,1,Toffee Nut Flavour Infused Instant Coffee,0.0,0.3,0.7,0.9,0.0,0.0,0.4,0.0,1,1,1,0,0,0,0,0,0,0,0,1700
+B35,WelleCo,functional,Wellness,Protein drink powder,The Hydro Protein Elixir — Passionfruit,1,The Hydro Protein Elixir — Passionfruit,0.4,1.0,0.8,0.0,0.0,0.0,0.3,0.0,0,0,1,0,0,0,0,1,0,0,0,700
+B36,HOOP,savoury,Snacks,Plantain chips,Plantain Chips — Lemon Pepper,1,Plantain Chips — Lemon Pepper,0.0,0.0,0.3,0.0,0.3,0.6,0.5,0.0,1,1,1,1,0,0,0,0,1,0,0,1900
+B37,neat sweets,sweet,Confectionery,Gummy sweets,Fruity Berries,1,Fruity Berries,0.0,0.0,0.0,0.0,0.0,0.3,1.0,0.0,1,0,1,1,0,0,0,1,1,0,0,1400
+B38,FREEE,sweet,Snacks,Oat bar,Organic Banana & Chocolate Oat Bar,1,Organic Banana & Chocolate Oat Bar,0.0,0.0,0.9,0.0,0.0,0.0,1.0,0.3,0,1,1,1,1,0,0,1,1,0,0,1300
+B39,SUCSEED,condiment,Pantry,Seed and botanical blend,Energy,1,Energy,0.0,0.6,0.0,0.4,0.9,0.3,0.0,0.0,0,1,1,1,1,0,0,1,0,0,0,1800
+B40,sleep toniq,drink,Drinks,Botanical wellness drink,Sleep Toniq,1,Sleep Toniq,0.0,0.5,0.0,0.0,0.0,0.0,0.3,0.0,0,1,1,0,0,1,0,1,0,0,0,800
+B41,iLOVE SNACKS,savoury,Snacks,Flavoured nuts,Sicilian Lemon Pistachios,1,Sicilian Lemon Pistachios,0.0,0.0,0.3,0.0,0.3,0.6,0.5,0.0,0,1,1,0,1,0,0,1,1,0,0,2000
+B42,Root Tea,drink,Pantry,Loose-leaf herbal tea,Lemon Tea Blend,1,Lemon Tea Blend,0.3,1.0,0.0,0.4,0.3,0.0,0.3,0.0,0,1,1,0,0,0,0,0,0,0,0,800
+B43,Fever-Tree,drink,Drinks,Tonic mixer,Refreshingly Light Elderflower Tonic Water,1,Refreshingly Light Elderflower Tonic Water,1.0,0.0,0.0,0.0,0.5,0.7,0.6,0.0,0,1,1,0,1,1,0,0,0,0,0,1700
+B44,Folc,drink,Alcoholic drinks,Sparkling rosé wine,English Sparkling Rosé NV,2,English Sparkling Rosé NV|Dry English Rosé,0.0,0.0,0.0,0.0,0.25,1.0,0.75,0.0,0,1,0,1,1,1,0,0,0,1,0,1800
+B45,Penrhos,drink,Alcoholic drinks,Gin,Handcrafted Dry Gin,1,Handcrafted Dry Gin,0.0,0.0,0.0,0.0,0.5,1.0,0.8,0.0,0,1,0,0,0,1,0,0,0,1,0,1500
+B46,Mission,drink,Drinks,Tea-based energy drink,Lemon & Ginseng Natural Energy Drink,1,Lemon & Ginseng Natural Energy Drink,1.0,0.0,1.0,0.5,0.0,0.0,0.3,0.0,1,1,1,0,0,1,0,0,0,0,0,700
+B47,Ombar,sweet,Confectionery,Filled dark chocolate,Pistachio Cream — 60% Dark Chocolate,1,Pistachio Cream — 60% Dark Chocolate,0.0,0.0,0.0,0.0,0.0,0.3,1.0,0.0,1,0,0,1,1,0,0,0,0,0,0,1600
+B48,Mr Filbert’s,savoury,Snacks,Rice crackers,Teriyaki Mochi Rice Bites,1,Teriyaki Mochi Rice Bites,0.0,0.0,0.3,0.0,0.3,1.0,0.5,0.0,1,0,0,0,1,0,0,0,1,0,0,1400
+B49,NOMO,sweet,Confectionery,Filled chocolate alternative,Caramel Choc Bar,1,Caramel Choc Bar,0.0,0.0,0.0,0.0,0.0,0.3,1.0,0.0,1,0,0,1,1,0,0,1,1,0,0,2000

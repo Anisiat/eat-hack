@@ -13,9 +13,11 @@ CORE_CATEGORIES = {"drink", "savoury", "sweet", "condiment"}
 STAFF_RATE_GBP = 16.0       # same loaded hourly rate as the pop-up cost columns
 
 REQUIRED = {
-    "brands": ["brand_id", "brand_name", "category", "sub_category", "description", "needs_chilling", "frozen",
-               "vegan", "gluten_free", "favourite_five", "units_available_per_month"]
+    "brand_features": ["brand_id", "brand_name", "category", "sub_category", "description", "needs_chilling",
+                       "frozen", "vegan", "gluten_free", "adults_only", "favourite_five", "units_available_per_month"]
               + [f"need_{n}" for n in NEEDS] + [f"target_{s}" for s in SEGMENTS],
+    "brand_products": ["product_id", "brand_id", "product", "flavour", "format", "claims", "label_link"]
+                      + [f"need_{n}" for n in NEEDS],
     "popups": ["popup_id", "date", "event_type", "borough", "indoor", "dwell_hours", "footfall", "lineup", "staff",
                "stops", "signups", "reviews", "qualified_reviews", "stall_fee_gbp", "total_cost_gbp", "split"],
     "popup_brands": ["popup_id", "brand_id", "reviews", "qualified_reviews"],
@@ -35,28 +37,25 @@ def load(root=ROOT):
         missing = set(cols) - set(d[name].columns)
         assert not missing, f"{name}.csv is missing columns: {sorted(missing)}"
     d["reviews"]["popup_id"] = d["reviews"]["popup_id"].fillna("")
-    d["brand_profiles"] = load_brand_profiles(root, d["brands"])
-    d["brands"] = d["brands"].set_index("brand_id", drop=False)
+    d["brands"] = d.pop("brand_features").set_index("brand_id", drop=False)
+    d["products"] = d.pop("brand_products").fillna("")
     d["event_types"] = d["event_types"].set_index("event_type", drop=False)
     unknown = set(d["events"]["event_type"]) - set(d["event_types"].index)
     assert not unknown, f"events.csv has unknown event types: {unknown}"
     return d
 
 
-def load_brand_profiles(root, brands):
-    """Optional product-level detail (brand_profiles.csv). Joined on brand name, or via brand_map.csv."""
-    path = root / "brand_profiles.csv"
-    if not path.exists():
-        return None
-    bp = pd.read_csv(path)
-    bp.columns = [c.strip().lower().replace(" / ", "_").replace(" → ", "_to_").replace("→", "to")
-                  .replace("(", "").replace(")", "").replace(" ", "_") for c in bp.columns]
-    if (root / "brand_map.csv").exists():
-        m = pd.read_csv(root / "brand_map.csv")
-        bp["brand_id"] = bp["brand"].map(dict(zip(m["brand"], m["brand_id"])))
-    else:
-        bp["brand_id"] = bp["brand"].map(dict(zip(brands["brand_name"], brands["brand_id"])))
-    return bp.dropna(subset=["brand_id"])
+def best_products(d, event_types):
+    """For each event type, each brand's product whose need states best match the type: {type: {brand_id: row}}."""
+    pr = d["products"]
+    pn = pr[[f"need_{n}" for n in NEEDS]].to_numpy(float)
+    out = {}
+    for t in event_types:
+        ne = d["event_types"].loc[t, [f"need_{n}" for n in NEEDS]].to_numpy(float)
+        cos = pn @ ne / (np.linalg.norm(pn, axis=1) * np.linalg.norm(ne) + 1e-9)
+        best = pr.assign(_cos=cos).sort_values("_cos", ascending=False).drop_duplicates("brand_id")
+        out[t] = {r["brand_id"]: r for _, r in best.iterrows()}
+    return out
 
 
 def event_cost(stall, staff, dwell, borough, outer):

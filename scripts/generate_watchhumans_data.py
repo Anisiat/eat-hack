@@ -8,7 +8,7 @@ Writes three files to the output folder (default: repo root):
   reviews.csv   about 20,000 reviews; pop-up reviews reconcile exactly with popup_brands.csv
   boroughs.csv  33 London boroughs: real Census 2021 population and 18-34 share, plus WatchHumans users
 
-Segments match the brand targets in brands.csv. A review is qualified when the reviewer's primary
+Segments match the brand targets in brand_features.csv. A review is qualified when the reviewer's primary
 segment is one of the brand's target segments. Hidden truth (brand quality) comes from
 generate_popups.py and is never written out.
 
@@ -29,7 +29,7 @@ N_REVIEWS = 20000
 ROOT = Path(__file__).resolve().parents[1]
 CENSUS = ROOT / "data" / "raw" / "borough_census_2021.csv"
 PERIOD = (pd.Timestamp("2024-04-01"), pd.Timestamp("2026-09-30"))
-CATEGORIES = ["drink", "savoury", "sweet", "condiment", "functional"]
+CATEGORIES = ["drink", "savoury", "sweet", "condiment", "functional", "other"]
 DIETS = ["vegetarian", "vegan", "gluten_free", "dairy_free", "nut_allergy"]
 
 rng = np.random.default_rng(SEED)
@@ -41,31 +41,31 @@ SEGMENT_PROFILE = {
         age=(21, 2.5, 18, 26),
         traits=dict(health_consciousness=.45, novelty_seeking=.75, social_influence=.80, price_sensitivity=.90,
                     convenience_orientation=.70, sustainability_orientation=.55),
-        affinity=dict(drink=.70, savoury=.75, sweet=.75, condiment=.45, functional=.55),
+        affinity=dict(drink=.70, savoury=.75, sweet=.75, condiment=.45, functional=.55, other=.40),
         diet_mult=1.2),
     "young_professionals": dict(
         age=(29, 4, 22, 40),
         traits=dict(health_consciousness=.60, novelty_seeking=.70, social_influence=.65, price_sensitivity=.45,
                     convenience_orientation=.85, sustainability_orientation=.60),
-        affinity=dict(drink=.75, savoury=.65, sweet=.55, condiment=.60, functional=.65),
+        affinity=dict(drink=.75, savoury=.65, sweet=.55, condiment=.60, functional=.65, other=.40),
         diet_mult=1.2),
     "fitness": dict(
         age=(31, 6, 19, 50),
         traits=dict(health_consciousness=.90, novelty_seeking=.50, social_influence=.55, price_sensitivity=.50,
                     convenience_orientation=.65, sustainability_orientation=.60),
-        affinity=dict(drink=.70, savoury=.40, sweet=.30, condiment=.35, functional=.90),
+        affinity=dict(drink=.70, savoury=.40, sweet=.30, condiment=.35, functional=.90, other=.40),
         diet_mult=1.6),
     "families": dict(
         age=(38, 5, 27, 55),
         traits=dict(health_consciousness=.65, novelty_seeking=.35, social_influence=.40, price_sensitivity=.70,
                     convenience_orientation=.75, sustainability_orientation=.55),
-        affinity=dict(drink=.50, savoury=.60, sweet=.75, condiment=.50, functional=.35),
+        affinity=dict(drink=.50, savoury=.60, sweet=.75, condiment=.50, functional=.35, other=.40),
         diet_mult=0.9),
     "foodies": dict(
         age=(33, 7, 21, 55),
         traits=dict(health_consciousness=.60, novelty_seeking=.90, social_influence=.60, price_sensitivity=.30,
                     convenience_orientation=.35, sustainability_orientation=.75),
-        affinity=dict(drink=.65, savoury=.70, sweet=.60, condiment=.95, functional=.40),
+        affinity=dict(drink=.65, savoury=.70, sweet=.60, condiment=.95, functional=.40, other=.40),
         diet_mult=1.5),
 }
 TRAITS = list(SEGMENT_PROFILE["students"]["traits"])
@@ -73,11 +73,13 @@ DIET_BASE = dict(vegetarian=.08, vegan=.04, gluten_free=.05, dairy_free=.06, nut
 
 # what reviewers like or dislike, by brand category
 ATTRIBUTES = {
-    "drink": ["taste", "fizz", "sweetness", "refreshing", "aftertaste", "price", "can design"],
+    "drink": ["taste", "fizz", "sweetness", "refreshing", "aftertaste", "price", "packaging"],
     "savoury": ["crunch", "seasoning", "saltiness", "portion size", "price", "packaging"],
     "sweet": ["taste", "sweetness", "texture", "ingredients", "price", "packaging"],
     "condiment": ["heat", "flavour depth", "versatility", "texture", "price", "jar size"],
     "functional": ["taste", "texture", "ingredients", "energy boost", "price", "portability"],
+    "other": ["design", "build quality", "size", "usefulness", "price"],
+    "hot_drink": ["taste", "aroma", "strength", "ingredients", "price", "packaging"],
 }
 
 
@@ -276,7 +278,8 @@ def make_reviews(users, popups, popup_brands, popup_members):
 
 
 def review_row(uid, bid, popup_id, date, rating, price_sensitivity):
-    liked, disliked = attributes(BRAND[bid]["category"], rating)
+    b = BRAND[bid]
+    liked, disliked = attributes("hot_drink" if b["hot_drink"] else b["category"], rating)
     return dict(user_id=uid, brand_id=bid, popup_id=popup_id, review_date=date.date().isoformat(),
                 rating=rating, would_buy=would_buy(rating, price_sensitivity),
                 liked_attribute=liked, disliked_attribute=disliked)

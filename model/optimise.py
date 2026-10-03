@@ -1,9 +1,11 @@
 """Steps 3 and 6: best 5-brand lineup per event, units to bring and the time slot.
 
-Every 5-brand combination of the 20 brands (15,504) is scored at once with numpy.
+Each event shortlists its 20 best eligible brands on their own expected QRP, then every 5-brand
+combination of the shortlist (15,504) is scored at once with numpy.
 Score = expected QRP x 1.10 if drink, savoury, sweet and condiment are all covered
         x 0.85 per pair of brands sharing a sub-category.
-Hard constraints: >= 1 vegan, >= 1 gluten-free, <= 2 chilled brands, frozen only indoors, units in stock.
+Hard constraints: >= 1 vegan, >= 1 gluten-free, <= 2 chilled brands, frozen only indoors, units in stock,
+no adults-only brands (alcohol, CBD) at community, expo or conference events.
 """
 from itertools import combinations
 
@@ -17,6 +19,8 @@ COVER_BONUS = 1.10
 SAME_SUB_PENALTY = 0.85
 MAX_CHILLED = 2
 UNIT_BUFFER = 1.2
+SHORTLIST = 20
+NO_ADULTS = {"community", "expos", "conferences"}
 
 
 class Optimiser:
@@ -24,25 +28,31 @@ class Optimiser:
         self.d, self.om, self.events, self.parts = d, om, events, parts
         b = d["brands"]
         self.bids = list(b.index)
-        self.combos = np.array(list(combinations(range(len(b)), LINEUP_SIZE)))
-        C = self.combos
-        cat = b["category"].to_numpy()
-        sub = b["sub_category"].to_numpy()
-        covered = np.ones(len(C), bool)
-        for k in CORE_CATEGORIES:
-            covered &= (cat[C] == k).any(1)
-        same_sub = sum((sub[C[:, x]] == sub[C[:, y]]) for x, y in combinations(range(LINEUP_SIZE), 2))
-        self.shape = np.where(covered, COVER_BONUS, 1.0) * SAME_SUB_PENALTY ** same_sub
-        self.base_ok = ((b["vegan"].to_numpy()[C] == 1).any(1) & (b["gluten_free"].to_numpy()[C] == 1).any(1)
-                        & ((b["needs_chilling"].to_numpy()[C] == 1).sum(1) <= MAX_CHILLED))
-        self.has_frozen = (b["frozen"].to_numpy()[C] == 1).any(1)
+        self.cat = b["category"].to_numpy()
+        self.sub = b["sub_category"].to_numpy()
+        self.vegan = b["vegan"].to_numpy() == 1
+        self.gf = b["gluten_free"].to_numpy() == 1
+        self.chill = b["needs_chilling"].to_numpy() == 1
+        self.frozen = b["frozen"].to_numpy() == 1
+        self.adults = b["adults_only"].to_numpy() == 1
         self.stock = b["units_available_per_month"].to_numpy()
         self.habit = [self.bids.index(x) for x in b.index[b["favourite_five"] == 1]]
+        self.positions = np.array(list(combinations(range(SHORTLIST), LINEUP_SIZE)))
 
         self.r = om.review_rate(events, parts["fit"])
         self.rq = self.r * parts["q"]
         self.stops = np.array([e.footfall * om.stop_rate[e.event_type] for e in events.itertuples()])
         self.units = np.minimum(np.ceil(self.stops[:, None] * UNIT_BUFFER), self.stock[None, :]).astype(int)
+
+    def eligible(self, i):
+        """Brands allowed at event i on their own (setting, audience and stock rules)."""
+        ok = np.ones(len(self.bids), bool)
+        if self.events["indoor"].iloc[i] == 0:
+            ok &= ~self.frozen
+        if self.events["event_type"].iloc[i] in NO_ADULTS:
+            ok &= ~self.adults
+        need = np.ceil(self.stops[i] * UNIT_BUFFER)
+        return ok & (self.stock >= min(need, self.stock.min()))
 
     def evaluate(self, i, lineup):
         """Expected outcomes of one lineup (brand indices) at event i."""
@@ -55,28 +65,28 @@ class Optimiser:
                     per_brand=dict(zip([self.bids[j] for j in lineup], per_brand)))
 
     def feasible(self, i, lineup):
-        b = self.d["brands"].iloc[list(lineup)]
-        ok = (b["vegan"] == 1).any() and (b["gluten_free"] == 1).any() and (b["needs_chilling"] == 1).sum() <= MAX_CHILLED
-        if self.events["indoor"].iloc[i] == 0:
-            ok &= not (b["frozen"] == 1).any()
-        need = np.ceil(self.stops[i] * UNIT_BUFFER)
-        return bool(ok and (self.stock[list(lineup)] >= min(need, self.stock.min())).all())
+        L = list(lineup)
+        return bool(self.eligible(i)[L].all() and self.vegan[L].any() and self.gf[L].any()
+                    and self.chill[L].sum() <= MAX_CHILLED)
 
     def best(self, i):
         """Best lineup at event i: (brand indices, objective)."""
-        C = self.combos
-        fit = self.parts["fit"][i]
-        appeal = fit[C].mean(1)
+        ok = self.eligible(i)
+        cand = np.flatnonzero(ok)
+        cand = cand[np.argsort(-self.rq[i, cand])][:SHORTLIST]
+        assert len(cand) >= LINEUP_SIZE, f"fewer than {LINEUP_SIZE} eligible brands at event {i}"
+        C = cand[self.positions[np.all(self.positions < len(cand), axis=1)]]
+        covered = np.ones(len(C), bool)
+        for k in CORE_CATEGORIES:
+            covered &= (self.cat[C] == k).any(1)
+        same_sub = sum((self.sub[C[:, x]] == self.sub[C[:, y]]) for x, y in combinations(range(LINEUP_SIZE), 2))
+        shape = np.where(covered, COVER_BONUS, 1.0) * SAME_SUB_PENALTY ** same_sub
+        valid = self.vegan[C].any(1) & self.gf[C].any(1) & (self.chill[C].sum(1) <= MAX_CHILLED)
+        appeal = self.parts["fit"][i][C].mean(1)
         s = self.om.signups(self.events.iloc[[i]], appeal[None, :])[0]
-        qrp = s * self.rq[i][C].sum(1)
-        ok = self.base_ok.copy()
-        if self.events["indoor"].iloc[i] == 0:
-            ok &= ~self.has_frozen
-        need = np.ceil(self.stops[i] * UNIT_BUFFER)
-        in_stock = self.stock >= min(need, self.stock.min())
-        ok &= in_stock[C].all(1)
-        obj = np.where(ok, qrp * self.shape, -np.inf)
+        obj = np.where(valid, s * self.rq[i][C].sum(1) * shape, -np.inf)
         k = int(np.argmax(obj))
+        assert np.isfinite(obj[k]), f"no feasible lineup at event {i}"
         return list(C[k]), float(obj[k])
 
     def slot(self, i):

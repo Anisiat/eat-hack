@@ -1,0 +1,40 @@
+term,hydrate,recover,energy,focus,discovery,sharing,treat,value
+Savoury snack,0,0,0.3,0,0.3,0.6,0.5,0
+Refreshment,1,0,0,0,0,0,0.3,0
+Sweet treat,0,0,0,0,0,0.3,1,0
+Drink mixing,0,0,0,0,0.5,0.7,0.3,0
+Wellness routine,0,0.6,0,0.4,0.3,0,0,0
+Social drinking,0,0,0,0,0,1,0.5,0
+Snack break,0,0,0.5,0,0,0,0.4,0.3
+Sweet snack,0,0,0.4,0,0,0,0.8,0
+Sharing,0,0,0,0,0,1,0,0
+Protein top-up,0,1,0.5,0,0,0,0,0
+Wind-down routine,0,0.5,0,0,0,0,0.3,0
+Focus-oriented routine,0,0,0.5,1,0,0,0,0
+Cooking,0,0,0,0,0.7,0,0,0.4
+Toasting activity,0,0,0,0,0,0.8,0.6,0
+Hot-drink ritual,0,0.3,0,0.3,0,0,0.4,0
+Coffee alternative,0,0,0.4,0.5,0.4,0,0,0
+Breakfast topping,0,0,0.5,0,0,0,0,0.4
+Tea ritual,0.3,0.4,0,0,0,0,0.3,0
+Protein snack,0,0.8,0.6,0,0,0,0,0
+Cooking convenience,0,0,0,0,0.3,0,0,0.7
+Fruit snack,0.2,0,0.4,0,0,0,0.5,0
+Convenient meal component,0,0,0.3,0,0,0,0,0.7
+Savoury meal,0,0,0.5,0,0,0.3,0,0.4
+Meal accompaniment,0,0,0,0,0.4,0.4,0,0
+Add heat to meals,0,0,0,0,0.9,0.4,0,0
+Tea break,0,0.3,0,0.3,0,0,0.3,0
+Hydration,1,0.4,0,0,0,0,0,0
+Hot-drink break,0,0,0.3,0.3,0,0,0.3,0
+Meal preparation,0,0,0,0,0.4,0,0,0.6
+Meal flavouring,0,0,0,0,0.8,0,0,0
+Spread alternative,0,0,0,0,0.3,0,0.4,0.3
+Portable hydration,1,0,0,0,0,0,0,0.3
+Drink temperature retention,0.6,0,0,0,0,0,0,0.5
+Coffee break,0,0,0.7,0.6,0,0,0,0
+Prepared drink,0.4,0,0.3,0,0,0,0.3,0
+Meal topping,0,0,0,0,0.6,0.3,0,0
+Celebration,0,0,0,0,0,1,0.8,0
+Meal pairing,0,0,0,0,0.5,0.5,0,0
+Energy-drink occasion,0,0,1,0.5,0,0,0,0

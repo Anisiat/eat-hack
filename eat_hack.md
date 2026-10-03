@@ -50,7 +50,8 @@ Three sources: synthetic WatchHumans tables, real upcoming London events, and pu
 
 | File | Rows | Source | Key fields |
 | --- | --- | --- | --- |
-| `brands.csv` | 20 client brands | Synthetic, fictional names | category, sub-category, flavour profile, format, needs chilling, dietary flags, need states served, target segments, units available |
+| `brands.csv` | 71 products from 49 real RGC client brands | RGC's brand sheet | brand, product, category, sub-category, flavour, format, dietary flags, need states and target segments (inferred), label claims, label → target link |
+| `brand_features.csv`, `brand_products.csv` | 49 brands, 70 products | Built from `brands.csv` by `scripts/build_brand_features.py`, using the phrase mappings in `data/mappings/` | 8 need states, 5 target segments, lineup role, vegan, gluten-free, adults-only, chilling; favourite five and stock are assumptions |
 | `users.csv` | 5,000 | Synthetic WatchHumans | age band, borough, segment (students, young professionals, fitness, families, foodies), traits, category affinities, dietary needs, sign-up source (pop-up code or organic) |
 | `reviews.csv` | 20,000 | Synthetic WatchHumans | user, brand, pop-up code or none, rating 1 to 5, would buy, liked or disliked attribute, in target segment; pop-up reviews reconcile with `popup_brands.csv` |
 | `popups.csv` | 60 past pop-ups, 2 a month from Apr 2024 to Sep 2026 | Synthetic | date, event type (one of seven), borough, footfall, 5-brand lineup, sign-ups, reviews, cost |
@@ -68,7 +69,7 @@ Three sources: synthetic WatchHumans tables, real upcoming London events, and pu
 - A hidden "truth" sets each rating and sign-up rate from need-state fit, audience match and brand quality, plus noise. The model never sees these parameters; it learns only from the noisy tables.
 - Past lineups follow habit: RGC's five favourite brands appear in 70% of past pop-ups. That gives the tool something real to beat.
 - Train on the first 48 past pop-ups and test on the last 12, split by date.
-- Fictional brand names only, so synthetic ratings are never attached to a real client in a public video.
+- Brands are RGC's real clients, but every rating, review and pop-up outcome is synthetic. Label it as synthetic in any public video, and never present a synthetic rating as a client's real result.
 
 **Where the events come from.** The London hackathon aggregator, Let's Do This for runs and races, food markets, match screenings and campus fairs. Record facts and links only.
 
@@ -133,7 +134,7 @@ Six steps run in order: score every brand at every event, predict outcomes, pick
 
    n is the need-state vector of the brand and of the event type, from the crowd table. a is audience overlap: the event's expected age and interest mix against the brand's target segments. c is context: time of day, indoor or outdoor, and whether the product needs chilling. h is the brand's learned lift at event type k from WatchHumans ratings, shrunk towards zero when it has few reviews there.
 2. **Expected outcomes.** A Poisson regression trained on the 48 training pop-ups predicts sign-ups from footfall, event type, dwell time and lineup appeal. Combined with fit, it gives expected reviews and QRP per brand.
-3. **Lineup optimiser.** For each event, score every 5-brand combination of eligible brands: 20 brands give 15,504 combinations, scored in under a second. The score is total brand QRP, plus a bonus for covering a drink, a savoury, a sweet and a condiment, minus a penalty for two brands in the same sub-category. Hard constraints: at least one vegan and one gluten-free option, chilled capacity, units in stock.
+3. **Lineup optimiser.** For each event, shortlist the 20 eligible brands with the highest expected QRP, then score every 5-brand combination of the shortlist (15,504), in under a second. The score is total brand QRP, plus a bonus for covering a drink, a savoury, a sweet and a condiment, minus a penalty for two brands in the same sub-category. Hard constraints: at least one vegan and one gluten-free option, chilled capacity, units in stock, and no alcohol or CBD at community, expo or conference events.
 4. **Month plan.** Rank events by best-lineup QRP per pound and fill RGC's capacity, usually 2 pop-ups a month, with no date clashes. No brand is guaranteed a slot: clients do not pay RGC for pop-up placement, and pop-ups are one RGC service among several. Boroughs where WatchHumans has few users get a bonus, because new sign-ups are worth more there.
 5. **Brand event profiles.** For each brand: fit across the seven event types, its best moment and audience, what to sample, where to avoid, and its top five upcoming events with expected reviews. A language model writes the profile paragraph from these numbers; it never sets them.
 6. **Quantities and timing.** Units to bring equal expected stops times one sample times a 1.2 buffer. The time slot is the event's peak-need moment from the crowd table.
@@ -190,7 +191,7 @@ The demo runs the three screens in order and lands on one number: the uplift in 
 | Time | Screen | Line |
 | --- | --- | --- |
 | 0:00 | Title over a photo of The Shelf | "RGC runs RGC-first pop-ups: four or five client brands, free product, and every pop-up should grow WatchHumans. Today the event and the lineup are judgement calls." |
-| 0:15 | Brand profiles: a fictional hot-sauce brand | "This client wins at street food markets and match screenings, in the evening, with 25 to 34s. It loses at runs and family mornings." |
+| 0:15 | Brand profiles: a client brand, e.g. Dr. Will's | "This client wins at community events and food markets, with foodies. It loses at sports events." (Synthetic ratings: say so on screen.) |
 | 0:35 | Event planner: a real upcoming London hackathon | "Pick a real event. The planner brings \[five brands\], \[N\] units each, timed for the mid-afternoon slump. Here are the three reasons." |
 | 1:00 | Same event: habit lineup against tool lineup | "RGC's usual five would earn \[X\] qualified reviews here. The planner's five earn \[Y\]." |
 | 1:15 | Month plan and impact | "Across next month's two pop-ups: \[Z\]% more qualified reviews and \[W\]% lower cost per review, tested on 12 held-out pop-ups." |

@@ -13,7 +13,7 @@ import pandas as pd
 
 from . import fit as fitmod
 from . import outcomes, plan, profiles
-from .data import OUT, load, past_events, upcoming_events
+from .data import OUT, best_products, load, past_events, upcoming_events
 from .impact import uplift_test
 from .optimise import Optimiser, lineup_reasons
 
@@ -46,6 +46,7 @@ def main():
     parts = fitmod.score(d, fm, events)
     opt = Optimiser(d, om, events, parts)
     brand_reason = lambda i, j: fitmod.reasons(d, fm, events, parts, i, j)  # noqa: E731
+    picks = best_products(d, d["event_types"].index)
     lineups, score_rows = {}, []
     for i, e in enumerate(events.itertuples()):
         best, _ = opt.best(i)
@@ -54,6 +55,8 @@ def main():
         lineups[e.event_id] = dict(
             name=e.name, date=e.date, event_type=e.event_type, borough=e.borough,
             brands=[opt.bids[j] for j in best],
+            brand_names=[d["brands"].at[opt.bids[j], "brand_name"] for j in best],
+            products={opt.bids[j]: picks[e.event_type][opt.bids[j]]["product"] for j in best},
             units={opt.bids[j]: int(opt.units[i, j]) for j in best},
             slot=opt.slot(i), exp_signups=round(res["signups"], 1), exp_reviews=round(res["reviews"], 1),
             qrp=round(res["qrp"], 1), habit_brands=[opt.bids[j] for j in opt.habit],
@@ -105,7 +108,7 @@ def main():
           f"cost per qualified review £{impact['cost_per_qr_tool']} vs £{impact['cost_per_qr_habit']}")
     print(f"Sign-up model test deviance {om.test_deviance:.2f} vs footfall baseline {om.baseline_deviance:.2f}")
     print(f"Month plan {month['month']}: {len(month['popups'])} pop-ups, QRP {month['total_qrp']} vs habit "
-          f"{month['habit_total_qrp']}, {month['brands_featured']}/20 brands featured")
+          f"{month['habit_total_qrp']}, {month['brands_featured']}/{len(opt.bids)} brands featured")
     print(f"Wrote outputs to {OUT}/")
 
 

@@ -1,13 +1,13 @@
 """Step 5: brand event profiles: where each client brand wins, what to sample, where to avoid.
 
-The paragraph is filled from the numbers by a template; it never sets them. When brand_profiles.csv
-is present, products, flavours and label claims come from it.
+The paragraph is filled from the numbers by a template; it never sets them. Products, flavours and
+label claims come from RGC's brand sheet (brand_products.csv).
 """
 import numpy as np
 import pandas as pd
 
 from . import fit as fitmod
-from .data import SEGMENTS, nice
+from .data import SEGMENTS, best_products, nice
 
 MIN_SEGMENT_REVIEWS = 20
 TYPE_LABEL = {"community": "community events", "concerts": "concerts and club nights",
@@ -22,17 +22,12 @@ def type_events(d):
                              month=0, audience_tags="")).set_index("event_type", drop=False)
 
 
-def _first(bp, col):
-    if bp is None or col not in bp.columns or bp[col].dropna().empty:
-        return None
-    return str(bp[col].dropna().iloc[0])
-
-
 def build(d, fm, scores, events):
     brands, reviews, users = d["brands"], d["reviews"], d["users"]
     te = type_events(d)
     parts = fitmod.score(d, fm, te)
     rv = reviews.merge(users[["user_id", "segment"]], on="user_id")
+    picks = best_products(d, te.index)
     profiles = {}
     for j, bid in enumerate(brands.index):
         b = brands.loc[bid]
@@ -50,18 +45,16 @@ def build(d, fm, scores, events):
         liked = liked.iloc[0] if len(liked) else None
         disliked = disliked.iloc[0] if len(disliked) else None
 
-        bp = d["brand_profiles"]
-        bp = bp[bp["brand_id"] == bid] if bp is not None else None
-        product = _first(bp, "product_variant") or b["description"]
-        flavour = _first(bp, "flavour_profile")
-        claims = _first(bp, "marketing_claims_label_keywords")
-        label_link = _first(bp, "label_to_target_link_inferred")
+        prod = picks[best_t][bid]          # the brand's product that best fits its best event type
+        product, flavour = prod["product"], prod["flavour"]
+        claims = prod["claims"].replace("; ", ", ") if prod["claims"] else None
+        label_link = prod["label_link"].rstrip(". ") or None
 
         sample = product + (f" ({flavour})" if flavour else "") + (f"; lead with its {liked}" if liked else "")
         avoid = f"{nice(worst_t)} (fit {fbt[worst_t]:.2f})" + (f"; reviewers mark down its {disliked}"
                                                                   if disliked else "")
-        # events where the tool would bring this brand come first, then by expected qualified reviews
-        top = scores[scores["brand_id"] == bid].sort_values(["in_best_lineup", "exp_qrp"], ascending=False).head(5)
+        # events where the tool would bring this brand come first, then the events it fits best
+        top = scores[scores["brand_id"] == bid].sort_values(["in_best_lineup", "fit"], ascending=False).head(5)
         top_events = [dict(event_id=row.event_id, name=events.at[row.event_id, "name"],
                            date=events.at[row.event_id, "date"], event_type=events.at[row.event_id, "event_type"],
                            exp_reviews=round(row.exp_reviews, 1), exp_qrp=round(row.exp_qrp, 1))

@@ -4,7 +4,7 @@
 
 Built for EAT_HACK. The full build plan is in [eat_hack.md](eat_hack.md).
 
-> All WatchHumans users, reviews, pop-ups and brands here are **synthetic**, and brand names are fictional. Borough figures are real Census 2021 data. `events.csv` is currently a **placeholder** of invented events at real London venues.
+> Brands and products are **RGC's real clients** (`brands.csv`). All WatchHumans users, reviews, ratings and pop-up outcomes are **synthetic**: never present them as a client's real results. Borough figures are real Census 2021 data. `events.csv` is currently a **placeholder** of invented events at real London venues.
 
 ---
 
@@ -58,10 +58,10 @@ Current results on synthetic data:
 
 | Measure | Tool | Habit | |
 |---|---|---|---|
-| Qualified reviews per pop-up, on 12 held-out pop-ups | 81.6 | 64.1 | **+27.3%** (95% CI +20.4% to +37.4%) |
-| Cost per qualified review, same 12 pop-ups | £4.94 | £6.29 | −21% |
-| November month plan, 2 pop-ups | 496 QRP, £1.63 per review | 294 QRP, £4.95 per review | +69% |
-| Sign-up forecast error on held-out pop-ups (Poisson deviance, lower is better) | 0.99 | 24.4 (footfall-only guess) | |
+| Qualified reviews per pop-up, on 12 held-out pop-ups | 186.4 | 136.1 | **+37.0%** (95% CI +28.1% to +44.8%) |
+| Cost per qualified review, same 12 pop-ups | £2.22 | £3.04 | −27% |
+| November month plan, 2 pop-ups | 396 QRP, £1.66 per review | 289 QRP, £5.04 per review | +37% |
+| Sign-up forecast error on held-out pop-ups (Poisson deviance, lower is better) | 2.47 | 65.3 (footfall-only guess) | |
 
 **These numbers show how much is at stake if the patterns hold. They are not a measured result.** The model learns only from the noisy CSVs. A hidden "truth" inside the generator judges the outcome, and the model never sees it.
 
@@ -83,7 +83,7 @@ The build runs in four hours, split across three roles: data lead, model lead, a
 2. The model: fit score, outcome forecasts, lineup optimiser, month plan, brand profiles, uplift test. ✅
 3. The Streamlit app, with three screens reading `outputs/`. ⏳ (app lead)
 4. Real upcoming events in place of the placeholder `events.csv`. ⏳
-5. The brand profile sheet (`brand_profiles.csv`), giving products, flavours and label claims for the profiles. ⏳
+5. RGC's brand sheet (`brands.csv`, 49 real brands) mapped onto the model's need states and segments. ✅
 
 ---
 
@@ -91,7 +91,10 @@ The build runs in four hours, split across three roles: data lead, model lead, a
 
 | File | Rows | Source | Key fields |
 |---|---|---|---|
-| `brands.csv` | 20 | Synthetic, fictional names | category, sub-category, 8 need states, 5 target segments, chilling/frozen, vegan, gluten-free, favourite five, units per month |
+| `brands.csv` | 71 products, 49 brands | **RGC's brand sheet** (real clients) | brand, product, category, sub-category, flavour, format, dietary flags, need states and target segments (inferred), label claims, label → target link |
+| `brand_features.csv` | 49 | Built from `brands.csv` | 8 need states, 5 target segments, lineup role (drink, savoury, sweet, condiment, functional, other), vegan, gluten-free, adults-only, chilling, favourite five*, units per month* |
+| `brand_products.csv` | 70 | Built from `brands.csv` | one row per product: need states, flavour, format, claims; used to pick what to sample |
+| `data/mappings/*.csv` | 39 + 47 | Team assumptions, editable | each inferred need-state or segment phrase in the sheet → weights on the model's 8 needs and 5 segments |
 | `popups.csv` | 60 past pop-ups, 2 a month, Apr 2024 to Sep 2026 | Synthetic | date, event type, borough, footfall, lineup, habit flag, stops, sign-ups, reviews, qualified reviews, costs, train/test split (48/12) |
 | `popup_brands.csv` | 300 | Synthetic | pop-up × brand: units given, reviews, qualified reviews, average rating |
 | `users.csv` | 5,000 | Synthetic WatchHumans | age band, borough, segment and segment scores, traits, category affinities, dietary needs, sign-up source (pop-up code or organic) |
@@ -100,7 +103,8 @@ The build runs in four hours, split across three roles: data lead, model lead, a
 | `data/raw/borough_census_2021.csv` | 33 | Census 2021 | the raw borough download |
 | `event_types.csv` | 7 | The crowd table in eat_hack.md | need-state vector, assumed audience mix, peak slot, moment, typical dwell and staff |
 | `events.csv` | 36, Oct to Dec 2026 | **Placeholder**: real venues, invented events | type, start/end, venue, borough, lat/lon, expected attendance, indoor, audience tags, stall cost, link |
-| `brand_profiles.csv` | to come | RGC brand sheet | product/variant, flavour, format, dietary flags, need states, target segments, label claims |
+
+\* Assumptions: the habit "favourite five" are the five brands with the most products on the shelf (Simply Roasted, The Protein Ball Co., Well & Truly, Gut Food / Ferment Fizz, Blanco Niño), and stock per month is synthetic.
 
 **Event types (7):** community, concerts, conferences, expos, festivals, performing arts, sports.
 **Need states (8):** hydrate, recover, energy, focus, discovery, sharing, treat, value.
@@ -118,7 +122,8 @@ The build runs in four hours, split across three roles: data lead, model lead, a
 
 ```
 scripts/                       data generation (writes the CSVs)
-  generate_popups.py           brands, past pop-ups, hidden truth (never read by the model)
+  build_brand_features.py      brands.csv + data/mappings -> brand_features.csv, brand_products.csv
+  generate_popups.py           past pop-ups, hidden truth (never read by the model)
   generate_watchhumans_data.py users, reviews, boroughs
   get_borough_census.py        Census 2021 download
   build_event_types.py         crowd table -> event_types.csv
@@ -145,9 +150,10 @@ outputs/                       what the app reads (+ outputs/stubs/: 5-row versi
    - Sign-ups: from footfall, dwell, event type and lineup appeal.
    - Reviews per sign-up: from fit, dwell and event type.
    - QRP = sign-ups × r × q.
-3. **Lineup optimiser** scores all 15,504 possible 5-brand lineups per event.
+3. **Lineup optimiser** shortlists each event's 20 best eligible brands and scores all 15,504 possible 5-brand lineups among them.
    - The score is QRP, with a bonus for covering drink, savoury, sweet and condiment.
-   - Hard rules: at least 1 vegan and 1 gluten-free option, at most 2 chilled brands, frozen only indoors, and units in stock.
+   - Hard rules: at least 1 vegan and 1 gluten-free option, at most 2 chilled brands, frozen only indoors, units in stock, and no alcohol or CBD at community, expo or conference events.
+   - For each brand it picks the product whose need states best match the event type.
 4. **Month plan:** rank events by QRP per pound, with a bonus for boroughs where WatchHumans has few users. Fill RGC's capacity (2 pop-ups a month by default) with no same-day clashes.
 5. **Brand profiles:** fit by event type, best moment and audience, what to sample, where to avoid, top 5 events, and a paragraph filled from the numbers by a template.
 6. **Quantities and timing:** units = expected stops × 1.2, capped by stock. The slot is the event type's peak-need moment, kept within the event's hours.
@@ -158,19 +164,19 @@ The **uplift test** is the only code that touches the generator. The model choos
 
 ## Inputs and outputs
 
-**Inputs:** `brands.csv`, `popups.csv`, `popup_brands.csv`, `users.csv`, `reviews.csv`, `boroughs.csv`, `event_types.csv` and `events.csv`, plus `brand_profiles.csv` once it's uploaded. If the profile sheet's brand names differ from `brands.csv`, add a `brand_map.csv` with `brand_id` and `brand` columns.
+**Inputs:** `brand_features.csv` and `brand_products.csv` (built from `brands.csv`), `popups.csv`, `popup_brands.csv`, `users.csv`, `reviews.csv`, `boroughs.csv`, `event_types.csv` and `events.csv`. To add or change brands, edit `brands.csv`, add any new phrases to `data/mappings/`, and rerun the data build.
 
 **Outputs** (`outputs/`):
 
 | File | Contents |
 |---|---|
-| `scores.csv` | event_id, brand_id, fit, exp_signups, exp_reviews, exp_qrp, in_best_lineup, reason_1–3 (36 × 20 rows) |
-| `lineups.json` | event_id → name, date, event_type, brands[5], units{brand: n}, slot, qrp, habit_qrp, cost, cost_per_qr, reasons[3] |
+| `scores.csv` | event_id, brand_id, fit, exp_signups, exp_reviews, exp_qrp, in_best_lineup, reason_1–3 (36 × 49 rows) |
+| `lineups.json` | event_id → name, date, event_type, brands[5], brand_names[5], products{brand: product}, units{brand: n}, slot, qrp, habit_qrp, cost, cost_per_qr, reasons[3] |
 | `profiles.json` | brand_id → fit_by_type{7}, best_type, best_moment, best_audience, sample, avoid, top_events[5], text |
 | `impact.json` | uplift, ci_low, ci_high, qrp_tool, qrp_habit, cost_per_qr_tool, cost_per_qr_habit, n_test, per_popup[12] |
 | `month_plan.json` | month, capacity, popups[{event_id, date, brands, qrp, cost}], total_qrp, habit_total_qrp, brands_featured |
 
-Example lineup (`E003`, a tech meetup at the Barbican): Northbrew, Lentil Lark, Cacao Field, Dip Shift and Protein Rebel, 238 units each, 15:00–16:30. Expected 165 qualified reviews against 136 for the usual five.
+Example lineup (`E003`, a tech meetup at the Barbican, 15:00–16:30, 221 units each): INDI Brain Bar, mindfuel flow Mushroom Iced Latte, Little's Toffee Nut Instant Coffee, Mission Lemon & Ginseng Energy Drink and All That Matters Superfood Puffs. Expected 168 qualified reviews against 124 for the usual five (synthetic).
 
 ---
 
@@ -183,7 +189,7 @@ uv venv .venv && uv pip install --python .venv/bin/python -r requirements.txt
 To rebuild the data (only needed after changing a generator):
 
 ```bash
-.venv/bin/python scripts/get_borough_census.py && .venv/bin/python scripts/generate_popups.py . && .venv/bin/python scripts/generate_watchhumans_data.py . && .venv/bin/python scripts/build_event_types.py && .venv/bin/python scripts/generate_events.py
+.venv/bin/python scripts/get_borough_census.py && .venv/bin/python scripts/build_brand_features.py && .venv/bin/python scripts/generate_popups.py . && .venv/bin/python scripts/generate_watchhumans_data.py . && .venv/bin/python scripts/build_event_types.py && .venv/bin/python scripts/generate_events.py
 ```
 
 To run the model:

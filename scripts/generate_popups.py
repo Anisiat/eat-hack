@@ -1,12 +1,12 @@
 """
 generate_popups.py - synthetic RGC-first pop-up history for Pop-up Pick (EAT_HACK).
 
-Writes three files to an output folder (default: ./out):
-  brands.csv        20 fictional client brands: what RGC knows about each brand
+Reads brand_features.csv (RGC's real client brands, from build_brand_features.py).
+Writes two files to an output folder (default: ./out):
   popups.csv        60 past pop-ups (2 a month), one row each, Apr 2024 to Sep 2026
   popup_brands.csv  one row per pop-up and brand: units, reviews, qualified reviews, rating
 
-Everything is synthetic. Brand names are invented; event names are generic.
+Brand names are RGC's real clients, but every outcome here is synthetic; event names are generic.
 The hidden truth (brand quality and the outcome formulas) lives only in this file and
 never appears in the CSVs. The model must learn from the CSVs alone; only the uplift
 test may call simulate().
@@ -28,60 +28,20 @@ SEGMENTS = ["students", "young_professionals", "fitness", "families", "foodies"]
 EVENT_TYPES = ["community", "concerts", "conferences", "expos", "festivals", "performing_arts", "sports"]
 CORE_CATEGORIES = {"drink", "savoury", "sweet", "condiment"}
 
-# ---------------------------------------------------------------- brands (fictional)
-# id, name, category, sub_category, description,
-# needs (hydrate, recover, energy, focus, discovery, sharing, treat, value), target segments,
-# needs_chilling, frozen, vegan, gluten_free
-BRANDS = [
-    ("B01", "Sparkfold Soda", "drink", "prebiotic soda", "Lightly sparkling prebiotic soda",
-     [.6, .1, .2, .2, .6, .4, .6, .3], ["students", "young_professionals", "foodies"], 1, 0, 1, 1),
-    ("B02", "Tidewell Hydrate", "drink", "electrolyte drink", "Low-sugar electrolyte drink for after exercise",
-     [1., .9, .4, .2, .2, 0., 0., .3], ["fitness", "young_professionals"], 0, 0, 1, 1),
-    ("B03", "Northbrew", "drink", "cold brew coffee", "Canned cold brew coffee",
-     [.1, 0., 1., .9, .3, .1, .3, .3], ["young_professionals", "students"], 1, 0, 1, 1),
-    ("B04", "Kombuchee", "drink", "kombucha", "Small-batch kombucha in seasonal flavours",
-     [.5, .2, .2, .1, .8, .3, .4, .2], ["foodies", "young_professionals"], 1, 0, 1, 1),
-    ("B05", "Lentil Lark", "savoury", "lentil crisps", "Baked lentil crisps in sharing bags",
-     [0., .1, .3, .2, .3, .9, .6, .5], ["students", "young_professionals", "families"], 0, 0, 1, 1),
-    ("B06", "Popwright", "savoury", "popcorn", "Sweet and salty popcorn",
-     [0., 0., .2, .2, .3, 1., .7, .6], ["students", "young_professionals", "families"], 0, 0, 1, 1),
-    ("B07", "Seedwork", "savoury", "seed crackers", "Seeded crackers for grazing boards",
-     [0., .2, .3, .3, .5, .6, .3, .3], ["foodies", "young_professionals"], 0, 0, 1, 1),
-    ("B08", "Umami Drift", "savoury", "seaweed snacks", "Crispy seaweed puffs",
-     [0., 0., .2, .2, .8, .5, .5, .4], ["foodies", "students"], 0, 0, 1, 1),
-    ("B09", "Cacao Field", "sweet", "dark chocolate", "Single-origin dark chocolate bars",
-     [0., .1, .5, .5, .5, .4, .9, .2], ["young_professionals", "foodies"], 0, 0, 1, 1),
-    ("B10", "Lolly Loft", "sweet", "ice lollies", "Real-fruit ice lollies",
-     [.6, .1, .1, 0., .3, .3, 1., .4], ["families", "students"], 1, 1, 1, 1),
-    ("B11", "Crumbhouse", "sweet", "cookies", "Gooey bakery-style cookies",
-     [0., 0., .4, .1, .2, .6, 1., .5], ["students", "families"], 0, 0, 0, 0),
-    ("B12", "Fruitling", "sweet", "fruit snacks", "Fruit and veg snacks for children",
-     [.1, 0., .3, 0., .2, .3, .8, .6], ["families"], 0, 0, 1, 1),
-    ("B13", "Ember & Ash", "condiment", "hot sauce", "Small-batch hot sauces",
-     [0., 0., .1, 0., 1., .7, .5, .2], ["foodies", "young_professionals"], 0, 0, 1, 1),
-    ("B14", "Redline", "condiment", "chilli oil", "Crunchy chilli oil",
-     [0., 0., .1, 0., .9, .5, .5, .2], ["foodies"], 0, 0, 1, 1),
-    ("B15", "Tangle", "condiment", "chutney", "Fruit chutneys and relishes",
-     [0., 0., .1, 0., .7, .6, .5, .3], ["foodies", "families"], 0, 0, 1, 1),
-    ("B16", "Dip Shift", "condiment", "dip pots", "Single-serve hummus and dip pots",
-     [0., .1, .3, .3, .4, .9, .4, .5], ["young_professionals", "students"], 1, 0, 1, 1),
-    ("B17", "Protein Rebel", "functional", "protein bar", "High-protein snack bars",
-     [0., .9, .7, .4, .2, .1, .3, .5], ["fitness", "young_professionals", "students"], 0, 0, 0, 1),
-    ("B18", "Fuel Bites", "functional", "energy balls", "Oat and date energy balls",
-     [0., .6, .9, .5, .2, .2, .4, .5], ["fitness", "students"], 0, 0, 1, 0),
-    ("B19", "Rootshot", "functional", "ginger shots", "Cold-pressed ginger shots",
-     [.2, .5, .7, .4, .5, 0., .1, .2], ["young_professionals", "fitness"], 1, 0, 1, 1),
-    ("B20", "Mellow Gut", "functional", "fibre gummies", "Prebiotic fibre gummies",
-     [0., .2, .1, .3, .4, .1, .4, .4], ["young_professionals", "families"], 0, 0, 0, 1),
-]
-FAVOURITE_FIVE = ["B01", "B05", "B11", "B13", "B17"]   # RGC's habit lineup
-
+# ---------------------------------------------------------------- brands (RGC's real clients)
+# Read from brand_features.csv, built from RGC's brand sheet by build_brand_features.py.
+_bf = pd.read_csv(Path(__file__).resolve().parents[1] / "brand_features.csv")
 BRAND = {}
-for bid, name, cat, sub, desc, needs, targets, chill, frozen, vegan, gf in BRANDS:
-    BRAND[bid] = dict(brand_id=bid, brand_name=name, category=cat, sub_category=sub, description=desc,
-                      needs=np.array(needs, float),
-                      target=np.array([1.0 if s in targets else 0.0 for s in SEGMENTS]),
-                      targets=targets, needs_chilling=chill, frozen=frozen, vegan=vegan, gluten_free=gf)
+for r in _bf.itertuples():
+    targets = [s for s in SEGMENTS if getattr(r, f"target_{s}") == 1]
+    BRAND[r.brand_id] = dict(brand_id=r.brand_id, brand_name=r.brand_name, category=r.category,
+                             sub_category=r.sub_category, description=r.description,
+                             needs=np.array([getattr(r, f"need_{n}") for n in NEEDS], float),
+                             target=np.array([1.0 if s in targets else 0.0 for s in SEGMENTS]),
+                             targets=targets, needs_chilling=r.needs_chilling, frozen=r.frozen, vegan=r.vegan,
+                             gluten_free=r.gluten_free, adults_only=r.adults_only,
+                             hot_drink=int(r.category == "drink" and r.sheet_category == "Pantry"))
+FAVOURITE_FIVE = _bf.loc[_bf["favourite_five"] == 1, "brand_id"].tolist()   # RGC's habit lineup
 
 # ---------------------------------------------------------------- event types
 # Seven event categories (PredictHQ-style). Each blends the sub-types listed in its names.
@@ -172,6 +132,8 @@ def true_fit(bid, event):
         f *= 1.15
     if b["frozen"] and event["temp_c"] <= 12:
         f *= 0.6
+    if b["adults_only"] and event["event_type"] in ("community", "expos", "conferences"):
+        f *= 0.3        # alcohol or CBD at family, student and work events lands badly
     return float(np.clip(f, 0, 1))
 
 
@@ -296,27 +258,10 @@ def make_history(n_months=30, per_month=2, first_month=(2024, 4)):   # RGC runs 
     return popups, popup_brands.reset_index(drop=True)
 
 
-def brands_table():
-    rng = np.random.default_rng(SEED + 2)
-    rows = []
-    for bid in sorted(BRAND):
-        b = BRAND[bid]
-        row = dict(brand_id=bid, brand_name=b["brand_name"], category=b["category"],
-                   sub_category=b["sub_category"], description=b["description"])
-        row.update({f"need_{n}": v for n, v in zip(NEEDS, b["needs"])})
-        row.update({f"target_{s}": int(v) for s, v in zip(SEGMENTS, b["target"])})
-        row.update(needs_chilling=b["needs_chilling"], frozen=b["frozen"], vegan=b["vegan"],
-                   gluten_free=b["gluten_free"], favourite_five=int(bid in FAVOURITE_FIVE),
-                   units_available_per_month=int(rng.integers(6, 21) * 100))
-        rows.append(row)
-    return pd.DataFrame(rows)
-
-
 if __name__ == "__main__":
     out_dir = Path(sys.argv[1] if len(sys.argv) > 1 else "out")
     out_dir.mkdir(parents=True, exist_ok=True)
     popups, popup_brands = make_history()
-    brands_table().to_csv(out_dir / "brands.csv", index=False)
     popups.to_csv(out_dir / "popups.csv", index=False)
     popup_brands.to_csv(out_dir / "popup_brands.csv", index=False)
     print(f"Wrote {len(popups)} pop-ups, {len(popup_brands)} pop-up brand rows, {len(BRAND)} brands to {out_dir}/")
