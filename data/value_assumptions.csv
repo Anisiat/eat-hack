@@ -1,0 +1,21 @@
+key,value,unit,what it means and how RGC can replace it with a real figure
+value_per_signup_gbp,0,GBP per sign-up,"RGC spends nothing on paid ads today, so a sign-up has no direct £ value. Sign-ups are still counted and reported for the pitch. Set a value if RGC starts paying for acquisition"
+value_per_review_gbp,39.93,GBP per review,RGC's price to clients: £599 for 15 reviews
+video_review_share,0.50,share,Share of WatchHumans reviews that are videos and can be shared publicly
+views_per_video,150,views,Average views of one review video across WatchHumans and social channels
+value_per_1000_views_gbp,0,GBP per 1000 views,"No £ value on publicity today. Estimated video views are still reported, so they can be built into the pitch. Set a value (e.g. a social CPM) to count it"
+unit_cost_gbp,0.50,GBP per unit,Cost of one sample unit given away (borne by the client). Counts towards a pop-up's cost so unused product shows up as waste
+marketing_rate_gbp,30.00,GBP per hour,Loaded hourly cost of RGC marketing staff
+marketing_hours_manual,5.0,hours per pop-up,Time marketing spends today finding an event and choosing the lineup and products. Time it for a month to replace
+marketing_hours_tool,1.0,hours per pop-up,Time with Pop-up Pick: review the suggestion and confirm
+popups_per_month,2,pop-ups,RGC's usual pop-up frequency
+max_attendance,200,people,RGC pops up only at events with expected attendance below this
+pitch_fee_min_gbp,30,GBP per event,Lowest typical pitch fee for a small event; listed stall costs are clipped to this range
+pitch_fee_max_gbp,150,GBP per event,Highest typical pitch fee for a small event
+insurance_gbp,35,GBP per event,Single-event public liability insurance (typically £20-50)
+consumables_gbp,30,GBP per event,"Bags, flyers, stickers, tape, pens (typically £20-40)"
+transport_inner_gbp,20,GBP per event,Transport and parking in inner London (typically £15-40)
+transport_outer_gbp,35,GBP per event,Transport and parking in outer London
+staff_food_gbp,10,GBP per staff member,Food and drink for whoever is staffing
+staff_hourly_cost_gbp,0,GBP per staff hour,Wages for staffing the stall. 0 = not counted (staff already paid or volunteers); set it to count staff time
+kit_one_off_gbp,250,GBP once,"Basic kit (gazebo, table, banner): makes the first pop-up cost about £350-400. One-off, so not in per-event cost"

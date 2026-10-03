@@ -13,36 +13,52 @@ Pop-up Pick is a new planning module for RGC's RGC-first pop-ups. It tells RGC w
 - **Events to brands:** pick an event, get the best lineup, the products and quantities to bring, the best time slot, and the reasons.
 - **Brands to events:** pick a client brand, get its event profile (event types, moments and audiences where it wins, and where it doesn't) and its best upcoming events.
 
-**The headline number** is qualified reviews per pop-up: WatchHumans reviews from people in each brand's target audience. One figure captures what RGC gains (sign-ups and data) and what the client gains (honest feedback from the right people).
+**The headline number** is net value per pop-up in pounds: review income (RGC charges £599 for 15 reviews) minus what the pop-up costs. Sign-ups and video views are reported alongside for the pitch. RGC pops up only at small events, with expected attendance under 200.
 
 **Built today** on synthetic WatchHumans data, real upcoming London events and public location data. RGC's real data replaces the synthetic tables without changing the model.
 
 ## Impact metric
 
-The north-star metric is qualified reviews per pop-up (QRP): WatchHumans reviews completed at a pop-up, or within 7 days of it, by people in one of the reviewed brand's target archetypes.
+We can't verify whether a reviewer is in a brand's "target" audience, and reviews aren't the only payback: pop-ups also bring publicity. So the headline is **net value per pop-up, in pounds**, built only from things RGC can count with a QR code per pop-up:
 
 ```latex
-\text{QRP}(e, L) = \sum_{b \in L} F_e \times s(e, L) \times r_{b,e} \times q_{b,e}
+\text{Net value}(e, L) = S \cdot v_S + R \cdot (v_R + v_P) - \text{event cost} - \text{units} \cdot c_U
 ```
 
-F is footfall past the stall at event e. s is the share who stop and sign up, which depends on the lineup L. r is the chance a sign-up reviews brand b. q is the share of those reviewers inside b's target archetypes.
+S is expected sign-ups and R is expected reviews (both depend on the event and the lineup L). v_R is the value of a review: **£39.93**, RGC's price of £599 for 15 reviews. v_S, the value of a sign-up, is **£0** today because RGC doesn't pay for acquisition. v_P, publicity, is **£0** today but reported as estimated video views so it can be built into the pitch. c_U is the cost of one sample unit (£0.50).
+
+**Event cost**, once RGC owns the basic kit, is about £150 for a half day (typically £95–290):
+
+| Per-event cost | Typical | Model default |
+| --- | --- | --- |
+| Pitch fee | £30–150 | the event's listed stall cost, kept within £30–150 |
+| Insurance (single-event public liability) | £20–50 | £35 |
+| Consumables (bags, flyers, stickers, tape, pens) | £20–40 | £30 |
+| Transport and parking | £15–40 | £20 inner London, £35 outer |
+| Food and drink for whoever's staffing | £10 | £10 per staff member |
+
+The first pop-up costs more like £350–400 because of one-off kit (about £250), which isn't counted per event. Staff wages aren't counted by default; set `staff_hourly_cost_gbp` to include them. All values live in `data/value_assumptions.csv` for RGC to replace with real figures.
+
+A pop-up is **wasted** when its net value is below zero. The forecast gives each event a chance of waste, so the month plan skips events that are more likely than not to lose money.
 
 | Metric | Who it serves | How RGC measures it for real |
 | --- | --- | --- |
 | Sign-ups per pop-up | RGC: traction | A QR code per pop-up in the WatchHumans sign-up flow |
-| QRP | RGC and clients | Reviews tagged with the pop-up's code, joined to the reviewer's archetype |
-| Cost per qualified review | RGC: efficiency | Staff hours, stall fee, travel and units given, divided by QRP |
-| Brands featured | Clients | How many client brands appear in a month's pop-ups; informational, since clients do not pay for placement |
+| Reviews per pop-up | RGC and clients | Reviews tagged with the pop-up's code |
+| Publicity | RGC and clients | Views of review videos from the pop-up; social mentions and tags |
+| Net value per pop-up | RGC | The four above in pounds, minus stall, staff, travel and product given |
+| Wasted pop-ups | RGC | Share of pop-ups with net value below zero |
+| Marketing time | RGC | Hours spent choosing events and lineups, by hand against with the tool |
 
-**The tool's impact** is its uplift over how RGC plans today:
+**The tool's impact** is measured in pounds a month:
 
 ```latex
-\text{Uplift} = \frac{\text{QRP}_{\text{tool}}}{\text{QRP}_{\text{habit}}} - 1
+\text{Impact} = (\overline{\text{net}}_{\text{tool}} - \overline{\text{net}}_{\text{habit}}) \times \text{pop-ups per month} + (h_{\text{manual}} - h_{\text{tool}}) \times \text{pop-ups per month} \times \text{hourly rate}
 ```
 
-The habit plan is the baseline: RGC's favourite brands at the biggest events. Today, measure uplift on 12 held-out synthetic pop-ups, with a bootstrap confidence interval. With real data, alternate tool-picked and manually picked pop-ups for a season and compare QRP and cost per qualified review.
+The habit plan is the baseline: RGC's usual lineup at the biggest events. Today it is measured on 12 held-out synthetic pop-ups with bootstrap confidence intervals. With real data, alternate tool-picked and manually picked pop-ups for a season, time the planning both ways, and compare net value per pop-up.
 
-On synthetic data, the uplift shows how much is at stake if the patterns hold; it is not a measured result. Say so on the slide.
+On synthetic data, the numbers show how much is at stake if the patterns hold; they are not a measured result. Say so on the slide.
 
 ## Data
 
@@ -55,7 +71,8 @@ Three sources: synthetic WatchHumans tables, real upcoming London events, and pu
 | `users.csv` | 5,000 | Synthetic WatchHumans | age band, borough, primary and secondary archetype and a score on all 10 WatchHumans archetypes, traits, category affinities, dietary needs, sign-up source (pop-up code or organic) |
 | `reviews.csv` | 20,000 | Synthetic WatchHumans | user, brand, pop-up code or none, rating 1 to 5, would buy, liked or disliked attribute, in target archetype; pop-up reviews reconcile with `popup_brands.csv` |
 | `popups.csv` | 60 past pop-ups, 2 a month from Apr 2024 to Sep 2026 | Synthetic | date, event type (one of seven), borough, footfall, 5-brand lineup, sign-ups, reviews, cost |
-| `popup_brands.csv` | 300 | Synthetic | pop-up, brand, units given, reviews, qualified reviews, average rating |
+| `popup_brands.csv` | 300 | Synthetic | pop-up, brand, units given, reviews, average rating |
+| `data/value_assumptions.csv` | 20 | Assumptions for RGC to replace | value per sign-up, per review and per 1,000 views; video share; views per video; unit cost; per-event costs (pitch, insurance, consumables, transport, staff food, optional wages); one-off kit; marketing hours and rate; pop-ups per month; attendance cap (200) |
 | `events.csv` | 30 to 40 upcoming | Real London listings, collected by hand | type, start and end, venue, latitude and longitude, expected attendance, indoor or outdoor, audience tags, stall cost, link |
 | `boroughs.csv` | 33 | Census 2021 (ONS TS007, via Nomis); WatchHumans users synthetic | population, share aged 18 to 34, inner or outer, WatchHumans users per 1,000 people |
 
@@ -133,9 +150,9 @@ Six steps run in order: score every brand at every event, predict outcomes, pick
    ```
 
    **Archetype matching.** Events, products and users share the 10 WatchHumans archetypes (wellness seeker, trend enthusiast, thoughtful buyer, smart saver, quality seeker, on-the-go shopper, impulse buyer, experience explorer, everyday planner, conscious consumer), which WatchHumans builds from each user's purchasing data. The event's crowd mix starts from the crowd table and is updated with who signed up at past pop-ups. Each product's archetype affinity starts from the brand sheet's target phrases and is updated with ratings by reviewer archetype. match = Σ_a crowd[a] × affinity[a]. Fit = the best product's match × moment (need-state cosine with the event type) × context (chilling outdoors, hydration in summer).
-2. **Expected outcomes.** A Poisson regression trained on the 48 training pop-ups predicts sign-ups from footfall, event type, dwell time and lineup appeal. Combined with fit, it gives expected reviews and QRP per brand.
-3. **Lineup optimiser.** For each event, shortlist the 20 eligible brands with the best fit, then score every combination of the shortlist at the event's lineup size, in under a second. Lineup size scales with expected attendance: 2 products under 50 people, 3 under 150, 4 under 500, and 5 at 500 or more (up to 15,504 combinations). The score is the lineup's archetype match: each archetype expected at the event is credited with its favourite product in the lineup, weighted by its share of the crowd, so products that each win a different part of the crowd beat near-duplicates. Hard constraints: at least one vegan and one gluten-free option, chilled capacity, units in stock, and no alcohol or CBD at community, expo or conference events.
-4. **Month plan.** Rank events by best-lineup QRP per pound and fill RGC's capacity, usually 2 pop-ups a month, with no date clashes. No brand is guaranteed a slot: clients do not pay RGC for pop-up placement, and pop-ups are one RGC service among several. Boroughs where WatchHumans has few users get a bonus, because new sign-ups are worth more there.
+2. **Expected outcomes.** A Poisson regression trained on the 48 training pop-ups predicts sign-ups from footfall, event type, dwell time and the lineup's archetype match. A second gives reviews per sign-up from fit. Together with `data/value_assumptions.csv` they give each lineup's net value and its chance of losing money.
+3. **Lineup optimiser.** For each event, shortlist the 20 eligible brands with the best fit, then score every combination of the shortlist at the event's lineup size, in under a second. Events are capped below 200 people. Lineup size scales with expected attendance: 2 products under 50 people, 3 under 100, 4 under 150, and 5 from 150 to 199 (up to 15,504 combinations). The score is the lineup's archetype match: each archetype expected at the event is credited with its favourite product in the lineup, weighted by its share of the crowd, so products that each win a different part of the crowd beat near-duplicates. Hard constraints: at least one vegan and one gluten-free option, chilled capacity, units in stock, and no alcohol or CBD at community, expo or conference events.
+4. **Month plan.** Skip events whose forecast says they will probably lose money, rank the rest by expected net value, and fill RGC's capacity, usually 2 pop-ups a month, with no date clashes. No brand is guaranteed a slot: clients do not pay RGC for pop-up placement, and pop-ups are one RGC service among several. Boroughs where WatchHumans has few users get a bonus, because new sign-ups are worth more there.
 5. **Brand event profiles.** For each brand: fit across the seven event types, its best moment and audience, what to sample, where to avoid, and its top five upcoming events with expected reviews. A language model writes the profile paragraph from these numbers; it never sets them.
 6. **Quantities and timing.** Units to bring per product equal expected stops (attendance × the type's stop rate) times one sample times a 1.2 buffer, capped by stock. The time slot is the event's peak-need moment from the crowd table.
 
@@ -147,18 +164,18 @@ The app has three screens, one per question RGC asks. Each reads the same scored
 
 | Screen | RGC enters | RGC gets |
 | --- | --- | --- |
-| Event planner (events to brands) | An event, or a date range; units available; stall size | Ranked events with expected sign-ups, QRP and cost per qualified review; best lineup with products, units, time slot and three reasons; the habit lineup's QRP for comparison |
+| Event planner (events to brands) | An event, or a date range; units available; stall size | Ranked events with expected sign-ups, reviews, net value and chance of waste; best lineup with products, units, time slot and three reasons; the habit lineup's net value for comparison |
 | Brand profiles (brands to events) | A client brand | Its event profile: fit across the seven event types, best moment, best audience, what to sample, where to avoid; its top five upcoming events with expected reviews |
-| Month plan and impact | Month, pop-up capacity | A calendar of pop-ups and lineups; total QRP versus the habit plan, with the uplift and its confidence interval |
+| Month plan and impact | Month, pop-up capacity | A calendar of pop-ups and lineups; net value against the habit plan, events skipped as likely losses, marketing time saved, and the monthly impact in pounds |
 
 **File contract.** All in `outputs/`, built by `python -m model.run [--month 2026-11 --capacity 2]` from the input CSVs plus `event_types.csv` (the crowd table) and `events.csv`. Agree these at T+0:00. Write stub files with five fake rows at T+0:15 so the app starts immediately.
 
 ```
-scores.csv       event_id, brand_id, fit, exp_signups, exp_reviews, exp_qrp, in_best_lineup, reason_1, reason_2, reason_3
-lineups.json     event_id -> name, date, event_type, brands[5], units{brand: n}, slot, qrp, habit_qrp, cost, cost_per_qr, reasons[3]
+scores.csv       event_id, brand_id, product, match, fit, exp_signups, exp_reviews, in_best_lineup, reason_1, reason_2, reason_3
+lineups.json     event_id -> name, date, event_type, expected_attendance, lineup_size, brands, products, units{brand: n}, slot, match, exp_signups, exp_reviews, value{net_value, p_waste, ...}, habit_value, reasons[3]
 profiles.json    brand_id -> fit_by_type{7}, best_type, best_moment, best_audience, sample, avoid, top_events[5], text
-impact.json      uplift, ci_low, ci_high, qrp_tool, qrp_habit, cost_per_qr_tool, cost_per_qr_habit, n_test, per_popup[12]
-month_plan.json  month, capacity, popups[{event_id, date, brands, qrp, cost}], total_qrp, habit_total_qrp, brands_featured
+impact.json      review_uplift (+CI), net_value_tool, net_value_habit, net_gain_per_popup (+CI), waste_rate_tool, waste_rate_habit, monthly_impact_gbp, yearly_impact_gbp, per_popup[12]
+month_plan.json  month, capacity, popups[{event_id, date, brands, exp_reviews, net_value, p_waste}], net_value, habit_net_value, skipped_events, marketing_time_saved_gbp, month_gain_gbp
 ```
 ## Location finder UI (paste after "Inputs and outputs", before "Team split")
 
@@ -167,6 +184,8 @@ The marketing team's job today: find events, work out who will be there, then gu
 It is the front end to the same engine. It reads the scored files and calculates nothing itself.
 
 This replaces the Event planner and Brand profiles screens with one map-first screen. The Month plan and impact screen stays, and takes the same look.
+
+> **Update:** QRP has been replaced by net value per pop-up (£) and expected reviews (see Impact metric), and events are capped below 200 people. Read "QRP" in this section as net value.
 
 ### Front end: one interactive web page
 
@@ -362,7 +381,7 @@ Bars run in parallel; diamonds are gates and fixed times.
 
 ## Demo
 
-The demo runs the three screens in order and lands on one number: the uplift in qualified reviews per pop-up over the habit plan. Replace bracketed values with real output before recording.
+The demo runs the three screens in order and lands on one number: the monthly impact in pounds against the habit plan. Replace bracketed values with real output before recording.
 
 **2-minute video**
 
@@ -371,8 +390,8 @@ The demo runs the three screens in order and lands on one number: the uplift in 
 | 0:00 | Title over a photo of The Shelf | "RGC runs RGC-first pop-ups: four or five client brands, free product, and every pop-up should grow WatchHumans. Today the event and the lineup are judgement calls." |
 | 0:15 | Brand profiles: a client brand, e.g. Dr. Will's | "This client wins at community events and food markets, with foodies. It loses at sports events." (Synthetic ratings: say so on screen.) |
 | 0:35 | Event planner: a real upcoming London hackathon | "Pick a real event. The planner brings \[five brands\], \[N\] units each, timed for the mid-afternoon slump. Here are the three reasons." |
-| 1:00 | Same event: habit lineup against tool lineup | "RGC's usual five would earn \[X\] qualified reviews here. The planner's five earn \[Y\]." |
-| 1:15 | Month plan and impact | "Across next month's two pop-ups: \[Z\]% more qualified reviews and \[W\]% lower cost per review, tested on 12 held-out pop-ups." |
+| 1:00 | Same event: habit lineup against tool lineup | "RGC's usual lineup would earn \[X\] reviews here and lose money. The planner's earns \[Y\] and \[£Z\] net." |
+| 1:15 | Month plan and impact | "It skips \[N\] events that would lose money, and with marketing time saved that's \[£M\] a month, tested on 12 held-out pop-ups." |
 | 1:35 | How it works | "Synthetic WatchHumans data, real London events. Plug in real data and a QR code per pop-up measures the result." |
 | 1:50 | Close | "Every pop-up becomes an experiment that makes the next one better." |
 
@@ -389,7 +408,7 @@ The demo runs the three screens in order and lands on one number: the uplift in 
 | Question | Answer |
 | --- | --- |
 | It's synthetic data, so what does it prove? | The pipeline and the metric are real. The generator hides its truth from the model, and real data swaps in without code changes. |
-| Why not just pick the biggest events? | Footfall isn't fit. The habit plan against the tool plan shows the gap in qualified reviews. |
+| Why not just pick the biggest events? | Footfall isn't fit, and staff time costs the same either way. The habit plan against the tool plan shows the gap in net value and wasted pop-ups. |
 | What about brands that don't get picked? | Clients don't pay for pop-up placement, and pop-ups are one RGC service among several. Every brand still gets its event profile, showing where it wins, so RGC can bring it when the right event comes up. |
 
 ## Sources

@@ -1,170 +1,220 @@
 {
-  "uplift": 0.0993,
-  "ci_low": 0.048,
-  "ci_high": 0.1727,
-  "qrp_tool": 62.81,
-  "qrp_habit": 57.14,
-  "cost_per_qr_tool": 6.6,
-  "cost_per_qr_habit": 7.25,
+  "review_uplift": 0.1399,
+  "review_ci_low": 0.1289,
+  "review_ci_high": 0.1602,
+  "reviews_tool": 42.29,
+  "reviews_habit": 37.1,
+  "net_value_tool": 1354.34,
+  "net_value_habit": 1147.01,
+  "net_gain_per_popup": 207.33,
+  "net_gain_ci_low": 123.91,
+  "net_gain_ci_high": 297.33,
+  "waste_rate_tool": 0.083,
+  "waste_rate_habit": 0.083,
+  "monthly_lineup_gain_gbp": 414.66,
+  "monthly_hours_saved": 8.0,
+  "monthly_time_saved_gbp": 240.0,
+  "monthly_impact_gbp": 654.66,
+  "yearly_impact_gbp": 7855.94,
   "n_test": 12,
-  "method": "tool vs habit lineup at the same 12 held-out pop-ups; outcomes from the synthetic world, 95% bootstrap CI",
+  "method": "tool vs usual lineup (same size) at the same 12 held-out pop-ups; outcomes from the synthetic world, valued with data/value_assumptions.csv; 95% bootstrap CIs",
   "per_popup": [
     {
       "popup_id": "P049",
       "event_type": "conferences",
+      "footfall": 185,
+      "lineup_size": 5,
       "tool_lineup": [
-        "B31",
+        "B13",
         "B07",
-        "B34",
-        "B03",
+        "B36",
+        "B32",
         "B48"
       ],
-      "qrp_tool": 97.1,
-      "qrp_habit": 88.9
+      "reviews_tool": 104.4,
+      "reviews_habit": 92.7,
+      "net_value_tool": 3665.27,
+      "net_value_habit": 3196.25
     },
     {
       "popup_id": "P050",
       "event_type": "performing_arts",
+      "footfall": 54,
+      "lineup_size": 3,
       "tool_lineup": [
-        "B19",
-        "B26",
-        "B49",
+        "B45",
+        "B04",
         "B48"
       ],
-      "qrp_tool": 4.9,
-      "qrp_habit": 3.5
+      "reviews_tool": 3.8,
+      "reviews_habit": 3.1,
+      "net_value_tool": -22.34,
+      "net_value_habit": -48.01
     },
     {
       "popup_id": "P051",
       "event_type": "festivals",
+      "footfall": 140,
+      "lineup_size": 4,
       "tool_lineup": [
         "B36",
         "B48",
-        "B26",
-        "B31",
-        "B21"
+        "B20",
+        "B31"
       ],
-      "qrp_tool": 42.5,
-      "qrp_habit": 34.3
+      "reviews_tool": 12.2,
+      "reviews_habit": 10.6,
+      "net_value_tool": 135.4,
+      "net_value_habit": 72.3
     },
     {
       "popup_id": "P052",
       "event_type": "community",
+      "footfall": 73,
+      "lineup_size": 3,
       "tool_lineup": [
-        "B26",
-        "B04",
-        "B07",
+        "B08",
         "B39",
-        "B08"
+        "B48"
       ],
-      "qrp_tool": 26.0,
-      "qrp_habit": 20.3
+      "reviews_tool": 8.9,
+      "reviews_habit": 7.9,
+      "net_value_tool": 171.97,
+      "net_value_habit": 131.97
     },
     {
       "popup_id": "P053",
       "event_type": "expos",
+      "footfall": 194,
+      "lineup_size": 5,
       "tool_lineup": [
-        "B31",
         "B07",
         "B36",
-        "B13",
-        "B27"
+        "B05",
+        "B08",
+        "B30"
       ],
-      "qrp_tool": 131.1,
-      "qrp_habit": 131.1
+      "reviews_tool": 60.3,
+      "reviews_habit": 52.2,
+      "net_value_tool": 2037.6,
+      "net_value_habit": 1713.08
     },
     {
       "popup_id": "P054",
       "event_type": "expos",
+      "footfall": 142,
+      "lineup_size": 4,
       "tool_lineup": [
         "B31",
-        "B07",
         "B36",
-        "B13",
-        "B27"
+        "B27",
+        "B13"
       ],
-      "qrp_tool": 88.8,
-      "qrp_habit": 88.8
+      "reviews_tool": 35.8,
+      "reviews_habit": 29.9,
+      "net_value_tool": 1118.92,
+      "net_value_habit": 883.89
     },
     {
       "popup_id": "P055",
       "event_type": "performing_arts",
+      "footfall": 114,
+      "lineup_size": 4,
       "tool_lineup": [
         "B45",
-        "B19",
+        "B36",
         "B04",
-        "B16",
-        "B06"
+        "B16"
       ],
-      "qrp_tool": 12.3,
-      "qrp_habit": 9.1
+      "reviews_tool": 10.9,
+      "reviews_habit": 8.6,
+      "net_value_tool": 223.18,
+      "net_value_habit": 131.8
     },
     {
       "popup_id": "P056",
       "event_type": "community",
+      "footfall": 174,
+      "lineup_size": 5,
       "tool_lineup": [
         "B36",
         "B26",
-        "B07",
         "B08",
-        "B43"
+        "B39",
+        "B48"
       ],
-      "qrp_tool": 61.7,
-      "qrp_habit": 48.8
+      "reviews_tool": 37.7,
+      "reviews_habit": 32.8,
+      "net_value_tool": 1126.09,
+      "net_value_habit": 931.79
     },
     {
       "popup_id": "P057",
       "event_type": "sports",
+      "footfall": 114,
+      "lineup_size": 4,
       "tool_lineup": [
         "B15",
-        "B24",
         "B36",
         "B07",
         "B17"
       ],
-      "qrp_tool": 46.3,
-      "qrp_habit": 46.2
+      "reviews_tool": 19.3,
+      "reviews_habit": 17.3,
+      "net_value_tool": 510.02,
+      "net_value_habit": 427.16
     },
     {
       "popup_id": "P058",
       "event_type": "conferences",
+      "footfall": 199,
+      "lineup_size": 5,
       "tool_lineup": [
-        "B31",
+        "B13",
         "B07",
-        "B34",
-        "B03",
+        "B36",
+        "B32",
         "B48"
       ],
-      "qrp_tool": 104.6,
-      "qrp_habit": 95.8
+      "reviews_tool": 112.3,
+      "reviews_habit": 99.7,
+      "net_value_tool": 3953.36,
+      "net_value_habit": 3448.84
     },
     {
       "popup_id": "P059",
       "event_type": "community",
+      "footfall": 185,
+      "lineup_size": 5,
       "tool_lineup": [
+        "B36",
         "B26",
-        "B04",
-        "B07",
+        "B08",
         "B39",
-        "B08"
+        "B48"
       ],
-      "qrp_tool": 65.4,
-      "qrp_habit": 51.9
+      "reviews_tool": 40.0,
+      "reviews_habit": 34.9,
+      "net_value_tool": 1216.15,
+      "net_value_habit": 1009.56
     },
     {
       "popup_id": "P060",
       "event_type": "conferences",
+      "footfall": 140,
+      "lineup_size": 4,
       "tool_lineup": [
-        "B31",
+        "B13",
         "B07",
-        "B34",
-        "B03",
+        "B32",
         "B48"
       ],
-      "qrp_tool": 73.0,
-      "qrp_habit": 66.8
+      "reviews_tool": 61.9,
+      "reviews_habit": 55.6,
+      "net_value_tool": 2116.44,
+      "net_value_habit": 1865.46
     }
   ],
-  "poisson_test_deviance": 1.976,
-  "footfall_baseline_test_deviance": 67.135
+  "poisson_test_deviance": 2.534,
+  "footfall_baseline_test_deviance": 8.188
 }

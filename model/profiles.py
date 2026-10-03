@@ -58,7 +58,7 @@ def build(d, fm, scores, events):
         top = scores[scores["brand_id"] == bid].sort_values(["in_best_lineup", "fit"], ascending=False).head(5)
         top_events = [dict(event_id=row.event_id, name=events.at[row.event_id, "name"],
                            date=events.at[row.event_id, "date"], event_type=events.at[row.event_id, "event_type"],
-                           exp_reviews=round(row.exp_reviews, 1), exp_qrp=round(row.exp_qrp, 1))
+                           exp_reviews=round(row.exp_reviews, 1))
                       for row in top.itertuples()]
         seg_txt = (f"{nice(best_seg)}s like it most (affinity {affinity.iloc[0]:.2f}, then {nice(affinity.index[1])}s "
                    f"at {affinity.iloc[1]:.2f}"
@@ -72,7 +72,7 @@ def build(d, fm, scores, events):
                    if claims else "")
                 + f" It is weakest at {TYPE_LABEL[worst_t]}, so bring other brands there. "
                 + (f"Best upcoming: {top_events[0]['name']} on {top_events[0]['date']}, "
-                   f"about {top_events[0]['exp_qrp']:.0f} qualified reviews." if top_events else ""))
+                   f"about {top_events[0]['exp_reviews']:.0f} reviews from it." if top_events else ""))
         profiles[bid] = dict(brand_name=b["brand_name"], fit_by_type=fbt, best_type=best_t,
                              best_moment=f"{et['moment']} ({et['peak_slot']})", best_audience=nice(best_seg),
                              archetype_affinity=arch_profile, target_archetypes=[a for a in ARCHETYPES

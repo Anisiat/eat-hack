@@ -11,7 +11,6 @@ NEEDS = ["hydrate", "recover", "energy", "focus", "discovery", "sharing", "treat
 ARCHETYPES = ["wellness_seeker", "trend_enthusiast", "thoughtful_buyer", "smart_saver", "quality_seeker",
               "on_the_go_shopper", "impulse_buyer", "experience_explorer", "everyday_planner", "conscious_consumer"]
 CORE_CATEGORIES = {"drink", "savoury", "sweet", "condiment"}
-STAFF_RATE_GBP = 16.0       # same loaded hourly rate as the pop-up cost columns
 
 REQUIRED = {
     "brand_features": ["brand_id", "brand_name", "category", "sub_category", "description", "needs_chilling",
@@ -20,8 +19,8 @@ REQUIRED = {
     "brand_products": ["product_id", "brand_id", "product", "flavour", "format", "claims", "label_link"]
                       + [f"need_{n}" for n in NEEDS] + [f"arch_{a}" for a in ARCHETYPES],
     "popups": ["popup_id", "date", "event_type", "borough", "indoor", "dwell_hours", "footfall", "lineup", "staff",
-               "stops", "signups", "reviews", "qualified_reviews", "stall_fee_gbp", "total_cost_gbp", "split"],
-    "popup_brands": ["popup_id", "brand_id", "reviews", "qualified_reviews"],
+               "stops", "signups", "reviews", "stall_fee_gbp", "split"],
+    "popup_brands": ["popup_id", "brand_id", "reviews"],
     "users": ["user_id", "primary_archetype", "borough", "signup_source"],
     "reviews": ["user_id", "brand_id", "popup_id", "review_date", "rating", "liked_attribute", "disliked_attribute"],
     "boroughs": ["borough", "inner_outer", "watchhumans_users_per_1000"],
@@ -46,9 +45,18 @@ def load(root=ROOT):
     return d
 
 
-def event_cost(stall, staff, dwell, borough, outer):
-    """Stall fee + staff time (dwell plus 2 hours set-up) + travel; matches popups.csv cost columns."""
-    return stall + staff * (dwell + 2) * STAFF_RATE_GBP + 40 + (20 if borough in outer else 0)
+def load_assumptions(root=ROOT):
+    a = pd.read_csv(root / "data" / "value_assumptions.csv")
+    return dict(zip(a["key"], a["value"].astype(float)))
+
+
+def event_cost(stall, staff, dwell, borough, outer, A):
+    """Per-event cost once RGC owns the basic kit: pitch fee + insurance + consumables + transport and parking
+    + food for the staff (+ staff wages if staff_hourly_cost_gbp > 0). Typically £95-290 for a half day."""
+    pitch = min(max(stall, A["pitch_fee_min_gbp"]), A["pitch_fee_max_gbp"])
+    transport = A["transport_outer_gbp"] if borough in outer else A["transport_inner_gbp"]
+    wages = staff * (dwell + 2) * A["staff_hourly_cost_gbp"]          # dwell plus 2 hours set-up
+    return pitch + A["insurance_gbp"] + A["consumables_gbp"] + transport + staff * A["staff_food_gbp"] + wages
 
 
 def upcoming_events(d):
@@ -56,6 +64,8 @@ def upcoming_events(d):
     et = d["event_types"]
     outer = set(d["boroughs"].query("inner_outer == 'outer'")["borough"])
     ev = d["events"].copy()
+    A = load_assumptions()
+    ev = ev[ev["expected_attendance"] < A["max_attendance"]]      # RGC pops up only at small events
     ev["start"] = pd.to_datetime(ev["start"])
     ev["end"] = pd.to_datetime(ev["end"])
     ev["date"] = ev["start"].dt.date.astype(str)
@@ -65,7 +75,7 @@ def upcoming_events(d):
         ev["event_type"].map(et["dwell_hours"]))
     ev["staff"] = ev["event_type"].map(et["staff"])
     ev["audience_tags"] = ev["audience_tags"].fillna("")
-    ev["cost"] = [event_cost(r.stall_cost_gbp, r.staff, r.dwell_hours, r.borough, outer) for r in ev.itertuples()]
+    ev["cost"] = [event_cost(r.stall_cost_gbp, r.staff, r.dwell_hours, r.borough, outer, A) for r in ev.itertuples()]
     return ev.set_index("event_id", drop=False)
 
 
@@ -75,7 +85,9 @@ def past_events(d):
     p["event_id"] = p["popup_id"]
     p["month"] = pd.to_datetime(p["date"]).dt.month
     p["audience_tags"] = ""
-    p["cost"] = p["total_cost_gbp"]
+    A = load_assumptions()
+    outer = set(d["boroughs"].query("inner_outer == 'outer'")["borough"])
+    p["cost"] = [event_cost(r.stall_fee_gbp, r.staff, r.dwell_hours, r.borough, outer, A) for r in p.itertuples()]
     p["name"] = p.get("event_name", p["popup_id"])
     return p.set_index("event_id", drop=False)
 

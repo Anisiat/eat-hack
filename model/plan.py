@@ -1,11 +1,14 @@
 """Step 4: the month plan.
 
-Rank the month's events by best-lineup QRP per pound, with a bonus for boroughs where WatchHumans has
-few users, and fill RGC's capacity with no two pop-ups on the same day. Each pop-up keeps its best
-lineup: clients do not pay RGC for pop-up placement, so no brand is guaranteed a slot.
-The habit plan is RGC's usual five at the month's biggest events.
+Rank the month's events by expected net value in pounds, with a bonus for boroughs where WatchHumans has few
+users, skip events that are likely to lose money, and fill RGC's capacity with no two pop-ups on the same day.
+Each pop-up keeps its best lineup: clients do not pay RGC for pop-up placement, so no brand is guaranteed a slot.
+The habit plan is RGC's usual lineup at the month's biggest events.
 """
+from .value import time_saved
+
 BOROUGH_BONUS = 0.2
+MAX_P_WASTE = 0.5       # skip events more likely than not to lose money
 
 
 def borough_bonus(boroughs):
@@ -14,53 +17,53 @@ def borough_bonus(boroughs):
     return (1 + BOROUGH_BONUS * z).to_dict()
 
 
-def month_plan(d, opt, events, lineups, month, capacity):
-    in_month = [i for i in range(len(events)) if events["start"].iloc[i].strftime("%Y-%m") == month]
-    assert in_month, f"no events in {month}"
-    bonus = borough_bonus(d["boroughs"])
-    eid = events["event_id"].to_numpy()
-    rank = sorted(in_month, key=lambda i: -lineups[eid[i]]["qrp"] / max(events["cost"].iloc[i], 1)
-                  * bonus.get(events["borough"].iloc[i], 1.0))
+def _pick(order, events, capacity):
     chosen, days = [], set()
-    for i in rank:
+    for i in order:
         if len(chosen) == capacity:
             break
         if events["date"].iloc[i] not in days:
             chosen.append(i)
             days.add(events["date"].iloc[i])
-    chosen.sort(key=lambda i: events["start"].iloc[i])
+    return sorted(chosen, key=lambda i: events["start"].iloc[i])
 
-    # each event keeps its own best lineup; brands are not guaranteed a slot (clients do not pay for one)
-    lu = {i: [opt.bids.index(b) for b in lineups[eid[i]]["brands"]] for i in chosen}
+
+def month_plan(d, opt, events, lineups, month, capacity, A):
+    in_month = [i for i in range(len(events)) if events["start"].iloc[i].strftime("%Y-%m") == month]
+    assert in_month, f"no events in {month}"
+    bonus = borough_bonus(d["boroughs"])
+    eid = events["event_id"].to_numpy()
+    worth_it = [i for i in in_month
+                if lineups[eid[i]]["value"]["net_value"] > 0 and lineups[eid[i]]["value"]["p_waste"] <= MAX_P_WASTE]
+    rank = sorted(worth_it, key=lambda i: -lineups[eid[i]]["value"]["net_value"]
+                  * bonus.get(events["borough"].iloc[i], 1.0))
+    chosen = _pick(rank, events, capacity)
 
     popups = []
     for i in chosen:
-        res = opt.evaluate(i, lu[i])
-        popups.append(dict(event_id=eid[i], name=events["name"].iloc[i], date=events["date"].iloc[i],
-                           event_type=events["event_type"].iloc[i], borough=events["borough"].iloc[i],
-                           brands=[opt.bids[j] for j in lu[i]], qrp=round(res["qrp"], 1),
-                           cost=round(float(events["cost"].iloc[i]), 2),
+        lu = lineups[eid[i]]
+        popups.append(dict(event_id=eid[i], name=lu["name"], date=lu["date"], event_type=lu["event_type"],
+                           borough=lu["borough"], expected_attendance=lu["expected_attendance"],
+                           brands=lu["brands"], exp_reviews=lu["exp_reviews"], exp_signups=lu["exp_signups"],
+                           net_value=lu["value"]["net_value"], p_waste=lu["value"]["p_waste"],
                            borough_bonus=round(bonus.get(events["borough"].iloc[i], 1.0), 3)))
 
-    # habit: the usual five at the biggest events of the month
-    habit, hdays = [], set()
-    for i in sorted(in_month, key=lambda i: -events["footfall"].iloc[i]):
-        if len(habit) == capacity:
-            break
-        if events["date"].iloc[i] not in hdays:
-            habit.append(i)
-            hdays.add(events["date"].iloc[i])
-    habit_qrp = sum(opt.evaluate(i, opt.habit_for(i))["qrp"] for i in habit)
-    habit_cost = float(sum(events["cost"].iloc[i] for i in habit))
+    # habit: the usual lineup at the biggest events of the month, worth it or not
+    habit = _pick(sorted(in_month, key=lambda i: -events["footfall"].iloc[i]), events, capacity)
+    hv = [lineups[eid[i]]["habit_value"] for i in habit]
 
-    total_qrp = sum(p["qrp"] for p in popups)
-    total_cost = sum(p["cost"] for p in popups)
     covered = sorted({b for p in popups for b in p["brands"]})
+    t = time_saved(A)
+    net, habit_net = sum(p["net_value"] for p in popups), sum(v["net_value"] for v in hv)
     return dict(month=month, capacity=capacity, popups=popups,
-                total_qrp=round(total_qrp, 1), total_cost=round(total_cost, 2),
-                cost_per_qr=round(total_cost / total_qrp, 2) if total_qrp else None,
-                habit_events=[eid[i] for i in habit], habit_total_qrp=round(habit_qrp, 1),
-                habit_total_cost=round(habit_cost, 2),
-                habit_cost_per_qr=round(habit_cost / habit_qrp, 2) if habit_qrp else None,
-                uplift_vs_habit=round(total_qrp / habit_qrp - 1, 3) if habit_qrp else None,
+                exp_reviews=round(sum(p["exp_reviews"] for p in popups), 1),
+                net_value=round(net, 2),
+                habit_events=[eid[i] for i in habit],
+                habit_exp_reviews=round(sum(lineups[eid[i]]["habit_exp_reviews"] for i in habit), 1),
+                habit_net_value=round(habit_net, 2),
+                habit_expected_wasted=round(sum(v["p_waste"] for v in hv), 2),
+                skipped_events=len(in_month) - len(worth_it),
+                marketing_hours_saved=round(t["hours_per_month"], 1),
+                marketing_time_saved_gbp=round(t["gbp_per_month"], 2),
+                month_gain_gbp=round(net - habit_net + t["gbp_per_month"], 2),
                 brands_featured=len(covered), brands_not_featured=sorted(set(opt.bids) - set(covered)))

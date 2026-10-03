@@ -48,10 +48,11 @@ FAVOURITE_FIVE = _bf.loc[_bf["favourite_five"] == 1, "brand_id"].tolist()   # RG
 
 # ---------------------------------------------------------------- event types
 # Seven event categories (PredictHQ-style). Each blends the sub-types listed in its names.
+# RGC pops up only at small events: expected attendance under 200.
 # needs: same order as NEEDS; mix: expected crowd share by ARCHETYPES (sums to 1)
 EVENT = {
     "sports": dict(needs=[1., .9, .5, .1, .2, .5, .2, .3], mix=[.30, .08, .08, .07, .06, .12, .06, .08, .10, .05],
-                   footfall=(300, 1500), dwell=2, stop=.22, signup=.28, stall=(0, 120), staff=2, indoor=0.3,
+                   footfall=(40, 199), dwell=2, stop=.35, signup=.28, stall=(0, 40), staff=2, indoor=0.3,
                    start=["09:00", "17:00", "19:45"], days=[1, 2, 5, 6],
                    names=["Community 5K finish", "10K race finish", "Half marathon finish",
                           "Football screening", "Rugby screening"],
@@ -59,7 +60,7 @@ EVENT = {
                              "Southwark", "Lambeth", "Hammersmith and Fulham", "Brent", "Kingston upon Thames",
                              "Barnet", "Waltham Forest"]),
     "community": dict(needs=[.3, .2, .2, .1, .9, .7, .7, .5], mix=[.10, .06, .12, .12, .10, .06, .08, .10, .14, .12],
-                      footfall=(200, 2000), dwell=3, stop=.18, signup=.25, stall=(0, 200), staff=2, indoor=0.3,
+                      footfall=(20, 199), dwell=3, stop=.35, signup=.25, stall=(0, 60), staff=1, indoor=0.3,
                       start=["09:00", "11:00"], days=[5, 6],
                       names=["Weekend food market", "Farmers' market", "Run club social", "Family fun day",
                              "Community street party"],
@@ -67,33 +68,33 @@ EVENT = {
                                 "Waltham Forest", "Haringey", "Croydon", "Ealing", "Merton", "Newham",
                                 "Richmond upon Thames"]),
     "concerts": dict(needs=[.9, .2, .8, 0., .3, .4, .3, .3], mix=[.04, .20, .04, .08, .05, .10, .22, .20, .03, .04],
-                     footfall=(300, 2000), dwell=4, stop=.10, signup=.15, stall=(150, 400), staff=3, indoor=1.0,
+                     footfall=(60, 199), dwell=4, stop=.20, signup=.15, stall=(40, 120), staff=2, indoor=1.0,
                      start=["19:30"], days=[3, 4, 5],
                      names=["Live gig", "Club night", "DJ night", "Arena concert"],
                      boroughs=["Hackney", "Camden", "Lambeth", "Islington", "Southwark", "Tower Hamlets", "Brent",
                                "Greenwich", "Hammersmith and Fulham"]),
     "conferences": dict(needs=[.4, .1, .9, 1., .4, .3, .4, .6], mix=[.08, .18, .10, .08, .08, .22, .08, .10, .05, .03],
-                        footfall=(100, 800), dwell=7, stop=.45, signup=.40, stall=(0, 150), staff=2, indoor=1.0,
+                        footfall=(30, 199), dwell=7, stop=.55, signup=.40, stall=(0, 50), staff=1, indoor=1.0,
                         start=["09:30", "10:00"], days=[1, 2, 3, 5, 6],
                         names=["Weekend AI hackathon", "Student hackathon", "Fintech hack day", "Tech conference",
                                "Startup summit"],
                         boroughs=["Islington", "Hackney", "Camden", "Tower Hamlets", "City of London",
                                   "Westminster", "Southwark", "Newham"]),
     "expos": dict(needs=[.2, 0., .6, .4, .8, .3, .5, .9], mix=[.07, .15, .10, .18, .08, .10, .12, .10, .06, .04],
-                  footfall=(500, 3000), dwell=4, stop=.18, signup=.40, stall=(50, 250), staff=3, indoor=0.9,
+                  footfall=(60, 199), dwell=4, stop=.30, signup=.40, stall=(30, 100), staff=2, indoor=0.9,
                   start=["10:00", "11:00"], days=[0, 1, 2, 3, 5],
                   names=["Freshers' fair", "Societies fair", "Food and drink expo", "Lifestyle show"],
                   boroughs=["Camden", "Westminster", "Tower Hamlets", "Kensington and Chelsea", "Southwark",
                             "Islington", "Newham", "Hammersmith and Fulham", "Hillingdon"]),
     "festivals": dict(needs=[1., .3, .6, 0., .7, .6, .7, .3], mix=[.06, .16, .05, .07, .08, .08, .18, .22, .04, .06],
-                      footfall=(1500, 5000), dwell=7, stop=.08, signup=.20, stall=(300, 800), staff=4, indoor=0.0,
+                      footfall=(100, 199), dwell=7, stop=.20, signup=.20, stall=(80, 200), staff=2, indoor=0.0,
                       start=["12:00"], days=[5, 6],
                       names=["Summer music festival", "Food and music festival", "Street food festival",
                              "Street festival"],
                       boroughs=["Newham", "Lambeth", "Hackney", "Greenwich", "Haringey", "Tower Hamlets",
                                 "Waltham Forest", "Brent", "Barking and Dagenham", "Croydon"]),
     "performing_arts": dict(needs=[.3, 0., .2, .1, .4, .8, .9, .3], mix=[.05, .08, .14, .05, .18, .04, .10, .18, .08, .10],
-                            footfall=(200, 1200), dwell=2.5, stop=.12, signup=.20, stall=(50, 200), staff=2,
+                            footfall=(30, 199), dwell=2.5, stop=.25, signup=.20, stall=(20, 80), staff=1,
                             indoor=0.85, start=["18:30", "19:00"], days=[3, 4, 5],
                             names=["Theatre interval", "Comedy night", "Dance show", "Open-air theatre"],
                             boroughs=["Westminster", "Camden", "Southwark", "Lambeth", "Islington", "Hackney",
@@ -106,7 +107,6 @@ for p in EVENT.values():
 OUTER_BOROUGHS = {"Barking and Dagenham", "Barnet", "Bexley", "Brent", "Bromley", "Croydon", "Ealing", "Enfield",
                   "Greenwich", "Harrow", "Havering", "Hillingdon", "Hounslow", "Kingston upon Thames", "Merton",
                   "Redbridge", "Richmond upon Thames", "Sutton", "Waltham Forest"}   # ONS Outer London
-STAFF_RATE_GBP = 16.0                       # assumed loaded hourly cost per staff member
 MONTHLY_HIGH_C = {1: 8, 2: 9, 3: 12, 4: 15, 5: 18, 6: 21, 7: 23, 8: 23, 9: 20, 10: 16, 11: 11, 12: 8}
 
 # RGC's habit: big, busy events, whatever the brand fit
@@ -232,9 +232,11 @@ def make_history(n_months=30, per_month=2, first_month=(2024, 4)):   # RGC runs 
             out = simulate(event, lineup, seed=SEED * 1000 + pid)
 
             stall = 0 if p["stall"][1] == 0 else int(round(rng.integers(p["stall"][0], p["stall"][1] + 1), -1))
-            staff_cost = p["staff"] * (p["dwell"] + 2) * STAFF_RATE_GBP
-            travel = 40 + (20 if borough in OUTER_BOROUGHS else 0)
-            total = stall + staff_cost + travel
+            # per-event cost once the kit is owned: pitch, insurance £35, consumables £30, staff food £10 each
+            stall = min(max(stall, 30), 150)
+            staff_cost = p["staff"] * 10
+            travel = 35 if borough in OUTER_BOROUGHS else 20
+            total = stall + 35 + 30 + staff_cost + travel
             ratings = [x["avg_rating"] for x in out["per_brand"] if x["reviews"]]
             weights_r = [x["reviews"] for x in out["per_brand"] if x["reviews"]]
 

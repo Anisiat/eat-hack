@@ -1,9 +1,9 @@
-"""Step 2: expected sign-ups, reviews and qualified reviews (QRP).
+"""Step 2: expected sign-ups and reviews.
 
 Two Poisson regressions trained on the 48 training pop-ups:
   sign-ups per pop-up      ~ log footfall + dwell + lineup archetype match + event type
   reviews per brand / sign-up ~ fit + dwell + event type   (fitted as a rate, weighted by sign-ups)
-QRP for brand b = sign-ups x r_b x q_b, where q_b is the crowd share in b's target archetypes.
+Expected reviews of brand b = sign-ups x r_b.
 """
 from dataclasses import dataclass
 
@@ -88,10 +88,3 @@ def train(d, past, past_parts):
     return OutcomeModel(types, signup, review, stop_rate,
                         float(mean_poisson_deviance(te["signups"], pred)),
                         float(mean_poisson_deviance(te["signups"], base)))
-
-
-def brand_outcomes(om, events, parts, signups):
-    """Per event x brand expected reviews and QRP, given expected sign-ups per event."""
-    r = om.review_rate(events, parts["fit"])
-    reviews = signups[:, None] * r
-    return r, reviews, reviews * parts["q"]

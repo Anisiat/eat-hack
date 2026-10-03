@@ -1,125 +1,144 @@
 {
   "E001": {
-    "name": "Makers' and food market, Brockley Market",
+    "name": "Neighbourhood market stall day, Brockley Market",
     "date": "2026-10-10",
     "event_type": "community",
     "borough": "Lewisham",
+    "expected_attendance": 60,
+    "lineup_size": 3,
     "brands": [
-      "B26",
-      "B04",
-      "B39",
+      "B36",
       "B08",
-      "B27"
+      "B39"
     ],
     "brand_names": [
-      "Blanco Niño",
-      "Well & Truly",
-      "SUCSEED",
+      "HOOP",
       "Dr. Will’s",
-      "Saucerer"
+      "SUCSEED"
     ],
     "products": {
-      "B26": "Creamy Jalapeño Tortilla Chips",
-      "B04": "Crunchies — Smokey Bacon",
-      "B39": "Energy",
+      "B36": "Plantain Chips — Lemon Pepper",
       "B08": "Avocado Oil Mayo",
-      "B27": "Pasta Sauce — Wild Mushroom & Truffle"
+      "B39": "Energy"
     },
-    "archetype_mix": {
-      "wellness_seeker": 0.108,
-      "trend_enthusiast": 0.057,
-      "thoughtful_buyer": 0.102,
-      "smart_saver": 0.13,
-      "quality_seeker": 0.089,
-      "on_the_go_shopper": 0.061,
-      "impulse_buyer": 0.084,
-      "experience_explorer": 0.107,
-      "everyday_planner": 0.153,
-      "conscious_consumer": 0.11
-    },
-    "match": 0.659,
-    "habit_match": 0.529,
     "units": {
-      "B26": 138,
-      "B04": 138,
-      "B39": 138,
-      "B08": 138,
-      "B27": 138
+      "B36": 32,
+      "B08": 32,
+      "B39": 32
     },
     "slot": "11:00-13:00",
-    "exp_signups": 30.6,
-    "exp_reviews": 58.4,
-    "qrp": 19.8,
-    "lineup_size": 5,
+    "archetype_mix": {
+      "wellness_seeker": 0.114,
+      "trend_enthusiast": 0.057,
+      "thoughtful_buyer": 0.147,
+      "smart_saver": 0.109,
+      "quality_seeker": 0.09,
+      "on_the_go_shopper": 0.05,
+      "impulse_buyer": 0.08,
+      "experience_explorer": 0.087,
+      "everyday_planner": 0.156,
+      "conscious_consumer": 0.11
+    },
+    "match": 0.609,
+    "exp_signups": 6.7,
+    "exp_reviews": 7.4,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 294.48,
+      "publicity_value": 0.0,
+      "est_video_views": 553.11,
+      "product_cost": 48.0,
+      "event_cost": 125.0,
+      "net_value": 121.48,
+      "units_total": 96,
+      "p_waste": 0.1
+    },
     "habit_brands": [
       "B04",
       "B02",
-      "B17",
-      "B03",
-      "B26"
+      "B17"
     ],
-    "habit_qrp": 15.7,
-    "cost": 240.0,
-    "cost_per_qr": 12.1,
-    "habit_cost_per_qr": 15.31,
+    "habit_match": 0.543,
+    "habit_exp_reviews": 6.7,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 268.93,
+      "publicity_value": 0.0,
+      "est_video_views": 505.13,
+      "product_cost": 48.0,
+      "event_cost": 125.0,
+      "net_value": 95.93,
+      "units_total": 96,
+      "p_waste": 0.227
+    },
     "reasons": [
-      "Archetype match 0.66 against 0.53 for the usual five: Dr. Will’s for everyday planners; Saucerer for smart savers; Blanco Niño for conscious consumers",
-      "Expected 20 qualified reviews against 16 for the usual five (+27%)",
-      "5 vegan and 4 gluten-free options; covers condiment, savoury"
+      "Archetype match 0.61 against 0.54 for the usual lineup: Dr. Will’s for everyday planners; Dr. Will’s for thoughtful buyers; HOOP for wellness seekers",
+      "Expected 7 reviews and 7 sign-ups, against 7 reviews for the usual lineup (+9%)",
+      "2 vegan and 2 gluten-free options; covers condiment, savoury"
     ]
   },
   "E002": {
-    "name": "DJ all-nighter, Eventim Apollo",
+    "name": "DJ night, The Sebright Arms",
     "date": "2026-10-15",
     "event_type": "concerts",
-    "borough": "Hammersmith and Fulham",
+    "borough": "Tower Hamlets",
+    "expected_attendance": 190,
+    "lineup_size": 5,
     "brands": [
-      "B43",
+      "B48",
       "B36",
+      "B46",
       "B07",
-      "B31",
       "B13"
     ],
     "brand_names": [
-      "Fever-Tree",
+      "Mr Filbert’s",
       "HOOP",
+      "Mission",
       "Helen Browning’s Organic",
-      "Sunfly",
       "mindfuel flow"
     ],
     "products": {
-      "B43": "Refreshingly Light Elderflower Tonic Water",
+      "B48": "Teriyaki Mochi Rice Bites",
       "B36": "Plantain Chips — Lemon Pepper",
+      "B46": "Lemon & Ginseng Natural Energy Drink",
       "B07": "Organic Corned Beef",
-      "B31": "Sunflower Seed Butter — Crunchy",
       "B13": "Mushroom Iced Latte — Salted Caramel"
     },
-    "archetype_mix": {
-      "wellness_seeker": 0.044,
-      "trend_enthusiast": 0.224,
-      "thoughtful_buyer": 0.022,
-      "smart_saver": 0.056,
-      "quality_seeker": 0.053,
-      "on_the_go_shopper": 0.089,
-      "impulse_buyer": 0.178,
-      "experience_explorer": 0.253,
-      "everyday_planner": 0.047,
-      "conscious_consumer": 0.033
-    },
-    "match": 0.626,
-    "habit_match": 0.561,
     "units": {
-      "B43": 287,
-      "B36": 287,
-      "B07": 287,
-      "B31": 287,
-      "B13": 287
+      "B48": 53,
+      "B36": 53,
+      "B46": 53,
+      "B07": 53,
+      "B13": 53
     },
     "slot": "21:00-23:00",
-    "exp_signups": 32.1,
-    "exp_reviews": 70.3,
-    "qrp": 14.5,
-    "lineup_size": 5,
+    "archetype_mix": {
+      "wellness_seeker": 0.034,
+      "trend_enthusiast": 0.204,
+      "thoughtful_buyer": 0.022,
+      "smart_saver": 0.067,
+      "quality_seeker": 0.028,
+      "on_the_go_shopper": 0.146,
+      "impulse_buyer": 0.19,
+      "experience_explorer": 0.247,
+      "everyday_planner": 0.017,
+      "conscious_consumer": 0.045
+    },
+    "match": 0.633,
+    "exp_signups": 8.3,
+    "exp_reviews": 16.0,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 640.58,
+      "publicity_value": 0.0,
+      "est_video_views": 1203.19,
+      "product_cost": 132.5,
+      "event_cost": 215.0,
+      "net_value": 293.08,
+      "units_total": 265,
+      "p_waste": 0.085
+    },
     "habit_brands": [
       "B04",
       "B02",
@@ -127,68 +146,87 @@
       "B03",
       "B26"
     ],
-    "habit_qrp": 19.2,
-    "cost": 708.0,
-    "cost_per_qr": 48.91,
-    "habit_cost_per_qr": 36.89,
+    "habit_match": 0.55,
+    "habit_exp_reviews": 14.9,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 593.4,
+      "publicity_value": 0.0,
+      "est_video_views": 1114.57,
+      "product_cost": 132.5,
+      "event_cost": 215.0,
+      "net_value": 245.9,
+      "units_total": 265,
+      "p_waste": 0.102
+    },
     "reasons": [
-      "Archetype match 0.63 against 0.56 for the usual five: Fever-Tree for experience explorers; mindfuel flow for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 14 qualified reviews against 19 for the usual five (-25%)",
-      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
+      "Archetype match 0.63 against 0.55 for the usual lineup: Mr Filbert’s for experience explorers; mindfuel flow for trend enthusiasts; HOOP for impulse buyers",
+      "Expected 16 reviews and 8 sign-ups, against 15 reviews for the usual lineup (+8%)",
+      "1 vegan and 3 gluten-free options; covers condiment, drink, savoury"
     ]
   },
   "E003": {
-    "name": "Bonfire night festival, Queen Elizabeth Olympic Park",
+    "name": "Bonfire night street party, Queen Elizabeth Olympic Park",
     "date": "2026-10-17",
     "event_type": "festivals",
     "borough": "Newham",
+    "expected_attendance": 190,
+    "lineup_size": 5,
     "brands": [
       "B36",
       "B48",
-      "B26",
-      "B31",
-      "B21"
+      "B04",
+      "B07",
+      "B18"
     ],
     "brand_names": [
       "HOOP",
       "Mr Filbert’s",
-      "Blanco Niño",
-      "Sunfly",
-      "Double Dutch"
+      "Well & Truly",
+      "Helen Browning’s Organic",
+      "Navas"
     ],
     "products": {
       "B36": "Plantain Chips — Lemon Pepper",
       "B48": "Teriyaki Mochi Rice Bites",
-      "B26": "Creamy Jalapeño Tortilla Chips",
-      "B31": "Sunflower Seed Butter — Crunchy",
-      "B21": "Indian Tonic Water"
+      "B04": "Crunchies — Smokey Bacon",
+      "B07": "Organic Corned Beef",
+      "B18": "Original Tonic Water"
     },
-    "archetype_mix": {
-      "wellness_seeker": 0.042,
-      "trend_enthusiast": 0.181,
-      "thoughtful_buyer": 0.07,
-      "smart_saver": 0.07,
-      "quality_seeker": 0.076,
-      "on_the_go_shopper": 0.064,
-      "impulse_buyer": 0.162,
-      "experience_explorer": 0.245,
-      "everyday_planner": 0.03,
-      "conscious_consumer": 0.06
-    },
-    "match": 0.626,
-    "habit_match": 0.553,
     "units": {
-      "B36": 565,
-      "B48": 565,
-      "B26": 565,
-      "B31": 565,
-      "B21": 565
+      "B36": 55,
+      "B48": 55,
+      "B04": 55,
+      "B07": 55,
+      "B18": 55
     },
     "slot": "14:00-17:00",
-    "exp_signups": 92.4,
-    "exp_reviews": 191.1,
-    "qrp": 63.3,
-    "lineup_size": 5,
+    "archetype_mix": {
+      "wellness_seeker": 0.056,
+      "trend_enthusiast": 0.154,
+      "thoughtful_buyer": 0.063,
+      "smart_saver": 0.063,
+      "quality_seeker": 0.056,
+      "on_the_go_shopper": 0.07,
+      "impulse_buyer": 0.2,
+      "experience_explorer": 0.255,
+      "everyday_planner": 0.042,
+      "conscious_consumer": 0.042
+    },
+    "match": 0.641,
+    "exp_signups": 6.3,
+    "exp_reviews": 13.7,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 545.79,
+      "publicity_value": 0.0,
+      "est_video_views": 1025.14,
+      "product_cost": 137.5,
+      "event_cost": 255.0,
+      "net_value": 153.29,
+      "units_total": 275,
+      "p_waste": 0.242
+    },
     "habit_brands": [
       "B04",
       "B02",
@@ -196,83 +234,106 @@
       "B03",
       "B26"
     ],
-    "habit_qrp": 52.9,
-    "cost": 1406.0,
-    "cost_per_qr": 22.23,
-    "habit_cost_per_qr": 26.6,
+    "habit_match": 0.541,
+    "habit_exp_reviews": 12.5,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 497.55,
+      "publicity_value": 0.0,
+      "est_video_views": 934.55,
+      "product_cost": 137.5,
+      "event_cost": 255.0,
+      "net_value": 105.05,
+      "units_total": 275,
+      "p_waste": 0.28
+    },
     "reasons": [
-      "Archetype match 0.63 against 0.55 for the usual five: Mr Filbert’s for experience explorers; Double Dutch for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 63 qualified reviews against 53 for the usual five (+20%)",
-      "2 vegan and 3 gluten-free options; covers condiment, drink, savoury"
+      "Archetype match 0.64 against 0.54 for the usual lineup: Mr Filbert’s for experience explorers; HOOP for impulse buyers; Navas for trend enthusiasts",
+      "Expected 14 reviews and 6 sign-ups, against 12 reviews for the usual lineup (+10%)",
+      "2 vegan and 5 gluten-free options; covers condiment, drink, savoury"
     ]
   },
   "E004": {
-    "name": "Winter street food festival, Clapham Common",
+    "name": "Winter street food night, Clapham Common",
     "date": "2026-10-18",
     "event_type": "festivals",
     "borough": "Lambeth",
+    "expected_attendance": 110,
+    "lineup_size": 4,
     "brands": [
       "B36",
       "B48",
-      "B26",
       "B31",
-      "B21"
+      "B18"
     ],
     "brand_names": [
       "HOOP",
       "Mr Filbert’s",
-      "Blanco Niño",
       "Sunfly",
-      "Double Dutch"
+      "Navas"
     ],
     "products": {
       "B36": "Plantain Chips — Lemon Pepper",
       "B48": "Teriyaki Mochi Rice Bites",
-      "B26": "Creamy Jalapeño Tortilla Chips",
       "B31": "Sunflower Seed Butter — Crunchy",
-      "B21": "Indian Tonic Water"
+      "B18": "Original Tonic Water"
     },
-    "archetype_mix": {
-      "wellness_seeker": 0.042,
-      "trend_enthusiast": 0.181,
-      "thoughtful_buyer": 0.07,
-      "smart_saver": 0.07,
-      "quality_seeker": 0.076,
-      "on_the_go_shopper": 0.064,
-      "impulse_buyer": 0.162,
-      "experience_explorer": 0.245,
-      "everyday_planner": 0.03,
-      "conscious_consumer": 0.06
-    },
-    "match": 0.626,
-    "habit_match": 0.553,
     "units": {
-      "B36": 227,
-      "B48": 227,
-      "B26": 227,
-      "B31": 227,
-      "B21": 227
+      "B36": 32,
+      "B48": 32,
+      "B31": 32,
+      "B18": 32
     },
     "slot": "14:00-17:00",
-    "exp_signups": 38.8,
-    "exp_reviews": 80.3,
-    "qrp": 26.6,
-    "lineup_size": 5,
+    "archetype_mix": {
+      "wellness_seeker": 0.056,
+      "trend_enthusiast": 0.154,
+      "thoughtful_buyer": 0.063,
+      "smart_saver": 0.063,
+      "quality_seeker": 0.056,
+      "on_the_go_shopper": 0.07,
+      "impulse_buyer": 0.2,
+      "experience_explorer": 0.255,
+      "everyday_planner": 0.042,
+      "conscious_consumer": 0.042
+    },
+    "match": 0.628,
+    "exp_signups": 3.3,
+    "exp_reviews": 5.7,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 226.86,
+      "publicity_value": 0.0,
+      "est_video_views": 426.11,
+      "product_cost": 64.0,
+      "event_cost": 215.0,
+      "net_value": -52.14,
+      "units_total": 128,
+      "p_waste": 0.762
+    },
     "habit_brands": [
       "B04",
       "B02",
       "B17",
-      "B03",
-      "B26"
+      "B03"
     ],
-    "habit_qrp": 22.2,
-    "cost": 1046.0,
-    "cost_per_qr": 39.33,
-    "habit_cost_per_qr": 47.07,
+    "habit_match": 0.54,
+    "habit_exp_reviews": 5.2,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 206.01,
+      "publicity_value": 0.0,
+      "est_video_views": 386.95,
+      "product_cost": 64.0,
+      "event_cost": 215.0,
+      "net_value": -72.99,
+      "units_total": 128,
+      "p_waste": 0.787
+    },
     "reasons": [
-      "Archetype match 0.63 against 0.55 for the usual five: Mr Filbert’s for experience explorers; Double Dutch for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 27 qualified reviews against 22 for the usual five (+20%)",
-      "2 vegan and 3 gluten-free options; covers condiment, drink, savoury"
+      "Archetype match 0.63 against 0.54 for the usual lineup: Mr Filbert’s for experience explorers; HOOP for impulse buyers; Navas for trend enthusiasts",
+      "Expected 6 reviews and 3 sign-ups, against 5 reviews for the usual lineup (+10%)",
+      "1 vegan and 3 gluten-free options; covers condiment, drink, savoury"
     ]
   },
   "E005": {
@@ -280,53 +341,63 @@
     "date": "2026-10-19",
     "event_type": "expos",
     "borough": "Tower Hamlets",
+    "expected_attendance": 190,
+    "lineup_size": 5,
     "brands": [
-      "B31",
+      "B07",
       "B36",
-      "B13",
-      "B32",
+      "B05",
+      "B08",
       "B30"
     ],
     "brand_names": [
-      "Sunfly",
+      "Helen Browning’s Organic",
       "HOOP",
-      "mindfuel flow",
-      "ape2o",
+      "INDI",
+      "Dr. Will’s",
       "Ottolenghi"
     ],
     "products": {
-      "B31": "Sunflower Seed Butter — Crunchy",
+      "B07": "Organic Corned Beef",
       "B36": "Plantain Chips — Lemon Pepper",
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B32": "GO Steel Bottle — Turtle",
+      "B05": "Brain Bar",
+      "B08": "Avocado Oil Mayo",
       "B30": "Miso Pesto"
     },
-    "archetype_mix": {
-      "wellness_seeker": 0.065,
-      "trend_enthusiast": 0.193,
-      "thoughtful_buyer": 0.09,
-      "smart_saver": 0.209,
-      "quality_seeker": 0.076,
-      "on_the_go_shopper": 0.109,
-      "impulse_buyer": 0.095,
-      "experience_explorer": 0.083,
-      "everyday_planner": 0.051,
-      "conscious_consumer": 0.029
-    },
-    "match": 0.614,
-    "habit_match": 0.498,
     "units": {
-      "B31": 719,
-      "B36": 719,
-      "B13": 600,
-      "B32": 600,
-      "B30": 719
+      "B07": 84,
+      "B36": 84,
+      "B05": 84,
+      "B08": 84,
+      "B30": 84
     },
     "slot": "12:00-14:00",
-    "exp_signups": 227.2,
-    "exp_reviews": 454.8,
-    "qrp": 94.0,
-    "lineup_size": 5,
+    "archetype_mix": {
+      "wellness_seeker": 0.063,
+      "trend_enthusiast": 0.15,
+      "thoughtful_buyer": 0.106,
+      "smart_saver": 0.24,
+      "quality_seeker": 0.073,
+      "on_the_go_shopper": 0.073,
+      "impulse_buyer": 0.125,
+      "experience_explorer": 0.079,
+      "everyday_planner": 0.053,
+      "conscious_consumer": 0.04
+    },
+    "match": 0.617,
+    "exp_signups": 38.4,
+    "exp_reviews": 78.8,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 3145.24,
+      "publicity_value": 0.0,
+      "est_video_views": 5907.67,
+      "product_cost": 210.0,
+      "event_cost": 205.0,
+      "net_value": 2730.24,
+      "units_total": 420,
+      "p_waste": 0.0
+    },
     "habit_brands": [
       "B04",
       "B02",
@@ -334,14 +405,23 @@
       "B03",
       "B26"
     ],
-    "habit_qrp": 112.1,
-    "cost": 568.0,
-    "cost_per_qr": 6.04,
-    "habit_cost_per_qr": 5.07,
+    "habit_match": 0.492,
+    "habit_exp_reviews": 71.8,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 2868.58,
+      "publicity_value": 0.0,
+      "est_video_views": 5388.02,
+      "product_cost": 210.0,
+      "event_cost": 205.0,
+      "net_value": 2453.58,
+      "units_total": 420,
+      "p_waste": 0.0
+    },
     "reasons": [
-      "Archetype match 0.61 against 0.50 for the usual five: Sunfly for smart savers; mindfuel flow for trend enthusiasts; ape2o for on the go shoppers",
-      "Expected 94 qualified reviews against 112 for the usual five (-16%)",
-      "1 vegan and 1 gluten-free options; covers condiment, drink, other, savoury"
+      "Archetype match 0.62 against 0.49 for the usual lineup: Helen Browning’s Organic for smart savers; INDI for trend enthusiasts; HOOP for impulse buyers",
+      "Expected 79 reviews and 38 sign-ups, against 72 reviews for the usual lineup (+10%)",
+      "2 vegan and 4 gluten-free options; covers condiment, savoury"
     ]
   }
 }
