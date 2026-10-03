@@ -51,8 +51,8 @@ def core_category(row, terms):
     return "other"
 
 
-def main():
-    root = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().parents[1])
+def build_tables(root):
+    root = Path(root)
     sheet = pd.read_csv(root / "brands.csv", encoding="utf-8-sig")
     sheet.columns = [c.strip() for c in sheet.columns]
     sheet = sheet.rename(columns={
@@ -120,12 +120,17 @@ def main():
         brows.append(row)
     brands = pd.DataFrame(brows)
 
+    if missing_n or missing_s:
+        print("Unmapped product phrases (update data/mappings/):", sorted(missing_n | missing_s))
+    return products, brands
+
+
+def main():
+    root = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().parents[1])
+    products, brands = build_tables(root)
     products.to_csv(root / "brand_products.csv", index=False)
     brands.to_csv(root / "brand_features.csv", index=False)
-    if missing_n or missing_s:
-        print("Unmapped phrases (add them to data/mappings/):", sorted(missing_n | missing_s))
-    print(f"Wrote {len(products)} products and {len(brands)} brands "
-          f"(favourites: {', '.join(brands.loc[brands['favourite_five'] == 1, 'brand_name'])})")
+    print(f"Wrote {len(products)} products and {len(brands)} brands")
 
 
 if __name__ == "__main__":

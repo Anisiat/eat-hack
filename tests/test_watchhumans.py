@@ -7,11 +7,11 @@ from unittest.mock import patch
 
 import pandas as pd
 
-from scripts.generate_watchhumans_synthetic import (
+from scripts.data_generation.watchhumans_synthetic import (
     ARCHETYPES, OUTPUT_CSV, generate_watch_humans_dataset, save_watch_humans_dataset,
 )
 
-SCRIPT = Path(__file__).resolve().parents[1] / 'scripts' / 'generate_watchhumans_synthetic.py'
+SCRIPT = Path(__file__).resolve().parents[1] / 'scripts' / 'data_generation' / 'watchhumans_synthetic.py'
 
 
 class WatchHumansTests(unittest.TestCase):

@@ -1,48 +1,49 @@
 import unittest
 
+import numpy as np
 import pandas as pd
 
-from scripts.get_event_archetypes import (
-    ARCHETYPES, build_event_personas, calculate_event_archetype_scores, event_profile,
+from scripts.data_mapping.event_archetypes import (
+    ARCHETYPES, BEHAVIOUR_COLUMNS, build_event_personas, build_event_behaviour_profile,
+    build_archetype_profiles, score_event_against_archetypes, load_watch_humans,
 )
 
 
 class EventArchetypeTests(unittest.TestCase):
     def test_event_details_distinguish_same_category(self):
-        yoga = calculate_event_archetype_scores({'title': 'Yoga and meditation', 'category': 'community'})
-        sale = calculate_event_archetype_scores({'title': 'Discount bargain sale', 'category': 'community'})
-        self.assertGreater(yoga['wellness_seeker_score'], sale['wellness_seeker_score'])
-        self.assertGreater(sale['smart_saver_score'], yoga['smart_saver_score'])
-        self.assertEqual(len(yoga), len(ARCHETYPES))
-        self.assertTrue(all(0 <= score <= 1 for score in yoga.values()))
+        yoga, _ = build_event_behaviour_profile({'title': 'Yoga and meditation', 'category': 'community'})
+        sale, _ = build_event_behaviour_profile({'title': 'Discount bargain sale', 'category': 'community'})
+        self.assertGreater(yoga['health_consciousness'], sale['health_consciousness'])
+        self.assertGreater(sale['price_sensitivity'], yoga['price_sensitivity'])
 
     def test_no_substring_or_placeholder_evidence(self):
-        scores = calculate_event_archetype_scores({'title': 'Freestyle wholesale talkative', 'description': 'Sourced from predicthq.com'})
-        self.assertTrue(all(score == 0 for score in scores.values()))
+        values, evidence = build_event_behaviour_profile({'title': 'Freestyle wholesale talkative', 'description': 'Sourced from predicthq.com'})
+        self.assertTrue(all(score == .5 for score in values.values()))
+        self.assertTrue(all(not matches for matches in evidence.values()))
 
     def test_missing_and_invalid_labels(self):
-        scores = calculate_event_archetype_scores({'phq_label_weights': {'fitness': float('nan'), 'health': 'invalid'}})
-        self.assertTrue(all(score == 0 for score in scores.values()))
-        scores = calculate_event_archetype_scores({'phq_labels': ['fitness']})
-        self.assertGreater(scores['wellness_seeker_score'], 0)
+        values, _ = build_event_behaviour_profile({'phq_label_weights': {'fitness': float('nan'), 'health': 'invalid'}})
+        self.assertTrue(all(score == .5 for score in values.values()))
+        values, _ = build_event_behaviour_profile({'phq_labels': ['fitness']})
+        self.assertGreater(values['health_consciousness'], .5)
 
-    def test_category_does_not_force_perfect_score(self):
-        scores = calculate_event_archetype_scores({'category': 'sports'})
-        self.assertLess(max(scores.values()), 0.2)
+    def test_similarity_is_based_on_profile_distance(self):
+        prototypes = pd.DataFrame(.5, index=ARCHETYPES, columns=BEHAVIOUR_COLUMNS)
+        prototypes.loc['wellness_seeker'] = .9
+        scores = score_event_against_archetypes(dict.fromkeys(BEHAVIOUR_COLUMNS, .9), prototypes)
+        self.assertEqual(scores['wellness_seeker_score'], 1)
+        self.assertAlmostEqual(scores['smart_saver_score'], .6)
+        self.assertEqual(len(scores), 10)
 
     def test_evidence_and_entities(self):
-        scores, evidence = event_profile({'entity_names': ['Artisan food market'], 'type': 'Yoga workshop'})
-        self.assertGreater(scores['quality_seeker_score'], 0)
-        self.assertGreater(scores['wellness_seeker_score'], 0)
-        self.assertEqual(evidence['quality_seeker'][0]['source'], 'entity_names')
+        values, evidence = build_event_behaviour_profile({'entity_names': ['Artisan food market']})
+        self.assertTrue(any(matches for matches in evidence.values()))
+        self.assertTrue(all(0 <= score <= 1 for score in values.values()))
 
-    def test_empty_or_unknown_events_have_no_invented_winner(self):
-        empty = build_event_personas(pd.DataFrame())
-        self.assertTrue(empty.empty)
-        profile = build_event_personas(pd.DataFrame([{'title': 'Unknown event'}]))
-        self.assertIsNone(profile.iloc[0]['primary_archetype'])
-        self.assertIsNone(profile.iloc[0]['secondary_archetype'])
-
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_real_watch_humans_profiles_map_events(self):
+        profiles = build_archetype_profiles(load_watch_humans())
+        result = build_event_personas(pd.DataFrame([{'title': 'Yoga', 'event_id': 'E1'}]), profiles)
+        scores = result[[f'{a}_score' for a in ARCHETYPES]]
+        self.assertTrue(np.isfinite(scores).all().all())
+        self.assertTrue(((scores >= 0) & (scores <= 1)).all().all())
+        self.assertIn(result.iloc[0].primary_archetype, ARCHETYPES)

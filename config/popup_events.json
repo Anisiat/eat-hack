@@ -1,0 +1,13 @@
+{
+  "country": "GB",
+  "start_date": "2026-10-03",
+  "end_date": "2026-12-31",
+  "min_attendance": 1,
+  "max_attendance": 200,
+  "latitude": 51.5074,
+  "longitude": -0.1278,
+  "radius_km": 25,
+  "categories": ["community", "festivals", "expos", "sports", "performing-arts", "concerts", "conferences"],
+  "brand_safe_only": true,
+  "max_pages": 100
+}

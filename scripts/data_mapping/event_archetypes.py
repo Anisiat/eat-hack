@@ -12,11 +12,11 @@ import pandas as pd
 # PATHS
 # ============================================================
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 RAW_EVENTS_PATH = (
     PROJECT_ROOT
-    / "data"
+    / "data" / "raw"
     / "events_raw.pkl"
 )
 
@@ -28,8 +28,8 @@ WATCH_HUMANS_PATH = (
 
 OUTPUT_PATH = (
     PROJECT_ROOT
-    / "data"
-    / "event_archetypes.csv"
+    / "data" / "processed"
+    / "events_archetypes.csv"
 )
 
 ARCHETYPE_PROFILE_OUTPUT_PATH = (
@@ -564,10 +564,10 @@ def matched_keywords(value, keywords):
 # LOAD AND VALIDATE WATCH HUMANS DATA
 # ============================================================
 
-def load_watch_humans():
+def load_watch_humans(path=WATCH_HUMANS_PATH):
 
     df = pd.read_csv(
-        WATCH_HUMANS_PATH
+        path
     )
 
     required_columns = (
