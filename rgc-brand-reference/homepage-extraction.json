@@ -1,0 +1,491 @@
+{
+  "headings": [
+    {
+      "class": "home-hero__title",
+      "text": "The world's first predictiveretail intelligence system."
+    },
+    {
+      "class": "home-hero__title home-hero__title--fill",
+      "text": "The world's first predictiveretail intelligence system."
+    },
+    {
+      "class": "home-trusted__title",
+      "text": "Trusted by the UK'smajor retail operators."
+    },
+    {
+      "class": "rgc-words home-teams__heading",
+      "text": "Built for all of retail. "
+    },
+    {
+      "class": "home-teams__title",
+      "text": "Retailers"
+    },
+    {
+      "class": "home-teams__title",
+      "text": "Major Brands"
+    },
+    {
+      "class": "home-teams__title",
+      "text": "Challenger Brands"
+    },
+    {
+      "class": "home-teams__title",
+      "text": "Private Label"
+    },
+    {
+      "class": "rgc-words home-uses__heading",
+      "text": "How teams are using predictive intelligence. "
+    },
+    {
+      "class": "home-uses__title",
+      "text": "Range Reviews"
+    },
+    {
+      "class": "home-uses__title",
+      "text": "New Product Development"
+    },
+    {
+      "class": "home-uses__title",
+      "text": "Media Planning"
+    },
+    {
+      "class": "home-cta__title",
+      "text": ""
+    },
+    {
+      "class": "rgc-words home-how__title",
+      "text": "The most complete view of retail there is. "
+    },
+    {
+      "class": "home-how__glyph-name",
+      "text": "01  Product & Retail"
+    },
+    {
+      "class": "rgc-words home-trace__title",
+      "text": "Data you can trace. "
+    },
+    {
+      "class": "home-trace__card-title",
+      "text": "Traceable"
+    },
+    {
+      "class": "home-trace__card-title",
+      "text": "Confidence Scored"
+    },
+    {
+      "class": "home-trace__card-title",
+      "text": "Ring-Fenced"
+    },
+    {
+      "class": "home-prod__title",
+      "text": "How prediction powers production."
+    },
+    {
+      "class": "home-ready__title",
+      "text": "Ready for the next step?"
+    },
+    {
+      "class": "home-blog__title",
+      "text": "Latest thoughts."
+    },
+    {
+      "class": "home-blog__post-title home-blog__post-title--lg",
+      "text": "Winning listings without a sales history."
+    },
+    {
+      "class": "home-blog__post-title",
+      "text": "What predictive retail intelligence really means for buyers."
+    },
+    {
+      "class": "home-blog__post-title",
+      "text": "Why range reviews reward the past."
+    }
+  ],
+  "images": [
+    {
+      "alt": "Really Good Culture",
+      "src": "https://reallygoodculture.com/assets/site/rgc-logo.png"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/star-3d.webp"
+    },
+    {
+      "alt": "Really Good Culture",
+      "src": "https://reallygoodculture.com/assets/site/rgc-3d-logo.png"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/chain.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/chain.webp"
+    },
+    {
+      "alt": "Tesco, dunnhumby, Ocado, Iceland",
+      "src": "https://reallygoodculture.com/assets/site/retailer-logos-v6.png"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/cereal-coral.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/cereal-blue.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/cereal-yellow.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/cereal-teal.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-receipt.svg"
+    },
+    {
+      "alt": "Range Reviews dashboard",
+      "src": "https://reallygoodculture.com/assets/site/teams-range-crop.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-barcode.svg"
+    },
+    {
+      "alt": "New Product Development dashboard",
+      "src": "https://reallygoodculture.com/assets/site/teams-npd-crop.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-store.svg"
+    },
+    {
+      "alt": "Mindshare opportunity classification",
+      "src": "https://reallygoodculture.com/assets/site/mindshare-crop.png"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-whitespace.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-winninglistings.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-jbpevidence.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-marketingplans.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-privatelabelnpd.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-rangeeffectiveness.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-highroas.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-suppliernegotiations.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-queryagent.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-alwayson.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-livetracking.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-automated.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-shopperbehaviour.svg"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-rom.svg"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-trendtracking.svg"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/ci-location.svg"
+    },
+    {
+      "alt": "Tesco, dunnhumby, Ocado, Iceland",
+      "src": "https://reallygoodculture.com/assets/site/retailer-logos-v6.png"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/bg-prodretail.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/bg-brandperform.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/bg-culturetrend.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/bg-marketmacro.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/bg-behave.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/bg-biometric.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/bg-synthetic.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/cubes-logo.png"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-product.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/color-product.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-perform.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/color-perform.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-trend.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/color-trend.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-market.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/color-market.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-behave.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/color-behave.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-biometric.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/color-biometric.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/icon-synthetic.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/color-synthetic.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/squigg-fullwidth.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/why-traceable.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/why-confidence.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/why-ringfenced.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/human-hand.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/robot-hand.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/winninglistings.png"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/adam.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/david.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/whatpredictiveintelligene.png"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/sophie.webp"
+    },
+    {
+      "alt": "",
+      "src": "https://reallygoodculture.com/assets/site/rewardthepast.png"
+    },
+    {
+      "alt": "Really Good Culture",
+      "src": "https://reallygoodculture.com/assets/site/rgc-big-noeyes.png"
+    }
+  ],
+  "inlineStyles": [
+    ":host,:root,[data-theme]{--chakra-ring-inset:var(--chakra-empty,/*!*/ /*!*/);--chakra-ring-offset-width:0px;--chakra-ring-offset-color:#fff;--chakra-ring-color:rgba(66, 153, 225, 0.6);--chakra-ring-offset-shadow:0 0 #0000;--chakra-ring-shadow:0 0 #0000;--chakra-space-x-reverse:0;--chakra-space-y-reverse:0;--wf-colors-transparent:transparent;--wf-colors-current:currentColor;--wf-colors-black:#000000;--wf-colors-white-50:#ffffff;--wf-colors-white-100:#ffffff;--wf-colors-white-200:#ffffff;--wf-colors-white-300:#ffffff;--wf-colors-white-400:#ffffff;--wf-colors-white-500:#FFFFFF;--wf-colors-white-600:#e6e6e6;--wf-colors-white-700:#d9d9d9;--wf-colors-white-800:#cccccc;--wf-colors-white-900:#b3b3b3;--wf-colors-white-main:#FFFFFF;--wf-colors-whiteAlpha-50:rgba(255, 255, 255, 0.04);--wf-colors-whiteAlpha-100:rgba(255, 255, 255, 0.06);--wf-colors-whiteAlpha-200:rgba(255, 255, 255, 0.08);--wf-colors-whiteAlpha-300:rgba(255, 255, 255, 0.16);--wf-colors-whiteAlpha-400:rgba(255, 255, 255, 0.24);--wf-colors-whiteAlpha-500:rgba(255, 255, 255, 0.36);--wf-colors-whiteAlpha-600:rgba(255, 255, 255, 0.48);--wf-colors-whiteAlpha-700:rgba(255, 255, 255, 0.64);--wf-colors-whiteAlpha-800:rgba(255, 255, 255, 0.80);--wf-colors-whiteAlpha-900:rgba(255, 255, 255, 0.92);--wf-colors-blackAlpha-50:rgba(0, 0, 0, 0.04);--wf-colors-blackAlpha-100:rgba(0, 0, 0, 0.06);--wf-colors-blackAlpha-200:rgba(0, 0, 0, 0.08);--wf-colors-blackAlpha-300:rgba(0, 0, 0, 0.16);--wf-colors-blackAlpha-400:rgba(0, 0, 0, 0.24);--wf-colors-blackAlpha-500:rgba(0, 0, 0, 0.36);--wf-colors-blackAlpha-600:rgba(0, 0, 0, 0.48);--wf-colors-blackAlpha-700:rgba(0, 0, 0, 0.64);--wf-colors-blackAlpha-800:rgba(0, 0, 0, 0.80);--wf-colors-blackAlpha-900:rgba(0, 0, 0, 0.92);--wf-colors-gray-50:#F7FAFC;--wf-colors-gray-100:#EDF2F7;--wf-colors-gray-200:#E2E8F0;--wf-colors-gray-300:#CBD5E0;--wf-colors-gray-400:#A0AEC0;--wf-colors-gray-500:#718096;--wf-colors-gray-600:#4A5568;--wf-colors-gray-700:#2D3748;--wf-colors-gray-800:#1A202C;--wf-colors-gray-900:#171923;--wf-colors-red-50:#ffb0b0;--wf-colors-red-100:#ff9696;--wf-colors-red-200:#ff7d7d;--wf-colors-red-300:#ff6363;--wf-colors-red-400:#ff4a4a;--wf-colors-red-500:#FF1717;--wf-colors-red-600:#e30000;--wf-colors-red-700:#ca0000;--wf-colors-red-800:#b00000;--wf-colors-red-900:#7d0000;--wf-colors-red-main:#FF1717;--wf-colors-orange-50:#fde2cb;--wf-colors-orange-100:#fcd5b3;--wf-colors-orange-200:#fbc79a;--wf-colors-orange-300:#faba82;--wf-colors-orange-400:#f9ac69;--wf-colors-orange-500:#f79138;--wf-colors-orange-600:#f2760a;--wf-colors-orange-700:#da6a09;--wf-colors-orange-800:#c15e08;--wf-colors-orange-900:#904606;--wf-colors-orange-main:#f79138;--wf-colors-yellow-50:#fef7d3;--wf-colors-yellow-100:#fef3ba;--wf-colors-yellow-200:#feefa0;--wf-colors-yellow-300:#fdea87;--wf-colors-yellow-400:#fde66e;--wf-colors-yellow-500:#FCDD3C;--wf-colors-yellow-600:#fbd40a;--wf-colors-yellow-700:#e8c304;--wf-colors-yellow-800:#cfae03;--wf-colors-yellow-900:#9d8402;--wf-colors-yellow-main:#FCDD3C;--wf-colors-green-50:#c2edd9;--wf-colors-green-100:#aee8cc;--wf-colors-green-200:#9ae2c0;--wf-colors-green-300:#86dcb3;--wf-colors-green-400:#73d6a7;--wf-colors-green-500:#4BCB8E;--wf-colors-green-600:#33b074;--wf-colors-green-700:#2d9c67;--wf-colors-green-800:#27895a;--wf-colors-green-900:#1c6140;--wf-colors-green-main:#4BCB8E;--wf-colors-teal-50:#aee6e4;--wf-colors-teal-100:#9be0dd;--wf-colors-teal-200:#88d9d6;--wf-colors-teal-300:#74d3d0;--wf-colors-teal-400:#61cdc9;--wf-colors-teal-500:#3cbfba;--wf-colors-teal-600:#309894;--wf-colors-teal-700:#2a8581;--wf-colors-teal-800:#24716e;--wf-colors-teal-900:#174b49;--wf-colors-teal-main:#3cbfba;--wf-colors-blue-50:#ebf8ff;--wf-colors-blue-100:#bee3f8;--wf-colors-blue-200:#90cdf4;--wf-colors-blue-300:#63b3ed;--wf-colors-blue-400:#4299e1;--wf-colors-blue-500:#3182ce;--wf-colors-blue-600:#2b6cb0;--wf-colors-blue-700:#2c5282;--wf-colors-blue-800:#2a4365;--wf-colors-blue-900:#1A365D;--wf-colors-cyan-50:#EDFDFD;--wf-colors-cyan-100:#C4F1F9;--wf-colors-cyan-200:#9DECF9;--wf-colors-cyan-300:#76E4F7;--wf-colors-cyan-400:#0BC5EA;--wf-colors-cyan-500:#00B5D8;--wf-colors-cyan-600:#00A3C4;--wf-colors-cyan-700:#0987A0;--wf-colors-cyan-800:#086F83;--wf-colors-cyan-900:#065666;--wf-colors-purple-50:#FAF5FF;--wf-colors-purple-100:#E9D8FD;--wf-colors-purple-200:#D6BCFA;--wf-colors-purple-300:#B794F4;--wf-colors-purple-400:#9F7AEA;--wf-colors-purple-500:#805AD5;--wf-colors-purple-600:#6B46C1;--wf-colors-purple-700:#553C9A;--wf-colors-purple-800:#44337A;--wf-colors-purple-900:#322659;--wf-colors-pink-50:#FFF5F7;--wf-colors-pink-100:#FED7E2;--wf-colors-pink-200:#FBB6CE;--wf-colors-pink-300:#F687B3;--wf-colors-pink-400:#ED64A6;--wf-colors-pink-500:#D53F8C;--wf-colors-pink-600:#B83280;--wf-colors-pink-700:#97266D;--wf-colors-pink-800:#702459;--wf-colors-pink-900:#521B41;--wf-colors-primary-50:#c2edd9;--wf-colors-primary-100:#aee8cc;--wf-colors-primary-200:#9ae2c0;--wf-colors-primary-300:#86dcb3;--wf-colors-primary-400:#73d6a7;--wf-colors-primary-500:#4BCB8E;--wf-colors-primary-600:#33b074;--wf-colors-primary-700:#2d9c67;--wf-colors-primary-800:#27895a;--wf-colors-primary-900:#1c6140;--wf-colors-primary-main:#4BCB8E;--wf-colors-paleGreen-50:#ffffff;--wf-colors-paleGreen-100:#ffffff;--wf-colors-paleGreen-200:#ffffff;--wf-colors-paleGreen-300:#ffffff;--wf-colors-paleGreen-400:#fefffe;--wf-colors-paleGreen-500:#DCEEDD;--wf-colors-paleGreen-600:#baddbc;--wf-colors-paleGreen-700:#a9d5ab;--wf-colors-paleGreen-800:#97cd9a;--wf-colors-paleGreen-900:#75bc79;--wf-colors-paleGreen-main:#DCEEDD;--wf-colors-darkerGreen-50:#64face;--wf-colors-darkerGreen-100:#4bf9c7;--wf-colors-darkerGreen-200:#32f9bf;--wf-colors-darkerGreen-300:#1af8b7;--wf-colors-darkerGreen-400:#08f0ac;--wf-colors-darkerGreen-500:#06BF89;--wf-colors-darkerGreen-600:#048e66;--wf-colors-darkerGreen-700:#047554;--wf-colors-darkerGreen-800:#035c42;--wf-colors-darkerGreen-900:#012b1f;--wf-colors-darkerGreen-main:#06BF89;--wf-colors-lighterGreen-50:#cbeddc;--wf-colors-lighterGreen-100:#b7e7cf;--wf-colors-lighterGreen-200:#a4e1c3;--wf-colors-lighterGreen-300:#91dab6;--wf-colors-lighterGreen-400:#7ed4a9;--wf-colors-lighterGreen-500:#58C790;--wf-colors-lighterGreen-600:#3bb177;--wf-colors-lighterGreen-700:#359e6a;--wf-colors-lighterGreen-800:#2e8b5d;--wf-colors-lighterGreen-900:#226443;--wf-colors-lighterGreen-main:#58C790;--wf-colors-coral-50:#ffefea;--wf-colors-coral-100:#ffdcd1;--wf-colors-coral-200:#ffc8b7;--wf-colors-coral-300:#ffb59d;--wf-colors-coral-400:#ffa284;--wf-colors-coral-500:#FF7B51;--wf-colors-coral-600:#ff541e;--wf-colors-coral-700:#ff4105;--wf-colors-coral-800:#ea3800;--wf-colors-coral-900:#b72c00;--wf-colors-coral-main:#FF7B51;--wf-colors-coralPale-50:#ffffff;--wf-colors-coralPale-100:#ffffff;--wf-colors-coralPale-200:#ffffff;--wf-colors-coralPale-300:#ffffff;--wf-colors-coralPale-400:#ffffff;--wf-colors-coralPale-500:#FBEEE3;--wf-colors-coralPale-600:#f5d3b6;--wf-colors-coralPale-700:#f1c5a0;--wf-colors-coralPale-800:#eeb88a;--wf-colors-coralPale-900:#e89d5d;--wf-colors-coralPale-main:#FBEEE3;--wf-colors-dark-50:#b8b8b8;--wf-colors-dark-100:#ababab;--wf-colors-dark-200:#9e9e9e;--wf-colors-dark-300:#919191;--wf-colors-dark-400:#858585;--wf-colors-dark-500:#6b6b6b;--wf-colors-dark-600:#525252;--wf-colors-dark-700:#454545;--wf-colors-dark-800:#383838;--wf-colors-dark-900:#1f1f1f;--wf-colors-dark-main:#6b6b6b;--wf-colors-darker-50:#585874;--wf-colors-darker-100:#4d4d66;--wf-colors-darker-200:#424257;--wf-colors-darker-300:#373749;--wf-colors-darker-400:#2c2c3a;--wf-colors-darker-500:#16161D;--wf-colors-darker-600:#000000;--wf-colors-darker-700:#000000;--wf-colors-darker-800:#000000;--wf-colors-darker-900:#000000;--wf-colors-darker-main:#16161D;--wf-colors-lightGray-50:#ffffff;--wf-colors-lightGray-100:#ffffff;--wf-colors-lightGray-200:#ffffff;--wf-colors-lightGray-300:#ffffff;--wf-colors-lightGray-400:#ffffff;--wf-colors-lightGray-500:#F7F9FA;--wf-colors-lightGray-600:#d8e1e6;--wf-colors-lightGray-700:#c8d6dd;--wf-colors-lightGray-800:#b8cad3;--wf-colors-lightGray-900:#99b2bf;--wf-colors-lightGray-main:#F7F9FA;--wf-colors-border-50:#ffffff;--wf-colors-border-100:#ffffff;--wf-colors-border-200:#ffffff;--wf-colors-border-300:#ffffff;--wf-colors-border-400:#fefefe;--wf-colors-border-500:#E3E5E6;--wf-colors-border-600:#c8ccce;--wf-colors-border-700:#bbbfc2;--wf-colors-border-800:#adb3b6;--wf-colors-border-900:#929a9e;--wf-colors-border-main:#E3E5E6;--wf-colors-darkGray-50:#f7f7f7;--wf-colors-darkGray-100:#e9ebeb;--wf-colors-darkGray-200:#dcdedf;--wf-colors-darkGray-300:#ced2d3;--wf-colors-darkGray-400:#c1c6c7;--wf-colors-darkGray-500:#A6ADAF;--wf-colors-darkGray-600:#8b9497;--wf-colors-darkGray-700:#7e888b;--wf-colors-darkGray-800:#717b7e;--wf-colors-darkGray-900:#596163;--wf-colors-darkGray-main:#A6ADAF;--wf-colors-lightBlue-50:#ffffff;--wf-colors-lightBlue-100:#f0f8fe;--wf-colors-lightBlue-200:#d8ecfd;--wf-colors-lightBlue-300:#bfdffc;--wf-colors-lightBlue-400:#a7d3fb;--wf-colors-lightBlue-500:#76BBF9;--wf-colors-lightBlue-600:#45a3f7;--wf-colors-lightBlue-700:#2d97f6;--wf-colors-lightBlue-800:#148af5;--wf-colors-lightBlue-900:#0970cd;--wf-colors-lightBlue-main:#76BBF9;--wf-colors-lightPurple-50:#ffffff;--wf-colors-lightPurple-100:#ffffff;--wf-colors-lightPurple-200:#ffffff;--wf-colors-lightPurple-300:#fbfbfe;--wf-colors-lightPurple-400:#e9e6f9;--wf-colors-lightPurple-500:#C6BDEF;--wf-colors-lightPurple-600:#a394e5;--wf-colors-lightPurple-700:#917fe0;--wf-colors-lightPurple-800:#7f6bdb;--wf-colors-lightPurple-900:#5c42d1;--wf-colors-lightPurple-main:#C6BDEF;--wf-colors-babyBlue-50:#d3eceb14;--wf-colors-babyBlue-100:#c2e4e214;--wf-colors-babyBlue-200:#b0dcda14;--wf-colors-babyBlue-300:#9ed4d214;--wf-colors-babyBlue-400:#8ccdca14;--wf-colors-babyBlue-500:#69bdb914;--wf-colors-babyBlue-600:#4aa9a414;--wf-colors-babyBlue-700:#42979314;--wf-colors-babyBlue-800:#3b858214;--wf-colors-babyBlue-900:#2b625f14;--wf-colors-babyBlue-main:#69bdb914;--wf-colors-upvoteGreen-50:#41ffca;--wf-colors-upvoteGreen-100:#27ffc2;--wf-colors-upvoteGreen-200:#0effbb;--wf-colors-upvoteGreen-300:#00f3af;--wf-colors-upvoteGreen-400:#00da9d;--wf-colors-upvoteGreen-500:#00A778;--wf-colors-upvoteGreen-600:#007453;--wf-colors-upvoteGreen-700:#005a41;--wf-colors-upvoteGreen-800:#00412f;--wf-colors-upvoteGreen-900:#000e0a;--wf-colors-upvoteGreen-main:#00A778;--wf-colors-downvoteRed-50:#fbd3d6;--wf-colors-downvoteRed-100:#f9bcc1;--wf-colors-downvoteRed-200:#f7a4ab;--wf-colors-downvoteRed-300:#f48d96;--wf-colors-downvoteRed-400:#f27680;--wf-colors-downvoteRed-500:#EE4755;--wf-colors-downvoteRed-600:#ea182a;--wf-colors-downvoteRed-700:#d51424;--wf-colors-downvoteRed-800:#bd1220;--wf-colors-downvoteRed-900:#8f0d18;--wf-colors-downvoteRed-main:#EE4755;--wf-colors-yellowGreen-50:#fbfef6;--wf-colors-yellowGreen-100:#f2fae1;--wf-colors-yellowGreen-200:#e8f6cb;--wf-colors-yellowGreen-300:#dff3b5;--wf-colors-yellowGreen-400:#d5ef9f;--wf-colors-yellowGreen-500:#C2E873;--wf-colors-yellowGreen-600:#afe147;--wf-colors-yellowGreen-700:#a5dd31;--wf-colors-yellowGreen-800:#99d223;--wf-colors-yellowGreen-900:#79a71b;--wf-colors-yellowGreen-main:#C2E873;--wf-colors-ink-50:#6a6a6a;--wf-colors-ink-100:#5d5d5d;--wf-colors-ink-200:#505050;--wf-colors-ink-300:#434343;--wf-colors-ink-400:#373737;--wf-colors-ink-500:#1D1D1D;--wf-colors-ink-600:#040404;--wf-colors-ink-700:#000000;--wf-colors-ink-800:#000000;--wf-colors-ink-900:#000000;--wf-colors-ink-main:#1D1D1D;--wf-colors-lime-50:#e4ff8a;--wf-colors-lime-100:#deff70;--wf-colors-lime-200:#d8ff57;--wf-colors-lime-300:#d2ff3d;--wf-colors-lime-400:#ccff24;--wf-colors-lime-500:#B8F000;--wf-colors-lime-600:#91bd00;--wf-colors-lime-700:#7da300;--wf-colors-lime-800:#6a8a00;--wf-colors-lime-900:#435700;--wf-colors-lime-main:#B8F000;--wf-colors-indigo-50:#eaeafb;--wf-colors-indigo-100:#d5d5f7;--wf-colors-indigo-200:#bfbff3;--wf-colors-indigo-300:#aaaaee;--wf-colors-indigo-400:#9595ea;--wf-colors-indigo-500:#6A6AE2;--wf-colors-indigo-600:#3f3fda;--wf-colors-indigo-700:#2a2ad6;--wf-colors-indigo-800:#2525c1;--wf-colors-indigo-900:#1d1d96;--wf-colors-indigo-main:#6A6AE2;--wf-colors-brandGreen-50:#7de4a2;--wf-colors-brandGreen-100:#68e092;--wf-colors-brandGreen-200:#52dc83;--wf-colors-brandGreen-300:#3dd774;--wf-colors-brandGreen-400:#2bd066;--wf-colors-brandGreen-500:#22A651;--wf-colors-brandGreen-600:#197c3c;--wf-colors-brandGreen-700:#156732;--wf-colors-brandGreen-800:#115128;--wf-colors-brandGreen-900:#082713;--wf-colors-brandGreen-main:#22A651;--wf-borders-none:0;--wf-borders-1px:1px solid;--wf-borders-2px:2px solid;--wf-borders-4px:4px solid;--wf-borders-8px:8px solid;--wf-fonts-heading:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";--wf-fonts-body:'Arial',sans-serif;--wf-fonts-mono:Menlo,'SF Mono',ui-monospace,SFMono-Regular,monospace;--wf-fonts-subHeading:'Aurora',sans-serif;--wf-fonts-display:Helvetica,'Helvetica Neue',Arial,sans-serif;--wf-fonts-accent:'Geist','Helvetica Neue',Arial,sans-serif;--wf-fontSizes-3xs:0.45rem;--wf-fontSizes-2xs:0.625rem;--wf-fontSizes-xs:0.75rem;--wf-fontSizes-sm:0.875rem;--wf-fontSizes-md:1rem;--wf-fontSizes-lg:1.125rem;--wf-fontSizes-xl:1.25rem;--wf-fontSizes-2xl:1.5rem;--wf-fontSizes-3xl:1.875rem;--wf-fontSizes-4xl:2.25rem;--wf-fontSizes-5xl:3rem;--wf-fontSizes-6xl:3.75rem;--wf-fontSizes-7xl:4.5rem;--wf-fontSizes-8xl:6rem;--wf-fontSizes-9xl:8rem;--wf-fontWeights-hairline:100;--wf-fontWeights-thin:200;--wf-fontWeights-light:300;--wf-fontWeights-normal:400;--wf-fontWeights-medium:500;--wf-fontWeights-semibold:600;--wf-fontWeights-bold:700;--wf-fontWeights-extrabold:800;--wf-fontWeights-black:900;--wf-letterSpacings-tighter:-0.05em;--wf-letterSpacings-tight:-0.025em;--wf-letterSpacings-normal:0;--wf-letterSpacings-wide:0.025em;--wf-letterSpacings-wider:0.05em;--wf-letterSpacings-widest:0.1em;--wf-letterSpacings-6xl:-3px;--wf-letterSpacings-5xl:-3px;--wf-letterSpacings-4xl:-2px;--wf-letterSpacings-3xl:-2px;--wf-letterSpacings-2xl:-1px;--wf-letterSpacings-xl:-1px;--wf-letterSpacings-lg:-1px;--wf-letterSpacings-md:-1px;--wf-letterSpacings-sm:-0.5px;--wf-letterSpacings-xs:-0.5px;--wf-letterSpacings-2xs:-0.5px;--wf-letterSpacings-3xs:-0.5px;--wf-lineHeights-3:.75rem;--wf-lineHeights-4:1rem;--wf-lineHeights-5:1.25rem;--wf-lineHeights-6:1.5rem;--wf-lineHeights-7:1.75rem;--wf-lineHeights-8:2rem;--wf-lineHeights-9:2.25rem;--wf-lineHeights-10:2.5rem;--wf-lineHeights-normal:normal;--wf-lineHeights-none:1;--wf-lineHeights-shorter:1.25;--wf-lineHeights-short:1.375;--wf-lineHeights-base:1.5;--wf-lineHeights-tall:1.625;--wf-lineHeights-taller:2;--wf-radii-none:0;--wf-radii-sm:0.5rem;--wf-radii-base:0.25rem;--wf-radii-md:0.625rem;--wf-radii-lg:1.25rem;--wf-radii-xl:2rem;--wf-radii-2xl:1rem;--wf-radii-3xl:1.5rem;--wf-radii-full:9999px;--wf-radii-xxs:0.125rem;--wf-radii-xs:0.25rem;--wf-radii-xxl:2.25rem;--wf-space-1:0.25rem;--wf-space-2:0.5rem;--wf-space-3:0.75rem;--wf-space-4:1rem;--wf-space-5:1.25rem;--wf-space-6:1.5rem;--wf-space-7:1.75rem;--wf-space-8:2rem;--wf-space-9:2.25rem;--wf-space-10:2.5rem;--wf-space-12:3rem;--wf-space-14:3.5rem;--wf-space-16:4rem;--wf-space-20:5rem;--wf-space-24:6rem;--wf-space-28:7rem;--wf-space-32:8rem;--wf-space-36:9rem;--wf-space-40:10rem;--wf-space-44:11rem;--wf-space-48:12rem;--wf-space-52:13rem;--wf-space-56:14rem;--wf-space-60:15rem;--wf-space-64:16rem;--wf-space-72:18rem;--wf-space-80:20rem;--wf-space-96:24rem;--wf-space-px:1px;--wf-space-0-5:0.125rem;--wf-space-1-5:0.375rem;--wf-space-2-5:0.625rem;--wf-space-3-5:0.875rem;--wf-shadows-xs:0 0 0 1px rgba(0, 0, 0, 0.05);--wf-shadows-sm:0px 0px 20px rgb(229, 229, 229);--wf-shadows-base:0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);--wf-shadows-md:0px 2px 15px rgba(0, 0, 0, 0.15);--wf-shadows-lg:0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);--wf-shadows-xl:0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);--wf-shadows-2xl:0 25px 50px -12px rgba(0, 0, 0, 0.25);--wf-shadows-outline:0 0 0 3px rgba(66, 153, 225, 0.6);--wf-shadows-inner:inset 0 2px 4px 0 rgba(0,0,0,0.06);--wf-shadows-none:none;--wf-shadows-dark-lg:rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;--wf-shadows-default:0px -2px 4px rgba(128, 128, 128, 0.1),0px 2px 4px rgba(120, 120, 120, 0.25);--wf-shadows-primary:0px 0px 20px rgba(0, 0, 0, 0.1);--wf-shadows-large:0px 6px 12px rgba(8, 35, 48, 0.14),0px -1px 24px rgba(8, 35, 48, 0.08);--wf-shadows-fullBlack:8px 8px 0px rgb(0 0 0);--wf-shadows-purple:rgb(198, 189, 239) 8px 8px 0px;--wf-shadows-bottomRight:4px 6px 10px rgba(0, 0, 0, 0.1);--wf-shadows-bottomRightSolidGreen:5px 7px 0px 0px #4BCB8E;--wf-shadows-bottomRightSolidBlack:5px 7px 0px 0px rgba(0,0,0);--wf-shadows-bottomRightSolidPurple:5px 7px 0px 0px #C6BDEF;--wf-shadows-bottomRightSolidPink:5px 7px 0px 0px#E63D7E;--wf-shadows-bottomRightSolidGreenLarge:10px 10px 0px 0px #4BCB8E;--wf-shadows-bottomRightSolidBlackLarge:10px 10px 0px 0px rgb(0,0,0);--wf-shadows-bottomRightSolidPurpleLarge:10px 10px 0px 0px #C6BDEF;--wf-shadows-bottomRightSolidPinkLarge:10px 10px 0px 0px #E63D7E;--wf-sizes-1:0.25rem;--wf-sizes-2:0.5rem;--wf-sizes-3:0.75rem;--wf-sizes-4:1rem;--wf-sizes-5:1.25rem;--wf-sizes-6:1.5rem;--wf-sizes-7:1.75rem;--wf-sizes-8:2rem;--wf-sizes-9:2.25rem;--wf-sizes-10:2.5rem;--wf-sizes-12:3rem;--wf-sizes-14:3.5rem;--wf-sizes-16:4rem;--wf-sizes-20:5rem;--wf-sizes-24:6rem;--wf-sizes-28:7rem;--wf-sizes-32:8rem;--wf-sizes-36:9rem;--wf-sizes-40:10rem;--wf-sizes-44:11rem;--wf-sizes-48:12rem;--wf-sizes-52:13rem;--wf-sizes-56:14rem;--wf-sizes-60:15rem;--wf-sizes-64:16rem;--wf-sizes-72:18rem;--wf-sizes-80:20rem;--wf-sizes-96:24rem;--wf-sizes-px:1px;--wf-sizes-0-5:0.125rem;--wf-sizes-1-5:0.375rem;--wf-sizes-2-5:0.625rem;--wf-sizes-3-5:0.875rem;--wf-sizes-max:max-content;--wf-sizes-min:min-content;--wf-sizes-full:100%;--wf-sizes-3xs:14rem;--wf-sizes-2xs:16rem;--wf-sizes-xs:20rem;--wf-sizes-sm:24rem;--wf-sizes-md:28rem;--wf-sizes-lg:32rem;--wf-sizes-xl:36rem;--wf-sizes-2xl:42rem;--wf-sizes-3xl:48rem;--wf-sizes-4xl:56rem;--wf-sizes-5xl:64rem;--wf-sizes-6xl:72rem;--wf-sizes-7xl:80rem;--wf-sizes-8xl:90rem;--wf-sizes-prose:60ch;--wf-sizes-container-sm:640px;--wf-sizes-container-md:768px;--wf-sizes-container-lg:1024px;--wf-sizes-container-xl:1280px;--wf-zIndices-hide:-1;--wf-zIndices-auto:auto;--wf-zIndices-base:0;--wf-zIndices-docked:10;--wf-zIndices-dropdown:1000;--wf-zIndices-sticky:1100;--wf-zIndices-banner:1200;--wf-zIndices-overlay:1300;--wf-zIndices-modal:1400;--wf-zIndices-popover:1500;--wf-zIndices-skipLink:1600;--wf-zIndices-toast:1700;--wf-zIndices-tooltip:1800;--wf-transition-property-common:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;--wf-transition-property-colors:background-color,border-color,color,fill,stroke;--wf-transition-property-dimensions:width,height;--wf-transition-property-position:left,right,top,bottom;--wf-transition-property-background:background-color,background-image,background-position;--wf-transition-easing-ease-in:cubic-bezier(0.4, 0, 1, 1);--wf-transition-easing-ease-out:cubic-bezier(0, 0, 0.2, 1);--wf-transition-easing-ease-in-out:cubic-bezier(0.4, 0, 0.2, 1);--wf-transition-duration-ultra-fast:50ms;--wf-transition-duration-faster:100ms;--wf-transition-duration-fast:150ms;--wf-transition-duration-normal:200ms;--wf-transition-duration-slow:300ms;--wf-transition-duration-slower:400ms;--wf-transition-duration-ultra-slow:500ms;--wf-blur-none:0;--wf-blur-sm:4px;--wf-blur-base:8px;--wf-blur-md:12px;--wf-blur-lg:16px;--wf-blur-xl:24px;--wf-blur-2xl:40px;--wf-blur-3xl:64px;--wf-breakpoints-base:0em;--wf-breakpoints-sm:320px;--wf-breakpoints-md:768px;--wf-breakpoints-lg:960px;--wf-breakpoints-xl:1200px;--wf-breakpoints-2xl:1600px;--wf-breakpoints-2sm:380px;--wf-breakpoints-3sm:480px;--wf-breakpoints-3xl:1920px;}.chakra-ui-light :host:not([data-theme]),.chakra-ui-light :root:not([data-theme]),.chakra-ui-light [data-theme]:not([data-theme]),[data-theme=light] :host:not([data-theme]),[data-theme=light] :root:not([data-theme]),[data-theme=light] [data-theme]:not([data-theme]),:host[data-theme=light],:root[data-theme=light],[data-theme][data-theme=light]{--wf-colors-chakra-body-text:var(--wf-colors-gray-800);--wf-colors-chakra-body-bg:white;--wf-colors-chakra-border-color:var(--wf-colors-gray-200);--wf-colors-chakra-inverse-text:white;--wf-colors-chakra-subtle-bg:var(--wf-colors-gray-100);--wf-colors-chakra-subtle-text:var(--wf-colors-gray-600);--wf-colors-chakra-placeholder-color:var(--wf-colors-gray-500);}.chakra-ui-dark :host:not([data-theme]),.chakra-ui-dark :root:not([data-theme]),.chakra-ui-dark [data-theme]:not([data-theme]),[data-theme=dark] :host:not([data-theme]),[data-theme=dark] :root:not([data-theme]),[data-theme=dark] [data-theme]:not([data-theme]),:host[data-theme=dark],:root[data-theme=dark],[data-theme][data-theme=dark]{--wf-colors-chakra-body-text:var(--wf-colors-whiteAlpha-900);--wf-colors-chakra-body-bg:var(--wf-colors-gray-800);--wf-colors-chakra-border-color:var(--wf-colors-whiteAlpha-300);--wf-colors-chakra-inverse-text:var(--wf-colors-gray-800);--wf-colors-chakra-subtle-bg:var(--wf-colors-gray-700);--wf-colors-chakra-subtle-text:var(--wf-colors-gray-400);--wf-colors-chakra-placeholder-color:var(--wf-colors-whiteAlpha-400);}",
+    "html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale;touch-action:manipulation;}body{position:relative;min-height:100%;margin:0;font-feature-settings:\"kern\";}:where(*, *::before, *::after){border-width:0;border-style:solid;box-sizing:border-box;word-wrap:break-word;}main{display:block;}hr{border-top-width:1px;box-sizing:content-box;height:0;overflow:visible;}:where(pre, code, kbd,samp){font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:1em;}a{background-color:transparent;color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit;}abbr[title]{border-bottom:none;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration:underline dotted;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;}:where(b, strong){font-weight:bold;}small{font-size:80%;}:where(sub,sup){font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sub{bottom:-0.25em;}sup{top:-0.5em;}img{border-style:none;}:where(button, input, optgroup, select, textarea){font-family:inherit;font-size:100%;line-height:1.15;margin:0;}:where(button, input){overflow:visible;}:where(button, select){text-transform:none;}:where(\n          button::-moz-focus-inner,\n          [type=\"button\"]::-moz-focus-inner,\n          [type=\"reset\"]::-moz-focus-inner,\n          [type=\"submit\"]::-moz-focus-inner\n        ){border-style:none;padding:0;}fieldset{padding:0.35em 0.75em 0.625em;}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;}progress{vertical-align:baseline;}textarea{overflow:auto;}:where([type=\"checkbox\"], [type=\"radio\"]){box-sizing:border-box;padding:0;}input[type=\"number\"]::-webkit-inner-spin-button,input[type=\"number\"]::-webkit-outer-spin-button{-webkit-appearance:none!important;}input[type=\"number\"]{-moz-appearance:textfield;}input[type=\"search\"]{-webkit-appearance:textfield;outline-offset:-2px;}input[type=\"search\"]::-webkit-search-decoration{-webkit-appearance:none!important;}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;}details{display:block;}summary{display:-webkit-box;display:-webkit-list-item;display:-ms-list-itembox;display:list-item;}template{display:none;}[hidden]{display:none!important;}:where(\n          blockquote,\n          dl,\n          dd,\n          h1,\n          h2,\n          h3,\n          h4,\n          h5,\n          h6,\n          hr,\n          figure,\n          p,\n          pre\n        ){margin:0;}button{background:transparent;padding:0;}fieldset{margin:0;padding:0;}:where(ol, ul){margin:0;padding:0;}textarea{resize:vertical;}:where(button, [role=\"button\"]){cursor:pointer;}button::-moz-focus-inner{border:0!important;}table{border-collapse:collapse;}:where(h1, h2, h3, h4, h5, h6){font-size:inherit;font-weight:inherit;}:where(button, input, optgroup, select, textarea){padding:0;line-height:inherit;color:inherit;}:where(img, svg, video, canvas, audio, iframe, embed, object){display:block;}:where(img, video){max-width:100%;height:auto;}[data-js-focus-visible] :focus:not([data-focus-visible-added]):not(\n          [data-focus-visible-disabled]\n        ){outline:none;box-shadow:none;}select::-ms-expand{display:none;}:root,:host{--chakra-vh:100vh;}@supports (height: -webkit-fill-available){:root,:host{--chakra-vh:-webkit-fill-available;}}@supports (height: -moz-fill-available){:root,:host{--chakra-vh:-moz-fill-available;}}@supports (height: 100dvh){:root,:host{--chakra-vh:100dvh;}}",
+    "body{font-family:'Arial',sans-serif;color:var(--wf-colors-chakra-body-text);background:var(--wf-colors-chakra-body-bg);transition-property:background-color;transition-duration:var(--wf-transition-duration-normal);line-height:var(--wf-lineHeights-base);width:100%;height:100%;overflow-x:clip;}*::-webkit-input-placeholder{color:var(--wf-colors-chakra-placeholder-color);}*::-moz-placeholder{color:var(--wf-colors-chakra-placeholder-color);}*:-ms-input-placeholder{color:var(--wf-colors-chakra-placeholder-color);}*::placeholder{color:var(--wf-colors-chakra-placeholder-color);}*,*::before,::after{border-color:var(--wf-colors-chakra-border-color);}html{width:100%;height:100%;font-family:'Arial',sans-serif;}html WebkitScrollbar{-webkit-appearance:none;}",
+    "@font-face{font-family:'Aurora';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/Aurora.eot');src:url('/Aurora.eot?#iefix') format('embedded-opentype'),url('/Aurora.woff2') format('woff2'),url('/fonts/Aurora.woff') format('woff'),url('/fonts/Aurora.ttf') format('truetype'),url('/fonts/Aurora.svg#svgFontName') format('svg');}"
+  ],
+  "links": [
+    {
+      "label": "",
+      "url": "https://reallygoodculture.com/"
+    },
+    {
+      "label": "Claim your dashboardClaim",
+      "url": "https://reallygoodculture.com/onboarding/claim"
+    },
+    {
+      "label": "Get In Touch",
+      "url": "https://reallygoodculture.com/#cta"
+    },
+    {
+      "label": "How the data works",
+      "url": "https://reallygoodculture.com/seven-dimensions"
+    },
+    {
+      "label": "About us",
+      "url": "https://reallygoodculture.com/about"
+    },
+    {
+      "label": "Careers",
+      "url": "https://reallygoodculture.com/careers"
+    },
+    {
+      "label": "Blog",
+      "url": "https://reallygoodculture.com/blog"
+    },
+    {
+      "label": "Watch Humans↗",
+      "url": "https://watchhumans.com/for-brands"
+    },
+    {
+      "label": "Brand log inSign in",
+      "url": "https://reallygoodculture.com/login"
+    },
+    {
+      "label": "Club of Really Good",
+      "url": "https://reallygoodculture.com/club-of-really-good"
+    },
+    {
+      "label": "Create a brand account",
+      "url": "https://reallygoodculture.com/onboarding/claim"
+    },
+    {
+      "label": "Enter the next era of retail",
+      "url": "https://reallygoodculture.com/#trusted"
+    },
+    {
+      "label": "Explore all seven in depth →",
+      "url": "https://reallygoodculture.com/seven-dimensions"
+    },
+    {
+      "label": "Download the report",
+      "url": "https://cdn.reallygoodculture.com/files/RGC_The_Fifth_Industrial_Revolution.pdf"
+    },
+    {
+      "label": "Get In Touch →",
+      "url": "https://reallygoodculture.com/#cta"
+    },
+    {
+      "label": "View all posts →",
+      "url": "https://reallygoodculture.com/blog"
+    },
+    {
+      "label": "Winning listings without a sales history.Adam · Co-Founder3 min read",
+      "url": "https://reallygoodculture.com/blog"
+    },
+    {
+      "label": "What predictive retail intelligence really means for buyers.David · Co-Founder5 min read",
+      "url": "https://reallygoodculture.com/blog"
+    },
+    {
+      "label": "Why range reviews reward the past.Sophie · Product Lead3 min read",
+      "url": "https://reallygoodculture.com/blog"
+    },
+    {
+      "label": "ask@reallygoodculture.com",
+      "url": "mailto:ask@reallygoodculture.com"
+    },
+    {
+      "label": "Privacy Policy",
+      "url": "https://reallygoodculture.com/privacy"
+    },
+    {
+      "label": "Terms & Conditions",
+      "url": "https://reallygoodculture.com/terms"
+    },
+    {
+      "label": "Changelog",
+      "url": "https://reallygoodculture.com/changelog"
+    },
+    {
+      "label": "SMS Policy",
+      "url": "https://reallygoodculture.com/privacy#sms"
+    },
+    {
+      "label": "",
+      "url": "https://www.linkedin.com/company/reallygoodculture/"
+    }
+  ],
+  "url": "https://reallygoodculture.com/",
+  "viewport": {
+    "height": 681,
+    "width": 590
+  }
+}
