@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "python3 app.py --export site --no-rebuild",
+  "outputDirectory": "site",
+  "headers": [
+    { "source": "/outputs/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
+  ]
+}

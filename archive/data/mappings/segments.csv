@@ -1,0 +1,48 @@
+term,students,young_professionals,fitness,families,foodies
+Gluten-free shoppers,0,0,0.2,0.3,0.3
+Savoury snackers,0.7,0.5,0,0.3,0
+Plant-based shoppers,0,0.4,0.3,0,0.6
+Sugar-conscious shoppers,0,0.3,0.7,0.4,0
+Mindful snackers,0,0.6,0.5,0,0
+Sweet treat seekers,0.7,0,0,0.7,0
+Functional wellness shoppers,0,0.7,0.6,0,0
+Home cooks,0,0,0,0.6,0.8
+Cocktail enthusiasts,0,0.9,0,0,0.5
+Protein seekers,0.3,0,1,0,0
+Fibre seekers,0,0,0.6,0.3,0
+Eco-conscious shoppers,0,0.5,0,0,0.5
+Organic shoppers,0,0,0,0.5,0.6
+Calorie-conscious shoppers,0,0.4,0.8,0,0
+Focus-oriented shoppers,0.8,0.7,0,0,0
+Ethical shoppers,0,0.5,0,0,0.5
+Meat snackers,0.5,0.4,0.4,0,0
+Tea drinkers,0,0.5,0,0.4,0
+Fruit-drink explorers,0.5,0,0,0,0.5
+Food explorers,0,0,0,0,1
+Spice lovers,0,0.4,0,0,0.9
+Outdoor socialisers,0.5,0.8,0,0,0
+Caffeine reducers,0,0.7,0.4,0,0
+Adult beer drinkers,0.5,0.8,0,0,0
+Alcohol-free socialisers,0,0.8,0.4,0,0
+Botanical drink explorers,0,0.6,0,0,0.7
+Citrus flavour seekers,0.3,0,0,0,0.5
+Adult CBD shoppers,0,0.8,0,0,0
+Free-from shoppers,0,0,0.3,0.6,0
+Wind-down ritual shoppers,0,0.8,0,0,0
+Adult wine drinkers,0,0.7,0,0,0.6
+Fruit snackers,0.4,0,0,0.7,0
+Ingredient-conscious shoppers,0,0,0.5,0.5,0
+Coffee-alternative shoppers,0,0.6,0.4,0,0
+Refreshment seekers,0.5,0.5,0,0,0
+Matcha flavour fans,0,0.6,0,0,0.5
+Carb-conscious shoppers,0,0,0.8,0,0
+On-the-go shoppers,0.6,0.8,0,0,0
+Coffee drinkers,0.6,0.8,0,0,0
+Fitness-oriented shoppers,0,0,1,0,0
+Community-minded shoppers,0,0,0,0.5,0.4
+Nut snackers,0,0.4,0.5,0,0
+Floral flavour seekers,0,0,0,0,0.7
+Gift shoppers,0,0,0,0.6,0.5
+Adult spirits drinkers,0,0.8,0,0,0.5
+Energy-drink shoppers,1,0.4,0,0,0
+Chocolate enthusiasts,0.5,0,0,0.5,0.4

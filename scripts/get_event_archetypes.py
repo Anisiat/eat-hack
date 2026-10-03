@@ -12,35 +12,22 @@ import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
-RAW_EVENTS_PATH = (
-    PROJECT_ROOT
-    / "data"
-    / "events_raw.pkl"
-)
+RAW_EVENTS_PATH = PROJECT_ROOT / "data" / "raw" / "events_raw.pkl"
 
-OUTPUT_PATH = (
-    PROJECT_ROOT
-    / "data"
-    / "events_archetypes.csv"
-)
+OUTPUT_PATH = PROJECT_ROOT / "data" / "archetypes" / "events_archetypes.csv"
+# Hand-entered events (e.g. EAT Hack itself, as defined in add_eat_hack_event.py), scored exactly like the
+# PredictHQ ones. phq_labels and entity_names: "a|b|c"; phq_label_weights: "label:weight|label:weight".
+MANUAL_EVENTS_PATH = PROJECT_ROOT / "data" / "raw" / "manual_events.csv"
 
 
 # -----------------------------------
 # Watch Humans archetypes
 # -----------------------------------
 
-ARCHETYPES = [
-    "wellness_seeker",
-    "trend_enthusiast",
-    "thoughtful_buyer",
-    "smart_saver",
-    "quality_seeker",
-    "on_the_go_shopper",
-    "impulse_buyer",
-    "experience_explorer",
-    "everyday_planner",
-    "conscious_consumer",
-]
+try:   # shared definition; works when imported as scripts.get_event_archetypes or run as a script
+    from scripts.generate_watchhumans_synthetic import ARCHETYPES
+except ImportError:
+    from generate_watchhumans_synthetic import ARCHETYPES
 
 
 # -----------------------------------
@@ -554,6 +541,16 @@ def build_event_personas(events):
 
 def main():
     events = pd.read_pickle(RAW_EVENTS_PATH)
+    if MANUAL_EVENTS_PATH.exists():
+        manual = pd.read_csv(MANUAL_EVENTS_PATH)
+        split = lambda s: [x for x in str(s).split("|") if x and x != "nan"]
+        manual["phq_labels"] = manual["phq_labels"].map(split)
+        if "phq_label_weights" in manual:      # "label:weight|label:weight", same definition as add_eat_hack_event.py
+            manual["phq_label_weights"] = manual["phq_label_weights"].map(
+                lambda s: {k: float(v) for k, v in (x.split(":") for x in split(s))} or None)
+        if "entity_names" in manual:
+            manual["entity_names"] = manual["entity_names"].map(split)
+        events = pd.concat([events, manual], ignore_index=True)
     personas = build_event_personas(events)
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     personas.to_csv(OUTPUT_PATH, index=False)

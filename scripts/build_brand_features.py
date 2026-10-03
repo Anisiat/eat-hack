@@ -1,20 +1,25 @@
 """
 build_brand_features.py - turn RGC's brand sheet (brands.csv, one row per product) into model-ready tables.
 
+Archetype scores use the keyword method shared with events (get_event_archetypes.py):
+  1. get_product_archetypes.py scores every product on the 10 WatchHumans archetypes from its label claims,
+     name, sub-category, need states, dietary flags, flavour, sheet category and target-segment phrases.
+  2. Here each product's scores are rescaled so its strongest archetype is 1 (arch_*), the same rescaling
+     applied to events. A brand's profile is the mean of its products; its top 3 archetypes are its targets.
+  3. For each event type in event_types.csv (crowd shares from the same keyword method), how well the product
+     suits a typical crowd: event_k = sum_a crowd_k[a] x arch[a].
+
 Reads:
-  brands.csv                     RGC's real client products (Brand, Product / variant, Category, ...)
-  data/mappings/need_states.csv  inferred need-state phrase -> weights on the 8 model need states (the moment)
-  data/mappings/archetypes.csv   inferred target-segment phrase -> weights on the 10 WatchHumans archetypes
+  data/raw/brands.csv                      RGC's real client products (Brand, Product / variant, Category, ...)
+  data/archetypes/products_archetypes.csv  keyword archetype scores per product (get_product_archetypes.py)
+  data/mappings/need_states.csv            need-state phrase -> 8 need states (practical rules: chilling, hydration)
+  data/processed/event_types.csv           crowd archetype shares per event type (optional: step 3)
 Writes:
-  brand_products.csv   one row per product: brand_id, product, flavour, format, claims, need_* (8), arch_* (10),
-                       core category
-  brand_features.csv   one row per brand: need_* (8), arch_* (10 archetype affinities, 0-1), target_* (its top 3
-                       archetypes), category, dietary and practical flags,
-                       favourite_five (RGC's assumed habit lineup), units_available_per_month (synthetic)
+  data/processed/brand_products.csv   one row per product: arch_* (10), event_* (7), need_* (8), role, dietary and practical flags
+  data/processed/brand_features.csv   one row per brand: arch_*, target_* (top 3 archetypes), event_* (its best product per type),
+                       best_event_type, role, flags, favourite_five (assumed habit lineup), units_available_per_month
 
-Edit the mapping CSVs to change how phrases are read; unmapped phrases are listed when the script runs.
-
-Run:  python scripts/build_brand_features.py [repo_folder]
+Run:  python scripts/get_product_archetypes.py && python scripts/build_brand_features.py
 """
 import sys
 from pathlib import Path
@@ -22,13 +27,19 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import paths  # noqa: E402
+from generate_watchhumans_synthetic import ARCHETYPES, CATEGORY_PROFILES  # noqa: E402
+
 NEEDS = ["hydrate", "recover", "energy", "focus", "discovery", "sharing", "treat", "value"]
-ARCHETYPES = ["wellness_seeker", "trend_enthusiast", "thoughtful_buyer", "smart_saver", "quality_seeker",
-              "on_the_go_shopper", "impulse_buyer", "experience_explorer", "everyday_planner", "conscious_consumer"]
 SEED = 44
-N_TARGETS = 3              # a brand's target archetypes: its three highest affinities
-BASE_AFFINITY = 0.15        # everyone likes free food a little
+N_TARGETS = 3               # a brand's target archetypes: its three highest scores
 CONDIMENT_TERMS = ("cooking", "meal", "add heat", "spread", "topping")
+# product role -> WatchHumans category profile; used by the user generator for category affinities
+ROLE_TO_PROFILE = {"drink": "functional_drinks", "savoury": "healthy_snacks", "sweet": "grab_and_go",
+                   "condiment": "premium_food", "functional": "healthy_snacks", "other": "sustainable_products"}
+assert set(ROLE_TO_PROFILE.values()) <= set(CATEGORY_PROFILES)
+SCORE_COLUMNS = [f"{a}_score" for a in ARCHETYPES]
 
 
 def split_terms(cell):
@@ -51,9 +62,14 @@ def core_category(row, terms):
     return "other"
 
 
+def rescale(scores):
+    """Divide by the top score so the strongest archetype is 1 (the same rescaling used for events)."""
+    top = scores.max()
+    return scores / top if top > 0 else scores
+
+
 def main():
-    root = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().parents[1])
-    sheet = pd.read_csv(root / "brands.csv", encoding="utf-8-sig")
+    sheet = pd.read_csv(paths.BRANDS, encoding="utf-8-sig")
     sheet.columns = [c.strip() for c in sheet.columns]
     sheet = sheet.rename(columns={
         "Brand": "brand", "Product / variant": "product", "Category": "category", "Sub-category": "sub_category",
@@ -64,20 +80,19 @@ def main():
     for c in ["flavour", "claims", "label_link", "dietary_flags"]:
         sheet[c] = sheet[c].fillna("").astype(str).str.replace("\n", "; ").str.strip()
 
-    need_map = pd.read_csv(root / "data" / "mappings" / "need_states.csv").set_index("term")[NEEDS]
-    arch_map = pd.read_csv(root / "data" / "mappings" / "archetypes.csv").set_index("term")[ARCHETYPES]
-    missing_n, missing_s = set(), set()
+    keyword = pd.read_csv(paths.PRODUCTS_ARCHETYPES).set_index(["brand", "product"])
+    need_map = pd.read_csv(paths.NEED_STATES).set_index("term")[NEEDS]
+    et_path = paths.EVENT_TYPES
+    event_types = pd.read_csv(et_path).set_index("event_type") if et_path.exists() else None
+    missing = sorted(set(map(tuple, sheet[["brand", "product"]].to_numpy())) - set(keyword.index))
+    assert not missing, f"products missing from products_archetypes.csv (rerun get_product_archetypes.py): {missing}"
 
     brand_ids = {b: f"B{i + 1:02d}" for i, b in enumerate(dict.fromkeys(sheet["brand"]))}
     prows = []
     for i, r in sheet.iterrows():
         nterms, sterms = split_terms(r["need_terms"]), split_terms(r["segment_terms"])
-        missing_n |= {t for t in nterms if t not in need_map.index}
-        missing_s |= {t for t in sterms if t not in arch_map.index}
-        needs = need_map.reindex([t for t in nterms if t in need_map.index]).sum().clip(0, 1)
-        arch = arch_map.reindex([t for t in sterms if t in arch_map.index]).max().reindex(ARCHETYPES).fillna(0)
-        arch["smart_saver"] = max(arch["smart_saver"], 0.5 * float(needs.get("value", 0)))  # value need -> savers
-        arch = BASE_AFFINITY + (1 - BASE_AFFINITY) * arch
+        needs = need_map.reindex([t for t in nterms if t in need_map.index]).sum().clip(0, 1).reindex(NEEDS).fillna(0)
+        arch = rescale(keyword.loc[(r["brand"], r["product"]), SCORE_COLUMNS].to_numpy(float))
         flags = (r["dietary_flags"] + " " + r["claims"]).lower()
         adults = r["category"] == "Alcoholic drinks" or "cbd" in (r["product"] + r["sub_category"]).lower() \
             or any(t.lower().startswith("adult") for t in sterms)
@@ -90,12 +105,16 @@ def main():
                    adults_only=int(adults),
                    needs_chilling=int(r["category"] in ("Drinks", "Alcoholic drinks")
                                       and any(k in r["format"].lower() for k in ("can", "bottle"))))
-        row.update({f"need_{n}": round(float(needs.get(n, 0)), 3) for n in NEEDS})
-        row.update({f"arch_{a}": round(float(arch[a]), 3) for a in ARCHETYPES})
+        row.update({f"need_{n}": round(float(needs[n]), 3) for n in NEEDS})
+        row.update({f"arch_{a}": round(float(v), 3) for a, v in zip(ARCHETYPES, arch)})
+        if event_types is not None:
+            for t, e in event_types.iterrows():
+                row[f"event_{t}"] = round(float(e[[f"mix_{a}" for a in ARCHETYPES]].to_numpy(float) @ arch), 3)
         prows.append(row)
     products = pd.DataFrame(prows)
+    event_cols = [c for c in products.columns if c.startswith("event_")]
 
-    # brand level: average need states and archetype affinities, top 3 archetypes, most common role, dietary flags
+    # brand level: mean archetype scores, top 3 archetypes, best product per event type, most common role
     rng = np.random.default_rng(SEED)
     counts = products["brand_id"].value_counts()
     # RGC's assumed habit lineup: the five brands with the most products on the shelf (ties alphabetical)
@@ -113,6 +132,9 @@ def main():
         row.update({f"need_{n}": round(float(needs[f"need_{n}"]), 3) for n in NEEDS})
         row.update({f"arch_{a}": round(float(v), 3) for a, v in zip(ARCHETYPES, arch)})
         row.update({f"target_{a}": int(k in top) for k, a in enumerate(ARCHETYPES)})
+        row.update({c: round(float(g[c].max()), 3) for c in event_cols})          # its best product there
+        if event_cols:
+            row["best_event_type"] = max(event_cols, key=lambda c: row[c])[len("event_"):]
         row.update(needs_chilling=int(g["needs_chilling"].max()), frozen=0, vegan=int(g["vegan"].max()),
                    gluten_free=int(g["gluten_free"].max()), adults_only=int(g["adults_only"].min()),
                    favourite_five=int(bid in favourites),
@@ -120,10 +142,10 @@ def main():
         brows.append(row)
     brands = pd.DataFrame(brows)
 
-    products.to_csv(root / "brand_products.csv", index=False)
-    brands.to_csv(root / "brand_features.csv", index=False)
-    if missing_n or missing_s:
-        print("Unmapped phrases (add them to data/mappings/):", sorted(missing_n | missing_s))
+    products.to_csv(paths.BRAND_PRODUCTS, index=False)
+    brands.to_csv(paths.BRAND_FEATURES, index=False)
+    if event_types is None:
+        print("event_types.csv not found: run build_event_types.py first for event_* scores")
     print(f"Wrote {len(products)} products and {len(brands)} brands "
           f"(favourites: {', '.join(brands.loc[brands['favourite_five'] == 1, 'brand_name'])})")
 

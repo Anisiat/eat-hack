@@ -1,0 +1,462 @@
+{
+  "3Jyn4fRsEkXf3Ba9SQ": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.2924,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.1834,
+      "experience_explorer": 0.3156,
+      "everyday_planner": 0.0226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "trend_enthusiast",
+      "impulse_buyer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "gDLK5ug4Ziq8cFfxHL": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.243,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.156,
+      "experience_explorer": 0.2356,
+      "everyday_planner": 0.1795,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "trend_enthusiast",
+      "experience_explorer",
+      "everyday_planner"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "7b8E7AQgCweNjFVt8a": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.1059,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.6203,
+      "everyday_planner": 0.0592,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "quality_seeker",
+      "everyday_planner"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "8XtwTCsUgQz3PDsMdR": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.189,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.5738,
+      "everyday_planner": 0.0226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "quality_seeker",
+      "trend_enthusiast"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "8sUquxZwjc4zN2nw6z": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.2816,
+      "everyday_planner": 0.2244,
+      "conscious_consumer": 0.2732
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "conscious_consumer",
+      "everyday_planner"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "Ce8dfnXeUs5irJgCim": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.2322,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.1388,
+      "experience_explorer": 0.2972,
+      "everyday_planner": 0.0778,
+      "conscious_consumer": 0.0923
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "trend_enthusiast",
+      "impulse_buyer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "PnfMdhNHZxFX9emZhA": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.1791,
+      "thoughtful_buyer": 0.2586,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0863,
+      "impulse_buyer": 0.1278,
+      "experience_explorer": 0.2045,
+      "everyday_planner": 0.0226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "thoughtful_buyer",
+      "experience_explorer",
+      "trend_enthusiast"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "YShrZnmVUMEoA6U2nG": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.5152,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.102,
+      "experience_explorer": 0.1743,
+      "everyday_planner": 0.0226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "trend_enthusiast",
+      "experience_explorer",
+      "impulse_buyer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "7uBS8NKp8gExokUz3w": {
+    "crowd": {
+      "wellness_seeker": 0.1737,
+      "trend_enthusiast": 0.1423,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0738,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.082,
+      "experience_explorer": 0.2041,
+      "everyday_planner": 0.0758,
+      "conscious_consumer": 0.1549
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "wellness_seeker",
+      "conscious_consumer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "Bv2BQKFxSyyw8Mk8mL": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.2816,
+      "everyday_planner": 0.2244,
+      "conscious_consumer": 0.2732
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "conscious_consumer",
+      "everyday_planner"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "HUyAGY6ozjfMzG72Q2": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.2924,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.1834,
+      "experience_explorer": 0.3156,
+      "everyday_planner": 0.0226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "trend_enthusiast",
+      "impulse_buyer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "DeY7oMJ4B4L95QhJXd": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.1261,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.3977,
+      "everyday_planner": 0.2616,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "everyday_planner",
+      "quality_seeker"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "7YRdmoXK3b6RZXLKnD": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.2322,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.1388,
+      "experience_explorer": 0.2972,
+      "everyday_planner": 0.0778,
+      "conscious_consumer": 0.0923
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "trend_enthusiast",
+      "impulse_buyer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "FvqmmDfNzyDbZMbchz": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.2924,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.1834,
+      "experience_explorer": 0.3156,
+      "everyday_planner": 0.0226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "trend_enthusiast",
+      "impulse_buyer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "FBvn8Sq6rYA8Y8Qk5J": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.1466,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0898,
+      "experience_explorer": 0.153,
+      "everyday_planner": 0.4248,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "everyday_planner",
+      "experience_explorer",
+      "trend_enthusiast"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "GmgS5GRZZiMvHAKCCX": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.1033,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.1595,
+      "everyday_planner": 0.5226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "everyday_planner",
+      "experience_explorer",
+      "quality_seeker"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "8y98VJEiLydu4UJfay": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.2924,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.1834,
+      "experience_explorer": 0.3156,
+      "everyday_planner": 0.0226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "trend_enthusiast",
+      "impulse_buyer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "McApyzwnty9obfDeeA": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.1323,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.2694,
+      "experience_explorer": 0.3898,
+      "everyday_planner": 0.0226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "impulse_buyer",
+      "trend_enthusiast"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "9H5DyuTRyUicsxzHXv": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.143,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.2283,
+      "everyday_planner": 0.4141,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "everyday_planner",
+      "experience_explorer",
+      "quality_seeker"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "5gakuEkePgcv2CACyn": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.1033,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.1595,
+      "everyday_planner": 0.5226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "everyday_planner",
+      "experience_explorer",
+      "quality_seeker"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "8zybkPQ3TSLkCED6ws": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.2924,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.0303,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.1834,
+      "experience_explorer": 0.3156,
+      "everyday_planner": 0.0226,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "experience_explorer",
+      "trend_enthusiast",
+      "impulse_buyer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "5mbYMJN2N9XzYHkunP": {
+    "crowd": {
+      "wellness_seeker": 0.0381,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.0335,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.1152,
+      "on_the_go_shopper": 0.0312,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.2757,
+      "everyday_planner": 0.3945,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "everyday_planner",
+      "experience_explorer",
+      "quality_seeker"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  },
+  "manual_eat_hack_2026": {
+    "crowd": {
+      "wellness_seeker": 0.1059,
+      "trend_enthusiast": 0.0385,
+      "thoughtful_buyer": 0.1319,
+      "smart_saver": 0.0288,
+      "quality_seeker": 0.2104,
+      "on_the_go_shopper": 0.099,
+      "impulse_buyer": 0.0204,
+      "experience_explorer": 0.1615,
+      "everyday_planner": 0.1795,
+      "conscious_consumer": 0.0241
+    },
+    "top_archetypes": [
+      "quality_seeker",
+      "everyday_planner",
+      "experience_explorer"
+    ],
+    "source_note": "estimated crowd mix: the event's keyword archetype scores, blended with the WatchHumans population"
+  }
+}

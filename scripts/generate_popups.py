@@ -24,15 +24,17 @@ SEED = 42
 
 # ---------------------------------------------------------------- shared taxonomy
 NEEDS = ["hydrate", "recover", "energy", "focus", "discovery", "sharing", "treat", "value"]
-# WatchHumans archetypes, built from each user's purchasing data in the app
-ARCHETYPES = ["wellness_seeker", "trend_enthusiast", "thoughtful_buyer", "smart_saver", "quality_seeker",
-              "on_the_go_shopper", "impulse_buyer", "experience_explorer", "everyday_planner", "conscious_consumer"]
+# WatchHumans archetypes, built from each user's purchasing data in the app (shared definition)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import paths  # noqa: E402
+from generate_watchhumans_synthetic import ARCHETYPE_PREVALENCE, ARCHETYPES  # noqa: E402
+from get_event_archetypes import calculate_event_archetype_scores  # noqa: E402  (keyword method)
 EVENT_TYPES = ["community", "concerts", "conferences", "expos", "festivals", "performing_arts", "sports"]
 CORE_CATEGORIES = {"drink", "savoury", "sweet", "condiment"}
 
 # ---------------------------------------------------------------- brands (RGC's real clients)
 # Read from brand_features.csv, built from RGC's brand sheet by build_brand_features.py.
-_bf = pd.read_csv(Path(__file__).resolve().parents[1] / "brand_features.csv")
+_bf = pd.read_csv(paths.BRAND_FEATURES)
 BRAND = {}
 for r in _bf.itertuples():
     targets = [a for a in ARCHETYPES if getattr(r, f"target_{a}") == 1]
@@ -49,9 +51,10 @@ FAVOURITE_FIVE = _bf.loc[_bf["favourite_five"] == 1, "brand_id"].tolist()   # RG
 # ---------------------------------------------------------------- event types
 # Seven event categories (PredictHQ-style). Each blends the sub-types listed in its names.
 # RGC pops up only at small events: expected attendance under 200.
-# needs: same order as NEEDS; mix: expected crowd share by ARCHETYPES (sums to 1)
+# needs: same order as NEEDS. The crowd mix by ARCHETYPES is not hand-set: keyword_crowd() scores each type with
+# the same keyword method as real events (get_event_archetypes.py), on its PredictHQ category.
 EVENT = {
-    "sports": dict(needs=[1., .9, .5, .1, .2, .5, .2, .3], mix=[.30, .08, .08, .07, .06, .12, .06, .08, .10, .05],
+    "sports": dict(needs=[1., .9, .5, .1, .2, .5, .2, .3],
                    footfall=(40, 199), dwell=2, stop=.35, signup=.28, stall=(0, 40), staff=2, indoor=0.3,
                    start=["09:00", "17:00", "19:45"], days=[1, 2, 5, 6],
                    names=["Community 5K finish", "10K race finish", "Half marathon finish",
@@ -59,7 +62,7 @@ EVENT = {
                    boroughs=["Richmond upon Thames", "Wandsworth", "Greenwich", "Hackney", "Tower Hamlets",
                              "Southwark", "Lambeth", "Hammersmith and Fulham", "Brent", "Kingston upon Thames",
                              "Barnet", "Waltham Forest"]),
-    "community": dict(needs=[.3, .2, .2, .1, .9, .7, .7, .5], mix=[.10, .06, .12, .12, .10, .06, .08, .10, .14, .12],
+    "community": dict(needs=[.3, .2, .2, .1, .9, .7, .7, .5],
                       footfall=(20, 199), dwell=3, stop=.35, signup=.25, stall=(0, 60), staff=1, indoor=0.3,
                       start=["09:00", "11:00"], days=[5, 6],
                       names=["Weekend food market", "Farmers' market", "Run club social", "Family fun day",
@@ -67,42 +70,60 @@ EVENT = {
                       boroughs=["Southwark", "Hackney", "Lewisham", "Greenwich", "Camden", "Islington", "Lambeth",
                                 "Waltham Forest", "Haringey", "Croydon", "Ealing", "Merton", "Newham",
                                 "Richmond upon Thames"]),
-    "concerts": dict(needs=[.9, .2, .8, 0., .3, .4, .3, .3], mix=[.04, .20, .04, .08, .05, .10, .22, .20, .03, .04],
+    "concerts": dict(needs=[.9, .2, .8, 0., .3, .4, .3, .3],
                      footfall=(60, 199), dwell=4, stop=.20, signup=.15, stall=(40, 120), staff=2, indoor=1.0,
                      start=["19:30"], days=[3, 4, 5],
                      names=["Live gig", "Club night", "DJ night", "Arena concert"],
                      boroughs=["Hackney", "Camden", "Lambeth", "Islington", "Southwark", "Tower Hamlets", "Brent",
                                "Greenwich", "Hammersmith and Fulham"]),
-    "conferences": dict(needs=[.4, .1, .9, 1., .4, .3, .4, .6], mix=[.08, .18, .10, .08, .08, .22, .08, .10, .05, .03],
+    "conferences": dict(needs=[.4, .1, .9, 1., .4, .3, .4, .6],
                         footfall=(30, 199), dwell=7, stop=.55, signup=.40, stall=(0, 50), staff=1, indoor=1.0,
                         start=["09:30", "10:00"], days=[1, 2, 3, 5, 6],
                         names=["Weekend AI hackathon", "Student hackathon", "Fintech hack day", "Tech conference",
                                "Startup summit"],
                         boroughs=["Islington", "Hackney", "Camden", "Tower Hamlets", "City of London",
                                   "Westminster", "Southwark", "Newham"]),
-    "expos": dict(needs=[.2, 0., .6, .4, .8, .3, .5, .9], mix=[.07, .15, .10, .18, .08, .10, .12, .10, .06, .04],
+    "expos": dict(needs=[.2, 0., .6, .4, .8, .3, .5, .9],
                   footfall=(60, 199), dwell=4, stop=.30, signup=.40, stall=(30, 100), staff=2, indoor=0.9,
                   start=["10:00", "11:00"], days=[0, 1, 2, 3, 5],
                   names=["Freshers' fair", "Societies fair", "Food and drink expo", "Lifestyle show"],
                   boroughs=["Camden", "Westminster", "Tower Hamlets", "Kensington and Chelsea", "Southwark",
                             "Islington", "Newham", "Hammersmith and Fulham", "Hillingdon"]),
-    "festivals": dict(needs=[1., .3, .6, 0., .7, .6, .7, .3], mix=[.06, .16, .05, .07, .08, .08, .18, .22, .04, .06],
+    "festivals": dict(needs=[1., .3, .6, 0., .7, .6, .7, .3],
                       footfall=(100, 199), dwell=7, stop=.20, signup=.20, stall=(80, 200), staff=2, indoor=0.0,
                       start=["12:00"], days=[5, 6],
                       names=["Summer music festival", "Food and music festival", "Street food festival",
                              "Street festival"],
                       boroughs=["Newham", "Lambeth", "Hackney", "Greenwich", "Haringey", "Tower Hamlets",
                                 "Waltham Forest", "Brent", "Barking and Dagenham", "Croydon"]),
-    "performing_arts": dict(needs=[.3, 0., .2, .1, .4, .8, .9, .3], mix=[.05, .08, .14, .05, .18, .04, .10, .18, .08, .10],
+    "performing_arts": dict(needs=[.3, 0., .2, .1, .4, .8, .9, .3],
                             footfall=(30, 199), dwell=2.5, stop=.25, signup=.20, stall=(20, 80), staff=1,
                             indoor=0.85, start=["18:30", "19:00"], days=[3, 4, 5],
                             names=["Theatre interval", "Comedy night", "Dance show", "Open-air theatre"],
                             boroughs=["Westminster", "Camden", "Southwark", "Lambeth", "Islington", "Hackney",
                                       "Richmond upon Thames", "Kensington and Chelsea"]),
 }
-for p in EVENT.values():
+PHQ_CATEGORY = {"performing_arts": "performing-arts"}       # event type -> PredictHQ category
+POPULATION_WEIGHT = 0.3     # crowds are 70% the event's keyword profile, 30% the WatchHumans population
+
+
+def crowd_shares(scores):
+    """Keyword archetype scores -> crowd shares: rescale so the top archetype is 1, normalise to sum to 1,
+    then blend with the WatchHumans population so no archetype is ever absent."""
+    s = np.array([scores[f"{a}_score"] for a in ARCHETYPES], float)
+    s = s / s.max() if s.max() > 0 else np.ones(len(ARCHETYPES))
+    pop = np.array([ARCHETYPE_PREVALENCE[a] for a in ARCHETYPES], float)
+    return (1 - POPULATION_WEIGHT) * s / s.sum() + POPULATION_WEIGHT * pop / pop.sum()
+
+
+def keyword_crowd(event_type):
+    """A typical event of this type, scored on its PredictHQ category alone (the keyword method's category table)."""
+    return crowd_shares(calculate_event_archetype_scores({"category": PHQ_CATEGORY.get(event_type, event_type)}))
+
+
+for t, p in EVENT.items():
     p["needs"] = np.array(p["needs"], float)
-    p["mix"] = np.array(p["mix"], float)
+    p["mix"] = keyword_crowd(t)
 
 OUTER_BOROUGHS = {"Barking and Dagenham", "Barnet", "Bexley", "Brent", "Bromley", "Croydon", "Ealing", "Enfield",
                   "Greenwich", "Harrow", "Havering", "Hillingdon", "Hounslow", "Kingston upon Thames", "Merton",
@@ -275,7 +296,7 @@ def make_history(n_months=30, per_month=2, first_month=(2024, 4)):   # RGC runs 
 
 
 if __name__ == "__main__":
-    out_dir = Path(sys.argv[1] if len(sys.argv) > 1 else "out")
+    out_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else paths.SYNTHETIC
     out_dir.mkdir(parents=True, exist_ok=True)
     popups, popup_brands = make_history()
     popups.to_csv(out_dir / "popups.csv", index=False)

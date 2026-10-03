@@ -1,0 +1,301 @@
+popup_id,brand_id,brand_name,units_given,reviews,qualified_reviews,avg_rating
+P001,B05,INDI,12,0,0,
+P001,B34,Little’s,16,0,0,
+P001,B35,WelleCo,14,1,1,2.94
+P001,B36,HOOP,13,1,0,3.49
+P001,B39,SUCSEED,13,1,0,4.3
+P002,B02,Simply Roasted,42,12,9,4.02
+P002,B03,The Protein Ball Co.,39,9,7,3.73
+P002,B04,Well & Truly,45,17,6,3.61
+P002,B17,Gut Food / Ferment Fizz,54,12,1,3.4
+P002,B26,Blanco Niño,53,12,0,3.75
+P003,B10,ötzibrew,6,1,1,3.98
+P003,B32,ape2o,8,0,0,
+P003,B37,neat sweets,7,1,0,3.95
+P003,B44,Folc,6,0,0,
+P003,B48,Mr Filbert’s,6,0,0,
+P004,B02,Simply Roasted,18,0,0,
+P004,B03,The Protein Ball Co.,16,2,0,3.69
+P004,B04,Well & Truly,17,3,0,3.63
+P004,B17,Gut Food / Ferment Fizz,17,4,4,4.13
+P004,B26,Blanco Niño,16,2,0,3.53
+P005,B02,Simply Roasted,52,2,0,3.95
+P005,B22,Double ‘D’,56,3,0,3.68
+P005,B24,teapigs,49,5,2,4.11
+P005,B26,Blanco Niño,53,9,6,4.62
+P005,B28,The Curators,48,6,0,3.48
+P006,B05,INDI,17,3,1,3.35
+P006,B15,DASH,17,5,2,3.59
+P006,B37,neat sweets,12,4,1,2.37
+P006,B38,FREEE,11,4,0,3.75
+P006,B41,iLOVE SNACKS,13,5,0,3.5
+P007,B02,Simply Roasted,14,2,1,3.69
+P007,B03,The Protein Ball Co.,15,2,0,3.41
+P007,B04,Well & Truly,15,5,3,3.32
+P007,B17,Gut Food / Ferment Fizz,12,4,3,3.51
+P007,B26,Blanco Niño,16,6,2,3.78
+P008,B02,Simply Roasted,20,4,1,4.02
+P008,B03,The Protein Ball Co.,17,4,2,2.88
+P008,B04,Well & Truly,17,5,2,3.83
+P008,B17,Gut Food / Ferment Fizz,20,4,1,3.91
+P008,B26,Blanco Niño,19,7,4,3.44
+P009,B02,Simply Roasted,27,1,1,3.76
+P009,B08,Dr. Will’s,26,2,0,3.07
+P009,B15,DASH,27,1,0,3.86
+P009,B17,Gut Food / Ferment Fizz,24,3,0,3.34
+P009,B19,JimJams,21,1,0,3.81
+P010,B02,Simply Roasted,35,5,0,4.11
+P010,B03,The Protein Ball Co.,41,6,1,3.5
+P010,B04,Well & Truly,38,4,0,3.92
+P010,B17,Gut Food / Ferment Fizz,37,7,2,3.4
+P010,B26,Blanco Niño,42,11,5,4.48
+P011,B02,Simply Roasted,19,4,0,4.21
+P011,B03,The Protein Ball Co.,27,3,0,2.5
+P011,B04,Well & Truly,26,0,0,
+P011,B17,Gut Food / Ferment Fizz,23,2,1,3.73
+P011,B26,Blanco Niño,28,2,0,3.35
+P012,B04,Well & Truly,20,6,3,3.54
+P012,B14,Lowrise,24,4,4,4.26
+P012,B21,Double Dutch,24,0,0,
+P012,B35,WelleCo,24,5,4,3.59
+P012,B36,HOOP,24,3,1,4.09
+P013,B02,Simply Roasted,33,1,0,4.32
+P013,B03,The Protein Ball Co.,33,3,0,3.15
+P013,B04,Well & Truly,34,3,0,3.76
+P013,B17,Gut Food / Ferment Fizz,34,2,1,3.31
+P013,B26,Blanco Niño,36,4,2,4.52
+P014,B02,Simply Roasted,13,1,0,3.36
+P014,B03,The Protein Ball Co.,15,4,0,3.8
+P014,B04,Well & Truly,14,2,1,3.42
+P014,B17,Gut Food / Ferment Fizz,20,1,1,3.5
+P014,B26,Blanco Niño,13,2,2,3.26
+P015,B02,Simply Roasted,37,4,0,4.46
+P015,B03,The Protein Ball Co.,47,7,1,3.67
+P015,B04,Well & Truly,45,3,0,3.72
+P015,B17,Gut Food / Ferment Fizz,41,4,4,3.55
+P015,B26,Blanco Niño,40,10,4,4.31
+P016,B08,Dr. Will’s,10,2,0,4.21
+P016,B23,Coco Cubes,8,2,1,3.66
+P016,B26,Blanco Niño,11,2,2,4.24
+P016,B27,Saucerer,11,2,1,4.75
+P016,B40,sleep toniq,11,1,1,4.11
+P017,B02,Simply Roasted,6,0,0,
+P017,B03,The Protein Ball Co.,7,0,0,
+P017,B04,Well & Truly,6,0,0,
+P017,B17,Gut Food / Ferment Fizz,6,0,0,
+P017,B26,Blanco Niño,7,0,0,
+P018,B02,Simply Roasted,18,0,0,
+P018,B03,The Protein Ball Co.,14,0,0,
+P018,B04,Well & Truly,13,1,0,3.79
+P018,B17,Gut Food / Ferment Fizz,19,1,1,3.81
+P018,B26,Blanco Niño,14,1,0,3.75
+P019,B02,Simply Roasted,16,1,0,3.35
+P019,B03,The Protein Ball Co.,16,3,0,3.24
+P019,B04,Well & Truly,22,2,1,3.8
+P019,B17,Gut Food / Ferment Fizz,19,2,0,3.85
+P019,B26,Blanco Niño,14,3,3,4.49
+P020,B02,Simply Roasted,27,2,0,4.37
+P020,B03,The Protein Ball Co.,33,1,1,4.3
+P020,B04,Well & Truly,25,3,0,3.46
+P020,B17,Gut Food / Ferment Fizz,24,4,3,4.06
+P020,B26,Blanco Niño,26,3,1,3.44
+P021,B02,Simply Roasted,44,6,0,3.9
+P021,B03,The Protein Ball Co.,41,2,1,4.77
+P021,B04,Well & Truly,41,5,2,3.75
+P021,B17,Gut Food / Ferment Fizz,33,3,0,3.38
+P021,B26,Blanco Niño,40,7,4,4.37
+P022,B02,Simply Roasted,26,3,0,3.74
+P022,B03,The Protein Ball Co.,21,1,0,3.47
+P022,B04,Well & Truly,28,1,0,4.15
+P022,B17,Gut Food / Ferment Fizz,25,4,2,3.59
+P022,B26,Blanco Niño,22,5,4,4.05
+P023,B04,Well & Truly,39,2,0,4.1
+P023,B06,Kooky,25,5,2,4.16
+P023,B15,DASH,36,2,0,3.62
+P023,B19,JimJams,25,3,0,3.22
+P023,B47,Ombar,32,3,3,3.93
+P024,B02,Simply Roasted,21,3,1,3.89
+P024,B03,The Protein Ball Co.,16,2,0,3.59
+P024,B04,Well & Truly,20,4,0,3.56
+P024,B17,Gut Food / Ferment Fizz,22,4,1,3.5
+P024,B26,Blanco Niño,18,5,5,4.53
+P025,B02,Simply Roasted,18,6,5,3.84
+P025,B03,The Protein Ball Co.,15,2,0,3.69
+P025,B04,Well & Truly,15,2,1,3.69
+P025,B17,Gut Food / Ferment Fizz,18,6,0,3.42
+P025,B26,Blanco Niño,14,2,0,3.62
+P026,B02,Simply Roasted,49,16,12,4.16
+P026,B03,The Protein Ball Co.,46,14,6,3.36
+P026,B04,Well & Truly,60,11,5,3.84
+P026,B17,Gut Food / Ferment Fizz,63,13,2,3.32
+P026,B26,Blanco Niño,66,15,0,3.5
+P027,B02,Simply Roasted,48,17,7,4.17
+P027,B03,The Protein Ball Co.,34,10,2,3.34
+P027,B04,Well & Truly,52,16,9,3.15
+P027,B17,Gut Food / Ferment Fizz,49,11,7,4.12
+P027,B26,Blanco Niño,35,16,5,3.86
+P028,B06,Kooky,12,2,2,4.49
+P028,B14,Lowrise,13,1,0,3.74
+P028,B20,The London Essence Co.,16,1,1,4.37
+P028,B28,The Curators,14,1,0,4.27
+P028,B34,Little’s,14,1,0,3.11
+P029,B07,Helen Browning’s Organic,54,8,1,4.16
+P029,B08,Dr. Will’s,37,11,1,3.62
+P029,B14,Lowrise,42,7,4,3.96
+P029,B28,The Curators,51,11,1,3.93
+P029,B48,Mr Filbert’s,53,9,2,4.18
+P030,B03,The Protein Ball Co.,25,4,0,2.63
+P030,B25,The Original Chicken Crackling,25,6,2,3.23
+P030,B26,Blanco Niño,31,5,3,4.75
+P030,B36,HOOP,29,6,1,3.8
+P030,B40,sleep toniq,32,5,3,3.64
+P031,B02,Simply Roasted,20,1,0,4.33
+P031,B03,The Protein Ball Co.,20,3,0,3.24
+P031,B04,Well & Truly,21,0,0,
+P031,B17,Gut Food / Ferment Fizz,17,2,2,3.07
+P031,B26,Blanco Niño,18,2,1,3.83
+P032,B15,DASH,16,1,0,3.65
+P032,B24,teapigs,17,2,0,3.6
+P032,B41,iLOVE SNACKS,12,1,0,4.93
+P032,B42,Root Tea,16,0,0,
+P032,B46,Mission,13,0,0,
+P033,B02,Simply Roasted,11,1,0,4.76
+P033,B03,The Protein Ball Co.,9,0,0,
+P033,B04,Well & Truly,11,1,0,3.02
+P033,B17,Gut Food / Ferment Fizz,10,2,0,3.44
+P033,B26,Blanco Niño,13,1,1,4.21
+P034,B02,Simply Roasted,14,3,1,3.52
+P034,B03,The Protein Ball Co.,15,3,1,3.44
+P034,B04,Well & Truly,16,5,1,3.93
+P034,B17,Gut Food / Ferment Fizz,18,2,1,3.97
+P034,B26,Blanco Niño,18,2,2,4.37
+P035,B02,Simply Roasted,27,4,1,3.63
+P035,B03,The Protein Ball Co.,26,2,0,4.44
+P035,B04,Well & Truly,19,4,1,3.78
+P035,B17,Gut Food / Ferment Fizz,26,2,1,3.65
+P035,B26,Blanco Niño,22,5,3,3.97
+P036,B02,Simply Roasted,33,7,5,3.92
+P036,B03,The Protein Ball Co.,27,3,0,4.11
+P036,B04,Well & Truly,32,6,4,3.22
+P036,B17,Gut Food / Ferment Fizz,34,3,2,4.06
+P036,B26,Blanco Niño,30,7,2,3.84
+P037,B24,teapigs,36,6,2,4.52
+P037,B25,The Original Chicken Crackling,49,7,3,3.97
+P037,B38,FREEE,33,6,2,4.21
+P037,B43,Fever-Tree,47,5,2,4.41
+P037,B49,NOMO,45,5,0,4.58
+P038,B02,Simply Roasted,37,3,1,3.95
+P038,B03,The Protein Ball Co.,25,3,0,3.68
+P038,B04,Well & Truly,35,4,0,3.23
+P038,B17,Gut Food / Ferment Fizz,34,7,2,3.37
+P038,B26,Blanco Niño,37,8,6,4.06
+P039,B02,Simply Roasted,15,1,0,3.81
+P039,B03,The Protein Ball Co.,15,2,0,3.37
+P039,B04,Well & Truly,15,1,0,4.93
+P039,B17,Gut Food / Ferment Fizz,13,0,0,
+P039,B26,Blanco Niño,17,2,2,5.0
+P040,B02,Simply Roasted,17,3,0,3.93
+P040,B03,The Protein Ball Co.,11,3,1,3.97
+P040,B04,Well & Truly,13,1,0,5.0
+P040,B17,Gut Food / Ferment Fizz,14,0,0,
+P040,B26,Blanco Niño,14,3,0,3.67
+P041,B02,Simply Roasted,33,7,0,3.75
+P041,B03,The Protein Ball Co.,41,7,1,3.7
+P041,B04,Well & Truly,44,4,0,3.55
+P041,B17,Gut Food / Ferment Fizz,41,7,2,3.36
+P041,B26,Blanco Niño,47,9,5,4.82
+P042,B07,Helen Browning’s Organic,29,7,1,3.46
+P042,B17,Gut Food / Ferment Fizz,25,4,3,3.43
+P042,B24,teapigs,30,10,4,4.13
+P042,B29,Love Hemp,31,4,1,3.72
+P042,B36,HOOP,25,5,2,3.63
+P043,B02,Simply Roasted,20,4,3,4.09
+P043,B03,The Protein Ball Co.,14,2,0,3.56
+P043,B04,Well & Truly,20,2,0,3.98
+P043,B17,Gut Food / Ferment Fizz,16,0,0,
+P043,B26,Blanco Niño,19,2,1,3.73
+P044,B02,Simply Roasted,60,12,2,3.76
+P044,B05,INDI,54,11,5,3.27
+P044,B32,ape2o,61,17,7,3.93
+P044,B42,Root Tea,59,13,4,3.24
+P044,B43,Fever-Tree,66,7,3,4.42
+P045,B22,Double ‘D’,9,0,0,
+P045,B33,Goodrays,9,0,0,
+P045,B39,SUCSEED,10,1,0,4.89
+P045,B41,iLOVE SNACKS,8,1,0,4.12
+P045,B47,Ombar,10,1,0,4.13
+P046,B02,Simply Roasted,13,4,1,3.76
+P046,B03,The Protein Ball Co.,13,3,0,4.19
+P046,B04,Well & Truly,16,5,1,3.71
+P046,B17,Gut Food / Ferment Fizz,18,4,0,3.01
+P046,B26,Blanco Niño,12,3,0,4.51
+P047,B09,EP!C Snax Co.,12,2,0,2.82
+P047,B19,JimJams,17,2,1,4.5
+P047,B20,The London Essence Co.,17,0,0,
+P047,B21,Double Dutch,14,2,0,4.36
+P047,B33,Goodrays,14,1,0,3.52
+P048,B02,Simply Roasted,21,4,0,3.88
+P048,B03,The Protein Ball Co.,20,2,2,3.9
+P048,B04,Well & Truly,26,1,0,4.03
+P048,B17,Gut Food / Ferment Fizz,19,0,0,
+P048,B26,Blanco Niño,24,1,0,4.77
+P049,B02,Simply Roasted,75,20,14,4.07
+P049,B03,The Protein Ball Co.,61,18,10,3.49
+P049,B04,Well & Truly,68,24,13,3.65
+P049,B17,Gut Food / Ferment Fizz,64,13,0,3.39
+P049,B26,Blanco Niño,63,14,1,3.72
+P050,B02,Simply Roasted,8,1,0,4.19
+P050,B03,The Protein Ball Co.,10,0,0,
+P050,B04,Well & Truly,8,1,0,3.31
+P050,B17,Gut Food / Ferment Fizz,9,1,1,3.96
+P050,B26,Blanco Niño,8,0,0,
+P051,B02,Simply Roasted,28,3,1,3.65
+P051,B03,The Protein Ball Co.,23,1,0,3.05
+P051,B04,Well & Truly,21,5,2,3.43
+P051,B17,Gut Food / Ferment Fizz,21,3,2,3.71
+P051,B26,Blanco Niño,26,7,1,4.07
+P052,B02,Simply Roasted,16,4,0,4.2
+P052,B03,The Protein Ball Co.,21,2,0,2.99
+P052,B04,Well & Truly,19,4,0,3.11
+P052,B17,Gut Food / Ferment Fizz,21,4,2,3.67
+P052,B26,Blanco Niño,19,2,1,4.45
+P053,B07,Helen Browning’s Organic,46,10,0,3.8
+P053,B24,teapigs,51,10,3,3.7
+P053,B26,Blanco Niño,43,8,1,3.86
+P053,B42,Root Tea,49,10,3,3.14
+P053,B46,Mission,37,8,3,4.28
+P054,B02,Simply Roasted,42,10,4,4.19
+P054,B03,The Protein Ball Co.,36,9,0,3.13
+P054,B04,Well & Truly,30,7,2,3.91
+P054,B17,Gut Food / Ferment Fizz,34,5,2,3.41
+P054,B26,Blanco Niño,33,5,2,3.95
+P055,B03,The Protein Ball Co.,22,2,0,3.29
+P055,B04,Well & Truly,20,4,0,3.28
+P055,B14,Lowrise,25,5,2,3.82
+P055,B28,The Curators,18,4,0,3.24
+P055,B37,neat sweets,23,5,0,3.4
+P056,B02,Simply Roasted,43,0,0,
+P056,B03,The Protein Ball Co.,42,2,0,3.66
+P056,B04,Well & Truly,57,6,1,4.01
+P056,B17,Gut Food / Ferment Fizz,59,3,1,3.54
+P056,B26,Blanco Niño,48,8,5,4.69
+P057,B02,Simply Roasted,22,7,3,3.88
+P057,B03,The Protein Ball Co.,19,1,1,3.16
+P057,B04,Well & Truly,28,2,1,4.0
+P057,B17,Gut Food / Ferment Fizz,25,1,0,3.81
+P057,B26,Blanco Niño,28,3,2,4.26
+P058,B02,Simply Roasted,94,28,11,4.04
+P058,B03,The Protein Ball Co.,81,19,10,3.55
+P058,B04,Well & Truly,91,18,7,3.58
+P058,B17,Gut Food / Ferment Fizz,80,11,1,3.37
+P058,B26,Blanco Niño,76,19,2,3.84
+P059,B02,Simply Roasted,35,6,2,4.09
+P059,B03,The Protein Ball Co.,42,8,1,3.75
+P059,B04,Well & Truly,49,4,0,4.05
+P059,B17,Gut Food / Ferment Fizz,38,3,2,2.96
+P059,B26,Blanco Niño,35,3,1,4.59
+P060,B02,Simply Roasted,54,11,4,4.25
+P060,B03,The Protein Ball Co.,58,9,5,3.83
+P060,B04,Well & Truly,42,15,6,3.64
+P060,B17,Gut Food / Ferment Fizz,50,10,1,3.19
+P060,B26,Blanco Niño,55,12,3,3.79

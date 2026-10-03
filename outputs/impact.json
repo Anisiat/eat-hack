@@ -1,23 +1,23 @@
 {
-  "review_uplift": 0.1399,
-  "review_ci_low": 0.1289,
-  "review_ci_high": 0.1602,
-  "reviews_tool": 42.29,
-  "reviews_habit": 37.1,
-  "net_value_tool": 1354.34,
-  "net_value_habit": 1147.01,
-  "net_gain_per_popup": 207.33,
-  "net_gain_ci_low": 123.91,
-  "net_gain_ci_high": 297.33,
+  "review_uplift": 0.1859,
+  "review_ci_low": 0.1384,
+  "review_ci_high": 0.2215,
+  "reviews_tool": 40.8,
+  "reviews_habit": 34.41,
+  "net_value_tool": 1298.03,
+  "net_value_habit": 1042.59,
+  "net_gain_per_popup": 255.44,
+  "net_gain_ci_low": 121.38,
+  "net_gain_ci_high": 418.54,
   "waste_rate_tool": 0.083,
   "waste_rate_habit": 0.083,
-  "monthly_lineup_gain_gbp": 414.66,
+  "monthly_lineup_gain_gbp": 510.88,
   "monthly_hours_saved": 8.0,
   "monthly_time_saved_gbp": 240.0,
-  "monthly_impact_gbp": 654.66,
-  "yearly_impact_gbp": 7855.94,
+  "monthly_impact_gbp": 750.88,
+  "yearly_impact_gbp": 9010.53,
   "n_test": 12,
-  "method": "tool vs usual lineup (same size) at the same 12 held-out pop-ups; outcomes from the synthetic world, valued with data/value_assumptions.csv; 95% bootstrap CIs",
+  "method": "tool vs usual lineup (same size) at the same 12 held-out pop-ups; outcomes from the synthetic world, valued with data/assumptions/value_assumptions.csv; 95% bootstrap CIs",
   "per_popup": [
     {
       "popup_id": "P049",
@@ -25,16 +25,16 @@
       "footfall": 185,
       "lineup_size": 5,
       "tool_lineup": [
-        "B13",
-        "B07",
-        "B36",
-        "B32",
-        "B48"
+        "B08",
+        "B04",
+        "B43",
+        "B27",
+        "B07"
       ],
       "reviews_tool": 104.4,
-      "reviews_habit": 92.7,
-      "net_value_tool": 3665.27,
-      "net_value_habit": 3196.25
+      "reviews_habit": 84.6,
+      "net_value_tool": 3676.02,
+      "net_value_habit": 2883.97
     },
     {
       "popup_id": "P050",
@@ -42,14 +42,14 @@
       "footfall": 54,
       "lineup_size": 3,
       "tool_lineup": [
-        "B45",
-        "B04",
-        "B48"
+        "B27",
+        "B25",
+        "B02"
       ],
       "reviews_tool": 3.8,
-      "reviews_habit": 3.1,
-      "net_value_tool": -22.34,
-      "net_value_habit": -48.01
+      "reviews_habit": 2.8,
+      "net_value_tool": -23.57,
+      "net_value_habit": -61.14
     },
     {
       "popup_id": "P051",
@@ -57,15 +57,15 @@
       "footfall": 140,
       "lineup_size": 4,
       "tool_lineup": [
-        "B36",
-        "B48",
-        "B20",
-        "B31"
+        "B25",
+        "B27",
+        "B09",
+        "B03"
       ],
-      "reviews_tool": 12.2,
-      "reviews_habit": 10.6,
-      "net_value_tool": 135.4,
-      "net_value_habit": 72.3
+      "reviews_tool": 10.9,
+      "reviews_habit": 9.1,
+      "net_value_tool": 87.29,
+      "net_value_habit": 16.95
     },
     {
       "popup_id": "P052",
@@ -73,14 +73,14 @@
       "footfall": 73,
       "lineup_size": 3,
       "tool_lineup": [
-        "B08",
-        "B39",
-        "B48"
+        "B27",
+        "B04",
+        "B25"
       ],
       "reviews_tool": 8.9,
-      "reviews_habit": 7.9,
-      "net_value_tool": 171.97,
-      "net_value_habit": 131.97
+      "reviews_habit": 6.8,
+      "net_value_tool": 173.64,
+      "net_value_habit": 87.05
     },
     {
       "popup_id": "P053",
@@ -88,16 +88,16 @@
       "footfall": 194,
       "lineup_size": 5,
       "tool_lineup": [
-        "B07",
-        "B36",
-        "B05",
-        "B08",
-        "B30"
+        "B27",
+        "B09",
+        "B04",
+        "B03",
+        "B20"
       ],
-      "reviews_tool": 60.3,
-      "reviews_habit": 52.2,
-      "net_value_tool": 2037.6,
-      "net_value_habit": 1713.08
+      "reviews_tool": 54.7,
+      "reviews_habit": 50.0,
+      "net_value_tool": 1820.75,
+      "net_value_habit": 1632.35
     },
     {
       "popup_id": "P054",
@@ -105,15 +105,15 @@
       "footfall": 142,
       "lineup_size": 4,
       "tool_lineup": [
-        "B31",
-        "B36",
+        "B18",
         "B27",
-        "B13"
+        "B09",
+        "B04"
       ],
-      "reviews_tool": 35.8,
-      "reviews_habit": 29.9,
-      "net_value_tool": 1118.92,
-      "net_value_habit": 883.89
+      "reviews_tool": 33.4,
+      "reviews_habit": 28.2,
+      "net_value_tool": 1025.94,
+      "net_value_habit": 818.05
     },
     {
       "popup_id": "P055",
@@ -121,15 +121,15 @@
       "footfall": 114,
       "lineup_size": 4,
       "tool_lineup": [
-        "B45",
-        "B36",
-        "B04",
-        "B16"
+        "B16",
+        "B27",
+        "B02",
+        "B09"
       ],
-      "reviews_tool": 10.9,
-      "reviews_habit": 8.6,
-      "net_value_tool": 223.18,
-      "net_value_habit": 131.8
+      "reviews_tool": 10.5,
+      "reviews_habit": 7.6,
+      "net_value_tool": 205.74,
+      "net_value_habit": 91.98
     },
     {
       "popup_id": "P056",
@@ -137,16 +137,16 @@
       "footfall": 174,
       "lineup_size": 5,
       "tool_lineup": [
-        "B36",
-        "B26",
-        "B08",
-        "B39",
-        "B48"
+        "B27",
+        "B04",
+        "B25",
+        "B19",
+        "B06"
       ],
-      "reviews_tool": 37.7,
-      "reviews_habit": 32.8,
-      "net_value_tool": 1126.09,
-      "net_value_habit": 931.79
+      "reviews_tool": 35.7,
+      "reviews_habit": 31.8,
+      "net_value_tool": 1048.54,
+      "net_value_habit": 890.85
     },
     {
       "popup_id": "P057",
@@ -154,15 +154,15 @@
       "footfall": 114,
       "lineup_size": 4,
       "tool_lineup": [
-        "B15",
-        "B36",
-        "B07",
-        "B17"
+        "B19",
+        "B34",
+        "B02",
+        "B16"
       ],
-      "reviews_tool": 19.3,
-      "reviews_habit": 17.3,
-      "net_value_tool": 510.02,
-      "net_value_habit": 427.16
+      "reviews_tool": 17.3,
+      "reviews_habit": 16.1,
+      "net_value_tool": 429.81,
+      "net_value_habit": 379.49
     },
     {
       "popup_id": "P058",
@@ -170,16 +170,16 @@
       "footfall": 199,
       "lineup_size": 5,
       "tool_lineup": [
-        "B13",
-        "B07",
-        "B36",
-        "B32",
-        "B48"
+        "B08",
+        "B04",
+        "B43",
+        "B27",
+        "B07"
       ],
       "reviews_tool": 112.3,
-      "reviews_habit": 99.7,
-      "net_value_tool": 3953.36,
-      "net_value_habit": 3448.84
+      "reviews_habit": 91.0,
+      "net_value_tool": 3963.97,
+      "net_value_habit": 3111.99
     },
     {
       "popup_id": "P059",
@@ -187,16 +187,16 @@
       "footfall": 185,
       "lineup_size": 5,
       "tool_lineup": [
-        "B36",
-        "B26",
-        "B08",
-        "B39",
-        "B48"
+        "B27",
+        "B04",
+        "B25",
+        "B19",
+        "B06"
       ],
-      "reviews_tool": 40.0,
-      "reviews_habit": 34.9,
-      "net_value_tool": 1216.15,
-      "net_value_habit": 1009.56
+      "reviews_tool": 38.0,
+      "reviews_habit": 33.8,
+      "net_value_tool": 1133.69,
+      "net_value_habit": 966.03
     },
     {
       "popup_id": "P060",
@@ -204,17 +204,17 @@
       "footfall": 140,
       "lineup_size": 4,
       "tool_lineup": [
-        "B13",
-        "B07",
-        "B32",
-        "B48"
+        "B08",
+        "B04",
+        "B27",
+        "B09"
       ],
-      "reviews_tool": 61.9,
-      "reviews_habit": 55.6,
-      "net_value_tool": 2116.44,
-      "net_value_habit": 1865.46
+      "reviews_tool": 59.7,
+      "reviews_habit": 51.2,
+      "net_value_tool": 2034.55,
+      "net_value_habit": 1693.53
     }
   ],
-  "poisson_test_deviance": 2.534,
-  "footfall_baseline_test_deviance": 8.188
+  "poisson_test_deviance": 2.821,
+  "footfall_baseline_test_deviance": 7.18
 }

@@ -37,7 +37,7 @@ S is expected sign-ups and R is expected reviews (both depend on the event and t
 | Transport and parking | £15–40 | £20 inner London, £35 outer |
 | Food and drink for whoever's staffing | £10 | £10 per staff member |
 
-The first pop-up costs more like £350–400 because of one-off kit (about £250), which isn't counted per event. Staff wages aren't counted by default; set `staff_hourly_cost_gbp` to include them. All values live in `data/value_assumptions.csv` for RGC to replace with real figures.
+The first pop-up costs more like £350–400 because of one-off kit (about £250), which isn't counted per event. Staff wages aren't counted by default; set `staff_hourly_cost_gbp` to include them. All values live in `data/assumptions/value_assumptions.csv` for RGC to replace with real figures.
 
 A pop-up is **wasted** when its net value is below zero. The forecast gives each event a chance of waste, so the month plan skips events that are more likely than not to lose money.
 
@@ -62,24 +62,24 @@ On synthetic data, the numbers show how much is at stake if the patterns hold; t
 
 ## Data
 
-Three sources: synthetic WatchHumans tables, real upcoming London events, and public Census 2021 location data. The synthetic tables mirror what the app already collects: interests, hobbies and goals, likes and dislikes, and rated video reviews.
+Three sources: synthetic WatchHumans tables and pop-up history, RGC's real brand sheet, and real upcoming UK events from PredictHQ. The synthetic tables mirror what the app already collects: interests, hobbies and goals, likes and dislikes, and rated video reviews.
 
 | File | Rows | Source | Key fields |
 | --- | --- | --- | --- |
 | `brands.csv` | 71 products from 49 real RGC client brands | RGC's brand sheet | brand, product, category, sub-category, flavour, format, dietary flags, need states and target segments (inferred), label claims, label → target link |
-| `brand_features.csv`, `brand_products.csv` | 49 brands, 70 products | Built from `brands.csv` by `scripts/build_brand_features.py`, using the phrase mappings in `data/mappings/` (archetypes.csv, need_states.csv) | 10 archetype affinities, 3 target archetypes, 8 need states, lineup role, vegan, gluten-free, adults-only, chilling; favourite five and stock are assumptions |
+| `brand_features.csv`, `brand_products.csv` | 49 brands, 70 products | Built from `data/raw/brands.csv` by `scripts/build_brand_features.py`, from the keyword archetype scores in `data/archetypes/products_archetypes.csv` (`get_product_archetypes.py`), rescaled so each product's top archetype is 1 | 10 archetype scores, 3 target archetypes, a match score per event type, 8 need states, lineup role, vegan, gluten-free, adults-only, chilling; favourite five and stock are assumptions |
 | `users.csv` | 5,000 | Synthetic WatchHumans | age band, borough, primary and secondary archetype and a score on all 10 WatchHumans archetypes, traits, category affinities, dietary needs, sign-up source (pop-up code or organic) |
 | `reviews.csv` | 20,000 | Synthetic WatchHumans | user, brand, pop-up code or none, rating 1 to 5, would buy, liked or disliked attribute, in target archetype; pop-up reviews reconcile with `popup_brands.csv` |
 | `popups.csv` | 60 past pop-ups, 2 a month from Apr 2024 to Sep 2026 | Synthetic | date, event type (one of seven), borough, footfall, 5-brand lineup, sign-ups, reviews, cost |
 | `popup_brands.csv` | 300 | Synthetic | pop-up, brand, units given, reviews, average rating |
-| `data/value_assumptions.csv` | 20 | Assumptions for RGC to replace | value per sign-up, per review and per 1,000 views; video share; views per video; unit cost; per-event costs (pitch, insurance, consumables, transport, staff food, optional wages); one-off kit; marketing hours and rate; pop-ups per month; attendance cap (200) |
-| `events.csv` | 30 to 40 upcoming | Real London listings, collected by hand | type, start and end, venue, latitude and longitude, expected attendance, indoor or outdoor, audience tags, stall cost, link |
-| `boroughs.csv` | 33 | Census 2021 (ONS TS007, via Nomis); WatchHumans users synthetic | population, share aged 18 to 34, inner or outer, WatchHumans users per 1,000 people |
+| `data/assumptions/value_assumptions.csv` | 20 | Assumptions for RGC to replace | value per sign-up, per review and per 1,000 views; video share; views per video; unit cost; per-event costs (pitch, insurance, consumables, transport, staff food, optional wages); one-off kit; marketing hours and rate; pop-ups per month; attendance cap (200) |
+| `data/archetypes/events_archetypes.csv` | 22 upcoming | Real UK events from PredictHQ (`get_raw_event_data.py`), scored by `get_event_archetypes.py` | title, description, category, start and end, latitude and longitude, attendance, 10 archetype scores with evidence |
+| `data/archetypes/products_archetypes.csv` | 70 | `get_product_archetypes.py`, the same keyword method applied to `data/raw/brands.csv` | 10 archetype scores with evidence |
 
 **brands.csv titles** Brand,	Product / variant,	Category,	Sub-category,	Flavour profile,	Format,	Dietary flags,	Need states served (inferred),	Target segments (inferred),	Marketing claims / label keywords,	Label → target link (inferred)
 
 
-**Event types.** Seven categories, used in `popups.csv` and `events.csv`: community, concerts, conferences, expos, festivals, performing arts, sports. The gatherings in the crowd table map onto them: run clubs, food markets, family days and workshops are community; gigs and club nights are concerts; hackathons are conferences; campus fairs are expos; races and match screenings are sports.
+**Event types.** Seven categories (the PredictHQ categories), used in `popups.csv` and the real events: community, concerts, conferences, expos, festivals, performing arts, sports. The gatherings in the crowd table map onto them: run clubs, food markets, family days and workshops are community; gigs and club nights are concerts; hackathons are conferences; campus fairs are expos; races and match screenings are sports.
 
 **How the generator works.**
 
@@ -146,13 +146,13 @@ Six steps run in order: score every brand at every event, predict outcomes, pick
 1. **Archetype match for every product at every event.**
 
    ```latex
-   \text{match}_{p,e} = \sum_{a=1}^{10} \text{crowd}_e[a] \times \text{affinity}_p[a] \qquad \text{fit}_{b,e} = \max_{p \in b} \text{match}_{p,e} \times \text{moment}_{p,e} \times c_{b,e}
+   \text{match}_{p,e} = \sum_{a=1}^{10} \text{crowd}_e[a] \times \text{affinity}_p[a] \qquad \text{fit}_{b,e} = \max_{p \in b} \text{match}_{p,e} \times c_{b,e}
    ```
 
-   **Archetype matching.** Events, products and users share the 10 WatchHumans archetypes (wellness seeker, trend enthusiast, thoughtful buyer, smart saver, quality seeker, on-the-go shopper, impulse buyer, experience explorer, everyday planner, conscious consumer), which WatchHumans builds from each user's purchasing data. The event's crowd mix starts from the crowd table and is updated with who signed up at past pop-ups. Each product's archetype affinity starts from the brand sheet's target phrases and is updated with ratings by reviewer archetype. match = Σ_a crowd[a] × affinity[a]. Fit = the best product's match × moment (need-state cosine with the event type) × context (chilling outdoors, hydration in summer).
-2. **Expected outcomes.** A Poisson regression trained on the 48 training pop-ups predicts sign-ups from footfall, event type, dwell time and the lineup's archetype match. A second gives reviews per sign-up from fit. Together with `data/value_assumptions.csv` they give each lineup's net value and its chance of losing money.
+   **Archetype matching.** Events, products and users share the 10 WatchHumans archetypes (wellness seeker, trend enthusiast, thoughtful buyer, smart saver, quality seeker, on-the-go shopper, impulse buyer, experience explorer, everyday planner, conscious consumer), which WatchHumans builds from each user's purchasing data. Events and products are scored with **one keyword method** (`get_event_archetypes.py` for events, `get_product_archetypes.py` for products): keywords in each text field add weight, plus category and label/segment tables, and score = 1 − e^(−total). Both are rescaled so their top archetype is 1. An event's crowd = its rescaled scores as shares, blended 70/30 with the WatchHumans population. Each product's profile is updated with ratings by reviewer archetype. match = Σ_a crowd[a] × affinity[a]; fit = the best product's match × context (chilling outdoors). There is no need-state moment factor.
+2. **Expected outcomes.** A Poisson regression trained on the 48 training pop-ups predicts sign-ups from footfall, event type, dwell time and the lineup's archetype match. A second gives reviews per sign-up from fit. Together with `data/assumptions/value_assumptions.csv` they give each lineup's net value and its chance of losing money.
 3. **Lineup optimiser.** For each event, shortlist the 20 eligible brands with the best fit, then score every combination of the shortlist at the event's lineup size, in under a second. Events are capped below 200 people. Lineup size scales with expected attendance: 2 products under 50 people, 3 under 100, 4 under 150, and 5 from 150 to 199 (up to 15,504 combinations). The score is the lineup's archetype match: each archetype expected at the event is credited with its favourite product in the lineup, weighted by its share of the crowd, so products that each win a different part of the crowd beat near-duplicates. Hard constraints: at least one vegan and one gluten-free option, chilled capacity, units in stock, and no alcohol or CBD at community, expo or conference events.
-4. **Month plan.** Skip events whose forecast says they will probably lose money, rank the rest by expected net value, and fill RGC's capacity, usually 2 pop-ups a month, with no date clashes. No brand is guaranteed a slot: clients do not pay RGC for pop-up placement, and pop-ups are one RGC service among several. Boroughs where WatchHumans has few users get a bonus, because new sign-ups are worth more there.
+4. **Month plan.** Skip events whose forecast says they will probably lose money, rank the rest by expected net value, and fill RGC's capacity, usually 2 pop-ups a month, with no date clashes. No brand is guaranteed a slot: clients do not pay RGC for pop-up placement, and pop-ups are one RGC service among several. Events run UK-wide; transport is £20 + £0.40 per km from London, so distant events must earn more to be picked.
 5. **Brand event profiles.** For each brand: fit across the seven event types, its best moment and audience, what to sample, where to avoid, and its top five upcoming events with expected reviews. A language model writes the profile paragraph from these numbers; it never sets them.
 6. **Quantities and timing.** Units to bring per product equal expected stops (attendance × the type's stop rate) times one sample times a 1.2 buffer, capped by stock. The time slot is the event's peak-need moment from the crowd table.
 
@@ -168,7 +168,7 @@ The app has three screens, one per question RGC asks. Each reads the same scored
 | Brand profiles (brands to events) | A client brand | Its event profile: fit across the seven event types, best moment, best audience, what to sample, where to avoid; its top five upcoming events with expected reviews |
 | Month plan and impact | Month, pop-up capacity | A calendar of pop-ups and lineups; net value against the habit plan, events skipped as likely losses, marketing time saved, and the monthly impact in pounds |
 
-**File contract.** All in `outputs/`, built by `python -m model.run [--month 2026-11 --capacity 2]` from the input CSVs plus `event_types.csv` (the crowd table) and `events.csv`. Agree these at T+0:00. Write stub files with five fake rows at T+0:15 so the app starts immediately.
+**File contract.** All in `outputs/`, built by `python -m model.run [--month 2026-12 --capacity 2]` from the input CSVs plus `data/processed/event_types.csv` and the real events in `data/archetypes/events_archetypes.csv`. Agree these at T+0:00.
 
 ```
 scores.csv       event_id, brand_id, product, match, fit, exp_signups, exp_reviews, in_best_lineup, reason_1, reason_2, reason_3
@@ -185,7 +185,9 @@ It is the front end to the same engine. It reads the scored files and calculates
 
 This replaces the Event planner and Brand profiles screens with one map-first screen. The Month plan and impact screen stays, and takes the same look.
 
-> **Update:** QRP has been replaced by net value per pop-up (£) and expected reviews (see Impact metric), and events are capped below 200 people. Read "QRP" in this section as net value.
+> **Built:** `python app.py` runs the workflow and serves this UI at http://localhost:8000 (code in `app/`). Differences from the spec below: net value (£) and expected reviews replace QRP; no borough layer, borough filter or audience tags (retired / not in PredictHQ data); the stall-cost filter is an event-cost filter; the side-by-side compare view and timeline brushing are not built (first two in the cut order); stub files are not used.
+>
+> **Update:** QRP has been replaced by net value per pop-up (£) and expected reviews (see Impact metric), events are capped below 200 people, and events now come from `data/archetypes/events_archetypes.csv` (real UK events, no `events.csv`, no audience tags), the crowd is the 10 WatchHumans archetypes rather than 5 segments, `boroughs.csv` and the Census data are retired (no borough layer), and there are no stub files (use the real `outputs/`). Read "QRP" in this section as net value.
 
 ### Front end: one interactive web page
 
@@ -368,7 +370,7 @@ Bars run in parallel; diamonds are gates and fixed times.
 
 | Person | Builds | Hands over |
 | --- | --- | --- |
-| Data lead | Generator, `events.csv`, `boroughs.csv`, the crowd table as code, profile text | Synthetic tables by T+1:00, events by T+1:30 |
+| Data lead | Generator, real events (PredictHQ + archetype scores), product archetype scores, profile text | Synthetic tables by T+1:00, events by T+1:30 |
 | Model lead | Fit score, Poisson model, lineup optimiser, month plan, uplift test | `scores.csv` by T+1:15; lineups, profiles and impact by T+2:30 |
 | App and demo lead | Streamlit: event planner, brand profiles, month plan and impact; then the video | Working app by T+2:30, video by T+3:30 |
 
@@ -377,7 +379,7 @@ Bars run in parallel; diamonds are gates and fixed times.
 - Stub files go in at T+0:15, so nobody waits on anybody.
 - Gate at T+1:15: one event becomes a lineup end to end on synthetic data. If not, drop the month plan and keep the two-way screens.
 - Feature freeze at T+2:30; after that, fixes only.
-- Cut order if late: borough bonus, then the Poisson model (use fit times footfall instead), then the map, then the month plan. Never cut the two-way screens or the uplift number.
+- Cut order if late: the Poisson model (use fit times footfall instead), then the map, then the month plan. Never cut the two-way screens or the uplift number.
 
 ## Demo
 

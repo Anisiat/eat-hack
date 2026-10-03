@@ -6,7 +6,7 @@ net value = sign-ups x value per sign-up          (£0 today: no paid acquisitio
           - event cost (pitch, insurance, consumables, transport, staff food) - product given (units x unit cost)
 
 A pop-up is wasted when its net value comes out below zero. Assumptions live in
-data/value_assumptions.csv so RGC can replace them with real figures.
+data/assumptions/value_assumptions.csv so RGC can replace them with real figures.
 """
 import numpy as np
 from scipy.stats import poisson

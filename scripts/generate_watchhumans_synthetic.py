@@ -14,7 +14,7 @@ RANDOM_SEED = 42
 N_CONSUMERS = 5000
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_CSV = PROJECT_ROOT / "data" / "watch_humans_synthetic.csv"
+OUTPUT_CSV = PROJECT_ROOT / "data" / "synthetic" / "watch_humans_synthetic.csv"
 
 AREAS = [
     "Hackney",

@@ -318,7 +318,7 @@ events_raw_df = events_raw_df.loc[
 # Save raw event dataset
 # -----------------------------------
 
-output_path = DATA_DIR / "events_raw.pkl"
+output_path = DATA_DIR / "raw" / "events_raw.pkl"
 
 events_raw_df.to_pickle(output_path)
 

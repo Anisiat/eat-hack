@@ -1,0 +1,61 @@
+popup_id,date,weekday,start_time,event_type,event_name,borough,indoor,dwell_hours,temp_c,footfall,lineup,habit_lineup,staff,stops,units_given,signups,reviews,qualified_reviews,avg_rating,stall_fee_gbp,staff_cost_gbp,travel_gbp,total_cost_gbp,cost_per_signup_gbp,cost_per_qualified_review_gbp,split
+P001,2024-04-20,Saturday,19:30,concerts,"Club night, Islington",Islington,1,4.0,17.4,88,B05|B34|B35|B36|B39,0,2,20,68,2,3,1,3.58,80,20,20,185,92.5,185.0,train
+P002,2024-04-24,Wednesday,10:00,conferences,"Weekend AI hackathon, Westminster",Westminster,1,7.0,16.2,106,B02|B03|B04|B17|B26,1,1,72,233,27,62,23,3.69,30,10,20,125,4.63,5.43,train
+P003,2024-05-09,Thursday,18:30,performing_arts,"Dance show, Hackney",Hackney,1,2.5,16.3,41,B10|B32|B37|B44|B48,0,1,11,33,1,2,1,3.96,50,10,20,145,145.0,145.0,train
+P004,2024-05-30,Thursday,19:30,concerts,"Live gig, Islington",Islington,1,4.0,19.5,105,B02|B03|B04|B17|B26,1,2,24,84,6,11,4,3.8,80,20,20,185,30.83,46.25,train
+P005,2024-06-01,Saturday,11:00,community,"Run club social, Merton",Merton,0,3.0,17.4,161,B02|B22|B24|B26|B28,0,1,72,258,18,25,8,4.08,40,10,35,150,8.33,18.75,train
+P006,2024-06-10,Monday,10:00,expos,"Freshers' fair, Tower Hamlets",Tower Hamlets,1,4.0,22.9,82,B05|B15|B37|B38|B41,0,2,22,70,9,21,4,3.33,90,20,20,195,21.67,48.75,train
+P007,2024-07-03,Wednesday,11:00,expos,"Freshers' fair, Newham",Newham,1,4.0,24.5,72,B02|B03|B04|B17|B26,1,2,20,72,9,19,9,3.55,70,20,20,175,19.44,19.44,train
+P008,2024-07-31,Wednesday,11:00,expos,"Societies fair, Westminster",Westminster,1,4.0,19.8,64,B02|B03|B04|B17|B26,1,2,29,93,8,24,10,3.6,50,20,20,155,19.38,15.5,train
+P009,2024-08-04,Sunday,12:00,festivals,"Food and music festival, Tower Hamlets",Tower Hamlets,0,7.0,24.6,140,B02|B08|B15|B17|B19,0,2,38,125,4,8,1,3.45,150,20,20,255,63.75,255.0,train
+P010,2024-08-10,Saturday,11:00,community,"Farmers' market, Croydon",Croydon,0,3.0,19.4,133,B02|B03|B04|B17|B26,1,1,54,193,22,33,8,3.95,30,10,35,140,6.36,17.5,train
+P011,2024-09-14,Saturday,12:00,festivals,"Summer music festival, Barking and Dagenham",Barking and Dagenham,0,7.0,18.7,166,B02|B03|B04|B17|B26,1,2,35,123,6,11,1,3.5,130,20,35,250,41.67,250.0,train
+P012,2024-09-28,Saturday,19:45,sports,"10K race finish, Southwark",Southwark,0,2.0,19.1,82,B04|B14|B21|B35|B36,0,2,35,116,10,18,12,3.81,30,20,20,135,13.5,11.25,train
+P013,2024-10-05,Saturday,09:00,community,"Family fun day, Lewisham",Lewisham,1,3.0,13.7,125,B02|B03|B04|B17|B26,1,1,48,170,9,13,3,3.83,30,10,20,125,13.89,41.67,train
+P014,2024-10-19,Saturday,09:00,sports,"Football screening, Hammersmith and Fulham",Hammersmith and Fulham,0,2.0,16.5,53,B02|B03|B04|B17|B26,1,2,25,75,5,10,4,3.54,30,20,20,135,27.0,33.75,train
+P015,2024-11-17,Sunday,09:00,community,"Family fun day, Hackney",Hackney,0,3.0,6.8,139,B02|B03|B04|B17|B26,1,1,70,210,17,28,9,4.0,40,10,20,135,7.94,15.0,train
+P016,2024-11-24,Sunday,11:00,community,"Run club social, Southwark",Southwark,0,3.0,18.3,34,B08|B23|B26|B27|B40,0,1,14,51,3,9,5,4.2,30,10,20,125,41.67,25.0,train
+P017,2024-12-20,Friday,19:30,concerts,"Club night, Hammersmith and Fulham",Hammersmith and Fulham,1,4.0,5.6,79,B02|B03|B04|B17|B26,1,2,12,32,0,0,0,,80,20,20,185,185.0,185.0,train
+P018,2024-12-26,Thursday,18:30,performing_arts,"Open-air theatre, Kensington and Chelsea",Kensington and Chelsea,0,2.5,9.0,83,B02|B03|B04|B17|B26,1,1,24,78,2,3,1,3.78,80,10,20,175,87.5,175.0,train
+P019,2025-01-05,Sunday,09:00,community,"Farmers' market, Newham",Newham,0,3.0,8.4,60,B02|B03|B04|B17|B26,1,1,27,87,8,11,4,3.81,50,10,20,145,18.12,36.25,train
+P020,2025-01-11,Saturday,19:30,concerts,"Live gig, Tower Hamlets",Tower Hamlets,1,4.0,9.1,163,B02|B03|B04|B17|B26,1,2,41,135,6,13,5,3.84,100,20,20,205,34.17,41.0,train
+P021,2025-02-01,Saturday,11:00,community,"Community street party, Hackney",Hackney,0,3.0,8.6,154,B02|B03|B04|B17|B26,1,1,60,199,17,23,7,4.02,30,10,20,125,7.35,17.86,train
+P022,2025-02-08,Saturday,11:00,community,"Weekend food market, Camden",Camden,0,3.0,8.0,109,B02|B03|B04|B17|B26,1,1,41,122,8,14,6,3.82,30,10,20,125,15.62,20.83,train
+P023,2025-03-01,Saturday,11:00,community,"Run club social, Ealing",Ealing,0,3.0,12.1,98,B04|B06|B15|B19|B47,0,1,49,157,13,15,5,3.85,30,10,35,140,10.77,28.0,train
+P024,2025-03-09,Sunday,11:00,community,"Run club social, Hackney",Hackney,0,3.0,6.9,73,B02|B03|B04|B17|B26,1,1,29,97,10,18,7,3.87,30,10,20,125,12.5,17.86,train
+P025,2025-04-09,Wednesday,09:30,conferences,"Tech conference, Tower Hamlets",Tower Hamlets,1,7.0,15.4,34,B02|B03|B04|B17|B26,1,1,23,80,9,18,6,3.64,40,10,20,135,15.0,22.5,train
+P026,2025-04-13,Sunday,10:00,conferences,"Startup summit, Hackney",Hackney,1,7.0,14.3,131,B02|B03|B04|B17|B26,1,1,85,284,36,69,25,3.65,30,10,20,125,3.47,5.0,train
+P027,2025-05-17,Saturday,11:00,expos,"Freshers' fair, Tower Hamlets",Tower Hamlets,1,4.0,15.3,177,B02|B03|B04|B17|B26,1,2,68,218,41,70,30,3.74,90,20,20,195,4.76,6.5,train
+P028,2025-05-25,Sunday,11:00,community,"Community street party, Lambeth",Lambeth,0,3.0,15.3,61,B06|B14|B20|B28|B34,0,1,23,69,6,6,3,4.08,40,10,20,135,22.5,45.0,train
+P029,2025-06-11,Wednesday,09:00,sports,"Football screening, Wandsworth",Wandsworth,0,2.0,18.5,187,B07|B08|B14|B28|B48,0,2,69,237,25,46,9,3.95,30,20,20,135,5.4,15.0,train
+P030,2025-06-21,Saturday,11:00,community,"Run club social, Merton",Merton,0,3.0,21.1,90,B03|B25|B26|B36|B40,0,1,45,142,15,26,9,3.64,30,10,35,140,9.33,15.56,train
+P031,2025-07-12,Saturday,12:00,festivals,"Street festival, Croydon",Croydon,0,7.0,26.0,152,B02|B03|B04|B17|B26,1,2,33,96,3,8,3,3.48,130,20,35,250,83.33,83.33,train
+P032,2025-07-26,Saturday,09:00,community,"Farmers' market, Merton",Merton,0,3.0,20.2,77,B15|B24|B41|B42|B46,0,1,22,74,3,4,0,3.94,40,10,35,150,50.0,150.0,train
+P033,2025-08-15,Friday,19:00,performing_arts,"Dance show, Richmond upon Thames",Richmond upon Thames,1,2.5,27.4,85,B02|B03|B04|B17|B26,1,1,17,54,4,5,1,3.78,30,10,35,140,35.0,140.0,train
+P034,2025-08-16,Saturday,11:00,community,"Community street party, Islington",Islington,0,3.0,22.8,52,B02|B03|B04|B17|B26,1,1,23,81,9,15,6,3.81,40,10,20,135,15.0,22.5,train
+P035,2025-09-16,Tuesday,19:45,sports,"Rugby screening, Richmond upon Thames",Richmond upon Thames,0,2.0,17.1,86,B02|B03|B04|B17|B26,1,2,34,120,9,17,6,3.86,30,20,35,150,16.67,25.0,train
+P036,2025-09-20,Saturday,19:45,sports,"Rugby screening, Wandsworth",Wandsworth,0,2.0,21.8,123,B02|B03|B04|B17|B26,1,2,53,156,15,26,13,3.78,40,20,20,145,9.67,11.15,train
+P037,2025-10-05,Sunday,09:00,community,"Family fun day, Waltham Forest",Waltham Forest,0,3.0,10.3,142,B24|B25|B38|B43|B49,0,1,63,210,13,29,9,4.31,50,10,35,160,12.31,17.78,train
+P038,2025-10-25,Saturday,18:30,performing_arts,"Dance show, Kensington and Chelsea",Kensington and Chelsea,0,2.5,16.1,165,B02|B03|B04|B17|B26,1,1,47,168,14,25,9,3.68,30,10,20,125,8.93,13.89,train
+P039,2025-11-15,Saturday,11:00,community,"Community street party, Croydon",Croydon,0,3.0,9.6,57,B02|B03|B04|B17|B26,1,1,22,75,4,6,2,4.25,40,10,35,150,37.5,75.0,train
+P040,2025-11-20,Thursday,19:30,concerts,"Live gig, Lambeth",Lambeth,1,4.0,10.6,103,B02|B03|B04|B17|B26,1,2,21,69,7,10,1,3.97,50,20,20,155,22.14,155.0,train
+P041,2025-12-27,Saturday,09:00,community,"Weekend food market, Newham",Newham,1,3.0,12.0,134,B02|B03|B04|B17|B26,1,1,66,206,18,34,8,3.92,30,10,20,125,6.94,15.62,train
+P042,2025-12-30,Tuesday,11:00,expos,"Lifestyle show, Newham",Newham,1,4.0,6.1,113,B07|B17|B24|B29|B36,0,2,43,140,19,30,11,3.74,80,20,20,185,9.74,16.82,train
+P043,2026-01-15,Thursday,19:00,performing_arts,"Dance show, Lambeth",Lambeth,1,2.5,6.0,80,B02|B03|B04|B17|B26,1,1,26,89,5,10,4,3.89,50,10,20,145,29.0,36.25,train
+P044,2026-01-25,Sunday,11:00,community,"Community street party, Islington",Islington,0,3.0,6.8,199,B02|B05|B32|B42|B43,0,1,98,300,35,60,21,3.68,50,10,20,145,4.14,6.9,train
+P045,2026-02-07,Saturday,19:00,performing_arts,"Dance show, Camden",Camden,1,2.5,8.3,39,B22|B33|B39|B41|B47,0,1,14,46,1,3,0,4.38,30,10,20,125,125.0,125.0,train
+P046,2026-02-19,Thursday,10:00,conferences,"Startup summit, Newham",Newham,1,7.0,11.1,36,B02|B03|B04|B17|B26,1,1,23,72,12,19,2,3.77,50,10,20,145,12.08,72.5,train
+P047,2026-03-19,Thursday,19:30,concerts,"DJ night, Southwark",Southwark,1,4.0,13.2,67,B09|B19|B20|B21|B33,0,2,23,74,3,7,1,3.84,120,20,20,225,75.0,225.0,train
+P048,2026-03-20,Friday,19:30,concerts,"Club night, Hackney",Hackney,1,4.0,8.3,179,B02|B03|B04|B17|B26,1,2,34,110,6,8,2,4.01,40,20,20,145,24.17,72.5,train
+P049,2026-04-05,Sunday,10:00,conferences,"Weekend AI hackathon, Hackney",Hackney,1,7.0,15.9,185,B02|B03|B04|B17|B26,1,1,115,331,52,89,38,3.68,30,10,20,125,2.4,3.29,test
+P050,2026-04-18,Saturday,19:00,performing_arts,"Comedy night, Lambeth",Lambeth,0,2.5,14.1,54,B02|B03|B04|B17|B26,1,1,13,43,3,3,1,3.82,50,10,20,145,48.33,145.0,test
+P051,2026-05-03,Sunday,12:00,festivals,"Summer music festival, Greenwich",Greenwich,0,7.0,18.8,140,B02|B03|B04|B17|B26,1,2,36,119,11,19,6,3.73,150,20,35,270,24.55,45.0,test
+P052,2026-05-30,Saturday,09:00,community,"Farmers' market, Haringey",Haringey,0,3.0,16.9,73,B02|B03|B04|B17|B26,1,1,27,96,10,16,3,3.67,30,10,20,125,12.5,41.67,test
+P053,2026-06-06,Saturday,11:00,expos,"Freshers' fair, Kensington and Chelsea",Kensington and Chelsea,1,4.0,27.5,194,B07|B24|B26|B42|B46,0,2,72,226,30,46,10,3.73,50,20,20,155,5.17,15.5,test
+P054,2026-06-11,Thursday,10:00,expos,"Lifestyle show, Islington",Islington,1,4.0,20.3,142,B02|B03|B04|B17|B26,1,2,54,175,21,36,10,3.73,80,20,20,185,8.81,18.5,test
+P055,2026-07-10,Friday,18:30,performing_arts,"Dance show, Lambeth",Lambeth,1,2.5,24.7,114,B03|B04|B14|B28|B37,0,1,33,108,12,20,2,3.44,40,10,20,135,11.25,67.5,test
+P056,2026-07-26,Sunday,09:00,community,"Run club social, Croydon",Croydon,0,3.0,25.2,174,B02|B03|B04|B17|B26,1,1,83,249,12,19,7,4.19,40,10,35,150,12.5,21.43,test
+P057,2026-08-11,Tuesday,17:00,sports,"Rugby screening, Richmond upon Thames",Richmond upon Thames,1,2.0,23.9,114,B02|B03|B04|B17|B26,1,2,38,122,9,14,7,3.92,30,20,35,150,16.67,21.43,test
+P058,2026-08-12,Wednesday,10:00,conferences,"Tech conference, Islington",Islington,1,7.0,21.6,199,B02|B03|B04|B17|B26,1,1,120,422,50,95,31,3.74,30,10,20,125,2.5,4.03,test
+P059,2026-09-26,Saturday,09:00,community,"Community street party, Ealing",Ealing,0,3.0,23.9,185,B02|B03|B04|B17|B26,1,1,69,199,17,24,6,3.89,30,10,35,140,8.24,23.33,test
+P060,2026-09-29,Tuesday,10:00,conferences,"Student hackathon, City of London",City of London,1,7.0,23.3,140,B02|B03|B04|B17|B26,1,1,75,259,28,57,19,3.74,30,10,20,125,4.46,6.58,test

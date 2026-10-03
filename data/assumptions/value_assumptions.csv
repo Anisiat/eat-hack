@@ -14,8 +14,9 @@ pitch_fee_min_gbp,30,GBP per event,Lowest typical pitch fee for a small event; l
 pitch_fee_max_gbp,150,GBP per event,Highest typical pitch fee for a small event
 insurance_gbp,35,GBP per event,Single-event public liability insurance (typically £20-50)
 consumables_gbp,30,GBP per event,"Bags, flyers, stickers, tape, pens (typically £20-40)"
-transport_inner_gbp,20,GBP per event,Transport and parking in inner London (typically £15-40)
-transport_outer_gbp,35,GBP per event,Transport and parking in outer London
 staff_food_gbp,10,GBP per staff member,Food and drink for whoever is staffing
 staff_hourly_cost_gbp,0,GBP per staff hour,Wages for staffing the stall. 0 = not counted (staff already paid or volunteers); set it to count staff time
 kit_one_off_gbp,250,GBP once,"Basic kit (gazebo, table, banner): makes the first pop-up cost about £350-400. One-off, so not in per-event cost"
+transport_base_gbp,20,GBP per event,Fixed transport and parking for events outside London's inner/outer split (UK-wide events)
+transport_per_km_gbp,0.40,GBP per km,Extra transport per km of straight-line distance from central London (covers the return trip). Edinburgh is about 530 km: about £234
+pitch_fee_default_gbp,90,GBP per event,Pitch fee assumed for real events whose listing gives no stall cost (middle of the typical £30-150)

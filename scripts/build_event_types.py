@@ -15,6 +15,7 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import paths  # noqa: E402
 from generate_popups import EVENT, EVENT_TYPES, NEEDS, ARCHETYPES  # noqa: E402
 
 # peak-need moment per type: when to be at the stall, and what is happening then
@@ -30,7 +31,7 @@ MOMENT = {
 
 
 def main():
-    out_dir = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().parents[1])
+
     rows = []
     for t in EVENT_TYPES:
         p = EVENT[t]
@@ -40,8 +41,8 @@ def main():
         row.update(indoor_share=p["indoor"], dwell_hours=p["dwell"], staff=p["staff"],
                    peak_slot=MOMENT[t][0], moment=MOMENT[t][1])
         rows.append(row)
-    pd.DataFrame(rows).to_csv(out_dir / "event_types.csv", index=False)
-    print(f"Wrote {len(rows)} event types to {out_dir}/event_types.csv")
+    pd.DataFrame(rows).to_csv(paths.EVENT_TYPES, index=False)
+    print(f"Wrote {len(rows)} event types to {paths.EVENT_TYPES}")
 
 
 if __name__ == "__main__":

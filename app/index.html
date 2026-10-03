@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PopUpPick</title>
+  <link rel="icon" href="/design/rgc-brand-reference/assets/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="/design/rgc-brand-reference/tokens.css">
+  <link rel="stylesheet" href="/app/styles.css">
+</head>
+<body>
+  <!-- Opening sequence: the PopUpPick bubble -->
+  <div id="splash" role="dialog" aria-label="PopUpPick" aria-modal="true">
+    <button class="splash-hit" aria-label="Pop the bubble and open PopUpPick"></button>
+    <div class="bubble"><span class="bubble-name">PopUpPick</span></div>
+    <div class="droplets" aria-hidden="true"></div>
+    <p class="splash-hint">Click to pop</p>
+    <p class="splash-loading" hidden>Still loading the events</p>
+    <button class="splash-skip">Skip</button>
+  </div>
+
+  <header class="topbar">
+    <img class="logo" src="/design/rgc-brand-reference/assets/rgc-logo.png" alt="Really Good Culture">
+    <button class="wordmark" id="replay" title="Replay the opening">PopUpPick</button>
+    <label class="search"><span class="sr">Search events</span>
+      <input id="search" type="search" placeholder="Search events, venues, products">
+    </label>
+    <div class="uplift-strip" id="upliftStrip" aria-live="polite"></div>
+    <button class="ghost" id="openImpact">Impact</button>
+  </header>
+
+  <section class="filters" aria-label="Filters">
+    <div class="type-buttons" id="typeButtons" role="group" aria-label="Event type"></div>
+    <label class="pill"><span>Biggest group</span>
+      <select id="fArchetype"><option value="">Any archetype</option></select></label>
+    <label class="pill"><span>From</span><input id="fFrom" type="date"></label>
+    <label class="pill"><span>To</span><input id="fTo" type="date"></label>
+    <label class="pill"><span>Setting</span>
+      <select id="fSetting"><option value="">Indoor or outdoor</option><option value="1">Indoor</option><option value="0">Outdoor</option></select></label>
+    <label class="pill"><span>Max cost</span><input id="fCost" type="range" min="100" max="500" step="10" value="500"><output id="fCostOut">£500</output></label>
+    <button class="pill toggle" id="fRadius" aria-pressed="false">Radius</button>
+    <button class="pill link" id="fClear">Clear all</button>
+    <span class="count" id="liveCount" aria-live="polite"></span>
+  </section>
+
+  <main class="workspace">
+    <aside class="list-col" aria-label="Ranked events">
+      <div class="list-head">
+        <h2 class="eyebrow">Events</h2>
+        <label class="sort"><span class="sr">Sort by</span>
+          <select id="sortBy">
+            <option value="net">Net value</option>
+            <option value="match">Archetype match</option>
+            <option value="date">Date</option>
+            <option value="distance">Distance from London</option>
+            <option value="cost">Event cost</option>
+          </select></label>
+      </div>
+      <ol class="event-list" id="eventList" tabindex="0" aria-label="Events, use arrow keys and Enter"></ol>
+    </aside>
+
+    <section class="center" aria-label="Map and timeline">
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tabMap" aria-selected="true" aria-controls="mapView">Map</button>
+        <button role="tab" id="tabTimeline" aria-selected="false" aria-controls="timelineView">Timeline</button>
+      </div>
+      <div id="mapView" class="view" role="tabpanel">
+        <div id="map" aria-label="Map of events"></div>
+        <div class="radius-ctl" id="radiusCtl" hidden>
+          <label>Radius <input id="radiusKm" type="range" min="10" max="600" step="10" value="150"> <output id="radiusOut">150 km</output></label>
+          <span class="hint">Drag the centre dot to move</span>
+        </div>
+        <div class="legend" aria-hidden="true">
+          <span><i style="background:#22A651"></i>Strong fit</span>
+          <span><i style="background:#EAC24A"></i>Medium</span>
+          <span><i style="background:#C9C7C0"></i>Weak</span>
+          <span class="muted">Pin size = attendance · number = archetype match</span>
+        </div>
+      </div>
+      <div id="timelineView" class="view" role="tabpanel" hidden>
+        <div class="timeline-bar">
+          <label class="pill"><span>Month</span><select id="tlMonth"></select></label>
+          <label class="pill"><span>Capacity</span><select id="tlCapacity">
+            <option>1</option><option selected>2</option><option>3</option><option>4</option></select></label>
+          <button class="cta small" id="useRecommended">Use recommended plan</button>
+          <span class="tl-note" id="tlNote"></span>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <aside class="panel" id="panel" aria-label="Event details" tabindex="-1">
+      <div class="panel-empty" id="panelEmpty">
+        <img src="/design/rgc-brand-reference/assets/star-3d.webp" alt="" class="empty-art">
+        <p class="hello">Hi Human, where are we popping up?</p>
+        <p class="muted">Pick an event on the map or in the list.</p>
+      </div>
+      <div class="panel-body" id="panelBody" hidden></div>
+    </aside>
+  </main>
+
+  <footer class="tray" id="tray" aria-label="Plan">
+    <div class="tray-head">
+      <h2 class="eyebrow">Plan</h2>
+      <div class="tray-stats" id="trayStats"></div>
+      <button class="ghost dark" id="exportRequests">Export request list</button>
+    </div>
+    <ol class="tray-items" id="trayItems"></ol>
+  </footer>
+
+  <aside class="drawer" id="impactDrawer" aria-label="Impact" hidden>
+    <div class="drawer-inner">
+      <button class="close" id="closeImpact" aria-label="Close impact">×</button>
+      <div id="impactBody"></div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="/app/app.js"></script>
+</body>
+</html>

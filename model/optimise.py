@@ -8,7 +8,7 @@ Score = archetype match of the lineup to the event's expected crowd (fit.coverag
 is credited with its favourite product in the lineup, so five products that each win a different part of the
 crowd beat five near-duplicates. Expected sign-ups, reviews and pound value are forecast for the chosen lineup.
 Hard constraints: >= 1 vegan, >= 1 gluten-free, <= 2 chilled brands, frozen only indoors, units in stock,
-no adults-only brands (alcohol, CBD) at community, expo or conference events.
+no adults-only brands (alcohol, CBD) at community, expo, conference or family events.
 """
 from itertools import combinations
 
@@ -62,7 +62,7 @@ class Optimiser:
         ok = np.ones(len(self.bids), bool)
         if self.events["indoor"].iloc[i] == 0:
             ok &= ~self.frozen
-        if self.events["event_type"].iloc[i] in NO_ADULTS:
+        if self.events["event_type"].iloc[i] in NO_ADULTS or self.events["family_event"].iloc[i]:
             ok &= ~self.adults
         need = np.ceil(self.stops[i] * UNIT_BUFFER)
         return ok & (self.stock >= min(need, self.stock.min()))

@@ -1,10 +1,9 @@
 """Run the Pop-up Pick model end to end and write outputs/.
 
-  python -m model.run [--month 2026-11] [--capacity 2]
+  python -m model.run [--month 2026-12] [--capacity 2]
 
 Writes outputs/scores.csv, lineups.json, profiles.json, impact.json, month_plan.json.
-Headline: net value per pop-up in pounds (data/value_assumptions.csv), from sign-ups, reviews and publicity
-and 5-row stubs of each in outputs/stubs/.
+Headline: net value per pop-up in pounds (data/assumptions/value_assumptions.csv), from sign-ups, reviews and publicity
 """
 import argparse
 import json
@@ -17,7 +16,7 @@ from . import outcomes, plan, profiles
 from .data import ARCHETYPES, OUT, load, past_events, upcoming_events
 from .impact import uplift_test
 from .value import load_assumptions, p_waste, rounded, value
-from .optimise import Optimiser, lineup_reasons
+from .optimise import MAX_CHILLED, NO_ADULTS, Optimiser, lineup_reasons
 
 
 def to_json(obj, path):
@@ -32,7 +31,7 @@ def to_json(obj, path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--month", default="2026-11")
+    ap.add_argument("--month", default="2026-12")
     ap.add_argument("--capacity", type=int, default=2)   # RGC runs 2 pop-ups a month
     args = ap.parse_args()
 
@@ -56,8 +55,9 @@ def main():
         habit = opt.evaluate(i, opt.habit_for(i))
         tool_v, habit_v = money(opt, i, best, res, e.cost, A), money(opt, i, opt.habit_for(i), habit, e.cost, A)
         lineups[e.event_id] = dict(
-            name=e.name, date=e.date, event_type=e.event_type, borough=e.borough,
-            expected_attendance=int(e.expected_attendance), lineup_size=len(best),
+            name=e.name, date=e.date, event_type=e.event_type, category=e.category,
+            latitude=float(e.latitude), longitude=float(e.longitude), km_from_london=float(e.km_from_london),
+            family_event=bool(e.family_event), expected_attendance=int(e.footfall), lineup_size=len(best),
             brands=[opt.bids[j] for j in best],
             brand_names=[d["brands"].at[opt.bids[j], "brand_name"] for j in best],
             products={opt.bids[j]: d["products"].iloc[parts["best_product"][i, j]]["product"] for j in best},
@@ -67,12 +67,14 @@ def main():
             value=tool_v,
             habit_brands=[opt.bids[j] for j in opt.habit_for(i)], habit_match=round(habit["match"], 3),
             habit_exp_reviews=round(habit["reviews"], 1), habit_value=habit_v,
-            reasons=lineup_reasons(d, opt, i, best, res, habit, brand_reason))
+            reasons=lineup_reasons(d, opt, i, best, res, habit, brand_reason),
+            **ui_extras(d, opt, parts, events, i, best, res))
         # brand-level scores in the context of the best lineup's sign-ups
         s = res["signups"]
         for j, bid in enumerate(opt.bids):
             rs = brand_reason(i, j)
             score_rows.append(dict(event_id=e.event_id, brand_id=bid,
+                                   best_product_id=d["products"].iloc[parts["best_product"][i, j]]["product_id"],
                                    product=d["products"].iloc[parts["best_product"][i, j]]["product"],
                                    match=round(float(parts["match"][i, j]), 4), fit=round(float(parts["fit"][i, j]), 4),
                                    exp_signups=round(s, 1), exp_reviews=round(s * opt.r[i, j], 2),
@@ -95,17 +97,12 @@ def main():
     check(d, events, scores, lineups, profs, impact, A)
 
     OUT.mkdir(exist_ok=True)
-    (OUT / "stubs").mkdir(exist_ok=True)
     scores.to_csv(OUT / "scores.csv", index=False)
     to_json(lineups, OUT / "lineups.json")
     to_json(profs, OUT / "profiles.json")
     to_json(impact, OUT / "impact.json")
     to_json(month, OUT / "month_plan.json")
-    scores.head(5).to_csv(OUT / "stubs" / "scores.csv", index=False)
-    to_json(dict(list(lineups.items())[:5]), OUT / "stubs" / "lineups.json")
-    to_json(dict(list(profs.items())[:5]), OUT / "stubs" / "profiles.json")
-    to_json({k: v for k, v in impact.items() if k != "per_popup"}, OUT / "stubs" / "impact.json")
-    to_json({**month, "popups": month["popups"][:2]}, OUT / "stubs" / "month_plan.json")
+    to_json(event_audience(events, parts), OUT / "event_audience.json")
 
     nv = np.mean([v["value"]["net_value"] for v in lineups.values()])
     hv = np.mean([v["habit_value"]["net_value"] for v in lineups.values()])
@@ -120,6 +117,51 @@ def main():
     print(f"Month plan {month['month']}: {len(month['popups'])} pop-ups, net value £{month['net_value']:.0f} "
           f"vs usual £{month['habit_net_value']:.0f}; {month['skipped_events']} events skipped as likely losses")
     print(f"Wrote outputs to {OUT}/")
+
+
+STALL_SIZES = {"small": 0.6, "medium": 1.0, "large": 1.5}     # units multiplier per stall size
+
+
+def ui_extras(d, opt, parts, events, i, best, res):
+    """Extra fields the PopUpPick website shows; all computed here, never in the browser."""
+    e = events.iloc[i]
+    b = d["brands"]
+    prod = {opt.bids[j]: d["products"].iloc[parts["best_product"][i, j]] for j in best}
+    per_arch = parts["per_arch"][i, best]                                   # lineup x archetypes
+    winner = {a: prod[opt.bids[best[k]]]["product_id"] for a, k in zip(ARCHETYPES, per_arch.argmax(0))}
+    restricted = bool(e["event_type"] in NO_ADULTS or e["family_event"])
+    lb = b.loc[[opt.bids[j] for j in best]]
+    stops = opt.stops[i]
+    units_by_size = {opt.bids[j]: {k: int(min(np.ceil(stops * f * 1.2), opt.stock[j])) for k, f in STALL_SIZES.items()}
+                     for j in best}
+    return dict(
+        title=e["name"], start=e["start"].strftime("%Y-%m-%d %H:%M"),
+        end=e["end"].round("min").strftime("%Y-%m-%d %H:%M"), indoor=int(e["indoor"]),
+        description=str(e.get("description", ""))[:400], cost=round(float(e["cost"]), 2),
+        product_ids={bid: p["product_id"] for bid, p in prod.items()},
+        product_reviews={opt.bids[j]: round(float(res["signups"] * opt.r[i, j]), 1) for j in best},
+        product_matches={opt.bids[j]: round(float(parts["match"][i, j]), 3) for j in best},
+        archetype_winner=winner,
+        checks=dict(vegan=bool((lb["vegan"] == 1).any()), gluten_free=bool((lb["gluten_free"] == 1).any()),
+                    chilled_ok=bool((lb["needs_chilling"] == 1).sum() <= MAX_CHILLED),
+                    alcohol_ok=bool(not (restricted and (lb["adults_only"] == 1).any())),
+                    in_stock=bool(all(opt.units[i, j] <= opt.stock[j] for j in best))),
+        adults_restricted=restricted,
+        units_by_size=units_by_size,
+        size_line=f"{len(best)} products for about {int(e['footfall'])} people")
+
+
+def event_audience(events, parts):
+    """Crowd archetype mix per event, for the 'Who is attending' panel and archetype chips."""
+    out = {}
+    for i, e in enumerate(events.itertuples()):
+        mix = parts["mix"][i]
+        order = np.argsort(-mix)
+        out[e.event_id] = dict(crowd={a: round(float(v), 4) for a, v in zip(ARCHETYPES, mix)},
+                               top_archetypes=[ARCHETYPES[k] for k in order[:3]],
+                               source_note="estimated crowd mix: the event's keyword archetype scores, blended "
+                                           "with the WatchHumans population")
+    return out
 
 
 def money(opt, i, lineup, res, cost, A):
@@ -139,7 +181,7 @@ def check(d, events, scores, lineups, profs, impact, A):
         assert (lb["vegan"] == 1).any() and (lb["gluten_free"] == 1).any() and (lb["needs_chilling"] == 1).sum() <= 2, eid
     assert len(profs) == len(b) and all(len(p["fit_by_type"]) == len(d["event_types"]) for p in profs.values())
     assert impact["review_ci_low"] <= impact["review_uplift"] <= impact["review_ci_high"]
-    assert (events["expected_attendance"] < A["max_attendance"]).all()
+    assert (events["footfall"] < A["max_attendance"]).all()
 
 
 if __name__ == "__main__":

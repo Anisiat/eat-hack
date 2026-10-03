@@ -1,21 +1,21 @@
 """Step 1: archetype match between each event's expected crowd and each brand's products.
 
 Three archetype profiles meet here (10 WatchHumans archetypes each):
-  crowd_e      expected archetype mix at event e: the crowd table's assumption for its type, updated with the
-               archetypes of people who signed up at past pop-ups of that type, nudged by the event's tags
+  crowd_e      expected archetype mix at event e. For real events: the event's own archetype scores from
+               events_archetypes.csv, rescaled so the top archetype is 1 and made into shares. For past pop-ups:
+               the crowd table's assumption for the type, updated with who signed up at past pop-ups
   aff_p        how much each archetype likes product p: the brand sheet's phrases (data/mappings), updated
                with WatchHumans ratings by reviewer archetype (shrunk towards the sheet when reviews are few)
   match_{p,e}  = sum_a crowd_e[a] x aff_p[a]: how much the average person at e will like p
 
-fit_{b,e} = max over b's products of  match_{p,e} x (0.5 + 0.5 cos(needs_p, needs_e)) x c_{b,e}
-The need-state term is the moment (thirst after a run, the afternoon slump); c is practical context.
+fit_{b,e} = max over b's products of  match_{p,e}  x  c_{b,e}      (c is practical context: chilling outdoors)
 """
 from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
 
-from .data import ARCHETYPES, NEEDS, nice, pct
+from .data import ARCHETYPES, nice, pct
 
 PRIOR_WEIGHT = 50       # sign-ups of evidence the assumed crowd mix is worth
 SHRINK_K = 20           # reviews from one archetype at which ratings and the sheet count equally
@@ -66,6 +66,9 @@ def train(d):
 
 
 def event_mix(fm, events):
+    crowd = [f"crowd_{a}" for a in ARCHETYPES]
+    if set(crowd) <= set(events.columns):                    # real events carry their own archetype mix
+        return events[crowd].to_numpy(float)
     mix = fm.type_mix.loc[events["event_type"]].to_numpy().copy()
     for i, tags in enumerate(events["audience_tags"].fillna("")):
         for t in filter(None, str(tags).split("|")):
@@ -79,14 +82,10 @@ def score(d, fm, events):
     brands, et, pr = d["brands"], d["event_types"], d["products"]
     bids = list(brands.index)
     mix = event_mix(fm, events)                                              # E x A
-    n_e = et.loc[events["event_type"], [f"need_{n}" for n in NEEDS]].to_numpy(float)
 
     # product affinities: the sheet's product profile, shifted by what reviews taught us about its brand
     shift = (fm.aff - fm.aff_prior).loc[pr["brand_id"]].to_numpy()
     aff_p = np.clip(pr[[f"arch_{a}" for a in ARCHETYPES]].to_numpy(float) + shift, 0, 1)   # P x A
-    n_p = pr[[f"need_{n}" for n in NEEDS]].to_numpy(float)
-    cos_p = (n_e @ n_p.T) / (np.linalg.norm(n_e, axis=1)[:, None] * np.linalg.norm(n_p, axis=1)[None, :] + 1e-9)
-    moment_p = 0.5 + 0.5 * cos_p                                             # E x P
     match_p = mix @ aff_p.T                                                  # E x P
 
     outdoor = (events["indoor"].to_numpy() == 0)[:, None]
@@ -104,24 +103,20 @@ def score(d, fm, events):
     fit = np.zeros((E, B))
     best = np.zeros((E, B), int)
     match = np.zeros((E, B))
-    moment = np.zeros((E, B))
     per_arch = np.zeros((E, B, A))       # each archetype's liking of the brand's chosen product, in context
     for j in range(B):
         idx = np.flatnonzero(p_brand == j)
-        sc = match_p[:, idx] * moment_p[:, idx]
+        sc = match_p[:, idx]
         k = sc.argmax(1)
         best[:, j] = idx[k]
         rows = np.arange(E)
         match[:, j] = match_p[rows, idx[k]]
-        moment[:, j] = moment_p[rows, idx[k]]
         fit[:, j] = sc[rows, k] * c[:, j]
-        per_arch[:, j, :] = aff_p[idx[k]] * (moment[:, j] * c[:, j])[:, None]
+        per_arch[:, j, :] = aff_p[idx[k]] * c[:, j][:, None]
 
     target = brands[[f"target_{a}" for a in ARCHETYPES]].to_numpy(float)
     q = mix @ target.T                                                       # crowd share in target archetypes
-    top_need = (n_e[:, None, :] * n_p[best]).argmax(2)
-    return dict(fit=fit, match=match, moment=moment, c=c, q=q, mix=mix, per_arch=per_arch,
-                best_product=best, top_need=top_need)
+    return dict(fit=fit, match=match, c=c, q=q, mix=mix, per_arch=per_arch, best_product=best)
 
 
 def coverage(parts, i, lineup):
@@ -139,10 +134,11 @@ def reasons(d, fm, events, parts, i, j):
     contrib = mix * fm.aff.loc[bid].to_numpy()
     top = [ARCHETYPES[k] for k in np.argsort(-contrib)[:2]]
     share = sum(mix[ARCHETYPES.index(a)] for a in top)
-    need = NEEDS[parts["top_need"][i, j]]
+    best_arch = fm.aff.loc[bid].idxmax()
     out = [f"{prod['product']} suits the expected crowd: {pct(share)} are {nice(top[0])}s or {nice(top[1])}s, "
            f"who like it (affinity {fm.aff.at[bid, top[0]]:.2f}, {fm.aff.at[bid, top[1]]:.2f})",
-           f"{need.capitalize()} need fits the {nice(etype)} moment (moment fit {parts['moment'][i, j]:.2f})"]
+           f"Archetype match {parts['match'][i, j]:.2f} at this {nice(etype)} event; the brand's strongest "
+           f"archetype is {nice(best_arch)} ({fm.aff.at[bid, best_arch]:.2f})"]
     n = int(fm.aff_n.loc[bid, top[0]])
     gap = fm.aff.at[bid, top[0]] - fm.aff_prior.at[bid, top[0]]
     if n >= 10:

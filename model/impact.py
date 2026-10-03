@@ -2,7 +2,7 @@
 
 For each test pop-up the trained model picks a lineup (sized to the crowd). The tool lineup and RGC's usual
 lineup of the same size are then played out in the generator's hidden world (simulate, expected values), and
-both are valued with data/value_assumptions.csv. This is the only module that touches the generator, and only
+both are valued with data/assumptions/value_assumptions.csv. This is the only module that touches the generator, and only
 to judge, never to choose.
 """
 import sys
@@ -68,5 +68,5 @@ def uplift_test(d, opt_test, test, A):
         yearly_impact_gbp=round(12 * (gain * per_month + t["gbp_per_month"]), 2),
         n_test=len(test),
         method="tool vs usual lineup (same size) at the same 12 held-out pop-ups; outcomes from the synthetic "
-               "world, valued with data/value_assumptions.csv; 95% bootstrap CIs",
+               "world, valued with data/assumptions/value_assumptions.csv; 95% bootstrap CIs",
         per_popup=rows)

@@ -2,14 +2,13 @@
 generate_watchhumans_data.py - synthetic WatchHumans users and reviews for Pop-up Pick (EAT_HACK).
 
 Reads (from the output folder): popups.csv, popup_brands.csv
-Reads: data/raw/borough_census_2021.csv  (run get_borough_census.py first)
-Writes three files to the output folder (default: repo root):
-  users.csv     5,000 WatchHumans users: borough, archetype scores, traits, category affinities, diet, sign-up source
+Writes two files to the output folder (default: repo root):
+  users.csv     5,000 WatchHumans users: archetype scores, 10 traits, 10 category affinities, diet,
+                sign-up source (archetype definitions shared with generate_watchhumans_synthetic.py)
   reviews.csv   about 20,000 reviews; pop-up reviews reconcile exactly with popup_brands.csv
-  boroughs.csv  33 London boroughs: real Census 2021 population and 18-34 share, plus WatchHumans users
 
-Each user has a primary archetype (one of the 10 WatchHumans archetypes) and a score on all 10. A review is
-qualified when the reviewer's primary archetype is one of the brand's target archetypes. Hidden truth (brand
+Each user has a primary archetype (one of the 10 WatchHumans archetypes) and a score on all 10. Pop-up
+reviews match popup_brands.csv on count and average rating; in_target_archetype is informational only. Hidden truth (brand
 quality, true archetype affinities) comes from generate_popups.py and is never written out.
 
 Run:  python scripts/generate_watchhumans_data.py [output_folder]
@@ -21,45 +20,28 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from generate_popups import ARCHETYPES, BRAND, EVENT, QUALITY, TRUE_AFF  # noqa: E402
+import paths  # noqa: E402
+from generate_popups import BRAND, EVENT, QUALITY, TRUE_AFF  # noqa: E402
+from build_brand_features import ROLE_TO_PROFILE  # noqa: E402  (brand role -> WatchHumans category)
+from generate_watchhumans_synthetic import (  # noqa: E402
+    ARCHETYPE_PREVALENCE, ARCHETYPE_TRAITS, ARCHETYPES,
+    generate_archetype_scores, generate_category_affinities, generate_trait_scores)
 
 SEGMENTS = ARCHETYPES      # users' primary archetype plays the role a segment used to
 
 SEED = 42
 N_USERS = 5000
 N_REVIEWS = 20000
-ROOT = Path(__file__).resolve().parents[1]
-CENSUS = ROOT / "data" / "raw" / "borough_census_2021.csv"
 PERIOD = (pd.Timestamp("2024-04-01"), pd.Timestamp("2026-09-30"))
-CATEGORIES = ["drink", "savoury", "sweet", "condiment", "functional", "other"]
+CATEGORIES = ["drink", "savoury", "sweet", "condiment", "functional", "other"]   # brand lineup roles
 DIETS = ["vegetarian", "vegan", "gluten_free", "dairy_free", "nut_allergy"]
 
 rng = np.random.default_rng(SEED)
 
-# ---------------------------------------------------------------- archetype profiles
-# The 10 WatchHumans archetypes. Prevalence among users who sign up organically (synthetic assumption).
-ARCHETYPE_PREVALENCE = dict(wellness_seeker=.12, trend_enthusiast=.13, thoughtful_buyer=.11, smart_saver=.09,
-                            quality_seeker=.10, on_the_go_shopper=.10, impulse_buyer=.08, experience_explorer=.11,
-                            everyday_planner=.08, conscious_consumer=.08)
-# age: (mean, sd, low, high); traits and food-category affinities: expected values 0 to 1
-_T = ["health_consciousness", "novelty_seeking", "social_influence", "price_sensitivity", "convenience_orientation",
-      "sustainability_orientation"]
-_C = ["drink", "savoury", "sweet", "condiment", "functional", "other"]
-_P = {  # age, traits (_T order), category affinities (_C order), diet multiplier
-    "wellness_seeker":     ((31, 6), [.90, .60, .55, .45, .55, .75], [.75, .45, .35, .45, .90, .50], 1.8),
-    "trend_enthusiast":    ((25, 4), [.50, .95, .95, .35, .55, .55], [.80, .60, .65, .55, .65, .45], 1.1),
-    "thoughtful_buyer":    ((36, 8), [.65, .40, .35, .55, .35, .70], [.60, .50, .45, .65, .55, .40], 1.3),
-    "smart_saver":         ((27, 7), [.45, .35, .35, .95, .60, .45], [.60, .70, .65, .50, .40, .35], 0.8),
-    "quality_seeker":      ((38, 8), [.65, .55, .45, .15, .35, .65], [.70, .55, .60, .85, .50, .50], 1.0),
-    "on_the_go_shopper":   ((30, 6), [.50, .45, .45, .50, .95, .40], [.80, .70, .55, .30, .70, .55], 0.8),
-    "impulse_buyer":       ((24, 4), [.40, .75, .75, .55, .70, .35], [.75, .80, .85, .45, .40, .40], 0.8),
-    "experience_explorer": ((29, 6), [.55, .90, .65, .35, .35, .60], [.80, .65, .60, .85, .45, .40], 1.0),
-    "everyday_planner":    ((40, 8), [.55, .20, .25, .65, .70, .50], [.55, .60, .55, .70, .50, .45], 0.8),
-    "conscious_consumer":  ((33, 7), [.75, .55, .40, .35, .35, .95], [.65, .50, .45, .60, .55, .60], 1.8),
-}
-SEGMENT_PROFILE = {a: dict(age=(m, sd, 18, 65), traits=dict(zip(_T, t)), affinity=dict(zip(_C, c)), diet_mult=dm)
-                   for a, ((m, sd), t, c, dm) in _P.items()}
-TRAITS = _T
+# ---------------------------------------------------------------- shared WatchHumans definitions
+# Archetypes, prevalence, the 10 behavioural traits and the category profiles all come from
+# generate_watchhumans_synthetic.py: the single source of truth for what a WatchHumans user is.
+TRAITS = list(next(iter(ARCHETYPE_TRAITS.values())))
 DIET_BASE = dict(vegetarian=.08, vegan=.04, gluten_free=.05, dairy_free=.06, nut_allergy=.02)
 
 # what reviewers like or dislike, by brand category
@@ -74,84 +56,51 @@ ATTRIBUTES = {
 }
 
 
-def clip01(x):
-    return np.clip(x, 0, 1)
-
-
 def age_band(age):
     return "18-24" if age < 25 else "25-34" if age < 35 else "35-44" if age < 45 else "45+"
 
 
 # ---------------------------------------------------------------- users
-def make_person(segment, borough, source, signup_date):
-    prof = SEGMENT_PROFILE[segment]
-    m, sd, lo, hi = prof["age"]
-    age = int(np.clip(round(rng.normal(m, sd)), lo, hi))
-    scores = {s: float(clip01(rng.normal(.30, .15))) for s in SEGMENTS}
-    scores[segment] = float(clip01(rng.normal(.85, .08)))
-    others = sorted((s for s in SEGMENTS if s != segment), key=scores.get, reverse=True)
-    if scores[others[0]] >= scores[segment]:          # primary always has the top score
-        scores[others[0]] = scores[segment] - .05
-    diet = [d for d in DIETS if rng.random() < DIET_BASE[d] * prof["diet_mult"]]
+def make_person(primary, source, signup_date):
+    """One WatchHumans user, built exactly as generate_watchhumans_synthetic.py builds them, except that the
+    primary archetype is fixed (pop-up sign-ups are drawn from the event's crowd)."""
+    scores = generate_archetype_scores(primary, rng)
+    top = max(scores, key=scores.get)
+    if top != primary:                                   # keep the drawn primary on top
+        scores[primary], scores[top] = scores[top], scores[primary]
+    secondary = max((a for a in ARCHETYPES if a != primary), key=scores.get)
+    traits = generate_trait_scores(scores, rng)
+    affinities = generate_category_affinities(scores, rng)
+    age = int(np.clip(rng.normal(29, 7), 18, 55))
+    # dietary needs rise with health and sustainability orientation (pipeline addition)
+    mult = 0.4 + traits["health_consciousness"] + 0.6 * traits["sustainability_orientation"]
+    diet = [d for d in DIETS if rng.random() < DIET_BASE[d] * mult]
     if "vegan" in diet and "vegetarian" in diet:
         diet.remove("vegetarian")
-    row = dict(age=age, age_band=age_band(age), borough=borough, primary_archetype=segment,
-               secondary_archetype=others[0])
-    row.update({f"{s}_score": round(scores[s], 3) for s in SEGMENTS})
-    row.update({t: round(float(clip01(rng.normal(v, .10))), 3) for t, v in prof["traits"].items()})
-    row.update({f"{c}_affinity": round(float(clip01(rng.normal(v, .12))), 3) for c, v in prof["affinity"].items()})
+    row = dict(age=age, age_band=age_band(age), primary_archetype=primary,
+               secondary_archetype=secondary)
+    row.update({f"{a}_score": round(scores[a], 3) for a in ARCHETYPES})
+    row.update({t: round(v, 3) for t, v in traits.items()})
+    row.update({f"{c}_affinity": round(v, 3) for c, v in affinities.items()})
     row.update(dietary_needs="|".join(diet) if diet else "none", signup_source=source,
                signup_date=signup_date)
     return row
 
 
-def popup_segments(n, mix, needs):
-    """Segments for one pop-up's n sign-ups, drawn from the event mix, repaired until every brand's
-    review and qualified-review counts are feasible.  needs: list of (target_set, reviews, qualified)."""
-    def violation(seg):
-        v = 0
-        for tgt, r, q in needs:
-            inside = sum(s in tgt for s in seg)
-            v += max(0, q - inside) + max(0, (r - q) - (n - inside))
-        return v
-
-    seg = list(rng.choice(SEGMENTS, n, p=mix))
-    for _ in range(200):
-        if violation(seg) == 0:
-            return seg
-        seg = list(rng.choice(SEGMENTS, n, p=mix))
-    # local repair: flip single users while it lowers the violation
-    best = violation(seg)
-    while best:
-        i, s = int(rng.integers(n)), SEGMENTS[rng.integers(len(SEGMENTS))]
-        old, seg[i] = seg[i], s
-        v = violation(seg)
-        if v <= best:
-            best = v
-        else:
-            seg[i] = old
-    return seg
+def popup_segments(n, mix):
+    """Primary archetypes for one pop-up's n sign-ups, drawn from the event's expected crowd."""
+    return list(rng.choice(SEGMENTS, n, p=mix))
 
 
-def make_users(popups, popup_brands, census):
-    boroughs = census["borough"].tolist()
-    w_any = census["pop_18_34"].to_numpy(float)
-    w_any /= w_any.sum()
-    w_org = census["pop_18_34"].to_numpy(float) * np.where(census["inner_outer"] == "inner", 1.5, 1.0)
-    w_org /= w_org.sum()
-
+def make_users(popups, popup_brands):
     users, popup_members = [], {}
     for p in popups.itertuples():
         n = int(p.signups)
-        rows = popup_brands[popup_brands["popup_id"] == p.popup_id]
-        needs = [(set(BRAND[r.brand_id]["targets"]), int(r.reviews), int(r.qualified_reviews))
-                 for r in rows.itertuples()]
-        segs = popup_segments(n, EVENT[p.event_type]["mix"], needs)
+        segs = popup_segments(n, EVENT[p.event_type]["mix"])
         members = []
         for s in segs:
-            b = p.borough if rng.random() < .5 else boroughs[rng.choice(len(boroughs), p=w_any)]
             members.append(len(users))
-            users.append(make_person(s, b, p.popup_id, p.date))
+            users.append(make_person(s, p.popup_id, p.date))
         popup_members[p.popup_id] = members
 
     n_organic = N_USERS - len(users)
@@ -160,9 +109,8 @@ def make_users(popups, popup_brands, census):
     days = (PERIOD[1] - PERIOD[0]).days
     for _ in range(n_organic):
         s = SEGMENTS[rng.choice(len(SEGMENTS), p=org_mix)]
-        b = boroughs[rng.choice(len(boroughs), p=w_org)]
         d = (PERIOD[0] + pd.Timedelta(days=int(rng.integers(days + 1)))).date().isoformat()
-        users.append(make_person(s, b, "organic", d))
+        users.append(make_person(s, "organic", d))
 
     df = pd.DataFrame(users)
     # ids in sign-up order
@@ -218,15 +166,11 @@ def make_reviews(users, popups, popup_brands, popup_members):
     pdate = popups.set_index("popup_id")["date"]
     rows = []
     for r in popup_brands.itertuples():
-        n_rev, n_q = int(r.reviews), int(r.qualified_reviews)
+        n_rev = int(r.reviews)
         if n_rev == 0:
             continue
-        b = BRAND[r.brand_id]
         members = popup_members[r.popup_id]
-        inside = [m for m in members if u.at[m, "primary_archetype"] in b["targets"]]
-        outside = [m for m in members if u.at[m, "primary_archetype"] not in b["targets"]]
-        chosen = (list(rng.choice(inside, n_q, replace=False)) +
-                  list(rng.choice(outside, n_rev - n_q, replace=False)))
+        chosen = list(rng.choice(members, n_rev, replace=False))     # any of the pop-up's sign-ups
         for uid, rating in zip(chosen, ratings_with_mean(n_rev, r.avg_rating)):
             d = pd.Timestamp(pdate[r.popup_id]) + pd.Timedelta(days=int(rng.integers(0, 8)))
             rows.append(review_row(uid, r.brand_id, r.popup_id, d, int(rating), u.at[uid, "price_sensitivity"]))
@@ -237,7 +181,7 @@ def make_reviews(users, popups, popup_brands, popup_members):
     true_aff = np.array([TRUE_AFF[b] for b in bids])                          # brands x archetypes (hidden)
     cat_idx = [CATEGORIES.index(BRAND[b]["category"]) for b in bids]
     seg_scores = users[[f"{s}_score" for s in SEGMENTS]].to_numpy()
-    affinity = users[[f"{c}_affinity" for c in CATEGORIES]].to_numpy()
+    affinity = users[[f"{ROLE_TO_PROFILE[c]}_affinity" for c in CATEGORIES]].to_numpy()   # per brand role
     activity = .5 + users["social_influence"].to_numpy() + users["novelty_seeking"].to_numpy()
     activity *= (PERIOD[1] - pd.to_datetime(users["signup_date"])).dt.days.to_numpy() + 14
     activity /= activity.sum()
@@ -276,28 +220,16 @@ def review_row(uid, bid, popup_id, date, rating, price_sensitivity):
                 liked_attribute=liked, disliked_attribute=disliked)
 
 
-# ---------------------------------------------------------------- boroughs
-def make_boroughs(census, users):
-    counts = users["borough"].value_counts()
-    df = census.copy()
-    df["watchhumans_users"] = df["borough"].map(counts).fillna(0).astype(int)
-    df["watchhumans_users_per_1000"] = (1000 * df["watchhumans_users"] / df["population_2021"]).round(3)
-    df["source"] = "census_2021; watchhumans_users synthetic"
-    return df
-
-
 # ---------------------------------------------------------------- checks
-def check(users, reviews, boroughs, popups, popup_brands):
+def check(users, reviews, popups, popup_brands):
     assert len(users) == N_USERS and users["user_id"].is_unique
-    assert len(boroughs) == 33 and set(users["borough"]) <= set(boroughs["borough"])
-    assert boroughs["watchhumans_users"].sum() == N_USERS
     per_popup = users[users["signup_source"] != "organic"]["signup_source"].value_counts()
     assert (per_popup.reindex(popups["popup_id"]).fillna(0).astype(int).values == popups["signups"].values).all()
     pr = reviews[reviews["popup_id"] != ""].groupby(["popup_id", "brand_id"]).agg(
-        reviews=("rating", "size"), qualified_reviews=("in_target_archetype", "sum"), mean=("rating", "mean"))
+        reviews=("rating", "size"), mean=("rating", "mean"))
     pb = popup_brands[popup_brands["reviews"] > 0].set_index(["popup_id", "brand_id"])
     pr = pr.reindex(pb.index)
-    assert (pr["reviews"] == pb["reviews"]).all() and (pr["qualified_reviews"] == pb["qualified_reviews"]).all()
+    assert (pr["reviews"] == pb["reviews"]).all()
     assert ((pr["mean"] - pb["avg_rating"]).abs() <= np.maximum(.05, .5 / pb["reviews"]) + 1e-9).all()
     assert not reviews.duplicated(["user_id", "brand_id"]).any()
     signup = users.set_index("user_id")["signup_date"]
@@ -305,19 +237,16 @@ def check(users, reviews, boroughs, popups, popup_brands):
 
 
 if __name__ == "__main__":
-    out_dir = Path(sys.argv[1] if len(sys.argv) > 1 else ROOT)
+    out_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else paths.SYNTHETIC
     popups = pd.read_csv(out_dir / "popups.csv")
     popup_brands = pd.read_csv(out_dir / "popup_brands.csv")
-    census = pd.read_csv(CENSUS)
 
-    users, members = make_users(popups, popup_brands, census)
+    users, members = make_users(popups, popup_brands)
     reviews = make_reviews(users, popups, popup_brands, members)
-    boroughs = make_boroughs(census, users)
-    check(users, reviews, boroughs, popups, popup_brands)
+    check(users, reviews, popups, popup_brands)
 
     users.to_csv(out_dir / "users.csv", index=False)
     reviews.to_csv(out_dir / "reviews.csv", index=False)
-    boroughs.to_csv(out_dir / "boroughs.csv", index=False)
     print(f"Wrote {len(users)} users ({(users['signup_source'] != 'organic').sum()} from pop-ups), "
           f"{len(reviews)} reviews ({(reviews['popup_id'] != '').sum()} at pop-ups), "
-          f"{len(boroughs)} boroughs to {out_dir}/")
+          f"to {out_dir}/")

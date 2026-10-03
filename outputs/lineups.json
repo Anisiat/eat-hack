@@ -1,1955 +1,206 @@
 {
-  "E001": {
-    "name": "Neighbourhood market stall day, Brockley Market",
-    "date": "2026-10-10",
-    "event_type": "community",
-    "borough": "Lewisham",
-    "expected_attendance": 60,
+  "3Jyn4fRsEkXf3Ba9SQ": {
+    "name": "Crossover Service",
+    "date": "2026-12-31",
+    "event_type": "concerts",
+    "category": "concerts",
+    "latitude": 51.493084,
+    "longitude": 0.0386859999999842,
+    "km_from_london": 11.6,
+    "family_event": false,
+    "expected_attendance": 81,
     "lineup_size": 3,
     "brands": [
-      "B36",
-      "B08",
-      "B39"
+      "B03",
+      "B30",
+      "B49"
     ],
     "brand_names": [
-      "HOOP",
-      "Dr. Will’s",
-      "SUCSEED"
+      "The Protein Ball Co.",
+      "Ottolenghi",
+      "NOMO"
     ],
     "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B08": "Avocado Oil Mayo",
-      "B39": "Energy"
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B30": "Miso Pesto",
+      "B49": "Caramel Choc Bar"
     },
     "units": {
-      "B36": 32,
-      "B08": 32,
-      "B39": 32
-    },
-    "slot": "11:00-13:00",
-    "archetype_mix": {
-      "wellness_seeker": 0.114,
-      "trend_enthusiast": 0.057,
-      "thoughtful_buyer": 0.147,
-      "smart_saver": 0.109,
-      "quality_seeker": 0.09,
-      "on_the_go_shopper": 0.05,
-      "impulse_buyer": 0.08,
-      "experience_explorer": 0.087,
-      "everyday_planner": 0.156,
-      "conscious_consumer": 0.11
-    },
-    "match": 0.609,
-    "exp_signups": 6.7,
-    "exp_reviews": 7.4,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 294.48,
-      "publicity_value": 0.0,
-      "est_video_views": 553.11,
-      "product_cost": 48.0,
-      "event_cost": 125.0,
-      "net_value": 121.48,
-      "units_total": 96,
-      "p_waste": 0.1
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17"
-    ],
-    "habit_match": 0.543,
-    "habit_exp_reviews": 6.7,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 268.93,
-      "publicity_value": 0.0,
-      "est_video_views": 505.13,
-      "product_cost": 48.0,
-      "event_cost": 125.0,
-      "net_value": 95.93,
-      "units_total": 96,
-      "p_waste": 0.227
-    },
-    "reasons": [
-      "Archetype match 0.61 against 0.54 for the usual lineup: Dr. Will’s for everyday planners; Dr. Will’s for thoughtful buyers; HOOP for wellness seekers",
-      "Expected 7 reviews and 7 sign-ups, against 7 reviews for the usual lineup (+9%)",
-      "2 vegan and 2 gluten-free options; covers condiment, savoury"
-    ]
-  },
-  "E002": {
-    "name": "DJ night, The Sebright Arms",
-    "date": "2026-10-15",
-    "event_type": "concerts",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 190,
-    "lineup_size": 5,
-    "brands": [
-      "B48",
-      "B36",
-      "B46",
-      "B07",
-      "B13"
-    ],
-    "brand_names": [
-      "Mr Filbert’s",
-      "HOOP",
-      "Mission",
-      "Helen Browning’s Organic",
-      "mindfuel flow"
-    ],
-    "products": {
-      "B48": "Teriyaki Mochi Rice Bites",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B46": "Lemon & Ginseng Natural Energy Drink",
-      "B07": "Organic Corned Beef",
-      "B13": "Mushroom Iced Latte — Salted Caramel"
-    },
-    "units": {
-      "B48": 53,
-      "B36": 53,
-      "B46": 53,
-      "B07": 53,
-      "B13": 53
+      "B03": 22,
+      "B30": 22,
+      "B49": 22
     },
     "slot": "21:00-23:00",
     "archetype_mix": {
-      "wellness_seeker": 0.034,
-      "trend_enthusiast": 0.204,
-      "thoughtful_buyer": 0.022,
-      "smart_saver": 0.067,
-      "quality_seeker": 0.028,
-      "on_the_go_shopper": 0.146,
-      "impulse_buyer": 0.19,
-      "experience_explorer": 0.247,
-      "everyday_planner": 0.017,
-      "conscious_consumer": 0.045
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.292,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.183,
+      "experience_explorer": 0.316,
+      "everyday_planner": 0.023,
+      "conscious_consumer": 0.024
     },
-    "match": 0.633,
-    "exp_signups": 8.3,
-    "exp_reviews": 16.0,
+    "match": 0.874,
+    "exp_signups": 3.5,
+    "exp_reviews": 3.8,
     "value": {
       "signup_value": 0.0,
-      "review_value": 640.58,
+      "review_value": 150.49,
       "publicity_value": 0.0,
-      "est_video_views": 1203.19,
-      "product_cost": 132.5,
-      "event_cost": 215.0,
-      "net_value": 293.08,
-      "units_total": 265,
-      "p_waste": 0.085
+      "est_video_views": 282.65,
+      "product_cost": 33.0,
+      "event_cost": 199.64,
+      "net_value": -82.15,
+      "units_total": 66,
+      "p_waste": 0.853
     },
     "habit_brands": [
       "B04",
       "B02",
-      "B17",
-      "B03",
-      "B26"
+      "B17"
     ],
-    "habit_match": 0.55,
-    "habit_exp_reviews": 14.9,
+    "habit_match": 0.524,
+    "habit_exp_reviews": 2.5,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 593.4,
+      "review_value": 99.1,
       "publicity_value": 0.0,
-      "est_video_views": 1114.57,
-      "product_cost": 132.5,
-      "event_cost": 215.0,
-      "net_value": 245.9,
-      "units_total": 265,
-      "p_waste": 0.102
+      "est_video_views": 186.13,
+      "product_cost": 33.0,
+      "event_cost": 199.64,
+      "net_value": -133.54,
+      "units_total": 66,
+      "p_waste": 0.961
     },
     "reasons": [
-      "Archetype match 0.63 against 0.55 for the usual lineup: Mr Filbert’s for experience explorers; mindfuel flow for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 16 reviews and 8 sign-ups, against 15 reviews for the usual lineup (+8%)",
-      "1 vegan and 3 gluten-free options; covers condiment, drink, savoury"
-    ]
+      "Archetype match 0.87 against 0.52 for the usual lineup: Ottolenghi for experience explorers; The Protein Ball Co. for trend enthusiasts; NOMO for impulse buyers",
+      "Expected 4 reviews and 4 sign-ups, against 2 reviews for the usual lineup (+52%)",
+      "2 vegan and 2 gluten-free options; covers condiment, functional, sweet"
+    ],
+    "title": "Crossover Service",
+    "start": "2026-12-31 21:00",
+    "end": "2026-12-31 23:59",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - New Year’s Eve crossover service with worship, prayer, and thanksgiving as we transition into the new year.",
+    "cost": 199.64,
+    "product_ids": {
+      "B03": "S040",
+      "B30": "S047",
+      "B49": "S070"
+    },
+    "product_reviews": {
+      "B03": 1.3,
+      "B30": 1.2,
+      "B49": 1.2
+    },
+    "product_matches": {
+      "B03": 0.4,
+      "B30": 0.344,
+      "B49": 0.334
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S040",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S070",
+      "smart_saver": "S070",
+      "quality_seeker": "S047",
+      "on_the_go_shopper": "S047",
+      "impulse_buyer": "S070",
+      "experience_explorer": "S047",
+      "everyday_planner": "S047",
+      "conscious_consumer": "S070"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B03": {
+        "small": 14,
+        "medium": 22,
+        "large": 33
+      },
+      "B30": {
+        "small": 14,
+        "medium": 22,
+        "large": 33
+      },
+      "B49": {
+        "small": 14,
+        "medium": 22,
+        "large": 33
+      }
+    },
+    "size_line": "3 products for about 81 people"
   },
-  "E003": {
-    "name": "Bonfire night street party, Queen Elizabeth Olympic Park",
-    "date": "2026-10-17",
-    "event_type": "festivals",
-    "borough": "Newham",
-    "expected_attendance": 190,
-    "lineup_size": 5,
-    "brands": [
-      "B36",
-      "B48",
-      "B04",
-      "B07",
-      "B18"
-    ],
-    "brand_names": [
-      "HOOP",
-      "Mr Filbert’s",
-      "Well & Truly",
-      "Helen Browning’s Organic",
-      "Navas"
-    ],
-    "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B48": "Teriyaki Mochi Rice Bites",
-      "B04": "Crunchies — Smokey Bacon",
-      "B07": "Organic Corned Beef",
-      "B18": "Original Tonic Water"
-    },
-    "units": {
-      "B36": 55,
-      "B48": 55,
-      "B04": 55,
-      "B07": 55,
-      "B18": 55
-    },
-    "slot": "14:00-17:00",
-    "archetype_mix": {
-      "wellness_seeker": 0.056,
-      "trend_enthusiast": 0.154,
-      "thoughtful_buyer": 0.063,
-      "smart_saver": 0.063,
-      "quality_seeker": 0.056,
-      "on_the_go_shopper": 0.07,
-      "impulse_buyer": 0.2,
-      "experience_explorer": 0.255,
-      "everyday_planner": 0.042,
-      "conscious_consumer": 0.042
-    },
-    "match": 0.641,
-    "exp_signups": 6.3,
-    "exp_reviews": 13.7,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 545.79,
-      "publicity_value": 0.0,
-      "est_video_views": 1025.14,
-      "product_cost": 137.5,
-      "event_cost": 255.0,
-      "net_value": 153.29,
-      "units_total": 275,
-      "p_waste": 0.242
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03",
-      "B26"
-    ],
-    "habit_match": 0.541,
-    "habit_exp_reviews": 12.5,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 497.55,
-      "publicity_value": 0.0,
-      "est_video_views": 934.55,
-      "product_cost": 137.5,
-      "event_cost": 255.0,
-      "net_value": 105.05,
-      "units_total": 275,
-      "p_waste": 0.28
-    },
-    "reasons": [
-      "Archetype match 0.64 against 0.54 for the usual lineup: Mr Filbert’s for experience explorers; HOOP for impulse buyers; Navas for trend enthusiasts",
-      "Expected 14 reviews and 6 sign-ups, against 12 reviews for the usual lineup (+10%)",
-      "2 vegan and 5 gluten-free options; covers condiment, drink, savoury"
-    ]
-  },
-  "E004": {
-    "name": "Winter street food night, Clapham Common",
-    "date": "2026-10-18",
-    "event_type": "festivals",
-    "borough": "Lambeth",
-    "expected_attendance": 110,
-    "lineup_size": 4,
-    "brands": [
-      "B36",
-      "B48",
-      "B31",
-      "B18"
-    ],
-    "brand_names": [
-      "HOOP",
-      "Mr Filbert’s",
-      "Sunfly",
-      "Navas"
-    ],
-    "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B48": "Teriyaki Mochi Rice Bites",
-      "B31": "Sunflower Seed Butter — Crunchy",
-      "B18": "Original Tonic Water"
-    },
-    "units": {
-      "B36": 32,
-      "B48": 32,
-      "B31": 32,
-      "B18": 32
-    },
-    "slot": "14:00-17:00",
-    "archetype_mix": {
-      "wellness_seeker": 0.056,
-      "trend_enthusiast": 0.154,
-      "thoughtful_buyer": 0.063,
-      "smart_saver": 0.063,
-      "quality_seeker": 0.056,
-      "on_the_go_shopper": 0.07,
-      "impulse_buyer": 0.2,
-      "experience_explorer": 0.255,
-      "everyday_planner": 0.042,
-      "conscious_consumer": 0.042
-    },
-    "match": 0.628,
-    "exp_signups": 3.3,
-    "exp_reviews": 5.7,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 226.86,
-      "publicity_value": 0.0,
-      "est_video_views": 426.11,
-      "product_cost": 64.0,
-      "event_cost": 215.0,
-      "net_value": -52.14,
-      "units_total": 128,
-      "p_waste": 0.762
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03"
-    ],
-    "habit_match": 0.54,
-    "habit_exp_reviews": 5.2,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 206.01,
-      "publicity_value": 0.0,
-      "est_video_views": 386.95,
-      "product_cost": 64.0,
-      "event_cost": 215.0,
-      "net_value": -72.99,
-      "units_total": 128,
-      "p_waste": 0.787
-    },
-    "reasons": [
-      "Archetype match 0.63 against 0.54 for the usual lineup: Mr Filbert’s for experience explorers; HOOP for impulse buyers; Navas for trend enthusiasts",
-      "Expected 6 reviews and 3 sign-ups, against 5 reviews for the usual lineup (+10%)",
-      "1 vegan and 3 gluten-free options; covers condiment, drink, savoury"
-    ]
-  },
-  "E005": {
-    "name": "Graduate careers fair, University campus, Mile End",
-    "date": "2026-10-19",
-    "event_type": "expos",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 190,
-    "lineup_size": 5,
-    "brands": [
-      "B07",
-      "B36",
-      "B05",
-      "B08",
-      "B30"
-    ],
-    "brand_names": [
-      "Helen Browning’s Organic",
-      "HOOP",
-      "INDI",
-      "Dr. Will’s",
-      "Ottolenghi"
-    ],
-    "products": {
-      "B07": "Organic Corned Beef",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B05": "Brain Bar",
-      "B08": "Avocado Oil Mayo",
-      "B30": "Miso Pesto"
-    },
-    "units": {
-      "B07": 84,
-      "B36": 84,
-      "B05": 84,
-      "B08": 84,
-      "B30": 84
-    },
-    "slot": "12:00-14:00",
-    "archetype_mix": {
-      "wellness_seeker": 0.063,
-      "trend_enthusiast": 0.15,
-      "thoughtful_buyer": 0.106,
-      "smart_saver": 0.24,
-      "quality_seeker": 0.073,
-      "on_the_go_shopper": 0.073,
-      "impulse_buyer": 0.125,
-      "experience_explorer": 0.079,
-      "everyday_planner": 0.053,
-      "conscious_consumer": 0.04
-    },
-    "match": 0.617,
-    "exp_signups": 38.4,
-    "exp_reviews": 78.8,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 3145.24,
-      "publicity_value": 0.0,
-      "est_video_views": 5907.67,
-      "product_cost": 210.0,
-      "event_cost": 205.0,
-      "net_value": 2730.24,
-      "units_total": 420,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03",
-      "B26"
-    ],
-    "habit_match": 0.492,
-    "habit_exp_reviews": 71.8,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 2868.58,
-      "publicity_value": 0.0,
-      "est_video_views": 5388.02,
-      "product_cost": 210.0,
-      "event_cost": 205.0,
-      "net_value": 2453.58,
-      "units_total": 420,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.62 against 0.49 for the usual lineup: Helen Browning’s Organic for smart savers; INDI for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 79 reviews and 38 sign-ups, against 72 reviews for the usual lineup (+10%)",
-      "2 vegan and 4 gluten-free options; covers condiment, savoury"
-    ]
-  },
-  "E006": {
-    "name": "Live gig, The Shacklewell Arms",
-    "date": "2026-10-24",
+  "gDLK5ug4Ziq8cFfxHL": {
+    "name": "New Year's Eve Celebration 2026",
+    "date": "2026-12-31",
     "event_type": "concerts",
-    "borough": "Hackney",
-    "expected_attendance": 90,
-    "lineup_size": 3,
-    "brands": [
-      "B36",
-      "B20",
-      "B46"
-    ],
-    "brand_names": [
-      "HOOP",
-      "The London Essence Co.",
-      "Mission"
-    ],
-    "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B20": "Original Indian Tonic Water",
-      "B46": "Lemon & Ginseng Natural Energy Drink"
-    },
-    "units": {
-      "B36": 25,
-      "B20": 25,
-      "B46": 25
-    },
-    "slot": "21:00-23:00",
-    "archetype_mix": {
-      "wellness_seeker": 0.033,
-      "trend_enthusiast": 0.155,
-      "thoughtful_buyer": 0.022,
-      "smart_saver": 0.067,
-      "quality_seeker": 0.028,
-      "on_the_go_shopper": 0.144,
-      "impulse_buyer": 0.245,
-      "experience_explorer": 0.245,
-      "everyday_planner": 0.017,
-      "conscious_consumer": 0.044
-    },
-    "match": 0.615,
-    "exp_signups": 3.4,
-    "exp_reviews": 4.0,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 161.02,
-      "publicity_value": 0.0,
-      "est_video_views": 302.44,
-      "product_cost": 37.5,
-      "event_cost": 165.0,
-      "net_value": -41.48,
-      "units_total": 75,
-      "p_waste": 0.746
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17"
-    ],
-    "habit_match": 0.546,
-    "habit_exp_reviews": 3.7,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 148.52,
-      "publicity_value": 0.0,
-      "est_video_views": 278.97,
-      "product_cost": 37.5,
-      "event_cost": 165.0,
-      "net_value": -53.98,
-      "units_total": 75,
-      "p_waste": 0.766
-    },
-    "reasons": [
-      "Archetype match 0.61 against 0.55 for the usual lineup: HOOP for impulse buyers; The London Essence Co. for experience explorers; Mission for trend enthusiasts",
-      "Expected 4 reviews and 3 sign-ups, against 4 reviews for the usual lineup (+8%)",
-      "1 vegan and 1 gluten-free options; covers drink, savoury"
-    ]
-  },
-  "E007": {
-    "name": "Tech meetup and demo night, Canary Wharf conference centre",
-    "date": "2026-10-28",
-    "event_type": "conferences",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 90,
-    "lineup_size": 3,
-    "brands": [
-      "B13",
-      "B07",
-      "B32"
-    ],
-    "brand_names": [
-      "mindfuel flow",
-      "Helen Browning’s Organic",
-      "ape2o"
-    ],
-    "products": {
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B07": "Organic Corned Beef",
-      "B32": "GO Steel Bottle — Turtle"
-    },
-    "units": {
-      "B13": 74,
-      "B07": 74,
-      "B32": 74
-    },
-    "slot": "15:00-16:30",
-    "archetype_mix": {
-      "wellness_seeker": 0.066,
-      "trend_enthusiast": 0.213,
-      "thoughtful_buyer": 0.098,
-      "smart_saver": 0.085,
-      "quality_seeker": 0.079,
-      "on_the_go_shopper": 0.256,
-      "impulse_buyer": 0.066,
-      "experience_explorer": 0.098,
-      "everyday_planner": 0.023,
-      "conscious_consumer": 0.016
-    },
-    "match": 0.588,
-    "exp_signups": 26.5,
-    "exp_reviews": 35.1,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 1400.98,
-      "publicity_value": 0.0,
-      "est_video_views": 2631.43,
-      "product_cost": 111.0,
-      "event_cost": 135.0,
-      "net_value": 1154.98,
-      "units_total": 222,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17"
-    ],
-    "habit_match": 0.461,
-    "habit_exp_reviews": 31.9,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 1275.43,
-      "publicity_value": 0.0,
-      "est_video_views": 2395.62,
-      "product_cost": 111.0,
-      "event_cost": 135.0,
-      "net_value": 1029.43,
-      "units_total": 222,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.59 against 0.46 for the usual lineup: ape2o for on the go shoppers; mindfuel flow for trend enthusiasts; mindfuel flow for thoughtful buyers",
-      "Expected 35 reviews and 26 sign-ups, against 32 reviews for the usual lineup (+10%)",
-      "1 vegan and 1 gluten-free options; covers condiment, drink, other"
-    ]
-  },
-  "E008": {
-    "name": "Rugby international screening, Big-screen pub, Brixton",
-    "date": "2026-10-31",
-    "event_type": "sports",
-    "borough": "Lambeth",
-    "expected_attendance": 130,
+    "category": "concerts",
+    "latitude": 55.9560319,
+    "longitude": -3.4031212,
+    "km_from_london": 539.4,
+    "family_event": false,
+    "expected_attendance": 144,
     "lineup_size": 4,
     "brands": [
-      "B15",
-      "B36",
-      "B17",
-      "B07"
-    ],
-    "brand_names": [
-      "DASH",
-      "HOOP",
-      "Gut Food / Ferment Fizz",
-      "Helen Browning’s Organic"
-    ],
-    "products": {
-      "B15": "Pink Lady Apple Sparkling Water",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B17": "Lemon Lemonade",
-      "B07": "Organic Corned Beef"
-    },
-    "units": {
-      "B15": 64,
-      "B36": 64,
-      "B17": 64,
-      "B07": 64
-    },
-    "slot": "21:15-22:15 (finish)",
-    "archetype_mix": {
-      "wellness_seeker": 0.373,
-      "trend_enthusiast": 0.062,
-      "thoughtful_buyer": 0.047,
-      "smart_saver": 0.074,
-      "quality_seeker": 0.054,
-      "on_the_go_shopper": 0.131,
-      "impulse_buyer": 0.047,
-      "experience_explorer": 0.07,
-      "everyday_planner": 0.093,
-      "conscious_consumer": 0.05
-    },
-    "match": 0.626,
-    "exp_signups": 16.7,
-    "exp_reviews": 26.0,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 1039.33,
-      "publicity_value": 0.0,
-      "est_video_views": 1952.16,
-      "product_cost": 128.0,
-      "event_cost": 135.0,
-      "net_value": 776.33,
-      "units_total": 256,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03"
-    ],
-    "habit_match": 0.565,
-    "habit_exp_reviews": 24.6,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 981.37,
-      "publicity_value": 0.0,
-      "est_video_views": 1843.3,
-      "product_cost": 128.0,
-      "event_cost": 135.0,
-      "net_value": 718.37,
-      "units_total": 256,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.63 against 0.56 for the usual lineup: DASH for wellness seekers; DASH for on the go shoppers; Helen Browning’s Organic for everyday planners",
-      "Expected 26 reviews and 17 sign-ups, against 25 reviews for the usual lineup (+6%)",
-      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
-    ]
-  },
-  "E009": {
-    "name": "Run club social and brunch, Islington community hall",
-    "date": "2026-11-01",
-    "event_type": "community",
-    "borough": "Islington",
-    "expected_attendance": 70,
-    "lineup_size": 3,
-    "brands": [
-      "B08",
-      "B39",
-      "B48"
-    ],
-    "brand_names": [
-      "Dr. Will’s",
-      "SUCSEED",
-      "Mr Filbert’s"
-    ],
-    "products": {
-      "B08": "Avocado Oil Mayo",
-      "B39": "Energy",
-      "B48": "Teriyaki Mochi Rice Bites"
-    },
-    "units": {
-      "B08": 37,
-      "B39": 37,
-      "B48": 37
-    },
-    "slot": "09:30-11:30",
-    "archetype_mix": {
-      "wellness_seeker": 0.113,
-      "trend_enthusiast": 0.057,
-      "thoughtful_buyer": 0.147,
-      "smart_saver": 0.083,
-      "quality_seeker": 0.09,
-      "on_the_go_shopper": 0.05,
-      "impulse_buyer": 0.08,
-      "experience_explorer": 0.113,
-      "everyday_planner": 0.156,
-      "conscious_consumer": 0.11
-    },
-    "match": 0.632,
-    "exp_signups": 8.1,
-    "exp_reviews": 8.7,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 347.17,
-      "publicity_value": 0.0,
-      "est_video_views": 652.09,
-      "product_cost": 55.5,
-      "event_cost": 145.0,
-      "net_value": 146.67,
-      "units_total": 111,
-      "p_waste": 0.094
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17"
-    ],
-    "habit_match": 0.555,
-    "habit_exp_reviews": 8.2,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 326.81,
-      "publicity_value": 0.0,
-      "est_video_views": 613.84,
-      "product_cost": 55.5,
-      "event_cost": 145.0,
-      "net_value": 126.31,
-      "units_total": 111,
-      "p_waste": 0.111
-    },
-    "reasons": [
-      "Archetype match 0.63 against 0.56 for the usual lineup: Dr. Will’s for everyday planners; Dr. Will’s for thoughtful buyers; SUCSEED for wellness seekers",
-      "Expected 9 reviews and 8 sign-ups, against 8 reviews for the usual lineup (+6%)",
-      "2 vegan and 2 gluten-free options; covers condiment, savoury"
-    ]
-  },
-  "E010": {
-    "name": "Weekend AI hackathon, Here East",
-    "date": "2026-11-03",
-    "event_type": "conferences",
-    "borough": "Newham",
-    "expected_attendance": 140,
-    "lineup_size": 4,
-    "brands": [
-      "B13",
-      "B07",
-      "B32",
-      "B48"
-    ],
-    "brand_names": [
-      "mindfuel flow",
-      "Helen Browning’s Organic",
-      "ape2o",
-      "Mr Filbert’s"
-    ],
-    "products": {
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B07": "Organic Corned Beef",
-      "B32": "GO Steel Bottle — Turtle",
-      "B48": "Teriyaki Mochi Rice Bites"
-    },
-    "units": {
-      "B13": 115,
-      "B07": 115,
-      "B32": 115,
-      "B48": 115
-    },
-    "slot": "15:00-16:30",
-    "archetype_mix": {
-      "wellness_seeker": 0.066,
-      "trend_enthusiast": 0.213,
-      "thoughtful_buyer": 0.098,
-      "smart_saver": 0.085,
-      "quality_seeker": 0.079,
-      "on_the_go_shopper": 0.256,
-      "impulse_buyer": 0.066,
-      "experience_explorer": 0.098,
-      "everyday_planner": 0.023,
-      "conscious_consumer": 0.016
-    },
-    "match": 0.614,
-    "exp_signups": 45.2,
-    "exp_reviews": 79.1,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 3158.18,
-      "publicity_value": 0.0,
-      "est_video_views": 5931.96,
-      "product_cost": 230.0,
-      "event_cost": 125.0,
-      "net_value": 2803.18,
-      "units_total": 460,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03"
-    ],
-    "habit_match": 0.479,
-    "habit_exp_reviews": 72.5,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 2893.09,
-      "publicity_value": 0.0,
-      "est_video_views": 5434.05,
-      "product_cost": 230.0,
-      "event_cost": 125.0,
-      "net_value": 2538.09,
-      "units_total": 460,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.61 against 0.48 for the usual lineup: ape2o for on the go shoppers; mindfuel flow for trend enthusiasts; mindfuel flow for thoughtful buyers",
-      "Expected 79 reviews and 45 sign-ups, against 72 reviews for the usual lineup (+9%)",
-      "1 vegan and 2 gluten-free options; covers condiment, drink, other, savoury"
-    ]
-  },
-  "E011": {
-    "name": "Small-batch food fair, Bermondsey community hall",
-    "date": "2026-11-05",
-    "event_type": "expos",
-    "borough": "Southwark",
-    "expected_attendance": 170,
-    "lineup_size": 5,
-    "brands": [
-      "B07",
-      "B36",
-      "B05",
-      "B08",
-      "B30"
-    ],
-    "brand_names": [
-      "Helen Browning’s Organic",
-      "HOOP",
-      "INDI",
-      "Dr. Will’s",
-      "Ottolenghi"
-    ],
-    "products": {
-      "B07": "Organic Corned Beef",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B05": "Brain Bar",
-      "B08": "Avocado Oil Mayo",
-      "B30": "Miso Pesto"
-    },
-    "units": {
-      "B07": 75,
-      "B36": 75,
-      "B05": 75,
-      "B08": 75,
-      "B30": 75
-    },
-    "slot": "12:00-14:00",
-    "archetype_mix": {
-      "wellness_seeker": 0.063,
-      "trend_enthusiast": 0.15,
-      "thoughtful_buyer": 0.106,
-      "smart_saver": 0.24,
-      "quality_seeker": 0.073,
-      "on_the_go_shopper": 0.073,
-      "impulse_buyer": 0.125,
-      "experience_explorer": 0.079,
-      "everyday_planner": 0.053,
-      "conscious_consumer": 0.04
-    },
-    "match": 0.617,
-    "exp_signups": 33.6,
-    "exp_reviews": 69.1,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 2757.57,
-      "publicity_value": 0.0,
-      "est_video_views": 5179.51,
-      "product_cost": 187.5,
-      "event_cost": 135.0,
-      "net_value": 2435.07,
-      "units_total": 375,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03",
-      "B26"
-    ],
-    "habit_match": 0.492,
-    "habit_exp_reviews": 63.0,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 2515.01,
-      "publicity_value": 0.0,
-      "est_video_views": 4723.91,
-      "product_cost": 187.5,
-      "event_cost": 135.0,
-      "net_value": 2192.51,
-      "units_total": 375,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.62 against 0.49 for the usual lineup: Helen Browning’s Organic for smart savers; INDI for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 69 reviews and 34 sign-ups, against 63 reviews for the usual lineup (+10%)",
-      "2 vegan and 4 gluten-free options; covers condiment, savoury"
-    ]
-  },
-  "E012": {
-    "name": "Comedy night, Camden comedy club",
-    "date": "2026-11-07",
-    "event_type": "performing_arts",
-    "borough": "Camden",
-    "expected_attendance": 50,
-    "lineup_size": 3,
-    "brands": [
-      "B45",
-      "B36",
-      "B04"
-    ],
-    "brand_names": [
-      "Penrhos",
-      "HOOP",
-      "Well & Truly"
-    ],
-    "products": {
-      "B45": "Handcrafted Dry Gin",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B04": "Crunchies — Smokey Bacon"
-    },
-    "units": {
-      "B45": 17,
-      "B36": 17,
-      "B04": 17
-    },
-    "slot": "20:05-20:30 (interval)",
-    "archetype_mix": {
-      "wellness_seeker": 0.042,
-      "trend_enthusiast": 0.096,
-      "thoughtful_buyer": 0.144,
-      "smart_saver": 0.03,
-      "quality_seeker": 0.156,
-      "on_the_go_shopper": 0.06,
-      "impulse_buyer": 0.072,
-      "experience_explorer": 0.219,
-      "everyday_planner": 0.072,
-      "conscious_consumer": 0.108
-    },
-    "match": 0.72,
-    "exp_signups": 2.6,
-    "exp_reviews": 3.1,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 125.35,
-      "publicity_value": 0.0,
-      "est_video_views": 235.43,
-      "product_cost": 25.5,
-      "event_cost": 145.0,
-      "net_value": -45.15,
-      "units_total": 51,
-      "p_waste": 0.743
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17"
-    ],
-    "habit_match": 0.518,
-    "habit_exp_reviews": 2.6,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 102.33,
-      "publicity_value": 0.0,
-      "est_video_views": 192.21,
-      "product_cost": 25.5,
-      "event_cost": 145.0,
-      "net_value": -68.17,
-      "units_total": 51,
-      "p_waste": 0.794
-    },
-    "reasons": [
-      "Archetype match 0.72 against 0.52 for the usual lineup: Penrhos for experience explorers; Penrhos for quality seekers; Well & Truly for thoughtful buyers",
-      "Expected 3 reviews and 3 sign-ups, against 3 reviews for the usual lineup (+22%)",
-      "1 vegan and 2 gluten-free options; covers drink, savoury"
-    ]
-  },
-  "E013": {
-    "name": "DJ night, The Sebright Arms",
-    "date": "2026-11-07",
-    "event_type": "concerts",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 180,
-    "lineup_size": 5,
-    "brands": [
-      "B36",
-      "B46",
-      "B48",
-      "B07",
-      "B13"
-    ],
-    "brand_names": [
-      "HOOP",
-      "Mission",
-      "Mr Filbert’s",
-      "Helen Browning’s Organic",
-      "mindfuel flow"
-    ],
-    "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B46": "Lemon & Ginseng Natural Energy Drink",
-      "B48": "Teriyaki Mochi Rice Bites",
-      "B07": "Organic Corned Beef",
-      "B13": "Mushroom Iced Latte — Salted Caramel"
-    },
-    "units": {
-      "B36": 50,
-      "B46": 50,
-      "B48": 50,
-      "B07": 50,
-      "B13": 50
-    },
-    "slot": "21:00-23:00",
-    "archetype_mix": {
-      "wellness_seeker": 0.034,
-      "trend_enthusiast": 0.204,
-      "thoughtful_buyer": 0.022,
-      "smart_saver": 0.067,
-      "quality_seeker": 0.028,
-      "on_the_go_shopper": 0.146,
-      "impulse_buyer": 0.247,
-      "experience_explorer": 0.19,
-      "everyday_planner": 0.017,
-      "conscious_consumer": 0.045
-    },
-    "match": 0.635,
-    "exp_signups": 7.8,
-    "exp_reviews": 15.2,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 605.29,
-      "publicity_value": 0.0,
-      "est_video_views": 1136.92,
-      "product_cost": 125.0,
-      "event_cost": 215.0,
-      "net_value": 265.29,
-      "units_total": 250,
-      "p_waste": 0.113
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03",
-      "B26"
-    ],
-    "habit_match": 0.559,
-    "habit_exp_reviews": 14.1,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 562.35,
-      "publicity_value": 0.0,
-      "est_video_views": 1056.26,
-      "product_cost": 125.0,
-      "event_cost": 215.0,
-      "net_value": 222.35,
-      "units_total": 250,
-      "p_waste": 0.133
-    },
-    "reasons": [
-      "Archetype match 0.64 against 0.56 for the usual lineup: HOOP for impulse buyers; mindfuel flow for trend enthusiasts; Mr Filbert’s for experience explorers",
-      "Expected 15 reviews and 8 sign-ups, against 14 reviews for the usual lineup (+8%)",
-      "1 vegan and 3 gluten-free options; covers condiment, drink, savoury"
-    ]
-  },
-  "E014": {
-    "name": "Pottery workshop, Islington community hall",
-    "date": "2026-11-08",
-    "event_type": "community",
-    "borough": "Islington",
-    "expected_attendance": 30,
-    "lineup_size": 2,
-    "brands": [
-      "B36",
-      "B08"
-    ],
-    "brand_names": [
-      "HOOP",
-      "Dr. Will’s"
-    ],
-    "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B08": "Avocado Oil Mayo"
-    },
-    "units": {
-      "B36": 16,
-      "B08": 16
-    },
-    "slot": "09:30-11:30",
-    "archetype_mix": {
-      "wellness_seeker": 0.113,
-      "trend_enthusiast": 0.056,
-      "thoughtful_buyer": 0.19,
-      "smart_saver": 0.108,
-      "quality_seeker": 0.089,
-      "on_the_go_shopper": 0.05,
-      "impulse_buyer": 0.08,
-      "experience_explorer": 0.086,
-      "everyday_planner": 0.119,
-      "conscious_consumer": 0.109
-    },
-    "match": 0.583,
-    "exp_signups": 2.9,
-    "exp_reviews": 2.2,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 86.47,
-      "publicity_value": 0.0,
-      "est_video_views": 162.42,
-      "product_cost": 16.0,
-      "event_cost": 125.0,
-      "net_value": -54.53,
-      "units_total": 32,
-      "p_waste": 0.831
-    },
-    "habit_brands": [
-      "B04",
-      "B02"
-    ],
-    "habit_match": 0.506,
-    "habit_exp_reviews": 2.0,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 81.83,
-      "publicity_value": 0.0,
-      "est_video_views": 153.7,
-      "product_cost": 16.0,
-      "event_cost": 125.0,
-      "net_value": -59.17,
-      "units_total": 32,
-      "p_waste": 0.848
-    },
-    "reasons": [
-      "Archetype match 0.58 against 0.51 for the usual lineup: Dr. Will’s for thoughtful buyers; Dr. Will’s for everyday planners; HOOP for wellness seekers",
-      "Expected 2 reviews and 3 sign-ups, against 2 reviews for the usual lineup (+6%)",
-      "1 vegan and 2 gluten-free options; covers condiment, savoury"
-    ]
-  },
-  "E015": {
-    "name": "Startup summit, Canary Wharf conference centre",
-    "date": "2026-11-10",
-    "event_type": "conferences",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 90,
-    "lineup_size": 3,
-    "brands": [
-      "B13",
-      "B07",
-      "B32"
-    ],
-    "brand_names": [
-      "mindfuel flow",
-      "Helen Browning’s Organic",
-      "ape2o"
-    ],
-    "products": {
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B07": "Organic Corned Beef",
-      "B32": "GO Steel Bottle — Turtle"
-    },
-    "units": {
-      "B13": 74,
-      "B07": 74,
-      "B32": 74
-    },
-    "slot": "15:00-16:30",
-    "archetype_mix": {
-      "wellness_seeker": 0.066,
-      "trend_enthusiast": 0.213,
-      "thoughtful_buyer": 0.098,
-      "smart_saver": 0.085,
-      "quality_seeker": 0.079,
-      "on_the_go_shopper": 0.256,
-      "impulse_buyer": 0.066,
-      "experience_explorer": 0.098,
-      "everyday_planner": 0.023,
-      "conscious_consumer": 0.016
-    },
-    "match": 0.588,
-    "exp_signups": 26.5,
-    "exp_reviews": 35.1,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 1400.98,
-      "publicity_value": 0.0,
-      "est_video_views": 2631.43,
-      "product_cost": 111.0,
-      "event_cost": 125.0,
-      "net_value": 1164.98,
-      "units_total": 222,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17"
-    ],
-    "habit_match": 0.461,
-    "habit_exp_reviews": 31.9,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 1275.43,
-      "publicity_value": 0.0,
-      "est_video_views": 2395.62,
-      "product_cost": 111.0,
-      "event_cost": 125.0,
-      "net_value": 1039.43,
-      "units_total": 222,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.59 against 0.46 for the usual lineup: ape2o for on the go shoppers; mindfuel flow for trend enthusiasts; mindfuel flow for thoughtful buyers",
-      "Expected 35 reviews and 26 sign-ups, against 32 reviews for the usual lineup (+10%)",
-      "1 vegan and 1 gluten-free options; covers condiment, drink, other"
-    ]
-  },
-  "E016": {
-    "name": "Weekend AI hackathon, Canary Wharf conference centre",
-    "date": "2026-11-10",
-    "event_type": "conferences",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 80,
-    "lineup_size": 3,
-    "brands": [
-      "B13",
-      "B07",
-      "B32"
-    ],
-    "brand_names": [
-      "mindfuel flow",
-      "Helen Browning’s Organic",
-      "ape2o"
-    ],
-    "products": {
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B07": "Organic Corned Beef",
-      "B32": "GO Steel Bottle — Turtle"
-    },
-    "units": {
-      "B13": 66,
-      "B07": 66,
-      "B32": 66
-    },
-    "slot": "15:00-16:30",
-    "archetype_mix": {
-      "wellness_seeker": 0.066,
-      "trend_enthusiast": 0.213,
-      "thoughtful_buyer": 0.098,
-      "smart_saver": 0.085,
-      "quality_seeker": 0.079,
-      "on_the_go_shopper": 0.256,
-      "impulse_buyer": 0.066,
-      "experience_explorer": 0.098,
-      "everyday_planner": 0.023,
-      "conscious_consumer": 0.016
-    },
-    "match": 0.588,
-    "exp_signups": 23.0,
-    "exp_reviews": 30.5,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 1218.81,
-      "publicity_value": 0.0,
-      "est_video_views": 2289.27,
-      "product_cost": 99.0,
-      "event_cost": 135.0,
-      "net_value": 984.81,
-      "units_total": 198,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17"
-    ],
-    "habit_match": 0.461,
-    "habit_exp_reviews": 27.8,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 1109.58,
-      "publicity_value": 0.0,
-      "est_video_views": 2084.12,
-      "product_cost": 99.0,
-      "event_cost": 135.0,
-      "net_value": 875.58,
-      "units_total": 198,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.59 against 0.46 for the usual lineup: ape2o for on the go shoppers; mindfuel flow for trend enthusiasts; mindfuel flow for thoughtful buyers",
-      "Expected 31 reviews and 23 sign-ups, against 28 reviews for the usual lineup (+10%)",
-      "1 vegan and 1 gluten-free options; covers condiment, drink, other"
-    ]
-  },
-  "E017": {
-    "name": "Spoken word evening, Richmond Theatre",
-    "date": "2026-11-12",
-    "event_type": "performing_arts",
-    "borough": "Richmond upon Thames",
-    "expected_attendance": 50,
-    "lineup_size": 3,
-    "brands": [
-      "B45",
-      "B36",
-      "B04"
-    ],
-    "brand_names": [
-      "Penrhos",
-      "HOOP",
-      "Well & Truly"
-    ],
-    "products": {
-      "B45": "Handcrafted Dry Gin",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B04": "Crunchies — Smokey Bacon"
-    },
-    "units": {
-      "B45": 17,
-      "B36": 17,
-      "B04": 17
-    },
-    "slot": "20:05-20:30 (interval)",
-    "archetype_mix": {
-      "wellness_seeker": 0.042,
-      "trend_enthusiast": 0.096,
-      "thoughtful_buyer": 0.144,
-      "smart_saver": 0.03,
-      "quality_seeker": 0.156,
-      "on_the_go_shopper": 0.06,
-      "impulse_buyer": 0.072,
-      "experience_explorer": 0.219,
-      "everyday_planner": 0.072,
-      "conscious_consumer": 0.108
-    },
-    "match": 0.72,
-    "exp_signups": 2.6,
-    "exp_reviews": 3.1,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 125.35,
-      "publicity_value": 0.0,
-      "est_video_views": 235.43,
-      "product_cost": 25.5,
-      "event_cost": 170.0,
-      "net_value": -70.15,
-      "units_total": 51,
-      "p_waste": 0.882
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17"
-    ],
-    "habit_match": 0.518,
-    "habit_exp_reviews": 2.6,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 102.33,
-      "publicity_value": 0.0,
-      "est_video_views": 192.21,
-      "product_cost": 25.5,
-      "event_cost": 170.0,
-      "net_value": -93.17,
-      "units_total": 51,
-      "p_waste": 0.913
-    },
-    "reasons": [
-      "Archetype match 0.72 against 0.52 for the usual lineup: Penrhos for experience explorers; Penrhos for quality seekers; Well & Truly for thoughtful buyers",
-      "Expected 3 reviews and 3 sign-ups, against 3 reviews for the usual lineup (+22%)",
-      "1 vegan and 2 gluten-free options; covers drink, savoury"
-    ]
-  },
-  "E018": {
-    "name": "Spoken word evening, Southbank Centre",
-    "date": "2026-11-13",
-    "event_type": "performing_arts",
-    "borough": "Lambeth",
-    "expected_attendance": 40,
-    "lineup_size": 2,
-    "brands": [
-      "B45",
-      "B04"
-    ],
-    "brand_names": [
-      "Penrhos",
-      "Well & Truly"
-    ],
-    "products": {
-      "B45": "Handcrafted Dry Gin",
-      "B04": "Crunchies — Smokey Bacon"
-    },
-    "units": {
-      "B45": 14,
-      "B04": 14
-    },
-    "slot": "19:35-20:00 (interval)",
-    "archetype_mix": {
-      "wellness_seeker": 0.042,
-      "trend_enthusiast": 0.096,
-      "thoughtful_buyer": 0.144,
-      "smart_saver": 0.03,
-      "quality_seeker": 0.156,
-      "on_the_go_shopper": 0.06,
-      "impulse_buyer": 0.072,
-      "experience_explorer": 0.219,
-      "everyday_planner": 0.072,
-      "conscious_consumer": 0.108
-    },
-    "match": 0.704,
-    "exp_signups": 2.0,
-    "exp_reviews": 1.6,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 64.46,
-      "publicity_value": 0.0,
-      "est_video_views": 121.08,
-      "product_cost": 14.0,
-      "event_cost": 145.0,
-      "net_value": -94.54,
-      "units_total": 28,
-      "p_waste": 0.951
-    },
-    "habit_brands": [
-      "B04",
-      "B02"
-    ],
-    "habit_match": 0.424,
-    "habit_exp_reviews": 1.3,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 51.33,
-      "publicity_value": 0.0,
-      "est_video_views": 96.41,
-      "product_cost": 14.0,
-      "event_cost": 145.0,
-      "net_value": -107.67,
-      "units_total": 28,
-      "p_waste": 0.992
-    },
-    "reasons": [
-      "Archetype match 0.70 against 0.42 for the usual lineup: Penrhos for experience explorers; Penrhos for quality seekers; Well & Truly for thoughtful buyers",
-      "Expected 2 reviews and 2 sign-ups, against 1 reviews for the usual lineup (+26%)",
-      "1 vegan and 1 gluten-free options; covers drink, savoury"
-    ]
-  },
-  "E019": {
-    "name": "Trail run meet-up, Battersea Park",
-    "date": "2026-11-15",
-    "event_type": "sports",
-    "borough": "Wandsworth",
-    "expected_attendance": 120,
-    "lineup_size": 4,
-    "brands": [
-      "B07",
-      "B35",
-      "B04",
-      "B17"
-    ],
-    "brand_names": [
-      "Helen Browning’s Organic",
-      "WelleCo",
-      "Well & Truly",
-      "Gut Food / Ferment Fizz"
-    ],
-    "products": {
-      "B07": "Organic Corned Beef",
-      "B35": "The Hydro Protein Elixir — Passionfruit",
-      "B04": "Crunchies — Smokey Bacon",
-      "B17": "Lemon Lemonade"
-    },
-    "units": {
-      "B07": 59,
-      "B35": 59,
-      "B04": 59,
-      "B17": 59
-    },
-    "slot": "10:30-11:30 (finish)",
-    "archetype_mix": {
-      "wellness_seeker": 0.376,
-      "trend_enthusiast": 0.063,
-      "thoughtful_buyer": 0.047,
-      "smart_saver": 0.074,
-      "quality_seeker": 0.055,
-      "on_the_go_shopper": 0.102,
-      "impulse_buyer": 0.047,
-      "experience_explorer": 0.092,
-      "everyday_planner": 0.094,
-      "conscious_consumer": 0.051
-    },
-    "match": 0.603,
-    "exp_signups": 15.0,
-    "exp_reviews": 22.7,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 906.92,
-      "publicity_value": 0.0,
-      "est_video_views": 1703.45,
-      "product_cost": 118.0,
-      "event_cost": 135.0,
-      "net_value": 653.92,
-      "units_total": 236,
-      "p_waste": 0.001
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03"
-    ],
-    "habit_match": 0.521,
-    "habit_exp_reviews": 21.6,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 863.54,
-      "publicity_value": 0.0,
-      "est_video_views": 1621.98,
-      "product_cost": 118.0,
-      "event_cost": 135.0,
-      "net_value": 610.54,
-      "units_total": 236,
-      "p_waste": 0.001
-    },
-    "reasons": [
-      "Archetype match 0.60 against 0.52 for the usual lineup: WelleCo for wellness seekers; WelleCo for on the go shoppers; Helen Browning’s Organic for everyday planners",
-      "Expected 23 reviews and 15 sign-ups, against 22 reviews for the usual lineup (+5%)",
-      "3 vegan and 2 gluten-free options; covers condiment, drink, functional, savoury"
-    ]
-  },
-  "E020": {
-    "name": "Acoustic night, The Sebright Arms",
-    "date": "2026-11-19",
-    "event_type": "concerts",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 150,
-    "lineup_size": 5,
-    "brands": [
-      "B48",
-      "B36",
-      "B46",
-      "B07",
-      "B13"
-    ],
-    "brand_names": [
-      "Mr Filbert’s",
-      "HOOP",
-      "Mission",
-      "Helen Browning’s Organic",
-      "mindfuel flow"
-    ],
-    "products": {
-      "B48": "Teriyaki Mochi Rice Bites",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B46": "Lemon & Ginseng Natural Energy Drink",
-      "B07": "Organic Corned Beef",
-      "B13": "Mushroom Iced Latte — Salted Caramel"
-    },
-    "units": {
-      "B48": 42,
-      "B36": 42,
-      "B46": 42,
-      "B07": 42,
-      "B13": 42
-    },
-    "slot": "21:00-23:00",
-    "archetype_mix": {
-      "wellness_seeker": 0.034,
-      "trend_enthusiast": 0.204,
-      "thoughtful_buyer": 0.022,
-      "smart_saver": 0.067,
-      "quality_seeker": 0.028,
-      "on_the_go_shopper": 0.146,
-      "impulse_buyer": 0.19,
-      "experience_explorer": 0.247,
-      "everyday_planner": 0.017,
-      "conscious_consumer": 0.045
-    },
-    "match": 0.633,
-    "exp_signups": 6.3,
-    "exp_reviews": 12.1,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 484.35,
-      "publicity_value": 0.0,
-      "est_video_views": 909.75,
-      "product_cost": 105.0,
-      "event_cost": 145.0,
-      "net_value": 234.35,
-      "units_total": 210,
-      "p_waste": 0.13
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03",
-      "B26"
-    ],
-    "habit_match": 0.55,
-    "habit_exp_reviews": 11.2,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 448.68,
-      "publicity_value": 0.0,
-      "est_video_views": 842.74,
-      "product_cost": 105.0,
-      "event_cost": 145.0,
-      "net_value": 198.68,
-      "units_total": 210,
-      "p_waste": 0.15
-    },
-    "reasons": [
-      "Archetype match 0.63 against 0.55 for the usual lineup: Mr Filbert’s for experience explorers; mindfuel flow for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 12 reviews and 6 sign-ups, against 11 reviews for the usual lineup (+8%)",
-      "1 vegan and 3 gluten-free options; covers condiment, drink, savoury"
-    ]
-  },
-  "E021": {
-    "name": "Rugby international screening, Big-screen bar, Shoreditch",
-    "date": "2026-11-21",
-    "event_type": "sports",
-    "borough": "Hackney",
-    "expected_attendance": 160,
-    "lineup_size": 5,
-    "brands": [
-      "B15",
-      "B36",
-      "B17",
-      "B35",
-      "B07"
-    ],
-    "brand_names": [
-      "DASH",
-      "HOOP",
-      "Gut Food / Ferment Fizz",
-      "WelleCo",
-      "Helen Browning’s Organic"
-    ],
-    "products": {
-      "B15": "Pink Lady Apple Sparkling Water",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B17": "Lemon Lemonade",
-      "B35": "The Hydro Protein Elixir — Passionfruit",
-      "B07": "Organic Corned Beef"
-    },
-    "units": {
-      "B15": 79,
-      "B36": 79,
-      "B17": 79,
-      "B35": 79,
-      "B07": 79
-    },
-    "slot": "21:15-22:15 (finish)",
-    "archetype_mix": {
-      "wellness_seeker": 0.373,
-      "trend_enthusiast": 0.062,
-      "thoughtful_buyer": 0.047,
-      "smart_saver": 0.074,
-      "quality_seeker": 0.054,
-      "on_the_go_shopper": 0.131,
-      "impulse_buyer": 0.047,
-      "experience_explorer": 0.07,
-      "everyday_planner": 0.093,
-      "conscious_consumer": 0.05
-    },
-    "match": 0.633,
-    "exp_signups": 21.4,
-    "exp_reviews": 41.6,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 1661.37,
-      "publicity_value": 0.0,
-      "est_video_views": 3120.52,
-      "product_cost": 197.5,
-      "event_cost": 145.0,
-      "net_value": 1318.87,
-      "units_total": 395,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03",
-      "B26"
-    ],
-    "habit_match": 0.565,
-    "habit_exp_reviews": 39.2,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 1566.35,
-      "publicity_value": 0.0,
-      "est_video_views": 2942.05,
-      "product_cost": 197.5,
-      "event_cost": 145.0,
-      "net_value": 1223.85,
-      "units_total": 395,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.63 against 0.56 for the usual lineup: WelleCo for wellness seekers; DASH for on the go shoppers; Helen Browning’s Organic for everyday planners",
-      "Expected 42 reviews and 21 sign-ups, against 39 reviews for the usual lineup (+6%)",
-      "2 vegan and 2 gluten-free options; covers condiment, drink, functional, savoury"
-    ]
-  },
-  "E022": {
-    "name": "Trail run meet-up, Battersea Park",
-    "date": "2026-11-22",
-    "event_type": "sports",
-    "borough": "Wandsworth",
-    "expected_attendance": 180,
-    "lineup_size": 5,
-    "brands": [
-      "B36",
-      "B24",
-      "B35",
-      "B07",
-      "B17"
-    ],
-    "brand_names": [
-      "HOOP",
-      "teapigs",
-      "WelleCo",
-      "Helen Browning’s Organic",
-      "Gut Food / Ferment Fizz"
-    ],
-    "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B24": "Super Fruit",
-      "B35": "The Hydro Protein Elixir — Passionfruit",
-      "B07": "Organic Corned Beef",
-      "B17": "Lemon Lemonade"
-    },
-    "units": {
-      "B36": 89,
-      "B24": 89,
-      "B35": 89,
-      "B07": 89,
-      "B17": 89
-    },
-    "slot": "10:30-11:30 (finish)",
-    "archetype_mix": {
-      "wellness_seeker": 0.373,
-      "trend_enthusiast": 0.062,
-      "thoughtful_buyer": 0.047,
-      "smart_saver": 0.074,
-      "quality_seeker": 0.054,
-      "on_the_go_shopper": 0.131,
-      "impulse_buyer": 0.047,
-      "experience_explorer": 0.07,
-      "everyday_planner": 0.093,
-      "conscious_consumer": 0.05
-    },
-    "match": 0.607,
-    "exp_signups": 24.3,
-    "exp_reviews": 46.5,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 1858.11,
-      "publicity_value": 0.0,
-      "est_video_views": 3490.07,
-      "product_cost": 222.5,
-      "event_cost": 135.0,
-      "net_value": 1500.61,
-      "units_total": 445,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03",
-      "B26"
-    ],
-    "habit_match": 0.52,
-    "habit_exp_reviews": 43.8,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 1747.53,
-      "publicity_value": 0.0,
-      "est_video_views": 3282.36,
-      "product_cost": 222.5,
-      "event_cost": 135.0,
-      "net_value": 1390.03,
-      "units_total": 445,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.61 against 0.52 for the usual lineup: WelleCo for wellness seekers; WelleCo for on the go shoppers; Helen Browning’s Organic for everyday planners",
-      "Expected 47 reviews and 24 sign-ups, against 44 reviews for the usual lineup (+6%)",
-      "2 vegan and 2 gluten-free options; covers condiment, drink, functional, savoury"
-    ]
-  },
-  "E023": {
-    "name": "Neighbourhood market stall day, Broadway Market",
-    "date": "2026-11-22",
-    "event_type": "community",
-    "borough": "Hackney",
-    "expected_attendance": 150,
-    "lineup_size": 5,
-    "brands": [
-      "B26",
-      "B36",
-      "B08",
-      "B39",
-      "B07"
-    ],
-    "brand_names": [
-      "Blanco Niño",
-      "HOOP",
-      "Dr. Will’s",
-      "SUCSEED",
-      "Helen Browning’s Organic"
-    ],
-    "products": {
-      "B26": "Creamy Jalapeño Tortilla Chips",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B08": "Avocado Oil Mayo",
-      "B39": "Energy",
-      "B07": "Organic Corned Beef"
-    },
-    "units": {
-      "B26": 78,
-      "B36": 78,
-      "B08": 78,
-      "B39": 78,
-      "B07": 78
-    },
-    "slot": "09:30-11:30",
-    "archetype_mix": {
-      "wellness_seeker": 0.113,
-      "trend_enthusiast": 0.056,
-      "thoughtful_buyer": 0.146,
-      "smart_saver": 0.083,
-      "quality_seeker": 0.089,
-      "on_the_go_shopper": 0.05,
-      "impulse_buyer": 0.08,
-      "experience_explorer": 0.086,
-      "everyday_planner": 0.155,
-      "conscious_consumer": 0.142
-    },
-    "match": 0.654,
-    "exp_signups": 20.2,
-    "exp_reviews": 37.4,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 1491.83,
-      "publicity_value": 0.0,
-      "est_video_views": 2802.09,
-      "product_cost": 195.0,
-      "event_cost": 145.0,
-      "net_value": 1151.83,
-      "units_total": 390,
-      "p_waste": 0.0
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03",
-      "B26"
-    ],
-    "habit_match": 0.558,
-    "habit_exp_reviews": 33.7,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 1346.35,
-      "publicity_value": 0.0,
-      "est_video_views": 2528.84,
-      "product_cost": 195.0,
-      "event_cost": 145.0,
-      "net_value": 1006.35,
-      "units_total": 390,
-      "p_waste": 0.0
-    },
-    "reasons": [
-      "Archetype match 0.65 against 0.56 for the usual lineup: Dr. Will’s for everyday planners; Dr. Will’s for thoughtful buyers; Blanco Niño for conscious consumers",
-      "Expected 37 reviews and 20 sign-ups, against 34 reviews for the usual lineup (+11%)",
-      "3 vegan and 4 gluten-free options; covers condiment, savoury"
-    ]
-  },
-  "E024": {
-    "name": "Graduate careers fair, Trinity Buoy Wharf",
-    "date": "2026-11-28",
-    "event_type": "expos",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 110,
-    "lineup_size": 4,
-    "brands": [
-      "B31",
-      "B36",
       "B27",
-      "B13"
+      "B20",
+      "B09",
+      "B03"
     ],
     "brand_names": [
-      "Sunfly",
-      "HOOP",
       "Saucerer",
-      "mindfuel flow"
+      "The London Essence Co.",
+      "EP!C Snax Co.",
+      "The Protein Ball Co."
     ],
     "products": {
-      "B31": "Sunflower Seed Butter — Crunchy",
-      "B36": "Plantain Chips — Lemon Pepper",
       "B27": "Pasta Sauce — Wild Mushroom & Truffle",
-      "B13": "Mushroom Iced Latte — Salted Caramel"
+      "B20": "Original Indian Tonic Water",
+      "B09": "Plant Power Toastin’ Marshmallows",
+      "B03": "Stuffed — Matcha & Vanilla"
     },
     "units": {
-      "B31": 49,
-      "B36": 49,
-      "B27": 49,
-      "B13": 49
+      "B27": 39,
+      "B20": 39,
+      "B09": 39,
+      "B03": 39
     },
-    "slot": "12:00-14:00",
+    "slot": "21:00-23:00",
     "archetype_mix": {
-      "wellness_seeker": 0.063,
-      "trend_enthusiast": 0.15,
-      "thoughtful_buyer": 0.106,
-      "smart_saver": 0.24,
-      "quality_seeker": 0.073,
-      "on_the_go_shopper": 0.073,
-      "impulse_buyer": 0.125,
-      "experience_explorer": 0.079,
-      "everyday_planner": 0.053,
-      "conscious_consumer": 0.04
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.243,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.156,
+      "experience_explorer": 0.236,
+      "everyday_planner": 0.179,
+      "conscious_consumer": 0.024
     },
-    "match": 0.609,
-    "exp_signups": 20.0,
-    "exp_reviews": 33.0,
+    "match": 0.891,
+    "exp_signups": 7.1,
+    "exp_reviews": 10.4,
     "value": {
       "signup_value": 0.0,
-      "review_value": 1315.71,
+      "review_value": 417.08,
       "publicity_value": 0.0,
-      "est_video_views": 2471.29,
-      "product_cost": 98.0,
-      "event_cost": 145.0,
-      "net_value": 1072.71,
-      "units_total": 196,
-      "p_waste": 0.0
+      "est_video_views": 783.4,
+      "product_cost": 78.0,
+      "event_cost": 410.76,
+      "net_value": -71.68,
+      "units_total": 156,
+      "p_waste": 0.716
     },
     "habit_brands": [
       "B04",
@@ -1957,238 +208,153 @@
       "B17",
       "B03"
     ],
-    "habit_match": 0.492,
-    "habit_exp_reviews": 29.8,
+    "habit_match": 0.612,
+    "habit_exp_reviews": 7.2,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 1191.19,
+      "review_value": 289.1,
       "publicity_value": 0.0,
-      "est_video_views": 2237.4,
-      "product_cost": 98.0,
-      "event_cost": 145.0,
-      "net_value": 948.19,
-      "units_total": 196,
-      "p_waste": 0.0
+      "est_video_views": 543.0,
+      "product_cost": 78.0,
+      "event_cost": 410.76,
+      "net_value": -199.66,
+      "units_total": 156,
+      "p_waste": 0.911
     },
     "reasons": [
-      "Archetype match 0.61 against 0.49 for the usual lineup: Saucerer for smart savers; mindfuel flow for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 33 reviews and 20 sign-ups, against 30 reviews for the usual lineup (+10%)",
-      "2 vegan and 2 gluten-free options; covers condiment, drink, savoury"
-    ]
+      "Archetype match 0.89 against 0.61 for the usual lineup: The Protein Ball Co. for trend enthusiasts; The London Essence Co. for experience explorers; Saucerer for everyday planners",
+      "Expected 10 reviews and 7 sign-ups, against 7 reviews for the usual lineup (+44%)",
+      "4 vegan and 3 gluten-free options; covers condiment, drink, functional, sweet"
+    ],
+    "title": "New Year's Eve Celebration 2026",
+    "start": "2026-12-31 21:00",
+    "end": "2027-01-01 01:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Join us for another inspiring time of soul lifting worship and joyful celebration as we usher in the New Year 2027",
+    "cost": 410.76,
+    "product_ids": {
+      "B27": "S044",
+      "B20": "S035",
+      "B09": "S018",
+      "B03": "S040"
+    },
+    "product_reviews": {
+      "B27": 2.8,
+      "B20": 2.6,
+      "B09": 2.5,
+      "B03": 2.5
+    },
+    "product_matches": {
+      "B27": 0.512,
+      "B20": 0.391,
+      "B09": 0.353,
+      "B03": 0.353
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S040",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S018",
+      "smart_saver": "S035",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S018",
+      "experience_explorer": "S035",
+      "everyday_planner": "S044",
+      "conscious_consumer": "S018"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B27": {
+        "small": 24,
+        "medium": 39,
+        "large": 58
+      },
+      "B20": {
+        "small": 24,
+        "medium": 39,
+        "large": 58
+      },
+      "B09": {
+        "small": 24,
+        "medium": 39,
+        "large": 58
+      },
+      "B03": {
+        "small": 24,
+        "medium": 39,
+        "large": 58
+      }
+    },
+    "size_line": "4 products for about 144 people"
   },
-  "E025": {
-    "name": "Cooking class, Maltby Street Market",
-    "date": "2026-11-28",
-    "event_type": "community",
-    "borough": "Southwark",
-    "expected_attendance": 30,
-    "lineup_size": 2,
-    "brands": [
-      "B36",
-      "B08"
-    ],
-    "brand_names": [
-      "HOOP",
-      "Dr. Will’s"
-    ],
-    "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B08": "Avocado Oil Mayo"
-    },
-    "units": {
-      "B36": 16,
-      "B08": 16
-    },
-    "slot": "11:00-13:00",
-    "archetype_mix": {
-      "wellness_seeker": 0.114,
-      "trend_enthusiast": 0.057,
-      "thoughtful_buyer": 0.147,
-      "smart_saver": 0.109,
-      "quality_seeker": 0.09,
-      "on_the_go_shopper": 0.05,
-      "impulse_buyer": 0.08,
-      "experience_explorer": 0.087,
-      "everyday_planner": 0.156,
-      "conscious_consumer": 0.11
-    },
-    "match": 0.578,
-    "exp_signups": 2.9,
-    "exp_reviews": 2.2,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 86.03,
-      "publicity_value": 0.0,
-      "est_video_views": 161.59,
-      "product_cost": 16.0,
-      "event_cost": 125.0,
-      "net_value": -54.97,
-      "units_total": 32,
-      "p_waste": 0.832
-    },
-    "habit_brands": [
-      "B04",
-      "B02"
-    ],
-    "habit_match": 0.505,
-    "habit_exp_reviews": 2.0,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 81.31,
-      "publicity_value": 0.0,
-      "est_video_views": 152.72,
-      "product_cost": 16.0,
-      "event_cost": 125.0,
-      "net_value": -59.69,
-      "units_total": 32,
-      "p_waste": 0.848
-    },
-    "reasons": [
-      "Archetype match 0.58 against 0.51 for the usual lineup: Dr. Will’s for everyday planners; Dr. Will’s for thoughtful buyers; HOOP for wellness seekers",
-      "Expected 2 reviews and 3 sign-ups, against 2 reviews for the usual lineup (+6%)",
-      "1 vegan and 2 gluten-free options; covers condiment, savoury"
-    ]
-  },
-  "E026": {
-    "name": "Neighbourhood market stall day, Brockley Market",
-    "date": "2026-11-29",
-    "event_type": "community",
-    "borough": "Lewisham",
-    "expected_attendance": 110,
-    "lineup_size": 4,
-    "brands": [
-      "B36",
-      "B26",
-      "B39",
-      "B08"
-    ],
-    "brand_names": [
-      "HOOP",
-      "Blanco Niño",
-      "SUCSEED",
-      "Dr. Will’s"
-    ],
-    "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B26": "Creamy Jalapeño Tortilla Chips",
-      "B39": "Energy",
-      "B08": "Avocado Oil Mayo"
-    },
-    "units": {
-      "B36": 58,
-      "B26": 58,
-      "B39": 58,
-      "B08": 58
-    },
-    "slot": "09:30-11:30",
-    "archetype_mix": {
-      "wellness_seeker": 0.147,
-      "trend_enthusiast": 0.056,
-      "thoughtful_buyer": 0.146,
-      "smart_saver": 0.083,
-      "quality_seeker": 0.09,
-      "on_the_go_shopper": 0.05,
-      "impulse_buyer": 0.08,
-      "experience_explorer": 0.086,
-      "everyday_planner": 0.12,
-      "conscious_consumer": 0.142
-    },
-    "match": 0.644,
-    "exp_signups": 13.9,
-    "exp_reviews": 20.8,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 829.07,
-      "publicity_value": 0.0,
-      "est_video_views": 1557.23,
-      "product_cost": 116.0,
-      "event_cost": 155.0,
-      "net_value": 558.07,
-      "units_total": 232,
-      "p_waste": 0.002
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03"
-    ],
-    "habit_match": 0.557,
-    "habit_exp_reviews": 18.4,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 735.98,
-      "publicity_value": 0.0,
-      "est_video_views": 1382.39,
-      "product_cost": 116.0,
-      "event_cost": 155.0,
-      "net_value": 464.98,
-      "units_total": 232,
-      "p_waste": 0.003
-    },
-    "reasons": [
-      "Archetype match 0.64 against 0.56 for the usual lineup: HOOP for wellness seekers; Dr. Will’s for thoughtful buyers; Blanco Niño for conscious consumers",
-      "Expected 21 reviews and 14 sign-ups, against 18 reviews for the usual lineup (+13%)",
-      "3 vegan and 3 gluten-free options; covers condiment, savoury"
-    ]
-  },
-  "E027": {
-    "name": "Spoken word evening, Southbank Centre",
-    "date": "2026-12-03",
+  "7b8E7AQgCweNjFVt8a": {
+    "name": "Forge Comedy Club New Years Eve Special",
+    "date": "2026-12-31",
     "event_type": "performing_arts",
-    "borough": "Lambeth",
-    "expected_attendance": 140,
+    "category": "performing-arts",
+    "latitude": 50.8293368,
+    "longitude": -0.138464,
+    "km_from_london": 75.4,
+    "family_event": false,
+    "expected_attendance": 147,
     "lineup_size": 4,
     "brands": [
+      "B25",
+      "B18",
       "B45",
-      "B36",
-      "B04",
-      "B16"
+      "B19"
     ],
     "brand_names": [
+      "The Original Chicken Crackling",
+      "Navas",
       "Penrhos",
-      "HOOP",
-      "Well & Truly",
-      "Pentire"
+      "JimJams"
     ],
     "products": {
+      "B25": "Chicken Salt",
+      "B18": "Fiery Ginger Beer",
       "B45": "Handcrafted Dry Gin",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B04": "Crunchies — Smokey Bacon",
-      "B16": "Adrift"
+      "B19": "Hazelnut Chocolate Spread"
     },
     "units": {
-      "B45": 47,
-      "B36": 47,
-      "B04": 47,
-      "B16": 47
+      "B25": 50,
+      "B18": 50,
+      "B45": 50,
+      "B19": 50
     },
-    "slot": "20:05-20:30 (interval)",
+    "slot": "21:20-21:45 (interval)",
     "archetype_mix": {
-      "wellness_seeker": 0.042,
-      "trend_enthusiast": 0.096,
-      "thoughtful_buyer": 0.144,
-      "smart_saver": 0.03,
-      "quality_seeker": 0.156,
-      "on_the_go_shopper": 0.06,
-      "impulse_buyer": 0.072,
-      "experience_explorer": 0.219,
-      "everyday_planner": 0.072,
-      "conscious_consumer": 0.108
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.106,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.62,
+      "everyday_planner": 0.059,
+      "conscious_consumer": 0.024
     },
-    "match": 0.73,
-    "exp_signups": 8.7,
-    "exp_reviews": 14.0,
+    "match": 0.877,
+    "exp_signups": 10.5,
+    "exp_reviews": 17.7,
     "value": {
       "signup_value": 0.0,
-      "review_value": 558.0,
+      "review_value": 705.22,
       "publicity_value": 0.0,
-      "est_video_views": 1048.08,
-      "product_cost": 94.0,
-      "event_cost": 125.0,
-      "net_value": 339.0,
-      "units_total": 188,
-      "p_waste": 0.026
+      "est_video_views": 1324.6,
+      "product_cost": 100.0,
+      "event_cost": 215.16,
+      "net_value": 390.06,
+      "units_total": 200,
+      "p_waste": 0.021
     },
     "habit_brands": [
       "B04",
@@ -2196,637 +362,2814 @@
       "B17",
       "B03"
     ],
-    "habit_match": 0.518,
-    "habit_exp_reviews": 11.3,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 453.05,
-      "publicity_value": 0.0,
-      "est_video_views": 850.96,
-      "product_cost": 94.0,
-      "event_cost": 125.0,
-      "net_value": 234.05,
-      "units_total": 188,
-      "p_waste": 0.046
-    },
-    "reasons": [
-      "Archetype match 0.73 against 0.52 for the usual lineup: Penrhos for experience explorers; Penrhos for quality seekers; Well & Truly for thoughtful buyers",
-      "Expected 14 reviews and 9 sign-ups, against 11 reviews for the usual lineup (+23%)",
-      "1 vegan and 2 gluten-free options; covers drink, savoury"
-    ]
-  },
-  "E028": {
-    "name": "Contemporary dance show, Hackney Empire",
-    "date": "2026-12-04",
-    "event_type": "performing_arts",
-    "borough": "Hackney",
-    "expected_attendance": 130,
-    "lineup_size": 4,
-    "brands": [
-      "B45",
-      "B36",
-      "B04",
-      "B16"
-    ],
-    "brand_names": [
-      "Penrhos",
-      "HOOP",
-      "Well & Truly",
-      "Pentire"
-    ],
-    "products": {
-      "B45": "Handcrafted Dry Gin",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B04": "Crunchies — Smokey Bacon",
-      "B16": "Adrift"
-    },
-    "units": {
-      "B45": 44,
-      "B36": 44,
-      "B04": 44,
-      "B16": 44
-    },
-    "slot": "19:35-20:00 (interval)",
-    "archetype_mix": {
-      "wellness_seeker": 0.042,
-      "trend_enthusiast": 0.096,
-      "thoughtful_buyer": 0.144,
-      "smart_saver": 0.03,
-      "quality_seeker": 0.156,
-      "on_the_go_shopper": 0.06,
-      "impulse_buyer": 0.072,
-      "experience_explorer": 0.219,
-      "everyday_planner": 0.072,
-      "conscious_consumer": 0.108
-    },
-    "match": 0.73,
-    "exp_signups": 8.0,
-    "exp_reviews": 12.8,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 511.17,
-      "publicity_value": 0.0,
-      "est_video_views": 960.13,
-      "product_cost": 88.0,
-      "event_cost": 175.0,
-      "net_value": 248.17,
-      "units_total": 176,
-      "p_waste": 0.1
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17",
-      "B03"
-    ],
-    "habit_match": 0.518,
+    "habit_match": 0.544,
     "habit_exp_reviews": 10.4,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 415.04,
+      "review_value": 414.27,
       "publicity_value": 0.0,
-      "est_video_views": 779.56,
-      "product_cost": 88.0,
-      "event_cost": 175.0,
-      "net_value": 152.04,
-      "units_total": 176,
-      "p_waste": 0.155
+      "est_video_views": 778.11,
+      "product_cost": 100.0,
+      "event_cost": 215.16,
+      "net_value": 99.11,
+      "units_total": 200,
+      "p_waste": 0.249
     },
     "reasons": [
-      "Archetype match 0.73 against 0.52 for the usual lineup: Penrhos for experience explorers; Penrhos for quality seekers; Well & Truly for thoughtful buyers",
-      "Expected 13 reviews and 8 sign-ups, against 10 reviews for the usual lineup (+23%)",
-      "1 vegan and 2 gluten-free options; covers drink, savoury"
-    ]
+      "Archetype match 0.88 against 0.54 for the usual lineup: The Original Chicken Crackling for experience explorers; Penrhos for quality seekers; JimJams for everyday planners",
+      "Expected 18 reviews and 11 sign-ups, against 10 reviews for the usual lineup (+70%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink, savoury"
+    ],
+    "title": "Forge Comedy Club New Years Eve Special",
+    "start": "2026-12-31 20:00",
+    "end": "2026-12-31 23:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - The Forge Comedy Club seeing out 2026 in style",
+    "cost": 215.16,
+    "product_ids": {
+      "B25": "S041",
+      "B18": "S031",
+      "B45": "S066",
+      "B19": "S033"
+    },
+    "product_reviews": {
+      "B25": 4.7,
+      "B18": 4.6,
+      "B45": 4.3,
+      "B19": 4.0
+    },
+    "product_matches": {
+      "B25": 0.672,
+      "B18": 0.647,
+      "B45": 0.526,
+      "B19": 0.385
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S031",
+      "thoughtful_buyer": "S033",
+      "smart_saver": "S033",
+      "quality_seeker": "S066",
+      "on_the_go_shopper": "S041",
+      "impulse_buyer": "S033",
+      "experience_explorer": "S041",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S066"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B25": {
+        "small": 30,
+        "medium": 50,
+        "large": 75
+      },
+      "B18": {
+        "small": 30,
+        "medium": 50,
+        "large": 75
+      },
+      "B45": {
+        "small": 30,
+        "medium": 50,
+        "large": 75
+      },
+      "B19": {
+        "small": 30,
+        "medium": 50,
+        "large": 75
+      }
+    },
+    "size_line": "4 products for about 147 people"
   },
-  "E029": {
-    "name": "Cooking class, Ealing Common",
-    "date": "2026-12-05",
-    "event_type": "community",
-    "borough": "Ealing",
-    "expected_attendance": 20,
-    "lineup_size": 2,
+  "8XtwTCsUgQz3PDsMdR": {
+    "name": "Hogmanay ceilidh",
+    "date": "2026-12-31",
+    "event_type": "performing_arts",
+    "category": "performing-arts",
+    "latitude": 55.9496425,
+    "longitude": -3.2051024,
+    "km_from_london": 533.7,
+    "family_event": false,
+    "expected_attendance": 129,
+    "lineup_size": 4,
     "brands": [
-      "B36",
-      "B08"
+      "B16",
+      "B27",
+      "B09",
+      "B04"
     ],
     "brand_names": [
-      "HOOP",
-      "Dr. Will’s"
+      "Pentire",
+      "Saucerer",
+      "EP!C Snax Co.",
+      "Well & Truly"
     ],
     "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B08": "Avocado Oil Mayo"
+      "B16": "Adrift",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B09": "Plant Power Toastin’ Marshmallows",
+      "B04": "Thins — Rich Cheddar & Gouda with a Hint of Jalapeño"
     },
     "units": {
-      "B36": 11,
-      "B08": 11
+      "B16": 44,
+      "B27": 44,
+      "B09": 44,
+      "B04": 44
     },
-    "slot": "11:00-13:00",
+    "slot": "20:05-20:30 (interval)",
     "archetype_mix": {
-      "wellness_seeker": 0.114,
-      "trend_enthusiast": 0.057,
-      "thoughtful_buyer": 0.147,
-      "smart_saver": 0.109,
-      "quality_seeker": 0.09,
-      "on_the_go_shopper": 0.05,
-      "impulse_buyer": 0.08,
-      "experience_explorer": 0.087,
-      "everyday_planner": 0.121,
-      "conscious_consumer": 0.144
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.189,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.574,
+      "everyday_planner": 0.023,
+      "conscious_consumer": 0.024
     },
-    "match": 0.575,
-    "exp_signups": 1.8,
-    "exp_reviews": 1.3,
+    "match": 0.871,
+    "exp_signups": 9.0,
+    "exp_reviews": 14.6,
     "value": {
       "signup_value": 0.0,
-      "review_value": 53.04,
+      "review_value": 581.01,
       "publicity_value": 0.0,
-      "est_video_views": 99.62,
-      "product_cost": 11.0,
-      "event_cost": 150.0,
-      "net_value": -107.96,
-      "units_total": 22,
-      "p_waste": 0.99
+      "est_video_views": 1091.31,
+      "product_cost": 88.0,
+      "event_cost": 398.48,
+      "net_value": 94.53,
+      "units_total": 176,
+      "p_waste": 0.323
     },
     "habit_brands": [
       "B04",
-      "B02"
+      "B02",
+      "B17",
+      "B03"
     ],
-    "habit_match": 0.511,
-    "habit_exp_reviews": 1.3,
+    "habit_match": 0.585,
+    "habit_exp_reviews": 9.3,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 50.59,
+      "review_value": 372.41,
       "publicity_value": 0.0,
-      "est_video_views": 95.03,
-      "product_cost": 11.0,
-      "event_cost": 150.0,
-      "net_value": -110.41,
-      "units_total": 22,
-      "p_waste": 0.991
+      "est_video_views": 699.5,
+      "product_cost": 88.0,
+      "event_cost": 398.48,
+      "net_value": -114.07,
+      "units_total": 176,
+      "p_waste": 0.769
     },
     "reasons": [
-      "Archetype match 0.58 against 0.51 for the usual lineup: Dr. Will’s for thoughtful buyers; HOOP for conscious consumers; Dr. Will’s for everyday planners",
-      "Expected 1 reviews and 2 sign-ups, against 1 reviews for the usual lineup (+5%)",
-      "1 vegan and 2 gluten-free options; covers condiment, savoury"
-    ]
+      "Archetype match 0.87 against 0.59 for the usual lineup: Pentire for experience explorers; Saucerer for quality seekers; Pentire for trend enthusiasts",
+      "Expected 15 reviews and 9 sign-ups, against 9 reviews for the usual lineup (+56%)",
+      "3 vegan and 3 gluten-free options; covers condiment, drink, savoury, sweet"
+    ],
+    "title": "Hogmanay ceilidh",
+    "start": "2026-12-31 19:00",
+    "end": "2026-12-31 21:30",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - With caller Ken Gourlay and ceilidh band. Soft drinks £1, alcohol £3. All dances walked through and called. Good exercise and great fun.",
+    "cost": 398.48,
+    "product_ids": {
+      "B16": "S034",
+      "B27": "S044",
+      "B09": "S018",
+      "B04": "S007"
+    },
+    "product_reviews": {
+      "B16": 4.0,
+      "B27": 3.8,
+      "B09": 3.5,
+      "B04": 3.3
+    },
+    "product_matches": {
+      "B16": 0.667,
+      "B27": 0.559,
+      "B09": 0.417,
+      "B04": 0.357
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S007",
+      "trend_enthusiast": "S034",
+      "thoughtful_buyer": "S018",
+      "smart_saver": "S007",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S018",
+      "experience_explorer": "S034",
+      "everyday_planner": "S044",
+      "conscious_consumer": "S018"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B16": {
+        "small": 27,
+        "medium": 44,
+        "large": 66
+      },
+      "B27": {
+        "small": 27,
+        "medium": 44,
+        "large": 66
+      },
+      "B09": {
+        "small": 27,
+        "medium": 44,
+        "large": 66
+      },
+      "B04": {
+        "small": 27,
+        "medium": 44,
+        "large": 66
+      }
+    },
+    "size_line": "4 products for about 129 people"
   },
-  "E030": {
-    "name": "Student hackathon, King's Cross tech campus",
-    "date": "2026-12-06",
-    "event_type": "conferences",
-    "borough": "Camden",
-    "expected_attendance": 80,
-    "lineup_size": 3,
+  "8sUquxZwjc4zN2nw6z": {
+    "name": "Frank Sinatra Tribute - New Year's Eve Celebration",
+    "date": "2026-12-31",
+    "event_type": "community",
+    "category": "community",
+    "latitude": 54.281534,
+    "longitude": -0.398704,
+    "km_from_london": 309.0,
+    "family_event": false,
+    "expected_attendance": 100,
+    "lineup_size": 4,
     "brands": [
-      "B13",
-      "B07",
-      "B32"
+      "B27",
+      "B04",
+      "B25",
+      "B19"
     ],
     "brand_names": [
-      "mindfuel flow",
-      "Helen Browning’s Organic",
-      "ape2o"
+      "Saucerer",
+      "Well & Truly",
+      "The Original Chicken Crackling",
+      "JimJams"
     ],
     "products": {
-      "B13": "Mushroom Iced Latte — Salted Caramel",
-      "B07": "Organic Corned Beef",
-      "B32": "GO Steel Bottle — Turtle"
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B04": "Fudge & Brownie Oat M&lk Chocolate",
+      "B25": "Chicken Salt",
+      "B19": "Hazelnut Chocolate Spread"
     },
     "units": {
-      "B13": 66,
-      "B07": 66,
-      "B32": 66
+      "B27": 53,
+      "B04": 53,
+      "B25": 53,
+      "B19": 53
     },
-    "slot": "15:00-16:30",
+    "slot": "20:29-22:29",
     "archetype_mix": {
-      "wellness_seeker": 0.066,
-      "trend_enthusiast": 0.213,
-      "thoughtful_buyer": 0.098,
-      "smart_saver": 0.085,
-      "quality_seeker": 0.079,
-      "on_the_go_shopper": 0.256,
-      "impulse_buyer": 0.066,
-      "experience_explorer": 0.098,
-      "everyday_planner": 0.023,
-      "conscious_consumer": 0.016
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.282,
+      "everyday_planner": 0.224,
+      "conscious_consumer": 0.273
     },
-    "match": 0.588,
-    "exp_signups": 23.0,
-    "exp_reviews": 30.5,
+    "match": 0.897,
+    "exp_signups": 14.1,
+    "exp_reviews": 19.7,
     "value": {
       "signup_value": 0.0,
-      "review_value": 1218.81,
+      "review_value": 787.93,
       "publicity_value": 0.0,
-      "est_video_views": 2289.27,
-      "product_cost": 99.0,
-      "event_cost": 125.0,
-      "net_value": 994.81,
-      "units_total": 198,
-      "p_waste": 0.0
+      "est_video_views": 1479.97,
+      "product_cost": 106.0,
+      "event_cost": 308.6,
+      "net_value": 373.33,
+      "units_total": 212,
+      "p_waste": 0.029
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_match": 0.526,
+    "habit_exp_reviews": 12.4,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 493.27,
+      "publicity_value": 0.0,
+      "est_video_views": 926.49,
+      "product_cost": 106.0,
+      "event_cost": 308.6,
+      "net_value": 78.67,
+      "units_total": 212,
+      "p_waste": 0.381
+    },
+    "reasons": [
+      "Archetype match 0.90 against 0.53 for the usual lineup: The Original Chicken Crackling for experience explorers; Well & Truly for conscious consumers; JimJams for everyday planners",
+      "Expected 20 reviews and 14 sign-ups, against 12 reviews for the usual lineup (+60%)",
+      "2 vegan and 3 gluten-free options; covers condiment, savoury"
+    ],
+    "title": "Frank Sinatra Tribute - New Year's Eve Celebration",
+    "start": "2026-12-31 19:00",
+    "end": "2026-12-31 23:59",
+    "indoor": 0,
+    "description": "Sourced from predicthq.com - Ring in the New Year with swingin’ Sinatra tunes and good vibes at our live tribute bash!",
+    "cost": 308.6,
+    "product_ids": {
+      "B27": "S044",
+      "B04": "S014",
+      "B25": "S041",
+      "B19": "S033"
+    },
+    "product_reviews": {
+      "B27": 5.1,
+      "B04": 4.9,
+      "B25": 4.9,
+      "B19": 4.8
+    },
+    "product_matches": {
+      "B27": 0.495,
+      "B04": 0.434,
+      "B25": 0.404,
+      "B19": 0.392
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S044",
+      "thoughtful_buyer": "S033",
+      "smart_saver": "S033",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S014",
+      "experience_explorer": "S041",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S014"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": true,
+    "units_by_size": {
+      "B27": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B04": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B25": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B19": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      }
+    },
+    "size_line": "4 products for about 100 people"
+  },
+  "Ce8dfnXeUs5irJgCim": {
+    "name": "Whitney Houston Tribute Night - Shirley, Solihull",
+    "date": "2026-12-31",
+    "event_type": "community",
+    "category": "community",
+    "latitude": 52.4127138,
+    "longitude": -1.8288193,
+    "km_from_london": 154.0,
+    "family_event": false,
+    "expected_attendance": 100,
+    "lineup_size": 4,
+    "brands": [
+      "B25",
+      "B03",
+      "B19",
+      "B04"
+    ],
+    "brand_names": [
+      "The Original Chicken Crackling",
+      "The Protein Ball Co.",
+      "JimJams",
+      "Well & Truly"
+    ],
+    "products": {
+      "B25": "Chicken Salt",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B19": "Hazelnut Chocolate Spread",
+      "B04": "Fudge & Brownie Oat M&lk Chocolate"
+    },
+    "units": {
+      "B25": 53,
+      "B03": 53,
+      "B19": 53,
+      "B04": 53
+    },
+    "slot": "20:29-22:29",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.232,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.139,
+      "experience_explorer": 0.297,
+      "everyday_planner": 0.078,
+      "conscious_consumer": 0.092
+    },
+    "match": 0.901,
+    "exp_signups": 14.2,
+    "exp_reviews": 19.2,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 764.77,
+      "publicity_value": 0.0,
+      "est_video_views": 1436.45,
+      "product_cost": 106.0,
+      "event_cost": 246.6,
+      "net_value": 412.17,
+      "units_total": 212,
+      "p_waste": 0.012
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_match": 0.631,
+    "habit_exp_reviews": 13.8,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 549.53,
+      "publicity_value": 0.0,
+      "est_video_views": 1032.18,
+      "product_cost": 106.0,
+      "event_cost": 246.6,
+      "net_value": 196.93,
+      "units_total": 212,
+      "p_waste": 0.091
+    },
+    "reasons": [
+      "Archetype match 0.90 against 0.63 for the usual lineup: The Original Chicken Crackling for experience explorers; The Protein Ball Co. for trend enthusiasts; Well & Truly for impulse buyers",
+      "Expected 19 reviews and 14 sign-ups, against 14 reviews for the usual lineup (+39%)",
+      "2 vegan and 3 gluten-free options; covers condiment, functional, savoury"
+    ],
+    "title": "Whitney Houston Tribute Night - Shirley, Solihull",
+    "start": "2026-12-31 19:00",
+    "end": "2026-12-31 23:59",
+    "indoor": 0,
+    "description": "Sourced from predicthq.com - Whitney Houston Tribute Night – New Year’s Eve Special\nCelebrate New Year’s Eve in style with an unforgettable Whitney Houston Tribute Night",
+    "cost": 246.6,
+    "product_ids": {
+      "B25": "S041",
+      "B03": "S040",
+      "B19": "S033",
+      "B04": "S014"
+    },
+    "product_reviews": {
+      "B25": 5.0,
+      "B03": 4.8,
+      "B19": 4.7,
+      "B04": 4.7
+    },
+    "product_matches": {
+      "B25": 0.431,
+      "B03": 0.362,
+      "B19": 0.355,
+      "B04": 0.337
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S033",
+      "smart_saver": "S033",
+      "quality_seeker": "S033",
+      "on_the_go_shopper": "S041",
+      "impulse_buyer": "S014",
+      "experience_explorer": "S041",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S014"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": true,
+    "units_by_size": {
+      "B25": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B03": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B19": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B04": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      }
+    },
+    "size_line": "4 products for about 100 people"
+  },
+  "PnfMdhNHZxFX9emZhA": {
+    "name": "Neon Nights and New Year Lights",
+    "date": "2026-12-31",
+    "event_type": "festivals",
+    "category": "festivals",
+    "latitude": 51.6197333,
+    "longitude": -1.3011856,
+    "km_from_london": 82.1,
+    "family_event": false,
+    "expected_attendance": 174,
+    "lineup_size": 5,
+    "brands": [
+      "B25",
+      "B04",
+      "B27",
+      "B49",
+      "B26"
+    ],
+    "brand_names": [
+      "The Original Chicken Crackling",
+      "Well & Truly",
+      "Saucerer",
+      "NOMO",
+      "Blanco Niño"
+    ],
+    "products": {
+      "B25": "Chicken Salt",
+      "B04": "Crunchies — Smokey Paprika",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B49": "Caramel Choc Bar",
+      "B26": "Creamy Jalapeño Tortilla Chips"
+    },
+    "units": {
+      "B25": 49,
+      "B04": 49,
+      "B27": 49,
+      "B49": 49,
+      "B26": 49
+    },
+    "slot": "21:00-23:00",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.179,
+      "thoughtful_buyer": 0.259,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.086,
+      "impulse_buyer": 0.128,
+      "experience_explorer": 0.204,
+      "everyday_planner": 0.023,
+      "conscious_consumer": 0.024
+    },
+    "match": 0.837,
+    "exp_signups": 6.0,
+    "exp_reviews": 13.0,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 517.21,
+      "publicity_value": 0.0,
+      "est_video_views": 971.46,
+      "product_cost": 122.5,
+      "event_cost": 227.84,
+      "net_value": 166.87,
+      "units_total": 245,
+      "p_waste": 0.288
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_match": 0.738,
+    "habit_exp_reviews": 11.1,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 443.95,
+      "publicity_value": 0.0,
+      "est_video_views": 833.87,
+      "product_cost": 122.5,
+      "event_cost": 227.84,
+      "net_value": 93.61,
+      "units_total": 245,
+      "p_waste": 0.375
+    },
+    "reasons": [
+      "Archetype match 0.84 against 0.74 for the usual lineup: Well & Truly for thoughtful buyers; The Original Chicken Crackling for experience explorers; Saucerer for trend enthusiasts",
+      "Expected 13 reviews and 6 sign-ups, against 11 reviews for the usual lineup (+17%)",
+      "4 vegan and 5 gluten-free options; covers condiment, savoury, sweet"
+    ],
+    "title": "Neon Nights and New Year Lights",
+    "start": "2026-12-31 19:00",
+    "end": "2027-01-01 01:00",
+    "indoor": 0,
+    "description": "Sourced from predicthq.com - Celebrate New Year’s Eve in true 80s style at Oxen Bar & Grill with the vibrant Neon Nights & New Year’s Lights party. Starting from 7:30 pm",
+    "cost": 227.84,
+    "product_ids": {
+      "B25": "S041",
+      "B04": "S010",
+      "B27": "S044",
+      "B49": "S070",
+      "B26": "S042"
+    },
+    "product_reviews": {
+      "B25": 2.8,
+      "B04": 2.6,
+      "B27": 2.5,
+      "B49": 2.5,
+      "B26": 2.5
+    },
+    "product_matches": {
+      "B25": 0.518,
+      "B04": 0.391,
+      "B27": 0.371,
+      "B49": 0.367,
+      "B26": 0.344
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S010",
+      "trend_enthusiast": "S044",
+      "thoughtful_buyer": "S010",
+      "smart_saver": "S042",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S070",
+      "experience_explorer": "S041",
+      "everyday_planner": "S044",
+      "conscious_consumer": "S042"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B25": {
+        "small": 29,
+        "medium": 49,
+        "large": 73
+      },
+      "B04": {
+        "small": 29,
+        "medium": 49,
+        "large": 73
+      },
+      "B27": {
+        "small": 29,
+        "medium": 49,
+        "large": 73
+      },
+      "B49": {
+        "small": 29,
+        "medium": 49,
+        "large": 73
+      },
+      "B26": {
+        "small": 29,
+        "medium": 49,
+        "large": 73
+      }
+    },
+    "size_line": "5 products for about 174 people"
+  },
+  "YShrZnmVUMEoA6U2nG": {
+    "name": "NYE - Charlies Loft + Simple Minded / Deacon Blues + DJ",
+    "date": "2026-12-31",
+    "event_type": "concerts",
+    "category": "concerts",
+    "latitude": 55.94025,
+    "longitude": -4.31887,
+    "km_from_london": 564.6,
+    "family_event": false,
+    "expected_attendance": 192,
+    "lineup_size": 5,
+    "brands": [
+      "B03",
+      "B27",
+      "B20",
+      "B08",
+      "B09"
+    ],
+    "brand_names": [
+      "The Protein Ball Co.",
+      "Saucerer",
+      "The London Essence Co.",
+      "Dr. Will’s",
+      "EP!C Snax Co."
+    ],
+    "products": {
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B20": "Original Indian Tonic Water",
+      "B08": "Buffalo Hot Sauce",
+      "B09": "Plant Power Toastin’ Marshmallows"
+    },
+    "units": {
+      "B03": 52,
+      "B27": 52,
+      "B20": 52,
+      "B08": 52,
+      "B09": 52
+    },
+    "slot": "21:00-23:00",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.515,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.102,
+      "experience_explorer": 0.174,
+      "everyday_planner": 0.023,
+      "conscious_consumer": 0.024
+    },
+    "match": 0.911,
+    "exp_signups": 9.7,
+    "exp_reviews": 18.7,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 745.9,
+      "publicity_value": 0.0,
+      "est_video_views": 1401.02,
+      "product_cost": 130.0,
+      "event_cost": 420.84,
+      "net_value": 195.06,
+      "units_total": 260,
+      "p_waste": 0.244
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_match": 0.821,
+    "habit_exp_reviews": 16.0,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 640.01,
+      "publicity_value": 0.0,
+      "est_video_views": 1202.12,
+      "product_cost": 130.0,
+      "event_cost": 420.84,
+      "net_value": 89.17,
+      "units_total": 260,
+      "p_waste": 0.34
+    },
+    "reasons": [
+      "Archetype match 0.91 against 0.82 for the usual lineup: The Protein Ball Co. for trend enthusiasts; The London Essence Co. for experience explorers; EP!C Snax Co. for impulse buyers",
+      "Expected 19 reviews and 10 sign-ups, against 16 reviews for the usual lineup (+17%)",
+      "5 vegan and 4 gluten-free options; covers condiment, drink, functional, sweet"
+    ],
+    "title": "NYE - Charlies Loft + Simple Minded / Deacon Blues + DJ",
+    "start": "2026-12-31 19:00",
+    "end": "2027-01-01 02:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - THIS NEW YEAR’S EVE, WE’RE GOING OUT WITH A BANG!",
+    "cost": 420.84,
+    "product_ids": {
+      "B03": "S040",
+      "B27": "S044",
+      "B20": "S035",
+      "B08": "S017",
+      "B09": "S018"
+    },
+    "product_reviews": {
+      "B03": 4.1,
+      "B27": 3.9,
+      "B20": 3.7,
+      "B08": 3.5,
+      "B09": 3.4
+    },
+    "product_matches": {
+      "B03": 0.593,
+      "B27": 0.505,
+      "B20": 0.424,
+      "B08": 0.312,
+      "B09": 0.261
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S040",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S017",
+      "smart_saver": "S035",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S018",
+      "experience_explorer": "S035",
+      "everyday_planner": "S044",
+      "conscious_consumer": "S018"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B03": {
+        "small": 31,
+        "medium": 52,
+        "large": 78
+      },
+      "B27": {
+        "small": 31,
+        "medium": 52,
+        "large": 78
+      },
+      "B20": {
+        "small": 31,
+        "medium": 52,
+        "large": 78
+      },
+      "B08": {
+        "small": 31,
+        "medium": 52,
+        "large": 78
+      },
+      "B09": {
+        "small": 31,
+        "medium": 52,
+        "large": 78
+      }
+    },
+    "size_line": "5 products for about 192 people"
+  },
+  "7uBS8NKp8gExokUz3w": {
+    "name": "80's V 90's NEW YEARS EVE PARTY",
+    "date": "2026-12-31",
+    "event_type": "community",
+    "category": "community",
+    "latitude": 51.505733,
+    "longitude": -2.587257,
+    "km_from_london": 170.2,
+    "family_event": false,
+    "expected_attendance": 100,
+    "lineup_size": 4,
+    "brands": [
+      "B19",
+      "B25",
+      "B03",
+      "B04"
+    ],
+    "brand_names": [
+      "JimJams",
+      "The Original Chicken Crackling",
+      "The Protein Ball Co.",
+      "Well & Truly"
+    ],
+    "products": {
+      "B19": "Hazelnut Chocolate Spread",
+      "B25": "Chicken Salt",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B04": "Crunchies — Smokey Bacon"
+    },
+    "units": {
+      "B19": 53,
+      "B25": 53,
+      "B03": 53,
+      "B04": 53
+    },
+    "slot": "19:15-21:15",
+    "archetype_mix": {
+      "wellness_seeker": 0.174,
+      "trend_enthusiast": 0.142,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.074,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.082,
+      "experience_explorer": 0.204,
+      "everyday_planner": 0.076,
+      "conscious_consumer": 0.155
+    },
+    "match": 0.877,
+    "exp_signups": 14.3,
+    "exp_reviews": 19.5,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 777.05,
+      "publicity_value": 0.0,
+      "est_video_views": 1459.52,
+      "product_cost": 106.0,
+      "event_cost": 253.08,
+      "net_value": 417.97,
+      "units_total": 212,
+      "p_waste": 0.011
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_match": 0.662,
+    "habit_exp_reviews": 15.1,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 602.48,
+      "publicity_value": 0.0,
+      "est_video_views": 1131.64,
+      "product_cost": 106.0,
+      "event_cost": 253.08,
+      "net_value": 243.4,
+      "units_total": 212,
+      "p_waste": 0.062
+    },
+    "reasons": [
+      "Archetype match 0.88 against 0.66 for the usual lineup: The Original Chicken Crackling for experience explorers; JimJams for wellness seekers; Well & Truly for conscious consumers",
+      "Expected 19 reviews and 14 sign-ups, against 15 reviews for the usual lineup (+29%)",
+      "2 vegan and 3 gluten-free options; covers condiment, functional, savoury"
+    ],
+    "title": "80's V 90's NEW YEARS EVE PARTY",
+    "start": "2026-12-31 18:45",
+    "end": "2026-12-31 21:45",
+    "indoor": 0,
+    "description": "Sourced from predicthq.com - with BETH REDDY and LIVE BAND",
+    "cost": 253.08,
+    "product_ids": {
+      "B19": "S033",
+      "B25": "S041",
+      "B03": "S040",
+      "B04": "S012"
+    },
+    "product_reviews": {
+      "B19": 4.9,
+      "B25": 4.9,
+      "B03": 4.9,
+      "B04": 4.8
+    },
+    "product_matches": {
+      "B19": 0.435,
+      "B25": 0.432,
+      "B03": 0.411,
+      "B04": 0.387
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S033",
+      "smart_saver": "S012",
+      "quality_seeker": "S033",
+      "on_the_go_shopper": "S041",
+      "impulse_buyer": "S033",
+      "experience_explorer": "S041",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S012"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": true,
+    "units_by_size": {
+      "B19": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B25": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B03": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B04": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      }
+    },
+    "size_line": "4 products for about 100 people"
+  },
+  "Bv2BQKFxSyyw8Mk8mL": {
+    "name": "Waiting List for Walk The Big One for Shelter 2026",
+    "date": "2026-12-31",
+    "event_type": "community",
+    "category": "community",
+    "latitude": 53.79233,
+    "longitude": -3.0552927,
+    "km_from_london": 321.7,
+    "family_event": false,
+    "expected_attendance": 100,
+    "lineup_size": 4,
+    "brands": [
+      "B27",
+      "B04",
+      "B25",
+      "B19"
+    ],
+    "brand_names": [
+      "Saucerer",
+      "Well & Truly",
+      "The Original Chicken Crackling",
+      "JimJams"
+    ],
+    "products": {
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B04": "Fudge & Brownie Oat M&lk Chocolate",
+      "B25": "Chicken Salt",
+      "B19": "Hazelnut Chocolate Spread"
+    },
+    "units": {
+      "B27": 53,
+      "B04": 53,
+      "B25": 53,
+      "B19": 53
+    },
+    "slot": "18:30-20:30",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.282,
+      "everyday_planner": 0.224,
+      "conscious_consumer": 0.273
+    },
+    "match": 0.897,
+    "exp_signups": 14.6,
+    "exp_reviews": 20.0,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 800.27,
+      "publicity_value": 0.0,
+      "est_video_views": 1503.13,
+      "product_cost": 106.0,
+      "event_cost": 313.68,
+      "net_value": 380.59,
+      "units_total": 212,
+      "p_waste": 0.022
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_match": 0.526,
+    "habit_exp_reviews": 12.5,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 500.99,
+      "publicity_value": 0.0,
+      "est_video_views": 941.0,
+      "product_cost": 106.0,
+      "event_cost": 313.68,
+      "net_value": 81.31,
+      "units_total": 212,
+      "p_waste": 0.341
+    },
+    "reasons": [
+      "Archetype match 0.90 against 0.53 for the usual lineup: The Original Chicken Crackling for experience explorers; Well & Truly for conscious consumers; JimJams for everyday planners",
+      "Expected 20 reviews and 15 sign-ups, against 13 reviews for the usual lineup (+60%)",
+      "2 vegan and 3 gluten-free options; covers condiment, savoury"
+    ],
+    "title": "Waiting List for Walk The Big One for Shelter 2026",
+    "start": "2026-12-31 18:00",
+    "end": "2026-12-31 21:00",
+    "indoor": 0,
+    "description": "Sourced from predicthq.com - Register your interest for an escorted climb to the 235ft summit of one of Europe's tallest rollercoasters to fundraise for Shelter in 2026.",
+    "cost": 313.68,
+    "product_ids": {
+      "B27": "S044",
+      "B04": "S014",
+      "B25": "S041",
+      "B19": "S033"
+    },
+    "product_reviews": {
+      "B27": 5.2,
+      "B04": 5.0,
+      "B25": 4.9,
+      "B19": 4.9
+    },
+    "product_matches": {
+      "B27": 0.495,
+      "B04": 0.434,
+      "B25": 0.404,
+      "B19": 0.392
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S044",
+      "thoughtful_buyer": "S033",
+      "smart_saver": "S033",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S014",
+      "experience_explorer": "S041",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S014"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": true,
+    "units_by_size": {
+      "B27": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B04": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B25": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B19": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      }
+    },
+    "size_line": "4 products for about 100 people"
+  },
+  "HUyAGY6ozjfMzG72Q2": {
+    "name": "New Years Eve Moonlight Sonata by Candlelight",
+    "date": "2026-12-31",
+    "event_type": "concerts",
+    "category": "concerts",
+    "latitude": 51.5087276,
+    "longitude": -0.1366625,
+    "km_from_london": 0.6,
+    "family_event": false,
+    "expected_attendance": 117,
+    "lineup_size": 4,
+    "brands": [
+      "B25",
+      "B27",
+      "B03",
+      "B49"
+    ],
+    "brand_names": [
+      "The Original Chicken Crackling",
+      "Saucerer",
+      "The Protein Ball Co.",
+      "NOMO"
+    ],
+    "products": {
+      "B25": "Chicken Salt",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B49": "Caramel Choc Bar"
+    },
+    "units": {
+      "B25": 32,
+      "B27": 32,
+      "B03": 32,
+      "B49": 32
+    },
+    "slot": "16:00-17:00",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.292,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.183,
+      "experience_explorer": 0.316,
+      "everyday_planner": 0.023,
+      "conscious_consumer": 0.024
+    },
+    "match": 0.902,
+    "exp_signups": 5.9,
+    "exp_reviews": 8.4,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 337.2,
+      "publicity_value": 0.0,
+      "est_video_views": 633.36,
+      "product_cost": 64.0,
+      "event_cost": 195.24,
+      "net_value": 77.96,
+      "units_total": 128,
+      "p_waste": 0.301
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_match": 0.667,
+    "habit_exp_reviews": 6.2,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 248.15,
+      "publicity_value": 0.0,
+      "est_video_views": 466.09,
+      "product_cost": 64.0,
+      "event_cost": 195.24,
+      "net_value": -11.09,
+      "units_total": 128,
+      "p_waste": 0.513
+    },
+    "reasons": [
+      "Archetype match 0.90 against 0.67 for the usual lineup: The Original Chicken Crackling for experience explorers; The Protein Ball Co. for trend enthusiasts; NOMO for impulse buyers",
+      "Expected 8 reviews and 6 sign-ups, against 6 reviews for the usual lineup (+36%)",
+      "3 vegan and 4 gluten-free options; covers condiment, functional, savoury, sweet"
+    ],
+    "title": "New Years Eve Moonlight Sonata by Candlelight",
+    "start": "2026-12-31 16:00",
+    "end": "2026-12-31 17:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Bring in the new year with an exceptional candlelit classical performance in the beautiful candlelit setting of St James Piccadilly.",
+    "cost": 195.24,
+    "product_ids": {
+      "B25": "S041",
+      "B27": "S044",
+      "B03": "S040",
+      "B49": "S070"
+    },
+    "product_reviews": {
+      "B25": 2.2,
+      "B27": 2.2,
+      "B03": 2.1,
+      "B49": 2.0
+    },
+    "product_matches": {
+      "B25": 0.453,
+      "B27": 0.45,
+      "B03": 0.4,
+      "B49": 0.334
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S040",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S041",
+      "smart_saver": "S070",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S070",
+      "experience_explorer": "S041",
+      "everyday_planner": "S044",
+      "conscious_consumer": "S070"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B25": {
+        "small": 19,
+        "medium": 32,
+        "large": 48
+      },
+      "B27": {
+        "small": 19,
+        "medium": 32,
+        "large": 48
+      },
+      "B03": {
+        "small": 19,
+        "medium": 32,
+        "large": 48
+      },
+      "B49": {
+        "small": 19,
+        "medium": 32,
+        "large": 48
+      }
+    },
+    "size_line": "4 products for about 117 people"
+  },
+  "DeY7oMJ4B4L95QhJXd": {
+    "name": "Viennese Christmas Spectacular by Candlelight - 31st Dec, Liverpool",
+    "date": "2026-12-31",
+    "event_type": "performing_arts",
+    "category": "performing-arts",
+    "latitude": 53.4086367,
+    "longitude": -2.979912799999999,
+    "km_from_london": 286.4,
+    "family_event": false,
+    "expected_attendance": 151,
+    "lineup_size": 5,
+    "brands": [
+      "B27",
+      "B19",
+      "B18",
+      "B20",
+      "B09"
+    ],
+    "brand_names": [
+      "Saucerer",
+      "JimJams",
+      "Navas",
+      "The London Essence Co.",
+      "EP!C Snax Co."
+    ],
+    "products": {
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B19": "Hazelnut Chocolate Spread",
+      "B18": "Fiery Ginger Beer",
+      "B20": "Original Indian Tonic Water",
+      "B09": "Plant Power Toastin’ Marshmallows"
+    },
+    "units": {
+      "B27": 52,
+      "B19": 52,
+      "B18": 52,
+      "B20": 52,
+      "B09": 52
+    },
+    "slot": "15:50-16:15 (interval)",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.126,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.398,
+      "everyday_planner": 0.262,
+      "conscious_consumer": 0.024
+    },
+    "match": 0.885,
+    "exp_signups": 11.2,
+    "exp_reviews": 22.1,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 883.68,
+      "publicity_value": 0.0,
+      "est_video_views": 1659.8,
+      "product_cost": 130.0,
+      "event_cost": 299.56,
+      "net_value": 454.12,
+      "units_total": 260,
+      "p_waste": 0.034
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_match": 0.549,
+    "habit_exp_reviews": 13.6,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 542.58,
+      "publicity_value": 0.0,
+      "est_video_views": 1019.12,
+      "product_cost": 130.0,
+      "event_cost": 299.56,
+      "net_value": 113.02,
+      "units_total": 260,
+      "p_waste": 0.332
+    },
+    "reasons": [
+      "Archetype match 0.88 against 0.55 for the usual lineup: The London Essence Co. for experience explorers; JimJams for everyday planners; Saucerer for quality seekers",
+      "Expected 22 reviews and 11 sign-ups, against 14 reviews for the usual lineup (+63%)",
+      "4 vegan and 3 gluten-free options; covers condiment, drink, sweet"
+    ],
+    "title": "Viennese Christmas Spectacular by Candlelight - 31st Dec, Liverpool",
+    "start": "2026-12-31 15:00",
+    "end": "2026-12-31 17:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Step into an evening of candlelit excitement with London Concertante.",
+    "cost": 299.56,
+    "product_ids": {
+      "B27": "S044",
+      "B19": "S033",
+      "B18": "S031",
+      "B20": "S035",
+      "B09": "S018"
+    },
+    "product_reviews": {
+      "B27": 4.8,
+      "B19": 4.5,
+      "B18": 4.4,
+      "B20": 4.4,
+      "B09": 4.0
+    },
+    "product_matches": {
+      "B27": 0.62,
+      "B19": 0.528,
+      "B18": 0.462,
+      "B20": 0.457,
+      "B09": 0.326
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S031",
+      "thoughtful_buyer": "S018",
+      "smart_saver": "S035",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S018",
+      "experience_explorer": "S035",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S018"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B27": {
+        "small": 31,
+        "medium": 52,
+        "large": 77
+      },
+      "B19": {
+        "small": 31,
+        "medium": 52,
+        "large": 77
+      },
+      "B18": {
+        "small": 31,
+        "medium": 52,
+        "large": 77
+      },
+      "B20": {
+        "small": 31,
+        "medium": 52,
+        "large": 77
+      },
+      "B09": {
+        "small": 31,
+        "medium": 52,
+        "large": 77
+      }
+    },
+    "size_line": "5 products for about 151 people"
+  },
+  "7YRdmoXK3b6RZXLKnD": {
+    "name": "UB40 / Reggae Tribute Night - Longbridge",
+    "date": "2026-12-31",
+    "event_type": "community",
+    "category": "community",
+    "latitude": 52.3975887,
+    "longitude": -1.9821534000000156,
+    "km_from_london": 161.1,
+    "family_event": false,
+    "expected_attendance": 100,
+    "lineup_size": 4,
+    "brands": [
+      "B25",
+      "B03",
+      "B19",
+      "B04"
+    ],
+    "brand_names": [
+      "The Original Chicken Crackling",
+      "The Protein Ball Co.",
+      "JimJams",
+      "Well & Truly"
+    ],
+    "products": {
+      "B25": "Chicken Salt",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B19": "Hazelnut Chocolate Spread",
+      "B04": "Fudge & Brownie Oat M&lk Chocolate"
+    },
+    "units": {
+      "B25": 53,
+      "B03": 53,
+      "B19": 53,
+      "B04": 53
+    },
+    "slot": "11:00-13:00",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.232,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.139,
+      "experience_explorer": 0.297,
+      "everyday_planner": 0.078,
+      "conscious_consumer": 0.092
+    },
+    "match": 0.901,
+    "exp_signups": 12.1,
+    "exp_reviews": 17.8,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 712.72,
+      "publicity_value": 0.0,
+      "est_video_views": 1338.69,
+      "product_cost": 106.0,
+      "event_cost": 249.44,
+      "net_value": 357.28,
+      "units_total": 212,
+      "p_waste": 0.043
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_match": 0.631,
+    "habit_exp_reviews": 12.8,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 512.13,
+      "publicity_value": 0.0,
+      "est_video_views": 961.93,
+      "product_cost": 106.0,
+      "event_cost": 249.44,
+      "net_value": 156.69,
+      "units_total": 212,
+      "p_waste": 0.195
+    },
+    "reasons": [
+      "Archetype match 0.90 against 0.63 for the usual lineup: The Original Chicken Crackling for experience explorers; The Protein Ball Co. for trend enthusiasts; Well & Truly for impulse buyers",
+      "Expected 18 reviews and 12 sign-ups, against 13 reviews for the usual lineup (+39%)",
+      "2 vegan and 3 gluten-free options; covers condiment, functional, savoury"
+    ],
+    "title": "UB40 / Reggae Tribute Night - Longbridge",
+    "start": "2026-12-31 10:00",
+    "end": "2026-12-31 23:59",
+    "indoor": 0,
+    "description": "Sourced from predicthq.com - UB40 & Reggae Night – Ultimate 40 Band | New Year’s Eve\nRing in 2026 in style at our UB40 & Reggae Tribute Night with the fantastic Ultimate",
+    "cost": 249.44,
+    "product_ids": {
+      "B25": "S041",
+      "B03": "S040",
+      "B19": "S033",
+      "B04": "S014"
+    },
+    "product_reviews": {
+      "B25": 4.6,
+      "B03": 4.4,
+      "B19": 4.4,
+      "B04": 4.4
+    },
+    "product_matches": {
+      "B25": 0.431,
+      "B03": 0.362,
+      "B19": 0.355,
+      "B04": 0.337
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S033",
+      "smart_saver": "S033",
+      "quality_seeker": "S033",
+      "on_the_go_shopper": "S041",
+      "impulse_buyer": "S014",
+      "experience_explorer": "S041",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S014"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": true,
+    "units_by_size": {
+      "B25": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B03": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B19": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      },
+      "B04": {
+        "small": 32,
+        "medium": 53,
+        "large": 79
+      }
+    },
+    "size_line": "4 products for about 100 people"
+  },
+  "FvqmmDfNzyDbZMbchz": {
+    "name": "Nutcracker Suite and Rachmaninov  at Christmas by Candlelight",
+    "date": "2026-12-30",
+    "event_type": "concerts",
+    "category": "concerts",
+    "latitude": 51.4957372,
+    "longitude": -3.2178057,
+    "km_from_london": 213.9,
+    "family_event": false,
+    "expected_attendance": 199,
+    "lineup_size": 5,
+    "brands": [
+      "B20",
+      "B27",
+      "B09",
+      "B03",
+      "B49"
+    ],
+    "brand_names": [
+      "The London Essence Co.",
+      "Saucerer",
+      "EP!C Snax Co.",
+      "The Protein Ball Co.",
+      "NOMO"
+    ],
+    "products": {
+      "B20": "Original Indian Tonic Water",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B09": "Plant Power Toastin’ Marshmallows",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B49": "Caramel Choc Bar"
+    },
+    "units": {
+      "B20": 54,
+      "B27": 54,
+      "B09": 54,
+      "B03": 54,
+      "B49": 54
+    },
+    "slot": "19:30-21:15",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.292,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.183,
+      "experience_explorer": 0.316,
+      "everyday_planner": 0.023,
+      "conscious_consumer": 0.024
+    },
+    "match": 0.913,
+    "exp_signups": 11.2,
+    "exp_reviews": 20.3,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 811.0,
+      "publicity_value": 0.0,
+      "est_video_views": 1523.29,
+      "product_cost": 135.0,
+      "event_cost": 280.56,
+      "net_value": 395.44,
+      "units_total": 270,
+      "p_waste": 0.034
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03",
+      "B26"
+    ],
+    "habit_match": 0.763,
+    "habit_exp_reviews": 16.3,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 650.95,
+      "publicity_value": 0.0,
+      "est_video_views": 1222.68,
+      "product_cost": 135.0,
+      "event_cost": 280.56,
+      "net_value": 235.39,
+      "units_total": 270,
+      "p_waste": 0.161
+    },
+    "reasons": [
+      "Archetype match 0.91 against 0.76 for the usual lineup: The London Essence Co. for experience explorers; The Protein Ball Co. for trend enthusiasts; NOMO for impulse buyers",
+      "Expected 20 reviews and 11 sign-ups, against 16 reviews for the usual lineup (+25%)",
+      "5 vegan and 4 gluten-free options; covers condiment, drink, functional, sweet"
+    ],
+    "title": "Nutcracker Suite and Rachmaninov  at Christmas by Candlelight",
+    "start": "2026-12-30 19:30",
+    "end": "2026-12-30 21:15",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Enjoy an exceptional candlelit classical performance this Christmas in the beautiful candlelit setting of Llandaff Cathedral.",
+    "cost": 280.56,
+    "product_ids": {
+      "B20": "S035",
+      "B27": "S044",
+      "B09": "S018",
+      "B03": "S040",
+      "B49": "S070"
+    },
+    "product_reviews": {
+      "B20": 4.2,
+      "B27": 4.1,
+      "B09": 4.1,
+      "B03": 4.0,
+      "B49": 3.9
+    },
+    "product_matches": {
+      "B20": 0.494,
+      "B27": 0.45,
+      "B09": 0.417,
+      "B03": 0.4,
+      "B49": 0.334
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S040",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S018",
+      "smart_saver": "S035",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S070",
+      "experience_explorer": "S035",
+      "everyday_planner": "S044",
+      "conscious_consumer": "S018"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B20": {
+        "small": 32,
+        "medium": 54,
+        "large": 80
+      },
+      "B27": {
+        "small": 32,
+        "medium": 54,
+        "large": 80
+      },
+      "B09": {
+        "small": 32,
+        "medium": 54,
+        "large": 80
+      },
+      "B03": {
+        "small": 32,
+        "medium": 54,
+        "large": 80
+      },
+      "B49": {
+        "small": 32,
+        "medium": 54,
+        "large": 80
+      }
+    },
+    "size_line": "5 products for about 199 people"
+  },
+  "FBvn8Sq6rYA8Y8Qk5J": {
+    "name": "Rumble Wrestling comes to Ditton for a Christmas Cracker",
+    "date": "2026-12-30",
+    "event_type": "concerts",
+    "category": "concerts",
+    "latitude": 51.2944015,
+    "longitude": 0.4525425,
+    "km_from_london": 46.7,
+    "family_event": false,
+    "expected_attendance": 96,
+    "lineup_size": 3,
+    "brands": [
+      "B19",
+      "B07",
+      "B18"
+    ],
+    "brand_names": [
+      "JimJams",
+      "Helen Browning’s Organic",
+      "Navas"
+    ],
+    "products": {
+      "B19": "Hazelnut Chocolate Spread",
+      "B07": "Organic Corned Beef",
+      "B18": "Fiery Ginger Beer"
+    },
+    "units": {
+      "B19": 26,
+      "B07": 26,
+      "B18": 26
+    },
+    "slot": "15:07-17:07",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.147,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.09,
+      "experience_explorer": 0.153,
+      "everyday_planner": 0.425,
+      "conscious_consumer": 0.024
+    },
+    "match": 0.868,
+    "exp_signups": 4.4,
+    "exp_reviews": 4.8,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 191.8,
+      "publicity_value": 0.0,
+      "est_video_views": 360.26,
+      "product_cost": 39.0,
+      "event_cost": 213.68,
+      "net_value": -60.88,
+      "units_total": 78,
+      "p_waste": 0.724
     },
     "habit_brands": [
       "B04",
       "B02",
       "B17"
     ],
-    "habit_match": 0.461,
-    "habit_exp_reviews": 27.8,
+    "habit_match": 0.422,
+    "habit_exp_reviews": 2.7,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 1109.58,
+      "review_value": 105.88,
       "publicity_value": 0.0,
-      "est_video_views": 2084.12,
-      "product_cost": 99.0,
-      "event_cost": 125.0,
-      "net_value": 885.58,
-      "units_total": 198,
-      "p_waste": 0.0
+      "est_video_views": 198.87,
+      "product_cost": 39.0,
+      "event_cost": 213.68,
+      "net_value": -146.8,
+      "units_total": 78,
+      "p_waste": 0.978
     },
     "reasons": [
-      "Archetype match 0.59 against 0.46 for the usual lineup: ape2o for on the go shoppers; mindfuel flow for trend enthusiasts; mindfuel flow for thoughtful buyers",
-      "Expected 31 reviews and 23 sign-ups, against 28 reviews for the usual lineup (+10%)",
-      "1 vegan and 1 gluten-free options; covers condiment, drink, other"
-    ]
+      "Archetype match 0.87 against 0.42 for the usual lineup: JimJams for everyday planners; Navas for experience explorers; Navas for trend enthusiasts",
+      "Expected 5 reviews and 4 sign-ups, against 3 reviews for the usual lineup (+81%)",
+      "1 vegan and 2 gluten-free options; covers condiment, drink"
+    ],
+    "title": "Rumble Wrestling comes to Ditton for a Christmas Cracker",
+    "start": "2026-12-30 15:00",
+    "end": "2026-12-30 17:15",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Rumble Wrestling return to Ditton Community Centre  for their annual  Christmas Cracker visit - a show for all the family",
+    "cost": 213.68,
+    "product_ids": {
+      "B19": "S033",
+      "B07": "S015",
+      "B18": "S031"
+    },
+    "product_reviews": {
+      "B19": 1.8,
+      "B07": 1.5,
+      "B18": 1.5
+    },
+    "product_matches": {
+      "B19": 0.602,
+      "B07": 0.361,
+      "B18": 0.292
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S031",
+      "thoughtful_buyer": "S033",
+      "smart_saver": "S015",
+      "quality_seeker": "S033",
+      "on_the_go_shopper": "S015",
+      "impulse_buyer": "S033",
+      "experience_explorer": "S031",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S015"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B19": {
+        "small": 16,
+        "medium": 26,
+        "large": 39
+      },
+      "B07": {
+        "small": 16,
+        "medium": 26,
+        "large": 39
+      },
+      "B18": {
+        "small": 16,
+        "medium": 26,
+        "large": 39
+      }
+    },
+    "size_line": "3 products for about 96 people"
   },
-  "E031": {
-    "name": "Yoga morning, Ealing Common",
-    "date": "2026-12-12",
-    "event_type": "community",
-    "borough": "Ealing",
-    "expected_attendance": 30,
-    "lineup_size": 2,
+  "GmgS5GRZZiMvHAKCCX": {
+    "name": "Aladdin: Brighton's Family Pantomime",
+    "date": "2026-12-30",
+    "event_type": "performing_arts",
+    "category": "performing-arts",
+    "latitude": 50.82218049999999,
+    "longitude": -0.1488491000000067,
+    "km_from_london": 76.2,
+    "family_event": true,
+    "expected_attendance": 118,
+    "lineup_size": 4,
     "brands": [
-      "B36",
-      "B08"
+      "B27",
+      "B08",
+      "B39",
+      "B43"
     ],
     "brand_names": [
-      "HOOP",
-      "Dr. Will’s"
+      "Saucerer",
+      "Dr. Will’s",
+      "SUCSEED",
+      "Fever-Tree"
     ],
     "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B08": "Avocado Oil Mayo"
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B08": "Avocado Oil Mayo",
+      "B39": "Energy",
+      "B43": "Refreshingly Light Elderflower Tonic Water"
     },
     "units": {
-      "B36": 16,
-      "B08": 16
+      "B27": 40,
+      "B08": 40,
+      "B39": 40,
+      "B43": 40
     },
-    "slot": "09:30-11:30",
+    "slot": "14:50-15:15 (interval)",
     "archetype_mix": {
-      "wellness_seeker": 0.113,
-      "trend_enthusiast": 0.057,
-      "thoughtful_buyer": 0.147,
-      "smart_saver": 0.083,
-      "quality_seeker": 0.117,
-      "on_the_go_shopper": 0.05,
-      "impulse_buyer": 0.08,
-      "experience_explorer": 0.087,
-      "everyday_planner": 0.156,
-      "conscious_consumer": 0.11
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.103,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.159,
+      "everyday_planner": 0.523,
+      "conscious_consumer": 0.024
     },
-    "match": 0.581,
-    "exp_signups": 2.9,
-    "exp_reviews": 2.2,
+    "match": 0.895,
+    "exp_signups": 8.4,
+    "exp_reviews": 14.2,
     "value": {
       "signup_value": 0.0,
-      "review_value": 86.14,
+      "review_value": 565.17,
       "publicity_value": 0.0,
-      "est_video_views": 161.79,
-      "product_cost": 16.0,
-      "event_cost": 140.0,
-      "net_value": -69.86,
-      "units_total": 32,
+      "est_video_views": 1061.55,
+      "product_cost": 80.0,
+      "event_cost": 215.48,
+      "net_value": 269.69,
+      "units_total": 160,
+      "p_waste": 0.08
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_match": 0.424,
+    "habit_exp_reviews": 6.8,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 272.4,
+      "publicity_value": 0.0,
+      "est_video_views": 511.64,
+      "product_cost": 80.0,
+      "event_cost": 215.48,
+      "net_value": -23.08,
+      "units_total": 160,
+      "p_waste": 0.597
+    },
+    "reasons": [
+      "Archetype match 0.90 against 0.42 for the usual lineup: Dr. Will’s for everyday planners; Fever-Tree for experience explorers; Saucerer for quality seekers",
+      "Expected 14 reviews and 8 sign-ups, against 7 reviews for the usual lineup (+107%)",
+      "3 vegan and 2 gluten-free options; covers condiment, drink"
+    ],
+    "title": "Aladdin: Brighton's Family Pantomime",
+    "start": "2026-12-30 14:00",
+    "end": "2026-12-30 16:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Brighton's Biggest Family Panto proudly presents Aladdin 2026",
+    "cost": 215.48,
+    "product_ids": {
+      "B27": "S044",
+      "B08": "S016",
+      "B39": "S056",
+      "B43": "S063"
+    },
+    "product_reviews": {
+      "B27": 3.8,
+      "B08": 3.7,
+      "B39": 3.5,
+      "B43": 3.2
+    },
+    "product_matches": {
+      "B27": 0.7,
+      "B08": 0.655,
+      "B39": 0.583,
+      "B43": 0.414
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S056",
+      "trend_enthusiast": "S044",
+      "thoughtful_buyer": "S063",
+      "smart_saver": "S056",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S063",
+      "experience_explorer": "S063",
+      "everyday_planner": "S016",
+      "conscious_consumer": "S056"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": true,
+    "units_by_size": {
+      "B27": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      },
+      "B08": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      },
+      "B39": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      },
+      "B43": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      }
+    },
+    "size_line": "4 products for about 118 people"
+  },
+  "8y98VJEiLydu4UJfay": {
+    "name": "The Tumbling Paddies",
+    "date": "2026-12-29",
+    "event_type": "concerts",
+    "category": "concerts",
+    "latitude": 54.3447605,
+    "longitude": -6.6507863,
+    "km_from_london": 538.8,
+    "family_event": false,
+    "expected_attendance": 136,
+    "lineup_size": 4,
+    "brands": [
+      "B25",
+      "B27",
+      "B03",
+      "B49"
+    ],
+    "brand_names": [
+      "The Original Chicken Crackling",
+      "Saucerer",
+      "The Protein Ball Co.",
+      "NOMO"
+    ],
+    "products": {
+      "B25": "Chicken Salt",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B49": "Caramel Choc Bar"
+    },
+    "units": {
+      "B25": 37,
+      "B27": 37,
+      "B03": 37,
+      "B49": 37
+    },
+    "slot": "21:00-23:00",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.292,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.183,
+      "experience_explorer": 0.316,
+      "everyday_planner": 0.023,
+      "conscious_consumer": 0.024
+    },
+    "match": 0.902,
+    "exp_signups": 6.9,
+    "exp_reviews": 10.1,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 401.46,
+      "publicity_value": 0.0,
+      "est_video_views": 754.06,
+      "product_cost": 74.0,
+      "event_cost": 410.52,
+      "net_value": -83.06,
+      "units_total": 148,
+      "p_waste": 0.737
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_match": 0.667,
+    "habit_exp_reviews": 7.4,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 295.43,
+      "publicity_value": 0.0,
+      "est_video_views": 554.91,
+      "product_cost": 74.0,
+      "event_cost": 410.52,
+      "net_value": -189.09,
+      "units_total": 148,
+      "p_waste": 0.9
+    },
+    "reasons": [
+      "Archetype match 0.90 against 0.67 for the usual lineup: The Original Chicken Crackling for experience explorers; The Protein Ball Co. for trend enthusiasts; NOMO for impulse buyers",
+      "Expected 10 reviews and 7 sign-ups, against 7 reviews for the usual lineup (+36%)",
+      "3 vegan and 4 gluten-free options; covers condiment, functional, savoury, sweet"
+    ],
+    "title": "The Tumbling Paddies",
+    "start": "2026-12-29 21:00",
+    "end": "2026-12-29 23:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - The six-piece band from Co Fermanagh are set to take over Armagh City for an unmissable show on Tuesday 29th December!!",
+    "cost": 410.52,
+    "product_ids": {
+      "B25": "S041",
+      "B27": "S044",
+      "B03": "S040",
+      "B49": "S070"
+    },
+    "product_reviews": {
+      "B25": 2.6,
+      "B27": 2.6,
+      "B03": 2.5,
+      "B49": 2.4
+    },
+    "product_matches": {
+      "B25": 0.453,
+      "B27": 0.45,
+      "B03": 0.4,
+      "B49": 0.334
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S040",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S041",
+      "smart_saver": "S070",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S070",
+      "experience_explorer": "S041",
+      "everyday_planner": "S044",
+      "conscious_consumer": "S070"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B25": {
+        "small": 22,
+        "medium": 37,
+        "large": 55
+      },
+      "B27": {
+        "small": 22,
+        "medium": 37,
+        "large": 55
+      },
+      "B03": {
+        "small": 22,
+        "medium": 37,
+        "large": 55
+      },
+      "B49": {
+        "small": 22,
+        "medium": 37,
+        "large": 55
+      }
+    },
+    "size_line": "4 products for about 136 people"
+  },
+  "McApyzwnty9obfDeeA": {
+    "name": "The Soda Popz Christmas Concert",
+    "date": "2026-12-29",
+    "event_type": "concerts",
+    "category": "concerts",
+    "latitude": 55.051921,
+    "longitude": -6.952376,
+    "km_from_london": 600.5,
+    "family_event": false,
+    "expected_attendance": 106,
+    "lineup_size": 4,
+    "brands": [
+      "B25",
+      "B18",
+      "B19",
+      "B49"
+    ],
+    "brand_names": [
+      "The Original Chicken Crackling",
+      "Navas",
+      "JimJams",
+      "NOMO"
+    ],
+    "products": {
+      "B25": "Chicken Salt",
+      "B18": "Fiery Ginger Beer",
+      "B19": "Hazelnut Chocolate Spread",
+      "B49": "Caramel Choc Bar"
+    },
+    "units": {
+      "B25": 29,
+      "B18": 29,
+      "B19": 29,
+      "B49": 29
+    },
+    "slot": "20:00-22:00",
+    "archetype_mix": {
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.132,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.269,
+      "experience_explorer": 0.39,
+      "everyday_planner": 0.023,
+      "conscious_consumer": 0.024
+    },
+    "match": 0.893,
+    "exp_signups": 5.1,
+    "exp_reviews": 7.7,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 305.5,
+      "publicity_value": 0.0,
+      "est_video_views": 573.81,
+      "product_cost": 58.0,
+      "event_cost": 435.2,
+      "net_value": -187.7,
+      "units_total": 116,
       "p_waste": 0.926
     },
     "habit_brands": [
       "B04",
-      "B02"
+      "B02",
+      "B17",
+      "B03"
     ],
-    "habit_match": 0.497,
-    "habit_exp_reviews": 2.0,
+    "habit_match": 0.614,
+    "habit_exp_reviews": 5.1,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 80.62,
+      "review_value": 205.41,
       "publicity_value": 0.0,
-      "est_video_views": 151.43,
-      "product_cost": 16.0,
-      "event_cost": 140.0,
-      "net_value": -75.38,
-      "units_total": 32,
-      "p_waste": 0.936
+      "est_video_views": 385.81,
+      "product_cost": 58.0,
+      "event_cost": 435.2,
+      "net_value": -287.79,
+      "units_total": 116,
+      "p_waste": 0.994
     },
     "reasons": [
-      "Archetype match 0.58 against 0.50 for the usual lineup: Dr. Will’s for everyday planners; Dr. Will’s for thoughtful buyers; Dr. Will’s for quality seekers",
-      "Expected 2 reviews and 3 sign-ups, against 2 reviews for the usual lineup (+7%)",
-      "1 vegan and 2 gluten-free options; covers condiment, savoury"
-    ]
+      "Archetype match 0.89 against 0.61 for the usual lineup: The Original Chicken Crackling for experience explorers; NOMO for impulse buyers; Navas for trend enthusiasts",
+      "Expected 8 reviews and 5 sign-ups, against 5 reviews for the usual lineup (+49%)",
+      "2 vegan and 3 gluten-free options; covers condiment, drink, savoury, sweet"
+    ],
+    "title": "The Soda Popz Christmas Concert",
+    "start": "2026-12-29 20:00",
+    "end": "2026-12-29 22:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Feel good favourites, rock and roll dancefloor classics and timeless hits! Cabaret  seating with limited bar.",
+    "cost": 435.2,
+    "product_ids": {
+      "B25": "S041",
+      "B18": "S031",
+      "B19": "S033",
+      "B49": "S070"
+    },
+    "product_reviews": {
+      "B25": 2.0,
+      "B18": 1.9,
+      "B19": 1.9,
+      "B49": 1.8
+    },
+    "product_matches": {
+      "B25": 0.56,
+      "B18": 0.492,
+      "B19": 0.434,
+      "B49": 0.414
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S031",
+      "thoughtful_buyer": "S033",
+      "smart_saver": "S070",
+      "quality_seeker": "S033",
+      "on_the_go_shopper": "S041",
+      "impulse_buyer": "S070",
+      "experience_explorer": "S041",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S070"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B25": {
+        "small": 18,
+        "medium": 29,
+        "large": 43
+      },
+      "B18": {
+        "small": 18,
+        "medium": 29,
+        "large": 43
+      },
+      "B19": {
+        "small": 18,
+        "medium": 29,
+        "large": 43
+      },
+      "B49": {
+        "small": 18,
+        "medium": 29,
+        "large": 43
+      }
+    },
+    "size_line": "4 products for about 106 people"
   },
-  "E032": {
-    "name": "Neighbourhood food festival, Queen Elizabeth Olympic Park",
-    "date": "2026-12-13",
-    "event_type": "festivals",
-    "borough": "Newham",
-    "expected_attendance": 190,
-    "lineup_size": 5,
+  "9H5DyuTRyUicsxzHXv": {
+    "name": "Aladdin: Adult Only Show",
+    "date": "2026-12-29",
+    "event_type": "performing_arts",
+    "category": "performing-arts",
+    "latitude": 50.82218049999999,
+    "longitude": -0.1488491000000067,
+    "km_from_london": 76.2,
+    "family_event": false,
+    "expected_attendance": 118,
+    "lineup_size": 4,
     "brands": [
-      "B36",
-      "B48",
-      "B04",
-      "B07",
-      "B21"
+      "B08",
+      "B25",
+      "B45",
+      "B18"
     ],
     "brand_names": [
-      "HOOP",
-      "Mr Filbert’s",
-      "Well & Truly",
-      "Helen Browning’s Organic",
-      "Double Dutch"
+      "Dr. Will’s",
+      "The Original Chicken Crackling",
+      "Penrhos",
+      "Navas"
     ],
     "products": {
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B48": "Teriyaki Mochi Rice Bites",
-      "B04": "Crunchies — Smokey Bacon",
-      "B07": "Organic Corned Beef",
-      "B21": "Indian Tonic Water"
+      "B08": "Avocado Oil Mayo",
+      "B25": "Chicken Salt",
+      "B45": "Handcrafted Dry Gin",
+      "B18": "Fiery Ginger Beer"
     },
     "units": {
-      "B36": 55,
-      "B48": 55,
-      "B04": 55,
-      "B07": 55,
-      "B21": 55
+      "B08": 40,
+      "B25": 40,
+      "B45": 40,
+      "B18": 40
     },
-    "slot": "14:00-17:00",
+    "slot": "19:50-20:15 (interval)",
     "archetype_mix": {
-      "wellness_seeker": 0.056,
-      "trend_enthusiast": 0.2,
-      "thoughtful_buyer": 0.063,
-      "smart_saver": 0.063,
-      "quality_seeker": 0.056,
-      "on_the_go_shopper": 0.07,
-      "impulse_buyer": 0.154,
-      "experience_explorer": 0.255,
-      "everyday_planner": 0.042,
-      "conscious_consumer": 0.042
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.143,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.228,
+      "everyday_planner": 0.414,
+      "conscious_consumer": 0.024
     },
-    "match": 0.63,
-    "exp_signups": 6.3,
-    "exp_reviews": 13.4,
+    "match": 0.89,
+    "exp_signups": 8.3,
+    "exp_reviews": 12.7,
     "value": {
       "signup_value": 0.0,
-      "review_value": 534.97,
+      "review_value": 507.22,
       "publicity_value": 0.0,
-      "est_video_views": 1004.82,
-      "product_cost": 137.5,
-      "event_cost": 255.0,
-      "net_value": 142.47,
-      "units_total": 275,
-      "p_waste": 0.246
+      "est_video_views": 952.71,
+      "product_cost": 80.0,
+      "event_cost": 215.48,
+      "net_value": 211.74,
+      "units_total": 160,
+      "p_waste": 0.082
     },
     "habit_brands": [
       "B04",
       "B02",
       "B17",
-      "B03",
-      "B26"
+      "B03"
     ],
-    "habit_match": 0.535,
-    "habit_exp_reviews": 12.4,
-    "habit_value": {
-      "signup_value": 0.0,
-      "review_value": 493.61,
-      "publicity_value": 0.0,
-      "est_video_views": 927.14,
-      "product_cost": 137.5,
-      "event_cost": 255.0,
-      "net_value": 101.11,
-      "units_total": 275,
-      "p_waste": 0.282
-    },
-    "reasons": [
-      "Archetype match 0.63 against 0.54 for the usual lineup: Mr Filbert’s for experience explorers; Double Dutch for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 13 reviews and 6 sign-ups, against 12 reviews for the usual lineup (+8%)",
-      "2 vegan and 4 gluten-free options; covers condiment, drink, savoury"
-    ]
-  },
-  "E033": {
-    "name": "Big-match screening, Big-screen pub, Brixton",
-    "date": "2026-12-16",
-    "event_type": "sports",
-    "borough": "Lambeth",
-    "expected_attendance": 60,
-    "lineup_size": 3,
-    "brands": [
-      "B15",
-      "B17",
-      "B07"
-    ],
-    "brand_names": [
-      "DASH",
-      "Gut Food / Ferment Fizz",
-      "Helen Browning’s Organic"
-    ],
-    "products": {
-      "B15": "Pink Lady Apple Sparkling Water",
-      "B17": "Lemon Lemonade",
-      "B07": "Organic Corned Beef"
-    },
-    "units": {
-      "B15": 30,
-      "B17": 30,
-      "B07": 30
-    },
-    "slot": "21:15-22:15 (finish)",
-    "archetype_mix": {
-      "wellness_seeker": 0.374,
-      "trend_enthusiast": 0.062,
-      "thoughtful_buyer": 0.047,
-      "smart_saver": 0.074,
-      "quality_seeker": 0.054,
-      "on_the_go_shopper": 0.101,
-      "impulse_buyer": 0.047,
-      "experience_explorer": 0.07,
-      "everyday_planner": 0.121,
-      "conscious_consumer": 0.051
-    },
-    "match": 0.614,
-    "exp_signups": 6.7,
-    "exp_reviews": 7.8,
-    "value": {
-      "signup_value": 0.0,
-      "review_value": 310.19,
-      "publicity_value": 0.0,
-      "est_video_views": 582.63,
-      "product_cost": 45.0,
-      "event_cost": 135.0,
-      "net_value": 130.19,
-      "units_total": 90,
-      "p_waste": 0.101
-    },
-    "habit_brands": [
-      "B04",
-      "B02",
-      "B17"
-    ],
-    "habit_match": 0.554,
+    "habit_match": 0.48,
     "habit_exp_reviews": 7.3,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 292.74,
+      "review_value": 291.5,
       "publicity_value": 0.0,
-      "est_video_views": 549.86,
-      "product_cost": 45.0,
-      "event_cost": 135.0,
-      "net_value": 112.74,
-      "units_total": 90,
-      "p_waste": 0.114
+      "est_video_views": 547.52,
+      "product_cost": 80.0,
+      "event_cost": 215.48,
+      "net_value": -3.98,
+      "units_total": 160,
+      "p_waste": 0.542
     },
     "reasons": [
-      "Archetype match 0.61 against 0.55 for the usual lineup: DASH for wellness seekers; Helen Browning’s Organic for everyday planners; DASH for on the go shoppers",
-      "Expected 8 reviews and 7 sign-ups, against 7 reviews for the usual lineup (+6%)",
-      "1 vegan and 1 gluten-free options; covers condiment, drink"
-    ]
+      "Archetype match 0.89 against 0.48 for the usual lineup: Dr. Will’s for everyday planners; The Original Chicken Crackling for experience explorers; Penrhos for quality seekers",
+      "Expected 13 reviews and 8 sign-ups, against 7 reviews for the usual lineup (+74%)",
+      "2 vegan and 3 gluten-free options; covers condiment, drink, savoury"
+    ],
+    "title": "Aladdin: Adult Only Show",
+    "start": "2026-12-29 19:00",
+    "end": "2026-12-29 21:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Brighton's Biggest Family Panto proudly presents Aladdin 2026",
+    "cost": 215.48,
+    "product_ids": {
+      "B08": "S016",
+      "B25": "S041",
+      "B45": "S066",
+      "B18": "S031"
+    },
+    "product_reviews": {
+      "B08": 3.5,
+      "B25": 3.2,
+      "B45": 3.0,
+      "B18": 3.0
+    },
+    "product_matches": {
+      "B08": 0.584,
+      "B25": 0.407,
+      "B45": 0.334,
+      "B18": 0.322
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S041",
+      "trend_enthusiast": "S031",
+      "thoughtful_buyer": "S016",
+      "smart_saver": "S016",
+      "quality_seeker": "S066",
+      "on_the_go_shopper": "S041",
+      "impulse_buyer": "S041",
+      "experience_explorer": "S041",
+      "everyday_planner": "S016",
+      "conscious_consumer": "S066"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B08": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      },
+      "B25": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      },
+      "B45": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      },
+      "B18": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      }
+    },
+    "size_line": "4 products for about 118 people"
   },
-  "E034": {
-    "name": "Comedy night, Southbank Centre",
-    "date": "2026-12-17",
+  "5gakuEkePgcv2CACyn": {
+    "name": "Aladdin: Brighton's Family Pantomime",
+    "date": "2026-12-29",
     "event_type": "performing_arts",
-    "borough": "Lambeth",
-    "expected_attendance": 50,
-    "lineup_size": 3,
+    "category": "performing-arts",
+    "latitude": 50.82218049999999,
+    "longitude": -0.1488491000000067,
+    "km_from_london": 76.2,
+    "family_event": true,
+    "expected_attendance": 118,
+    "lineup_size": 4,
     "brands": [
-      "B45",
-      "B36",
-      "B04"
+      "B27",
+      "B08",
+      "B39",
+      "B43"
     ],
     "brand_names": [
-      "Penrhos",
-      "HOOP",
-      "Well & Truly"
+      "Saucerer",
+      "Dr. Will’s",
+      "SUCSEED",
+      "Fever-Tree"
     ],
     "products": {
-      "B45": "Handcrafted Dry Gin",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B04": "Crunchies — Smokey Bacon"
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B08": "Avocado Oil Mayo",
+      "B39": "Energy",
+      "B43": "Refreshingly Light Elderflower Tonic Water"
     },
     "units": {
-      "B45": 17,
-      "B36": 17,
-      "B04": 17
+      "B27": 40,
+      "B08": 40,
+      "B39": 40,
+      "B43": 40
     },
-    "slot": "19:35-20:00 (interval)",
+    "slot": "14:50-15:15 (interval)",
     "archetype_mix": {
-      "wellness_seeker": 0.042,
-      "trend_enthusiast": 0.095,
-      "thoughtful_buyer": 0.186,
-      "smart_saver": 0.03,
-      "quality_seeker": 0.119,
-      "on_the_go_shopper": 0.06,
-      "impulse_buyer": 0.072,
-      "experience_explorer": 0.217,
-      "everyday_planner": 0.072,
-      "conscious_consumer": 0.107
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.103,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.159,
+      "everyday_planner": 0.523,
+      "conscious_consumer": 0.024
     },
-    "match": 0.716,
-    "exp_signups": 2.6,
-    "exp_reviews": 3.2,
+    "match": 0.895,
+    "exp_signups": 8.4,
+    "exp_reviews": 14.2,
     "value": {
       "signup_value": 0.0,
-      "review_value": 125.99,
+      "review_value": 565.17,
       "publicity_value": 0.0,
-      "est_video_views": 236.64,
-      "product_cost": 25.5,
-      "event_cost": 155.0,
-      "net_value": -54.51,
-      "units_total": 51,
-      "p_waste": 0.744
+      "est_video_views": 1061.55,
+      "product_cost": 80.0,
+      "event_cost": 215.48,
+      "net_value": 269.69,
+      "units_total": 160,
+      "p_waste": 0.08
     },
     "habit_brands": [
       "B04",
       "B02",
-      "B17"
+      "B17",
+      "B03"
     ],
-    "habit_match": 0.538,
-    "habit_exp_reviews": 2.6,
+    "habit_match": 0.424,
+    "habit_exp_reviews": 6.8,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 104.52,
+      "review_value": 272.4,
       "publicity_value": 0.0,
-      "est_video_views": 196.32,
-      "product_cost": 25.5,
-      "event_cost": 155.0,
-      "net_value": -75.98,
-      "units_total": 51,
-      "p_waste": 0.91
+      "est_video_views": 511.64,
+      "product_cost": 80.0,
+      "event_cost": 215.48,
+      "net_value": -23.08,
+      "units_total": 160,
+      "p_waste": 0.597
     },
     "reasons": [
-      "Archetype match 0.72 against 0.54 for the usual lineup: Penrhos for experience explorers; Well & Truly for thoughtful buyers; Penrhos for quality seekers",
-      "Expected 3 reviews and 3 sign-ups, against 3 reviews for the usual lineup (+21%)",
-      "1 vegan and 2 gluten-free options; covers drink, savoury"
-    ]
+      "Archetype match 0.90 against 0.42 for the usual lineup: Dr. Will’s for everyday planners; Fever-Tree for experience explorers; Saucerer for quality seekers",
+      "Expected 14 reviews and 8 sign-ups, against 7 reviews for the usual lineup (+107%)",
+      "3 vegan and 2 gluten-free options; covers condiment, drink"
+    ],
+    "title": "Aladdin: Brighton's Family Pantomime",
+    "start": "2026-12-29 14:00",
+    "end": "2026-12-29 16:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Brighton's Biggest Family Panto proudly presents Aladdin 2026",
+    "cost": 215.48,
+    "product_ids": {
+      "B27": "S044",
+      "B08": "S016",
+      "B39": "S056",
+      "B43": "S063"
+    },
+    "product_reviews": {
+      "B27": 3.8,
+      "B08": 3.7,
+      "B39": 3.5,
+      "B43": 3.2
+    },
+    "product_matches": {
+      "B27": 0.7,
+      "B08": 0.655,
+      "B39": 0.583,
+      "B43": 0.414
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S056",
+      "trend_enthusiast": "S044",
+      "thoughtful_buyer": "S063",
+      "smart_saver": "S056",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S063",
+      "experience_explorer": "S063",
+      "everyday_planner": "S016",
+      "conscious_consumer": "S056"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": true,
+    "units_by_size": {
+      "B27": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      },
+      "B08": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      },
+      "B39": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      },
+      "B43": {
+        "small": 24,
+        "medium": 40,
+        "large": 60
+      }
+    },
+    "size_line": "4 products for about 118 people"
   },
-  "E035": {
-    "name": "Small-batch food fair, University campus, Mile End",
-    "date": "2026-12-19",
-    "event_type": "expos",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 160,
+  "8zybkPQ3TSLkCED6ws": {
+    "name": "✨ Cilla & The Sixties Christmas Show ✨",
+    "date": "2026-12-29",
+    "event_type": "concerts",
+    "category": "concerts",
+    "latitude": 53.4054085,
+    "longitude": -2.9932369,
+    "km_from_london": 286.7,
+    "family_event": false,
+    "expected_attendance": 170,
     "lineup_size": 5,
     "brands": [
-      "B07",
-      "B36",
-      "B05",
-      "B08",
-      "B30"
+      "B20",
+      "B27",
+      "B09",
+      "B03",
+      "B49"
     ],
     "brand_names": [
-      "Helen Browning’s Organic",
-      "HOOP",
-      "INDI",
-      "Dr. Will’s",
-      "Ottolenghi"
+      "The London Essence Co.",
+      "Saucerer",
+      "EP!C Snax Co.",
+      "The Protein Ball Co.",
+      "NOMO"
     ],
     "products": {
-      "B07": "Organic Corned Beef",
-      "B36": "Plantain Chips — Lemon Pepper",
-      "B05": "Brain Bar",
-      "B08": "Avocado Oil Mayo",
-      "B30": "Miso Pesto"
+      "B20": "Original Indian Tonic Water",
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B09": "Plant Power Toastin’ Marshmallows",
+      "B03": "Stuffed — Matcha & Vanilla",
+      "B49": "Caramel Choc Bar"
     },
     "units": {
-      "B07": 71,
-      "B36": 71,
-      "B05": 71,
-      "B08": 71,
-      "B30": 71
+      "B20": 46,
+      "B27": 46,
+      "B09": 46,
+      "B03": 46,
+      "B49": 46
     },
-    "slot": "12:00-14:00",
+    "slot": "14:00-16:00",
     "archetype_mix": {
-      "wellness_seeker": 0.063,
-      "trend_enthusiast": 0.15,
-      "thoughtful_buyer": 0.106,
-      "smart_saver": 0.24,
-      "quality_seeker": 0.073,
-      "on_the_go_shopper": 0.073,
-      "impulse_buyer": 0.125,
-      "experience_explorer": 0.079,
-      "everyday_planner": 0.053,
-      "conscious_consumer": 0.04
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.292,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.03,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.183,
+      "experience_explorer": 0.316,
+      "everyday_planner": 0.023,
+      "conscious_consumer": 0.024
     },
-    "match": 0.617,
-    "exp_signups": 31.3,
-    "exp_reviews": 64.3,
+    "match": 0.913,
+    "exp_signups": 8.9,
+    "exp_reviews": 16.5,
     "value": {
       "signup_value": 0.0,
-      "review_value": 2566.78,
+      "review_value": 658.44,
       "publicity_value": 0.0,
-      "est_video_views": 4821.15,
-      "product_cost": 177.5,
-      "event_cost": 205.0,
-      "net_value": 2184.28,
-      "units_total": 355,
-      "p_waste": 0.0
+      "est_video_views": 1236.73,
+      "product_cost": 115.0,
+      "event_cost": 309.68,
+      "net_value": 233.76,
+      "units_total": 230,
+      "p_waste": 0.123
     },
     "habit_brands": [
       "B04",
@@ -2835,96 +3178,406 @@
       "B03",
       "B26"
     ],
-    "habit_match": 0.492,
-    "habit_exp_reviews": 58.6,
+    "habit_match": 0.763,
+    "habit_exp_reviews": 13.2,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 2341.0,
+      "review_value": 528.5,
       "publicity_value": 0.0,
-      "est_video_views": 4397.07,
-      "product_cost": 177.5,
-      "event_cost": 205.0,
-      "net_value": 1958.5,
-      "units_total": 355,
-      "p_waste": 0.0
+      "est_video_views": 992.68,
+      "product_cost": 115.0,
+      "event_cost": 309.68,
+      "net_value": 103.82,
+      "units_total": 230,
+      "p_waste": 0.366
     },
     "reasons": [
-      "Archetype match 0.62 against 0.49 for the usual lineup: Helen Browning’s Organic for smart savers; INDI for trend enthusiasts; HOOP for impulse buyers",
-      "Expected 64 reviews and 31 sign-ups, against 59 reviews for the usual lineup (+10%)",
-      "2 vegan and 4 gluten-free options; covers condiment, savoury"
-    ]
+      "Archetype match 0.91 against 0.76 for the usual lineup: The London Essence Co. for experience explorers; The Protein Ball Co. for trend enthusiasts; NOMO for impulse buyers",
+      "Expected 16 reviews and 9 sign-ups, against 13 reviews for the usual lineup (+25%)",
+      "5 vegan and 4 gluten-free options; covers condiment, drink, functional, sweet"
+    ],
+    "title": "✨ Cilla & The Sixties Christmas Show ✨",
+    "start": "2026-12-29 13:00",
+    "end": "2026-12-29 17:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Get ready to groove with Cilla & The Sixties Tribute Show – live tunes and 60s vibes in person!",
+    "cost": 309.68,
+    "product_ids": {
+      "B20": "S035",
+      "B27": "S044",
+      "B09": "S018",
+      "B03": "S040",
+      "B49": "S070"
+    },
+    "product_reviews": {
+      "B20": 3.4,
+      "B27": 3.4,
+      "B09": 3.3,
+      "B03": 3.3,
+      "B49": 3.1
+    },
+    "product_matches": {
+      "B20": 0.494,
+      "B27": 0.45,
+      "B09": 0.417,
+      "B03": 0.4,
+      "B49": 0.334
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S040",
+      "trend_enthusiast": "S040",
+      "thoughtful_buyer": "S018",
+      "smart_saver": "S035",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S070",
+      "experience_explorer": "S035",
+      "everyday_planner": "S044",
+      "conscious_consumer": "S018"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": false,
+    "units_by_size": {
+      "B20": {
+        "small": 28,
+        "medium": 46,
+        "large": 69
+      },
+      "B27": {
+        "small": 28,
+        "medium": 46,
+        "large": 69
+      },
+      "B09": {
+        "small": 28,
+        "medium": 46,
+        "large": 69
+      },
+      "B03": {
+        "small": 28,
+        "medium": 46,
+        "large": 69
+      },
+      "B49": {
+        "small": 28,
+        "medium": 46,
+        "large": 69
+      }
+    },
+    "size_line": "5 products for about 170 people"
   },
-  "E036": {
-    "name": "Saturday 5K series, Victoria Park",
-    "date": "2026-12-20",
-    "event_type": "sports",
-    "borough": "Tower Hamlets",
-    "expected_attendance": 40,
-    "lineup_size": 2,
+  "5mbYMJN2N9XzYHkunP": {
+    "name": "Aladdin Pantomime At The Grand Leicester",
+    "date": "2026-12-29",
+    "event_type": "performing_arts",
+    "category": "performing-arts",
+    "latitude": 52.6331932,
+    "longitude": -1.1298043,
+    "km_from_london": 142.7,
+    "family_event": true,
+    "expected_attendance": 143,
+    "lineup_size": 4,
     "brands": [
-      "B35",
-      "B07"
+      "B27",
+      "B19",
+      "B16",
+      "B26"
     ],
     "brand_names": [
-      "WelleCo",
-      "Helen Browning’s Organic"
+      "Saucerer",
+      "JimJams",
+      "Pentire",
+      "Blanco Niño"
     ],
     "products": {
-      "B35": "The Hydro Protein Elixir — Passionfruit",
-      "B07": "Organic Corned Beef"
+      "B27": "Pasta Sauce — Wild Mushroom & Truffle",
+      "B19": "Hazelnut Chocolate Spread",
+      "B16": "Adrift",
+      "B26": "Creamy Jalapeño Tortilla Chips"
     },
     "units": {
-      "B35": 20,
-      "B07": 20
+      "B27": 49,
+      "B19": 49,
+      "B16": 49,
+      "B26": 49
     },
-    "slot": "10:30-11:30 (finish)",
+    "slot": "13:35-14:00 (interval)",
     "archetype_mix": {
-      "wellness_seeker": 0.373,
-      "trend_enthusiast": 0.062,
-      "thoughtful_buyer": 0.047,
-      "smart_saver": 0.074,
-      "quality_seeker": 0.054,
-      "on_the_go_shopper": 0.131,
-      "impulse_buyer": 0.047,
-      "experience_explorer": 0.07,
-      "everyday_planner": 0.093,
-      "conscious_consumer": 0.05
+      "wellness_seeker": 0.038,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.033,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.115,
+      "on_the_go_shopper": 0.031,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.276,
+      "everyday_planner": 0.394,
+      "conscious_consumer": 0.024
     },
-    "match": 0.543,
-    "exp_signups": 4.0,
-    "exp_reviews": 3.0,
+    "match": 0.879,
+    "exp_signups": 10.3,
+    "exp_reviews": 16.5,
     "value": {
       "signup_value": 0.0,
-      "review_value": 121.63,
+      "review_value": 660.0,
       "publicity_value": 0.0,
-      "est_video_views": 228.46,
-      "product_cost": 20.0,
-      "event_cost": 135.0,
-      "net_value": -33.37,
-      "units_total": 40,
-      "p_waste": 0.788
+      "est_video_views": 1239.67,
+      "product_cost": 98.0,
+      "event_cost": 242.08,
+      "net_value": 319.92,
+      "units_total": 196,
+      "p_waste": 0.057
     },
     "habit_brands": [
       "B04",
-      "B02"
+      "B02",
+      "B17",
+      "B03"
     ],
-    "habit_match": 0.425,
-    "habit_exp_reviews": 2.8,
+    "habit_match": 0.474,
+    "habit_exp_reviews": 9.1,
     "habit_value": {
       "signup_value": 0.0,
-      "review_value": 112.81,
+      "review_value": 364.17,
       "publicity_value": 0.0,
-      "est_video_views": 211.89,
-      "product_cost": 20.0,
-      "event_cost": 135.0,
-      "net_value": -42.19,
-      "units_total": 40,
-      "p_waste": 0.821
+      "est_video_views": 684.02,
+      "product_cost": 98.0,
+      "event_cost": 242.08,
+      "net_value": 24.09,
+      "units_total": 196,
+      "p_waste": 0.49
     },
     "reasons": [
-      "Archetype match 0.54 against 0.42 for the usual lineup: WelleCo for wellness seekers; WelleCo for on the go shoppers; Helen Browning’s Organic for everyday planners",
-      "Expected 3 reviews and 4 sign-ups, against 3 reviews for the usual lineup (+8%)",
-      "1 vegan and 1 gluten-free options; covers condiment, functional"
-    ]
+      "Archetype match 0.88 against 0.47 for the usual lineup: JimJams for everyday planners; Pentire for experience explorers; Saucerer for quality seekers",
+      "Expected 17 reviews and 10 sign-ups, against 9 reviews for the usual lineup (+81%)",
+      "2 vegan and 2 gluten-free options; covers condiment, drink, savoury"
+    ],
+    "title": "Aladdin Pantomime At The Grand Leicester",
+    "start": "2026-12-29 12:30",
+    "end": "2026-12-29 15:00",
+    "indoor": 1,
+    "description": "Sourced from predicthq.com - Enjoy a magical Aladdin pantomime at The Grand Hotel Leicester, with festive fun, laughter, and entertainment for the whole family.",
+    "cost": 242.08,
+    "product_ids": {
+      "B27": "S044",
+      "B19": "S033",
+      "B16": "S034",
+      "B26": "S042"
+    },
+    "product_reviews": {
+      "B27": 4.6,
+      "B19": 4.4,
+      "B16": 3.8,
+      "B26": 3.7
+    },
+    "product_matches": {
+      "B27": 0.661,
+      "B19": 0.612,
+      "B16": 0.361,
+      "B26": 0.319
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S033",
+      "trend_enthusiast": "S034",
+      "thoughtful_buyer": "S033",
+      "smart_saver": "S042",
+      "quality_seeker": "S044",
+      "on_the_go_shopper": "S044",
+      "impulse_buyer": "S033",
+      "experience_explorer": "S034",
+      "everyday_planner": "S033",
+      "conscious_consumer": "S042"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": true,
+    "units_by_size": {
+      "B27": {
+        "small": 30,
+        "medium": 49,
+        "large": 73
+      },
+      "B19": {
+        "small": 30,
+        "medium": 49,
+        "large": 73
+      },
+      "B16": {
+        "small": 30,
+        "medium": 49,
+        "large": 73
+      },
+      "B26": {
+        "small": 30,
+        "medium": 49,
+        "large": 73
+      }
+    },
+    "size_line": "4 products for about 143 people"
+  },
+  "manual_eat_hack_2026": {
+    "name": "EAT Hack",
+    "date": "2026-10-03",
+    "event_type": "conferences",
+    "category": "conferences",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "km_from_london": 0.0,
+    "family_event": false,
+    "expected_attendance": 100,
+    "lineup_size": 4,
+    "brands": [
+      "B08",
+      "B02",
+      "B07",
+      "B16"
+    ],
+    "brand_names": [
+      "Dr. Will’s",
+      "Simply Roasted",
+      "Helen Browning’s Organic",
+      "Pentire"
+    ],
+    "products": {
+      "B08": "Avocado Oil Mayo",
+      "B02": "Sea Salt Potato Crisps",
+      "B07": "Organic Corned Beef",
+      "B16": "Adrift"
+    },
+    "units": {
+      "B08": 80,
+      "B02": 80,
+      "B07": 80,
+      "B16": 80
+    },
+    "slot": "15:00-16:30",
+    "archetype_mix": {
+      "wellness_seeker": 0.106,
+      "trend_enthusiast": 0.039,
+      "thoughtful_buyer": 0.132,
+      "smart_saver": 0.029,
+      "quality_seeker": 0.21,
+      "on_the_go_shopper": 0.099,
+      "impulse_buyer": 0.02,
+      "experience_explorer": 0.162,
+      "everyday_planner": 0.179,
+      "conscious_consumer": 0.024
+    },
+    "match": 0.847,
+    "exp_signups": 28.4,
+    "exp_reviews": 48.3,
+    "value": {
+      "signup_value": 0.0,
+      "review_value": 1928.51,
+      "publicity_value": 0.0,
+      "est_video_views": 3622.3,
+      "product_cost": 160.0,
+      "event_cost": 185.0,
+      "net_value": 1583.51,
+      "units_total": 320,
+      "p_waste": 0.0
+    },
+    "habit_brands": [
+      "B04",
+      "B02",
+      "B17",
+      "B03"
+    ],
+    "habit_match": 0.596,
+    "habit_exp_reviews": 35.5,
+    "habit_value": {
+      "signup_value": 0.0,
+      "review_value": 1415.53,
+      "publicity_value": 0.0,
+      "est_video_views": 2658.78,
+      "product_cost": 160.0,
+      "event_cost": 185.0,
+      "net_value": 1070.53,
+      "units_total": 320,
+      "p_waste": 0.0
+    },
+    "reasons": [
+      "Archetype match 0.85 against 0.60 for the usual lineup: Simply Roasted for quality seekers; Dr. Will’s for everyday planners; Pentire for experience explorers",
+      "Expected 48 reviews and 28 sign-ups, against 35 reviews for the usual lineup (+36%)",
+      "2 vegan and 3 gluten-free options; covers condiment, drink, savoury"
+    ],
+    "title": "EAT Hack",
+    "start": "2026-10-03 09:00",
+    "end": "2026-10-03 20:00",
+    "indoor": 1,
+    "description": "EAT Hack is a one-day London hackathon focused on retail, consumer behaviour, food and AI. Participants include developers, founders, challenger brands and retail innovators building products around behavioural insight, retail decision-making and future consumer experiences.",
+    "cost": 185.0,
+    "product_ids": {
+      "B08": "S016",
+      "B02": "S061",
+      "B07": "S015",
+      "B16": "S034"
+    },
+    "product_reviews": {
+      "B08": 12.7,
+      "B02": 12.2,
+      "B07": 11.8,
+      "B16": 11.6
+    },
+    "product_matches": {
+      "B08": 0.497,
+      "B02": 0.422,
+      "B07": 0.358,
+      "B16": 0.331
+    },
+    "archetype_winner": {
+      "wellness_seeker": "S061",
+      "trend_enthusiast": "S034",
+      "thoughtful_buyer": "S016",
+      "smart_saver": "S061",
+      "quality_seeker": "S061",
+      "on_the_go_shopper": "S015",
+      "impulse_buyer": "S061",
+      "experience_explorer": "S034",
+      "everyday_planner": "S016",
+      "conscious_consumer": "S015"
+    },
+    "checks": {
+      "vegan": true,
+      "gluten_free": true,
+      "chilled_ok": true,
+      "alcohol_ok": true,
+      "in_stock": true
+    },
+    "adults_restricted": true,
+    "units_by_size": {
+      "B08": {
+        "small": 48,
+        "medium": 80,
+        "large": 120
+      },
+      "B02": {
+        "small": 48,
+        "medium": 80,
+        "large": 120
+      },
+      "B07": {
+        "small": 48,
+        "medium": 80,
+        "large": 120
+      },
+      "B16": {
+        "small": 48,
+        "medium": 80,
+        "large": 120
+      }
+    },
+    "size_line": "4 products for about 100 people"
   }
 }
