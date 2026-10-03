@@ -11,7 +11,7 @@ The hidden truth (brand quality and the outcome formulas) lives only in this fil
 never appears in the CSVs. The model must learn from the CSVs alone; only the uplift
 test may call simulate().
 
-Run:  python generate_popups.py [output_folder]
+Run:  python scripts/generate_popups.py [output_folder]   (use . to write to the repo root)
 """
 import sys
 from itertools import combinations
@@ -25,8 +25,7 @@ SEED = 42
 # ---------------------------------------------------------------- shared taxonomy
 NEEDS = ["hydrate", "recover", "energy", "focus", "discovery", "sharing", "treat", "value"]
 SEGMENTS = ["students", "young_professionals", "fitness", "families", "foodies"]
-EVENT_TYPES = ["run", "hackathon", "food_market", "match_screening",
-               "gig", "family_day", "outdoor_festival", "campus_fair"]
+EVENT_TYPES = ["community", "concerts", "conferences", "expos", "festivals", "performing_arts", "sports"]
 CORE_CATEGORIES = {"drink", "savoury", "sweet", "condiment"}
 
 # ---------------------------------------------------------------- brands (fictional)
@@ -85,68 +84,72 @@ for bid, name, cat, sub, desc, needs, targets, chill, frozen, vegan, gf in BRAND
                       targets=targets, needs_chilling=chill, frozen=frozen, vegan=vegan, gluten_free=gf)
 
 # ---------------------------------------------------------------- event types
+# Seven event categories (PredictHQ-style). Each blends the sub-types listed in its names.
 # needs: same order as NEEDS; mix: audience share by SEGMENTS (sums to 1)
 EVENT = {
-    "run": dict(needs=[1., .9, .5, .1, .2, .1, .2, .3], mix=[.10, .30, .45, .10, .05],
-                footfall=(300, 1500), dwell=1.5, stop=.25, signup=.30, stall=(0, 60), staff=2, indoor=0.0,
-                start=["08:30", "09:00"], days=[5, 6],
-                names=["Community 5K finish", "10K race finish", "Half marathon finish", "Run club social"],
-                boroughs=["Richmond upon Thames", "Wandsworth", "Greenwich", "Hackney", "Tower Hamlets",
-                          "Southwark", "Lambeth", "Hammersmith and Fulham"]),
-    "hackathon": dict(needs=[.4, .1, .9, 1., .3, .3, .4, .6], mix=[.45, .45, .03, .02, .05],
-                      footfall=(60, 300), dwell=9, stop=.70, signup=.45, stall=(0, 0), staff=2, indoor=1.0,
-                      start=["10:00"], days=[5, 6],
-                      names=["Weekend AI hackathon", "Student hackathon", "Fintech hack day", "Build day"],
-                      boroughs=["Islington", "Hackney", "Camden", "Tower Hamlets", "City of London",
-                                "Westminster", "Southwark"]),
-    "food_market": dict(needs=[.2, 0., .2, 0., 1., .5, .6, .3], mix=[.10, .35, .05, .15, .35],
-                        footfall=(800, 3000), dwell=3, stop=.12, signup=.25, stall=(80, 200), staff=3, indoor=0.2,
-                        start=["11:00"], days=[5, 6],
-                        names=["Weekend food market", "Street food night market", "Farmers' market"],
-                        boroughs=["Southwark", "Tower Hamlets", "Hackney", "Camden", "Lambeth",
-                                  "Islington", "Greenwich"]),
-    "match_screening": dict(needs=[.2, 0., .2, 0., .2, 1., .6, .4], mix=[.25, .45, .10, .05, .15],
-                            footfall=(150, 600), dwell=2.5, stop=.30, signup=.25, stall=(50, 150), staff=2,
-                            indoor=0.9, start=["17:00", "19:45"], days=[1, 2, 3, 5, 6],
-                            names=["Football screening", "Rugby screening", "Big-match fan zone"],
-                            boroughs=["Southwark", "Hackney", "Lambeth", "Camden", "Islington",
-                                      "Tower Hamlets", "Wandsworth"]),
-    "gig": dict(needs=[.9, .2, .8, 0., .3, .4, .3, .3], mix=[.35, .45, .05, .00, .15],
-                footfall=(300, 1500), dwell=4, stop=.10, signup=.15, stall=(150, 400), staff=3, indoor=1.0,
-                start=["19:30"], days=[4, 5],
-                names=["Club night", "Live gig", "DJ night"],
-                boroughs=["Hackney", "Camden", "Lambeth", "Islington", "Southwark", "Tower Hamlets", "Brent"]),
-    "family_day": dict(needs=[.4, .1, .3, 0., .3, .5, 1., .6], mix=[.05, .10, .05, .75, .05],
-                       footfall=(400, 2000), dwell=4, stop=.18, signup=.20, stall=(100, 250), staff=3, indoor=0.3,
-                       start=["11:00"], days=[5, 6],
-                       names=["Family fun day", "Half-term kids' festival", "Park family day"],
-                       boroughs=["Greenwich", "Richmond upon Thames", "Lewisham", "Wandsworth",
-                                 "Kensington and Chelsea", "Newham", "Barnet"]),
-    "outdoor_festival": dict(needs=[1., .3, .6, 0., .6, .6, .6, .3], mix=[.25, .40, .10, .10, .15],
-                             footfall=(1500, 5000), dwell=8, stop=.08, signup=.20, stall=(300, 800), staff=4,
-                             indoor=0.0, start=["12:00"], days=[5, 6],
-                             names=["Summer music festival", "Food and music festival", "Street festival"],
-                             boroughs=["Newham", "Lambeth", "Hackney", "Greenwich", "Haringey", "Tower Hamlets"]),
-    "campus_fair": dict(needs=[.2, 0., .7, .4, .6, .3, .5, 1.], mix=[.85, .10, .03, .00, .02],
-                        footfall=(500, 2500), dwell=4, stop=.20, signup=.45, stall=(50, 150), staff=3, indoor=0.8,
-                        start=["11:00"], days=[0, 1, 2, 3],
-                        names=["Freshers' fair", "Refreshers' fair", "Societies fair"],
-                        boroughs=["Camden", "Westminster", "Tower Hamlets", "Kensington and Chelsea",
-                                  "Southwark", "Islington"]),
+    "sports": dict(needs=[1., .9, .5, .1, .2, .5, .2, .3], mix=[.10, .35, .40, .10, .05],
+                   footfall=(300, 1500), dwell=2, stop=.22, signup=.28, stall=(0, 120), staff=2, indoor=0.3,
+                   start=["09:00", "17:00", "19:45"], days=[1, 2, 5, 6],
+                   names=["Community 5K finish", "10K race finish", "Half marathon finish",
+                          "Football screening", "Rugby screening"],
+                   boroughs=["Richmond upon Thames", "Wandsworth", "Greenwich", "Hackney", "Tower Hamlets",
+                             "Southwark", "Lambeth", "Hammersmith and Fulham", "Brent", "Kingston upon Thames",
+                             "Barnet", "Waltham Forest"]),
+    "community": dict(needs=[.3, .2, .2, .1, .9, .7, .7, .5], mix=[.10, .25, .15, .25, .25],
+                      footfall=(200, 2000), dwell=3, stop=.18, signup=.25, stall=(0, 200), staff=2, indoor=0.3,
+                      start=["09:00", "11:00"], days=[5, 6],
+                      names=["Weekend food market", "Farmers' market", "Run club social", "Family fun day",
+                             "Community street party"],
+                      boroughs=["Southwark", "Hackney", "Lewisham", "Greenwich", "Camden", "Islington", "Lambeth",
+                                "Waltham Forest", "Haringey", "Croydon", "Ealing", "Merton", "Newham",
+                                "Richmond upon Thames"]),
+    "concerts": dict(needs=[.9, .2, .8, 0., .3, .4, .3, .3], mix=[.35, .45, .05, .00, .15],
+                     footfall=(300, 2000), dwell=4, stop=.10, signup=.15, stall=(150, 400), staff=3, indoor=1.0,
+                     start=["19:30"], days=[3, 4, 5],
+                     names=["Live gig", "Club night", "DJ night", "Arena concert"],
+                     boroughs=["Hackney", "Camden", "Lambeth", "Islington", "Southwark", "Tower Hamlets", "Brent",
+                               "Greenwich", "Hammersmith and Fulham"]),
+    "conferences": dict(needs=[.4, .1, .9, 1., .4, .3, .4, .6], mix=[.35, .55, .04, .02, .04],
+                        footfall=(100, 800), dwell=7, stop=.45, signup=.40, stall=(0, 150), staff=2, indoor=1.0,
+                        start=["09:30", "10:00"], days=[1, 2, 3, 5, 6],
+                        names=["Weekend AI hackathon", "Student hackathon", "Fintech hack day", "Tech conference",
+                               "Startup summit"],
+                        boroughs=["Islington", "Hackney", "Camden", "Tower Hamlets", "City of London",
+                                  "Westminster", "Southwark", "Newham"]),
+    "expos": dict(needs=[.2, 0., .6, .4, .8, .3, .5, .9], mix=[.55, .20, .05, .05, .15],
+                  footfall=(500, 3000), dwell=4, stop=.18, signup=.40, stall=(50, 250), staff=3, indoor=0.9,
+                  start=["10:00", "11:00"], days=[0, 1, 2, 3, 5],
+                  names=["Freshers' fair", "Societies fair", "Food and drink expo", "Lifestyle show"],
+                  boroughs=["Camden", "Westminster", "Tower Hamlets", "Kensington and Chelsea", "Southwark",
+                            "Islington", "Newham", "Hammersmith and Fulham", "Hillingdon"]),
+    "festivals": dict(needs=[1., .3, .6, 0., .7, .6, .7, .3], mix=[.25, .40, .10, .10, .15],
+                      footfall=(1500, 5000), dwell=7, stop=.08, signup=.20, stall=(300, 800), staff=4, indoor=0.0,
+                      start=["12:00"], days=[5, 6],
+                      names=["Summer music festival", "Food and music festival", "Street food festival",
+                             "Street festival"],
+                      boroughs=["Newham", "Lambeth", "Hackney", "Greenwich", "Haringey", "Tower Hamlets",
+                                "Waltham Forest", "Brent", "Barking and Dagenham", "Croydon"]),
+    "performing_arts": dict(needs=[.3, 0., .2, .1, .4, .8, .9, .3], mix=[.10, .45, .05, .10, .30],
+                            footfall=(200, 1200), dwell=2.5, stop=.12, signup=.20, stall=(50, 200), staff=2,
+                            indoor=0.85, start=["18:30", "19:00"], days=[3, 4, 5],
+                            names=["Theatre interval", "Comedy night", "Dance show", "Open-air theatre"],
+                            boroughs=["Westminster", "Camden", "Southwark", "Lambeth", "Islington", "Hackney",
+                                      "Richmond upon Thames", "Kensington and Chelsea"]),
 }
 for p in EVENT.values():
     p["needs"] = np.array(p["needs"], float)
     p["mix"] = np.array(p["mix"], float)
 
-OUTER_BOROUGHS = {"Richmond upon Thames", "Barnet", "Brent", "Lewisham", "Haringey"}
+OUTER_BOROUGHS = {"Barking and Dagenham", "Barnet", "Bexley", "Brent", "Bromley", "Croydon", "Ealing", "Enfield",
+                  "Greenwich", "Harrow", "Havering", "Hillingdon", "Hounslow", "Kingston upon Thames", "Merton",
+                  "Redbridge", "Richmond upon Thames", "Sutton", "Waltham Forest"}   # ONS Outer London
 STAFF_RATE_GBP = 16.0                       # assumed loaded hourly cost per staff member
 MONTHLY_HIGH_C = {1: 8, 2: 9, 3: 12, 4: 15, 5: 18, 6: 21, 7: 23, 8: 23, 9: 20, 10: 16, 11: 11, 12: 8}
 
 # RGC's habit: big, busy events, whatever the brand fit
-HABIT_EVENT_WEIGHTS = {"food_market": .25, "outdoor_festival": .15, "campus_fair": .15, "family_day": .12,
-                       "gig": .08, "match_screening": .08, "run": .10, "hackathon": .07}
+HABIT_EVENT_WEIGHTS = {"community": .25, "festivals": .18, "expos": .15, "sports": .14,
+                       "concerts": .10, "performing_arts": .10, "conferences": .08}
 FESTIVAL_MONTHS = {5, 6, 7, 8, 9}
-CAMPUS_MONTHS = {9, 10, 1, 2}
 
 # ---------------------------------------------------------------- hidden truth (never written to CSV)
 QUALITY = dict(zip(sorted(BRAND), np.random.default_rng(SEED + 1).normal(0, 0.25, len(BRAND))))
@@ -163,7 +166,7 @@ def true_fit(bid, event):
     cos = float(b["needs"] @ p["needs"] / (np.linalg.norm(b["needs"]) * np.linalg.norm(p["needs"])))
     f = cos * (0.4 + 0.6 * segment_match(bid, event["event_type"]))
     outdoor = not event["indoor"]
-    if b["needs_chilling"] and outdoor and event["event_type"] in ("run", "outdoor_festival", "food_market"):
+    if b["needs_chilling"] and outdoor and event["event_type"] in ("sports", "festivals", "community"):
         f *= 0.85
     if outdoor and event["temp_c"] >= 20 and b["needs"][0] >= 0.5:
         f *= 1.15
@@ -223,8 +226,7 @@ def make_history(n_months=12, per_month=5, first_month=(2025, 10)):
     pid = 0
     for _ in range(n_months):
         weights = {k: v for k, v in HABIT_EVENT_WEIGHTS.items()
-                   if not (k == "outdoor_festival" and month not in FESTIVAL_MONTHS)
-                   and not (k == "campus_fair" and month not in CAMPUS_MONTHS)}
+                   if not (k == "festivals" and month not in FESTIVAL_MONTHS)}
         types = list(weights)
         probs = np.array([weights[t] for t in types]) / sum(weights.values())
         days_in_month = pd.Period(f"{year}-{month:02d}").days_in_month

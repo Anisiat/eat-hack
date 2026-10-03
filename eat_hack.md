@@ -46,17 +46,19 @@ On synthetic data, the uplift shows how much is at stake if the patterns hold; i
 
 ## Data
 
-Three sources: synthetic WatchHumans tables, real upcoming London events, and public location and weather data. The synthetic tables mirror what the app already collects: interests, hobbies and goals, likes and dislikes, and rated video reviews.
+Three sources: synthetic WatchHumans tables, real upcoming London events, and public Census 2021 location data. The synthetic tables mirror what the app already collects: interests, hobbies and goals, likes and dislikes, and rated video reviews.
 
 | File | Rows | Source | Key fields |
 | --- | --- | --- | --- |
 | `brands.csv` | 20 client brands | Synthetic, fictional names | category, sub-category, flavour profile, format, needs chilling, dietary flags, need states served, target segments, units available |
-| `users.csv` | 5,000 | Synthetic WatchHumans | age band, borough, interests and goals, dietary needs, sign-up source (pop-up code or organic) |
-| `reviews.csv` | about 20,000 | Synthetic WatchHumans | user, brand, pop-up code or none, rating 1 to 5, would buy, liked or disliked attribute |
-| `popups.csv` | 60 past pop-ups | Synthetic | date, event type, borough, footfall, 5-brand lineup, sign-ups, reviews, cost |
+| `users.csv` | 5,000 | Synthetic WatchHumans | age band, borough, segment (students, young professionals, fitness, families, foodies), traits, category affinities, dietary needs, sign-up source (pop-up code or organic) |
+| `reviews.csv` | 20,000 | Synthetic WatchHumans | user, brand, pop-up code or none, rating 1 to 5, would buy, liked or disliked attribute, in target segment; pop-up reviews reconcile with `popup_brands.csv` |
+| `popups.csv` | 60 past pop-ups | Synthetic | date, event type (one of seven), borough, footfall, 5-brand lineup, sign-ups, reviews, cost |
+| `popup_brands.csv` | 300 | Synthetic | pop-up, brand, units given, reviews, qualified reviews, average rating |
 | `events.csv` | 30 to 40 upcoming | Real London listings, collected by hand | type, start and end, venue, latitude and longitude, expected attendance, indoor or outdoor, audience tags, stall cost, link |
-| `boroughs.csv` | 33 | Census 2021 age profile if time allows, else synthetic; WatchHumans users synthetic | share aged 18 to 34, WatchHumans users per 1,000 people |
-| Weather | hourly | Open-Meteo forecast | temperature, rain |
+| `boroughs.csv` | 33 | Census 2021 (ONS TS007, via Nomis); WatchHumans users synthetic | population, share aged 18 to 34, inner or outer, WatchHumans users per 1,000 people |
+
+**Event types.** Seven categories, used in `popups.csv` and `events.csv`: community, concerts, conferences, expos, festivals, performing arts, sports. The gatherings in the crowd table map onto them: run clubs, food markets, family days and workshops are community; gigs and club nights are concerts; hackathons are conferences; campus fairs are expos; races and match screenings are sports.
 
 **How the generator works.**
 
@@ -126,14 +128,14 @@ Six steps run in order: score every brand at every event, predict outcomes, pick
    \text{fit}_{b,e} = \cos(n_b, n_e) \times a_{b,e} \times c_{b,e} \times (1 + h_{b,k})
    ```
 
-   n is the need-state vector of the brand and of the event type, from the crowd table. a is audience overlap: the event's expected age and interest mix against the brand's target segments. c is context: weather, time of day, and whether the product needs chilling. h is the brand's learned lift at event type k from WatchHumans ratings, shrunk towards zero when it has few reviews there.
+   n is the need-state vector of the brand and of the event type, from the crowd table. a is audience overlap: the event's expected age and interest mix against the brand's target segments. c is context: time of day, indoor or outdoor, and whether the product needs chilling. h is the brand's learned lift at event type k from WatchHumans ratings, shrunk towards zero when it has few reviews there.
 2. **Expected outcomes.** A Poisson regression trained on the 48 training pop-ups predicts sign-ups from footfall, event type, dwell time and lineup appeal. Combined with fit, it gives expected reviews and QRP per brand.
 3. **Lineup optimiser.** For each event, score every 5-brand combination of eligible brands: 20 brands give 15,504 combinations, scored in under a second. The score is total brand QRP, plus a bonus for covering a drink, a savoury, a sweet and a condiment, minus a penalty for two brands in the same sub-category. Hard constraints: at least one vegan and one gluten-free option, chilled capacity, units in stock.
 4. **Month plan.** Rank events by best-lineup QRP per pound and fill RGC's capacity, for example 4 pop-ups, with no date clashes. Every client brand gets at least one slot a month. Boroughs where WatchHumans has few users get a bonus, because new sign-ups are worth more there.
-5. **Brand event profiles.** For each brand: fit across the eight event types, its best moment and audience, what to sample, where to avoid, and its top five upcoming events with expected reviews. A language model writes the profile paragraph from these numbers; it never sets them.
+5. **Brand event profiles.** For each brand: fit across the seven event types, its best moment and audience, what to sample, where to avoid, and its top five upcoming events with expected reviews. A language model writes the profile paragraph from these numbers; it never sets them.
 6. **Quantities and timing.** Units to bring equal expected stops times one sample times a 1.2 buffer. The time slot is the event's peak-need moment from the crowd table.
 
-**Stack.** Python, pandas, scikit-learn (PoissonRegressor) and Streamlit. A language model also tags each event description into one of the eight event types.
+**Stack.** Python, pandas, scikit-learn (PoissonRegressor) and Streamlit. A language model also tags each event description into one of the seven event types.
 
 ## Inputs and outputs
 
@@ -142,7 +144,7 @@ The app has three screens, one per question RGC asks. Each reads the same scored
 | Screen | RGC enters | RGC gets |
 | --- | --- | --- |
 | Event planner (events to brands) | An event, or a date range; units available; stall size | Ranked events with expected sign-ups, QRP and cost per qualified review; best lineup with products, units, time slot and three reasons; the habit lineup's QRP for comparison |
-| Brand profiles (brands to events) | A client brand | Its event profile: fit across the eight event types, best moment, best audience, what to sample, where to avoid; its top five upcoming events with expected reviews |
+| Brand profiles (brands to events) | A client brand | Its event profile: fit across the seven event types, best moment, best audience, what to sample, where to avoid; its top five upcoming events with expected reviews |
 | Month plan and impact | Month, pop-up capacity, client commitments | A calendar of pop-ups and lineups; total QRP versus the habit plan, with the uplift and its confidence interval |
 
 **File contract.** Agree these at T+0:00. Write stub files with five fake rows at T+0:15 so the app starts immediately.
@@ -150,7 +152,7 @@ The app has three screens, one per question RGC asks. Each reads the same scored
 ```
 scores.csv     event_id, brand_id, fit, exp_signups, exp_reviews, exp_qrp, reason_1, reason_2, reason_3
 lineups.json   event_id -> brands[5], units{brand: n}, slot, qrp, habit_qrp, cost
-profiles.json  brand_id -> fit_by_type{8}, best_moment, best_audience, sample, avoid, top_events[5], text
+profiles.json  brand_id -> fit_by_type{7}, best_moment, best_audience, sample, avoid, top_events[5], text
 impact.json    uplift, ci_low, ci_high, qrp_tool, qrp_habit, cost_per_qr_tool, cost_per_qr_habit
 ```
 

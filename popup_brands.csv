@@ -1,301 +1,301 @@
 popup_id,brand_id,brand_name,units_given,reviews,qualified_reviews,avg_rating
-P001,B01,Sparkfold Soda,59,14,12,4.19
-P001,B05,Lentil Lark,70,14,8,4.02
-P001,B11,Crumbhouse,71,11,2,3.8
-P001,B13,Ember & Ash,71,10,5,3.75
-P001,B17,Protein Rebel,89,9,8,3.22
-P002,B02,Tidewell Hydrate,68,7,2,3.92
-P002,B04,Kombuchee,64,6,1,4.1
-P002,B05,Lentil Lark,72,11,9,3.37
-P002,B12,Fruitling,81,7,0,3.87
-P002,B16,Dip Shift,72,8,6,3.9
-P003,B01,Sparkfold Soda,202,31,22,4.35
-P003,B04,Kombuchee,201,23,13,3.95
-P003,B14,Redline,151,33,8,4.05
-P003,B15,Tangle,222,30,18,3.82
-P003,B16,Dip Shift,237,24,11,4.0
-P004,B02,Tidewell Hydrate,46,3,3,4.41
-P004,B13,Ember & Ash,43,7,4,3.43
-P004,B14,Redline,40,4,0,2.81
-P004,B16,Dip Shift,32,3,3,3.89
-P004,B19,Rootshot,42,6,3,3.14
-P005,B01,Sparkfold Soda,198,44,44,4.42
-P005,B05,Lentil Lark,132,53,50,3.84
-P005,B11,Crumbhouse,175,56,46,4.37
-P005,B13,Ember & Ash,190,33,4,3.28
-P005,B17,Protein Rebel,142,53,52,3.91
-P006,B01,Sparkfold Soda,103,9,5,3.79
-P006,B02,Tidewell Hydrate,142,14,9,4.45
-P006,B04,Kombuchee,136,12,5,3.21
-P006,B15,Tangle,130,6,0,2.67
-P006,B18,Fuel Bites,116,16,6,3.87
-P007,B01,Sparkfold Soda,132,16,0,4.08
-P007,B05,Lentil Lark,98,23,23,4.01
-P007,B11,Crumbhouse,141,25,21,4.66
-P007,B13,Ember & Ash,134,16,4,3.51
-P007,B17,Protein Rebel,107,17,3,3.16
-P008,B01,Sparkfold Soda,81,9,9,4.14
-P008,B05,Lentil Lark,56,9,6,3.77
-P008,B11,Crumbhouse,65,14,5,4.54
-P008,B13,Ember & Ash,83,12,6,4.1
-P008,B17,Protein Rebel,71,13,11,3.42
-P009,B01,Sparkfold Soda,129,29,26,4.69
-P009,B05,Lentil Lark,101,17,11,3.49
-P009,B11,Crumbhouse,141,19,2,3.59
-P009,B13,Ember & Ash,121,22,15,4.07
-P009,B17,Protein Rebel,106,15,9,3.62
-P010,B01,Sparkfold Soda,87,15,7,3.92
-P010,B05,Lentil Lark,100,13,5,3.14
-P010,B11,Crumbhouse,93,19,6,3.25
-P010,B13,Ember & Ash,112,11,1,3.17
-P010,B17,Protein Rebel,79,14,14,3.98
-P011,B01,Sparkfold Soda,266,42,28,4.45
-P011,B05,Lentil Lark,214,37,21,3.49
-P011,B11,Crumbhouse,264,34,10,4.2
-P011,B13,Ember & Ash,244,46,37,4.18
-P011,B17,Protein Rebel,307,24,13,3.07
-P012,B02,Tidewell Hydrate,169,15,8,3.33
-P012,B09,Cacao Field,113,18,13,4.28
-P012,B11,Crumbhouse,155,21,5,3.77
-P012,B15,Tangle,143,21,9,3.65
-P012,B17,Protein Rebel,137,22,8,3.12
-P013,B01,Sparkfold Soda,112,12,8,3.98
-P013,B05,Lentil Lark,94,13,5,3.68
-P013,B11,Crumbhouse,99,12,3,4.1
-P013,B13,Ember & Ash,108,19,13,4.51
-P013,B17,Protein Rebel,109,13,5,3.2
-P014,B01,Sparkfold Soda,54,16,13,4.25
-P014,B05,Lentil Lark,56,14,13,3.65
-P014,B11,Crumbhouse,60,15,3,4.23
-P014,B13,Ember & Ash,51,9,2,3.84
-P014,B17,Protein Rebel,46,18,15,4.21
-P015,B01,Sparkfold Soda,102,9,8,4.52
-P015,B05,Lentil Lark,102,10,10,3.63
-P015,B11,Crumbhouse,101,5,3,4.6
-P015,B13,Ember & Ash,86,11,8,3.79
-P015,B17,Protein Rebel,91,10,9,3.54
-P016,B01,Sparkfold Soda,223,28,23,4.87
-P016,B05,Lentil Lark,175,26,15,3.46
-P016,B11,Crumbhouse,244,25,5,4.16
-P016,B13,Ember & Ash,254,28,18,4.19
-P016,B17,Protein Rebel,225,18,9,3.24
-P017,B01,Sparkfold Soda,261,19,7,3.81
-P017,B05,Lentil Lark,203,22,8,3.04
-P017,B11,Crumbhouse,270,16,6,3.33
-P017,B13,Ember & Ash,227,20,6,3.17
-P017,B17,Protein Rebel,264,30,25,4.03
-P018,B01,Sparkfold Soda,200,14,8,3.97
-P018,B05,Lentil Lark,162,18,5,2.71
-P018,B11,Crumbhouse,202,16,2,3.31
-P018,B13,Ember & Ash,169,14,7,3.16
-P018,B17,Protein Rebel,207,21,16,4.07
-P019,B01,Sparkfold Soda,47,2,2,4.32
-P019,B05,Lentil Lark,37,4,4,3.55
-P019,B11,Crumbhouse,37,4,0,4.71
-P019,B13,Ember & Ash,38,4,3,3.94
-P019,B17,Protein Rebel,49,2,2,3.39
-P020,B02,Tidewell Hydrate,189,27,4,3.44
-P020,B07,Seedwork,206,34,23,3.82
-P020,B09,Cacao Field,162,35,23,3.93
-P020,B10,Lolly Loft,218,27,3,3.81
-P020,B15,Tangle,180,39,22,3.71
-P021,B01,Sparkfold Soda,81,11,9,3.88
-P021,B05,Lentil Lark,78,13,7,3.72
-P021,B11,Crumbhouse,114,6,3,4.46
-P021,B13,Ember & Ash,113,16,10,4.47
-P021,B17,Protein Rebel,107,8,4,3.16
-P022,B01,Sparkfold Soda,165,24,22,4.0
-P022,B05,Lentil Lark,110,21,14,3.62
-P022,B11,Crumbhouse,110,18,2,3.92
-P022,B13,Ember & Ash,137,20,14,4.11
-P022,B17,Protein Rebel,119,16,12,3.52
-P023,B01,Sparkfold Soda,186,25,4,3.85
-P023,B05,Lentil Lark,189,28,26,3.88
-P023,B11,Crumbhouse,161,23,18,4.76
-P023,B13,Ember & Ash,211,20,4,3.53
-P023,B17,Protein Rebel,209,22,5,3.36
-P024,B01,Sparkfold Soda,62,3,3,4.74
-P024,B05,Lentil Lark,40,5,4,3.38
-P024,B11,Crumbhouse,57,2,1,4.21
-P024,B13,Ember & Ash,41,2,2,2.57
-P024,B17,Protein Rebel,51,3,1,3.73
-P025,B01,Sparkfold Soda,156,31,25,4.45
-P025,B05,Lentil Lark,164,25,15,3.42
-P025,B11,Crumbhouse,179,21,10,4.06
-P025,B13,Ember & Ash,174,19,14,4.37
-P025,B17,Protein Rebel,191,23,10,3.48
-P026,B01,Sparkfold Soda,107,16,13,4.36
-P026,B05,Lentil Lark,83,15,9,3.59
-P026,B11,Crumbhouse,104,14,1,3.94
-P026,B13,Ember & Ash,93,27,22,4.37
-P026,B17,Protein Rebel,84,11,5,3.41
-P027,B01,Sparkfold Soda,79,8,6,4.1
-P027,B10,Lolly Loft,70,9,1,4.41
-P027,B13,Ember & Ash,72,8,6,4.19
-P027,B15,Tangle,70,13,3,3.57
-P027,B20,Mellow Gut,87,8,4,3.28
-P028,B01,Sparkfold Soda,131,19,16,4.34
-P028,B05,Lentil Lark,144,21,15,3.34
-P028,B11,Crumbhouse,153,19,6,3.84
-P028,B13,Ember & Ash,113,23,14,4.62
-P028,B17,Protein Rebel,122,12,8,3.6
-P029,B01,Sparkfold Soda,49,11,10,4.4
-P029,B05,Lentil Lark,35,9,7,3.87
-P029,B11,Crumbhouse,53,10,6,3.68
-P029,B13,Ember & Ash,49,7,3,4.53
-P029,B17,Protein Rebel,35,9,7,3.42
-P030,B01,Sparkfold Soda,110,6,2,3.79
-P030,B05,Lentil Lark,88,9,5,3.25
-P030,B11,Crumbhouse,97,13,2,3.63
-P030,B13,Ember & Ash,100,8,2,3.35
-P030,B17,Protein Rebel,81,11,10,3.97
-P031,B01,Sparkfold Soda,105,14,4,3.9
-P031,B05,Lentil Lark,114,20,17,4.04
-P031,B11,Crumbhouse,126,17,13,4.93
-P031,B13,Ember & Ash,128,10,1,3.43
-P031,B17,Protein Rebel,129,7,1,3.71
-P032,B01,Sparkfold Soda,171,7,3,4.32
-P032,B05,Lentil Lark,118,17,14,3.77
-P032,B11,Crumbhouse,139,20,13,4.77
-P032,B13,Ember & Ash,130,9,3,3.43
-P032,B17,Protein Rebel,162,10,2,3.35
-P033,B03,Northbrew,207,21,11,3.6
-P033,B08,Umami Drift,171,34,13,4.17
-P033,B12,Fruitling,195,34,8,3.69
-P033,B15,Tangle,214,39,24,3.85
-P033,B17,Protein Rebel,149,22,14,3.21
-P034,B01,Sparkfold Soda,67,27,26,4.26
-P034,B04,Kombuchee,83,21,11,3.39
-P034,B11,Crumbhouse,80,26,18,3.97
-P034,B14,Redline,103,17,0,3.24
-P034,B20,Mellow Gut,69,21,6,3.93
-P035,B02,Tidewell Hydrate,118,14,7,3.63
-P035,B03,Northbrew,126,18,9,3.13
-P035,B05,Lentil Lark,84,14,11,3.64
-P035,B11,Crumbhouse,96,14,6,3.87
-P035,B18,Fuel Bites,117,6,0,3.35
-P036,B01,Sparkfold Soda,175,26,20,4.49
-P036,B05,Lentil Lark,190,23,16,3.8
-P036,B11,Crumbhouse,176,23,2,3.55
-P036,B13,Ember & Ash,219,32,22,4.08
-P036,B17,Protein Rebel,215,20,17,3.15
-P037,B01,Sparkfold Soda,44,9,8,4.72
-P037,B05,Lentil Lark,38,1,1,3.37
-P037,B11,Crumbhouse,41,6,1,3.34
-P037,B13,Ember & Ash,40,4,1,3.34
-P037,B17,Protein Rebel,42,2,2,3.96
-P038,B01,Sparkfold Soda,100,8,7,4.55
-P038,B05,Lentil Lark,75,15,7,3.21
-P038,B11,Crumbhouse,106,7,2,3.29
-P038,B13,Ember & Ash,71,16,10,3.99
-P038,B17,Protein Rebel,87,4,3,3.58
-P039,B03,Northbrew,155,21,5,3.42
-P039,B14,Redline,180,25,0,3.44
-P039,B15,Tangle,206,34,25,4.18
-P039,B19,Rootshot,141,18,3,3.44
-P039,B20,Mellow Gut,191,31,26,4.24
-P040,B01,Sparkfold Soda,89,18,14,4.52
-P040,B07,Seedwork,100,17,9,4.09
-P040,B13,Ember & Ash,128,15,10,4.0
-P040,B17,Protein Rebel,113,15,11,3.59
-P040,B20,Mellow Gut,93,19,11,3.65
-P041,B01,Sparkfold Soda,88,16,14,4.27
-P041,B05,Lentil Lark,97,15,10,3.52
-P041,B11,Crumbhouse,111,11,3,3.82
-P041,B13,Ember & Ash,116,15,8,4.96
-P041,B17,Protein Rebel,98,12,2,2.92
-P042,B01,Sparkfold Soda,167,24,21,4.53
-P042,B05,Lentil Lark,126,21,18,3.66
-P042,B11,Crumbhouse,156,17,6,4.1
-P042,B13,Ember & Ash,154,21,13,3.86
-P042,B17,Protein Rebel,126,21,15,3.48
-P043,B01,Sparkfold Soda,173,10,6,4.12
-P043,B05,Lentil Lark,117,14,5,2.9
-P043,B11,Crumbhouse,173,14,4,3.48
-P043,B13,Ember & Ash,134,13,6,3.31
-P043,B17,Protein Rebel,146,22,21,3.77
-P044,B01,Sparkfold Soda,95,16,14,4.63
-P044,B04,Kombuchee,84,9,7,3.99
-P044,B06,Popwright,89,14,7,4.42
-P044,B13,Ember & Ash,64,17,6,4.26
-P044,B18,Fuel Bites,67,12,2,3.44
-P045,B01,Sparkfold Soda,223,27,3,4.06
-P045,B05,Lentil Lark,207,32,31,4.03
-P045,B11,Crumbhouse,188,35,27,4.83
-P045,B13,Ember & Ash,157,17,3,3.44
-P045,B17,Protein Rebel,155,11,0,3.14
-P046,B03,Northbrew,44,2,2,4.26
-P046,B09,Cacao Field,42,1,1,2.86
-P046,B10,Lolly Loft,42,0,0,
-P046,B14,Redline,31,1,0,3.66
-P046,B17,Protein Rebel,35,3,2,4.41
-P047,B01,Sparkfold Soda,133,22,18,4.4
-P047,B05,Lentil Lark,105,18,13,3.6
-P047,B11,Crumbhouse,102,23,0,4.11
-P047,B13,Ember & Ash,124,23,15,4.06
-P047,B17,Protein Rebel,133,17,5,3.12
-P048,B01,Sparkfold Soda,184,9,2,4.32
-P048,B05,Lentil Lark,157,22,19,3.89
-P048,B11,Crumbhouse,167,25,22,4.84
-P048,B13,Ember & Ash,157,12,1,3.56
-P048,B17,Protein Rebel,158,14,3,3.39
-P049,B01,Sparkfold Soda,136,20,17,4.41
-P049,B05,Lentil Lark,137,16,13,3.48
-P049,B11,Crumbhouse,175,13,4,3.75
-P049,B13,Ember & Ash,172,14,8,3.63
-P049,B17,Protein Rebel,119,14,8,3.74
-P050,B01,Sparkfold Soda,118,16,2,3.88
-P050,B05,Lentil Lark,96,21,17,3.96
-P050,B11,Crumbhouse,107,24,17,4.71
-P050,B13,Ember & Ash,101,11,1,3.47
-P050,B17,Protein Rebel,99,10,2,3.3
-P051,B01,Sparkfold Soda,181,30,7,4.05
-P051,B05,Lentil Lark,255,40,35,3.72
-P051,B11,Crumbhouse,252,41,33,4.55
-P051,B13,Ember & Ash,260,23,3,3.19
-P051,B17,Protein Rebel,227,23,6,3.43
-P052,B01,Sparkfold Soda,85,15,11,4.64
-P052,B05,Lentil Lark,100,9,7,3.37
-P052,B11,Crumbhouse,83,12,4,3.87
-P052,B13,Ember & Ash,95,13,8,4.49
-P052,B17,Protein Rebel,74,11,3,3.13
-P053,B01,Sparkfold Soda,112,27,26,4.12
-P053,B05,Lentil Lark,95,24,24,3.61
-P053,B11,Crumbhouse,108,24,12,3.82
-P053,B13,Ember & Ash,81,17,10,3.37
-P053,B17,Protein Rebel,118,32,29,4.19
-P054,B04,Kombuchee,136,32,20,4.03
-P054,B07,Seedwork,170,26,20,4.34
-P054,B08,Umami Drift,151,22,6,3.98
-P054,B14,Redline,143,23,5,4.0
-P054,B19,Rootshot,160,18,4,3.42
-P055,B01,Sparkfold Soda,129,16,9,4.14
-P055,B05,Lentil Lark,154,12,5,2.71
-P055,B11,Crumbhouse,166,11,4,3.51
-P055,B13,Ember & Ash,123,15,6,3.44
-P055,B17,Protein Rebel,150,20,19,3.92
-P056,B01,Sparkfold Soda,107,11,4,4.1
-P056,B05,Lentil Lark,138,24,23,4.0
-P056,B11,Crumbhouse,125,28,25,4.91
-P056,B13,Ember & Ash,148,15,0,3.57
-P056,B17,Protein Rebel,111,12,4,3.34
-P057,B01,Sparkfold Soda,129,22,19,4.34
-P057,B05,Lentil Lark,145,25,14,3.51
-P057,B11,Crumbhouse,129,18,5,3.97
-P057,B13,Ember & Ash,163,31,18,4.15
-P057,B17,Protein Rebel,195,16,10,2.97
-P058,B01,Sparkfold Soda,155,55,53,4.71
-P058,B04,Kombuchee,226,44,4,3.32
-P058,B05,Lentil Lark,198,58,55,3.95
-P058,B12,Fruitling,238,38,0,3.69
-P058,B16,Dip Shift,188,70,68,4.28
-P059,B01,Sparkfold Soda,30,10,10,4.3
-P059,B05,Lentil Lark,43,5,5,4.11
-P059,B11,Crumbhouse,39,3,2,3.71
-P059,B13,Ember & Ash,35,7,3,3.81
-P059,B17,Protein Rebel,45,9,7,4.36
-P060,B01,Sparkfold Soda,226,72,70,4.41
-P060,B05,Lentil Lark,257,82,80,3.85
-P060,B11,Crumbhouse,245,87,75,4.38
-P060,B13,Ember & Ash,227,74,13,3.3
-P060,B17,Protein Rebel,245,91,87,4.09
+P001,B03,Northbrew,95,6,6,4.49
+P001,B09,Cacao Field,90,9,6,3.16
+P001,B10,Lolly Loft,83,6,2,3.45
+P001,B13,Ember & Ash,67,4,3,3.08
+P001,B16,Dip Shift,87,9,7,3.79
+P002,B01,Sparkfold Soda,130,12,11,4.47
+P002,B05,Lentil Lark,122,10,10,3.18
+P002,B11,Crumbhouse,111,9,5,4.05
+P002,B13,Ember & Ash,129,4,4,3.45
+P002,B17,Protein Rebel,108,7,5,4.32
+P003,B02,Tidewell Hydrate,66,5,1,3.29
+P003,B04,Kombuchee,63,7,2,4.22
+P003,B05,Lentil Lark,71,14,10,3.76
+P003,B12,Fruitling,86,9,1,3.7
+P003,B16,Dip Shift,85,9,6,4.14
+P004,B01,Sparkfold Soda,129,22,10,4.53
+P004,B05,Lentil Lark,118,14,10,4.12
+P004,B11,Crumbhouse,152,17,4,4.06
+P004,B13,Ember & Ash,149,21,10,4.38
+P004,B17,Protein Rebel,139,10,5,3.34
+P005,B01,Sparkfold Soda,201,40,38,4.44
+P005,B05,Lentil Lark,135,46,36,3.71
+P005,B11,Crumbhouse,179,49,27,4.13
+P005,B13,Ember & Ash,193,34,12,3.54
+P005,B17,Protein Rebel,144,45,36,3.71
+P006,B01,Sparkfold Soda,227,37,25,4.09
+P006,B08,Umami Drift,217,33,14,4.31
+P006,B09,Cacao Field,197,22,10,3.69
+P006,B10,Lolly Loft,201,26,8,3.76
+P006,B11,Crumbhouse,217,31,9,4.36
+P007,B01,Sparkfold Soda,218,38,19,3.95
+P007,B05,Lentil Lark,253,34,23,3.83
+P007,B11,Crumbhouse,230,34,15,4.17
+P007,B13,Ember & Ash,250,34,14,4.29
+P007,B17,Protein Rebel,264,28,18,3.4
+P008,B01,Sparkfold Soda,68,6,6,4.28
+P008,B05,Lentil Lark,47,4,3,3.14
+P008,B11,Crumbhouse,55,8,3,4.34
+P008,B13,Ember & Ash,70,7,4,3.75
+P008,B17,Protein Rebel,60,9,8,3.75
+P009,B01,Sparkfold Soda,127,11,8,4.2
+P009,B05,Lentil Lark,138,9,7,3.38
+P009,B11,Crumbhouse,114,4,3,4.02
+P009,B13,Ember & Ash,122,10,5,3.36
+P009,B17,Protein Rebel,142,9,7,3.99
+P010,B01,Sparkfold Soda,116,11,6,3.88
+P010,B05,Lentil Lark,159,12,5,2.94
+P010,B11,Crumbhouse,153,13,4,3.46
+P010,B13,Ember & Ash,146,8,2,2.95
+P010,B17,Protein Rebel,130,20,14,3.88
+P011,B01,Sparkfold Soda,66,3,0,4.19
+P011,B05,Lentil Lark,67,7,5,2.99
+P011,B11,Crumbhouse,69,4,0,3.62
+P011,B13,Ember & Ash,69,5,2,3.15
+P011,B17,Protein Rebel,72,8,7,4.03
+P012,B01,Sparkfold Soda,336,108,96,4.41
+P012,B05,Lentil Lark,293,97,75,3.72
+P012,B11,Crumbhouse,438,98,63,4.22
+P012,B13,Ember & Ash,364,88,31,3.77
+P012,B17,Protein Rebel,380,107,80,3.8
+P013,B01,Sparkfold Soda,77,7,4,3.88
+P013,B05,Lentil Lark,77,9,8,3.38
+P013,B11,Crumbhouse,77,5,2,4.36
+P013,B13,Ember & Ash,65,11,3,3.56
+P013,B17,Protein Rebel,68,11,10,3.76
+P014,B03,Northbrew,88,22,19,4.31
+P014,B04,Kombuchee,59,15,10,3.97
+P014,B08,Umami Drift,81,20,8,3.6
+P014,B13,Ember & Ash,75,16,11,3.08
+P014,B15,Tangle,72,21,0,2.97
+P015,B01,Sparkfold Soda,115,10,10,4.46
+P015,B05,Lentil Lark,98,6,5,3.11
+P015,B11,Crumbhouse,87,8,5,4.07
+P015,B13,Ember & Ash,99,8,4,3.89
+P015,B17,Protein Rebel,107,7,7,3.56
+P016,B01,Sparkfold Soda,105,6,6,4.52
+P016,B05,Lentil Lark,81,8,6,3.5
+P016,B11,Crumbhouse,83,7,0,4.54
+P016,B13,Ember & Ash,85,8,7,4.15
+P016,B17,Protein Rebel,109,4,2,3.37
+P017,B01,Sparkfold Soda,113,14,14,4.58
+P017,B03,Northbrew,124,12,10,3.81
+P017,B04,Kombuchee,120,9,7,3.51
+P017,B05,Lentil Lark,85,14,11,3.39
+P017,B16,Dip Shift,86,10,8,3.71
+P018,B03,Northbrew,43,8,2,3.41
+P018,B04,Kombuchee,44,8,4,4.04
+P018,B11,Crumbhouse,52,5,2,4.55
+P018,B12,Fruitling,40,9,2,3.76
+P018,B17,Protein Rebel,38,9,4,3.64
+P019,B01,Sparkfold Soda,159,16,8,4.56
+P019,B05,Lentil Lark,129,21,16,3.47
+P019,B11,Crumbhouse,161,18,5,3.91
+P019,B13,Ember & Ash,134,19,12,4.07
+P019,B17,Protein Rebel,165,14,9,3.57
+P020,B01,Sparkfold Soda,330,114,102,4.55
+P020,B05,Lentil Lark,307,120,85,3.56
+P020,B11,Crumbhouse,279,99,67,4.28
+P020,B13,Ember & Ash,417,91,25,3.42
+P020,B17,Protein Rebel,387,88,71,3.87
+P021,B01,Sparkfold Soda,243,41,22,4.32
+P021,B05,Lentil Lark,230,32,19,3.97
+P021,B11,Crumbhouse,239,29,8,4.18
+P021,B13,Ember & Ash,172,29,18,3.87
+P021,B17,Protein Rebel,182,28,13,3.55
+P022,B01,Sparkfold Soda,121,16,11,3.81
+P022,B05,Lentil Lark,116,20,11,3.83
+P022,B11,Crumbhouse,171,12,7,4.51
+P022,B13,Ember & Ash,168,21,12,4.2
+P022,B17,Protein Rebel,159,14,7,3.36
+P023,B01,Sparkfold Soda,119,13,10,4.29
+P023,B05,Lentil Lark,90,13,8,3.79
+P023,B11,Crumbhouse,91,11,0,4.08
+P023,B13,Ember & Ash,94,9,6,3.99
+P023,B17,Protein Rebel,131,15,13,2.97
+P024,B01,Sparkfold Soda,187,44,41,4.27
+P024,B05,Lentil Lark,166,36,29,3.72
+P024,B11,Crumbhouse,178,33,14,3.69
+P024,B13,Ember & Ash,166,36,18,3.59
+P024,B17,Protein Rebel,171,37,35,4.24
+P025,B01,Sparkfold Soda,233,39,20,4.75
+P025,B05,Lentil Lark,180,31,25,4.01
+P025,B11,Crumbhouse,221,21,3,3.99
+P025,B13,Ember & Ash,268,28,15,4.33
+P025,B17,Protein Rebel,202,22,12,3.42
+P026,B01,Sparkfold Soda,167,23,15,4.22
+P026,B05,Lentil Lark,183,27,19,3.5
+P026,B11,Crumbhouse,195,24,10,4.02
+P026,B13,Ember & Ash,144,26,15,4.35
+P026,B17,Protein Rebel,156,17,11,3.73
+P027,B01,Sparkfold Soda,80,13,9,4.55
+P027,B05,Lentil Lark,55,18,11,3.65
+P027,B11,Crumbhouse,63,10,4,4.19
+P027,B13,Ember & Ash,76,16,13,3.83
+P027,B17,Protein Rebel,78,11,5,3.52
+P028,B01,Sparkfold Soda,61,12,11,4.6
+P028,B05,Lentil Lark,43,8,6,3.71
+P028,B11,Crumbhouse,66,10,5,3.63
+P028,B13,Ember & Ash,61,8,5,4.71
+P028,B17,Protein Rebel,44,9,5,3.39
+P029,B01,Sparkfold Soda,127,25,22,4.09
+P029,B05,Lentil Lark,146,13,9,3.73
+P029,B11,Crumbhouse,118,16,6,4.37
+P029,B13,Ember & Ash,128,23,11,4.11
+P029,B17,Protein Rebel,132,14,7,3.69
+P030,B01,Sparkfold Soda,59,11,7,4.22
+P030,B05,Lentil Lark,43,10,5,3.16
+P030,B11,Crumbhouse,42,9,3,3.72
+P030,B13,Ember & Ash,53,9,4,4.26
+P030,B17,Protein Rebel,50,9,4,3.67
+P031,B02,Tidewell Hydrate,70,5,2,3.63
+P031,B03,Northbrew,74,0,0,
+P031,B04,Kombuchee,91,8,8,3.79
+P031,B05,Lentil Lark,76,13,10,3.71
+P031,B09,Cacao Field,69,7,4,4.27
+P032,B01,Sparkfold Soda,132,21,11,4.34
+P032,B05,Lentil Lark,143,24,13,3.78
+P032,B11,Crumbhouse,159,17,6,4.33
+P032,B13,Ember & Ash,161,17,7,4.0
+P032,B17,Protein Rebel,162,11,5,3.82
+P033,B02,Tidewell Hydrate,107,25,8,3.34
+P033,B04,Kombuchee,106,27,12,3.71
+P033,B06,Popwright,149,27,23,4.46
+P033,B11,Crumbhouse,121,40,22,4.3
+P033,B15,Tangle,108,34,11,3.43
+P034,B01,Sparkfold Soda,40,7,7,4.4
+P034,B05,Lentil Lark,40,4,2,3.62
+P034,B11,Crumbhouse,45,7,3,4.08
+P034,B13,Ember & Ash,50,11,9,3.93
+P034,B17,Protein Rebel,52,3,2,3.29
+P035,B01,Sparkfold Soda,231,14,6,4.47
+P035,B05,Lentil Lark,158,24,11,3.53
+P035,B11,Crumbhouse,186,25,12,4.17
+P035,B13,Ember & Ash,175,20,12,4.01
+P035,B17,Protein Rebel,219,18,10,3.52
+P036,B01,Sparkfold Soda,110,46,44,4.42
+P036,B05,Lentil Lark,159,33,29,3.73
+P036,B11,Crumbhouse,157,33,8,3.72
+P036,B13,Ember & Ash,138,21,14,3.85
+P036,B17,Protein Rebel,124,27,23,4.4
+P037,B03,Northbrew,53,9,7,3.12
+P037,B04,Kombuchee,43,4,0,3.71
+P037,B12,Fruitling,52,7,2,2.95
+P037,B18,Fuel Bites,55,5,2,3.91
+P037,B19,Rootshot,49,11,6,3.74
+P038,B03,Northbrew,96,40,36,4.49
+P038,B06,Popwright,104,23,22,4.53
+P038,B10,Lolly Loft,96,22,3,3.49
+P038,B12,Fruitling,101,15,0,3.38
+P038,B14,Redline,117,27,1,2.95
+P039,B03,Northbrew,125,38,30,3.99
+P039,B10,Lolly Loft,147,24,14,4.16
+P039,B15,Tangle,138,30,3,3.33
+P039,B19,Rootshot,137,31,11,3.36
+P039,B20,Mellow Gut,131,29,9,3.61
+P040,B01,Sparkfold Soda,104,17,9,3.99
+P040,B05,Lentil Lark,108,15,8,3.19
+P040,B11,Crumbhouse,121,14,3,3.78
+P040,B13,Ember & Ash,155,13,4,3.56
+P040,B17,Protein Rebel,137,19,16,3.91
+P041,B03,Northbrew,22,5,1,3.82
+P041,B05,Lentil Lark,23,3,1,3.71
+P041,B11,Crumbhouse,17,4,2,4.07
+P041,B13,Ember & Ash,23,3,3,4.4
+P041,B15,Tangle,23,2,2,4.12
+P042,B01,Sparkfold Soda,193,29,20,4.46
+P042,B02,Tidewell Hydrate,171,14,5,3.63
+P042,B05,Lentil Lark,180,29,16,3.8
+P042,B15,Tangle,129,30,23,3.98
+P042,B20,Mellow Gut,136,29,15,3.89
+P043,B01,Sparkfold Soda,79,13,11,4.53
+P043,B03,Northbrew,88,4,2,3.33
+P043,B04,Kombuchee,84,7,6,3.68
+P043,B08,Umami Drift,77,8,2,4.08
+P043,B09,Cacao Field,97,10,7,4.09
+P044,B01,Sparkfold Soda,37,7,3,4.12
+P044,B05,Lentil Lark,31,3,1,3.51
+P044,B11,Crumbhouse,38,8,4,4.36
+P044,B13,Ember & Ash,39,5,3,4.5
+P044,B17,Protein Rebel,31,3,2,3.65
+P045,B01,Sparkfold Soda,53,11,6,3.77
+P045,B05,Lentil Lark,48,9,4,3.08
+P045,B11,Crumbhouse,54,14,4,3.73
+P045,B13,Ember & Ash,52,10,4,3.05
+P045,B17,Protein Rebel,58,6,5,4.19
+P046,B01,Sparkfold Soda,134,20,17,4.44
+P046,B05,Lentil Lark,135,16,13,3.5
+P046,B11,Crumbhouse,172,13,4,3.78
+P046,B13,Ember & Ash,170,14,8,3.67
+P046,B17,Protein Rebel,117,14,8,3.73
+P047,B01,Sparkfold Soda,255,88,78,4.15
+P047,B05,Lentil Lark,241,71,53,3.71
+P047,B11,Crumbhouse,227,73,39,4.56
+P047,B13,Ember & Ash,235,62,23,3.62
+P047,B17,Protein Rebel,322,72,62,4.02
+P048,B03,Northbrew,159,18,6,3.34
+P048,B09,Cacao Field,126,21,8,3.88
+P048,B11,Crumbhouse,121,28,3,4.27
+P048,B16,Dip Shift,148,23,9,3.73
+P048,B18,Fuel Bites,158,21,2,3.52
+P049,B01,Sparkfold Soda,154,17,12,4.44
+P049,B05,Lentil Lark,116,15,11,3.17
+P049,B11,Crumbhouse,120,11,4,4.3
+P049,B13,Ember & Ash,142,12,7,3.9
+P049,B17,Protein Rebel,121,14,11,3.73
+P050,B02,Tidewell Hydrate,40,1,0,4.16
+P050,B10,Lolly Loft,38,1,0,3.41
+P050,B11,Crumbhouse,38,0,0,
+P050,B12,Fruitling,28,1,0,4.02
+P050,B20,Mellow Gut,31,3,1,4.48
+P051,B03,Northbrew,250,97,67,4.0
+P051,B11,Crumbhouse,274,90,49,4.27
+P051,B12,Fruitling,355,76,7,3.59
+P051,B17,Protein Rebel,266,87,69,3.94
+P051,B19,Rootshot,259,74,21,3.59
+P052,B04,Kombuchee,112,26,15,3.82
+P052,B07,Seedwork,140,21,9,4.25
+P052,B08,Umami Drift,124,17,3,3.85
+P052,B14,Redline,117,19,2,3.85
+P052,B19,Rootshot,132,15,3,3.46
+P053,B01,Sparkfold Soda,105,33,28,4.59
+P053,B05,Lentil Lark,124,25,22,3.6
+P053,B11,Crumbhouse,103,29,16,4.2
+P053,B13,Ember & Ash,118,24,9,3.82
+P053,B17,Protein Rebel,91,29,27,3.74
+P054,B01,Sparkfold Soda,49,20,19,4.49
+P054,B05,Lentil Lark,58,17,16,3.72
+P054,B11,Crumbhouse,57,18,8,4.08
+P054,B13,Ember & Ash,57,12,6,3.58
+P054,B17,Protein Rebel,67,20,18,4.2
+P055,B03,Northbrew,200,51,46,4.62
+P055,B04,Kombuchee,218,39,27,4.14
+P055,B08,Umami Drift,205,44,18,3.65
+P055,B09,Cacao Field,185,42,26,3.9
+P055,B14,Redline,185,33,1,3.45
+P056,B01,Sparkfold Soda,191,60,53,4.72
+P056,B05,Lentil Lark,280,59,49,3.66
+P056,B11,Crumbhouse,246,56,32,4.37
+P056,B13,Ember & Ash,229,62,20,3.59
+P056,B17,Protein Rebel,215,62,53,3.94
+P057,B01,Sparkfold Soda,64,9,7,4.8
+P057,B05,Lentil Lark,55,8,3,3.86
+P057,B11,Crumbhouse,63,9,1,4.29
+P057,B13,Ember & Ash,69,9,7,4.2
+P057,B17,Protein Rebel,48,5,2,3.39
+P058,B01,Sparkfold Soda,91,35,34,4.52
+P058,B05,Lentil Lark,141,35,30,3.69
+P058,B11,Crumbhouse,95,30,16,4.52
+P058,B13,Ember & Ash,111,33,10,3.82
+P058,B17,Protein Rebel,127,37,29,3.85
+P059,B01,Sparkfold Soda,30,5,3,4.67
+P059,B05,Lentil Lark,36,7,4,4.18
+P059,B11,Crumbhouse,42,2,0,4.48
+P059,B13,Ember & Ash,33,3,1,3.59
+P059,B17,Protein Rebel,30,1,0,3.62
+P060,B01,Sparkfold Soda,108,16,7,4.03
+P060,B05,Lentil Lark,121,18,9,3.12
+P060,B11,Crumbhouse,108,12,3,3.63
+P060,B13,Ember & Ash,136,19,10,3.11
+P060,B17,Protein Rebel,163,17,13,3.62
