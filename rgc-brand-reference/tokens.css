@@ -1,0 +1,55 @@
+/* Extracted from the live .rgc-site rules on 3 October 2026.
+   Source: https://reallygoodculture.com/ — names below are normalized. */
+:root {
+  --rgc-ink: #1d1d1d;
+  --rgc-text: #141414;
+  --rgc-paper: #ffffff;
+  --rgc-warm: #f4f3ef;
+  --rgc-panel: #161618;
+  --rgc-lime: #b8f000;
+  --rgc-green: #22a651;
+  --rgc-indigo: #6a6ae2;
+  --rgc-cta-gradient: linear-gradient(90deg, #b8f000, #22a651);
+  --rgc-highlight-gradient: linear-gradient(120deg, #c2ff00, #4dc9e2);
+  --rgc-font-display: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  --rgc-font-mono: Menlo, "SF Mono", ui-monospace, SFMono-Regular, monospace;
+  --rgc-font-accent: "Geist", "Helvetica Neue", Arial, sans-serif;
+  --rgc-muted-on-dark: rgba(255,255,255,.66);
+  --rgc-border-on-dark: rgba(255,255,255,.12);
+  --rgc-border-on-light: rgba(29,29,29,.16);
+  --rgc-radius-input: 12px;
+  --rgc-radius-card: 22px;
+  --rgc-radius-panel: 24px;
+  --rgc-radius-pill: 999px;
+  --rgc-product: #c060b0;
+  --rgc-performance: #4b4bf0;
+  --rgc-trend: #6060e0;
+  --rgc-market: #f06040;
+  --rgc-behavioural: #20c070;
+  --rgc-biometric: #40c0c0;
+  --rgc-synthetic: #c0f000;
+}
+/* Starter components adapted from observed values. */
+.rgc-button {
+  display:inline-flex; align-items:center; justify-content:center; gap:9px;
+  padding:13px 26px; border:0; border-radius:var(--rgc-radius-pill);
+  background:var(--rgc-cta-gradient); color:var(--rgc-text);
+  font:500 14px/1.5 var(--rgc-font-mono); letter-spacing:-.02em;
+  text-transform:uppercase; text-decoration:none; cursor:pointer;
+  transition:transform .25s;
+}
+.rgc-button:hover {transform:translateY(-1px)}
+.rgc-card {
+  padding:24px; border-radius:var(--rgc-radius-card);
+  border:1px solid var(--rgc-border-on-dark); background:rgba(16,16,18,.5);
+  color:var(--rgc-paper); box-shadow:0 24px 60px -22px rgba(0,0,0,.7);
+}
+.rgc-input {
+  width:100%; box-sizing:border-box; padding:14px 16px;
+  border:1px solid var(--rgc-border-on-light); border-radius:var(--rgc-radius-input);
+  background:white; color:var(--rgc-ink); font:400 15px/1.5 var(--rgc-font-display);
+  letter-spacing:-.01em;
+}
+.rgc-input:focus {outline:none;border-color:var(--rgc-green);box-shadow:0 0 0 3px rgba(34,166,81,.14)}
+.rgc-button:focus-visible {outline:2px solid var(--rgc-green);outline-offset:3px}
+@media(prefers-reduced-motion:reduce) {.rgc-button{transition:none}.rgc-button:hover{transform:none}}
