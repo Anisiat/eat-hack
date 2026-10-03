@@ -491,83 +491,79 @@ Bars run in parallel; diamonds are gates and fixed times.
 The demo runs the three screens in order and lands on one number: the monthly impact in pounds against the habit plan. Replace bracketed values with real output before recording.
 
 # PopUpPick — Before we pack the van
-**Two-minute demo script**
+# PopUpPick — Two-minute demo script
 
-## 0:00–0:14 · One table. Two different results.
+## 0:00–0:20 · The pop-up problem
 
-**Visual:** Two products on a table: cookies and mayo. Hands keep reaching for cookies. The mayo stays still. Hold on it for a beat.
+**Visual:** Cookies and mayo on a table at a hand-painting event. Hands reach for the cookies. The mayo stays.
 
 **Voiceover:**  
-“At a hand-painting event, the cookies went quickly. The mayo didn’t. Same table. Same crowd. Two very different results. By then, the planning time and the pop-up budget were already spent.”
+“At a hand-painting event, the cookies went quickly. The mayo didn’t. Same table. Same crowd. Different results. The team had spent hours finding the event, organising products and setting up—but that effort didn’t give every brand the same chance to connect.”
 
 **On-screen text:**  
 **Cookies moved. Mayo stayed.**
 
-## 0:14–0:32 · The work happens before the table
+## 0:20–0:32 · Why it matters
 
-**Visual:** Quick cuts: scrolling event listings, a spreadsheet, messages about stock, packing a box. Return to the mayo.
-
-**Voiceover:**  
-“Behind that table are hours of finding events, choosing products and organising stock. When the lineup misses the audience, there’s less opportunity for WatchHumans sign-ups, reviews and publicity. What if we could spot that mismatch before packing the van?”
-
-**On-screen text:**  
-**Time spent. Stock committed. Opportunity missed.**
-
-## 0:32–0:44 · PopUpPick appears
-
-**Visual:** Charcoal screen. The PopUpPick bubble floats, then pops to reveal the London map. Pins appear.
+**Visual:** Quick cuts: event listings, spreadsheets, stock requests, packing boxes.
 
 **Voiceover:**  
-“Meet PopUpPick. Built on RGC’s intelligence, it adds a planning layer: where to pop up, who you’re likely to meet, and what to bring.”
+“A poor match means missed exposure for client brands, fewer opportunities for WatchHumans sign-ups and reviews, and time and budget that could have worked harder elsewhere.”
 
 **On-screen text:**  
-**A better plan starts before the pop-up.**
+**The event matters. The audience matters. The lineup matters.**
 
-## 0:44–1:06 · Find the crowd
+## 0:32–0:53 · Introducing PopUpPick
 
-**Visual:** Filter events. Select **[real upcoming event]** with fewer than 200 attendees. The map moves to it and the detail panel opens. Click an audience bar; its matching product highlights.
+**Visual:** Charcoal screen. The PopUpPick bubble appears, then pops to reveal the London map.
 
 **Voiceover:**  
-“Start with a real upcoming event. Here’s the estimated audience, expressed through WatchHumans archetypes. Select a group and its best-matching product lights up. Now the team can see who each product is there for—and why it belongs in the lineup.”
+“Introducing PopUpPick.
+
+“PopUpPick helps RGC find events where its clients’ products fit the audience—and recommends what to bring, how much, and when to sample.
+
+“It adds a planning layer to RGC’s intelligence, helping the team put products in front of people more likely to try them.”
 
 **On-screen text:**  
-**Pick an event → Understand the crowd**
+**Find suitable events. Bring products that fit.**
 
-**Keep visible beside the audience:**  
-Estimated crowd mix
+## 0:53–1:14 · Show the match
 
-## 1:06–1:27 · Pack with a reason
-
-**Visual:** Move across the recommended product tiles. Show quantities, time slot and reasons. Briefly highlight stock and dietary checks, then the comparison with the usual lineup.
+**Visual:** Filter upcoming London events. Select one. Open its estimated audience panel, then click an audience group to highlight a recommended product.
 
 **Voiceover:**  
-“PopUpPick recommends two to five products, scaled to attendance, with quantities, timing and clear reasons. It checks stock and practical constraints. Compare that with the usual lineup: expected sign-ups, reviews, and forecast net value after the costs included in the model.”
+“Here’s how it works. Choose an upcoming event and see its estimated audience. PopUpPick recommends a product lineup and explains each match. Click an audience group to see which product serves it best—so every product has a reason to be on the table.”
 
 **On-screen text:**  
-**What to bring. How much. When. Why.**
+**Who’s coming → What fits → Why**
 
-## 1:27–1:45 · Make it a workable month
+## 1:14–1:36 · Turn it into action
 
-**Visual:** Add the event to the plan tray. Switch to Timeline and load the recommended plan. Show an event skipped because of its forecast loss risk. Export the request list.
+**Visual:** Show quantities, sampling time and stock checks. Compare the recommendation with the usual lineup. Add the event to the plan and reveal the stock request.
 
 **Voiceover:**  
-“Then turn individual choices into a monthly plan. Work within capacity, avoid date clashes, and skip events forecast as likely losses. Export one product request list, so the warehouse knows what’s needed for each pop-up.”
+“The team gets suggested quantities, a sampling time, and stock and dietary checks. Compare expected sign-ups, reviews and net value with the usual lineup. Then add suitable events to the monthly plan and export one clear stock request.”
 
 **On-screen text:**  
-**A plan the team can act on.**
+**From event search to packing list.**
 
-## 1:45–2:00 · Land the value—and the callback
+**Visible beside forecasts:**  
+Synthetic data · Not measured results
 
-**Visual:** Open Impact. Show **[£X modelled monthly improvement]** against the usual plan, with its uncertainty range. End on the packed box, then the PopUpPick wordmark.
+## 1:36–2:00 · Make the value clear
+
+**Visual:** Show the completed plan. Highlight client exposure, WatchHumans growth and planning time. Finish on the PopUpPick wordmark.
 
 **Voiceover:**  
-“The aim: less planning time and more value per pop-up. These forecasts use synthetic data; real results need measuring. Give each pop-up a tracking code, learn what worked, and make the next packing list smarter.”
+“For RGC, the value is clear: less time spent planning, fewer resources committed to poor matches, and better opportunities for client exposure, sign-ups and reviews.
 
-**On-screen text:**  
-**Before we pack the van. PopUpPick.**
+“This demo uses synthetic data. Tracking real results helps improve the next plan.
 
-**Beside every impact figure:**  
-Synthetic data · Modelled improvement, not a measured result
+“Before we pack the van, let’s make sure the products fit the crowd.”
+
+**Final on-screen text:**  
+**PopUpPick**  
+**The right event. The right audience. A better opportunity.**
 
 **Judge questions**
 
