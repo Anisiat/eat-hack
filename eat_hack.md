@@ -173,7 +173,6 @@ The app has three screens, one per question RGC asks. Each reads the same scored
 ```
 scores.csv       event_id, brand_id, product, match, fit, exp_signups, exp_reviews, in_best_lineup, reason_1, reason_2, reason_3
 lineups.json     event_id -> name, date, event_type, expected_attendance, lineup_size, brands, products, units{brand: n}, slot, match, exp_signups, exp_reviews, value{net_value, p_waste, ...}, habit_value, reasons[3]
-profiles.json    brand_id -> fit_by_type{7}, best_type, best_moment, best_audience, sample, avoid, top_events[5], text
 impact.json      review_uplift (+CI), net_value_tool, net_value_habit, net_gain_per_popup (+CI), waste_rate_tool, waste_rate_habit, monthly_impact_gbp, yearly_impact_gbp, per_popup[12]
 month_plan.json  month, capacity, popups[{event_id, date, brands, exp_reviews, net_value, p_waste}], net_value, habit_net_value, skipped_events, marketing_time_saved_gbp, month_gain_gbp
 ```
@@ -185,7 +184,7 @@ It is the front end to the same engine. It reads the scored files and calculates
 
 This replaces the Event planner and Brand profiles screens with one map-first screen. The Month plan and impact screen stays, and takes the same look.
 
-> **Built:** `python app.py` runs the workflow and serves this UI at http://localhost:8000 (code in `app/`). Differences from the spec below: net value (£) and expected reviews replace QRP; no borough layer, borough filter or audience tags (retired / not in PredictHQ data); the stall-cost filter is an event-cost filter; the side-by-side compare view and timeline brushing are not built (first two in the cut order); stub files are not used.
+> **Built:** `python app.py` runs the workflow and serves this UI at http://localhost:8000 (code in `app/`). Differences from the spec below: net value (£) and expected reviews replace QRP; no borough layer, borough filter or audience tags (retired / not in PredictHQ data); the stall-cost filter is an event-cost filter; the side-by-side compare view and timeline brushing are not built (first two in the cut order); stub files are not used. Brand profiles (`profiles.json`) are no longer produced, since nothing shows them.
 >
 > **Update:** QRP has been replaced by net value per pop-up (£) and expected reviews (see Impact metric), events are capped below 200 people, and events now come from `data/archetypes/events_archetypes.csv` (real UK events, no `events.csv`, no audience tags), the crowd is the 10 WatchHumans archetypes rather than 5 segments, `boroughs.csv` and the Census data are retired (no borough layer), and there are no stub files (use the real `outputs/`). Read "QRP" in this section as net value.
 

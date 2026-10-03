@@ -2,7 +2,7 @@
 
   python -m model.run [--month 2026-12] [--capacity 2]
 
-Writes outputs/scores.csv, lineups.json, profiles.json, impact.json, month_plan.json.
+Writes outputs/scores.csv, lineups.json, event_audience.json, impact.json, month_plan.json.
 Headline: net value per pop-up in pounds (data/assumptions/value_assumptions.csv), from sign-ups, reviews and publicity
 """
 import argparse
@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 from . import fit as fitmod
-from . import outcomes, plan, profiles
+from . import outcomes, plan
 from .data import ARCHETYPES, OUT, load, past_events, upcoming_events
 from .impact import uplift_test
 from .value import load_assumptions, p_waste, rounded, value
@@ -85,21 +85,17 @@ def main():
     # 4. month plan
     month = plan.month_plan(d, opt, events, lineups, args.month, args.capacity, A)
 
-    # 5. brand profiles
-    profs = profiles.build(d, fm, scores, events)
-
     # uplift on the 12 held-out pop-ups
     test = past[past["split"] == "test"]
     impact = uplift_test(d, Optimiser(d, om, test, fitmod.score(d, fm, test)), test, A)
     impact["poisson_test_deviance"] = round(om.test_deviance, 3)
     impact["footfall_baseline_test_deviance"] = round(om.baseline_deviance, 3)
 
-    check(d, events, scores, lineups, profs, impact, A)
+    check(d, events, scores, lineups, impact, A)
 
     OUT.mkdir(exist_ok=True)
     scores.to_csv(OUT / "scores.csv", index=False)
     to_json(lineups, OUT / "lineups.json")
-    to_json(profs, OUT / "profiles.json")
     to_json(impact, OUT / "impact.json")
     to_json(month, OUT / "month_plan.json")
     to_json(event_audience(events, parts), OUT / "event_audience.json")
@@ -172,14 +168,13 @@ def money(opt, i, lineup, res, cost, A):
     return {**rounded(v), "units_total": units, "p_waste": round(p_waste(res["signups"], rps, units, float(cost), A), 3)}
 
 
-def check(d, events, scores, lineups, profs, impact, A):
+def check(d, events, scores, lineups, impact, A):
     b = d["brands"]
     assert len(scores) == len(events) * len(b)
     for eid, l in lineups.items():
         lb = b.loc[l["brands"]]
         assert len(set(l["brands"])) == l["lineup_size"] and 2 <= l["lineup_size"] <= 5, eid
         assert (lb["vegan"] == 1).any() and (lb["gluten_free"] == 1).any() and (lb["needs_chilling"] == 1).sum() <= 2, eid
-    assert len(profs) == len(b) and all(len(p["fit_by_type"]) == len(d["event_types"]) for p in profs.values())
     assert impact["review_ci_low"] <= impact["review_uplift"] <= impact["review_ci_high"]
     assert (events["footfall"] < A["max_attendance"]).all()
 

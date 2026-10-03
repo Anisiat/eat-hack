@@ -8,3 +8,4 @@ __pycache__/
 outputs/requests.csv
 site/
 .vercel/
+data/synthetic/watch_humans_synthetic.csv
