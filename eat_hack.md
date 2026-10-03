@@ -71,16 +71,42 @@ Three sources: synthetic WatchHumans tables, real upcoming London events, and pu
 
 Each event type has a moment and a set of need states. This table seeds the synthetic data and the fit score; real WatchHumans ratings refine it over time. These are starting assumptions; the evidence behind three rows is below the table.
 
-| Event type | The moment | Need states | Food and drink that fit | Condiments | Weak fit |
+## What each niche gathering might want
+
+Small gatherings offer specific moments to explore: a coffee after a social run, an ingredient to take home after a cooking class, or a snack during a pottery break.
+
+These are **starting hypotheses for synthetic data and the fit score**. WatchHumans feedback can help refine them; actual purchase behaviour is needed to validate demand. A good fit depends on timing, price, what the organiser already provides, and whether outside food is welcome.
+
+| Gathering | The moment | Possible needs or motivations | Food and drink to test | Condiments or take-home products | Potentially weaker fit |
 | --- | --- | --- | --- | --- | --- |
-| Run, race, run club | Straight after the finish | Hydrate, recover, refuel | Electrolyte drinks, protein snacks; coffee and a pastry after parkrun | Nut butters on a recovery snack | Heavy, spicy, alcohol |
-| Hackathon, conference | Long seated focus; slump around 14:00 to 16:00 | Focus, steady energy, no mess | Cold brew, functional drinks, protein bites, dark chocolate | Single-serve dip pots | Sticky, messy, sugar-led |
-| Street food, food market | Grazing and exploring | Discovery, bold flavour | Small bites, craft drinks | Hot sauce, chilli oil, chutney, dressings: the best stage for condiments | Plain functional products |
-| Match screening | Two hours of shared viewing | Sharing, savoury, celebration | Crisps, popcorn, sharing snacks, soft drinks, low and no alcohol beer | Dips, hot sauce | Single-serve health products |
-| Gig, club night | Late, dancing, hot room | Hydrate, energy, late savoury | Electrolytes, water, energy drinks | None | Breakfast items |
-| Family day out | Daytime, children in tow | Treat, allergen-safe | Children's snacks, fruit-based treats, juice | Mild sauces | Caffeine, spicy |
-| All-day outdoor festival | Heat, walking, queues | Hydrate, cool down, portable | Cold drinks, ice lollies, portable snacks | Hot sauce near food stalls | Chilled items with no power |
-| Campus fair, freshers | Students browsing stalls | Value, novelty, energy | Energy drinks, snacks, quick meals | Condiments for student cooking | Premium-priced items |
+| **Weekend social run club** | Finished running; staying to chat | Refreshment, hunger, a social ritual | Water, iced coffee, pastries, small savoury snacks | Nut butter sample packs, breakfast granola | Large meals when people are leaving quickly |
+| **Evening distance-running group** | Training ends close to dinner | Thirst, substantial food, convenience | Drinks, wraps, sandwiches, filling snack bars | Easy meal sauces for dinner at home | Tiny tasting portions when people want a meal |
+| **Small overnight hackathon** | Coding through dinner or taking a late break | Convenience, hunger, minimal interruption | Wraps, onigiri, resealable snacks, coffee and caffeine-free drinks | Sauce sachets with meals | Food requiring assembly or leaving greasy hands |
+| **Beginner cooking class** | Participants taste the dish they have just made | Recreate it at home, build confidence, discover ingredients | Samples of ingredients used in the lesson; a recipe-linked ingredient kit | The exact spice blend, chilli oil, paste or dressing used | Unrelated products with no connection to the recipe |
+| **Pasta-making workshop** | Sitting down to eat the finished pasta | Complete the meal, share, recreate the experience | Focaccia, paired drinks, a take-home pasta kit | Pesto, tomato sauce, finishing olive oil | Snacks that compete with an included meal |
+| **Dessert or baking class** | Decorating, tasting and packing creations | Customisation, gifting, trying techniques at home | Tea, coffee, small contrasting flavour samples | Fruit curds, compotes, chocolate sauces, decorating kits | More full-size desserts when participants already have plenty |
+| **Wine-tasting evening** | Comparing wines between guided pours | Explore pairings, share small bites, remember favourites | Cheese, crackers, olives, bread, water | Chutneys, tapenade, products used in the tasting | Strong flavours that interfere with the planned tasting |
+| **Morning yoga class** | Class ends; some participants linger before work | Refreshment, a light breakfast, convenience | Tea, coffee, fruit pots, small breakfast pots | Granola or fruit compote to take home | Full meals when the venue has no seating or time to linger |
+| **Yoga festival or day retreat** | Break between sessions or a scheduled lunch | Eat comfortably, refresh, accommodate varied dietary preferences | Clearly labelled bowls, wraps, fruit, hot and cold drinks | Dressings or snack packs tied to food served that day | Large portions immediately before an active session |
+| **Evening painting or drawing class** | Social break or end-of-class conversation | A small treat, refreshment, sharing | Drinks with lids, bite-size savouries, individually portioned treats | Packaged local preserves or giftable treats, if relevant to the event | Open dips and messy food beside artwork |
+| **Weekend pottery workshop** | Hands washed; a scheduled break | Warm drink, small reward, conversation | Tea, coffee, biscuits, small cakes | Take-home tea, coffee or biscuit gift packs | Food served while participants are handling clay |
+| **Fermentation or pickling workshop** | Tasting results and discussing home experiments | Learn, compare flavours, try making something | Guided samples, bread or crackers for tasting | Starter kits, pickling spice blends, jars of the products demonstrated | Generic snacks with no link to the workshop |
+| **Match screening** | Two hours of shared viewing | Sharing, savoury, celebration | Crisps, popcorn, sharing snacks, soft drinks, low and no alcohol beer | Dips, hot sauce | Single-serve health products |
+| **Gig, club night** | Late, dancing, hot room | Hydrate, energy, late savoury | Electrolytes, water, energy drinks | None | Breakfast items |
+| **All-day outdoor festival** | Heat, walking, queues | Hydrate, cool down, portable | Cold drinks, ice lollies, portable snacks | Hot sauce near food stalls | Chilled items with no power |
+| **Campus fair, freshers** | Students browsing stalls | Value, novelty, energy | Energy drinks, snacks, quick meals | Condiments for student cooking | Premium-priced items |
+
+### How this informs the fit score
+
+Score the **specific product in the specific moment**, using:
+
+- **Occasion fit:** Is there an observed reason to eat, drink or take something home?
+- **Practical fit:** Can people comfortably consume or carry it?
+- **Offer fit:** Is the price, portion and format suitable?
+- **Unmet need:** Is the organiser already providing an equivalent?
+- **Evidence:** Is the match based on an assumption, participant feedback or actual purchases?
+
+A cooking-class participant asking to buy the sauce they just used is stronger evidence than assuming every yoga attendee wants a particular snack.
 
 **Evidence behind three rows.**
 
